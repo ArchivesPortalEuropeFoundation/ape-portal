@@ -1,0 +1,21 @@
+#configs
+core/config
+config.core.php
+
+#uploads
+uploads/
+
+#server specific
+ht.access
+.htpasswd
+
+#caches
+core/cache/
+assets/components/phpthumbof/cache
+
+core/components/redactor/.pubkey
+core/components/redactor/.pubkey_c
+
+#IDE specific
+.idea
+.vscode/launch.json
