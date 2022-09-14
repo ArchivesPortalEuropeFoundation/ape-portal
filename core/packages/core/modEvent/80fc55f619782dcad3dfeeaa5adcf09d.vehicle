@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5a1938fb9463612157f7d2617202e7cd',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '80fc55f619782dcad3dfeeaa5adcf09d',
+  'native_key' => 'OnElementNotFound',
+  'object' => '{"name":"OnElementNotFound","service":1,"groupname":"System"}',
+);

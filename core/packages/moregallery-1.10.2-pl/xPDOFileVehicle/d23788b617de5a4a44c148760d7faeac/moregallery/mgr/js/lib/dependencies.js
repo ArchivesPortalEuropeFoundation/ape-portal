@@ -1,0 +1,9 @@
+// @codekit-prepend "jquery.ui.widget.js";
+// @codekit-prepend "jquery.iframe-transport.js";
+// @codekit-prepend "jquery.fileupload.js";
+// @codekit-prepend "jquery-ui-1.10.3.custom.min.js";
+// @codekit-prepend "jcrop/js/jquery.color.js";
+// @codekit-prepend "jcrop/js/jquery.Jcrop.js";
+// @codekit-prepend "twitter.typeahead.bundle.js";
+// @codekit-prepend "underscore.js";
+// @codekit-prepend "backbone.js";

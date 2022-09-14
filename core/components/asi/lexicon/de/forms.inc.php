@@ -1,0 +1,20 @@
+<?php
+$_lang['asi.err_msg_enter_valid_email'] = 'Bitte geben Sie eine gültige Email-Adresse ein';
+$_lang['asi.err_msg_there_are_no_digital_objects'] = 'Es gibt keine digitalen Objekte';
+$_lang['asi.form_a_suggestion_is_required_err_msg'] = 'Ein Vorschlag ist erforderlich';
+$_lang['asi.form_email_address_required_err_msg'] = 'Ihre E-Mail-Adresse ist erforderlich';
+$_lang['asi.form_full_name_required_err_msg'] = 'Ihr voller Name ist erforderlich';
+$_lang['asi.form_message_required_err_msg'] = 'Eine Meldung ist erforderlich';
+$_lang['asi.form_rating_success_msg'] = 'Vielen Dank, Ihre Bewertung wurde versendet';
+$_lang['asi.form_required_fields_empty_err_msg'] = 'Nicht alle erforderlichen Felder wurden ausgefüllt.';
+$_lang['asi.form_search_no_results_found_err_msg'] = 'Keine Ergebnisse für den Suchbegriff';
+$_lang['asi.form_successfully_updated_success_msg'] = 'Erfolgreich aktualisiert';
+$_lang['asi.form_title_personal_details'] = 'Persönliche Daten';
+$_lang['asi.form_topic_choose_err_msg'] = 'Ein Thema ist erforderlich';
+$_lang['asi.form_upload_file_err_msg'] = 'Falscher Dateityp oder Dateigröße zu groß!';
+$_lang['asi.input_choose_preferred_lang'] = 'Bitte wählen Sie eine bevorzugte Sprache';
+$_lang['asi.input_new_pwd_err_msg'] = 'Ein neues Passwort wird benötigt';
+$_lang['asi.input_pwd_must_confirm_err_msg'] = 'Sie müssen Ihr neues Passwort bestätigen';
+$_lang['asi.input_pwd_not_match_err_msg'] = 'Passwörter stimmen nicht überein';
+$_lang['asi.input_pwd_not_meet_req_err_msg'] = 'Kennwort nicht Vorstellungen';
+$_lang['asi.msg_subscribe_success_msg'] = 'Die E-Mail-Adresse <strong Datenbevöl = "blog_subscribe_email"> </ strong> wurde erfolgreich abonniert.';

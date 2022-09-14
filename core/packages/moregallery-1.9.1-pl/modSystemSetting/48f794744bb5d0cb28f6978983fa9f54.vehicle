@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e1d030f7d349ab620418826a5fb61d88',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '48f794744bb5d0cb28f6978983fa9f54',
+  'native_key' => 'moregallery.data_consent',
+  'object' => '{"key":"moregallery.data_consent","value":10,"xtype":"numberfield","namespace":"moregallery","area":"Advanced","editedon":1571229263}',
+);

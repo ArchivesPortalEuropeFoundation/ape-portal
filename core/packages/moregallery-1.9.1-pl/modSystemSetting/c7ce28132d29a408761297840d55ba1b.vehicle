@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c4b24244fd829c8e42aa415a6bb645df',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c7ce28132d29a408761297840d55ba1b',
+  'native_key' => 'moregallery.crop_jpeg_quality',
+  'object' => '{"key":"moregallery.crop_jpeg_quality","value":100,"xtype":"numberfield","namespace":"moregallery","area":"Cropping","editedon":1571229263}',
+);

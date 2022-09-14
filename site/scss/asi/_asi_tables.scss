@@ -1,0 +1,71 @@
+/**
+* Styles relating to tables
+*/
+
+
+table.aiSection {
+    
+    
+    .longDisplay, .displayLinkSeeLess {
+        display: none;
+    }
+    // Hide the header as we already have this content on the page
+    // thead {
+    //     display: none;
+    // }
+
+    
+
+    tr {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+
+        td {
+            &:first-child {
+                 min-width: 260px;
+                 padding-right: 10px;
+                 font-weight: bold;
+            }
+
+            &:not(:first-child) {
+                flex-grow: 1;
+            }
+        }
+
+        p {
+            margin-bottom: initial;
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        tr {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin-bottom: 20px;
+
+            td {
+                &:first-child {
+                    padding-right: 0;
+                }
+
+
+                &.header {
+                    font-weight: bold;  
+                }
+            }
+        }
+    }
+}
+
+.subInfoHeader {
+    font-weight: bold;
+    padding: 20px 0 10px;
+    color: black !important;
+
+    @media (max-width: $screen-xs-max) {
+        padding: 10px;
+        background: #eeeeee;
+        width: 100%;
+    }
+}

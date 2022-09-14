@@ -1,0 +1,41 @@
+id 	C547631385
+parentId 	C547631344
+unitId 	ES-37274-CDMH-UD-7524060
+duplicateUnitId
+unitTitle 	Fichero Nº 41 de la Sección Político Social.
+spell
+Warning: htmlspecialchars() expects parameter 1 to be string, array given in /var/www/test/public_html/test.php on line 209
+levelName 	clevel
+startDate 	1937-01-01T00:00:01Z
+endDate 	1977-12-31T23:59:59Z
+alternateUnitdate 	1937 / 1977
+dateType 	normal
+country 	SPAIN:G:1
+repositoryCode 	ES-37274-CDMH1
+ai 	Centro Documental de la Memoria Histórica:705
+recordId 	ES-37274-CDMH
+dao
+numberOfDao 	0
+numberOfDaoBelow 	0
+numberOfDescendents 	0
+numberOfAncestors 	5
+other 	Delegación Nacional de los Servicios Documentales (España) 1 Fichero(s) DNSD-SECRETARIA,FICHERO,41 Represión política Ficheros Dictadura de Franco, 1939-1975
+titleProper 	Centro Documental de la Memoria Histórica:H31230
+recordType 	hg
+H0_s 	Centro Documental de la Memoria Histórica:G:H31230
+HID0_s 	H31230
+H1_s 	00000004:1. ARCHIVOS PÚBLICOS:G:C547631333
+HID1_s 	C547631333
+H2_s 	00000005:Delegación Nacional de Servicios Documentales de la Presidencia del Gobierno:G:C547631339
+HID2_s 	C547631339
+H3_s 	00000001:SECRETARIA GENERAL:G:C547631343
+HID3_s 	C547631343
+H4_s 	00000000:Fichero de la Secretaría General y de la Sección Político Social:G:C547631344
+HID4_s 	C547631344
+AID1_s 	A705
+AID0_s 	A761
+A1_s 	Centro Documental de la Memoria Histórica:L:A705
+A0_s 	Archivos de ámbito estatal:G:A761
+orderId 	40
+openData
+timestamp 	2019-07-02T00:42:53.732Z

@@ -1,0 +1,13 @@
+MagicPreview 1.0.1-pl
+---------------------
+Released on 2018-12-18
+
+- Add loading animation [#6]
+- Rewrite CSS to BEM standards, reduce header size [#5]
+- Add version-based cache busting to js and css files
+
+MagicPreview 1.0.0-pl
+---------------------
+Released on 2018-12-17
+
+- First magical release!

@@ -1,0 +1,2833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:isbn:1-931666-22-9"
+     xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.archivesportaleurope.net/Portal/profiles/apeEAD.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
+     audience="external">
+   <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b"
+              repositoryencoding="iso15511"
+              scriptencoding="iso15924"
+              relatedencoding="MARC21">
+      <eadid identifier="FR-FRAN_FRDAFAPH_AD075" countrycode="FR" mainagencycode="FR-FRAN">FRDAFAPH_AD075</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="245">Archives photographiques conservées à Paris </titleproper>
+            <subtitle>Etat des fonds</subtitle>
+         </titlestmt>
+         <publicationstmt>
+            <publisher>Direction des Archives de France</publisher>
+            <address>
+               <addressline>Paris</addressline>
+            </address>
+            <date encodinganalog="260$c" calendar="gregorian" era="ce" normal="2006-10">Mai 2008</date>
+         </publicationstmt>
+      </filedesc>
+      <profiledesc>
+         <langusage>Instrument de recherche rédigé en<language encodinganalog="041" langcode="fre" scriptcode="Latn"> français</language>
+         </langusage>
+      </profiledesc>
+      <revisiondesc>
+         <change>
+            <date/>
+            <item>Converted_apeEAD_version_2.0.14</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <archdesc level="fonds" type="inventory" encodinganalog="3.1.4"
+             relatedencoding="ISAD(G)v2">
+      <did>
+         <unittitle encodinganalog="3.1.2">Département et Ville de Paris (75)</unittitle>
+      </did>
+     <controlaccess><genreform>photographie</genreform></controlaccess>
+      <dsc type="othertype">
+         <c encodinganalog="3.1.4" id="d1e39">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives de Paris</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="ph808">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">50 W 990 ; 1131 W 214-215</unitid>
+                  <unittitle encodinganalog="3.1.2">Dommages de guerre (1939-1945)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1939/1945">1939 - 1945</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Centre national des règlements et des dommages de guerre</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1968, 1984</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Bouillaguet (Marc), Caillère (Sylvie), Dupont (Gina), Hocine (Karima), Mayaud-Foulon (Sylvie), Pochard (Rodolphe) et Voiret (Marie-Thérèse), sous la Direction de Peltier (Marie-Hélène), Dommages de guerre, Seconde guerre mondiale (1935-1982), instrument de recherche, 2001, 512  pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies illustrant les destructions subies par Paris au cours de la Seconde Guerre mondiale et faisant partie de dossiers de demande de dédommagement.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>guerre mondiale (1939-1945)</subject>
+                  <subject> dommage de guerre</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph809">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">DEM</unitid>
+                  <unittitle encodinganalog="3.1.2">Dessins et modèles déposés au conseil de prud'hommes pour les industries des tissus, des produits chimiques et de l'industrie des métaux</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1917/1979">1917 - 1979</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Conseil de prud'hommes (Seine)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 45 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">130 x 180</dimensions>, <dimensions unit="mm" type="support_positif">180 x 240</dimensions>, <dimensions unit="mm" type="support_positif">300 x 140</dimensions>
+                  </physdesc>
+                  <container>Classeurs ; épreuves photographiques parfois montées en diptyques ou triptyques</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Certaines photographies se détériorent.</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>L'ensemble de la collection est en cours de classement et d'inventaire.</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1939 - 1992</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Delattre (Manuelle), Lespinas (Claudine), et Voiret (Marie-Thérèse), sous la direction de Lainé (Brigitte), Dessins et modèles de fabrique (1876-1936), répertoire numérique provisoire, 2003-2007, 81 pages.</p>
+               </otherfindaid>
+               <bibliography encodinganalog="3.5.4">
+                  <bibref>Catalogue : Objets, dessins et modèles de fabrique déposés au Conseil des Prud'hommes de Paris, 1860-1910 , Paris, Paris-Musées, 1993, 406 pages. </bibref>
+                  <bibref>Lainé (Brigitte), "Les photographies de mode aux Archives de Paris (1917-1934)", dans le Bulletin des conservateurs et des personnels scientifiques de la Ville de Paris , 3e trimestre 2000, n°5,  pages 37 - 45.</bibref>
+               </bibliography>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+                  <p/>
+               </relatedmaterial>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Les Archives de Paris conserve des photographies de  mode (vêtements, accessoires, tissus ) qui accompagnent en grande partie les dessins et modèles déposés au conseil des prud'hommes de Paris entre 1917 et 1979. Ces documents déposés en deux exemplaires pour cinq ans ont été versés aux Archives de Paris en 1939-1940 et en 1992. Le versement effectué durant la Deuxième Guerre mondiale a été sommairement traité ; le double de la collection concernait essentiellement la période 1917 - 1934 et aurait été soit pilonné soit transmis au Musée des Arts décoratifs (à vérifier). La partie concernant les années 1947 à 1979 a été versée en 1992. Le nettoyage, le conditionnement et la restauration légère ont été mis au point grâce à Mme Anne Cartier-Bresson, directrice de l'atelier de restauration de photographies de la Ville de Paris, qui a rédigé une notice spéciale sur la préservation de cette collection.  Ces positifs jouent le rôle de "dépôt légal industriel".</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <geogname>Seine (ancien département)</geogname>
+                  <persname>Mistinguett (1875 - 1956)</persname>
+                  <persname> Talbot, Jeanne</persname>
+                  <persname> Callot Sœurs</persname>
+                  <persname> Groult, Nicole</persname>
+                  <persname> Paray, Lucile</persname>
+                  <persname> Chanel, Gabrielle (1883 - 1971)</persname>
+                  <persname> Manuel, Henri</persname>
+                  <persname> Gilbert, René</persname>
+                  <persname> Chevojon, A.</persname>
+                  <corpname> La Photographie universelle</corpname>
+                  <corpname> Photo artistique</corpname>
+                  <corpname> La Photo mécanique</corpname>
+                  <subject>industrie textile</subject>
+                  <subject> femme</subject>
+                  <subject> industrie chimique</subject>
+                  <subject> métallurgie</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph810">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">VD3 11</unitid>
+                  <unittitle encodinganalog="3.1.2">Les gardes nationaux et les fédérés morts durant la Commune</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1871">1871</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Pirou, Eugène</persname> ; <persname>Muriel, A.</persname> ; <corpname>Dellaras et Grelet</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>109</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">105 x 63</dimensions>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <appraisal encodinganalog="3.3.2">
+                  <p>Tri effectué par les archives de Paris</p>
+               </appraisal>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique détaillé établi par Riché (S.), sous la direction de Brigitte Lainé, 1996.</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+                  <p/>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble d'épreuves  photographiques avec le numéro d'enregistrement et le numéro de bière, jointes aux procès-verbaux  d'inhumation des gardes nationaux morts à la suite de leurs blessures, groupés à l'amphithéâtre de Clamart (amphithéâtre d'anatomie), sous la Commune de Paris.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <geogname>Seine (ancien département)</geogname>
+                  <subject>décès</subject>
+                  <subject> militaire</subject>
+                  <subject> Paris -1871 (Commune)</subject>
+                  <subject> guerre</subject>
+                  <subject>insurrection</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph811">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">DE1/Fonds Marsoulan 1-2</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Marsoulan</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1850/1950">Milieu du XIXe - 1950</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <famname>Marsoulan</famname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Cyanotype</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier stéréotype</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>5</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre stéréotype</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>12</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">60 x 110</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Portrait carte</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>158</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>5</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>3 albums, tirages collés sur carton</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Dans l'ensemble, les tirages papier sont dans un bon état de conservation. Quelques clichés ont commencé à se dégrader. Concernant les plaques de verre, 5 sont cassées.</p>
+               </phystech>
+               <altformavail encodinganalog="3.5.2">
+                  <p> Pour une petite partie des photographies, des négatifs ont été réalisés par Françoise Rivière pour un catalogue.</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1985</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation pour les tirages papier et accès interdit  pour les plaques de verre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Demeulenaere-Douyère (Christiane), Fonds Marsoulan (1810-1959), inventaire analytique, 5 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Conservées dans le fonds d'archives privées, les plaques de verre illustrent l'inondation de 1910 à Paris et les tirages, des scènes de la vie de la famille Marsoulan. On note la présence de photographies des ateliers de fabrication de papiers peints d'Henri Marsoulan datant de la fin du XIXe siècle.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <geogname> Seine (fleuve, France)</geogname>
+                  <persname>Marsoulan, Henri</persname>
+                  <persname>Nathan, A.</persname>
+                  <persname> Butin, A.</persname>
+                  <persname> Harmand</persname>
+                  <persname> Langlois, L. </persname>
+                  <persname> Hideux, Charles</persname>
+                  <persname> Pestel</persname>
+                  <persname> Sée</persname>
+                  <persname> Lédion</persname>
+                  <persname> Bessein, J.</persname>
+                  <persname> Crillon</persname>
+                  <persname> Blanc, G.</persname>
+                  <persname> Rives, Paul</persname>
+                  <persname> Dupré, A.</persname>
+                  <persname> Emmanuel</persname>
+                  <persname> Dupuis</persname>
+                  <persname> Van Blitz, E.</persname>
+                  <persname> Lebrun, Auguste</persname>
+                  <persname> Maujean</persname>
+                  <persname> Lines, E.</persname>
+                  <corpname>Mayer &amp; Pierson</corpname>
+                  <corpname> Muzet &amp; Joguet</corpname>
+                  <corpname> A. D</corpname>
+                  <corpname> Anjoux</corpname>
+                  <corpname> Entreprise h. Tourte &amp; M. Petitin</corpname>
+                  <subject>inondation</subject>
+                  <subject> vie quotidienne</subject>
+                  <subject> famille</subject>
+                  <subject> usine</subject>
+                  <subject> portrait</subject>
+                  <subject> population urbaine</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph812">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">D38Z</unitid>
+                  <unittitle encodinganalog="3.1.2">Paris sous l'Occupation</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1940/1945">1940 - 1945</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Gouvernement de Vichy. Ministère de l'information</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>837</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>14</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement thématique</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Collection fermée</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1955</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Cette collection fictive d'épreuves photographiques sur l'Occupation et la Libération a été regroupée par la délégation départementale du Pas-de-Calais du ministère de l'Information du gouvernement de Vichy  et donnée en septembre 1955 aux Archives de Paris par les AD du Pas-de-Calais.</p>
+               </custodhist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Instrument de recherche papier</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p>Le  <extref xlink:href="http://www.paris.fr/portail/Culture/Portal.lut?page_id=6923">Mémorial du Maréchal Leclerc de Hauteclocque et de la Libération de Paris</extref>  et le  <extref xlink:href="http://www.paris.fr/portail/Culture/Portal.lut?page_id=6923">Musée Jean Moulin</extref>  (au-dessus de la gare Montparnasse) ont un fonds photographique relatif à la seconde guerre mondiale.</p>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Les thèmes utilisés pour classer cette collection de photographies sur l'Occupation et la Libération à Paris sont : bombardements à Paris et en région parisienne, sports et expositions, moyens de transport et ravitaillement, vie quotidienne, propagande de Vichy, libération, Maréchal Pétain et les affaires, collaboration, religion, prisonniers et jeunesse.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <geogname> Ile-de-France (région administrative)</geogname>
+                  <persname>Pétain, Philippe (1856 -1951)</persname>
+                  <persname> Henriot, Philippe (1889 - 1944)</persname>
+                  <persname> Degrelle, Léon (1906 - 1994)</persname>
+                  <persname> Doriot, Jacques (1898 - 1945)</persname>
+                  <persname> Silvestre, Louis</persname>
+                  <persname> Picoche, A.</persname>
+                  <corpname>Tampus</corpname>
+                  <corpname>Agence Fama</corpname>
+                  <corpname> D.N.P.</corpname>
+                  <corpname> FULGUR</corpname>
+                  <corpname> Service central photographique de l'Etat français</corpname>
+                  <subject>occupation étrangère</subject>
+                  <subject> libération</subject>
+                  <subject> guerre mondiale (1939 - 1945)</subject>
+                  <subject> propagande</subject>
+                  <subject> jeune</subject>
+                  <subject>collaboration</subject>
+                  <subject> religion</subject>
+                  <subject> prisonnier de  guerre</subject>
+                  <subject> ravitaillement</subject>
+                  <subject> bombardement</subject>
+                  <subject> manifestation culturelle</subject>
+                  <subject> sport</subject>
+                  <subject> presse</subject>
+                  <subject> arts plastiques</subject>
+                  <subject> mobilisation</subject>
+                  <subject> détention d'arme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph813">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1232W 28-29</unitid>
+                  <unittitle encodinganalog="3.1.2">Barrages et réservoirs</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1946/1956">1946 - 1956</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Direction des services industriels et commerciaux, section des barrages et réservoirs</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple en nitrate de cellulose</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent unit="rouleau">90</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">35</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple en acétate de cellulose</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent unit="rouleau">2</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">35</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple en acétate de cellulose</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">60 x 60</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple en nitrate de cellulose</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>11</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">90 x 120</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple au gélatinobromure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>6</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">180 x 240</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple au gélatinobromure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>24</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">130 x 180</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple au gélatinobromure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>10</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">90 x 120</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>224</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>11</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Processus de dégradation enclenché pour les négatifs</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1987</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation pour les tirages, accès interdit pour les plaques de verre et les films souples</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Bordereau de versement papier</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Documents photographiques des barrages et réservoirs du bassin de la Seine.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Mexique</geogname>
+                  <geogname> Etats-Unis</geogname>
+                  <geogname> Nièvre (département)</geogname>
+                  <geogname> Côte d'Or (département)</geogname>
+                  <geogname> Ain (département)</geogname>
+                  <geogname> Yonne (Département)</geogname>
+                  <geogname> Marne (département)</geogname>
+                  <geogname> Seine (fleuve, France)</geogname>
+                  <geogname> Marne (fleuve, France)</geogname>
+                  <geogname> Le Mont-Saint-Michel (Manche)</geogname>
+                  <geogname>  Ourcq, Canal de</geogname>
+                  <geogname> Nord, Canal du</geogname>
+                  <geogname> Cure (cours d'eau, France)</geogname>
+                  <geogname> Dun (cours d'eau, France)</geogname>
+                  <geogname>  Aube (cours d'eau, France)</geogname>
+                  <subject>voie navigable</subject>
+                  <subject> barrage hydroélectrique</subject>
+                  <subject> aménagement des eaux</subject>
+                  <subject> manifestation culturelle</subject>
+                  <subject> vue aérienne</subject>
+                  <subject> restaurant</subject>
+                  <subject> site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph814">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">D50Z 130</unitid>
+                  <unittitle encodinganalog="3.1.2">Collège Sainte-Barbe</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1870/1899">Fin XIXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Collège Sainte-Barbe (Paris)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier albuminé</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>3</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>Tirages collés sur carton</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p> Reproduction interdite ; publication et diffusion interdite</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>D50Z, Collège Sainte-Barbe : dossiers des élèves, historique du collège (1806-1938), répertoire numérique, 55 pages.</p>
+               </otherfindaid>
+               <bibliography encodinganalog="3.5.4">
+                  <bibref>Lamarre (Clovis), Histoire de Sainte-Barbe avec l'aperçu sur l'enseignement secondaire en France de 1860 à 1900 , Paris, 1900 [cote bibliothèque aux Archives de Paris : 25 Eb 12]</bibref>
+                  <bibref> Quicherat (Jules), Histoire de Sainte-Barbe 1460 - 1960 , Paris, 1960 [cote bibliothèque aux Archives de Paris : 25 Eb 26]</bibref>
+                  <bibref>Lainé (Brigitte), Dessins d'élèves du collège de Sainte-Barbe, 2008, 152 pages</bibref>
+               </bibliography>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies concernant le Collège Sainte-Barbe et Sainte-Barbe des Champs dont des portraits de professeurs.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Petit, Pierre</persname>
+                  <subject>collège</subject>
+                  <subject> élève</subject>
+                  <subject> professeur</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph815">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">D3R4 272</unitid>
+                  <unittitle encodinganalog="3.1.2">La Garde nationale de Paris et la Commune</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1871">1871</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1">
+                     <corpname>Garde nationale (Paris). Etat-major</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier albuminé</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>3</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>Tirages collés sur carton</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1907</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Debofle (P.), Garde nationale. Affaires générales (1814-1880), répertoire numérique, Paris, 1985, 23 pages.</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+                  <p/>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Dossier sur l'état général des tués et blessés de la Garde nationale dans lequel on trouve des photographies (1870-1871).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Disderi</persname>
+                  <subject>décès</subject>
+                  <subject> militaire</subject>
+                  <subject> Paris -1871 (Commune)</subject>
+                  <subject> guerre</subject>
+                  <subject> invalide de guerre</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph816">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">8 Fi 1-14</unitid>
+                  <unittitle encodinganalog="3.1.2">Albums de cartes postales sur Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1920">Début XXe siècle</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 6 000</extent>
+                  </physdesc>
+                  <container>14 albums</container>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Des photocopies sont en libre accès en salle de lecture. Les Archives de Paris possèdent également des reproductions sous la forme de tirages papier noir et blanc et de négatifs.</p>
+               </altformavail>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Les cartes ont été organisées selon un cadre de classement qui prend en compte leur sujet, leur titre et le plus souvent le nom de lieu ou du monument.</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Collection fermée</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les reproductions et accès soumis à autorisation pour les originaux</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Sommaire général par album et sommaire détaillé au début de chaque album.</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p>Le  département des arts graphiques du  <extref xlink:href="http://www.paris.fr/portail/Culture/Portal.lut?page_id=6638">Musée Carnavalet</extref>  possède de nombreuses photographies sur la ville de Paris.</p>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Donnée par différents particuliers, cette collection de cartes postales a été constituée en albums par les Archives de Paris. Elle représente la ville de Paris à travers ses bâtiments, ses espaces verts ainsi que son patrimoine historique et culturel.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <geogname>Bois de Boulogne (Paris)</geogname>
+                  <geogname> Bois de Vincennes (Paris)</geogname>
+                  <geogname> Seine (fleuve, France)</geogname>
+                  <corpname>Conservatoire des Arts et métiers (Paris)</corpname>
+                  <corpname> Maison de Victor Hugo (Paris)</corpname>
+                  <subject>espace vert</subject>
+                  <subject> cimetière</subject>
+                  <subject> édifice cultuel</subject>
+                  <subject> patrimoine culturel</subject>
+                  <subject> voie communale</subject>
+                  <subject> ouvrage d'art </subject>
+                  <subject> hôpital</subject>
+                  <subject> musée</subject>
+                  <subject> visite officielle</subject>
+                  <subject> manifestation culturelle</subject>
+                  <subject> inondation</subject>
+                  <subject> monument historique</subject>
+                  <subject> manifestation commerciale</subject>
+                  <subject> guerre mondiale (1914-1918)</subject>
+                  <subject> transport</subject>
+                  <subject> commune</subject>
+                  <subject> établissement recevant du public</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph817">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">11 Fi 2800-4281</unitid>
+                  <unittitle encodinganalog="3.1.2">Union Photographique Française (UPF)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1870/1914">Fin XIXe siècle - 1914</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Union photographique Française</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 482</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Image numérique sous format JPEG et TIFF</genreform>
+                  </physdesc>
+                  <container>Albums</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <originalsloc encodinganalog="3.5.1">
+                  <p>Les Archives de Paris conservent une partie des plaques de verre  originales  cotées VONC  1266, 1342, 1344, 1352, 1354, 1399, 5000-522, le reste étant conservé au musée Carnavalet.</p>
+               </originalsloc>
+               <altformavail encodinganalog="3.5.2">
+                  <p> Les tirages papier, numérisés en 2002 (couleur, format JPEG et TIFF, 300 dpi) seront disponibles en salle de lecture en avril 2008. Des reproductions en noir et blanc de ce fonds sont déjà accessibles en salle de lecture.</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit pour les originaux et accès libre aux reproductions</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Instrument de recherche papier rédigé par  Aufray (Sandrine), Dumas (Jean-Philippe) et Rivière (Françoise), février 2001.</p>
+               </otherfindaid>
+               <bibliography encodinganalog="3.5.4">
+                  <bibref>Sotteau (Stephanie), L'UPF de 1898 à 1912 : fonds topographique du musée Carnavalet , maîtrise d'histoire de l'art, sous la direction de Bruno Foucart, Université de Paris IV, 1996.</bibref>
+                  <bibref>Paris La rue. Un autre 1900 , Paris, Archives de Paris, 2000, 96 pages.</bibref>
+               </bibliography>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Réalisé par l'Union Photographique Française (mention U.P.F), cet ensemble de plaques de verre et de tirages papier représentent des façades d'immeubles parisiens ou de petites maisons prises depuis la rue, parfois des vues sur cour ou de terrains vagues. Très souvent les habitants et les commerçants du quartier ont pris la pose. Ces campagnes demandées par l'Hôtel de ville de Paris concernent les immeubles faisant partie de projets d'aménagement ou de rectification de voies.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>architecture</subject>
+                  <subject> urbanisme</subject>
+                  <subject> voie communale</subject>
+                  <subject> commerce</subject>
+                  <subject> vie quotidienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3631">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">VO3 1653-1710</unitid>
+                  <unittitle encodinganalog="3.1.2">Dérivation de la Vanne, du Loing et du Lunain pour l'approvisionnement en eaux de Paris (1866-1900)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1866/1900">1866 - 1900</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Direction chargée de l'eau et de l'assainissement, service préfectoral chargé de l'administration municipale</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Bordereau de versement rédigé par Audrey Ceselli et Henri Massenet, 2007, 3 pages.</p>
+               </otherfindaid>
+               <bibliography encodinganalog="3.5.4">
+                  <bibref>Baronnet (Jean), Regard d'un Parisien sur la Commune : photographies inédites de la Bibliothèque historique de la Ville de Paris  / textes de Jean Baronnet ; [photographies d'Hippolyte Blancard]. - [Paris] : Gallimard : Paris bibliothèques, 2006. - 175 pages. : illustration ; 26 cm.</bibref>
+               </bibliography>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p>Voir les versements effectués par le service de la navigation de la Seine 1352 W, 1353 W, 2258 W , 2259 W et 2260 W conservés aux Archives de Paris qui concernent la Seine, la Marne et l'Yonne (des photographies y sont disséminées).</p>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies illustrant les travaux de dérivation de la Vanne, du Loing et du Lunain.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Vanne (cours d'eau, France)</geogname>
+                  <geogname> Loing (cours d'eau, France)</geogname>
+                  <geogname> Lunain (cours d'eau, France)</geogname>
+                  <geogname> Fontainebleau (Seine-et-Marne)</geogname>
+                  <geogname> Arcueil (Val-de-Marne)</geogname>
+                  <subject>cours d'eau</subject>
+                  <subject> aménagement des eaux</subject>
+                  <subject> ouvrage d'art</subject>
+                  <subject> canal</subject>
+                  <subject> bâtiment industriel</subject>
+                  <subject> site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="PH3632">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">Pérotin/6/75/1 10-11</unitid>
+                  <unittitle encodinganalog="3.1.2">Dérivation de cours d'eaux</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1891/1900">1891 - 1900</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Direction des eaux</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier albuminé</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>24</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Aristotype</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>10</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>2 albums</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1975</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Duverdier (Marielle) et El Beze (Evelyne), révisé par Chambi (Béatrice), Documents figurés reliés en volumes (fin XVIIIe - début XXe siècles), catalogue, novembre 2004, 55 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Albums de photographies sur la dérivation des sources de la Vigne et de Verneuil et sur les caractéristiques des aqueducs de dérivations des eaux du Loing et du Lunain.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Vigne (cours d'eau, France)</geogname>
+                  <geogname> Verneuil (cours d'eau, France)</geogname>
+                  <geogname> Loing (cours d'eau, France)</geogname>
+                  <geogname> Lunain (cours d'eau, France)</geogname>
+                  <persname>Ferniquez</persname>
+                  <persname> Vallantin, L.</persname>
+                  <subject>cours d'eau</subject>
+                  <subject> aménagement des eaux</subject>
+                  <subject> ouvrage d'art</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3633">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">VR 52</unitid>
+                  <unittitle encodinganalog="3.1.2">Bief des Cordelières dans le XIIIe arrondissement de Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1910">1910</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Direction des affaires culturelles et beaux-Arts</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>38</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">230 x 290</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Les clichés commencent à se dégrader (miroir d'argent)</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Beaux-Arts, Jeux Olympiques (1854-1924), répertoire numérique dactylographié, 2004, 24 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Recueil de photographies du bief des Cordelières (la Bièvre) dans le XIIIe arrondissement de Paris.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <geogname> Bièvre (cours d'eau, France)</geogname>
+                  <corpname>Commission du Vieux Paris</corpname>
+                  <corpname> Union Photographique Française</corpname>
+                  <subject>cours d'eau</subject>
+                  <subject> construction</subject>
+                  <subject> aménagement</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3634">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">VO4/70 1-458</unitid>
+                  <unittitle encodinganalog="3.1.2">Fortifications de Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1919/1923">1919 - 1921 ; 1923</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Commission du Vieux Paris</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>735</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">180 x 240</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>70</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">130 x 180</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Image numérique sous format JPEG et TIFF</genreform>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Les tirages papier ont été numérisés sous format JPEG et TIFF en 2002 et seront disponibles en avril 2008 en salle de lecture.</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit pour les originaux et accès libre aux reproductions</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données, sous Access contenant 458 unités documentaires, sous la direction de Duverdier (Marielle) ; Voir sur le site des  <extref xlink:href="http://www.paris.fr/portail/Culture/Portal.lut?page_id=149">Archives de Paris</extref> , dans la rubrique"Actualité" quelques exemples de photographies extraites des dossiers.</p>
+               </otherfindaid>
+               <bibliography encodinganalog="3.5.4">
+                  <bibref>Vasselin (Séverine), Charles Lansiaux, topographe à Paris : la photographie entrefonctionnalité et art , mémoire de recherche sous la direction de Rose-Marie Godier, Ecole nationale supérieure Louis Lumière, juin 2001, 2 tomes. (117 pages, n.p.)</bibref>
+               </bibliography>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies des fortifications de Paris réalisées par le photographe Charles Lansiaux sur la commande de la Commission du Vieux Paris (qui conserve encore les plaques de verre originales).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Lansiaux, Charles</persname>
+                  <subject>fortification</subject>
+                  <subject>urbanisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3635">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">D10S9 6-23</unitid>
+                  <unittitle encodinganalog="3.1.2">Métropolitain parisien</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1898/1909">1898 - 1909</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Bureau des travaux publics</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>439</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier albuminé</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>7</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Aristotype</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>578</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Image numérique sous format JPEG et TIFF</genreform>
+                  </physdesc>
+                  <container>39 albums</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Les photographies sont en bon état de conservation, contrairement aux albums</p>
+               </phystech>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Les Archives de Paris ont fait des photocopies des tirages pour la consultation en libre accès  mais aussi des reproductions numériques (couleur, format TIFF et JPEG , 300 dpi) qui seront disponibles en avril 2008 en salle de lecture.</p>
+               </altformavail>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement chronologique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1932</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit pour les originaux et accès libre aux reproductions</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié ; Bases de données sous Access, créée en 2002 sous la direction de Duverdier (Marielle), contenant 1474 unités documentaires.</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Albums de photographies concernant la construction du Métropolitain (lignes 1, 2, 4, 5, 6, 7, lignes circulaires nord et sud).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <geogname>Prague (République tchèque)</geogname>
+                  <geogname>Seine (fleuve, France)</geogname>
+                  <geogname> Saint-Martin, Canal (Paris)</geogname>
+                  <geogname>  Cygnes, ïle des (Paris)</geogname>
+                  <subject>voie communale</subject>
+                  <subject> gare</subject>
+                  <subject> transport urbain</subject>
+                  <subject> aménagement des eaux</subject>
+                  <subject> construction</subject>
+                  <subject> chantier</subject>
+                  <subject> transport ferroviaire</subject>
+                  <subject> canal</subject>
+                  <subject> ouvrage d'art</subject>
+                  <subject> visite officielle</subject>
+                  <subject> fortification</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3636">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">11 Fi 3-181 ; 11 Fi 953-970 ; 11 Fi 1332-1348 ; 11 Fi 2710-2799</unitid>
+                  <unittitle encodinganalog="3.1.2">Mobilier urbain et expositions universelles</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1846/1916">1846 - 1916</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Marville, Charles</persname> ; <persname> Durandelle</persname> ; <persname>  Neurdein</persname> ; <persname> Larger</persname> ;  <persname> Edmonds P.</persname> ; <corpname>J.M. PARIS</corpname> ; <corpname>N.D Phot</corpname> ; <corpname>Petit P. et fils</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>348</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Image numérique sous format JPEG et TIFF</genreform>
+                  </physdesc>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Les Archives de Paris ont numérisé les tirages papier en 2002  (couleur format JPEG et format TIFF, 300 dpi). Ils seront accessibles en avril 2008 en salle de lecture.</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit pour les originaux et accès libre aux reproductions</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données, sous Access créée en 2002 sous la direction de Duverdier (Marielle), contenant 348 unités documentaires.</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p>Voir Atlas 1002-1003, 1005, 1009-1020, 1032-1035 et 1038-1040 sur le mobilier urbain conservés aux Archives de Paris.</p>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de photographies sur  le mobilier urbain avec notamment l'éclairage des voies publiques, les kiosques à journaux, les fontaines ou encore les urinoirs mais aussi sur les expositions universelles de 1878, 1889 et 1900 ou bien l'exposition coloniale internationale de 1931.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>mobilier urbain</subject>
+                  <subject> décoration urbaine</subject>
+                  <subject> manifestation culturelle</subject>
+                  <subject>exposition universelle</subject>
+                  <subject>exposition coloniale</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3637">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1514 W</unitid>
+                  <unittitle encodinganalog="3.1.2">Atelier parisien d'urbanisme (APUR)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1967/1983">1967 - 1983</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Atelier parisien d'urbanisme (APUR)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 9 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1992</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Communicabilité à 30 ans</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Banat-Berger (Françoise), <emph render="italic">L'atelier parisien d'urbanisme: ses archives (1967-1983)</emph>, répertoire numérique détaillé, 1994, 64 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Archives de l'Atelier parisien d'urbanisme comportant des études générales sur l'aménagement, des dossiers des aménageurs de l'APUR ainsi que ceux de l'équipe s'occupant des thématiques liées aux transports (problèmes de circulation, accès, stationnement en zone d'aménagement). Les documents photographiques sont inclus dans les dossiers.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>manifestation culturelle</subject>
+                  <subject> monument historique</subject>
+                  <subject> manifestation commerciale</subject>
+                  <subject> commerce alimentaire</subject>
+                  <subject> aménagement du territoire</subject>
+                  <subject> cartographie</subject>
+                  <subject> urbanisme</subject>
+                  <subject> transport</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3638">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">2441 W</unitid>
+                  <unittitle encodinganalog="3.1.2">Aménagement des voies privées</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1999">XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Direction du logement et de l'habitat. Cellule des voies privées</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement alphabétique des noms de rues et par arrondissement</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 2006</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Bordereau de versement papier rédigé par Tuchais (Vincent) et Monpas (Gérald), 21 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>2441W 6-23 et 2441W 34-51 : dossiers de voies privées classées (VPC) dans le domaine public par arrêté préfectoral ou acquisition des sols et dossiers de voies privées fermées contenant des photos (1886-2006).</p>
+                  <p>2441W 26-33 : photographies des voies privées classées par arrondissement (1951-1997).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>voie communale</subject>
+                  <subject> lotissement</subject>
+                  <subject> architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3639">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1602 W 266</unitid>
+                  <unittitle encodinganalog="3.1.2">Travaux effectués sur et sous la voie publique par les anciennes sections centre et est de la voirie</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/1970">1880 - 1970</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1">
+                     <corpname>Paris. Direction de la voirie, service de la voie publique et de l'éclairage</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1993</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Banat-Berger (Françoise),<emph render="italic">Direction de la voirie. Archives des anciennes sections centre-est</emph>, répertoire numérique sommaire, 1994, 40 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies concernant l'aménagement de ponts et ouvrages d'art plus précisément : suppression du passage à niveau de la rue d'Hautpoul et construction d'un pont-route et d'une passerelle pour piéton, Pont-route et Pont-rail sur le canal de l'Ourcq, Pont-route avenue Jean Jaurès, Porte de Pantin, Pont sur le canal Saint Denis, Construction d'un égout rue Saint Hubert, déviation du boulevard Sérurier et aménagement de la gare "Paris bestiaux".</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>voie communale</subject>
+                  <subject>ouvrage d'art</subject>
+                  <subject> aménagement</subject>
+                  <subject> gare</subject>
+                  <subject> canal</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3640">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">44 W</unitid>
+                  <unittitle encodinganalog="3.1.2">Dossiers de permis de construire</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1948/1964">1948 - 1964</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Direction de l'Urbanisme</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 100</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1969</p>
+               </acqinfo>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement par ordre numérique croissant dans les arrondissements</p>
+               </arrangement>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Index toponymique révisé par Patrick Godeby et dactylographié par Geneviève Bouvry sous la direction de Sandrine Aufray, 2001, 77 pages. Il existe un inventaire spécifique pour les photographies à la fin de l'index, répertoire numérique sommaire, 1994, 40 pages.</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p>La  <extref xlink:href="http://www.dauc.mdp/dudoc/index.php?/categories">direction de l'Urbanisme</extref>  a mis en ligne près de 15 000 images sur son site intranet.</p>
+               </relatedmaterial>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p>Voir également les autres dossiers de permis de construire (versements 1069W, 1178W, 1360W, 1534W, 1590W, 1645W, 1752W, 1799W, 1849W, 1941W, 1990W, 2202W, 2112W, 2351W,…) et de démolir (1539W, 1785W, 1850W, 2219W,…) conservés aux Archives de Paris.</p>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces dossiers de permis de construire contiennent pour certains d'entre eux des photographies destinées à appuyer la demande d'autorisation de bâtir. Ces dernières représentent l'immeuble concerné vu depuis la rue.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>architecture</subject>
+                  <subject> construction</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3641">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1563 W</unitid>
+                  <unittitle encodinganalog="3.1.2">Lycée d'enseignement général Voltaire</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1878/1979">1878 - 1979</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Lycée Voltaire (Paris)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 16 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Photomaton</physfacet>
+                  </physdesc>
+                  <container>Photographies montées sur carton ou insérées sur passe-partout</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Etat moyen de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1993</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre ; communicabilité à 60 ans pour les livrets scolaires</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Instrument de recherche papier de 16 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Archives du lycée Voltaire avec de nombreuses photographies dans les livrets d'élèves.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>lycée</subject>
+                  <subject> élève</subject>
+                  <subject> portrait</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3642">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1307 W 81</unitid>
+                  <unittitle encodinganalog="3.1.2">Lycée d'enseignement professionnel Clavel</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1999">XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Lycée Clavel (Paris)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 6 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Photomaton</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1988</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre ; communicabilité à 60 ans pour les livrets scolaires</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Peltier (Marie-Hélène), <emph render="italic">Lycée d'enseignement professionnel Clavel 1943-1988</emph>, répertoire méthodique, 2002, 13 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de colonies de vacances d'élèves du lycée Clavel.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>lycée</subject>
+                  <subject> élève</subject>
+                  <subject>centre de vacances</subject>
+                  <subject> professeur</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3643">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">Pérotin/704/73/2 90-102 ;  1564 W 299</unitid>
+                  <unittitle encodinganalog="3.1.2">Lycée d'enseignement général Charlemagne</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1892/1920">1892 - 1920</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Lycée Charlemagne (Paris)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>119</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Aristotype au gélatino-chlorure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>391</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Aristotype au collodion</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier albuminé</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>12 albums</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation pour les photographies même si les coffrets contenant les albums sont pour certains, en mauvais état.</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1973, 1993</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Peltier (Marie-Hélène), <emph render="italic">Lycée d'enseignement général Charlemagne (1804-1980)</emph>, répertoire méthodique, février 2003.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies du lycée, des professeurs et des élèves en albums ou pas. On note trois photographies non datées concernant un atelier de menuiserie, un laboratoire et une exposition permanente de loisirs dirigés.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Petit, Pierre</persname>
+                  <persname> David,J.</persname>
+                  <subject>lycée</subject>
+                  <subject> élève</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject> professeur</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3644">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">VK3 342-345</unitid>
+                  <unittitle encodinganalog="3.1.2">Fêtes et cérémonies à l'hôtel de ville de Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1912/1929">1912 - 1929</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Conseil municipal</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>439</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>4 albums</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Etat moyen de conservation. Des traces de miroirs d'argent en périphérie de certaines photographies sont visibles.</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 2001</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Distinction honorifiques (An VIII-1850). Fêtes et cérémonies (1810-1946), répertoire numérique, mai 2001.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Albums illustrant les réceptions de Paris de 1912 à 1970.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Méjat, Paul</persname>
+                  <persname> Manuel, Henri</persname>
+                  <subject>hôtel de ville</subject>
+                  <subject> fête</subject>
+                  <subject> cérémonie officielle</subject>
+                  <subject> site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3645">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">12 AZ 8 (dossier 242)</unitid>
+                  <unittitle encodinganalog="3.1.2">Enterrements du maréchal Foch et d'Aristide Briand</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1929/1932">1929, 1932</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre stéréotype au gélatinobromure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>20</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre au gélatinobromure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>44</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">90 x 120</dimensions>, <dimensions unit="mm" type="support_negatif">130 x 180</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>20</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">180 x 125</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation pour l'ensemble des documents. Les plaques de verre restent  fragiles.</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1996</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Gérard (Bernadette), Documents entrés par voie extraordinaire, répertoire numérique, 2005, 15 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Cérémonie de commémoration des décès d'Aristide Briand et du Maréchal Foch à l'Arc de Triomphe.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Foch, Ferdinand (1851 - 1929)</persname>
+                  <persname> Briand, Aristide (1862 - 1932)</persname>
+                  <subject>concession funéraire</subject>
+                  <subject> cérémonie publique</subject>
+                  <subject> commémoration</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3646">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">10 AZ 47</unitid>
+                  <unittitle encodinganalog="3.1.2">Société de gérance d'immeubles municipaux</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1930/1935">Vers 1930 - 1935</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <corpname>EPA</corpname> ; <persname>Moreau</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>35</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1983</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Gérard (Bernadette), Documents entrés par voie extraordinaire, répertoire numérique détaillé, 2000, non paginé.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Album de photographies d'immeubles de la société de gérance d'immeubles municipaux.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>architecture</subject>
+                  <subject> habitation à loyer modéré</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3647">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">Pérotin/8/Rothschild/77/12 </unitid>
+                  <unittitle encodinganalog="3.1.2">Association Hôpital Mathilde-Henri de Rothschild</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1930/1970">Milieu du XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <corpname>Fondation Rothschild</corpname> ; <corpname>Hôpital Mathilde-Henri de Rothschild (Paris)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1977</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre après extraction</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Instrument de recherche papier</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de la famille Rothschild, dont une du baron Henri de Rothschild.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Rothschild, Henri de (1872 - 1947)</persname>
+                  <subject>famille</subject>
+                  <subject> portrait</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3648">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">D18J 4</unitid>
+                  <unittitle encodinganalog="3.1.2">Pierre Barrère, architecte</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1930/1970">Milieu du XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Barrère, Pierre (1893 - 1972)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>31</extent>
+                  </physdesc>
+               </did>
+               <appraisal encodinganalog="3.3.2">
+                  <p>N'ont été conservées aux Archives de Paris que les archives des travaux réalisés par Barrère à Paris et en région parisienne. Celles concernant les travaux effectués  dans le Calvados et en Seine-Maritime ont été données aux Archives départementales concernées.</p>
+               </appraisal>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 2004</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Né à Paris, élève de l'Ecole nationale d'Architecture, Pierre Barrère obtient en 1923 le diplôme d'Etat d'architecte. De 1924 à 1926, il participe aux travaux des inspecteurs généraux des Monuments historiques. Il suit également des cours d'architecture au Trocadéro et à l'Ecole nationale des Beaux-Arts. De 1919 à 1930, collaborateur de Gaudibert, il travaille à l'église Saint-Dominique, à la station Sablon, à des immeubles collectifs à Paris et à Montrouge, ainsi qu'à la reconstruction des régions libérées. De 1930 à 1942, directeur artistique des établisssements E. Doré au Havre, à Rouen et à Caen, il se consacre à la décoration de magasins, de banques, de navires. En 1943, inscrit à l'ordre des architectes, il crée un bureau d'études de projets d'architecture et de décoration où il restera jusqu'à sa mort en 1972. Après la Libération, il est chargé de l'édification et de l'aménagement de la gare maritime et de la gare d'escale des ports du Havre et de Cherbourg. Il est agréé par le ministère de la Reconstruction et de l'Urbanisme dans le Calvados pour la reconstruction des villes de Aunay-sur-Odon et de Caen. Parallèlement il se voit confier de nombreux travaux d'aménagement à Paris et en province.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Gérard (Bernadette), <emph render="italic">Pierre Barrère, Architecte. Dossiers de travaux (1942-1960)</emph>, répertoire numérique détaillé, 2004, 10 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Il s'agit de vues de façades et d'aménagements intérieurs de magasins ou de boutiques réunies dans un press-book. La grande majorité des noms des commerces est bien identifiée bien que la date de ces prises de vues ne soit pas mentionnée.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Peigné, G.</persname>
+                  <persname> Dmochowski, A.</persname>
+                  <persname> Gravot, M.</persname>
+                  <corpname> Mougins Compagnie</corpname>
+                  <subject>aménagement</subject>
+                  <subject> commerce</subject>
+                  <subject> architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3649">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">DE1/Fonds Gatteaux/1 ; portefeuilles 18 et 19</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds  Gatteaux : iconographie des œuvres graphiques et photographies de voyage</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian">XIXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <famname>Gatteaux</famname> ; <persname>Gatteaux Nicolas-Marie (1751 - 1832)</persname> ;  <persname>Gatteaux, Jacques Edouard (1788 - 1881)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier albuminé</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>72</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>Tirages collés sur carton</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1952</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Nicolas-Marie Gatteaux, graveur, est né le 2 août 1751 et mourut lors de l'épidémie de choléra le 24 juin 1832. Apprenti graveur en bijoux, il est plus tard introduit à la Monnaie où il excelle dans la gravure en médaille. En 1773, il exécute en autre le portrait de Louis XV, le sacre de Louis XVI en 1775, la naissance du Dauphin en 1781. Graveur du gouvernement pour la création des assignats et les timbres de l'enregistrement, du domaine et de la loterie, il est aussi inventeur : stéréotypie, presse mécanique, machine à imprimer les indiennes. Il remporte une médaille d'argent à l'exposition des produits de l'industrie en 1819. </p>
+                  <p>Jacques Edouard Gatteaux, né à Paris le 4 septembre 1788 est le fils de Nicolas Marie Gatteaux. Il fit ses études classiques à l'institution de Sainte-Barbe. Il s'y appliqua en particulier au dessin. Il étudia à la sortie du collège, à la gravure sur médaille sous la direction de son père. Entré à l'atelier du sculpteur Moitte, il suivit aussi les cours de l'Ecole des beaux-arts. Il remporta le grand prix de Rome en 1809, au premier concours établi pour la gravure sur médailles. De retour à Paris en 18113, il exécuta plusieurs commandes pour différents ministères. Il fut élu en 1834, membre du Conseil municipal de Paris ainsi que du Conseil général de la Seine, fit partie du comité consultatif des monnaies et des médailles et entra en 1845 à l'Institut comme successeur de Galle. Après avoir obtenu de nombreuses médailles récompensant son travail, il fut créé officier de la Légion d'honneur en 1861.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Lainé (Brigitte), avec la collaboration de Chetaux (Servane) et Bal (Christine), <emph render="italic">Fonds Gatteaux (1762-1881)</emph>, inventaire, 27 pages.</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ce fonds de petite taille (quatre articles uniquement plus les portefeuilles) contient quelques photographies d'œuvre d'art comme celle d'un tableau d'Hippolyte Flandrin, des dessins et des aquarelles sur Neauphle-le-Vieux (Yvelines) et de sculptures (têtes antiques et statue de Napoléon en costume de sacre) mais aussi sur le travail de gravure effectué par le père et le fils Gatteaux (médailles). A noter  des clichés de voyages réalisés sans doute par Jacques Édouard Gatteaux en Italie. Trois photographies de portraits de profil représenteraient Nicolas Marie et Jacques Édouard Gatteaux.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Italie</geogname>
+                  <geogname> Neauphle-le-Vieux (Yvelines)</geogname>
+                  <persname>Flandrin, Hippolyte (1809 - 1864)</persname>
+                  <persname> Napoléon Ier (1769 - 1821 ; empereur des français)</persname>
+                  <persname> Marville, Charles</persname>
+                  <persname>Vigé</persname>
+                  <corpname> Bisson Frères</corpname>
+                  <corpname> Studio Scaioni</corpname>
+                  <subject>arts plastiques</subject>
+                  <subject> portrait</subject>
+                  <subject> site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3650">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">D28Z 7-11 ; D28Z 21</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Haynon : cirques et établissements de spectacle</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/1960">Fin XIXe siècle - 1960</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Haynon, Paul</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement alphabétique des noms des établissements</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1932 - 1933</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Paul Haynon, peintre né à Paris, présidait l'association " Les Amis du cirque " qui s'était donné pour but la création d'un musée du cirque à Paris.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Collection Haynon : Cirques et établissements de spectacle (1805-1960), répertoire numérique, 10 pages.</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p>Collection Rondel à la  <extref xlink:href="http://www.bnf.fr/pages/collections/coll_asp.htm">Bibliothèque de l'Arsenal</extref> 
+                  </p>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Dossiers  factices d'établissements (music-hall, théâtres, cirques, etc.), contenant des notes manuscrites et des documents dont des photographies.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Endrey</persname>
+                  <subject>cirque</subject>
+                  <subject> salle de spectacle</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3651">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">D29Z 1-165</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Legrand : expositions universelles à Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1827/1900">1827 - 1900</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Legrand</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Héliogravure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié.</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+                  <p/>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Cette collection concerne les Expositions universelles à Paris à la fin du XIXe siècle. On remarque quelques clichés pour les expositions de 1889 (D.29Z 35-36) et de 1900 (D.29Z 56 et156).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>manifestation culturelle</subject>
+                  <subject> étranger</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3652">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">D96Z 5  ; D96Z 18</unitid>
+                  <unittitle encodinganalog="3.1.2">Association des Amis de  l'Orgue</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian">Non précisées</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Association des amis de l'orgue (Paris)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Polaroïd</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <container>2 albums</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1998</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Délai de communicabilité de 30 ans</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Gérard (Bernadette), <emph render="italic">Fonds de l'Association des Amis de l'Orgue. Archives du secrétariat (1923-1993)</emph>, répertoire numérique, 4 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Albums de photographies des événements organisés par l'association des Amis de l'Orgue (réception, concert).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>musique</subject>
+                  <subject> réunion publique</subject>
+                  <subject> fête</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3653">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">2484 W 576 ; 2484 W 598-599 ; 2484 W 601</unitid>
+                  <unittitle encodinganalog="3.1.2">Activités du service municipal des pompes funèbres</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1910/1980">1910 - 1980</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Service municipal des pompes funèbres</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>261</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive de type ektachrome </physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <container>Classeur</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 2007</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Monpas (Gérald), Service municipal des pompes funèbres (1839-1898), répertoire méthodique, 2008, 51 pages</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces documents photographiques montrent des cortèges funéraires (hippomobiles comme automobiles) ainsi que des cercueils et des urnes funéraires destinées aux adultes et des enfants. Quelques clichés illustrent les costumes que portaient les croque-morts au début du XXe siècle.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Durst</persname>
+                  <subject>cimetière</subject>
+                  <subject> concession funéraire</subject>
+                  <subject> décès</subject>
+                  <subject> religion</subject>
+                  <subject>voie communale</subject>
+                  <subject>funérailles</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3654">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">8 Fi 15</unitid>
+                  <unittitle encodinganalog="3.1.2">L'inondation de 1910 à Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1910">1910</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>408</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Photocopie</genreform>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Des photocopies sont en libre accès en salle de lecture.</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1988</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre aux reproductions et accès soumis à autorisation aux originaux</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Instrument de recherche papier</p>
+               </otherfindaid>
+               <bibliography encodinganalog="3.5.4">
+                  <bibref>Gaillard (Marc), L'eau de Paris , photographies de Claude Abron, Amiens, 1995, 224 pages. (cote bibliothèque aux Archives de Paris : Jh23)</bibref>
+               </bibliography>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Documentation précieuse sur l'aspect et la vie de quartiers entiers durant l'inondation de Paris en 1910 avec des vues de maisons basses, d'immeubles, de baraquements, d'enseignes peintes sur les murs ainsi que des groupes de personnes posant pour le photographe.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>inondation</subject>
+                  <subject> commerce</subject>
+                  <subject> ouvrage d'art</subject>
+                  <subject> sapeur pompier</subject>
+                  <subject> voie communale</subject>
+                  <subject> vie quotidienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3655">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">Pérotin/10624/72/1 1-37</unitid>
+                  <unittitle encodinganalog="3.1.2">Dossiers de commandes d'œuvres d'art, aides aux artistes</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/1965">Fin XIXe siècle - 1965</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Préfecture de la Seine. Direction chargée des affaires culturelles et de l'architecture</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement alphabétique des noms des artistes</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1972</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>
+                     <emph render="italic">Dossiers de commande d'œuvres d'art, aides aux artistes (Fin XIXe siècle-1965)</emph>, répertoire numérique détaillé dactylographié, sous la direction de Louis Faivre-d'Arcier, 2003, 143 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ce versement est constitué de deux parties. Les 37 premiers articles rassemblent  des "dossiers d'artistes", en pratique des dossiers de commandes d'œuvres d'art dont la richesse est très inégale : certains dossiers sont vides, des informations sur l'artiste apparaissent sur la couverture, d'autres contiennent de la correspondance, des  croquis et des photographies.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>artiste</subject>
+                  <subject> arts plastiques</subject>
+                  <subject> objet d'art</subject>
+                  <subject> subvention</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3656">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">2418 W</unitid>
+                  <unittitle encodinganalog="3.1.2">Dossiers de préparation des expositions présentées par  le Pavillon des arts</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1983/2006">1983 - 2006</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Pavillon des Arts (Paris)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>51</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>147</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 621</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>365</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>20</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Planche-contact</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>11</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet> Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>21</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>826</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive de type Ektachrome</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>234</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive de type Ektachrome</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>187</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Internégatif</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="mode_reproduction">60 x 60</dimensions>
+                  </physdesc>
+                  <container>Album; quelques diapositives sont collées sur du carton</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 2006</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre ; communicabilité à 60 ans pour les dossiers d'exposition</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Muth (Olivier), Tuchais (Vincent), Vaillant (Lydie) et Cosino (Coralie), <emph render="italic">Pavillons des Arts. Dossiers de fonctionnement et dossiers d’expositions (1983-2006)</emph>, répertoire numérique, 2007, 14 pages. ; Inventaire des photographies présentes dans le fonds, 2007, 12 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Les archives du Pavillon des Arts  témoignent de l’organisation et du fonctionnement de cet organisme, situé en plein coeur des Halles rénovées, de 1983 à 2006. On trouve de la correspondance chrono départ et arrivée (articles 1-25), des dossiers relatifs à la comptabilité et à la gestion du bâtiment (articles 26-30), et pour les expositions, des projets non réalisés (articles 31-41) et des dossiers (articles 44-145), des bilans (articles 42-43), des livres d’or des expositions (articles 146-148), et coupures de presse des expositions et documents de communication (articles 149-166), des cassettes vidéo (articles 167-168), des CD et DVD (article 169) et des affiches de grand format (articles 170-196). Les photographies, les diapositives et les ektas se trouvent dans les dossiers d’exposition concernés.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>manifestation culturelle</subject>
+                  <subject> artiste</subject>
+                  <subject> arts plastiques</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3657">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1151 W 1- 9</unitid>
+                  <unittitle encodinganalog="3.1.2">Dossiers de préparation d'expositions de l'Action artistique de la Ville de Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1978/1984">1978 - 1984</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Action artistique de la Ville de Paris</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet> , <physfacet>aristotype</physfacet>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement par exposition</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1984</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Communicabilité à 60 ans pour les dossiers d'exposition</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié, 2005, 13 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ce versement effectué par l'Action artistique de la ville de Paris est composé de dossiers d'expositions dans lesquels, parfois, sont incluses des photographies. On peut citer avec certitude les dossiers concernant L'enfant dans les collections de la Ville de Paris (1151W 2), Automates et musique mécanique (1151W 3), Deux siècles d'architecture sportive à Paris (1151W 8) et Art culinaire au XIXe siècle (1151W 9). On note également des clichés de l'église Saint-Julien de Caen (1151W 6).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>manifestation culturelle</subject>
+                  <subject> musique</subject>
+                  <subject> édifice cultuel</subject>
+                  <subject> architecture</subject>
+                  <subject> jeune</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3658">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">12 AZ 7 (dossier 230)</unitid>
+                  <unittitle encodinganalog="3.1.2">Exposition universelle de 1900 à Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900">1900</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Héliogravure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>2 albums</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation </p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Gérard (Bernadette), Documents entrés par voie extraordinaire, répertoire numérique, 2005, 15 pages.</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+                  <p/>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Albums photographiques concernant l'Exposition  universelle de 1900 à Paris.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>manifestation culturelle</subject>
+                  <subject>étranger</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3659">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">V12 S</unitid>
+                  <unittitle encodinganalog="3.1.2">Le Grand Hôtel</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1999">XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="producteur">
+                     <corpname>Grand Hôtel (Paris)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">24 x 36</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Héliogravure </physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier  moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne </physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte de vœux</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Hologramme</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">24 x 36</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive de type ektachrome</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">60 x 60</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique sous  format TIFF et JPEG</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon  état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds en cours de classement</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt, 2006</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation </p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite ; publication et diffusion interdites</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Machado (Alexandra),  répertoire numérique, 2008.</p>
+               </otherfindaid>
+               <bibliography encodinganalog="3.5.4">
+                  <bibref>Du palais au palace : des grands hôtels de voyageurs à Paris au XIXe siècle , catalogue d'exposition, Musée Carnavalet, 21 octobre 1998-24 janvier 1999, Paris, 1998, 231 pages.</bibref>
+               </bibliography>
+               <scopecontent encodinganalog="summary">
+                  <p>Le  Grand hôtel a déposé en 2006 ses archives ainsi que celles du Café de la Paix. Ce dépôt se composait en partie d'une importante photothèque abordant différents thèmes. On peut voir  l'intérieur et l'extérieur du Grand Hôtel à travers toutes ses rénovations, dès la fin du XIXe siècle et à travers tout le XXe siècle, grâce à des photographies, mais aussi des reproductions de cartes postales. Le reste des photographies montre les manifestations qui se sont déroulées au sein de l'établissement comme des concours, des expositions, des cérémonies ou des réceptions. On note également des clichés où figure le personnel de l'hôtel.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <corpname>Café de la Paix (Paris) ; </corpname>
+                  <persname>Chevojon, A.</persname>
+                  <persname> Marville, Ch.</persname>
+                  <subject>hôtel de tourisme</subject>
+                  <subject>  chantier</subject>
+                  <subject> construction</subject>
+                  <subject> restaurant de tourisme</subject>
+                  <subject> fête</subject>
+                  <subject> débit de boisson</subject>
+                  <subject> mariage</subject>
+                  <subject> manifestation culturelle</subject>
+                  <subject> art</subject>
+                  <subject> arts plastiques</subject>
+                  <subject> réunion scientifique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3660">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1643 W 20-22</unitid>
+                  <unittitle encodinganalog="3.1.2">Archives du bureau des bibliothèques de la Ville de Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1978">1978</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Bureau des bibliothèques</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">24 x 36</dimensions>, <dimensions unit="mm" type="support_negatif">60 x 60</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier  moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Planche-contact</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive de type ektachrome</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">24 x 36</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1994</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Vézinet (Véronique), sous la direction de Nagy (Frédérique), <emph render="italic">Bureau des Bibliothèques</emph>, répertoire numérique détaillé, 1995, 17 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies des bibliothèques municipales de Paris montrant les salles de lecture, les ouvrages et les manifestations organisées par les bibliothèques.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <corpname>AGRACI</corpname>
+                  <corpname> Photo Samand</corpname>
+                  <persname>Guibert, Samie</persname>
+                  <persname> Pons, Philippe</persname>
+                  <persname> Jacotet, Jacques</persname>
+                  <subject>bibliothèque</subject>
+                  <subject> construction</subject>
+                  <subject> manifestation culturelle</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3661">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1304 W</unitid>
+                  <unittitle encodinganalog="3.1.2">Aménagement de parcs et jardins à Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1870/1970">1870 - 1970</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Paris. Direction des parcs, jardins et espaces verts</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>3 209</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier  ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier  moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier albuminé</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds en partie classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1988</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier de dépouillement provisoire, 104 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Dossiers généraux sur les parcs et jardins de la Ville de Paris concernant : l'organisation du service des parcs et jardins, l'horticulture et la sylviculture, la création et l'aménagement d'espaces verts, la construction d'édifices dans les espaces verts, les concessions passées avec la ville de Paris, le fonctionnement et l'animation dans les espaces verts, la participation du service aux expositions internationales, les guerres mondiales et les catastrophes naturelles.  Les photographies sont disséminées dans tout le fonds. </p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <geogname> La Celle-Saint-Cloud (Yvelines)</geogname>
+                  <geogname> Bonneuil-sur-Marne (Val-de-Marne)</geogname>
+                  <geogname> Haÿ-les-Roses, L' (Val-de-Marne)</geogname>
+                  <geogname>Sceaux (Seine-Saint-Denis)</geogname>
+                  <geogname> Pantin (Seine-Saint-Denis)</geogname>
+                  <geogname> Villetaneuse (Seine-Saint-Denis)</geogname>
+                  <geogname> Châtenay-Malabry (Hauts-de-Seine)</geogname>
+                  <geogname> Nanterre (Hauts-de-Seine)</geogname>
+                  <geogname> Suresnes (Hauts-de-Seine)</geogname>
+                  <subject>espace vert</subject>
+                  <subject> manifestation culturelle</subject>
+                  <subject> mobilier urbain</subject>
+                  <subject> aménagement  du territoire</subject>
+                  <subject> aménagement forestier</subject>
+                  <subject> bois</subject>
+                  <subject> arts plastiques</subject>
+                  <subject> cimetière</subject>
+                  <subject> installation sportive</subject>
+                  <subject> construction</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3662">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">13 W 24</unitid>
+                  <unittitle encodinganalog="3.1.2">Projet d'aéroport "relais" sur la Seine à Paris</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1936">1936</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Lurçat, André (1894-1970, architecte)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier  moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>10</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>Tirages papier collés sur carton de 326 mm x 251 mm</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Instrument de recherche papier</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>M. André Lurçat, architecte a conçu un projet d'aéroport "relai" sur la Seine à Paris dit "Aéroparis". Ce projet a été présenté devant le Conseil municipal (séance du 11 juillet 1932). Le dossier constitué, s'accompagne de 10 photographies numérotées de 1 à 10, qui illustrent son propos. Il s'agit : </p>
+                  <list>
+                     <item>1. Vue d'avion indiquant l'emplacement et la dimension de l'aéroport ;</item>
+                     <item>2. Carte de la région parisienne avec les emplacement des aéroports ;</item>
+                     <item>3. L'aéroport conçu vu la nuit avec une vision des deux modes d'éclairage ;</item>
+                     <item>4. Plan de la plate-forme supérieure rapporté sur le plan cadastral ;</item>
+                     <item>5. Plan de la plateforme intermédiaire -Garages d'avions de tourisme ;</item>
+                     <item>6. Plan de la plateforme inférieure - Hall des voyageurs au niveau du pont de Pany ;</item>
+                     <item> 7. Détail de la partie centrale -Aire supérieure ;</item>
+                     <item> 8. Détail de la partie inférieure -Garage des avions ;</item>
+                     <item> 9. Plateforme inférieure au pont de Pany -Accès des voyageurs ;</item>
+                     <item> 10. Plateforme intermédiaire au pont de Pany -Hall des voyageurs.</item>
+                  </list>
+                  <p> Les photographies 4 à 10 sont des dessins techniques.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <subject>aérodrome</subject>
+                  <subject> aménagement</subject>
+                  <subject> conseil municipal</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3663">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">VR 500-598</unitid>
+                  <unittitle encodinganalog="3.1.2">Administration générale de la direction des Beaux-Arts, décoration et aménagement de bâtiments publics, monuments historiques, œuvres commémoratives, aide aux artistes</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/1962">Fin XIXe siècle - 1962</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1">
+                     <corpname>Paris. Direction des Beaux-Arts</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier  ancien et moderne </physfacet>
+                  </physdesc>
+                  <container>Tirages collés sur carton</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 2000</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation ; publication et diffusion soumises à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique détaillé établi par A. Malard sous la direction de Jean-Philippe Dumas, 2006, 17 pages.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Cet ensemble documentaire concerne principalement les travaux d’architecture effectués sur des édifices appartenant à la Ville de Paris durant la deuxième moitié du XIXe siècle et la première moitié du XXe siècle, pour lesquels le service chargé des Beaux-Arts était compétent :</p>
+                  <p/>
+                  <list>
+                     <item> travaux d’embellissement et de décoration,</item>
+                     <item>protection des monuments historiques,</item>
+                     <item>construction de monuments commémoratifs, à la suite principalement des deux guerres mondiales,</item>
+                     <item>aide aux artistes.</item>
+                  </list>
+                  <p>On trouve des documents photographiques dans l'ensemble du fonds. Par exemple, le carton 567 contient 4 tirages portant sur un projet de décoration de la salle des fêtes de la mairie des Lilas. Le carton  579 quant à lui contient 11 tirages illustrant les projets des candidats au concours pour la réalisation d'un monument dédié au Poilu de la Première guerre mondiale. Enfin, dans le carton 586, on remarque une photographie sur un projet de gisant dans le cimetière du Père Lachaise.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <geogname>Cimetière du Père Lachaise (Paris)</geogname>
+                  <geogname>Les Lilas (Seine-Saint-Denis)</geogname>
+                  <persname>Ambrosio, Louis d' (sculpteur)</persname>
+                  <persname> Roseman, J.</persname>
+                  <subject> arts plastiques</subject>
+                  <subject> cimetière</subject>
+                  <subject> artiste</subject>
+                  <subject> manifestation culturelle</subject>
+                  <subject> commémoration</subject>
+                  <subject> construction</subject>
+                  <subject> guerre mondiale (1914 - 1918)</subject>
+                  <subject> hôtel de ville</subject>
+                  <subject> ancien combattant</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3696">
+               <did>
+                  <unittitle encodinganalog="3.1.2">Fonds photographiques complémentaires conservés dans d’autres institutions patrimoniales parisiennes (bibliothèques, musées)</unittitle>
+               </did>
+               <c encodinganalog="3.1.4" id="d1e3700">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">La Parisienne de photographie</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>La  <extref xlink:href="http://www.parisenimages.fr">Parisienne de photographie</extref> a été créée en juillet 1995. Elle a pour objet la gestion et l’exploitation des fonds photographiques et iconographiques patrimoniaux de la Ville de Paris. De nombreuses images en ligne permettent d’avoir une idée de la diversité des collections photographiques conservées par les différentes institutions à Paris.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3710">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">Agence Roger-Viollet</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>La Ville de Paris a hérité, à la mort de Hélène Roger-Viollet et Jean Fischer en 1985, de la collection de l’ <extref xlink:href="http://www.roger-viollet.fr/">Agence Roger-Viollet</extref> . Cette Agence devient en 2005, une filiale de la Parisienne de Photographie. Elle regroupe environ 5 000 000 négatifs sur plaque de verre ou film souple et 2 000 000 positifs sur papier ou plaque de verre. Les thèmes sont assez variés : les portraits de personnalités, les actualités, le monde du spectacle ou les sciences. Elle est constituée d’œuvres de photographes amateurs comme Henri et Roger Viollet, de photographes professionnels comme Henri Martinie, Maurice-Louis et Albert Harlingue, Lapi mais aussi de studios photographiques comme le Studio Lipnitski ou Neurdein Frères. Une importance banque d’images est disponible sur le site internet avec la possibilité de faire des interrogations grâce à un moteur de recherche.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3720">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">Bibliothèque historique de la Ville de Paris (BHVP)</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>La  <extref xlink:href="http://www.paris.fr/portail/Culture/Portal.lut?page_id=473">BHVP</extref> s'est intéressée très tôt à la photographie comme source documentaire. Elle commence à constituer sa collection dès 1874 et ce de manière assez régulière jusqu’en 1914. Après plusieurs années de suspension, les acquisitions ont repris vers 1970. Au total, plus d'un million d'épreuves composent la collection de cette bibliothèque. Le fonds ancien compte 240 500 tirages et les nouvelles acquisitions s’élèvent à 647 000. Cette collection, consultable après justification de la recherche, est constituée de plaques de verre, de films souples (465 000 noir et blanc et 1 000 diapositives couleur), d’épreuves réalisées à partir de différents procédés ainsi que des albums. Elle illustre la topographie parisienne ou la vie des rues et comporte également des portraits. On peut souligner la présence des fonds des photographes Vigneau, André Zucca et de l’agence de presse France-Soir (anciennement Paris-Soir). Outre ces derniers, de nombreux photographes sont représentés : Charles Marville, Henri Le Secq, Gustave Le Gray, Disdéri, Pierre Petit, Collard, Édouard Baldus, Bisson Frères, Durandelle, Eugène Atget, Henri Godefroy, Émmanuel Pottier, Maurice Bucquet, Charles Frémont, Union photographique française.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3730">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">Bibliothèque administrative de la Ville de Paris</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>La  <extref xlink:href="http://www.paris.fr/portail/Culture/Portal.lut?page_id=469">Bibliothèque administrative</extref> constitue le centre de documentation pour les services de la Ville de Paris mais est aussi un centre d’étude ouvert au public. Leur collection de photographies, allant de 1850 à 1980, consultable après justification de la recherche, se compose de 30 000 négatifs et positifs, et d’une cinquantaine d’albums. Grâce à cette collection, nous pouvons suivre l’aménagement urbain et les grands travaux décidés par la Ville de Paris : transformations haussmanniennes, aménagement de la voie publique, construction de canaux, d’aqueducs et du métro, édification et décoration de bâtiments publics, création d’espaces verts. Cette collection permet également, de suivre la vie de l’Hôtel de ville et des services municipaux : festivités et réceptions officielles, personnels politiques parisiens en 1864 et 1930. Quelques clichés concernent même la Préfecture de Police en 1900. On note une très belle collection d’albums issus d’échanges avec des municipalités étrangères, concernant les villes de New York (1873), Montréal, Toronto, Melbourne, Florence, Vienne, Moscou, Rome ou Bratislava. Parmi les photographes représentés, nous pouvons citer : A Fernique, A. Maindron, Charles Marville, P. Petit, Eugène Pirou…</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3740">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">Direction de l’Urbanisme de la Ville de Paris</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>La  <extref xlink:href="http://www.paris.fr/portail/accueil/Portal.lut?page_id=5495">direction de l’Urbanisme de la Ville de Paris</extref>  a possède près de 19 000 images concernant les délibérations de la direction, les relevés de décisions des différents arrondissements de Paris pour la protection du patrimoine et enfin des photographies anciennes comme récentes classées par thèmes (espaces verts, cinémas, portraits, scènes de rue, enseignes, projet-aménagement, communication…).</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3750">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">Cinémathèque Robert Lynen</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>Dépendant de la direction des Affaires scolaires, la cinémathèque Robert Lynen possèdent une importance collection avec près de 17 000 documents photographiques. Elle est constituée autour de deux axes. Tout d’abord, le Paris des années 1926-1936. Il s’agit de négatifs sur plaque de verre ou sur film souple au nitrate de format 130x180 mm ou 90x120 mm, sur 4 thématiques : les grands travaux à Paris, la vie dans les établissements scolaires municipaux d’enseignement professionnel, les rues et les monuments parisiens et enfin les activités des services municipaux et préfectoraux. La deuxième partie de la collection est composée d’images sur plaque de verre ayant servi de matériels pédagogiques pour les établissements scolaires et abordant différents sujets comme l’Algérie, le Maroc ou le costume. Il existe pour cette partie de la collection près de 70 séries auxquelles il faut ajouter les plaques de verre autochromes du photographe Jules Gervais Courtellement, acquis par la Ville de Paris en 1931, et qui illustrent aussi bien Paris que la Bretagne, l’Egypte, l’Espagne, les insectes ou encore la peinture.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3757">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">Musée Carnavalet</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>On dénombre près de 150 000 photographies consultables sur rendez-vous dans le cabinet des arts graphiques du  <extref xlink:href="http://www.carnavalet.paris.fr">musée Carnavalet</extref> . Ces photographies, constituées de daguerréotypes, de tirages papier noir et blanc ou couleur, d’images numériques et de négatifs sur film souple, illustrent les petits métiers et la topographie de la Ville de Paris. Le musée possède également des œuvres de photographes comme Eugène Atget (environ 7 000 clichés), Charles Marville (800 tirages), Brassaï, Cartier Bresson ou Roger Henrard.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3767">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">Commission du vieux Paris</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>Créée en 1897, le secrétariat de la  <extref xlink:href="http://www.paris.fr/portail/Culture/Portal.lut?page_id=5608">Commission du vieux Paris</extref> tente de conserver l’histoire et la trace de l’évolution urbaine de Paris. Son département d’histoire de l’architecture d’archéologie et du patrimoine (DHAAP) gère les collections photographiques, consultables sur rendez-vous. Elle réunit près de 300 000 documents sous différents formats, comme des négatifs sur plaque de verre ou film souple, des tirages positifs, des stéréotypes ou encore des images numériques pour les campagnes photographiques les plus récentes. Ces documents photographiques permettent de découvrir les édifices parisiens, les décorations intérieures, les fouilles archéologiques, ou des ensembles urbains avant leur destruction. Parmi les fonds les plus anciens, on note des clichés datant de 1898 réalisés les photographes Charles Lansiaux, E Desprez ou A Cite.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3777">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">Musée d'art moderne</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>Le <extref xlink:href="http://www.mam.paris.fr">musée d'art moderne</extref> possède près de 5 000 pièces composées essentiellement de tirages papier noir et blanc et couleur. Cette collection permet d'illustrer les grands courants de l'art du XXe siècle comme le fauvisme ou encore le cubisme. C’est en 1980 qu’entre le premier fonds photographique au musée. Il s’agit de photographies de l'École humaniste et des portraits d'artistes. Vers 1990, l’orientation du contenu des photographies évolue vers une photographie plasticienne réalisée entre autre par J. P. Charbonnier, Claude Cahun ou Jan Saudek. Outre ces photographes, des clichés de Cartier-Bresson, de Robert Doisneau ou de Weston apparaissent dans les autres fonds.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3787">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">Musée Bourdelle</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>Les photographies du  <extref xlink:href="http://www.bourdelle.paris.fr">musée Bourdelle</extref> , données en 1995 et consultables sur rendez-vous, concernent le sculpteur Bourdelle et son oeuvre sur une période allant de 1880 à 1990. Ce sont 20 000 positifs et négatifs sur plaque de verre et film souple réalisés par Bourdelle lui-même, mais aussi par Choumoff, Harlingue, Druet, Henri Manuel et Roseman.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3798">
+                  <did>
+                     <unittitle encodinganalog="3.1.2">Musée Cernuschi</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>16 000 photographies sont conservées par le centre de documentation du <extref xlink:href="http://www.cernuschi.paris.fr">musée Cernuschi</extref> . Cette collection comprend des négatifs sur plaque de verre et des photographies rapportées de Chine, du Japon et d'Indonésie. On note également 520 plaques de verre négatives et positives stéréotypes en noir et blanc provenant de deux missions en Chine données au musée en 1910. L'ensemble concerne l'art asiatique.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3808">
+                  <did>
+                     <unittitle encodinganalog="3.1.2"> Maison de Victor Hugo</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>La collection photographique de la  <extref xlink:href="http://www.musee-hugo.paris.fr">maison de Victor Hugo</extref> , consultable sur rendez-vous, commence à être formée dès 1902-1903 et couvre les années 1853-1855 jusqu'au début du XXe siècle. Elle est constituée de 5 000 positifs et négatifs et d'albums sur : l'atelier de Jersey, Hauteville House et les descendants de Victor Hugo. Ce sont des oeuvres de photographes tels que Julia Margaret Cameron, Carjat, Arsène Garnier, Charles Hugo, Auguste Vacquerie, Henri Manuel, Nadar, Neurdein, Oliver Mériel et Alfred Norman.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3818">
+                  <did>
+                     <unittitle encodinganalog="3.1.2"> Musée de la vie romantique et Maison Renan-Scheffer</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>Ces deux établissements possèdent peu de photographies. Estimées à 500 environ, ces dernières, sont consultables sur rendez-vous. Des positifs, négatifs et des albums, allant du XIXe siècle aux années 1980 composent leurs collections. On y trouve des portraits et des photographies de la famille d'Ernest Renan et d’œuvres d'Ary Scheffer, réalisés par Ernest Psichari, Pierre Petit, Otto, Downey, Vianelli, Ségur ou Berthelot.</p>
+                  </scopecontent>
+               </c>
+               <c encodinganalog="3.1.4" id="d1e3825">
+                  <did>
+                     <unittitle encodinganalog="3.1.2"> Maison de Balzac</unittitle>
+                  </did>
+                  <scopecontent encodinganalog="summary">
+                     <p>Le fonds photographique de la maison de Balzac, consultable sur rendez-vous, s’élève à 100 pièces et couvre le XIXe et XXe siècles. Il concerne Balzac et son environnement. Des tirages originaux ou des contretypes forment la collection. Parmi ceux-ci, on note les portraits d'écrivains de Robert Doisneau effectués de 1970 à 1986 et un daguerréotype de Balzac par Bisson.</p>
+                  </scopecontent>
+               </c>
+            </c>
+         </c>
+      </dsc>
+   </archdesc>
+</ead>

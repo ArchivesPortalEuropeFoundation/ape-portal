@@ -1,0 +1,1 @@
+<a href="[[~[[+id]]]]">[[+pagetitle]]</a><span class="pipe">|</span>

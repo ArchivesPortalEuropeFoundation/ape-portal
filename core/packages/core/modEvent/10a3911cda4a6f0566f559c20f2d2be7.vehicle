@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c058455d1a6d501d9bcf158ba2daa6ae',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '10a3911cda4a6f0566f559c20f2d2be7',
+  'native_key' => 'OnResourceCacheUpdate',
+  'object' => '{"name":"OnResourceCacheUpdate","service":1,"groupname":"Resources"}',
+);

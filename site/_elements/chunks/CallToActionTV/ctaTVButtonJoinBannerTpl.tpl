@@ -1,0 +1,1 @@
+[[+text:notempty=`<a class="button blue border" href="[[+href]]"[[+target:notempty=` target="[[+target]]"`]]>[[+text]]</a>`:isempty=` `]]

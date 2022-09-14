@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eac-cpf xmlns="urn:isbn:1-931666-33-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-33-4 apeEAC-CPF.xsd">
+    <control>
+        <recordId>GB-100_987654321</recordId>
+        <otherRecordId localType="original">987654321</otherRecordId>
+        <maintenanceStatus>new</maintenanceStatus>
+        <publicationStatus>approved</publicationStatus>
+        <maintenanceAgency>
+            <agencyCode>GB-100</agencyCode>
+            <agencyName>Archive of Test</agencyName>
+        </maintenanceAgency>
+        <languageDeclaration>
+            <language languageCode="eng">English</language>
+            <script scriptCode="Latn">Latin</script>
+        </languageDeclaration>
+        <maintenanceHistory>
+            <maintenanceEvent>
+                <eventType>created</eventType>
+                <eventDateTime>13 August 2020</eventDateTime>
+                <agentType>human</agentType>
+                <agent>Kerstin Arnold</agent>
+            </maintenanceEvent>
+        </maintenanceHistory>
+    </control>
+    <cpfDescription>
+        <identity>
+            <entityId>987654321</entityId>
+            <entityType>corporateBody</entityType>
+            <nameEntry>
+                <part>Parliament</part>
+            </nameEntry>
+        </identity>
+        <description>
+            <existDates>
+                <dateSet>
+                    <dateRange>
+                        <fromDate>1789</fromDate>
+                        <toDate>1804</toDate>
+                    </dateRange>
+                    <dateRange>
+                        <fromDate>1815</fromDate>
+                        <toDate>1871</toDate>
+                    </dateRange>
+                    <dateRange>
+                        <fromDate>1871</fromDate>
+                        <toDate>1918</toDate>
+                    </dateRange>
+                    <dateRange localType="open">
+                        <fromDate>1918</fromDate>
+                    </dateRange>
+                </dateSet>
+            </existDates>
+            <places>
+                <place>
+                    <placeEntry vocabularySource="http://www.places.eu/paris" countryCode="FR" localType="business-residence">Paris</placeEntry>
+                </place>
+            </places>
+            <legalStatuses>
+                <legalStatus>
+                    <term>Some term for legal status of Parliament</term>
+                    <placeEntry>France</placeEntry>
+                    <citation xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.legal-status.eu/parliament">Find out more</citation>
+                </legalStatus>
+            </legalStatuses>
+            <structureOrGenealogy>
+                <p>Some general notes on structure.</p>
+                <p>Some more information on structure.</p>
+                <p>Further thoughts.</p>
+                <p>Additional notes.</p>
+            </structureOrGenealogy>
+        </description>
+        <relations>
+            <cpfRelation cpfRelationType="associative" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="GB-100_123456789">
+                <relationEntry localType="title">Jean DeLaCour, b. Smith</relationEntry>
+                <dateRange>
+                    <fromDate>1975</fromDate>
+                    <toDate>2000</toDate>
+                </dateRange>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="associative">
+                <relationEntry>Member 1</relationEntry>
+                <dateRange>
+                    <fromDate>1975</fromDate>
+                    <toDate>1977</toDate>
+                </dateRange>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="associative">
+                <relationEntry>Member 2</relationEntry>
+                <dateRange>
+                    <fromDate>1975</fromDate>
+                    <toDate>1986</toDate>
+                </dateRange>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="associative">
+                <relationEntry>Member 3</relationEntry>
+                <dateRange>
+                    <fromDate>1982</fromDate>
+                    <toDate>1986</toDate>
+                </dateRange>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="associative">
+                <relationEntry>Member 4</relationEntry>
+                <dateRange>
+                    <fromDate>1982</fromDate>
+                    <toDate>2000</toDate>
+                </dateRange>
+            </cpfRelation>
+            <resourceRelation resourceRelationType="creatorOf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.parliament.eu/publications">
+                <relationEntry>Publications of Parliament Sessions</relationEntry>
+            </resourceRelation>
+            <resourceRelation resourceRelationType="creatorOf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.parliament.eu/legislation">
+                <relationEntry>Publications of Legislations passed by Parliament</relationEntry>
+            </resourceRelation>
+            <resourceRelation resourceRelationType="creatorOf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.parliament.eu/committees">
+                <relationEntry>Publications of Parliament Committees</relationEntry>
+            </resourceRelation>
+            <resourceRelation resourceRelationType="creatorOf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.parliament.eu/speaker">
+                <relationEntry>Publications of the Most Honourable Speaker</relationEntry>
+            </resourceRelation>
+            <functionRelation functionRelationType="performs" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.functions.eu/member-of-parliament">
+                <relationEntry>Member of Parliament</relationEntry>
+            </functionRelation>
+        </relations>
+    </cpfDescription>
+</eac-cpf>

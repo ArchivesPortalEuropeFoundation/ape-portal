@@ -1,0 +1,3054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:isbn:1-931666-22-9"
+     xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.archivesportaleurope.net/Portal/profiles/apeEAD.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
+     audience="external">
+   <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b"
+              repositoryencoding="iso15511"
+              scriptencoding="iso15924"
+              relatedencoding="MARC21">
+      <eadid identifier="FR-FRAN_FRDAFAPH_AD006" countrycode="FR" mainagencycode="FR-FRAN">FRDAFAPH_AD006</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="245">Archives photographiques conservées dans le département des Alpes-Maritimes (06) </titleproper>
+            <subtitle>Etat des fonds</subtitle>
+         </titlestmt>
+         <publicationstmt>
+            <publisher>Direction des Archives de France</publisher>
+            <address>
+               <addressline>Paris</addressline>
+            </address>
+            <date encodinganalog="260$c" calendar="gregorian" era="ce" normal="2006-10">décembre 2007</date>
+         </publicationstmt>
+      </filedesc>
+      <profiledesc>
+         <langusage>Instrument de recherche rédigé en<language encodinganalog="041" langcode="fre" scriptcode="Latn"> français</language>
+         </langusage>
+      </profiledesc>
+      <revisiondesc>
+         <change>
+            <date/>
+            <item>Converted_apeEAD_version_2.0.14</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <archdesc level="fonds" type="inventory" encodinganalog="3.1.4"
+             relatedencoding="ISAD(G)v2">
+      <did>
+         <unittitle encodinganalog="3.1.2">Département des Alpes-Maritimes (06)</unittitle>
+      </did>
+      <controlaccess><genreform>photographie</genreform></controlaccess>
+      <dsc type="othertype">
+         <c encodinganalog="3.1.4" id="d1e39">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives départementales des Alpes-Maritimes</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e43">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">2 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Cartes postales conservées aux Archives départementales des Alpes-Maritimes</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/2099">A partir de la fin du XIXe  siècle</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne et moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>8 762</extent>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don</p>
+               </acqinfo>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation des éditeurs</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes, 4541 notices visibles (numérisées)</emph></p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces cartes postales représentent des scènes de la vie quotidienne, des monuments historiques, des paysages, des modes de transports, dans la plupart des communes du département et dans les agglomérations frontalières avec l'Italie.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <geogname>Vintimille (Italie)</geogname>
+                  <geogname>San Remo (Italie)</geogname>
+                  <subject>vie quotidienne</subject>
+                  <subject>monument historique</subject>
+                  <subject>site</subject>
+                  <subject>transport</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e103">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">3 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés photographiques réalisés par les Archives départementales des Alpes-Maritimes et isolés</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1986/2099">1986 - ...</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Alpes-Maritimes. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2 922</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2 687</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, à partir de 1986</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Registre tenu par le laboratoire photographique du Service. </p>
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 2479 notices visibles (numérisées)</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies d'édifices (dont ceux des Archives) et de cérémonies diverses.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <persname>Thiery, Roger</persname>
+                  <persname>Guillemin, Michel</persname>
+                  <subject>édifice</subject>
+                  <subject>cérémonie publique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e173">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">4 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Diapositives réalisées par les Archives départementales des Alpes-Maritimes et isolées</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1987/2099">1987 - ...</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Alpes-Maritimes. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 737</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don et production interne, à partir de 1987</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Registre tenu par le laboratoire photographique du Service. </p>
+                  <p>Base de données informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 1245 notices non visibles (non numérisées)</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies d'édifices (dont ceux des Archives), de cérémonies diverses et reproduction de documents conservés aux Archives.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <persname>Thierry, Roger</persname>
+                  <persname>Guillemin, Michel</persname>
+                  <subject>édifice</subject>
+                  <subject>cérémonie publique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e232">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">7 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés des plans de Turin</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1970">1970</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>205</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Modalités d'entrée inconnues, 1970</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation des Archives d'Etat de Turin</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire des Archives d'Etat de Turin</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Cette sous-série regroupe des reproductions de plans du XVIe  siècle des Archives d'Etat de Turin.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Nice (Alpes-Maritimes)</geogname>
+                  <geogname>Alpes-Maritimes (département) -- Tunnel de Tende</geogname>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <subject>cartographie</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph571">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">8 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Charles Nègre</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1863/1865">1863 - 1865</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname authfilenumber="FRDAF00APH_NA008">Nègre, Charles</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>80</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits appartenant aux Archives départementales des Alpes-Maritimes</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 75 unités documentaires visibles (numérisées).</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies  de monuments et de paysages de Nice, de Menton de Gourdon et  de Saint-André, ainsi que de certains événements, tels que le transport des cendres du grand duc Nicolas Alexandrovitch de Russie, le Tsarévitch, et une distribution des prix au lycée Masséna de Nice.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Nice (Alpes-Maritimes)</geogname>
+                  <geogname>Menton (Alpes-Maritimes)</geogname>
+                  <geogname>Gourdon (Alpes-Maritimes)</geogname>
+                  <geogname>Saint-André (Alpes-Maritimes)</geogname>
+                  <persname>Alexandrovitch de Russie, Nicolas (grand duc)</persname>
+                  <subject>monument historique</subject>
+                  <subject>site</subject>
+                  <subject>lycée</subject>
+                  <subject>événement</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e346">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">9 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Vues des Alpes Maritimes, par Joseph</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1902/1909">1902 - 1909</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Joseph</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>44</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don des Archives départementales du Loiret, 1978</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>M. Joseph, photographe à Orléans</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 44 notices visibles (numérisées).</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces documents représentent des paysages et des scènes de carnaval dans les Alpes-Maritimes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <corpname>Loiret. Archives départementales</corpname>
+                  <subject>fête</subject>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph573">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">10 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Tirages isolés ou produits par le Service des Archives départementales des Alpes-Maritimes</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1870/1995">1870 - 1995</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs (photographes)">
+                     <persname authfilenumber="FRDAF00APH_NA010">Giletta, Jean</persname> ; <persname>Cresp</persname> ; <persname>Luce</persname>  ; <persname>Nader</persname>  ;<persname>Favier (abbé)</persname>  ;<persname>Foucachon (abbé)</persname> ;<persname>Thiery, Roger</persname>  ; <persname>Guillemin, Michel</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 5000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>,  <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <container>864 tirages en albums sur la totalité</container>
+               </did>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 1967 notices.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies  de pièces géologiques, de monuments, de paysages, d'événements, de fêtes ou de festivals...</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>monument historique</subject>
+                  <subject>site</subject>
+                  <subject>fête</subject>
+                  <subject>manifestation culturelle</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e487">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">11 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Lucarelli</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950/1959">Années 1950</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Lucarelli, Jean</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2 501</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>6</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2 509</extent>
+                  </physdesc>
+               </did>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention obligatoire "Adrien Lucarelli photographe"</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Jean Lucarelli était installé rue Lépante à Nice.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 2515 notices.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies  de paysages et de monuments de la Côte-d'Azur, de la Vallée du Rhône et de la Corse.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <geogname>Côte-d'Azur Menton (Alpes-Maritimes)</geogname>
+                  <geogname>Marseille (Alpes-Maritimes)</geogname>
+                  <geogname>Vallée du Rhône Corse (région administrative)</geogname>
+                  <subject>monument historique</subject>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e559">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">12 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Paule Goffi</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1991">1991</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Goffi, Paule</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>290</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés suivant datation (cartes postales)</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes,</emph>, 290 notices visibles (numérisées).</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies représentant des monuments, des marchés, des lignes de chemin de fer et des scènes de rues dans le département des Alpes-Maritimes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>monument historique</subject>
+                  <subject>architecture</subject>
+                  <subject>transport ferroviaire</subject>
+                  <subject>vie quotidienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="AD06ph13">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">13 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Pouzet</unittitle>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Pouzet, Paul (1852-1934)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>150</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don des Archives départementales de l'Ardèche, février 1985</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés suivant datation (cartes postales)</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Docteur Paul Pouzet (1852-1934), médecin à Privas, s'installa et mourut à Cannes.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, notices non visibles.</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces documents représentent les édifices caractéristiques des hameaux et villages du département des Alpes-Maritimes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e671">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">18 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Préfecture des Alpes-Maritimes</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1911">1911</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Alpes-Maritimes. Préfecture</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>59</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>100</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">130 x 180</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les épreuves</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits appartenant aux Archives départementales des Alpes-Maritimes</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 56 notices non visibles (non numérisées).</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Il s'agit de photographies de l'extérieur et de l'intérieur (avec ameublement) de la Préfecture  des Alpes Maritimes en 1911, du temps du préfet André de Joly.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Nice (Alpes-Maritimes)</geogname>
+                  <persname>Joly, André de (Préfet des Alpes-Maritimes)</persname>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e728">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">20 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Service de la Communication du Conseil général</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1989/1992">1989 - 1992</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <corpname>Alpes-Maritimes. Service de la communication du Conseil général</corpname> ; <persname>Véran, Georges</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>&gt; 5000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, mai 1996</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation du service de la communication</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique, <emph render="italic">Iconographie des Alpes-Maritimes</emph>, en cours de saisie 3623 notices non visibles (non numérisées) au 25 octobre 2006.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de réunions politiques et de manifestations subventionnées par le Conseil général ou auxquelles des services du Conseil Général participaient.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>vie politique</subject>
+                  <subject>économie</subject>
+                  <subject>cérémonie publique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e783">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">21 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Sauser</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1935/1940">Fin des années 1930</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Sauser, Maurice</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>470</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte de vœux</genreform>, <genreform>carte postale</genreform>, <genreform>vignette</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Numérisation de sauvegarde consultable sur place</genreform>
+                  </physdesc>
+                  <container>21 albums</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat avec contrat et clauses, octobre 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation de Mme Françoise Sauser </p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique, <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 388 notices visibles sur place (numérisées) pour 495 notices saisies.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies représentant des monuments, des jardins publics, des hameaux, des villes et des paysages du département des Alpes-Maritimes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>espace vert</subject>
+                  <subject>monument historique</subject>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e853">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">22 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds du laboratoire photographique départemental de l'Équipement</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1939/1975">1939 - 1975</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Alpes-Maritimes. Laboratoire photographique départemental de l'équipement</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>&gt;15000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>446</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1987</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Le laboratoire photographique départemental de l'Équipement était  chargé de l'inventaire des travaux faits ou à faire dans les Alpes-Maritimes et parfois dans le Var.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique, <emph render="italic">Iconographie des Alpes-Maritimes</emph>, en cours 2530 notices visibles (numérisées) pour 3048 unités documentaires saisies en octobre 2006. Les tirages cotés dans 598 W sont répertoriés dans la base "Archives administratives après 1940".</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies représentant des ouvrages d'art, la reconstruction après les dommages de la Seconde Guerre mondiale,  les réseaux routiers et ferroviaires et les transports dans le département.</p>
+                  <p>Ce fonds est également composé de  photographies de personnalités : préfets, ministres et maires présents à des inaugurations ou à d'autres cérémonies officielles.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <geogname>Var (département)</geogname>
+                  <persname>Escande, Paul</persname>
+                  <persname>Haag, Paul</persname>
+                  <persname>Hutin, Georges</persname>
+                  <subject>ouvrage d'art</subject>
+                  <subject>reconstruction</subject>
+                  <subject>guerre mondiale (1939-1945)</subject>
+                  <subject>réseau routier</subject>
+                  <subject>réseau ferroviaire</subject>
+                  <subject>transport</subject>
+                  <subject>fouille archéologique</subject>
+                  <subject>inauguration</subject>
+                  <subject>préfet</subject>
+                  <subject>ministre</subject>
+                  <subject>maire</subject>
+                  <subject>visite officielle</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e948">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">23 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Service de Restauration des Terrains de Montagne (RTM)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1887/1960">1887 - 1960</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Alpes-Maritimes. Restauration des terrains de Montagne</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2 156</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1987</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique, <emph render="italic">Iconographie des Alpes-Maritimes</emph>, accessible en salle de lecture (1737 notices visibles pour 1749 notices saisies)</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de reliefs avec bassins de réceptions, de plateaux, plaines, ravins, vallées, prairies, fleuves, affluents et cours d'eau.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>forêt</subject>
+                  <subject>aménagement forestier</subject>
+                  <subject>reboisement</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1002">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">24 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Erczi</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1983/1992">1983 - 1992</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Erczi</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple inversible</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>898</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat avec contrat et clauses</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique, <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 899 unités documentaires, notices non visibles (non numérisées).</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de sites et de monuments (essentiellement religieux) des Alpes-Maritimes et de quelques manifestations culturelles et sportives telles que le Festival de Cannes, le rallye d'Antibes ou le Grand prix de Monaco.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>commune</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>monument historique</subject>
+                  <subject>tourisme</subject>
+                  <subject>site</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject>manifestation sportive</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1060">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">26 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Joseph Bovis</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1895/1940">1895 - 1940</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteu">
+                     <persname>Bovis, Joseph</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne d'après plaque de verre négative ancienne</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Production interne à partir de documents prêtés par l'architecte Joseph Bovis en 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>L'architecte Joseph Bovis construisit des villas à Beaulieu-sur-Mer. Christian Bovis, petit-fils de Joseph Bovis, fils de Marcel Bovis, tous deux architectes à Beaulieu-sur-mer dans le cadre de la réalisation de villas.</p>
+               </bioghist>
+               <scopecontent encodinganalog="summary">
+                  <p>Réalisation de villas.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Beaulieu-sur-Mer (Alpes-Maritimes)</geogname>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1099">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">27 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de Rochemonteix</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/1902">1880 - 1902</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Rochemonteix, Adolphe de (vicomte)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>167</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>149</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>1 album de 29 tirages en planche sur la totalité</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Jacques Henri Adolphe de Chalvet, vicomte de Rochemonteix (Pradines 10 janvier 1837, Nice 10 décembre 1902) et arrière grand-oncle du donateur A. de Rochemonteix. Originaire du Cantal, maire de Cheylade, et  candidat libre à l'Ecole des Chartes (1871-1875), il est l' auteur de plusieurs ouvrages sur les abbayes cisterciennes et les églises romaines de la Haute Auvergne et de guides touristiques sur Nice, Monaco et Menton.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 113 notices visibles (numérisées) pour 327 notices saisies.</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces photographies ont été prises au cours des voyages d'Adolphe de Rochemonteix dans les Alpes-Maritimes et en Italie, à la Belle époque.</p>
+                  <p>Elles concernent également le Cantal et d'autres régions françaises.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Nice (Alpes-Maritimes)</geogname>
+                  <geogname>Pays niçois (Alpes-Maritimes)</geogname>
+                  <subject>architecture</subject>
+                  <subject>vie quotidienne</subject>
+                  <subject>loisir</subject>
+                  <subject>habitat rural</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph586">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">28 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de l'Institut Géographique National</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1994/1995">1994-1995</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1">
+                     <corpname authfilenumber="FRDAF00APH_NA002">Institut Géographique National</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 370</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">240 x 260</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat,  décembre 1994 et septembre 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction assurée par l'Institut Géographique National</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Cartes situant les périmètres des vues.</p>
+                  <p>Base de données informatique, <emph render="italic">Iconographie des Alpes-Maritimes,</emph>, analyse par cote matérielle (boite).</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p>Fonds de l'Institut géographique national
+                  </p>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces photographies ont été prises lors des missions de juin-novembre 1994 et de juin 1995 après les inondations et les crues du Var.</p>
+                  <p>Ces missions couvraient les Alpes-Maritimes (Moyen et Haut-Pays, littoral), des régions italiennes (proches des limites du département), les Alpes-de-Haute-Provence, les Hautes-Alpes et le  Var.</p>
+                  <p>Ce fonds présente un intérêt dans divers domaines tels que l'étude du relief, des parcs naturels, de l'occupation des sols, des axes routiers et des installations portuaires.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <geogname>Hautes-Alpes (département)</geogname>
+                  <geogname>Alpes-de-Haute-Provence (département)</geogname>
+                  <geogname>Var (département)</geogname>
+                  <geogname>Italie</geogname>
+                  <subject>inondation</subject>
+                  <subject>parc naturel</subject>
+                  <subject>réseau routier</subject>
+                  <subject>port</subject>
+                  <subject>urbanisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1265">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">29 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Erhard</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1923/1931">1923 - 1931</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Erhard, Fabien</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Plaque de verre positive stéréotype</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>38</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don de M. Fabien Erhard en 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique, intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 38 notices non visibles (non numérisées).</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies représentant des paysages de Corse et de la France continentale.</p>
+                  <p>Photographies de  l'exposition coloniale de 1931 à Paris.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>France</geogname>
+                  <geogname>Corse (département)</geogname>
+                  <subject>site</subject>
+                  <subject>manifestation culturelle</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1319">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">30 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Michou Strauch</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960/1970">1960 - 1970</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Strauch, Michou</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 911</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Planche contact papier moderne</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat avec contrat et clauses, 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention obligatoire du nom de l'auteur. Les droits ont été cédés aux Archives départementales.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Non saisi, non dépouillé.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ce fonds concerne la vie économique et sociale à Nice à la fin du XXe  siècle.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Nice (Alpes-Maritimes)</geogname>
+                  <subject>économie</subject>
+                  <subject>société</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1373">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">31 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Michel Guillemin</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1984/1994">1984 - 1994</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Guillemin, Michel</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>3 400</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>50</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive de type Ektachrome</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>50</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Michel Guillemin était photographe aux Archives départementales des Alpes-Maritimes.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fonds non saisi, non dépouillé.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ce fonds concerne la pêche à Cagnes-Sur-Mer et à Villeneuve-Loubet ainsi que  le Festival de Cannes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Cagnes-sur-Mer (Alpes-Maritimes)</geogname>
+                  <geogname>Villeneuve-Loubet (Alpes-Maritimes)</geogname>
+                  <geogname>Cannes (Alpes-Maritimes)</geogname>
+                  <subject>pêche à la ligne</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject>port</subject>
+                  <subject>festival</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1459">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">32 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Yvonne Leca</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1885/1985">1885 - 1985</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Chabaud, Virginie</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>193</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>,  <genreform>estampe</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>4</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique, <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 198 notices non visibles (non numérisées).</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ce fonds se rapporte aux documents concernant les familles Chabaud, Rance et Peretti et rassemblés sous le vocable de Fonds Yvonne Leca.</p>
+                  <p>Ces photographies représentent en particulier Vallauris, le Cannet et l'Algérie.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Vallauris (Alpes-Maritimes)</geogname>
+                  <geogname>Le Cannet (Alpes-Maritimes)</geogname>
+                  <geogname>Algérie</geogname>
+                  <famname>Chabaud (famille)</famname>
+                  <famname>Rance (famille)</famname>
+                  <famname> Peretti (famille)</famname>
+                  <subject>famille</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1529">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">33 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Gargano</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1927/1994">1927 - 1994</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Gargano, Vincent</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>5 456</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">60 x 60</dimensions>, <dimensions unit="mm" type="support_negatif">240 x 360</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>7</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat  auprès de Jacques Gargano, 1997</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation de M.  Jacques Gargano.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Vincent Gargano, photographe de presse de 1927 à sa mort en 1994.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>145 reportages antérieurs à 1978, couvrant essentiellemnt les années 60 relatifs aux sports, équipements, mode, magasins, fêtes populaires.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>vie politique</subject>
+                  <subject>  fête nationale</subject>
+                  <subject> inauguration</subject>
+                  <subject> sport</subject>
+                  <subject> mode</subject>
+                  <subject> magasin</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1605">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">35 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Bourgade, fonds Baylone</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1920">Début du XXe  siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Baylone, Simon</persname> ; <persname> Baylone Frères</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Tirage papier ancien et moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>57</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Diapositive</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>760</extent>
+                  </physdesc>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Il s'agit de reproductions de cartes postales réalisées au début du XXe  siècle par Simon Baylone (photographe), éditées par les Frères Baylone de Nice, et prêtées par Mme Bourgade pour reproduction aux Archives des Alpes-Maritimes.</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Reproduction interne de documents prêtés</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation de Mme Bourgade</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique, intitulée <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 760 unités documentaires non visibles (non numérisées).</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies  représentant  la vie quotidienne, des jardins et des lieux publics à Nice et sur le Côte d'Azur.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Nice (Alpes-Maritimes)</geogname>
+                  <geogname>Côte-d'Azur (France)</geogname>
+                  <subject>espace vert</subject>
+                  <subject>vie quotidienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1670">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">32 J / 40 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de la parfumerie Chiris de Grasse</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1925/1957">1925 - 1957</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Usines Chiris (atelier photographique ; Grasse)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>709</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>,  <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1990 - 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>
+                     <emph render="italic">Répertoire des clichés négatifs sur verre des usines Chiris</emph>, 33 pages manuscrites, 1995 ; base de données informatique "Iconographie des Alpes-Maritimes"(non numérisées).</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies des  fleurs et des plantes entrant dans la composition des parfums.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>fleur</subject>
+                  <subject>horticulture</subject>
+                  <subject>parfum</subject>
+                  <persname>Chiris</persname>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1740">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">44 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Marquet</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949/1976">1949 - 1976</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Marquet, Mario</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>4 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">60 x 60</dimensions>, <dimensions unit="mm" type="support_negatif">240 x 360</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>156</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat à Mario Marquet, 1999</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation de M. Mario Marquet.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Mario Marquet, photographe de presse.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Vie politique internationale et protocolaire du département (visites de souverains et présidents de la République), vie culturelle (acteurs, peintres, festivals), actualités quotidiennes (incendies, inondations, manifestations).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>vie politique</subject>
+                  <subject>  vie culturelle</subject>
+                  <subject> vie sportive</subject>
+                  <subject> vie religieuse</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3392">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">45 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Boca</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1919/1925">1919 - 1925</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Vallée, Yves</persname> ; <persname>Boca , Yves</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>22</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">60 x 130</dimensions>, <dimensions unit="mm" type="support_negatif">90 x 60</dimensions>, <dimensions unit="mm" type="support_negatif">85 x 75</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre stéréoscopique</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>107</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat à Yves Boca, 2000</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits de reproduction appartenant aux archives départementales des Alpes-Maritimes.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Yves  Vallée  (1858-1926), né à Morlaix, entre comme gérant dans la papeterie familiale Vallée sise à Loc-Maria en 1891. Après 16 ans de direction, il se retire à Versailles puis Neuilly-sur-Seine. Ses premières photographies remontent à 1884 et chaque voyage en Europe ou sur la Côte d'Azur fait l'objet de nombreux clichés photographiques.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues générales, édifices et monuments importants d'une commune, promenades du littoral, ports.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>édifice</subject>
+                  <subject> monument historique</subject>
+                  <subject> paysage</subject>
+                  <subject> port</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1895">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">46 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de l'Office de tourisme de Saint-Paul-de-Vence</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1954/1993">1954 - 1993</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Gomot, Jacques</persname> ; <corpname>Office de tourisme de Saint-Paul de Vence</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>6 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>, <physfacet>diapositive</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt de la commune de Saint-Paul de Vence, 2001</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits de reproduction appartenant à la commune de Saint-Paul.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Jacques Gomot, photographe professionnel installé à Saint-Paul de Vence.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Commune de Saint-Paul : personnalités du spectacle, artistes, monuments, sites, manifestations, éléments d'architecture.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Saint-Paul-de-Vence (Alpes-Maritimes)</geogname>
+                  <subject>acteur</subject>
+                  <subject> chanteur</subject>
+                  <subject> artiste</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph592">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">4 J / 47 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Dhumez</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1950">Première  moitié du XXe  siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Dhumez, Hubert</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>393</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 455</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>580</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Legs</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Hubert Dhumez (1882-1954) passa l'essentiel de son existence à Cannes. D'abord homme de lettres, on lui doit plusieurs contes et récits touchant à la Provence, des chroniques littéraires, historiques, folkloriques et touristiques parues dans le Petit Niçois entre 1923 et 1931, des émissions à Radio-Méditerranée jusqu'en 1939.</p>
+                  <p>Durant les vingt dernières années de sa vie, il se tourna vers l'érudition. C'est ainsi qu'il constitua un ensemble de photographies particulièrement intéressantes pour la région, notamment en ce qui concerne l'art religieux niçois. Bibliothécaire et archiviste de la ville de Cannes de 1939 à 1944, il se mit à étudier l'histoire de Cannes et de sa région depuis le XVe siècle, activité qui l'occupa jusqu'à la fin de ses jours.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>  informatique, <emph render="italic">Iconographie des Alpes-Maritimes</emph>, 1036 notices visibles (numérisées).</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ce fonds est composé de portraits, de vues de monuments historiques et de vues des communes du littoral et de l'arrière-pays des Alpes-Maritimes, en particulier des régions de Cannes, Grasse, Antibes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <geogname>Cannes (Alpes-Maritimes)</geogname>
+                  <geogname>Grasse (Alpes-Maritimes)</geogname>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <subject>portrait</subject>
+                  <subject>monument historique</subject>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3395">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">50 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds  de l'Intitut géographique national (IGN)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1945/1948">1945 - 1948</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname authfilenumber="FRDAF00APH_NA002">Institut géographique national, mission photographique aérienne</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">60 x 60</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Inconnu</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits de reproduction réservés à l'IGN.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>IGN, mission photographique aérienne.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p><extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p>Fonds de l'Institut géographique national</p>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>180 vues aériennes prises  à 4000 m d'altitude lors de missions photographiques entre 1945-1948 représentant le relief alpin et parfois les voies de communication, la répartition des cultures et de l'habitat.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Beuil (Alpes-Maritimes)</geogname>
+                  <geogname> Bairols (Alpes-Maritimes)</geogname>
+                  <geogname> Sauze (Alpes-Maritimes)</geogname>
+                  <geogname> Valdeblore (Alpes-Maritimes)</geogname>
+                  <subject>relief alpin</subject>
+                  <subject> voie communication</subject>
+                  <subject> culture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2160">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">54 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Jellinek</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1909/1929">1909 - 1929</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <famname>Jellinek</famname> ; <persname>Jellinek, Emil</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre stéréoscopique</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2 000 à 3 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">105 x 45</dimensions>, <dimensions unit="mm" type="support_positif">1 160 x 430</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage photographique</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 100</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat à M. Brych, 2005</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits de reproduction réservés aux Archives départementales des Alpes-Maritimes.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Emil Jellinek (1853-1918), homme d'affaires et consul de l'Empire austro-hongrois en poste à Nice où il possède deux résidences secondaires. Représentant de la firme Daimler dans la région et amoureux de l'automobile, il passe commande d'un nouveau modèle dénommé  Mercedes comme le prénom de sa fille.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Le fonds comporte des vues de manifestations  (meeting aérien, combat naval de fleurs, batailles de fleurs, course cycliste), de son yacht, de régates, de ports des Alpes-Maritimes et de la Côte d'Azur, des vues de Nice et de la villa Mercedes, de la famille Jellinek et de routes de l'arrière-pays niçois. D'autres photographies sont prises lors de manoeuvres militaires de l'armée impériale austro-hongroise en Bohême et en Albanie. Enfin une partie du fonds concerne une croisière vers les Etat-Unis , avec vues de New-York et des chutes du Niagara, un voyage de Paris à Vienne, et d'autres déplacements en  Corse et à Gènes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <geogname> Albanie</geogname>
+                  <geogname> Autriche-Hongrie</geogname>
+                  <geogname> New-York (Etats-Unis d'Amérique)</geogname>
+                  <geogname> Corse (région administrative)</geogname>
+                  <geogname> Gênes (Italie)</geogname>
+                  <subject>manifestation</subject>
+                  <subject> meeting aérien</subject>
+                  <subject> course cycliste</subject>
+                  <subject> régate</subject>
+                  <subject> croisière</subject>
+                  <subject> port</subject>
+                  <subject> crue</subject>
+                  <subject> manœuvre militaire</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2251">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">56 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Schmidt</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1952/1961">1952 - 1961</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Photos Schmidt</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>45</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">180 x 240</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>54</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">180 x 240</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat à la société "Photos Schmidt", 2007</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits de reproduction réservés aux Archives départementales des Alpes-Maritimes.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Société "Photos Schmidt", installée au Ban Saint Martin (57050), spécialisée dans la prise de vue aérienne depuis les années 1950.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues aériennes à basse altitude de Cannes, Monaco,  Grasse et diverses villes des Alpes-Maritimes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>vue aérienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2310">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">57 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Franchetti</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1944">1900 - 1944</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Gilletta, Jean</persname> ; <persname>Franchetti</persname>
+                     <persname>Degand</persname> ; <persname>Bellini</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>7</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">100 x 140</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>7</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="mode_representation">140 x 90</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don de Monsieur Franchetti, 2007</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p><extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues de Nice : travaux d'endiguement aux abords de Carras et d'élévation de bâtiments quartier Saint-Charles. Vues de bâtiments à Cannes, Eze, Contes, Roquefort-les-pins.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <geogname>Nice (Alpes-Maritimes)</geogname>
+                  <subject>endiguement</subject>
+                  <subject> bâtiment</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2389">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">58 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Basquin</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1911">1900 - 1911</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Basquin, Paul</persname> ; <persname>Duprat</persname> ; <corpname>Société Pathé</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre stéréoscopique</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>149</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">105 x 470</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don de Mme Duprat, 2007</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Mention "Fonds Paul Basquin conservé aux A.D. des Alpes-Maritimes"</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Paul Basquin, photographe  de la société Pathé, a séjourné sur la Côte d'Azur en 1910-1911 à l'occasion de tournages de films et de repérages de sites. Ce fonds a été donné par sa fille Mme Duprat.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> 
+                     <extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Paysages et villages des Alpes-Maritimes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>paysage</subject>
+                  <subject> village</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2447">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">59 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection de plaques de verre représentant des architectures du département</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900"> Vers 1900</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre stéréoscopique</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>12</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">130 x 180</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat en vente publique, 2007</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit avant numérisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés aux Archives départementales des Alpes-Maritimes.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p><extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues de Nice, Peille, Villeneuve-Loubet, Drap, Gorges du Loup</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>pont</subject>
+                  <subject> bâtiment</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2491">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">60 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Jean Luce de Grasse  </unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1886/1916"> 1886 - 1916</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Luce, Jean</persname> ; <persname>Gilbert</persname> ; <persname>Imbert</persname> ; <persname>Bergé-Andreu</persname> ; <persname>Levy</persname> ; <persname>Pravaz J.</persname> ; <persname>Rey</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>15 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre stéréoscopique</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">90 x 120</dimensions>, <dimensions unit="mm" type="support_negatif">105 x 45</dimensions>, <dimensions unit="mm" type="support_negatif">240 x 300</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple au nitrate</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>30</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre stéréoscopique</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">90 x 120</dimensions>, <dimensions unit="mm" type="support_positif">105 x 45</dimensions>, <dimensions unit="mm" type="support_positif">240 x 300</dimensions>
+                  </physdesc>
+                  <container>Boîtes en bois confectionnées par le producteur pour les plaques de verre, albums pour les tirages papier</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt , 2007</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les copies numérisées</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Mention "Fonds Jean Luce conservé aux A.D. des Alpes-Maritimes", autorisation préalable de l'un des déposants pour toute publication à but commercial.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p><extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p>Collection Jean Luce donnée en 1923 aux musées de Grasse.</p>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Paysages du littoral et de montagne des Alpes-Maritimes ;  vues de villes et villages (Grasse, Nice, Thorenc..), d'événements (expositions agricoles à Grasse, voyages de présidents de la République, fête franco-anglaise), d'exercices militaires et de bateaux militaires. Photographies prises à l'occasion de voyages à Marseille, Lyon, Tournus, Arles, en Savoie et en Suisse. Collection de photographies achetées à l'éditeur Levy, successeur de Ferrier à Paris concernant les pays d'Europe et l'Algérie. Collection de photographies réalisées par J. Pravaz concernant l'implantation d'un poste de tirailleur à Diakpo en Côte d'Ivoire. Collection de photographies portant la mention cliché Rey concernant Madagascar vers 1900.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <geogname>France</geogname>
+                  <geogname> Suisse</geogname>
+                  <geogname> Algérie</geogname>
+                  <geogname> Europe</geogname>
+                  <geogname> Diakpo (Côte d'Ivoire)</geogname>
+                  <geogname> Madagascar</geogname>
+                  <subject>paysage</subject>
+                  <subject> événement</subject>
+                  <subject> exposition</subject>
+                  <subject> manœuvre militaire</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2605">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">61 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection de plaques de verre sur la guerre 1914-1918</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1930/1954">1914 - 1918</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre stéréoscopique</physfacet>
+                  </physdesc>
+                  <container>Coffret en bois</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 2007</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit avant numérisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés aux Archives départementales des Alpes-Maritimes.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                 <p><extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Scènes de tranchées de la guerre 1914-1918, dans le Nord de la France.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>France</geogname>
+                  <subject>guerre mondiale (1914-1918)</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2643">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">16 J</unitid>
+                  <unittitle encodinganalog="3.1.2">Entreprise Lisimachio</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920/1953">1920 - 1953</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Entreprise de travaux publics Lisimachio (Alpes-Maritimes)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique du fonds Lisimachio, 4 pages dactylographiées.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies représentant des chantiers, des constructions et des réalisations achevées : routes, ponts, locaux industriels et d'habitations.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Alpes-Maritimes (département)</geogname>
+                  <subject>chantier</subject>
+                  <subject>entreprise du bâtiment</subject>
+                  <subject>construction</subject>
+                  <subject>ouvrage d'art</subject>
+                  <subject>bâtiment industriel</subject>
+                  <subject>logement</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2693">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">87 J</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Marcel Guilgot</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1926/1952">1926 - 1952</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Guilgot, Marcel (architecte)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt, 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation de Mme Jourdan-Gassin (Nice) avec mention obligatoire des noms de photographes.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Ce fonds contient une partie des archives de Guilgot, architecte et décorateur à Nice de 1920 à 1970.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p><extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies des photographes niçois Giletta, Delahaye, Bérard, Thiessard, du studio Chevojon (Paris) et de Pierre Grossman (Clichy). </p>
+                  <p>Ces photographies  représentent des extérieurs et intérieurs de villas, commerces, restaurants, casinos, hôtels et cinémas dans des communes des Alpes-Maritimes, principalement à Antibes, Cannes et Nice.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <geogname>Cannes (Alpes-Maritimes)</geogname>
+                  <geogname>Nice (Alpes-Maritimes)</geogname>
+                  <persname>Giletta, Jean</persname>
+                  <persname> Delahaye</persname>
+                  <persname> Bérard</persname>
+                  <persname> Thiessard</persname>
+                  <persname> Grossman, Pierre</persname>
+                  <corpname>Studio Chevojon (Paris)</corpname>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2753">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">150J0033 à 150J 0054</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Emile Martin</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1923/1984">1923 - 1984</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <corpname>Studios de la Victorine</corpname> ; <persname>Martin, Emile</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat à Emile Martin, 2003</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits de reproduction réservés aux Archives départementales des Alpes-Maritimes.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Emile  Martin  a rassemblé ce fonds durant son activité de projectionniste aux studios de la Victorine à Nice.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p><extref xlink:href="http://www.basesdocumentaires-cg06.fr/os-html/foto/home.html">Base de données</extref>   "Iconographie des Alpes-Maritimes"</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces documents sont relatifs aux différents films, tournages et décors réalisés dans les studios de la Victorine à Nice ; de nombreux acteurs et réalisateurs de diverses nationalités sont photographiés pendant les tournages.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Cannes (Alpes-Maritimes)</geogname>
+                  <geogname>Nice (Alpes-Maritimes)</geogname>
+                  <subject>film</subject>
+                  <subject> tournage</subject>
+                  <subject> décor</subject>
+                  <subject> acteur</subject>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e2834">
+            <did>
+               <unittitle encodinganalog="3.1.2">Archives municipales d'Antibes</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="ph3908">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">2 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Cartes postales Antibes, Juan-les-Pins, Le Cap d'Antibes</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1905/1960">[1905] - 1960]</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Biondo</persname> ; <persname>Trabucco</persname>
+                     <persname>Jarson</persname> ; <persname>Meunier</persname> ; <persname>Barreau</persname> ; <persname>Richard</persname> ; <persname>Apollos</persname> ; <persname>Heard</persname> ; <persname>Cellard</persname> ; <persname>Gilleta</persname> ; <persname>Maniézzi</persname> ; <corpname>Établissements photographiques Neurdein Frères</corpname> ; <persname>Delay</persname> ; <corpname>Compagnie alsacienne des arts photomécaniques</corpname> ; <persname>Ray-Delvert</persname> ; <corpname>A.D.I.A.</corpname> ; <corpname>Aqua Photo</corpname> ; <persname>Barma</persname> ; <persname>Durandaud</persname> ; <persname>Martinier</persname> ;  <corpname>N.D. Photo</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>300</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Image numérique en format JPEG</genreform>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <accruals encodinganalog="3.3.3">
+                  <p>Accroissement envisagé</p>
+               </accruals>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds constitué par les entrées successives dans le cadre des acquisitions.</p>
+               </custodhist>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Biondo, Trabucco, Jarson, Meunier (Antibes), Barreau, Richard (Cannes), Apollos (Grasse), Heard, Cellard (Lyon), Gilleta, Maniézzi (Nice), Établissements photographiques Neurdein Frères, Delay (Paris), Compagnie alsacienne des arts photomécaniques (Strasbourg),  Ray-Delvert (Villeneuve-sur-Lot), A.D.I.A., Aqua Photo, Barma, ,Durandaud,  Martinier, N.D. Photo.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire dactylographié</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues générales d'Antibes, Juan-les-Pins, le Cap, bâtiments, places, port, monuments, rues.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <geogname> Juan-les-Pins (Alpes-Maritimes)</geogname>
+                  <geogname> Le Cap d'Antibes (Alpes-Maritimes)</geogname>
+                  <subject>commune</subject>
+                  <subject> site</subject>
+                  <subject> bâtiment administratif</subject>
+                  <subject> voie communale</subject>
+                  <subject> port</subject>
+                  <subject> monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3909">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">3 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Enfants d'Antibes morts pour la France en 1914 - 1918</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1918">Avant 1918</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Biondo</persname> ; <corpname>Photo Atelier Mirate</corpname> ; <persname>Lassave</persname> ; <persname>Trabucco</persname> ; <persname>Coli</persname> ; <persname>Mouchiroud</persname> ; <persname>Bagarry</persname> ; <corpname>Guilleminot Boespflug et Compagnie</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>32</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Image numérique en format JPEG</genreform>
+                  </physdesc>
+                  <container>Tirages papier ancien  montés sur carton</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, après 1918</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds constitué dans la perspective de la réalisation du triptyque aux morts de 1914-1918. Ces photographies ne seront pas utilisées. Des photographies "normalisées" seront  par la suite demandées aux familles pour réaliser un ensemble homogène.</p>
+               </custodhist>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Photographes : Biondo, Photo Atelier Mirate, Lassave, Trabucco (Antibes), Coli (Nice), Mouchiroud (Lyon?), Bagarry (Hyières-les-Palmiers), Guilleminot Boespflug et Compagnie (Paris).</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire dactylographié mentionnant pour chaque photographie  le nom, le lieu et la date du décès.</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p>Livre d'or des enfants d'Antibes morts au champ d'honneur.</p>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Premières photographies fournies par les familles en vue de constituer un livre d'or.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <subject>guerre mondiale (1914-1918)</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3910">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">4 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Enfants d'Antibes morts pour la France en 1939-1945</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1945">Avant 1945</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Jourdin</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>32</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Image numérique en format JPEG</genreform>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, après 1944</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds constitué dans la perspective de la réalisation du triptyque aux morts de 1939 - 1945. Ces photographies ne seront pas utilisées. Des photographies "normalisées" seront  par la suite demandées aux familles pour réaliser un ensemble homogène.</p>
+               </custodhist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire dactylographié mentionnant pour chaque photographie  le nom, le lieu et la date du décès.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Premières photographies fournies par les familles pour la réalisation du triptyque.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <subject>guerre mondiale (1939-1945)</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3911">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">5 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies aériennes d'Antibes (1948-1962)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1948/1962">1948 - 1962</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Heard, Roger</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier argentique</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>108</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">140 x 180</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Image numérique en format JPEG</genreform>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Très bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1986</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation </p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds consitué par la société photographique Henrard. Achat par la ville en 1986 au moment  de la dispersion de la collection.</p>
+               </custodhist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire avec une description à la pièce sous Word.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies aériennes de la vieille ville, du port, du Fort Carré, des plages du Cap d'Antibes et de Juan-les-Pins, des grandes demeures du Cap d'Antibes, de Golfe-Juan.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <geogname>Le Cap d'Antibes (Alpes-Maritimes)</geogname>
+                  <geogname>Juan-les-Pins (Alpes-Maritimes)</geogname>
+                  <subject>port</subject>
+                  <subject>bâtiment privé</subject>
+                  <subject>vue aérienne</subject>
+                  <subject>plage</subject>
+                  <subject>urbanisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3912">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">6 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies des fortifications d'Antibes</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1895/1897">1895 - 1897</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>48</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">180 x 240</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Image numérique en format JPEG</genreform>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Très bon état de conservation</p>
+               </phystech>
+               <originalsloc encodinganalog="3.5.1">
+                  <p>Studio Jacques Mer, 4 avenue Niquet, 06600 ANTIBES.</p>
+               </originalsloc>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Reproduction demandée par Romald Dor de la Souchère, premier conservateur du Musée d'Antibes, aujourd'hui Musée Picasso.</p>
+               </custodhist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire avec une description à la pièce sous Word.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies du bastion de la Marine, du bastion de Rosny, du bastion Royal, du bastion Dauphin, du bastion de Guise, du demi-bastion Saint-André, de la Porte Royale, de l'anse Saint-Roch et du port.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <subject>port</subject>
+                  <subject>fortification</subject>
+                  <subject>ouvrage d'art</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3913">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">7 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Familles Guide, Muterse, Reibaud</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1895/1897">1850 - 1962</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Ely</persname> ; <persname>Caron</persname> ; <persname>Biondo</persname> ; <persname>Lassave</persname> ; <persname>Monino</persname> ; <persname>Rolando</persname> ; <persname>Trajan</persname> ; <persname>Miensiensky</persname> ; <persname>Froment</persname> ; <persname>Caïrol</persname> ; <persname>Davail-Gucheno</persname> ; <persname>Fürst</persname> ; <persname>Walter</persname> ; <persname>Bienmüller</persname> ; <persname>Blanpied</persname> ; <persname>Ferret</persname> ; <persname>Lauro</persname> ; <persname>Lessy</persname> ; <persname>Pacelli</persname> ; <persname>Régis</persname> ; <persname>Thiel</persname> ; <persname>Gerschel</persname> ; <persname>Piron</persname> ; <persname>Trésorier</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier </physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>48</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Image numérique en format JPEG</genreform>
+                  </physdesc>
+                  <container>Tirages montés sur un carton à l'enseigne du photographe. Une vieille boîte recouverte de tissu a été conservée comme support d'exposition</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don anonyme, 2003</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Photographes: Ely (Aix-enProvence), Caron (Amiens), Biondo, Lassave, Monino, Rolando, Trajan (Antibes), Miensiensky (Avignon), Froment (Lodève),  Caïrol, Davail-Gucheno (Montpellier), Fürst, Walter  (Nantes), Bienmüller, Blanpied, Ferret,  Lauro, Lessy, Pacelli, Régis, Thiel (Nice), Gerschel, Piron  (Paris), Trésorier (Toulon).</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire dactylographié avec une description à la pièce. Généalogie sous Word.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photogaphies de membres des familles Guide et Reibaud et de certains de leurs alliés (Aubernon, Barquier, Bousquet, Darleguy, Daudel, Muterse, Rigaud, Roustan), sur sept générations.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <famname>Guide</famname>
+                  <famname> Reibaud</famname>
+                  <famname>Aubernon</famname>
+                  <famname> Barquier</famname>
+                  <famname> Bousquet</famname>
+                  <famname> Darleguy</famname>
+                  <famname> Daudel</famname>
+                  <famname> Muterse</famname>
+                  <famname> Rigaud</famname>
+                  <famname> Roustan</famname>
+                  <subject>portrait</subject>
+                  <subject>famille</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3914">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">8 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies du Fonds Dor de la Souchère</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1913/1975">1913 - 1975</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Dor de la Souchère, Romuald</persname> ; <persname>Greenwood, Marianne </persname> ; <persname>Nalegtskaïa, Ludmila </persname> ; <persname>Olivier, Albéric </persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 066</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Très bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1989</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Mention de l'auteur du cliché quand ce dernier est identifié.</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds constitué par Romuald Dor de la Souchère et ses assitants au cours des ses travaux de recherches archéologiques et épigraphiques de 1913 à 1975.</p>
+               </custodhist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire dactylographié avec une description à la pièce indiquant les lieux, la nature des objets et le détail des inscriptions sous Word.</p>
+               </otherfindaid>
+               <bibliography encodinganalog="3.5.4">
+                  <bibref>Travaux  pour servir à l'histoire d'Antibes. Textes recueillis, classés et publiés par Pierre Ginestet, Antibes, 1988.</bibref>
+               </bibliography>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies du fonds Dor de la Souchère (paysages, monuments, inscriptions, fouilles archéolologiques).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <subject>paysage</subject>
+                  <subject>archéologie</subject>
+                  <subject>fouille</subject>
+                  <subject>monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3915">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">9 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Travaux de voirie</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1927/1986">1927 - 1986</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <corpname>Antibes. Service technique</corpname> ; <persname>Bompuis</persname> ; <persname>Biondo-Bonhomme</persname> ; <persname>Payet</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>588</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation </p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds constitué par les reportages photographiques effectués par les services techniques de la ville ou par des photographes professionnels.</p>
+               </custodhist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire dactylographié indiquant si possible le lieu de la prise de vue et une description à la pièce sous Word.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Travaux de voirie effectués dans la commune d'Antibes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Antibes (Alpes-Maritimes)</geogname>
+                  <subject>voierie</subject>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e3543">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales de Menton</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e3547">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">3 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection de cartes postales de Menton</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1870/2099"> A partir de la fin du XIXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Services communaux</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent unit="mètres linéaires">0,10</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>132</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne et moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement en continu</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, achat, versement, depuis 2001</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique créer en 2001 sous logiciel Avenio non accessible sur internet.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de cartes postales représentant des paysages, des bâtiments, des manifestations socio-culturelles et des scènes de la vie quotidienne de la commune.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Menton (Alpes-Maritimes)</geogname>
+                  <subject>manifestation</subject>
+                  <subject> site</subject>
+                  <subject> transport</subject>
+                  <subject>commerce</subject>
+                  <subject> fête</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3615">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">6 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies relatives à Menton dont le format supérieur  à 24 x 30 et inférieur ou égal à 30 x 40 cm</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/2099">Depuis le début du XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <corpname>Services communaux</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent unit="mètre linéaire">0, 08</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>69</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier argentine baryté et argentine plastifié</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement continu en fonction de la dimension et du type de support</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, depuis 2001</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique créer en 2001 sous logiciel Avenio non accessible sur internet.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Série de photographies de manifestations culturelles, travaux communaux, de scène de vie quotidienne, sites et portaits.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Menton (Alpes-Maritimes)</geogname>
+                  <subject> manifestation</subject>
+                  <subject>personnalité</subject>
+                  <subject> site</subject>
+                  <subject> fête</subject>
+                  <subject>cérémonie publique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3683">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">7 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies relatives à Menton dont le format est supérieur à 24 x 30 cm</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/2099">Depuis le début du XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <corpname>Services communaux</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent unit="mètre linéaire">0, 04</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>34</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier argentine baryté et argentine plastifié</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement continu en fonction de la dimension et du type de support</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, depuis 2001</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique créer en 2001 sous logiciel Avenio non accessible sur internet.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Série de photographies de manifestations culturelles, travaux communaux, de scène de vie quotidienne, sites et portaits.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Menton (Alpes-Maritimes)</geogname>
+                  <subject> manifestation</subject>
+                  <subject>personnalité</subject>
+                  <subject> site</subject>
+                  <subject> fête</subject>
+                  <subject>cérémonie publique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3751">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">8 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies relatives à Menton dont le format inférieur ou égal à 13 x 18 cm</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/2099">Depuis le début du XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <corpname>Services communaux</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent unit="mètre linéaire">2, 40</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>3 101</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier argentine baryté et argentine plastifié</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement continu en fonction de la dimension et du type de support</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, depuis 2001</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique créer en 2001 sous logiciel Avenio non accessible sur internet.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Série de photographies relatives aux travaux communaux, manifestations culturelles, évenements historiques  et portaits de personnalités.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Menton (Alpes-Maritimes)</geogname>
+                  <subject>construction</subject>
+                  <subject> réseau routier</subject>
+                  <subject> manifestation</subject>
+                  <subject> cérémonie publique</subject>
+                  <subject>personnalité</subject>
+                  <subject> site</subject>
+                  <subject> fête</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3823">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">9 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographie relative à Menton dont le format est supérieur à 13 x 18 et inférieur ou égal à 24 x 30 cm</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/2099">Depuis le début du XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Services communaux</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent unit="mètre linéaire">0, 35</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>410</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier argentine baryté et argentine plastifié</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement continu en fonction de la dimension et du type de support</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, depuis 2001</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données informatique créer en 2001 sous logiciel Avenio non accessible sur internet.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Série de photographies de manifestations culturelles, travaux communaux, de scène de vie quotidienne, sites et portaits.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Menton (Alpes-Maritimes)</geogname>
+                  <subject>construction</subject>
+                  <subject> réseau routier</subject>
+                  <subject> manifestation</subject>
+                  <subject>personnalité</subject>
+                  <subject> site</subject>
+                  <subject> fête</subject>
+                  <subject>édifice cultuel</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3895">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">11 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de plaques de verre</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1870/1899">Fin du XIXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <corpname>Archives communales</corpname> ; <corpname>Service communal du patrimoine</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent unit="mètres linéaires">3, 44</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 010</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre gélatino bromure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement continu</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, depuis 2007</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Instrument de recherche en cours d'élaboration.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Plaques de verre de scènes de vie quotienne, commerces, sites, portraits, transports, édifices privés et communales de la commune et quelques vues des communes voisines.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Menton (Alpes-Maritimes)</geogname>
+                  <geogname>  Sainte Agnès (Alpes-Maritimes)</geogname>
+                  <geogname> Sospel (Alpes-Maritimes)</geogname>
+                  <geogname> Peira Cava (Alpes-Maritimes)</geogname>
+                  <geogname> Castillon (Alpes-Maritimes)</geogname>
+                  <geogname> Roquebrune Cap Martin (Alpes-Maritimes)</geogname>
+                  <geogname> Saorge (Alpes-Maritimes)</geogname>
+                  <geogname> La Mortola (Ligurie, Italie)</geogname>
+                  <geogname> Monaco (Principauté de Monaco)</geogname>
+                  <geogname> Vintimille (Ligurie, Italie)</geogname>
+                  <geogname> Gorbio (Alpes-Maritimes)</geogname>
+                  <geogname> Castellar (Alpes-Maritimes)</geogname>
+                  <subject>monument</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>vie quotidienne</subject>
+                  <subject> transport</subject>
+                  <subject> manifestation</subject>
+                  <subject> site</subject>
+                  <subject> fête</subject>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e3990">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales de Mandelieu-La Napoule</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e3994">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">3 Fi 1</unitid>
+                  <unittitle encodinganalog="3.1.2">Vues aériennes de la commune (1982-1983)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1982/1983">1982 - 1983</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Laboratoire FREGA</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>20</extent>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Vues aériennes classées par secteur</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 2000</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues aériennes de la commune.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Mandelieu-La Napoule (Alpes-Maritimes)</geogname>
+                  <subject>urbanisme</subject>
+                  <subject>vue aérienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e4043">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">6 Fi 1</unitid>
+                  <unittitle encodinganalog="3.1.2">Restaurants de la commune</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1972/1973">1972 - 1973</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>7</extent>
+                  </physdesc>
+                  <container>Boîte Cauchard</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement par restaurant</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 2003</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Restaurants de la commune.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Mandelieu-La Napoule (Alpes-Maritimes)</geogname>
+                  <subject>restauration</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e4087">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">9 Fi 1</unitid>
+                  <unittitle encodinganalog="3.1.2">Vues aériennes de la commune (2005)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="2005">2005</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>PHOTO MOPY</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>37</extent>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Vues aériennes classées par secteur</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 2005</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues aériennes de la commune.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Mandelieu-La Napoule (Alpes-Maritimes)</geogname>
+                  <subject>urbanisme</subject>
+                  <subject>vue aérienne</subject>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e4136">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales de la Gaude</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e4140">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">série Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Le Village de La Gaude au fil du temps</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901">XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">Phtographes amateurs, professionnels ou d'administration, collectionneurs, éditeurs</origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne et moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>JPG sur disque dur, BITMAP et TIF pour conservation longue durée</genreform>
+                  </physdesc>
+                  <container>1 collection numérique sur disque dur, 1 comoie de sauvegarde sur CD-Rom et 1 sortie papier</container>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement continu (série ouverte)</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Reproductions issues du prêt, 2002</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproductions soumises à autorisations et/ou reproductions interdites</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>CD-Rom gravés à partir de 2002 - Conservation en Mairie des reproductions numérisées.</p>
+               </custodhist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>1 fiche manuscrite détaillée par pièce</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Le fonds retrace en quelque sorte l'histoire du Village au fil des années (paysages, édifices, évènements, cérémonies, cet ensemble très divers contient aussi  des photos plus personnelles de villageois avec leur famille).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>La Gaude (Alpes-Maritimes)</geogname>
+                  <subject>site</subject>
+                  <subject>bâtiment</subject>
+                  <subject>vie locale</subject>
+                  <subject>cérémonie</subject>
+                  <subject>population</subject>
+               </controlaccess>
+            </c>
+         </c>
+      </dsc>
+   </archdesc>
+</ead>

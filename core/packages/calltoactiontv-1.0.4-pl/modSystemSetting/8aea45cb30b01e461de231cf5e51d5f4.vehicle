@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'calltoactiontv',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e65ee69abebb04006db5c196f9331f6d',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8aea45cb30b01e461de231cf5e51d5f4',
+  'native_key' => 'calltoactiontv.user_name',
+  'object' => '{"key":"calltoactiontv.user_name","value":"","xtype":"textfield","namespace":"calltoactiontv","area":"default","editedon":null}',
+);

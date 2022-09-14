@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'fe03cdd0e372528d8be92a635a59e4dd',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '82cf43fc62b514f2433d5f4394f89149',
+  'native_key' => 'moregallery.use_rte_for_images',
+  'object' => '{"key":"moregallery.use_rte_for_images","value":true,"xtype":"modx-combo-boolean","namespace":"moregallery","area":"Interface","editedon":1584397769}',
+);

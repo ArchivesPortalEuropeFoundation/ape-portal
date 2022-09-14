@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'cf3c1c9ca60ec4ea60e640bfb94990fc',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'ad2bd24cc086c951d87f91fafb0cad8a',
+  'native_key' => 'enable_dragdrop',
+  'object' => '{"key":"enable_dragdrop","value":true,"xtype":"combo-boolean","namespace":"core","area":"manager","editedon":null}',
+);

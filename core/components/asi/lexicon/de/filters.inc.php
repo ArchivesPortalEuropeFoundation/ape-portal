@@ -1,0 +1,23 @@
+<?php
+$_lang['asi.filter_another'] = 'Ein weiterer';
+$_lang['asi.filter_bookmark_title_a_z'] = 'Lesezeichen Titel (A-Z)';
+$_lang['asi.filter_bookmark_title_z_A'] = 'Lesezeichen Titel (Z-A)';
+$_lang['asi.filter_collection_title_a_z'] = 'Sammlung Titel (A-Z)';
+$_lang['asi.filter_collection_title_z_a'] = 'Sammlung Titel (Z-A)';
+$_lang['asi.filter_find_institution_a_z'] = 'Finden Institution (A-Z)';
+$_lang['asi.filter_find_institution_z_a'] = 'Suche Institution (Z-A)';
+$_lang['asi.filter_finding_aid_name_a_z'] = 'Die Suche nach Hilfe Name (A-Z)';
+$_lang['asi.filter_finding_aid_name_z_a'] = 'Die Suche nach Hilfe Name (Z-A)';
+$_lang['asi.filter_institution_name_a_z'] = 'Institution Name (A-Z)';
+$_lang['asi.filter_institution_name_z_a'] = 'Institution Name (Z-A)';
+$_lang['asi.filter_most_results_first'] = 'Niedrigerer Ergebnisse';
+$_lang['asi.filter_name_a_z'] = 'Name (A-Z)';
+$_lang['asi.filter_name_z_a'] = 'Name (Z-A)';
+$_lang['asi.filter_search_name_a_z'] = 'Suche nach Name (A-Z)';
+$_lang['asi.filter_search_name_z_a'] = 'Suche Name (Z-A)';
+$_lang['asi.filter_sort_finding_aids_by'] = 'Sortieren Suchhilfen durch';
+$_lang['asi.filter_sort_institutions_by'] = 'Sortieren Institutionen';
+$_lang['asi.least_results_first'] = 'Least Ergebnisse zuerst';
+$_lang['asi.order_new_first'] = 'Öffnungszeiten';
+$_lang['asi.order_old_first'] = 'Das neuste zuerst';
+$_lang['asi.toggle_show'] = 'Sie müssen ein Konto, dies zu tun ...';

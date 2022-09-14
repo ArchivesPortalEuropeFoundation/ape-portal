@@ -1,0 +1,15 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'alpacka-1.0.0-pl/xPDOFileVehicle/9af04e3e83f22195fb28fc6881da002b/',
+    'target' => 'return MODX_CORE_PATH . \'components/\';',
+    'name' => 'alpacka',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'vehicle_package' => 'transport',
+  'guid' => '9a9f280e7f1b45d7d217517093b07c84',
+  'package' => '',
+  'signature' => '9af04e3e83f22195fb28fc6881da002b',
+  'native_key' => '9a9f280e7f1b45d7d217517093b07c84',
+);

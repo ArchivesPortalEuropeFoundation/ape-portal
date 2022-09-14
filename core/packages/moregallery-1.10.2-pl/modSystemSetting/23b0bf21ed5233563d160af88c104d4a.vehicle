@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a0e7a56f6bcfcda990d759de33d93ebb',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '23b0bf21ed5233563d160af88c104d4a',
+  'native_key' => 'moregallery.source',
+  'object' => '{"key":"moregallery.source","value":1,"xtype":"modx-combo-source","namespace":"moregallery","area":"Storage","editedon":1584397769}',
+);

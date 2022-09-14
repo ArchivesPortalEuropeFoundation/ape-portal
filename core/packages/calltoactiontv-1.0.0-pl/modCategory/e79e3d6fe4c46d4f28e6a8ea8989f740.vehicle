@@ -1,0 +1,207 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      'ce2e50fe3ea29a9d4f30471d2d8c02eb' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"callToActionTV","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"[[+text:neq=``:then=`\\n    <a href=\\"[[+href]]\\" [[+style:notempty=`class=\\"[[+style]]\\"`]] [[+target:notempty=`target=\\"[[+target]]\\"`]]>[[+text]]<\\/a>\\n`:else=`\\n\\n`]]\\n","locked":0,"properties":"a:0:{}","static":0,"static_file":"","content":"[[+text:neq=``:then=`\\n    <a href=\\"[[+href]]\\" [[+style:notempty=`class=\\"[[+style]]\\"`]] [[+target:notempty=`target=\\"[[+target]]\\"`]]>[[+text]]<\\/a>\\n`:else=`\\n\\n`]]\\n"}',
+        'guid' => '36a77a02998fee6eb5386b38ac18b95f',
+        'native_key' => NULL,
+        'signature' => '9cc1fba1d9ff9c3164166130004b915c',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'c1c4e7b3f32fa2b397fd15d61390755b' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"calltoactiontv","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\n * Snippet\\/Output Filter for the CallToActionTV.\\n *\\n * Example call: [[*ctaTV:calltoactiontv=`chunk_name`]]\\n * Example call: [[*ctaTV:calltoactiontv]]\\n *\\n * @package calltoactiontv\\n * @subpackage snippet\\/output filter\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n * @var string $options\\n * @var string $input\\n *\\/\\n\\n$cta = $modx->fromJSON($input);\\n$chunk = (!empty($options)) ? $options : \'callToActionTV\';\\n\\nif (!is_array($cta) ||\\n    !isset($cta[\'type\'], $cta[\'value\'], $cta[\'style\'], $cta[\'text\'], $cta[\'resource\'])) {\\n    return;\\n}\\n\\n$cta[\'target\'] = \'\';\\nswitch ($cta[\'type\']) {\\n    case \'resource\':\\n        if (!empty($cta[\'resource\'])) {\\n            $cta[\'href\'] = $modx->makeUrl($cta[\'resource\']);\\n        } else {\\n            $cta[\'href\'] = \'\';\\n        }\\n\\n        break;\\n    case \'tel\':\\n        $cta[\'href\'] = \'tel:\' . preg_replace(\'\\/[^\\\\d+]\\/\', \'\', $cta[\'value\']);\\n\\n        break;\\n    case \'mailto\':\\n        if (filter_var($cta[\'value\'], FILTER_VALIDATE_EMAIL)) {\\n            $cta[\'href\'] = \'mailto:\' . $cta[\'value\'];\\n        } else {\\n            $cta[\'href\'] = $cta[\'value\'];\\n        }\\n\\n        break;\\n    case \'external\':\\n        $cta[\'href\'] = $cta[\'value\'];\\n        $cta[\'target\'] = \'_blank\';\\n\\n        break;\\n}\\n\\nreturn $modx->getChunk($chunk, $cta);","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * Snippet\\/Output Filter for the CallToActionTV.\\n *\\n * Example call: [[*ctaTV:calltoactiontv=`chunk_name`]]\\n * Example call: [[*ctaTV:calltoactiontv]]\\n *\\n * @package calltoactiontv\\n * @subpackage snippet\\/output filter\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n * @var string $options\\n * @var string $input\\n *\\/\\n\\n$cta = $modx->fromJSON($input);\\n$chunk = (!empty($options)) ? $options : \'callToActionTV\';\\n\\nif (!is_array($cta) ||\\n    !isset($cta[\'type\'], $cta[\'value\'], $cta[\'style\'], $cta[\'text\'], $cta[\'resource\'])) {\\n    return;\\n}\\n\\n$cta[\'target\'] = \'\';\\nswitch ($cta[\'type\']) {\\n    case \'resource\':\\n        if (!empty($cta[\'resource\'])) {\\n            $cta[\'href\'] = $modx->makeUrl($cta[\'resource\']);\\n        } else {\\n            $cta[\'href\'] = \'\';\\n        }\\n\\n        break;\\n    case \'tel\':\\n        $cta[\'href\'] = \'tel:\' . preg_replace(\'\\/[^\\\\d+]\\/\', \'\', $cta[\'value\']);\\n\\n        break;\\n    case \'mailto\':\\n        if (filter_var($cta[\'value\'], FILTER_VALIDATE_EMAIL)) {\\n            $cta[\'href\'] = \'mailto:\' . $cta[\'value\'];\\n        } else {\\n            $cta[\'href\'] = $cta[\'value\'];\\n        }\\n\\n        break;\\n    case \'external\':\\n        $cta[\'href\'] = $cta[\'value\'];\\n        $cta[\'target\'] = \'_blank\';\\n\\n        break;\\n}\\n\\nreturn $modx->getChunk($chunk, $cta);"}',
+        'guid' => '3c61cc8709e256cf642c6c8b9e3694e6',
+        'native_key' => NULL,
+        'signature' => '7947e447cd1b5a34c730b01983de4d1c',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      '60e5e2725a230de3d3c982c3e835e2a9' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'f7bf3cea3a73389029952fbb0049091f' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVInputRenderList","priority":0,"propertyset":0}',
+              'guid' => '453e07a7b5bffd58211da97d51f1af1b',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVInputRenderList',
+              ),
+              'signature' => '60bb8cbe46716434bab894bcab844da9',
+            ),
+            'd7fab722e34343882d624ff2892b6fb0' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVInputPropertiesList","priority":0,"propertyset":0}',
+              'guid' => '0e0d0170eff0bec5222cd74cac04bb14',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVInputPropertiesList',
+              ),
+              'signature' => 'adeb618eefd274243223a2ad9df9e79d',
+            ),
+            'd61286472e10d37314b33affb20998f6' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageBeforeRender","priority":0,"propertyset":0}',
+              'guid' => '7541238ce8f178c5d9ccfe096f64cdd6',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageBeforeRender',
+              ),
+              'signature' => '8d98624f13e1d39d0abe1ba2985006dd',
+            ),
+            '35c42f656648d71e05ef62edfe9cdfb5' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormRender","priority":0,"propertyset":0}',
+              'guid' => '4d82b029ce9533205420d8822c52a46a',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormRender',
+              ),
+              'signature' => 'd63ba12bc791d61e17a478d3782c3752',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"CallToActionTV","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * CallToActionTV.\\n *\\n * @package calltoactiontv\\n * @subpackage plugin\\n *\\n * @event OnManagerPageBeforeRender\\n * @event OnTVInputRenderList\\n * @event OnTVInputPropertiesList\\n * @event OnDocFormRender\\n *\\n * @var modX $modx\\n *\\/\\n\\n$corePath = $modx->getOption(\\n    \'calltoactiontv.core_path\',\\n    null,\\n    $modx->getOption(\'core_path\') . \'components\\/calltoactiontv\\/\'\\n);\\n$callToActionTV = $modx->getService(\'calltoactiontv\', \'CallToActionTV\', $corePath . \'model\\/calltoactiontv\\/\');\\n\\nswitch ($modx->event->name) {\\n    case \'OnManagerPageBeforeRender\':\\n        $modx->controller->addLexiconTopic(\'calltoactiontv:default\');\\n        $callToActionTV->includeAssets();\\n\\n        break;\\n    case \'OnTVInputRenderList\':\\n        $modx->event->output($corePath . \'elements\\/tv\\/input\\/\');\\n\\n        break;\\n    case \'OnTVInputPropertiesList\':\\n        $modx->event->output($corePath . \'elements\\/tv\\/input\\/options\\/\');\\n\\n        break;\\n    case \'OnDocFormRender\':\\n        $callToActionTV->includeAssets();\\n\\n        break;\\n}","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * CallToActionTV.\\n *\\n * @package calltoactiontv\\n * @subpackage plugin\\n *\\n * @event OnManagerPageBeforeRender\\n * @event OnTVInputRenderList\\n * @event OnTVInputPropertiesList\\n * @event OnDocFormRender\\n *\\n * @var modX $modx\\n *\\/\\n\\n$corePath = $modx->getOption(\\n    \'calltoactiontv.core_path\',\\n    null,\\n    $modx->getOption(\'core_path\') . \'components\\/calltoactiontv\\/\'\\n);\\n$callToActionTV = $modx->getService(\'calltoactiontv\', \'CallToActionTV\', $corePath . \'model\\/calltoactiontv\\/\');\\n\\nswitch ($modx->event->name) {\\n    case \'OnManagerPageBeforeRender\':\\n        $modx->controller->addLexiconTopic(\'calltoactiontv:default\');\\n        $callToActionTV->includeAssets();\\n\\n        break;\\n    case \'OnTVInputRenderList\':\\n        $modx->event->output($corePath . \'elements\\/tv\\/input\\/\');\\n\\n        break;\\n    case \'OnTVInputPropertiesList\':\\n        $modx->event->output($corePath . \'elements\\/tv\\/input\\/options\\/\');\\n\\n        break;\\n    case \'OnDocFormRender\':\\n        $callToActionTV->includeAssets();\\n\\n        break;\\n}"}',
+        'guid' => '99c8bbeb3ee232dfab17747c24514de2',
+        'native_key' => NULL,
+        'signature' => '5d6c88799f7035ae379dcbc4b1707c44',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'parent',
+        1 => 'category',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'calltoactiontv',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"calltoactiontv-1.0.0-pl\\/modCategory\\/e79e3d6fe4c46d4f28e6a8ea8989f740\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"calltoactiontv"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"calltoactiontv-1.0.0-pl\\/modCategory\\/e79e3d6fe4c46d4f28e6a8ea8989f740\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"calltoactiontv"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"calltoactiontv-1.0.0-pl\\/modCategory\\/e79e3d6fe4c46d4f28e6a8ea8989f740.setupoptions.resolver.resolver","type":"php","name":"setupoptions.resolver"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"calltoactiontv-1.0.0-pl\\/modCategory\\/e79e3d6fe4c46d4f28e6a8ea8989f740.stercextra.resolver.resolver","type":"php","name":"stercextra.resolver"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '30831e609f167169cf4fca57f2ae0e09',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'e79e3d6fe4c46d4f28e6a8ea8989f740',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"CallToActionTV","rank":0}',
+);

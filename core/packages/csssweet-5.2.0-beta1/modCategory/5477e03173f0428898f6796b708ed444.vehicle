@@ -1,0 +1,287 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      'f990aa36c9a220c210439385c5fa70af' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"csss.custom_css.scss","description":"Sample chunk only. It\'s recommended to create your own chunk(s) with a unique name(s) and set them in the saveCustomCss plugin properties.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/* @import \'test.scss\'; *\\/\\n\\n#logo {\\n  display: block;\\n}","locked":0,"properties":"a:0:{}","static":0,"static_file":"","content":"\\/* @import \'test.scss\'; *\\/\\n\\n#logo {\\n  display: block;\\n}"}',
+        'guid' => '53ca6a1eb96843680fd88b16cb693618',
+        'native_key' => NULL,
+        'signature' => '89e219b36f02daf7ccae61b5a3cc96c8',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      '75360ce8fb73be50daa23a64bffbf86a' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"csssweet.convert","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/* \\n * convert\\n *\\n * Output modifier that accepts a color value and converts it to \\n * another format. \\n *\\n * Examples:\\n * [[convert? &input=`#333` &options=`rgba`]]\\n * \'rgba(51,51,51,1)\'\\n *\\n * [[+color:convert]]\\n * Where the value of the placeholder is \'rgba(51,51,51,1)\'\\n * \'#333333\'\\n *\\/\\n\\n\\/\\/ Get values\\nif (empty($input)) return \'\';\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[cssSweet.convert] could not load the required csssweet class!\');\\n    return \'\';\\n}\\n\\nreturn $csssweet->converting($input, $options);","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/* \\n * convert\\n *\\n * Output modifier that accepts a color value and converts it to \\n * another format. \\n *\\n * Examples:\\n * [[convert? &input=`#333` &options=`rgba`]]\\n * \'rgba(51,51,51,1)\'\\n *\\n * [[+color:convert]]\\n * Where the value of the placeholder is \'rgba(51,51,51,1)\'\\n * \'#333333\'\\n *\\/\\n\\n\\/\\/ Get values\\nif (empty($input)) return \'\';\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[cssSweet.convert] could not load the required csssweet class!\');\\n    return \'\';\\n}\\n\\nreturn $csssweet->converting($input, $options);"}',
+        'guid' => 'af80d6e7bdd29ea566b9785923dfc73a',
+        'native_key' => NULL,
+        'signature' => '9dc95e90c79d3dfeb1e9c7d6828357d2',
+      ),
+      'b676d55eb21187ed47801059062396ee' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"csssweet.extract","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/* \\n * extract\\n *\\n * Output modifier that accepts a color value and extracts\\n * a channel. \\n *\\n * Examples:\\n * [[extract? &input=`#80e61a` &options=`red`]]\\n * \'80\'\\n *\\n * [[+color:extract=`a`]]\\n * Where the value of the placeholder is \'rgba(51,51,51,0.5)\'\\n * \'0.5\'\\n *\\/\\n\\n\\/\\/ Get values\\nif (empty($input)) return \'\';\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[cssSweet.extract] could not load the required csssweet class!\');\\n    return \'\';\\n}\\n\\nreturn $csssweet->extracting($input, $options);","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/* \\n * extract\\n *\\n * Output modifier that accepts a color value and extracts\\n * a channel. \\n *\\n * Examples:\\n * [[extract? &input=`#80e61a` &options=`red`]]\\n * \'80\'\\n *\\n * [[+color:extract=`a`]]\\n * Where the value of the placeholder is \'rgba(51,51,51,0.5)\'\\n * \'0.5\'\\n *\\/\\n\\n\\/\\/ Get values\\nif (empty($input)) return \'\';\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[cssSweet.extract] could not load the required csssweet class!\');\\n    return \'\';\\n}\\n\\nreturn $csssweet->extracting($input, $options);"}',
+        'guid' => 'b59152c251890e1eb60c8687035e9895',
+        'native_key' => NULL,
+        'signature' => '37b55928f1b029f621603f733973616a',
+      ),
+      'ea86f29487170c09937c37b4f55dc2db' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"csssweet.lighten","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/* \\n * lighten\\n *\\n * Output modifier that accepts a color value in any supported format and \\n * percentage (+ or -) option. \\n * Additionally, \'max\' or \'rev\' can be set, with or without a percentage,\\n * translating into a tint or shade. \\n *\\n * Examples:\\n * [[+color:lighten=`20`]]\\n * Lightens the $input color by 20%\\n *\\n * [[+color:lighten=`-30`]]\\n * Darkens the $input color by 30%\\n *\\n * [[+color:lighten=`max`]]\\n * If the $input value is dark, \'ffffff\' will be returned,\\n * else \'000000\' will be returned. Accepts \'#\' prefix or without.\\n *\\n * [[+color:lighten=`rev60`]]\\n * This would tint or shade the $input color by 60%\\n * (so the result would be more of a medium gray)\\n *\\n * Variables other than $options must be set in snippet properties tab if \\n * used as output modifier.\\n *\\n *\\/\\n\\n\\/\\/ Get values\\nif (empty($input)) return \'\';\\n$input = trim($input);\\n$options = isset($options) ? $options : \'0\';\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[cssSweet.lighten] could not load the required csssweet class!\');\\n    return \'\';\\n}\\n\\nreturn $csssweet->lightening($input, $options);","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/* \\n * lighten\\n *\\n * Output modifier that accepts a color value in any supported format and \\n * percentage (+ or -) option. \\n * Additionally, \'max\' or \'rev\' can be set, with or without a percentage,\\n * translating into a tint or shade. \\n *\\n * Examples:\\n * [[+color:lighten=`20`]]\\n * Lightens the $input color by 20%\\n *\\n * [[+color:lighten=`-30`]]\\n * Darkens the $input color by 30%\\n *\\n * [[+color:lighten=`max`]]\\n * If the $input value is dark, \'ffffff\' will be returned,\\n * else \'000000\' will be returned. Accepts \'#\' prefix or without.\\n *\\n * [[+color:lighten=`rev60`]]\\n * This would tint or shade the $input color by 60%\\n * (so the result would be more of a medium gray)\\n *\\n * Variables other than $options must be set in snippet properties tab if \\n * used as output modifier.\\n *\\n *\\/\\n\\n\\/\\/ Get values\\nif (empty($input)) return \'\';\\n$input = trim($input);\\n$options = isset($options) ? $options : \'0\';\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[cssSweet.lighten] could not load the required csssweet class!\');\\n    return \'\';\\n}\\n\\nreturn $csssweet->lightening($input, $options);"}',
+        'guid' => 'b1a0d8ac257dc62d367d112f85a2da9e',
+        'native_key' => NULL,
+        'signature' => 'f11da9b5f3d98bd93ab07738836dc718',
+      ),
+      'd0da04dd827811dfd552a21c613eb822' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"csssweet.modval","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/* \\n * modval\\n *\\n * Output modifier that accepts a numeric value and modifies it. \\n * Identifies strings as units and separates them. \\n *\\n * Examples:\\n * [[modval?input=`4px`&options=`*3`]]\\n * \'12px\'\\n *\\n * [[+color:modval=`\\/2`]]\\n * Where the value of the placeholder is \'18 inches\'\\n * \'9inches\'\\n *\\/\\n\\n\\/\\/ Get values\\nif (empty($input)) return \'\';\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[cssSweet.modval] could not load the required csssweet class!\');\\n    return \'\';\\n}\\n\\nreturn $csssweet->modifying($input, $options);","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/* \\n * modval\\n *\\n * Output modifier that accepts a numeric value and modifies it. \\n * Identifies strings as units and separates them. \\n *\\n * Examples:\\n * [[modval?input=`4px`&options=`*3`]]\\n * \'12px\'\\n *\\n * [[+color:modval=`\\/2`]]\\n * Where the value of the placeholder is \'18 inches\'\\n * \'9inches\'\\n *\\/\\n\\n\\/\\/ Get values\\nif (empty($input)) return \'\';\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[cssSweet.modval] could not load the required csssweet class!\');\\n    return \'\';\\n}\\n\\nreturn $csssweet->modifying($input, $options);"}',
+        'guid' => 'e879f64e597f7c2f9e1835ed7b6acade',
+        'native_key' => NULL,
+        'signature' => '9198e2cbb4e71b2f0c0a1832bb6f8022',
+      ),
+      'efbf0da19751ede9b5a6a2e238ebddc1' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"csssweet.prefix","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/* \\n * prefix\\n *\\n * Output modifier that adds basic browser prefixes to $input strings \\n *\\n * Examples:\\n * [[+my_radius_css:prefix]]\\n * Where the value of the placeholder is \'border-radius: 3px;\'\\n * -webkit-border-radius: 3px;\\n * -moz-border-radius: 3px;\\n * border-radius: 3px;\\n * \\n * [[prefix?to=`transition: all 300ms ease;` &options=`all`]]\\n * -webkit-transition: all 300ms ease;\\n * -moz-transition: all 300ms ease;\\n * -ms-transition: all 300ms ease;\\n * -o-transition: all 300ms ease;\\n * transition: all 300ms ease;\\n *\\/\\n\\n\\/\\/ Get input\\n$input = isset($input) ? $input : \'\';\\n\\n\\/\\/ If $to property is set, use that instead\\n$input = (isset($to)) ? $to : $input;\\n\\n\\/\\/ Check it\\nif (empty($input)) return;\\n\\n\\/\\/ Get options and defaults\\n$options = isset($options) ? $options : \'webkit,moz\';\\nif ($options === \'all\') $options = \'webkit,moz,ms,o\';\\n\\n\\/\\/ Which prefix?\\n$prefixes = [\'webkit\', \'moz\', \'ms\', \'o\'];\\n$output = \'\';\\n$selects = explode(\',\', $options);\\nforeach ($selects as $select) {\\n    if (in_array($select, $prefixes)) $output .= \\"-$select-$input\\" . PHP_EOL;\\n}\\n$output .= $input;\\n\\nreturn $output;","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/* \\n * prefix\\n *\\n * Output modifier that adds basic browser prefixes to $input strings \\n *\\n * Examples:\\n * [[+my_radius_css:prefix]]\\n * Where the value of the placeholder is \'border-radius: 3px;\'\\n * -webkit-border-radius: 3px;\\n * -moz-border-radius: 3px;\\n * border-radius: 3px;\\n * \\n * [[prefix?to=`transition: all 300ms ease;` &options=`all`]]\\n * -webkit-transition: all 300ms ease;\\n * -moz-transition: all 300ms ease;\\n * -ms-transition: all 300ms ease;\\n * -o-transition: all 300ms ease;\\n * transition: all 300ms ease;\\n *\\/\\n\\n\\/\\/ Get input\\n$input = isset($input) ? $input : \'\';\\n\\n\\/\\/ If $to property is set, use that instead\\n$input = (isset($to)) ? $to : $input;\\n\\n\\/\\/ Check it\\nif (empty($input)) return;\\n\\n\\/\\/ Get options and defaults\\n$options = isset($options) ? $options : \'webkit,moz\';\\nif ($options === \'all\') $options = \'webkit,moz,ms,o\';\\n\\n\\/\\/ Which prefix?\\n$prefixes = [\'webkit\', \'moz\', \'ms\', \'o\'];\\n$output = \'\';\\n$selects = explode(\',\', $options);\\nforeach ($selects as $select) {\\n    if (in_array($select, $prefixes)) $output .= \\"-$select-$input\\" . PHP_EOL;\\n}\\n$output .= $input;\\n\\nreturn $output;"}',
+        'guid' => 'dd9ac73829bf7c54196c16b56edb86d7',
+        'native_key' => NULL,
+        'signature' => '335cd1a124d4461131ff30af4537b76f',
+      ),
+      'dbb20f5162a01727d6334a879ae0f4f6' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"csssweet.saturate","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/* \\n * saturate\\n *\\n * Output modifier that accepts a color value and changes saturation. \\n *\\n * Examples:\\n * [[saturate? &input=`#80e61a` &options=`20`]]\\n * \'#80ff00\'\\n *\\n * [[+color:saturate=`-20`]]\\n * Where the value of the placeholder is \'rgb(128,230,26)\'\\n * \'rgb(128,204,51)\'\\n *\\/\\n\\n\\/\\/ Get values\\nif (empty($input)) return \'\';\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[cssSweet.convert] could not load the required csssweet class!\');\\n    return \'\';\\n}\\n\\nreturn $csssweet->saturating($input, $options);","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/* \\n * saturate\\n *\\n * Output modifier that accepts a color value and changes saturation. \\n *\\n * Examples:\\n * [[saturate? &input=`#80e61a` &options=`20`]]\\n * \'#80ff00\'\\n *\\n * [[+color:saturate=`-20`]]\\n * Where the value of the placeholder is \'rgb(128,230,26)\'\\n * \'rgb(128,204,51)\'\\n *\\/\\n\\n\\/\\/ Get values\\nif (empty($input)) return \'\';\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[cssSweet.convert] could not load the required csssweet class!\');\\n    return \'\';\\n}\\n\\nreturn $csssweet->saturating($input, $options);"}',
+        'guid' => 'd60a07b617f8d62ae8eb0821b6ef825b',
+        'native_key' => NULL,
+        'signature' => '86260c3e8636f7f4850b97ed043b138f',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      '7bf72e16446ed47adb2df9ad8fcafe38' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '3f75095fb8c75368e4b23e140e1b6bc6' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnSiteRefresh","priority":0,"propertyset":0}',
+              'guid' => 'c1835065439082df420c8970ae03a2bc',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnSiteRefresh',
+              ),
+              'signature' => 'a8f660076d48b10b95583b02d10cb0e8',
+            ),
+            '7242409bf928a4757f46be97866b8dde' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnChunkFormSave","priority":0,"propertyset":0}',
+              'guid' => 'ffc6504555e5368b25ff5ddb084b2681',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnChunkFormSave',
+              ),
+              'signature' => '8e8eb7ca9553636fad20436241d0a5c9',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"saveCustomCss","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * saveCustomCss\\n * @author @sepiariver\\n * Copyright 2013 - 2015 by YJ Tso <yj@modx.com> <info@sepiariver.com>\\n *\\n * saveCustomCss and cssSweet is free software;\\n * you can redistribute it and\\/or modify it under the terms of the GNU General\\n * Public License as published by the Free Software Foundation;\\n * either version 2 of the License, or (at your option) any later version.\\n *\\n * saveCustomCss and cssSweet is distributed in the hope that it will be useful,\\n * but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or\\n * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * saveCustomCss and cssSweet; if not, write to the Free Software Foundation, Inc.,\\n * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package cssSweet\\n *\\n *\\/\\n\\n\\/\\/ Never fire on the front end\\nif ($modx->context->get(\'key\') !== \'mgr\') return;\\n\\n\\/\\/ In case the wrong event is enabled in plugin properties\\n$allowedEvents = [\'OnSiteRefresh\', \'OnChunkFormSave\', \'ClientConfig_ConfigChange\', \'OnDocFormSave\'];\\nif (!in_array($modx->event->name, $allowedEvents)) return;\\n\\n\\/\\/ Support @sottwell\'s approach\\nif ($modx->event->name === \'OnDocFormSave\') {\\n    if (!($resource instanceof modResource)) return;\\n    if ($resource->get(\'contentType\') !== \'text\\/css\') return;\\n}\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[SaveCustomCss] could not load the required csssweet class!\');\\n    return;\\n}\\n\\n\\/\\/ Dev mode option\\n$mode = $modx->getOption(\'dev_mode\', $scriptProperties, \'custom\', true);\\n\\/\\/ Letting folks know what\'s going on\\n$modx->log(modX::LOG_LEVEL_INFO, \'saveCustomCss plugin is running in mode: \' . $mode);\\n\\n\\/\\/ Override properties with mode props\\n$properties = $csssweet->getProperties($scriptProperties, $mode);\\n\\n\\/\\/ Specify a comma-separated list of chunk names in plugin properties\\n$chunks = $csssweet->explodeAndClean($modx->getOption(\'scss_chunks\', $properties, \'\'));\\n\\/\\/ If no chunk names specified, there\'s nothing to do.\\nif (empty($chunks)) {\\n    $modx->log(modX::LOG_LEVEL_WARN, \'No chunks were set in the saveCustomCss plugin property scss_chunks. No action performed.\');\\n    return;\\n}\\n\\n\\/\\/ Don\'t run this for every ChunkSave event\\nif ($modx->event->name === \'OnChunkFormSave\' && !in_array($chunk->get(\'name\'), $chunks)) return;\\n\\n\\/\\/ Specify an output file name in plugin properties\\n$filename = $modx->getOption(\'css_filename\', $properties, \'\');\\nif (empty($filename)) return;\\n\\n\\/\\/ Optionally choose an output format if not minified\\n$css_output_format = $modx->getOption(\'css_output_format\', $properties, \'Expanded\');\\n$css_output_format_options = array(\'Expanded\', \'Nested\', \'Compact\');\\nif (!in_array($css_output_format, $css_output_format_options)) $css_output_format = \'Expanded\';\\n\\n\\/\\/ Optionally minify the output, defaults to \'true\'\\n$minify_custom_css = (bool) $modx->getOption(\'minify_custom_css\', $properties, true);\\n$css_output_format = ($minify_custom_css) ? \'Compressed\' : $css_output_format;\\n\\n\\/\\/ Strip CSS comment blocks; defaults to \'false\'\\n$strip_comments = (bool) $modx->getOption(\'strip_css_comment_blocks\', $properties, false);\\n$css_output_format = ($minify_custom_css && $strip_comments) ? \'Crunched\' : $css_output_format;\\n\\n\\/\\/ Optionally set base_path for scss imports\\n$scss_import_paths = $modx->getOption(\'scss_import_paths\', $properties, \'\');\\n$scss_import_paths = (empty($scss_import_paths)) ? array() : $csssweet->explodeAndClean($scss_import_paths);\\n\\n\\/\\/ Get the output path; construct fallback; log for debugging\\n$csssCustomCssPath = $modx->getOption(\'css_path\', $properties, \'\');\\nif (empty($csssCustomCssPath)) $csssCustomCssPath = $modx->getOption(\'assets_path\') . \'components\\/csssweet\\/\' . $mode . \'\\/\';\\n$csssCustomCssPath = rtrim($csssCustomCssPath, \'\\/\') . \'\\/\';\\n\\n$checkDir = $csssweet->checkDir($csssCustomCssPath, \'csssweet.saveCustomCss\');\\nif ($checkDir[\'success\']) {\\n    $modx->log(modX::LOG_LEVEL_WARN, $checkDir[\'message\']);\\n} else {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'$csssCustomJsPath error: \' . $checkDir[\'message\']);\\n    return;\\n}\\n\\n\\/\\/ Initialize settings array\\n$settings = array();\\n\\n\\/\\/ Get context settings\\n$settings_ctx = $modx->getOption(\'context_settings_context\', $properties, \'\');\\nif (!empty($settings_ctx)) {\\n    $settings_ctx = $modx->getContext($settings_ctx);\\n    if ($settings_ctx && is_array($settings_ctx->config)) $settings = array_merge($settings, $settings_ctx->config);\\n}\\n\\n\\/\\/ Attempt to get Client Config settigs\\n$settings = $csssweet->getClientConfigSettings($settings);\\n\\n\\/* Make settings available as [[++tags]] *\\/\\n$modx->setPlaceholders($settings, \'+\');\\n\\n\\/\\/ Parse chunk with $settings array\\n$contents = $csssweet->processChunks($chunks, $settings);\\n\\/\\/ If there\'s no result, what\'s the point?\\nif (empty($contents)) return;\\n\\n\\/\\/ CSS comments\\n$contents = \'\\/* Contents generated by MODX - this file will be overwritten. *\\/\' . PHP_EOL . $contents;\\n\\/\\/ The scssphp parser keeps comments with !\\nif (!$strip_comments) $contents = str_replace(\'\\/*\', \'\\/*!\', $contents);\\n\\n\\/\\/ Define target file\\n$file = $csssCustomCssPath . $filename;\\n\\n\\/\\/ Init scssphp\\n$scssMin = $csssweet->scssphpInit($scss_import_paths, $css_output_format);\\nif ($scssMin) {\\n    try {\\n        $contents = $scssMin->compile($contents);\\n    } catch (Exception $e) {\\n        $modx->log(modX::LOG_LEVEL_ERROR, $e->getMessage() . \' scss not compiled. minification not performed.\', \'\', \'saveCustomCss\');\\n    }\\n} else {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'Failed to load scss class. scss not compiled. minification not performed.\', \'\', \'saveCustomCss\');\\n}\\n\\n\\/\\/ If we failed scss and minification at least output what we have\\nfile_put_contents($file, $contents);\\nif (file_exists($file) && is_readable($file)) $modx->log(modX::LOG_LEVEL_INFO, \'Success! Custom CSS saved to file \\"\' . $file . \'\\"\', \'\', \'saveCustomCss\');","locked":0,"properties":"a:9:{s:11:\\"scss_chunks\\";a:7:{s:4:\\"name\\";s:11:\\"scss_chunks\\";s:4:\\"desc\\";s:77:\\"Name of chunk, or comma-separated list of chunks, from which to parse (S)CSS.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:20:\\"csss.custom_css.scss\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:12:\\"css_filename\\";a:7:{s:4:\\"name\\";s:12:\\"css_filename\\";s:4:\\"desc\\";s:43:\\"Name of file to output custom compiled CSS.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:18:\\"custom_css.min.css\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:8:\\"dev_mode\\";a:7:{s:4:\\"name\\";s:8:\\"dev_mode\\";s:4:\\"desc\\";s:16:\\"Enable DEV mode.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:6:\\"custom\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:4:\\"Mode\\";}s:8:\\"css_path\\";a:7:{s:4:\\"name\\";s:8:\\"css_path\\";s:4:\\"desc\\";s:62:\\"Full path for directory to which to OUTPUT the final CSS file.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:24:\\"context_settings_context\\";a:7:{s:4:\\"name\\";s:24:\\"context_settings_context\\";s:4:\\"desc\\";s:79:\\"The key of a single context from which to pull context settings for CSS values.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:17:\\"minify_custom_css\\";a:7:{s:4:\\"name\\";s:17:\\"minify_custom_css\\";s:4:\\"desc\\";s:58:\\"Minify CSS on output. MUST be enabled for SCSS processing.\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";b:1;s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:21:\\"SCSS and Minification\\";}s:17:\\"scss_import_paths\\";a:7:{s:4:\\"name\\";s:17:\\"scss_import_paths\\";s:4:\\"desc\\";s:99:\\"Optionally set import paths to check for SCSS imports. All @import paths must be relative to these.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:21:\\"SCSS and Minification\\";}s:24:\\"strip_css_comment_blocks\\";a:7:{s:4:\\"name\\";s:24:\\"strip_css_comment_blocks\\";s:4:\\"desc\\";s:69:\\"Strips CSS comment blocks on output, only IF minification is ENABLED.\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";b:0;s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:21:\\"SCSS and Minification\\";}s:17:\\"css_output_format\\";a:7:{s:4:\\"name\\";s:17:\\"css_output_format\\";s:4:\\"desc\\";s:98:\\"Choose either \'Expanded\' (default), \'Nested\' or \'Compact\' CSS output, IF minification is DISABLED.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:8:\\"Expanded\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:21:\\"SCSS and Minification\\";}}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * saveCustomCss\\n * @author @sepiariver\\n * Copyright 2013 - 2015 by YJ Tso <yj@modx.com> <info@sepiariver.com>\\n *\\n * saveCustomCss and cssSweet is free software;\\n * you can redistribute it and\\/or modify it under the terms of the GNU General\\n * Public License as published by the Free Software Foundation;\\n * either version 2 of the License, or (at your option) any later version.\\n *\\n * saveCustomCss and cssSweet is distributed in the hope that it will be useful,\\n * but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or\\n * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * saveCustomCss and cssSweet; if not, write to the Free Software Foundation, Inc.,\\n * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package cssSweet\\n *\\n *\\/\\n\\n\\/\\/ Never fire on the front end\\nif ($modx->context->get(\'key\') !== \'mgr\') return;\\n\\n\\/\\/ In case the wrong event is enabled in plugin properties\\n$allowedEvents = [\'OnSiteRefresh\', \'OnChunkFormSave\', \'ClientConfig_ConfigChange\', \'OnDocFormSave\'];\\nif (!in_array($modx->event->name, $allowedEvents)) return;\\n\\n\\/\\/ Support @sottwell\'s approach\\nif ($modx->event->name === \'OnDocFormSave\') {\\n    if (!($resource instanceof modResource)) return;\\n    if ($resource->get(\'contentType\') !== \'text\\/css\') return;\\n}\\n\\n\\/\\/ Grab the cssSweet class\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[SaveCustomCss] could not load the required csssweet class!\');\\n    return;\\n}\\n\\n\\/\\/ Dev mode option\\n$mode = $modx->getOption(\'dev_mode\', $scriptProperties, \'custom\', true);\\n\\/\\/ Letting folks know what\'s going on\\n$modx->log(modX::LOG_LEVEL_INFO, \'saveCustomCss plugin is running in mode: \' . $mode);\\n\\n\\/\\/ Override properties with mode props\\n$properties = $csssweet->getProperties($scriptProperties, $mode);\\n\\n\\/\\/ Specify a comma-separated list of chunk names in plugin properties\\n$chunks = $csssweet->explodeAndClean($modx->getOption(\'scss_chunks\', $properties, \'\'));\\n\\/\\/ If no chunk names specified, there\'s nothing to do.\\nif (empty($chunks)) {\\n    $modx->log(modX::LOG_LEVEL_WARN, \'No chunks were set in the saveCustomCss plugin property scss_chunks. No action performed.\');\\n    return;\\n}\\n\\n\\/\\/ Don\'t run this for every ChunkSave event\\nif ($modx->event->name === \'OnChunkFormSave\' && !in_array($chunk->get(\'name\'), $chunks)) return;\\n\\n\\/\\/ Specify an output file name in plugin properties\\n$filename = $modx->getOption(\'css_filename\', $properties, \'\');\\nif (empty($filename)) return;\\n\\n\\/\\/ Optionally choose an output format if not minified\\n$css_output_format = $modx->getOption(\'css_output_format\', $properties, \'Expanded\');\\n$css_output_format_options = array(\'Expanded\', \'Nested\', \'Compact\');\\nif (!in_array($css_output_format, $css_output_format_options)) $css_output_format = \'Expanded\';\\n\\n\\/\\/ Optionally minify the output, defaults to \'true\'\\n$minify_custom_css = (bool) $modx->getOption(\'minify_custom_css\', $properties, true);\\n$css_output_format = ($minify_custom_css) ? \'Compressed\' : $css_output_format;\\n\\n\\/\\/ Strip CSS comment blocks; defaults to \'false\'\\n$strip_comments = (bool) $modx->getOption(\'strip_css_comment_blocks\', $properties, false);\\n$css_output_format = ($minify_custom_css && $strip_comments) ? \'Crunched\' : $css_output_format;\\n\\n\\/\\/ Optionally set base_path for scss imports\\n$scss_import_paths = $modx->getOption(\'scss_import_paths\', $properties, \'\');\\n$scss_import_paths = (empty($scss_import_paths)) ? array() : $csssweet->explodeAndClean($scss_import_paths);\\n\\n\\/\\/ Get the output path; construct fallback; log for debugging\\n$csssCustomCssPath = $modx->getOption(\'css_path\', $properties, \'\');\\nif (empty($csssCustomCssPath)) $csssCustomCssPath = $modx->getOption(\'assets_path\') . \'components\\/csssweet\\/\' . $mode . \'\\/\';\\n$csssCustomCssPath = rtrim($csssCustomCssPath, \'\\/\') . \'\\/\';\\n\\n$checkDir = $csssweet->checkDir($csssCustomCssPath, \'csssweet.saveCustomCss\');\\nif ($checkDir[\'success\']) {\\n    $modx->log(modX::LOG_LEVEL_WARN, $checkDir[\'message\']);\\n} else {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'$csssCustomJsPath error: \' . $checkDir[\'message\']);\\n    return;\\n}\\n\\n\\/\\/ Initialize settings array\\n$settings = array();\\n\\n\\/\\/ Get context settings\\n$settings_ctx = $modx->getOption(\'context_settings_context\', $properties, \'\');\\nif (!empty($settings_ctx)) {\\n    $settings_ctx = $modx->getContext($settings_ctx);\\n    if ($settings_ctx && is_array($settings_ctx->config)) $settings = array_merge($settings, $settings_ctx->config);\\n}\\n\\n\\/\\/ Attempt to get Client Config settigs\\n$settings = $csssweet->getClientConfigSettings($settings);\\n\\n\\/* Make settings available as [[++tags]] *\\/\\n$modx->setPlaceholders($settings, \'+\');\\n\\n\\/\\/ Parse chunk with $settings array\\n$contents = $csssweet->processChunks($chunks, $settings);\\n\\/\\/ If there\'s no result, what\'s the point?\\nif (empty($contents)) return;\\n\\n\\/\\/ CSS comments\\n$contents = \'\\/* Contents generated by MODX - this file will be overwritten. *\\/\' . PHP_EOL . $contents;\\n\\/\\/ The scssphp parser keeps comments with !\\nif (!$strip_comments) $contents = str_replace(\'\\/*\', \'\\/*!\', $contents);\\n\\n\\/\\/ Define target file\\n$file = $csssCustomCssPath . $filename;\\n\\n\\/\\/ Init scssphp\\n$scssMin = $csssweet->scssphpInit($scss_import_paths, $css_output_format);\\nif ($scssMin) {\\n    try {\\n        $contents = $scssMin->compile($contents);\\n    } catch (Exception $e) {\\n        $modx->log(modX::LOG_LEVEL_ERROR, $e->getMessage() . \' scss not compiled. minification not performed.\', \'\', \'saveCustomCss\');\\n    }\\n} else {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'Failed to load scss class. scss not compiled. minification not performed.\', \'\', \'saveCustomCss\');\\n}\\n\\n\\/\\/ If we failed scss and minification at least output what we have\\nfile_put_contents($file, $contents);\\nif (file_exists($file) && is_readable($file)) $modx->log(modX::LOG_LEVEL_INFO, \'Success! Custom CSS saved to file \\"\' . $file . \'\\"\', \'\', \'saveCustomCss\');"}',
+        'guid' => '3773ca89de3b12484873f0988d089069',
+        'native_key' => NULL,
+        'signature' => '7dfadc5ab987439d4dc3ce148f24c185',
+      ),
+      '608288a657ef97f086c45b9260bb9dcb' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'b115d1ca8adbe91a2a4ca350e6a3f15b' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnSiteRefresh","priority":0,"propertyset":0}',
+              'guid' => '5b5342878690954a1c185c56508c1eca',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnSiteRefresh',
+              ),
+              'signature' => 'fba5a126feccb401ba016ff4d0c84f7b',
+            ),
+            '5b3e43aed80cca71237bb65d3d39cf93' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnChunkFormSave","priority":0,"propertyset":0}',
+              'guid' => '25f398d5959e84841caf85693f6d5fe7',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnChunkFormSave',
+              ),
+              'signature' => 'ad157c4ba4db84934273f4a34d864f1a',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"saveCustomJs","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * saveCustomJs\\n * @author @sepiariver\\n * Copyright 2013 - 2015 by YJ Tso <yj@modx.com> <info@sepiariver.com>\\n *\\n * saveCustomJs and cssSweet is free software;\\n * you can redistribute it and\\/or modify it under the terms of the GNU General\\n * Public License as published by the Free Software Foundation;\\n * either version 2 of the License, or (at your option) any later version.\\n *\\n * saveCustomJs and cssSweet is distributed in the hope that it will be useful,\\n * but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or\\n * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * saveCustomJs and cssSweet; if not, write to the Free Software Foundation, Inc.,\\n * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package cssSweet\\n *\\n *\\/\\n\\n\\/\\/ Never fire on the front end\\nif ($modx->context->get(\'key\') !== \'mgr\') return;\\n\\n\\/\\/ In case the wrong event is enabled in plugin properties\\n$allowedEvents = [\'OnSiteRefresh\', \'OnChunkFormSave\', \'ClientConfig_ConfigChange\', \'OnDocFormSave\'];\\nif (!in_array($modx->event->name, $allowedEvents)) return;\\n\\n\\/\\/ Support @sottwell\'s approach\\nif ($modx->event->name === \'OnDocFormSave\') {\\n    if (!($resource instanceof modResource)) return;\\n    if ($resource->get(\'contentType\') !== \'text\\/css\') return;\\n}\\n\\n\\/\\/ Grab the cssSweet clas\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\n\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[SaveCustomCss] could not load the required csssweet class!\');\\n    return;\\n}\\n\\n\\/\\/ Dev mode option\\n$mode = $modx->getOption(\'dev_mode\', $scriptProperties, \'custom\', true);\\n\\/\\/ Letting folks know what\'s going on\\n$modx->log(modX::LOG_LEVEL_INFO, \'saveCustomJs plugin is running in mode: \' . $mode);\\n\\n\\/\\/ Override properties with mode props\\n$properties = $csssweet->getProperties($scriptProperties, $mode);\\n\\n\\/\\/ Specify a comma-separated list of chunk names in plugin properties\\n$chunks = $csssweet->explodeAndClean($modx->getOption(\'js_chunks\', $properties, \'\'));\\n\\/\\/ If no chunk names specified, there\'s nothing to do.\\nif (empty($chunks)) {\\n    $modx->log(modX::LOG_LEVEL_WARN, \'No chunks were set in the saveCustomJs plugin property js_chunks. No action performed.\');\\n    return;\\n}\\n\\n\\/\\/ Don\'t run this for every ChunkSave event\\nif ($modx->event->name === \'OnChunkFormSave\' && !in_array($chunk->get(\'name\'), $chunks)) return;\\n\\n\\/\\/ Specify an output file name in plugin properties\\n$filename = $modx->getOption(\'js_filename\', $properties, \'\');\\nif (empty($filename)) return;\\n\\n\\/\\/ Optionally minify the output, defaults to \'true\'\\n$minify_custom_js = (bool) $modx->getOption(\'minify_custom_js\', $properties, true);\\n\\n\\/\\/ Strip comment blocks; defaults to \'false\'\\n$strip_comments = (bool) $modx->getOption(\'strip_js_comment_blocks\', $properties, false);\\n$preserve_comments = ($strip_comments) ? false : true;\\n\\n\\/\\/ Get the output path; construct fallback; log for info\\/debugging\\n$csssCustomJsPath = $modx->getOption(\'js_path\', $properties, \'\');\\nif (empty($csssCustomJsPath)) $csssCustomJsPath = $modx->getOption(\'assets_path\') . \'components\\/csssweet\\/\' . $mode . \'\\/js\\/\';\\n$csssCustomJsPath = rtrim($csssCustomJsPath, \'\\/\') . \'\\/\';\\n\\n$checkDir = $csssweet->checkDir($csssCustomJsPath, \'csssweet.saveCustomJs\');\\nif ($checkDir[\'success\']) {\\n    $modx->log(modX::LOG_LEVEL_WARN, $checkDir[\'message\']);\\n} else {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'$csssCustomJsPath error: \' . $checkDir[\'message\']);\\n    return;\\n}\\n\\n\\/\\/ Initialize settings array\\n$settings = array();\\n\\n\\/\\/ Get context settings\\n$settings_ctx = $modx->getOption(\'context_settings_context\', $properties, \'\');\\nif (!empty($settings_ctx)) {\\n    $settings_ctx = $modx->getContext($settings_ctx);\\n    if ($settings_ctx && is_array($settings_ctx->config)) $settings = array_merge($settings, $settings_ctx->config);\\n}\\n\\n\\/\\/ Attempt to get Client Config settigs\\n$settings = $csssweet->getClientConfigSettings($settings);\\n\\n\\/* Make settings available as [[++tags]] *\\/\\n$modx->setPlaceholders($settings, \'+\');\\n\\n\\/\\/ Parse chunk with $settings array\\n$contents = $csssweet->processChunks($chunks, $settings);\\n\\n\\/\\/ If there\'s no result, what\'s the point?\\nif (empty($contents)) return;\\n\\n\\/\\/ Comments\\n$contents = \'\\/* Contents generated by MODX - this file will be overwritten. *\\/\' . PHP_EOL . $contents;\\nif ($preserve_comments) {\\n    \\/\\/ Add \'!\' token to preserve all comments\\n    $contents = str_replace(array(\'\\/*\', \'\\/*!\'), \'\\/*!\', $contents);\\n} else {\\n    \\/\\/ We discard flagged comments if the strip_js_comment_blocks property is true. Good idea or no?\\n    $contents = str_replace(\'\\/*!\', \'\\/*\', $contents);\\n}\\n\\n\\/\\/ Define target file\\n$file = $csssCustomJsPath . $filename;\\n\\n\\/\\/ Status report\\n$status = \'not\';\\nif ($minify_custom_js) {\\n    $jshrink = $csssweet->jshrinkInit();\\n    \\/\\/ If we got the class, try minification. Log failures.\\n    if ($jshrink) {\\n        try {\\n            $contents = $jshrink::minify($contents, array(\'flaggedComments\' => $preserve_comments));\\n            $status = \'\';\\n        } catch (Exception $e) {\\n            $modx->log(modX::LOG_LEVEL_ERROR, $e->getMessage() . \'\\u2014 js not compiled. Minification not performed.\');\\n        }\\n    } else {\\n        $modx->log(modX::LOG_LEVEL_ERROR, \'Failed to load js Minifier class \\u2014 js not compiled. Minification not performed.\');\\n    }\\n}\\n\\n\\/\\/ None of the minifiers seem to handle this correctly?\\n$contents = str_replace(\'!function\', PHP_EOL . \'!function\', $contents);\\n\\n\\/\\/ If we didnt\' minify, output what we have\\nfile_put_contents($file, $contents);\\nif (file_exists($file) && is_readable($file)) $modx->log(modX::LOG_LEVEL_INFO, \'Minification was \' . $status . \' performed. Custom JS saved to file: \' . $file);","locked":0,"properties":"a:7:{s:9:\\"js_chunks\\";a:7:{s:4:\\"name\\";s:9:\\"js_chunks\\";s:4:\\"desc\\";s:73:\\"Name of chunk, or comma-separated list of chunks, from which to parse JS.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:11:\\"js_filename\\";a:7:{s:4:\\"name\\";s:11:\\"js_filename\\";s:4:\\"desc\\";s:42:\\"Name of file to output custom compiled JS.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:16:\\"custom_js.min.js\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:8:\\"dev_mode\\";a:7:{s:4:\\"name\\";s:8:\\"dev_mode\\";s:4:\\"desc\\";s:16:\\"Enable DEV mode.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:6:\\"custom\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:4:\\"Mode\\";}s:7:\\"js_path\\";a:7:{s:4:\\"name\\";s:7:\\"js_path\\";s:4:\\"desc\\";s:61:\\"Full path for directory to which to OUTPUT the final JS file.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:24:\\"context_settings_context\\";a:7:{s:4:\\"name\\";s:24:\\"context_settings_context\\";s:4:\\"desc\\";s:79:\\"The key of a single context from which to pull context settings for CSS values.\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:16:\\"minify_custom_js\\";a:7:{s:4:\\"name\\";s:16:\\"minify_custom_js\\";s:4:\\"desc\\";s:20:\\"Minify JS on output.\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";b:1;s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:12:\\"Minification\\";}s:23:\\"strip_js_comment_blocks\\";a:7:{s:4:\\"name\\";s:23:\\"strip_js_comment_blocks\\";s:4:\\"desc\\";s:35:\\"Strips JS comment blocks on output.\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";b:0;s:7:\\"lexicon\\";s:19:\\"csssweet:properties\\";s:4:\\"area\\";s:12:\\"Minification\\";}}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * saveCustomJs\\n * @author @sepiariver\\n * Copyright 2013 - 2015 by YJ Tso <yj@modx.com> <info@sepiariver.com>\\n *\\n * saveCustomJs and cssSweet is free software;\\n * you can redistribute it and\\/or modify it under the terms of the GNU General\\n * Public License as published by the Free Software Foundation;\\n * either version 2 of the License, or (at your option) any later version.\\n *\\n * saveCustomJs and cssSweet is distributed in the hope that it will be useful,\\n * but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or\\n * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * saveCustomJs and cssSweet; if not, write to the Free Software Foundation, Inc.,\\n * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package cssSweet\\n *\\n *\\/\\n\\n\\/\\/ Never fire on the front end\\nif ($modx->context->get(\'key\') !== \'mgr\') return;\\n\\n\\/\\/ In case the wrong event is enabled in plugin properties\\n$allowedEvents = [\'OnSiteRefresh\', \'OnChunkFormSave\', \'ClientConfig_ConfigChange\', \'OnDocFormSave\'];\\nif (!in_array($modx->event->name, $allowedEvents)) return;\\n\\n\\/\\/ Support @sottwell\'s approach\\nif ($modx->event->name === \'OnDocFormSave\') {\\n    if (!($resource instanceof modResource)) return;\\n    if ($resource->get(\'contentType\') !== \'text\\/css\') return;\\n}\\n\\n\\/\\/ Grab the cssSweet clas\\n$csssweet = null;\\n$cssSweetPath = $modx->getOption(\'csssweet.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/csssweet\\/\');\\n$cssSweetPath .= \'model\\/csssweet\\/\';\\nif (file_exists($cssSweetPath . \'csssweet.class.php\')) $csssweet = $modx->getService(\'csssweet\', \'CssSweet\', $cssSweetPath);\\n\\nif (!$csssweet || !($csssweet instanceof CssSweet)) {\\n\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[SaveCustomCss] could not load the required csssweet class!\');\\n    return;\\n}\\n\\n\\/\\/ Dev mode option\\n$mode = $modx->getOption(\'dev_mode\', $scriptProperties, \'custom\', true);\\n\\/\\/ Letting folks know what\'s going on\\n$modx->log(modX::LOG_LEVEL_INFO, \'saveCustomJs plugin is running in mode: \' . $mode);\\n\\n\\/\\/ Override properties with mode props\\n$properties = $csssweet->getProperties($scriptProperties, $mode);\\n\\n\\/\\/ Specify a comma-separated list of chunk names in plugin properties\\n$chunks = $csssweet->explodeAndClean($modx->getOption(\'js_chunks\', $properties, \'\'));\\n\\/\\/ If no chunk names specified, there\'s nothing to do.\\nif (empty($chunks)) {\\n    $modx->log(modX::LOG_LEVEL_WARN, \'No chunks were set in the saveCustomJs plugin property js_chunks. No action performed.\');\\n    return;\\n}\\n\\n\\/\\/ Don\'t run this for every ChunkSave event\\nif ($modx->event->name === \'OnChunkFormSave\' && !in_array($chunk->get(\'name\'), $chunks)) return;\\n\\n\\/\\/ Specify an output file name in plugin properties\\n$filename = $modx->getOption(\'js_filename\', $properties, \'\');\\nif (empty($filename)) return;\\n\\n\\/\\/ Optionally minify the output, defaults to \'true\'\\n$minify_custom_js = (bool) $modx->getOption(\'minify_custom_js\', $properties, true);\\n\\n\\/\\/ Strip comment blocks; defaults to \'false\'\\n$strip_comments = (bool) $modx->getOption(\'strip_js_comment_blocks\', $properties, false);\\n$preserve_comments = ($strip_comments) ? false : true;\\n\\n\\/\\/ Get the output path; construct fallback; log for info\\/debugging\\n$csssCustomJsPath = $modx->getOption(\'js_path\', $properties, \'\');\\nif (empty($csssCustomJsPath)) $csssCustomJsPath = $modx->getOption(\'assets_path\') . \'components\\/csssweet\\/\' . $mode . \'\\/js\\/\';\\n$csssCustomJsPath = rtrim($csssCustomJsPath, \'\\/\') . \'\\/\';\\n\\n$checkDir = $csssweet->checkDir($csssCustomJsPath, \'csssweet.saveCustomJs\');\\nif ($checkDir[\'success\']) {\\n    $modx->log(modX::LOG_LEVEL_WARN, $checkDir[\'message\']);\\n} else {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'$csssCustomJsPath error: \' . $checkDir[\'message\']);\\n    return;\\n}\\n\\n\\/\\/ Initialize settings array\\n$settings = array();\\n\\n\\/\\/ Get context settings\\n$settings_ctx = $modx->getOption(\'context_settings_context\', $properties, \'\');\\nif (!empty($settings_ctx)) {\\n    $settings_ctx = $modx->getContext($settings_ctx);\\n    if ($settings_ctx && is_array($settings_ctx->config)) $settings = array_merge($settings, $settings_ctx->config);\\n}\\n\\n\\/\\/ Attempt to get Client Config settigs\\n$settings = $csssweet->getClientConfigSettings($settings);\\n\\n\\/* Make settings available as [[++tags]] *\\/\\n$modx->setPlaceholders($settings, \'+\');\\n\\n\\/\\/ Parse chunk with $settings array\\n$contents = $csssweet->processChunks($chunks, $settings);\\n\\n\\/\\/ If there\'s no result, what\'s the point?\\nif (empty($contents)) return;\\n\\n\\/\\/ Comments\\n$contents = \'\\/* Contents generated by MODX - this file will be overwritten. *\\/\' . PHP_EOL . $contents;\\nif ($preserve_comments) {\\n    \\/\\/ Add \'!\' token to preserve all comments\\n    $contents = str_replace(array(\'\\/*\', \'\\/*!\'), \'\\/*!\', $contents);\\n} else {\\n    \\/\\/ We discard flagged comments if the strip_js_comment_blocks property is true. Good idea or no?\\n    $contents = str_replace(\'\\/*!\', \'\\/*\', $contents);\\n}\\n\\n\\/\\/ Define target file\\n$file = $csssCustomJsPath . $filename;\\n\\n\\/\\/ Status report\\n$status = \'not\';\\nif ($minify_custom_js) {\\n    $jshrink = $csssweet->jshrinkInit();\\n    \\/\\/ If we got the class, try minification. Log failures.\\n    if ($jshrink) {\\n        try {\\n            $contents = $jshrink::minify($contents, array(\'flaggedComments\' => $preserve_comments));\\n            $status = \'\';\\n        } catch (Exception $e) {\\n            $modx->log(modX::LOG_LEVEL_ERROR, $e->getMessage() . \'\\u2014 js not compiled. Minification not performed.\');\\n        }\\n    } else {\\n        $modx->log(modX::LOG_LEVEL_ERROR, \'Failed to load js Minifier class \\u2014 js not compiled. Minification not performed.\');\\n    }\\n}\\n\\n\\/\\/ None of the minifiers seem to handle this correctly?\\n$contents = str_replace(\'!function\', PHP_EOL . \'!function\', $contents);\\n\\n\\/\\/ If we didnt\' minify, output what we have\\nfile_put_contents($file, $contents);\\nif (file_exists($file) && is_readable($file)) $modx->log(modX::LOG_LEVEL_INFO, \'Minification was \' . $status . \' performed. Custom JS saved to file: \' . $file);"}',
+        'guid' => '4ad9a0c3cd96d9d41ce5aab558ca2efd',
+        'native_key' => NULL,
+        'signature' => 'c836fc315388c90d912c063b06114a81',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'parent',
+        1 => 'category',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'csssweet',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"csssweet-5.2.0-beta1\\/modCategory\\/5477e03173f0428898f6796b708ed444\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"csssweet"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"csssweet-5.2.0-beta1\\/modCategory\\/5477e03173f0428898f6796b708ed444\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"csssweet"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"csssweet-5.2.0-beta1\\/modCategory\\/5477e03173f0428898f6796b708ed444.csssweet.resolve.plugin_properties.resolver","type":"php","name":"csssweet.resolve.plugin_properties"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f113b89d580c85602456b76d96c1fbc8',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '5477e03173f0428898f6796b708ed444',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"cssSweet","rank":0}',
+);

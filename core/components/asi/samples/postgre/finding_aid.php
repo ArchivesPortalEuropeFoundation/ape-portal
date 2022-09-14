@@ -1,0 +1,22 @@
+<?php
+$data['fa'] = array(
+    "id" => 1178077,
+    "title" => "The Agecroft Collection",
+    "upload_date" => "2017-06-28 16:19:41.901",
+    "path_apenetead" => "/GB/984/FA/ead-gb418-agecroft_0000000.xml",
+    "um_id" => 1,
+    "eadid" => "gb418-agecroft",
+    "ai_id" => 984,
+    "totalnumberofdaos" => 0,
+    "totalnumberofunits" => 544,
+    "totalnumberofunitswithdao" => 0,
+    "published" => "t",
+    "converted" => "t",
+    "validated" => 2,
+    "europeana" => 3,
+    "queuing" => 0,
+    "totalnumberofchos" => 0,
+    "dynamic" => "f",
+    "publish_date" => "2019-07-07 07:22:02.895",
+    "total_number_of_web_resource_edm" => 0,
+);

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 apeEAD.xsd">
+    <eadheader>
+        <eadid countrycode="XX" mainagencycode="XX-100" identifier="XX-100_1">1</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>Example including variations of digital object links</titleproper>
+            </titlestmt>
+        </filedesc>
+    </eadheader>
+    <archdesc level="fonds">
+        <did>
+            <unitid type="call number">1</unitid>
+        </did>
+        <scopecontent>
+            <p>This sample file includes various examples of how digital objects could be encoded.
+                This includes:</p>
+            <list>
+                <item>Item 100 only includes a link to a high(er) resolution image with no
+                    additional information</item>
+                <item>Item 200 only includes a link to website including images with no additional
+                    information</item>
+                <item>Item 300 uses the same link as item 100, but adds type information and a link
+                    title</item>
+                <item>Item 400 uses the same link as item 200, but adds type information and a link
+                    title</item>
+                <item>Item 500 includes a link to a thumbmail (as the first link), identified by a
+                    link title with the default value "thumbnail", plus a second link to a high(er)
+                    resolution image with no additional information</item>
+                <item>Item 600 includes the same two links as item 500, but starts with the one to a
+                    high(er) resolution image and only has the link to a thumbnail, identified by a
+                    link title with the default value "thumbnail", in second place</item>
+                <item>Item 700 includes a link to a high(er) resolution image with a link title and
+                    type information (as the first link), plus a link to a thumbnail, identified by
+                    a link title with the default value "thumbnail", in second place</item>
+                <item>Item 800 includes the same two links as item 600, but starts with the one to
+                    the thumbnail, identified by a link title with the default value "thumbnail",
+                    and only has the link to the high(er) resolution image in second place</item>
+                <item>Item 900 includes five links to high(er) resolution images with no additional
+                    information, but with an empty attribute to hold a link title. Unfortunately,
+                    it's quite common to have attributes included in exports from local databases
+                    even if they do not have a value in themselves. Some of these empty attributes
+                    get removed during the conversion in the Dashboard, but some remain and will
+                    then have to be ignored in the display.</item>
+                <item>Item 1000 includes the same five links to high(er) resolution images as item
+                    900, this time with link titles and type information. Furthermore, this item
+                    includes five links to thumbnails, identified by a link title with the default
+                    value "thumbnail". In terms of sequence, there's always the link to the high(er)
+                    resolution image first, followed by the link to the appropriate thumbnail,
+                    followed by the link to the next high(er) resolution image.</item>
+                <item>Item 1100 includes the same links as item 1000, but grouped into links to all
+                    high(er) resolution images first and into links to all thumbnails second. In
+                    terms of sequence, the first link in the first group and the first link in the
+                    second group would be a pair, the second link in the first group and the second
+                    link in the second group would be the next pair and so on.</item>
+                <item>Item 1200 includes the same links as item 1000, but grouped into links all
+                    thumbnails first and into links to to all high(er) resolution images second. In
+                    terms of sequence, the first link in the first group and the first link in the
+                    second group would be a pair, the second link in the first group and the second
+                    link in the second group would be the next pair and so on.</item>
+            </list>
+        </scopecontent>
+        <dsc>
+            <c>
+                <did>
+                    <unitid type="call number">100</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://213.165.169.182/PHO/PHO_01349.JPG"/>
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">200</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://www.argus.bstu.bundesarchiv.de/dy34bj/mets/dy34bj_17954/index.htm#1"
+                    />
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">300</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://213.165.169.182/PHO/PHO_01349.JPG"
+                        xlink:title="Picture of Queen Elizabeth II" xlink:role="IMAGE"/>
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">400</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://www.argus.bstu.bundesarchiv.de/dy34bj/mets/dy34bj_17954/index.htm#1"
+                        xlink:title="Note about a union demonstration at the meeting of Foreign Ministers in London"
+                        xlink:role="TEXT"/>
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">500</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://recherche.archives.somme.fr/ark:/58483/a011379509451LNbg2M/1/1.thumbnail"
+                        xlink:title="thumbnail"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://recherche.archives.somme.fr/ark:/58483/a011379509451LNbg2M/1/1"
+                    />
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">600</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://recherche.archives.somme.fr/ark:/58483/a011379509451LNbg2M/1/1"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://recherche.archives.somme.fr/ark:/58483/a011379509451LNbg2M/1/1.thumbnail"
+                        xlink:title="thumbnail"/>
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">700</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://pares.mcu.es/ParesBusquedas20/catalogo/show/18455"
+                        xlink:title="Pulse aquí para acceder a las imágenes en el portal PARES / Click here to view the images in PARES"
+                        xlink:role="IMAGE"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://pares.mcu.es/ParesBusquedas20/catalogo/showimg/38629627"
+                        xlink:title="thumbnail"/>
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">800</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://pares.mcu.es/ParesBusquedas20/catalogo/showimg/38629627"
+                        xlink:title="thumbnail"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://pares.mcu.es/ParesBusquedas20/catalogo/show/18455"
+                        xlink:title="Pulse aquí para acceder a las imágenes en el portal PARES / Click here to view the images in PARES"
+                        xlink:role="IMAGE"/>
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">900</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title=""
+                        xlink:href="http://proxy.handle.net/10648/224e456e-4971-5113-64db-bb9b8fc0d70d"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title=""
+                        xlink:href="http://proxy.handle.net/10648/567bc594-a490-a384-9414-c38e0aea83aa"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title=""
+                        xlink:href="http://proxy.handle.net/10648/ad7c3217-e8e8-3672-aa08-0f13a4476d2f"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title=""
+                        xlink:href="http://proxy.handle.net/10648/90e30799-023e-d637-dff9-8c64cc7d1eb3"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title=""
+                        xlink:href="http://proxy.handle.net/10648/619ede04-8f51-9425-5349-edea6fd9671d"
+                    />
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">1000</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/224e456e-4971-5113-64db-bb9b8fc0d70d"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/224e456e-4971-5113-64db-bb9b8fc0d70d.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/567bc594-a490-a384-9414-c38e0aea83aa"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/567bc594-a490-a384-9414-c38e0aea83aa.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/ad7c3217-e8e8-3672-aa08-0f13a4476d2f"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/ad7c3217-e8e8-3672-aa08-0f13a4476d2f.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/90e30799-023e-d637-dff9-8c64cc7d1eb3"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/90e30799-023e-d637-dff9-8c64cc7d1eb3.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/619ede04-8f51-9425-5349-edea6fd9671d"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/619ede04-8f51-9425-5349-edea6fd9671d.jpg"/>
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">1100</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/224e456e-4971-5113-64db-bb9b8fc0d70d"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/567bc594-a490-a384-9414-c38e0aea83aa"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/ad7c3217-e8e8-3672-aa08-0f13a4476d2f"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/90e30799-023e-d637-dff9-8c64cc7d1eb3"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/619ede04-8f51-9425-5349-edea6fd9671d"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/224e456e-4971-5113-64db-bb9b8fc0d70d.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/567bc594-a490-a384-9414-c38e0aea83aa.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/ad7c3217-e8e8-3672-aa08-0f13a4476d2f.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/90e30799-023e-d637-dff9-8c64cc7d1eb3.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/619ede04-8f51-9425-5349-edea6fd9671d.jpg"/>
+                </did>
+            </c>
+            <c>
+                <did>
+                    <unitid type="call number">1100</unitid>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/224e456e-4971-5113-64db-bb9b8fc0d70d.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/567bc594-a490-a384-9414-c38e0aea83aa.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/ad7c3217-e8e8-3672-aa08-0f13a4476d2f.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/90e30799-023e-d637-dff9-8c64cc7d1eb3.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="thumbnail"
+                        xlink:href="http://afbeeldingen.gahetna.nl/naa/thumb/500x500/619ede04-8f51-9425-5349-edea6fd9671d.jpg"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/224e456e-4971-5113-64db-bb9b8fc0d70d"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/567bc594-a490-a384-9414-c38e0aea83aa"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/ad7c3217-e8e8-3672-aa08-0f13a4476d2f"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/90e30799-023e-d637-dff9-8c64cc7d1eb3"/>
+                    <dao xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="See image"
+                        xlink:role="IMAGE"
+                        xlink:href="http://proxy.handle.net/10648/619ede04-8f51-9425-5349-edea6fd9671d"/>
+                </did>
+            </c>
+        </dsc>
+    </archdesc>
+</ead>

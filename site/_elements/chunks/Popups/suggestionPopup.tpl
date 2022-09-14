@@ -1,0 +1,92 @@
+<div id="suggestionPopup" class="modal fade">
+    <div class="modal-dialog larger">
+        <div class="modal-content standard">
+            <span class="closeButton" data-dismiss="modal"><i class="fas fa-times"></i></span>
+			<div class="content">
+			    [[++make_suggestion_text]]
+			    <div class="tipTitle">
+			        <div class="tipIcon" data-tooltip-content="#suggestionTooltip">
+						<i class="far fa-question-circle"></i>
+					</div>
+					<p><strong>[[!%asi.title_what_would_you_like_to_do? &topic=`default` &namespace=`asi`]]</strong></p>
+			    </div>
+			    <div class="buttons" id="setRecipient">
+			        <a class="button whiteBlue border toggle active" id="toTopic">[[!%asi.action_assign_to_topic? &topic=`actions` &namespace=`asi`]]</a>
+				    <a class="button whiteBlue border toggle" id="toTranslation">[[!%asi.action_suggest_translation? &topic=`actions` &namespace=`asi`]]</a>
+				    <a class="button whiteBlue border toggle" id="toConnect">[[!%asi.action_connect_to_another_resource? &topic=`actions` &namespace=`asi`]]</a>
+				    <a class="button whiteBlue border toggle" id="toOther">[[!%asi.action_other? &topic=`actions` &namespace=`asi`]]</a>
+			    </div>
+			</div>
+			
+			[[!FormIt?
+			&hooks=`reCaptchaV3,setRecipient,email,FormItSaveForm`
+			&emailTpl=`allFormMessage`
+			&emailSubject=`A new suggestion regarding [[*pagetitle]]`
+			&emailTo=`[[++contact_email]]`
+			&emailFrom=`[[++contact_email]]`
+			&emailTopic=`[[++contact_email]]`
+			&emailTranslation=`[[++contact_email]]`
+			&emailConnect=`[[++contact_email]]`
+			&emailOther=`[[++contact_email]]	`
+			&formName=`Make a Suggestion - [[*pagetitle]]`
+			&formFields=`name,email,suggestion,recipient`
+			&fieldNames=`name==Full name,email==Email address,suggestion==Suggestion,recipient==Recipient`
+			&submitVar=`makeSuggestion`
+			&successMessagePlaceholder=`ms.successMessage`
+			&successMessage=`<script>$("#suggestionMadePopup").modal('show');</script>`
+			&validate=`suggestion:allowTags:allowSpecialChars,confirmHSL:blank`
+			]] 			
+			[[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
+			<form class="standard" action="[[!requestURI]]" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="emailTitle" value="A suggestion has been made">
+                <input type="text" name="confirmHSL" class="confirmField" value="">
+			    <p class="fieldLabel">[[!%asi.label_full_name? &topic=`label` &namespace=`asi`]]*</p>
+			    <div class="inputWrapper required">
+			        <input type="text" name="name" placeholder="[[!%asi.input_ph_full_name? &topic=`label` &namespace=`asi`]]" value="[[+user.fullname]]">
+			        <span class="errorMessage">[[!%asi.form_full_name_required_err_msg? &topic=`forms` &namespace=`asi`]]</span>
+			    </div>
+			    <p class="fieldLabel">[[!%asi.label_email_address? &topic=`label` &namespace=`asi`]]*</p>
+			    <div class="inputWrapper required">
+			        <input type="text" name="email" placeholder="[[!%asi.input_ph_email_address? &topic=`input` &namespace=`asi`]]" value="[[+user.email]]">
+			        <span class="errorMessage">[[!%asi.form_email_address_required_err_msg? &topic=`forms` &namespace=`asi`]]</span>
+			    </div>
+			    <p class="fieldLabel">[[!%asi.label_please_provide_details_on_your_suggestion? &topic=`label` &namespace=`asi`]]*</p>
+			    <div class="inputWrapper requiredQuill">
+			        <div id="suggestionMessage">Re. Ref: [[+search_result.reference_value]]
+						[[+search_result.url]]
+
+					</div>
+			        <textarea name="suggestion" class="hidden"></textarea>
+			        <span class="errorMessage">[[!%asi.form_a_suggestion_is_required_err_msg? &topic=`forms` &namespace=`asi`]]</span>
+			    </div>
+			    <div class="uploadWrapper">
+			        <label for="suggestionFile"><i class="fas fa-upload"></i> [[!%asi.label_upload_file? &topic=`label` &namespace=`asi`]] <span class="valid">(PDF, DOC or JPG - max 2MB)</span></label>
+			        <input type="file" name="suggestionFile" id="suggestionFile" accept=".jpg,.doc,.docx,.pdf">
+			        <span class="remove"><i class="fas fa-trash mr"></i> [[!%asi.action_delete_upload? &topic=`actions` &namespace=`asi`]]</span>
+			        <span class="errorMessage">[[!%asi.form_upload_file_err_msg? &topic=`forms` &namespace=`asi`]]</span>
+			    </div>
+			    <div class="checkbox">
+			        <input class="enableSubmit" type="checkbox" name="usage" value="1">
+			        <span>[[++usage_content_text]]</span>
+			    </div>
+			    <input type="hidden" name="recipient" value="toTopic">
+			    <input type="submit" name="makeSuggestion" class="disabled pink full" value="[[!%asi.action_send_suggestion? &topic=`actions` &namespace=`asi`]]">
+				<input type="hidden" name="institution_id" value="[[!+search_result.institution_id]]" />
+				<input type="hidden" name="form_type" value="SUGGEST" />
+				<input type="hidden" name="form_location" value="GLOBAL_POPUP" />
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="suggestionMadePopup" class="modal fade">
+    <div class="modal-dialog larger">
+        <div class="modal-content standard">
+            <span class="closeButton" data-dismiss="modal"><i class="fas fa-times"></i></span>
+			<div class="content">
+			    [[++suggestion_made_text]]
+			    <a class="button pink" data-dismiss="modal">[[!%asi.action_return_to_page? &topic=`actions` &namespace=`asi`]]</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,54 @@
+Array
+(
+    [count] => 1
+    [start] => 1
+    [end] => 10
+    [filters] => Array
+        (
+        )
+
+    [results] => Array
+        (
+            [C346441092] => Array
+                (
+                    [matching_term] => C346441092
+                    [id] => C346441092
+                    [parentId] => C346441088
+                    [scopeContent] => de juin 1989 à décembre 1992 commune de Coulaines de janvier 1991 à décembre 1992 commune de Sable-sur-Sarthe
+                    [spell] => de juin 1989 à décembre 1992 commune de Coulaines de janvier 1991 à décembre 1992 commune de Sable-sur-Sarthe
+                    [title_value] => - SARTHE
+                    [levelName] => clevel
+                    [dateType] => nodate
+                    [country_value] => FRANCE:G:2
+                    [code_value] => FR-FRAN
+                    [institution_value] => Archives nationales:635
+                    [recordId] => FRAN_IR_009487
+                    [dao] =>
+                    [numberOfDao] => 0
+                    [numberOfDaoBelow] => 0
+                    [numberOfDescendents] => 0
+                    [numberOfAncestors] => 5
+                    [description_value] => Intérieur ; Direction de la sécurité civile ; Cabinet du directeur (1992-1993):F967081
+                    [recordType] => fa
+                    [F0_s] => Intérieur ; Direction de la sécurité civile ; Cabinet du directeur (1992-1993):G:F967081
+                    [FID0_s] => F967081
+                    [F1_s] => 00000000:RECONNAISSANCE DE L'ÉTAT DE CATASTROPHE NATURELLE:G:C346440729
+                    [FID1_s] => C346440729
+                    [F2_s] => 00000006:COMMISSION INTERMINISTERIELLE CATASTROPHES NATURELLES DU 3 AOUT 1993:G:C346441058
+                    [FID2_s] => C346441058
+                    [F3_s] => 00000001:Secheresse:G:C346441077
+                    [FID3_s] => C346441077
+                    [F4_s] => 00000001:null:G:C346441088
+                    [FID4_s] => C346441088
+                    [AID1_s] => A635
+                    [AID0_s] => A400
+                    [A1_s] => Archives nationales:L:A635
+                    [A0_s] => Archives nationales (SCN):G:A400
+                    [orderId] => 3
+                    [openData] =>
+                    [timestamp] => 2019-07-04T14:24:49.263Z
+                )
+
+        )
+
+)

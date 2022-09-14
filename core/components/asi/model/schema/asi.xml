@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="asi" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+    <object class="Search" table="asi_search" extends="xPDOSimpleObject">
+        <field key="name" 			dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="description" 	dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="term" 	        dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="archive_type" 	dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="created_at"     dbtype="datetime" phptype="datetime" default="0000-00-00 00:00:00" null="true"/>
+        <field key="user_id" 		dbtype="int" 	 precision="7" phptype="int" null="false" default="" />
+        <field key="priority" 		dbtype="int" 	 precision="255" phptype="int" null="true" default="" />
+        <field key="url" 	        dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="params" 	    dbtype="text"    phptype="string" null="true" default="" />
+        <field key="last_checked"     dbtype="datetime" phptype="datetime" default="1970-01-01 00:00:00" null="true"/>
+        <aggregate alias="User"     class="modUser"  local="user_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+    <object class="Bookmark" table="asi_bookmark" extends="xPDOSimpleObject">
+        <field key="name" 			dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="description" 	dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="archive_type" 	dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="created_at"     dbtype="datetime" phptype="datetime" default="0000-00-00 00:00:00" null="true"/>
+        <field key="user_id" 		dbtype="int" 	 precision="7" phptype="int" null="false" default="" />
+        <field key="priority" 		dbtype="int" 	 precision="255" phptype="int" null="true" default="" />
+        <field key="url" 	        dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="resource_id" 	dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="param_string" 	    dbtype="text"    phptype="string" null="true" default="" />
+        <aggregate alias="User"     class="modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+    <object class="Collection" table="asi_collection" extends="xPDOSimpleObject">
+        <field key="name" 			dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="description" 	dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="created_at"     dbtype="datetime" phptype="datetime" default="0000-00-00 00:00:00" null="true"/>
+        <field key="user_id" 		dbtype="int" 	 precision="7" phptype="int" null="false" default="" />
+        <field key="priority" 		dbtype="int" 	 precision="255" phptype="int" null="true" default="" />
+        <field key="token" 		    dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <aggregate alias="User"     class="modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+    <object class="CollectionSearch" table="asi_collection_search" extends="xPDOSimpleObject">
+        <field key="collection_id" 	dbtype="int" precision="255" phptype="string" null="false" default="" />
+        <field key="search_id" 	    dbtype="int" precision="255" phptype="string" null="false" default="" />
+        <field key="created_at"     dbtype="datetime" phptype="datetime" default="0000-00-00 00:00:00" null="true"/>
+        <field key="priority" 		dbtype="int" 	 precision="255" phptype="int" null="true" default="" />
+        <aggregate alias="Collection"  class="Collection" local="collection_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Search"      class="Search" local="search_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+    <object class="CollectionBookmark" table="asi_collection_bookmark" extends="xPDOSimpleObject">
+        <field key="collection_id"  dbtype="int" precision="255" phptype="string" null="false" default="" />
+        <field key="bookmark_id" 	dbtype="int" precision="255" phptype="string" null="false" default="" />
+        <field key="created_at"     dbtype="datetime" phptype="datetime" null="true"/>
+        <field key="priority" 		dbtype="int" 	 precision="255" phptype="int" null="true" default="" />
+        <aggregate alias="Collection"  class="Collection" local="collection_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Bookmark"    class="Bookmark" local="bookmark_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+    <object class="Parameter" table="asi_parameter" extends="xPDOSimpleObject">
+        <field key="site_name"    		dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="ape_name" 			dbtype="varchar" precision="255" phptype="datetime" null="true" default="" />
+        <field key="p_type" 		    dbtype="int" 	 precision="1" phptype="int" null="true" default="" />
+        <field key="priority" 		    dbtype="int" 	 precision="255" phptype="int" null="true" default="" />
+    </object>
+    <object class="ParameterValue" table="asi_parameter_value" extends="xPDOSimpleObject">
+        <field key="site_value"    			dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="ape_value"    			dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="site_name"    			dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="ape_name" 			    dbtype="varchar" precision="255" phptype="datetime" null="true" default="" />
+        <field key="p_type" 		        dbtype="int" 	 precision="1" phptype="int" null="true" default="" />
+        <field key="priority" 		        dbtype="int" 	 precision="255" phptype="int" null="true" default="" />
+        <field key="parameter_id" 		    dbtype="int" 		precision="7" phptype="int" null="false" default="" />
+        <aggregate alias="Parameter"    class="Parameter" local="parameter_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+    <object class="SearchParameterValue" table="asi_search_parameter_value" extends="xPDOSimpleObject">
+        <field key="p_setting"    			dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="parameter_value_id" 	dbtype="int" 		precision="7" phptype="int" null="false" default="" />
+        <field key="search_id" 		        dbtype="int" 		precision="7" phptype="int" null="false" default="" />
+        <aggregate alias="ParameterCalue"    class="ParameterValue" local="parameter_value_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Search"    class="Search" local="search_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+    <object class="MapCoords" table="asi_map_coords" extends="xPDOSimpleObject">
+        <field key="address_hash"    			dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="lat"    			        dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="lng"    			        dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="address"    			    dbtype="text"    phptype="string" null="true" default="" />
+        <field key="salt"    			        dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+    </object>
+</model>

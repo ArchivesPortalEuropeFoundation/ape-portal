@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:isbn:1-931666-22-9"
+     xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.archivesportaleurope.net/Portal/profiles/apeEAD.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
+     audience="external">
+   <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b"
+              repositoryencoding="iso15511"
+              scriptencoding="iso15924"
+              relatedencoding="MARC21">
+      <eadid identifier="FR-FRAN_FRDAFAPH_AD035" countrycode="FR" mainagencycode="FR-FRAN">FRDAFAPH_AD035</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="245">Archives photographiques conservées dans le département d'Ille-et-Vilaine (35) </titleproper>
+            <subtitle>Etat des fonds</subtitle>
+         </titlestmt>
+         <publicationstmt>
+            <publisher>Direction des Archives de France</publisher>
+            <address>
+               <addressline>Paris</addressline>
+            </address>
+            <date encodinganalog="260$c" calendar="gregorian" era="ce" normal="2006-10">Février 2007</date>
+         </publicationstmt>
+      </filedesc>
+      <profiledesc>
+         <langusage>Instrument de recherche rédigé en<language encodinganalog="041" langcode="fre" scriptcode="Latn"> français</language>
+         </langusage>
+      </profiledesc>
+      <revisiondesc>
+         <change>
+            <date/>
+            <item>Converted_apeEAD_version_2.0.14</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <archdesc level="fonds" type="inventory" encodinganalog="3.1.4"
+             relatedencoding="ISAD(G)v2">
+      <did>
+         <unittitle encodinganalog="3.1.2">Département d'Ille-et-Vilaine (35)</unittitle>
+      </did>
+     <controlaccess><genreform>photographie</genreform></controlaccess>
+      <dsc type="othertype">
+         <c encodinganalog="3.1.4" id="d1e39">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales de Fougères</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e43">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">12 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies Ouest-France</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1970/1990">1970 - 1990</unitdate>
+                  <repository>Archives municipales de Fougères</repository>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Journal Ouest-France</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 320</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don de l'agence locale du Journal Ouest France, 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire 12 Fi</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Ces photographies concernent le patrimoine, les bâtiments publics et les manifestations locales de Fougères et de sa région.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Ille-et-Vilaine (département)</geogname>
+                  <geogname>Fougères (Ille-et-Vilaine)</geogname>
+                  <subject>patrimoine culturel</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject>bâtiment administratif</subject>
+                  <subject>presse</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e108">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">13 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies Caserne des Urbanistes</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/1920">Fin du XIXe  siècle - début du XXe  siècle</unitdate>
+                  <repository>Archives municipales de Fougères</repository>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Caserne des Urbanistes</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Tirage papier</genreform>
+                  </physdesc>
+               </did>
+               <originalsloc encodinganalog="3.5.1">
+                  <p>Reproduction de plaques de verre</p>
+               </originalsloc>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Production interne à partir de documents achetés, 2005</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire 13 Fi</p>
+               </otherfindaid>
+               <controlaccess>
+                  <geogname> Ille-et-Vilaine (département)</geogname>
+                  <geogname>Fougères (Ille-et-Vilaine)</geogname>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e152">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales de Rennes</unittitle>
+            </did>
+            <otherfindaid encodinganalog="3.4.5">
+               <p>Le site des  <extref xlink:href="http://www.archives.rennes.fr/">Archives municipales de Rennes</extref>   donne accès aux notices descriptives des documents figurés et à leurs images numériques (rubrique Archives en ligne/Documents figurés).</p>
+            </otherfindaid>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e162">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales de Saint-Malo</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e166">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">24 S</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Ecole des Frères</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1892/1957">1892 - 1957</unitdate>
+                  <repository>Archives municipales de Saint-Malo </repository>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Association des anciens élèves de l'Ecole des Frères de Saint-Malo</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>98</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Série 24 S, <emph render="italic">Collection Ecole des Frères</emph>, 1994, 6 pages dactylographiés</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Ces documents, donnés par un ancien membre du bureau de l'association des anciens élèves de l'Ecole des Frères de Saint-Malo regroupe des photographies de classes allant de 1892 à 1957.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Ille-et-Vilaine (département)</geogname>
+                  <geogname>Saint-Malo (Ille-et-Vilaine)</geogname>
+                  <subject>organisation scolaire</subject>
+                  <subject>enseignement privé</subject>
+                  <subject>élève</subject>
+                  <subject>école</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e218">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">3 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection De Boodt</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1972/1988">1972 - 1988</unitdate>
+                  <repository>Archives municipales de Saint-Malo</repository>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Boodt, F.C. de</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>923</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1989</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Série 3 Fi, Collection "F. C. de Boodt", 1995, 28 pages dactylographiés</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Rassemblées  par F. C. de Boodt, collectionneur bibliophile, ces diapositives concernent le culte de saint Maclow en France.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>France</geogname>
+                  <geogname>Belgique</geogname>
+                  <geogname> Ille-et-Vilaine (département)</geogname>
+                  <geogname>Saint-Malo (Ille-et-Vilaine)</geogname>
+                  <persname>Maclow (saint)</persname>
+                  <persname>Maclou (saint)</persname>
+                  <subject>édifice cultuel</subject>
+                  <subject>enseignement religieux</subject>
+                  <subject>objet d'art</subject>
+                  <subject>arts plastiques</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e275">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">15 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Orfeur</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/1920">1880 - 1920</unitdate>
+                  <repository>Archives municipales de Saint-Malo</repository>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Orfeur</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>195</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Série 15 Fi inventaire et fichier en cours</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Cette collection de plaques de verre concerne les paysages de Normandie  et des scènes de rues de Saint-Malo et de Dinan.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Normandie (région administrative)</geogname>
+                  <geogname> Ille-et-Vilaine (département)</geogname>
+                  <geogname>Côtes-d'Armor (département)</geogname>
+                  <geogname>Saint-Malo (Ille-et-Vilaine)</geogname>
+                  <geogname>Dinan (Côtes-d'Armor)</geogname>
+                  <subject>site</subject>
+                  <subject>vie quotidienne</subject>
+                  <subject>voie communale</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e331">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">W</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies entrées par versements administratifs aux Archives municipales de Saint-Malo</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1940/2099">1940 - ...</unitdate>
+                  <repository>Archives municipales de Saint-Malo</repository>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>368</extent>
+                  </physdesc>
+               </did>
+               <accruals encodinganalog="3.3.3">
+                  <p>Série ouverte susceptible d'accroisement</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1980 -</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Bordereau W, inventaire et fichier en cours</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Ces photographies abordent différents sujets comme les commémorations, les cérémonies, les sites, les travaux et les bâtiments de Saint-Malo et ses environs. On note la présence du général de Gaulle, de Guy la Chambre,  maire de Saint-Malo de 1947 à 1965 et de  quelques personnalités malouines.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Ille-et-Vilaine (département)</geogname>
+                  <geogname>Saint-Malo (Ille-et-Vilaine)</geogname>
+                  <persname>Gaulle, Charles de (1890-1970 ; général)</persname>
+                  <persname>La Chambre, Guy (1898-1975)</persname>
+                  <subject>maire</subject>
+                  <subject>cérémonie publique</subject>
+                  <subject>commémoration</subject>
+                  <subject>site</subject>
+                  <subject>aménagement</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e386">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">4 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Cartes postales entrées par dons, achats</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1980">1900 - 1980</unitdate>
+                  <repository>Archives municipales de Saint-Malo</repository>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1750</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don et achat, 1980 -</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre </p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>
+                     <emph render="italic">Inventaire des cartes postales, série 4 Fi</emph>, en cours</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Ces cartes postales couvrent  le département d'Ille-et-Vilaine, Saint-Malo  ou encore Saint-Servan.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Ille-et-Vilaine (département)</geogname>
+                  <geogname>Saint-Malo (Ille-et-Vilaine)</geogname>
+                  <geogname>Saint-Servan-sur-Mer (Ille-et-Vilaine)</geogname>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e431">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">5 S</unitid>
+                  <unittitle encodinganalog="3.1.2">Répertoire des calvaires et croix de la région de Saint-Malo</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1975/1976">1975 - 1976</unitdate>
+                  <repository>Archives municipales de Saint-Malo</repository>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Geoffroy</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>100</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1976</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire et fichier en cours</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Ces documents concernent le recensement, la description et l'étude des croix et calvaires de la région malouine.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Ille-et-Vilaine (département)</geogname>
+                  <geogname>Saint-Malo (Ille-et-Vilaine)</geogname>
+                  <subject>cimetière</subject>
+                  <subject>décès</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>patrimoine culturel</subject>
+               </controlaccess>
+            </c>
+         </c>
+      </dsc>
+   </archdesc>
+</ead>

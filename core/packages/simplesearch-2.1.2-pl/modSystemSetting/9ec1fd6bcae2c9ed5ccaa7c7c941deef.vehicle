@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'simplesearch',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '795fc404c44dc49f4da8c5d2ef87c9c1',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '9ec1fd6bcae2c9ed5ccaa7c7c941deef',
+  'native_key' => 'simplesearch.autosuggest_tv',
+  'object' => '{"key":"simplesearch.autosuggest_tv","value":"simpleSearchAutoSuggestions","xtype":"textfield","namespace":"simplesearch","area":"Autosuggest","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '8b1a61d0dbadc5238647722bc2059712',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd716ca4e98d6a17002ab6e73bb3d4b88',
+  'native_key' => 'moregallery.png_compression_level',
+  'object' => '{"key":"moregallery.png_compression_level","value":9,"xtype":"numberfield","namespace":"moregallery","area":"Cropping","editedon":1571229263}',
+);

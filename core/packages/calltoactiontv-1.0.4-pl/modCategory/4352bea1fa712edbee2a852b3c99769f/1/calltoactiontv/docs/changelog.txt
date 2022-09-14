@@ -1,0 +1,29 @@
+Changelog for CallToActionTV.
+
+CallToActionTV 1.0.4
+==============
+- Add support for MIGX
+- Add Italian lexicon
+- Fixed issue #9, javascript error if type is not 'resource'
+
+CallToActionTV 1.0.3
+==============
+- Added extra option for adding GET parameters
+- Paginated resource results
+
+CallToActionTV 1.0.2
+==============
+- Improved parser handling
+- Fixed issue with empty check which would show JSON output
+
+CallToActionTV 1.0.1
+==============
+- Added pdoParser support #2
+- Added option to pass output to placeholders #1
+- Fixed makeUrls when using multicontext environment #3
+- Fixed issue when using quotes in button text #4
+- Automatically prepend external URL with protocol when its not provided #5
+
+CallToActionTV 1.0.0
+==============
+- Initial release.

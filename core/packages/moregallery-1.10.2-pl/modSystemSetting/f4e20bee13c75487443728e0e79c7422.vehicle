@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1dae2abb0c5eb806f8a2d48aacd0d755',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'f4e20bee13c75487443728e0e79c7422',
+  'native_key' => 'moregallery.vimeo_provide_referer',
+  'object' => '{"key":"moregallery.vimeo_provide_referer","value":false,"xtype":"modx-combo-boolean","namespace":"moregallery","area":"Video","editedon":1584397769}',
+);

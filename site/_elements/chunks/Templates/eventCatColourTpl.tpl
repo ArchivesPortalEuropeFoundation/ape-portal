@@ -1,0 +1,2 @@
+                    color: '[[+bgColour]]',
+                    textColor: '[[+textColour]]'

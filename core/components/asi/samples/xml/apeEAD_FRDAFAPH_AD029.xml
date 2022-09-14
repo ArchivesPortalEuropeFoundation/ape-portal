@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:isbn:1-931666-22-9"
+     xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.archivesportaleurope.net/Portal/profiles/apeEAD.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
+     audience="external">
+   <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b"
+              repositoryencoding="iso15511"
+              scriptencoding="iso15924"
+              relatedencoding="MARC21">
+      <eadid identifier="FR-FRAN_FRDAFAPH_AD029" countrycode="FR" mainagencycode="FR-FRAN">FRDAFAPH_AD029</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="245">Archives photographiques conservées dans le département du Finistère (29) </titleproper>
+            <subtitle>Etat des fonds</subtitle>
+         </titlestmt>
+         <publicationstmt>
+            <publisher>Direction des Archives de France</publisher>
+            <address>
+               <addressline>Paris</addressline>
+            </address>
+            <date encodinganalog="260$c" calendar="gregorian" era="ce" normal="2006-10">Février 2007</date>
+         </publicationstmt>
+      </filedesc>
+      <profiledesc>
+         <langusage>Instrument de recherche rédigé en<language encodinganalog="041" langcode="fre" scriptcode="Latn"> français</language>
+         </langusage>
+      </profiledesc>
+      <revisiondesc>
+         <change>
+            <date/>
+            <item>Converted_apeEAD_version_2.0.14</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <archdesc level="fonds" type="inventory" encodinganalog="3.1.4"
+             relatedencoding="ISAD(G)v2">
+      <did>
+         <unittitle encodinganalog="3.1.2">Département du Finistère (29)</unittitle>
+      </did>
+      <controlaccess><genreform>photographie</genreform></controlaccess>
+      <dsc type="othertype">
+         <c encodinganalog="3.1.4" id="d1e39">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives départementales du Finistère</unittitle>
+            </did>
+			<otherfindaid><p>De très nombreux documents iconographiques conservés aux Archives départementales du Finistère sont déjà mis en ligne.<extref xlink:href="http://www.archives-finistere.fr/medias/medias.aspx?INSTANCE=EXPLOITATION&amp;PORTAL_ID=portal_model_instance__cg29_decouvrir_guide_iconographie_page_accueil.xml"></extref></p></otherfindaid>
+            <c encodinganalog="3.1.4" id="d1e43">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">2 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Cartes postales des Archives départementales du Finistère</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1975">Début XIXe  siècle - vers 1970</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>306</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>,<genreform>carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>74</extent>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Cartes postales classées pour les communes, en cours de classement pour les thèmes</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achats et dons,début du XXe siècle - en cours</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Pas d'instrument de recherche disponible.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Cartes postales des différentes communes du Finistère, thèmes divers (costume, chansons).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Bretagne (région administrative)</geogname>
+                  <subject>patrimoine ethnologique</subject>
+                  <subject>portrait</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e108">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">17 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2"> Fonds Jos Le Doaré</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1928/1970">1928 - 1970</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Inizan, Jean</persname> ;  <corpname>Jos Le Doaré</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Cartes de voeux</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>677</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>136</extent>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, avant1975</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise l'autorisation des ayant-droits</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> Guide des Archives du Finistère</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ce fonds contient des documents iconographiques divers, provenant de l'activité des Editions Jos Le Doaré :  cartes postales, des cartes de voeux, des images religieuses, datant pour la plupart d'entre elles des années 1950 et 1960.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Bretagne (région administrative)</geogname>
+                  <subject>site naturel</subject>
+                  <subject>culte</subject>
+                  <subject>restaurant de tourisme</subject>
+                  <subject> mouvement de jeunesse</subject>
+                  <subject>catholicisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e176">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">39 J 10 à 39 J 11</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Dujardin</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1914/1965">1914 - vers 1960</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Dujardin, Louis</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>546</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>53</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">170 x 230</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>7</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don,1945</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire sur papier des documents iconographiques</p>
+                  <p> Instruments de recherche conçus pour la série J</p>
+                  <p>Guides des Archives du Finistère</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Clichés et épreuves photographiques réalisés par le docteur Louis Dujardin sur la guerre de 1914-1918 (39 J 10) et sur diverses communes du nord du Finistère (39 J 11).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Finistère (département)</geogname>
+                  <geogname>Belfort (Territoire de Belfort)</geogname>
+                  <geogname>Verdun (Lorraine)</geogname>
+                  <subject>guerre mondiale (1914-1918)</subject>
+                  <subject>bombardement</subject>
+                  <subject>santé</subject>
+                  <subject>infrasctructure militaire</subject>
+                  <subject>discipline sportive</subject>
+                  <subject>transport aérien</subject>
+                  <subject>transport ferroviaire</subject>
+                  <subject>vie religieuse</subject>
+                  <subject>concession funéraire</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e271">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">25 Fi 1 à 25 Fi 8</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection "Albums de Bretagne" par Villard</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/1905">[Fin XIXe  siècle] - [début XXe  siècle]</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Villard, Joseph-Marie</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Phototypie</physfacet>
+                  </physdesc>
+                  <container> 8 albums</container>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p> Collection en cours de classement</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Albums de Bretagne édités par le photographe quimpérois Villard, représentant différents lieux et monuments du département du Finistère.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Finistère (département)</geogname>
+                  <subject>espace naturel protégé</subject>
+                  <subject>littoral</subject>
+                  <subject>monument historique</subject>
+                  <subject>édifice cultuel</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e322">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">15 Fi 1 à 15 Fi 9</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds chanoine Abgrall</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1920">Début du XXe siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Abgrall, Jean-Marie (1846 - 1926 ; chanoine)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>541</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">120 x 170</dimensions>
+                  </physdesc>
+                  <container>9 albums</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don,1969</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Le chanoine Jean-Marie Abgrall (1846 - 1926) était professeur de dessin et d'archéologie à Pont-Croix  (Finistère), puis aumônier à l'hospice de Quimper.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique de la sous-série 15 Fi</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies du chanoine Abgrall réalisées dans le cadre d'une étude sur l'architecture religieuse bretonne. Il réalisa de nombreux travaux portant sur l'architecture et l'archéologie en Bretagne.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Finistère (département)</geogname>
+                  <subject>architecture</subject>
+                  <subject> édifice cultuel</subject>
+                  <subject>religion</subject>
+                  <subject>objet d'art</subject>
+                  <subject>fouille archéologique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e383">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">12 J 19 / 36 à 12 J 19 / 59 ; 12 J 78</unitid>
+                  <unittitle encodinganalog="3.1.2">Albums de croquis de voyage et de photographies</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1862/1914">1862 - 1914</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Corre, Armand</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>487</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>357</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <container>23 albums</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don,1904 - 1908</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique de la sous-série 12 J</p>
+                  <p> Description du fonds dans le guide des fonds privés<extref xlink:href="http://www.archivesportaleurope.net/ead-display/-/ead/pl/aicode/FR-FRAD029/type/fa/id/AD02900AP_000000007"></extref> 
+                  </p>
+                  <p>Guides des Archives du Finistère</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Albums de dessins, de photographies et de cartes postales représentant différents lieux du département du Finistère, ainsi qu'un album de photographies (12 J 78) sur divers pays du monde (Mexique, Indochine, Inde...).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Afrique</geogname>
+                  <geogname>Cochinchine (Viet-Nam)</geogname>
+                  <geogname>Madère</geogname>
+                  <geogname>Mexique</geogname>
+                  <geogname>Cuba</geogname>
+                  <geogname>Tahiti</geogname>
+                  <geogname>Inde</geogname>
+                  <geogname>Egypte</geogname>
+                  <geogname>Bretagne (région administrative)</geogname>
+                  <subject>monument historique</subject>
+                  <subject>objet d'art</subject>
+                  <subject>site</subject>
+                  <subject>culte</subject>
+                  <subject>vie religieuse</subject>
+                  <subject>vie quotidienne</subject>
+                  <subject>concession funéraire</subject>
+                  <subject>décoration urbaine</subject>
+                  <subject>port</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e475">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">86 J 5</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Damalix</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890">1890</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Damalix</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>4</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don,1963</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique de la sous-série 86 J</p>
+                  <p> Description du fonds dans le guide des fonds privés<extref xlink:href="http://www.archivesportaleurope.net/ead-display/-/ead/pl/aicode/FR-FRAD029/type/fa/id/AD02900AP_000000080"></extref> 
+                  </p>
+                  <p>Guides des Archives du Finistère</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies des élèves de l'École normale de Quimper données par Mme Damalix en 1963 avec les papiers de son père, ancien instituteur, président de la Ligue des Droits de l'Homme et ancien président de la Société d'horticulture de Quimper.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Quimper (Finistère)</geogname>
+                  <subject>élève</subject>
+                  <subject>école</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e528">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">68 J 1 ; 68 J 5</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Porquier</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1899/1923">1899 - 1923</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Hostallier, L.</persname> ; <persname>Villard, J.</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1961</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire sur papier des documents iconographiques</p>
+                  <p> Instruments de recherche conçus pour la série J</p>
+                  <p>Guide des Archives du Finistère</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Documents de la famille Porquier  qui compta parmi ses membres un  maire de Quimper  et un directeur de faïencerie.  Ils comportent des planches photographiques et le programme de la cavalcade de Bienfaisance de 1899.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Quimper (Finistère)</geogname>
+                  <famname>Porquier (famille)</famname>
+                  <subject>portrait</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject>fête</subject>
+                  <subject>manifestation sportive</subject>
+                  <subject>discipline sportive</subject>
+                  <subject>cirque</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e589">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">63 J 235</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de l'étude Manach, notaire à Landerneau</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1891/1929">1891 - 1929</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Manach</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don,1960</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Manach est notaire à Landerneau.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique de la sous-série 63 J</p>
+                  <p>Description du fonds dans le guide des fonds privés<extref xlink:href="http://www.archivesportaleurope.net/ead-display/-/ead/pl/aicode/FR-FRAD029/type/fa/id/AD02900AP_000000057"></extref> 
+                  </p>
+                  <p>Guide des Archives du Finistère</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Documents personnels de l'officier de Marine Maurice Loyer avec des photographies diverses, dont portraits des camarades de Maurice Loyer à l'Ecole navale.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Finistère (département)</geogname>
+                  <geogname> Landerneau (Finistère)</geogname>
+                  <persname>Loyer, Maurice</persname>
+                  <subject>armée</subject>
+                  <subject>mer</subject>
+                  <subject>notaire</subject>
+                  <subject>portrait</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e650">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">58 J 8</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de l'étude Le Lay, notaire à Châteauneuf-du-Faou</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/1910">[Vers 1900]</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname> Le Lay</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>72</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">90 x 120</dimensions>
+                  </physdesc>
+                  <container> Album</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don,1960</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> Répertoire numérique du fonds 58 J</p>
+                  <p> Guide des Archives du Finistère</p>
+                  <p>Description du fonds dans le guide des fonds privés<extref xlink:href="http://www.archivesportaleurope.net/ead-display/-/ead/pl/aicode/FR-FRAD029/type/fa/id/AD02900AP_000000052"></extref> 
+                  </p>
+               </otherfindaid>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Maître Le Lay, notaire à Châteauneuf-du-Faou (Finistère).</p>
+               </bioghist>
+               <scopecontent encodinganalog="summary">
+                  <p>Album de photographies relatives à de nombreuses localités du Finistère (Châteauneuf-du-Faou, Quimper, Brest), contenu dans les papiers donnés par maître Le Lay renfermant aussi des dossiers de clients.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Châteauneuf-du-Faou (Finistère)</geogname>
+                  <geogname>Quimper (Finistère)</geogname>
+                  <geogname>Brest (Finistère)</geogname>
+                  <subject>édifice cultuel</subject>
+                  <subject>culte</subject>
+                  <subject>ouvrage d'art</subject>
+                  <subject>véhicule automobile</subject>
+                  <subject>décoration urbaine</subject>
+                  <subject>port</subject>
+                  <subject>navire</subject>
+                  <subject>patrimoine ethnologique</subject>
+                  <subject>fête</subject>
+                  <subject>industrie textile</subject>
+                  <subject>littoral</subject>
+                  <subject>équipement collectif</subject>
+                  <subject>service national</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e739">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">52 J 3</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de la Fondation culturelle Bretonne</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1923/1957">1923 - 1957</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Deschamps</persname>;<persname>Fleury, A.</persname>;<persname>Le Doaré</persname>;<persname>Fichon</persname>;<persname>Le Grand</persname>;<persname>Borgain</persname>;<corpname>Journal Ouest-France </corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>42</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>4</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don,1960</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique de la sous-série 52 J</p>
+                  <p>Guide des Archives du Finistère</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Documents variés ayant servi à l'exposition "Brud ar Brezoneg" (Illustration de la langue bretonne).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Bretagne (région administrative)</geogname>
+                  <geogname>Quimper (Finistère)</geogname>
+                  <geogname>Brest (Finistère)</geogname>
+                  <subject>industrie textile</subject>
+                  <subject>artiste</subject>
+                  <subject>musique</subject>
+                  <subject>culte</subject>
+                  <subject>patrimoine ethnologique</subject>
+                  <subject>langue régionale</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e827">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">19 J 50</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Prosper Hémon</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1871"> 1871</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Hémon, Prosper (1846 - 1917)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">120 x 140</dimensions>
+                  </physdesc>
+                  <container>Tirage papier monté sur carton</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Legs,1918 - 1922</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique de la sous-série 19 J</p>
+                  <p>Guide des Archives du Finistère</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographie de la compagnie du 5e  bataillon de mobiles du Finistère représentant des gardes mobiles originaires du Finistère et surtout de Quimper, dont Prosper et son frère Louis Hémon (député du Finistère).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Bretagne (région administrative)</geogname>
+                  <persname>Hémon, Prosper</persname>
+                  <persname>Hémon, Louis</persname>
+                  <subject>élu</subject>
+                  <subject>armée</subject>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e885">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales de Brest</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e889">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1 Fi ; 2 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds photographiques de la ville de Brest</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1870/2099">1870 - ...</unitdate>
+                  <repository>Archives municipales de Brest</repository>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>,  <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>10</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple inversible</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>6 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Plaque de verre  négative et positive stéréotype</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>80</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>400</extent>
+                  </physdesc>
+               </did>
+               <accruals encodinganalog="3.3.3">
+                  <p>Ces fonds sont susceptibles d'accroissements</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, achat et don, 1950</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction en partie interdite</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données créée en 1995 sous Avenio</p>
+                  <p>Répertoire des cartes postales (par éditeur) mis à jour chaque année</p>
+                  <p>Voir aussi le  <extref xlink:href="http://www.culture.gouv.fr/mrt/numerisation/fr/f_02.htm">Catalogue des collections numérisées</extref> 
+                  </p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Ces documents concernent la vie politique, l'urbanisme, les manifestations culturelles et sportives, les visites officielles ou encore l'enseignement dans la ville de Brest.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Finistère (département)</geogname>
+                  <geogname>Brest (Finistère)</geogname>
+                  <subject>urbanisme</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject>manifestation sportive</subject>
+                  <subject>vie politique</subject>
+                  <subject>visite officielle</subject>
+                  <subject>enseignement</subject>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e1000">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales de Quimper</unittitle>
+            </did>
+            <otherfindaid encodinganalog="3.4.5">
+               <p>Le site des Archives municipales de Quimper présente les différentes collections de la photothèque, documents numérisés et inventaires<extref xlink:href="http://mnesys-archives.quimper.fr/"></extref></p>
+            </otherfindaid>
+            <c encodinganalog="3.1.4" id="ph3409">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">4 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection de cartes postales de la ville de Quimper</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/1990">1890 - 1990</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Villard père et fils</persname> ; <persname>Anglaret</persname> ; <corpname>ND éditeur</corpname> ; <corpname>JOB éditeur</corpname> ; <corpname>Réma éditeur</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne et moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>850</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="mode_representation">139 x 90</dimensions>, <dimensions unit="mm" type="mode_representation">105 x 150</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Photocopie</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="dpi" type="mode_reproduction">300</dimensions>
+                  </physdesc>
+                  <container>Albums et pochettes</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <accruals encodinganalog="3.3.3">
+                  <p>Ces fonds sont susceptibles d'accroissements</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre et en partie soumise à autorisation</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Conservation en album et sous pochette individuelle</p>
+               </custodhist>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Les producteurs du fonds sont : un collectionneur professionnel et des photographes éditeurs de cartes postales locaux : les Villard père et fils installés à Quimper depuis 1865, l'éditeur de cartes postales Anglaret installé aux alentours de 1895, l'éditeur Réma éditeur de cartes postales dans les années 1930-1940. Puis des éditeurs plus connus comme ND ou Job.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Album de photocopies des cartes postales à disposition du public en salle de lecture.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Cartes postales ayant pour objet la ville de Quimper et ses environs : paysages (rues, édifices), scènes de la vie quotidienne.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Finistère (département)</geogname>
+                  <geogname>Quimper (Finistère)</geogname>
+                  <geogname> Penhars (Finistère)</geogname>
+                  <geogname> Kerfeunteun (Finistère)</geogname>
+                  <geogname> Ergué-Armel (Finistère)</geogname>
+                  <subject>paysage</subject>
+                  <subject> édifice cultuel</subject>
+                  <subject> bâtiment administratif</subject>
+                  <subject> bâtiment industriel</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3410">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">Fonds non coté</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Othony Hede</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1939/1999">1939 - 1999</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Hede, Othony (1919 - 2006)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique moderne et tirage argentique plastifié</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>15 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Photocopie</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="dpi" type="mode_reproduction">300</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Diapositive</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>30 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="dpi" type="mode_reproduction">300</dimensions>
+                  </physdesc>
+                  <container>49 albums, 40 boîtes de diapositives</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 2007</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Othony Hede (1919 à Metz - 2006 à Quimperlé). Pendant la guerre, il multiplie les emplois, tour à tour commerçant puis photographe, il s'installe définitivement à Quimperlé en 1945. A la tête d'une société de magasin de chaussures puis d'un magasin de photos, cet amoureux d'histoire et d'archéologie va parcourir le monde muni de son appareil photo et créer ainsi une formidable collection photographique sur l'Afrique, l'Amérique, l'Europe et l'Asie.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Un répertoire numérique est en cours de rédaction.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Photographies et diapositives ayant pour objet l'étude ethnographique des habitants des pays visités et la découverte du pays à travers son architecture religieuse, civile et militaire.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Finistère (département)</geogname>
+                  <geogname>Allemagne</geogname>
+                  <geogname> Angleterre</geogname>
+                  <geogname> Autriche</geogname>
+                  <geogname> Belgique</geogname>
+                  <geogname> Bulgarie</geogname>
+                  <geogname> Crète</geogname>
+                  <geogname> Danemark</geogname>
+                  <geogname> Ecosse</geogname>
+                  <geogname> Espagne</geogname>
+                  <geogname> Finlande</geogname>
+                  <geogname> France</geogname>
+                  <geogname> Bretagne (région administrative)</geogname>
+                  <geogname> Grèce</geogname>
+                  <geogname> Hollande</geogname>
+                  <geogname> Hongrie</geogname>
+                  <geogname> Irlande</geogname>
+                  <geogname> Italie</geogname>
+                  <geogname> Luxembourg</geogname>
+                  <geogname> Norvège</geogname>
+                  <geogname> Portugal</geogname>
+                  <geogname> Roumanie</geogname>
+                  <geogname> Russie</geogname>
+                  <geogname> Sibérie (Russie)</geogname>
+                  <geogname> Suède</geogname>
+                  <geogname> Yougoslavie</geogname>
+                  <geogname> Afghanistan</geogname>
+                  <geogname> Bali (Indonésie)</geogname>
+                  <geogname> Birmanie</geogname>
+                  <geogname> Borneo (Indonésie)</geogname>
+                  <geogname> Cachemire</geogname>
+                  <geogname> Cambodge</geogname>
+                  <geogname> Ceylan</geogname>
+                  <geogname> Chine</geogname>
+                  <geogname> Damas (Syrie)</geogname>
+                  <geogname> Formose (auj. Taïwan)</geogname>
+                  <geogname> Hong-Kong (Chine)</geogname>
+                  <geogname> Inde</geogname>
+                  <geogname> Iran</geogname>
+                  <geogname> Israël</geogname>
+                  <geogname> Japon</geogname>
+                  <geogname> Java (Indonésie)</geogname>
+                  <geogname> Jordanie</geogname>
+                  <geogname> Laos</geogname>
+                  <geogname> Liban</geogname>
+                  <geogname> Macao (Chine)</geogname>
+                  <geogname> malaisie</geogname>
+                  <geogname> Mongolie</geogname>
+                  <geogname> Népal</geogname>
+                  <geogname> Pakistan</geogname>
+                  <geogname> Philippines</geogname>
+                  <geogname> Sikkim (Inde)</geogname>
+                  <geogname> Singapour</geogname>
+                  <geogname> Thaïlande</geogname>
+                  <geogname> Turquie</geogname>
+                  <geogname> Bolivie</geogname>
+                  <geogname> Colombie</geogname>
+                  <geogname> Equateur</geogname>
+                  <geogname> Guatemala</geogname>
+                  <geogname> Mexique</geogname>
+                  <geogname> New-York (Etat-unis)</geogname>
+                  <geogname> Pérou</geogname>
+                  <geogname> Cameroun</geogname>
+                  <geogname> Côte d'Ivoire</geogname>
+                  <geogname> Dahomey (Bénin)</geogname>
+                  <geogname> Egypte</geogname>
+                  <geogname> Ethiopie</geogname>
+                  <geogname> Kenya</geogname>
+                  <geogname> Mali</geogname>
+                  <geogname> Tchad</geogname>
+                  <geogname> Togo</geogname>
+                  <geogname> Haute Volta (Burkina Faso)</geogname>
+                  <subject>tourisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3411">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">5 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Allard</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1895/1921">1895 - 1921</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Allard, Victor</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre au gélatinobromure d'argent</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>182</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">65 x 90</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre au gélatinobromure d'argent</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>12</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">130 x 180</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+                  <container>Boîtes</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, date non précisée</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Victor Allard (le 21 juin 1879 à Quimper - ). Entre 1895 et 1921, il parcourt Quimper muni de son appareil Mürer de 6 plaques. Son œuvre est parvenue jusqu'à nous sous la forme de plaques de verre et s'articule autour de deux  thèmes principaux : sa ville natale de Quimper (marchés, rues) et sa vie privée (portrait de famille, vacances et paysages).</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Plaques de verre ayant pour objet Quimper (paysages et scènes de la vie quotidienne) et beaucoup de portraits de famille et de paysages  (forêt, montagne, campagne).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Quimper (Finistère)</geogname>
+                  <subject>marché de détail</subject>
+                  <subject> marchand forain</subject>
+                  <subject>vie quotidienne</subject>
+                  <subject>portrait</subject>
+                  <subject>paysage</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3412">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">20 Fi 1</unitid>
+                  <unittitle encodinganalog="3.1.2">Les courses hippiques de Quimper</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1905/1907">1905 - 1907</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Verghnet, Eugène</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique ancien baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>175</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">293 x 143</dimensions>, <dimensions unit="mm" type="support_positif">140 x 95</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="dpi" type="mode_reproduction">300</dimensions>
+                  </physdesc>
+                  <container>1 album</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, date non précisée</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Eugène Verghnet (1856 à Saint-Cléré - ), arrive probablement à Quimper au début des années 1900. Il habite 32 place Saint-Corentin avec sa femme Esther et leur fille Laurette. Son atelier se situe, quant à lui, rue Kéréon. Ce photographe d'une cinquantaine d'années nous a laissé un magnifique témoignage à travers un reportage photo daté de 1905 - 1907, sur les courses hippiques qui se déroulent à l'époque sur la place du champ de bataille à Quimper.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Photographies ayant pour objet les courses hippiques qui se déroulaient sur la place du Champ de bataille à Quimper au début du siècle.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname> Quimper (Finistère)</geogname>
+                  <subject>course hippique</subject>
+               </controlaccess>
+            </c>
+         </c>
+      </dsc>
+   </archdesc>
+</ead>

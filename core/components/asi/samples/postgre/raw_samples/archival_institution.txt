@@ -1,0 +1,219 @@
+id 2375
+
+ainame Bremen
+
+registration_date
+
+eag_path
+
+user_id
+
+repositorycode
+
+autform
+
+isgroup t
+
+parent_ai_id 2334
+
+alorder 4
+
+internal_al_id A1393522816651-255053.36
+
+country_id 3
+
+contain_searchable_items f
+
+content_lastmodified_date
+
+using_mets f
+
+feedback_email
+
+openDataEnabled f
+
+totalsolrdocsforopendata
+
+unprocessedsolrdocs
+
+opendataenabled
+
+totalsolrdocscount
+
+opendataqueueid
+
+id 2376
+
+ainame Parlamentsarchive
+
+registration_date
+
+eag_path
+
+user_id
+
+repositorycode
+
+autform
+
+isgroup t
+
+parent_ai_id 2338
+
+alorder 0
+
+internal_al_id A1393522882313-634030.4
+
+country_id 3
+
+contain_searchable_items f
+
+content_lastmodified_date
+
+using_mets f
+
+feedback_email
+
+openDataEnabled f
+
+totalsolrdocsforopendata
+
+unprocessedsolrdocs
+
+opendataenabled
+
+totalsolrdocscount
+
+opendataqueueid
+
+id 2345
+
+ainame Bayern
+
+registration_date
+
+eag_path
+
+user_id
+
+repositorycode
+
+autform
+
+isgroup t
+
+parent_ai_id 2333
+
+alorder 2
+
+internal_al_id A1393522406893-326550.88
+
+country_id 3
+
+contain_searchable_items t
+
+content_lastmodified_date
+
+using_mets f
+
+feedback_email
+
+openDataEnabled f
+
+totalsolrdocsforopendata
+
+unprocessedsolrdocs
+
+opendataenabled
+
+totalsolrdocscount
+
+opendataqueueid
+
+id 2159
+
+ainame Diözesanarchiv Luxemburg - Archives diocésaines Luxembourg
+
+registration_date
+
+eag_path /LU/2159/EAG/LU-DAL.xml
+
+user_id 376
+
+repositorycode LU-DAL
+
+autform Diözesanarchiv Luxemburg - Archives diocésaines Luxembourg
+
+isgroup f
+
+parent_ai_id
+
+alorder 2
+
+internal_al_id A1386168806172-414373.5216765575
+
+country_id 26
+
+contain_searchable_items f
+
+content_lastmodified_date
+
+using_mets f
+
+feedback_email
+
+openDataEnabled f
+
+totalsolrdocsforopendata
+
+unprocessedsolrdocs
+
+opendataenabled
+
+totalsolrdocscount
+
+opendataqueueid
+
+id 2366
+
+ainame Mecklenburg-Vorpommern
+
+registration_date
+
+eag_path
+
+user_id
+
+repositorycode
+
+autform
+
+isgroup t
+
+parent_ai_id 2334
+
+alorder 7
+
+internal_al_id A1393522703927-739524.25
+
+country_id 3
+
+contain_searchable_items t
+
+content_lastmodified_date
+
+using_mets f
+
+feedback_email
+
+openDataEnabled f
+
+totalsolrdocsforopendata
+
+unprocessedsolrdocs
+
+opendataenabled
+
+totalsolrdocscount
+
+opendataqueueid

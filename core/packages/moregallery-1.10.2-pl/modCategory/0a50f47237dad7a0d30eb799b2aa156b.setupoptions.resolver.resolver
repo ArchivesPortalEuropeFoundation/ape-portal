@@ -1,0 +1,18 @@
+<?php
+// Convenience
+/** @var modX $modx */
+if (!isset($modx) && isset($object) && isset($object->xpdo)) {
+    $modx = $object->xpdo;
+}
+
+$data_consent = array_key_exists('data_consent', $options) ? (int)$options['data_consent'] : 10;
+$consentSetting = $modx->getObject('modSystemSetting', ['key' => 'moregallery.data_consent']);
+if ($consentSetting instanceof modSystemSetting) {
+    $consentSetting->set('value', $data_consent);
+    $consentSetting->save();
+}
+else {
+    $modx->log(modX::LOG_LEVEL_ERROR, 'Could not find moregallery.data_consent setting to update your data consent preference; please update it manually.');
+}
+
+return true;

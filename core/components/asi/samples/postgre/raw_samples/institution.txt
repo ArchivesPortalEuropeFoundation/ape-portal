@@ -1,0 +1,43 @@
+id 28593
+
+ainame Heemkundige Kring De Kaeck te Wommelgem
+
+registration_date 2017-04-05
+
+eag_path /BE/28593/EAG/BE-648616.xml
+
+user_id 715
+
+repositorycode BE-648616
+
+autform Heemkundige Kring De Kaeck te Wommelgem
+
+isgroup f
+
+parent_ai_id 28556
+
+alorder 8
+
+internal_al_id A1491314440153-56498.7
+
+country_id 8
+
+contain_searchable_items t
+
+content_lastmodified_date 2019-07-06 21:54:00.19
+
+using_mets f
+
+feedback_email
+
+openDataEnabled f
+
+totalsolrdocsforopendata
+
+unprocessedsolrdocs
+
+opendataenabled
+
+totalsolrdocscount
+
+opendataqueueid

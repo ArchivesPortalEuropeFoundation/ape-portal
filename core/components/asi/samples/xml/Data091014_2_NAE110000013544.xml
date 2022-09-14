@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eac-cpf xmlns="urn:isbn:1-931666-33-4" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-33-4 https://test.archivesportaleurope.net/Portal/profiles/apeEAC-CPF.xsd" xml:base="http://www.archivesportaleurope.net">
+    <control>
+        <recordId>NAE110000013544</recordId>
+        <maintenanceStatus>new</maintenanceStatus>
+        <maintenanceAgency>
+            <agencyCode>EE-RA</agencyCode>
+            <agencyName>Rahvusarhiiv</agencyName>
+        </maintenanceAgency>
+        <languageDeclaration>
+            <language languageCode="est">eesti</language>
+            <script scriptCode="Latn">latin</script>
+        </languageDeclaration>
+        <maintenanceHistory>
+            <maintenanceEvent>
+                <eventType>created</eventType>
+                <eventDateTime standardDateTime="2014-10-09" />
+                <agentType>machine</agentType>
+                <agent />
+            </maintenanceEvent>
+        </maintenanceHistory>
+        <sources>
+            <source xlink:type="simple" xlink:href="http://ais.ra.ee/index.php?module=202&amp;op=5&amp;tyyp=1&amp;id=110000013544" />
+        </sources>
+    </control>
+    <cpfDescription>
+        <identity>
+            <entityType>corporateBody</entityType>
+            <nameEntry>
+                <part xml:lang="est">Masinatööstus John Madison</part>
+                <useDates>
+                    <dateRange>
+                        <fromDate>1935</fromDate>
+                        <toDate>1940</toDate>
+                    </dateRange>
+                </useDates>
+            </nameEntry>
+        </identity>
+        <description>
+            <existDates>
+                <dateRange>
+                    <fromDate>1935</fromDate>
+                    <toDate>1940</toDate>
+                </dateRange>
+            </existDates>
+            <functions>
+                <function>
+                    <descriptiveNote>
+                        <p>Masinate tootmine.</p>
+                    </descriptiveNote>
+                </function>
+            </functions>
+            <languagesUsed>
+                <languageUsed>
+                    <language languageCode="est">eesti</language>
+                    <script scriptCode="Latn">latin</script>
+                </languageUsed>
+            </languagesUsed>
+            <biogHist>
+                <p>Masinatööstus John Madison alustas tegevust Pärnus 1935. aastal. Natsionaliseeriti 1940. aastal.</p>
+            </biogHist>
+        </description>
+        <relations>
+            <resourceRelation xlink:href="http://www.archivesportaleurope.net/ead-display/-/ead/pl/aicode/EE-RA/type/fa/id/ERA.3783">
+                <relationEntry localType="title" xml:lang="est">Masinatööstus John Madison</relationEntry>
+                <relationEntry localType="id" xml:lang="est">ERA.3783</relationEntry>
+                <relationEntry localType="agencyName" xml:lang="est">Rahvusarhiiv</relationEntry>
+                <relationEntry localType="agencyCode" xml:lang="est">EE-RA</relationEntry>
+            </resourceRelation>
+        </relations>
+    </cpfDescription>
+</eac-cpf>

@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f8f50d54de1ca30424d761bf5bb37abc',
+  'package' => 'modx',
+  'class' => 'modNamespace',
+  'signature' => '76cbd2f1496ec2308bc5fda34ba57083',
+  'native_key' => 'alpacka',
+  'object' => '{"name":"alpacka","path":"{core_path}components\\/alpacka\\/","assets_path":"{assets_path}components\\/alpacka\\/"}',
+);

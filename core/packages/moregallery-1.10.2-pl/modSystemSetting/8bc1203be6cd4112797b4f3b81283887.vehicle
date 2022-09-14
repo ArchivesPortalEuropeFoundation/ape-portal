@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f96214e119eaccd16dde7e2a90c96e1b',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8bc1203be6cd4112797b4f3b81283887',
+  'native_key' => 'mgr_tree_icon_mgresource',
+  'object' => '{"key":"mgr_tree_icon_mgresource","value":"icon-image","xtype":"textfield","namespace":"moregallery","area":"Advanced","editedon":1584397769}',
+);

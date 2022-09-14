@@ -1,0 +1,17 @@
+<c xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" encodinganalog="3.1.4" id="d2e63583">
+    <did>
+        <dao xlink:href="http://hdl.handle.net/10622/COLL00308%2E2874?locatt=view:level3" xlink:title="thumbnail" xlink:role="IMAGE"/>
+        <dao xlink:href="http://hdl.handle.net/10622/COLL00308%2E2874?locatt=view:catalog" xlink:title="catalog" xlink:role="IMAGE"/>
+        <unitid type="call number" encodinganalog="3.1.1">http://hdl.handle.net/10622/COLL00308 - 2874</unitid>
+        <unittitle encodinganalog="3.1.2">Serving Their Term.  03-06-1988. </unittitle>
+        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian">03-06-1988.</unitdate>
+        <origination encodinganalog="3.2.1" label="Creator">Morris, Benny</origination>
+        <langmaterial encodinganalog="3.4.3">English</langmaterial>
+        <physdesc encodinganalog="3.1.5">
+            <genreform>Newspaper Article (5 pp.)</genreform>
+        </physdesc>
+    </did>
+    <odd encodinganalog="3.6.1">
+        <p>Publisher: Jerusalem Post</p>
+    </odd>
+</c>

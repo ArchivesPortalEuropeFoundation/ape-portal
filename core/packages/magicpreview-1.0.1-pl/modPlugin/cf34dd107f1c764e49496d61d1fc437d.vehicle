@@ -1,0 +1,73 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'feec2403913f1500a877e7591be0a00f' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnDocFormRender","priority":0,"propertyset":0}',
+        'guid' => 'a770984f192e8f3883bf995038164d4f',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnDocFormRender',
+        ),
+        'signature' => '9d531e66ce10fef50e1f55d02dca33d1',
+      ),
+      '5fea8837aa9acfa74f8dc38e5482d07e' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnLoadWebDocument","priority":0,"propertyset":0}',
+        'guid' => 'cf4a700bfe57165b015e226747508496',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnLoadWebDocument',
+        ),
+        'signature' => '2bd4c3d9f37ffd2cb3ac8b09e5ab6edc',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'magicpreview',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '8d1f91d32545391ffdad1624405858ee',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => 'cf34dd107f1c764e49496d61d1fc437d',
+  'native_key' => 1,
+  'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"MagicPreview","description":"Registers the magic preview button to your resources.","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * @var modX $modx\\n *\\/\\n\\n$path = $modx->getOption(\'magicpreview.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/magicpreview\\/\');\\n$service =& $modx->getService(\'magicpreview\', \'MagicPreview\', $path . \'\\/model\\/magicpreview\\/\');\\n\\nif (!($service instanceof MagicPreview)) {\\n    return \'Could not load MagicPreview service.\';\\n}\\n\\nswitch ($modx->event->name) {\\n    case \'OnDocFormRender\':\\n        if ($resource->get(\'id\') > 0) {\\n            $modx->controller->addJavascript($service->config[\'assetsUrl\'] . \'js\\/preview.js?v=\' . $service::VERSION);\\n            $modx->controller->addHtml(\'<script>\\n    MagicPreviewConfig = \' . json_encode($service->config) . \';\\n    MagicPreviewResource = \' . $resource->get(\'id\') . \';\\n    <\\/script>\');\\n        }\\n        break;\\n\\n    case \'OnLoadWebDocument\':\\n        if (!array_key_exists(\'show_preview\', $_GET)) {\\n            return;\\n        }\\n        if (!$modx->user->hasSessionContext(\'mgr\')) {\\n            $modx->log(modX::LOG_LEVEL_WARN, \'User without mgr session tried to access preview for resource \' . $modx->resource->get(\'id\'));\\n            return;\\n        }\\n        $key = (string)$_GET[\'show_preview\'];\\n        $data = $modx->cacheManager->get($modx->resource->get(\'id\') . \'\\/\' . $key, [\\n            xPDO::OPT_CACHE_KEY => \'magicpreview\'\\n        ]);\\n        if (is_array($data)) {\\n            $modx->resource->fromArray($data, \'\', true, true);\\n            $modx->resource->set(\'cacheable\', false);\\n            $modx->resource->setProcessed(false);\\n        }\\n        break;\\n\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * @var modX $modx\\n *\\/\\n\\n$path = $modx->getOption(\'magicpreview.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/magicpreview\\/\');\\n$service =& $modx->getService(\'magicpreview\', \'MagicPreview\', $path . \'\\/model\\/magicpreview\\/\');\\n\\nif (!($service instanceof MagicPreview)) {\\n    return \'Could not load MagicPreview service.\';\\n}\\n\\nswitch ($modx->event->name) {\\n    case \'OnDocFormRender\':\\n        if ($resource->get(\'id\') > 0) {\\n            $modx->controller->addJavascript($service->config[\'assetsUrl\'] . \'js\\/preview.js?v=\' . $service::VERSION);\\n            $modx->controller->addHtml(\'<script>\\n    MagicPreviewConfig = \' . json_encode($service->config) . \';\\n    MagicPreviewResource = \' . $resource->get(\'id\') . \';\\n    <\\/script>\');\\n        }\\n        break;\\n\\n    case \'OnLoadWebDocument\':\\n        if (!array_key_exists(\'show_preview\', $_GET)) {\\n            return;\\n        }\\n        if (!$modx->user->hasSessionContext(\'mgr\')) {\\n            $modx->log(modX::LOG_LEVEL_WARN, \'User without mgr session tried to access preview for resource \' . $modx->resource->get(\'id\'));\\n            return;\\n        }\\n        $key = (string)$_GET[\'show_preview\'];\\n        $data = $modx->cacheManager->get($modx->resource->get(\'id\') . \'\\/\' . $key, [\\n            xPDO::OPT_CACHE_KEY => \'magicpreview\'\\n        ]);\\n        if (is_array($data)) {\\n            $modx->resource->fromArray($data, \'\', true, true);\\n            $modx->resource->set(\'cacheable\', false);\\n            $modx->resource->setProcessed(false);\\n        }\\n        break;\\n\\n}"}',
+);

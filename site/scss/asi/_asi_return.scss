@@ -1,0 +1,114 @@
+/**
+* Styles specific to data returned from APE API
+*/
+
+#archiveContent {
+
+    h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.6;
+    }
+
+    p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    }
+
+    .ead-content, .pccontrolaccess {
+        margin-bottom: 40px;
+    }
+
+}
+
+#nameContent {
+
+    .section {
+        margin-bottom: 40px;
+    }
+    // .linkMore {
+    //     display: none;
+    // }
+
+    .otherInformation {
+        margin-bottom: 15px;
+    }
+
+    #archives {
+        display: none;
+    }
+
+    .row {
+        display: flex;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: row;
+
+        &:before, &:after {
+            content: unset;
+        }
+
+        .leftcolumn {
+            flex-basis: 150px;
+        }
+
+        .rightcolumn {
+            flex-basis: calc(100% - 150px);
+        }
+
+        @media (max-width: $screen-xs-max) {
+            flex-direction: column;
+
+            .leftcolumn, .rightcolumn {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.6;
+        margin: 0 0 10px;
+        word-break: break-word;
+
+        &.otherInformation {
+            font-size: 18px;
+            margin: 0 0 20px;
+        }
+    }
+
+    p {
+        line-height: 1.6;
+        font-size: 14px;
+    }
+
+    .title.expanded {
+        margin: 40px 0 10px;
+        text-transform: capitalize;
+        font-size: 18px;
+    }
+
+    .blockSingular {
+        border-bottom: 1px solid rgb(117, 116, 116);
+        
+
+        .leftcolumn {
+            // background-color: rgb(247, 247, 248);
+            padding: 10px 10px 10px 0;
+            flex-basis: 150px;
+        }
+
+        .rightcolumn {
+            padding: 10px;
+            flex-basis: calc(100% - 150px);
+        }
+
+        .row {
+            margin-bottom: 0;
+            align-items: center
+        }
+    }
+}

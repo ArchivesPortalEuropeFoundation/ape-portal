@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '663e238b0acb5292cc9b9fe62a9f8675',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'be60ba04ef6b6448719f9bebab4feca7',
+  'native_key' => 'moregallery.translit_class_path',
+  'object' => '{"key":"moregallery.translit_class_path","value":"","xtype":"textfield","namespace":"moregallery","area":"Sanitize","editedon":1571229263}',
+);

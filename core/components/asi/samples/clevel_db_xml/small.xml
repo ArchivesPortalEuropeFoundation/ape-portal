@@ -1,0 +1,14 @@
+<c xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" encodinganalog="3.1.4" id="d1e6013">
+    <did>
+        <unittitle encodinganalog="3.1.2">Release of a term</unittitle>
+        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1525/1525">26 May 1525</unitdate>
+        <repository>Chetham's Library</repository>
+        <unitid type="call number" encodinganalog="3.1.1">GB/418/Box 10 no 324</unitid>
+        <unitid type="call number" encodinganalog="3.1.1">GB/418/Agecroft/10/6</unitid>
+    </did>
+    <scopecontent encodinganalog="summary">
+        <p>From Janet Marler, widow, late wife of Hugh Marler of Manchester decd, to Hugh Burdman her brother of all her term in a burgage in Manchester. </p>
+        <p>26 May 17 Henry VIII</p>
+        <p>1seal</p>
+    </scopecontent>
+</c>

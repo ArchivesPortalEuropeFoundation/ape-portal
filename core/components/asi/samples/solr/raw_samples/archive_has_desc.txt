@@ -1,0 +1,28 @@
+id 	C547631333
+parentId 	H31230
+unitId 	ES-37274-CDMH-UD-2855365
+duplicateUnitId
+unitTitle 	1. ARCHIVOS PÚBLICOS
+spell 	1. ARCHIVOS PÚBLICOS
+levelName 	clevel
+dateType 	nodate
+country 	SPAIN:G:1
+repositoryCode 	ES-37274-CDMH1
+ai 	Centro Documental de la Memoria Histórica:705
+recordId 	ES-37274-CDMH
+dao
+numberOfDao 	0
+numberOfDaoBelow 	0
+numberOfDescendents 	89
+numberOfAncestors 	1
+titleProper 	Centro Documental de la Memoria Histórica:H31230
+recordType 	hg
+H0_s 	Centro Documental de la Memoria Histórica:G:H31230
+HID0_s 	H31230
+AID1_s 	A705
+AID0_s 	A761
+A1_s 	Centro Documental de la Memoria Histórica:L:A705
+A0_s 	Archivos de ámbito estatal:G:A761
+orderId 	5
+openData
+timestamp 	2019-07-02T00:42:53.732Z

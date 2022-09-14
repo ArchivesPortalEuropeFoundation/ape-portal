@@ -1,0 +1,67 @@
+<?php
+/* @var modX $modx */
+
+if ($object->xpdo) {
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_UPGRADE:
+        case xPDOTransport::ACTION_INSTALL:
+            $modx =& $object->xpdo;
+
+            $modelPath = $modx->getOption('moregallery.core_path', null, $modx->getOption('core_path').'components/moregallery/').'model/';
+            $modx->addPackage('moregallery',$modelPath);
+            $manager = $modx->getManager();
+
+            // Change log level to hide stuff that's boring
+            $logLevel = $modx->setLogLevel(modX::LOG_LEVEL_ERROR);
+
+            $objects = array(
+                'mgImage',
+                'mgImageTag',
+                'mgImageCrop',
+                'mgTag',
+            );
+            foreach ($objects as $obj) {
+                $manager->createObjectContainer($obj);
+            }
+
+            // For database updates, we only want absolutely fatal errors
+            // Otherwise we might get "Duplicate key <key> on table" errors if they already exist
+            $modx->setLogLevel(modX::LOG_LEVEL_FATAL);
+            // Updates per 2013-07-15
+            $manager->addField('mgImage', 'uploadedon');
+            $manager->addField('mgImage', 'uploadedby');
+            $manager->addField('mgImage', 'editedon');
+            $manager->addField('mgImage', 'editedby');
+
+            // Updates per 2013-09-02
+            $manager->addIndex('mgImage', 'resource');
+            $manager->addIndex('mgImage', 'sortorder');
+            $manager->addIndex('mgImage', 'name');
+
+            // Updates per 2015-01-19
+            $manager->addField('mgImage', 'active');
+            $manager->addIndex('mgImage', 'active');
+
+            // Added per 2015-01-26
+            $manager->addField('mgImage', 'width');
+            $manager->addField('mgImage', 'height');
+
+            // Added per 2015-12-24
+            $manager->addField('mgImage', 'iptc');
+            $manager->addField('mgImage', 'custom');
+
+            // Added per 2016-05-13
+            $manager->addField('mgImage', 'class_key', array('after' => 'id'));
+            $manager->addField('mgImage', 'properties', array('after' => 'active'));
+
+            // 2017-10-06
+            $manager->addField('mgImage', 'extension', array('after' => 'file'));
+
+            // Return log level to normal.
+            $modx->setLogLevel($logLevel);
+        break;
+    }
+
+}
+return true;
+

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'fdeef4d5e87df9800d173f3a7d8cd222',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'ba6d4beb2826633d6c2a44d366cc024a',
+  'native_key' => 'moregallery.youtube_prefill_description',
+  'object' => '{"key":"moregallery.youtube_prefill_description","value":false,"xtype":"modx-combo-boolean","namespace":"moregallery","area":"Video","editedon":1571229263}',
+);

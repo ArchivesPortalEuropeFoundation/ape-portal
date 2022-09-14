@@ -1,0 +1,2063 @@
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	audience="external"
+	xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.archivesportaleurope.net/Portal/profiles/apeEAD.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd">
+	<eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b"
+		relatedencoding="MARC21" repositoryencoding="iso15511" scriptencoding="iso15924">
+		<eadid countrycode="AT" identifier="AT-OeStA_all-fonds" mainagencycode="AT-OeStA"
+			>AT-OeStA</eadid>
+		<filedesc>
+			<titlestmt>
+				<titleproper>Österreichisches Staatsarchiv</titleproper>
+			</titlestmt>
+		</filedesc>
+		<revisiondesc>
+			<change>
+				<date/>
+				<item>Converted_apeEAD_version_1.2.13</item>
+			</change>
+		</revisiondesc>
+	</eadheader>
+	<archdesc encodinganalog="3.1.4" level="fonds" relatedencoding="ISAD(G)v2" type="holdings_guide">
+		<did>
+			<unitid encodinganalog="3.1.1">AT-OeStA</unitid>
+			<unittitle encodinganalog="3.1.2">Abteilungen des Österreichischen
+				Staatsarchivs</unittitle>
+		</did>
+		<scopecontent encodinganalog="summary">
+			<p>Übersicht über die Abteilungen und Bestände des Österreichischen Staatsarchiv im
+				Europäischen Archivportal.</p>
+		</scopecontent>
+		<dsc>
+			<c level="series">
+				<did>
+					<unitid encodinganalog="3.1.1">HKA</unitid>
+					<unittitle encodinganalog="3.1.2">Finanz- und Hofkammerarchiv</unittitle>
+					<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+						normal="1170/1918">1170-1918</unitdate>
+				</did>
+				<c level="series">
+					<did>
+						<unitid encodinganalog="3.1.1">SAM</unitid>
+						<unittitle encodinganalog="3.1.2">Sammlungen und Selekte</unittitle>
+						<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+							normal="0963/2006">963-2006</unitdate>
+					</did>
+					<c level="series">
+						<did>
+							<unitid encodinganalog="3.1.1">HKU</unitid>
+							<unittitle encodinganalog="3.1.2">Urkunden</unittitle>
+							<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+								normal="1170/1870">1170-1870</unitdate>
+						</did>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HKA_Urkunden_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Urkunden (1170-1894)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HKA_Urkunden_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+					</c>
+				</c>
+			</c>
+			<c level="series">
+				<did>
+					<unitid encodinganalog="3.1.1">HHStA</unitid>
+					<unittitle encodinganalog="3.1.2">Haus- Hof- und Staatsarchiv</unittitle>
+				</did>
+				<c level="series">
+					<did>
+						<unitid encodinganalog="3.1.1">URK</unitid>
+						<unittitle encodinganalog="3.1.2">Urkundenreihen, Siegelabguß- und
+							Typarsammlungen, Staatsverträge Abschriften und Drucke</unittitle>
+						<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+							normal="0816/1918">816-1918</unitdate>
+					</did>
+					<c level="series">
+						<did>
+							<unittitle encodinganalog="3.1.2">Habsburg-Lothringische
+								Familienurkunden</unittitle>
+							<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+								normal="1239/1918">1239-1918</unitdate>
+						</did>
+						<c level="item">
+							<did>
+								<unittitle encodinganalog="3.1.2">Habsburg-Lothringische
+									Familienurkunden (www.monasterium.net) </unittitle>
+							</did>
+							<otherfindaid>
+								<p>
+									<extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_FU_MOM-CA"/>
+								</p>
+							</otherfindaid>
+						</c>
+					</c>
+					<c level="series">
+						<did>
+							<unitid encodinganalog="3.1.1">LUK</unitid>
+							<unittitle encodinganalog="3.1.2">Lothringische Urkunden</unittitle>
+							<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+								normal="1170/1753">1170-1753</unitdate>
+						</did>
+						<c level="item">
+							<did>
+								<unittitle encodinganalog="3.1.2">Lothringische Urkunden
+									(www.monasterium.net)</unittitle>
+							</did>
+							<otherfindaid>
+								<p>
+									<extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_LUK_MOM-CA"/>
+								</p>
+							</otherfindaid>
+						</c>
+					</c>
+					<c level="series">
+						<did>
+							<unitid encodinganalog="3.1.1">NUK</unitid>
+							<unittitle encodinganalog="3.1.2">Niederländische Urkunden</unittitle>
+							<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+								normal="1196/1792">1196-1792</unitdate>
+						</did>
+						<c level="item">
+							<did>
+								<unittitle encodinganalog="3.1.2">Niederländische Urkunden
+									(www.monasterium.net) </unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_NUK_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+					</c>
+					<c level="series">
+						<did>
+							<unittitle encodinganalog="3.1.2">St. Michael an der Etsch</unittitle>
+							<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+								normal="1145/1746">1145-1746</unitdate>
+						</did>
+						<c level="item">
+							<did>
+								<unittitle encodinganalog="3.1.2">St. Michael an der Etsch
+									(www.monasterium.net)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienStMichael_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+					</c>
+					<c level="series">
+						<did>
+							<unittitle encodinganalog="3.1.2">Urkunden der Bischöfe von
+								Chiemsee</unittitle>
+							<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+								normal="1271/1697">1271-1697</unitdate>
+						</did>
+						<c level="item">
+							<did>
+								<unittitle encodinganalog="3.1.2">Urkunden der Bischöfe von Chiemsee
+									(www.monasterium.net) </unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SbgChiemBm_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+					</c>
+					<c level="series">
+						<did>
+							<unittitle encodinganalog="3.1.2">Staatsverträge Abschriften und
+								Drucke</unittitle>
+							<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+								normal="1527/1691">1360-1860</unitdate>
+						</did>
+						<c level="item">
+							<did>
+								<unittitle encodinganalog="3.1.2">Staatsverträge
+									(www.monasterium.net) </unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Staatsvertraege_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+					</c>
+					<c level="series">
+						<did>
+							<unitid encodinganalog="3.1.1">AUR</unitid>
+							<unittitle encodinganalog="3.1.2">Allgemeine Urkundenreihe</unittitle>
+							<unitdate calendar="gregorian" encodinganalog="3.1.3" era="ce"
+								normal="0816/1918">816-1918</unitdate>
+						</did>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_ZatecOFMConv_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Žatec (dt. Saaz), Minoriten
+									(1380)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ZatecOFMConv_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GamingOCart_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Gaming, Kartäuser
+									(1311-1753)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GamingOCart_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WNBm_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wr. Neustadt, Bistum/Domkirche
+									(1298-1763)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WNBm_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_MeidlingGoettweigPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Meidling / Göttweig,
+									Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_MeidlingGoettweigPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_OssiachOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Ossiach, Benediktiner</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_OssiachOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_Spitz_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Spitz</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Spitz_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StainachOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Stainach, Dominikanerinnen
+									(1494-1500)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StainachOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_TraunseeOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Traunsee, Benediktinerinnen
+									(909)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_TraunseeOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_ObernburgOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Gornji Grad (dt. Obernburg),
+									Benediktiner (1220-1372)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ObernburgOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_YbbsOCist_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Ybbs, Zisterzienserinnen
+									(1234-1656)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_YbbsOCist_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_SonnenburgOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Sonnenburg,
+									Benediktiner</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SonnenburgOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GloggnitzOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Gloggnitz, Benediktiner
+									(1476)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GloggnitzOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_ZwettlOCist_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Zwettl, Zisterzienser</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ZwettlOCist_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_MillstattOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Millstatt, Benediktiner
+									(1122-1588)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_MillstattOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StPaulOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Paul, Benediktiner (1099-
+									1499)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StPaulOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_StBernhardOCist_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Bernhard, Zisterzienserinnen
+									(1263-1571)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StBernhardOCist_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_HoerschingPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Hörsching, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_HoerschingPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_SmichowOCart_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Smíchow (dt. Mariengarten),
+									Kartäuser (1352-1454)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SmichowOCart_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_KirchbergWildPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Kirchberg an der Wild,
+									Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_KirchbergWildPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StLorenzPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Lorenz, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StLorenzPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WNOFMConv_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wr. Neustadt, Minoriten
+									(1344-1507)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WNOFMConv_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_SticnaOCist_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Stična, Zisterzienser</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SticnaOCist_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StValentinPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Valentin, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StValentinPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StMichaelPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Michael, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StMichaelPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WiltenOPraem_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wilten, Prämonstratenser
+									(1180-1488)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WiltenOPraem_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_SpitalamPyhrnCan_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Spital am Pyhrn,
+									Kanoniker</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SpitalamPyhrnCan_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GoettweigOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Göttweig, Benediktiner</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GoettweigOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_MuehlbachPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Mühlbach, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_MuehlbachPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WNSpital_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wr. Neustadt, Spital
+									(1361-1613)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WNSpital_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_TegernseeOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Tegernsee,
+									Benediktiner</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_TegernseeOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_OSPPE_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Pauliner Ungarn
+									(1364-1671)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_OSPPE_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_LjubljanaSJ_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Ljubljana, Jesuiten</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_LjubljanaSJ_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_MistelbachOCarm_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Mistelbach, Karmeliter
+									(1443-1474)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_MistelbachOCarm_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_MelkPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Melk, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_MelkPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienKoeklOSCI_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Königskloster, Klarissen
+									(1583-1779)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienKoeklOSCI_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_ViktringOCist_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Viktring, Zisterzienser
+									(1143-1484)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ViktringOCist_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GoessOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Göss, Benediktinerinnen
+									(1187-1496)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GoessOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WienOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Dominikaner
+									(1278-1437)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_SpitalamSemmeringCan_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Spital am Semmering,
+									Kanoniker</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SpitalamSemmeringCan_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_Nieder-Plank_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Nieder-Plank</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Nieder-Plank_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_ZiceOCar_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Žiče (dt. Seiz), Kartäuser
+									(1173-1366)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ZiceOCar_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_AdmontOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Admont, Benediktiner
+									(1245-1571)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_AdmontOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_RadljeOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Radlje (dt. Mahrenberg),
+									Dominikanerinnen (1268-1461)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_RadljeOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_AltenburgOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Altenburg, Benediktiner
+									(1144-1943)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_AltenburgOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_KirchbergCanReg_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Kirchberg am Wechsel,
+									Augustiner-Chorfrauen (1272-1742)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_KirchbergCanReg_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_Aquileia_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Aquileia</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Aquileia_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_KleinmariazellOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Kleinmariazell,
+									Benediktiner</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_KleinmariazellOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_ReichersdorfPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Reichersdorf, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ReichersdorfPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WeisskirchenPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Weißkirchen, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WeisskirchenPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_ErlaOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Erla, Benediktinerinnen
+									(1050-1742)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ErlaOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_Rossatz_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Rossatz</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Rossatz_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WeitraPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Weitra, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WeitraPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WNdiv_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wiener Neustadt, divers
+									(1479-1519)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WNdiv_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StPankrazPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Pankraz, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StPankrazPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_StPeterSchwwOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Peter im Schwarzwald,
+									Benediktiner (1139)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StPeterSchwwOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_PrahaStadt_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Praha, Stadt
+									(1330-1416)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PrahaStadt_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_LeobenOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Leoben, Dominikaner
+									(1288-1313)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_LeobenOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_OberndorfPropstei_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Oberndorf, Propstei</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_OberndorfPropstei_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GrazOFM_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Graz, Franziskaner
+									(1381-1507)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GrazOFM_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_Lanzenkirchen_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Lanzenkirchen</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Lanzenkirchen_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_NeubergOCist_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Neuberg an der Mürz, Zisterzienser
+									(1357-1457)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_NeubergOCist_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WienOCarm_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Karmeliter
+									(1348-1666)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienOCarm_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_VelesovoOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Velesovo (dt. Michelstetten),
+									Dominikanerinnen (1238-1568)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_VelesovoOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_EberndorfCanReg_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Eberndorf, Augustiner Chorherren
+									(1106-1601)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_EberndorfCanReg_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_JohannNepomukSpitalWienLandstrasse_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Johann Nepomuk Spital,
+									Wien-Landstraße</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_JohannNepomukSpitalWienLandstrasse_MOM-CA"
+									/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_PolaStMichaelDeMonta_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Michael de Monte bei
+									Pola</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PolaStMichaelDeMonta_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_MitterkirchenPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Mitterkirchen, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_MitterkirchenPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_PuckingPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Pucking, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PuckingPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_EbersbergOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Ebersberg, Benediktiner
+									(1247-1481)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_EbersbergOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_BrixenBm_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Brixen, Bistum
+									(845-1530)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_BrixenBm_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_ImbachOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Imbach, Dominikanerinnen
+									(1267-1764)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ImbachOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienMaMagdCanReg_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, St. Maria Magdalena,
+									Augustiner-Chorfrauen (1234-1530)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienMaMagdCanReg_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_Hadersdorf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Hadersdorf</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Hadersdorf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_HBP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Hofburgpfarre, Wien
+									(1285-1763)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_HBP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StLeonhardPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Leonhard am Forst, Pfarre
+									(1305-1537)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StLeonhardPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_KlingenthalOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Klingenthal, Dominikanerinnen
+									(1482-1483)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_KlingenthalOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienStClaraOSCI_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, St. Clara - Klarissen
+									(1302-1568)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienStClaraOSCI_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_NeuhaimPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Neuhaim, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_NeuhaimPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WienOSA_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Augustiner
+									(1333-1467)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienOSA_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_StLambrechtOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Lambrecht, Benediktiner
+									(1205-1580)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StLambrechtOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GriesbachPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Griesbach, Pfarre
+									(1468-1772)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GriesbachPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_ReinOCist_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Rein, Zisterzienser</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ReinOCist_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GoerzSJ_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Görz, Jesuiten</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GoerzSJ_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_MitterndorfPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Mitterndorf, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_MitterndorfPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GoesingPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Gösing, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GoesingPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienStNiklaskloster_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, St.
+									Niklaskloster</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienStNiklaskloster_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_PrahaMgd_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Praha, Magdalenitinen
+									(1398)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PrahaMgd_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StAndraeOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Andrä, Dominikanerinnen
+									(1694-1755)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StAndraeOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_KremsSJ_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Krems Jesuitenkollegium
+									(1189-1757)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_KremsSJ_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_PletrjeOCart_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Pletrje (dt. Pletriach), Kartäuser
+									(1450-1472)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PletrjeOCart_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StPoeltenBM_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Pölten, Bistum</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StPoeltenBM_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienSiechenhausKlagbaum_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Siechenhaus zum Klagbaum,
+									Wien</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienSiechenhausKlagbaum_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_StGeorgs-Orden_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Georgs-Orden</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StGeorgs-Orden_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StillfriedPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Stillfried, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StillfriedPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GurkBm_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Gurk, Bistum
+									(903-1478)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GurkBm_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_GrossrussbachPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Großrußbach, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GrossrussbachPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_Gerasdorf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Gerasdorf</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Gerasdorf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WienOM_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Paulaner</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienOM_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_GrosswardeinOPraem_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Großwardein,
+									Prämonstratenser</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GrosswardeinOPraem_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_NRannaOSPPE_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Niederranna, Pauliner
+									(1363-1685)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_NRannaOSPPE_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WienStUlrich_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, St. Ulrich</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienStUlrich_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_BerchtesgadenCanReg_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Berchtesgaden,
+									Augustiner-Chorherren (1202-1460)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_BerchtesgadenCanReg_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WNOSPPE_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wr. Neustadt, Pauliner
+									(1265-1671)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WNOSPPE_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_PerchtoldsdorfPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Perchtoldsdorf, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PerchtoldsdorfPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StrebnitzOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Strebnitz,
+									Benediktiner</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StrebnitzOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_ZwettlPropstei_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Zwettl, Propstei</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ZwettlPropstei_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_Grinzing_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Grinzing</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Grinzing_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WolfsbergOFMConv_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wolfsberg, Minoriten
+									(1456-1624)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WolfsbergOFMConv_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_SbgFrauenklosterStPeter_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Frauenkloster St. Peter in
+									Salzburg</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SbgFrauenklosterStPeter_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GarsPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Gars, Pfarre
+									(1282-1535)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GarsPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_JudenburgOSCI_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Judenburg, Klarissen
+									(1255-1463)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_JudenburgOSCI_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_TrentoEbm_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Trento (dt. Trient), Erzbistum
+									(1482)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_TrentoEbm_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_Egelsee_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Egelsee</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Egelsee_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StMartinPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Martin, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StMartinPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StraningPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Straning, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StraningPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_Windhag_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Windhag</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Windhag_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_LandstrostPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Landstrost, Pfarre
+									(1460-1474)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_LandstrostPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_PassauBM_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Passau, Bistum</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PassauBM_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_ChiemseeUnsereLiebeFrau_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Unsere liebe Frau
+									Chiemsee</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ChiemseeUnsereLiebeFrau_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WNOCarm_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wr. Neustadt, Karmeliterinnen
+									(1667)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WNOCarm_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_GrosspoppenPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Großpoppen, Pfarre
+									(1571-1742)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GrosspoppenPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_MekinjeOSCI_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Mekinje (dt. Minkendorf),
+									Klarissen (1287-1545)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_MekinjeOSCI_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_PtujOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Ptuj (dt. Pettau), Dominikaner
+									(1243-1461)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PtujOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_KorneuburgOESA_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Korneuburg, Augustiner-Eremiten
+									(1305-1771)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_KorneuburgOESA_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienStLaurCanReg_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, St. Laurenz -
+									Augustiner-Chorfrauen (1316-1782)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienStLaurCanReg_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_NeunkirchenPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Neunkirchen, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_NeunkirchenPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienStJakobCanReg_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, St. Jakob auf der Hülben,
+									Augustiner-Chorfrauen (1326-1751)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienStJakobCanReg_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_HartPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Hart, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_HartPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_HohenstettenPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Hohenstetten, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_HohenstettenPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_EggenburgPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Eggenburg, Pfarre
+									(1489-1724)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_EggenburgPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_LindauCan_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Lindau, Kanoniker</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_LindauCan_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WNStPeterSpOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wr. Neustadt, St. Peter in der
+									Sperr, Dominikanerinnen (1301-1572)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WNStPeterSpOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WNOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wr. Neustadt, Dominikaner
+									(1358-1529)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WNOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WienOFMConv_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Minoriten
+									(1476-1517)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienOFMConv_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_TullnOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Tulln, Dominikanerinnen
+									(1204-1742)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_TullnOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_ThalbachOFM_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Thalbach, Franziskanerinnen
+									(1479-1780)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ThalbachOFM_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_RegensburgOCarm_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Regensburg, Karmeliter</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_RegensburgOCarm_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_PulgarnCan_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Pulgarn, Kanoniker</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PulgarnCan_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_Wien_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Wien_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_StudeniceOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Studenice (dt. Studenitz),
+									Dominikanerinnen (1249-1297)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StudeniceOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_PlasyOCist_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Plasy (dt. Plass), Zisterzienser
+									(1344-1410)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PlasyOCist_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_Niederfellabrunn_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Niederfellabrunn</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_Niederfellabrunn_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_DoellersheimPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Döllersheim, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_DoellersheimPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_AUR_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Allgemeine
+									Urkundenreihe</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_AUR_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_NiedernburgOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Niedernburg,
+									Benediktiner</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_NiedernburgOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_MauerbachOCart_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Mauerbach, Kartäuser
+									(1266-1759)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_MauerbachOCart_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_SbgE_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Salzburg, Erzstift
+									(798-1806)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SbgE_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_StMichaelzuTschernaKonvent_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Konvent St. Michael zu
+									Tscherna</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StMichaelzuTschernaKonvent_MOM-CA"
+									/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_FreudnitzOCart_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Freudnitz, Kartäuser</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_FreudnitzOCart_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienStNikolaOSCI_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, St. Nikola, Klarissen
+									(1277-1660)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienStNikolaOSCI_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_FriesachOSA_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Friesach, Augustiner</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_FriesachOSA_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_SbgDK_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Salzburg, Domkapitel
+									(831-1802)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SbgDK_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_GleinkOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Gleink, Benediktiner</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_GleinkOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WNSJ_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wr. Neustadt, Jesuiten
+									(1660)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WNSJ_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_StGeorgenLOSB_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">St. Georgen am Längsee,
+									Benediktinerinnen (1257)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_StGeorgenLOSB_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WienBgsp_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Bürgerspital</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienBgsp_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WienSJ_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Jesuiten
+									(1285-1762)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienSJ_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_BistraOCart_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Bistra (dt. Freudenthal),
+									Kartäuser (1255-1480)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_BistraOCart_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_SchnalsOCart_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Schnals, Kartäuser</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SchnalsOCart_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_PerneggOPraem_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Pernegg, Prämonstratenser
+									(1343)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_PerneggOPraem_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienDreifaltigkeitskapelle_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Dreifaltigkeitskapelle im
+									Dreifaltigkeitshof am Kienmarkt (heute Judengasse)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienDreifaltigkeitskapelle_MOM-CA"
+									/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WienOFM_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Franziskaner
+									(1545)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienOFM_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WienOSBCam_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, Camaldulenser
+									(1638-1718)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienOSBCam_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_ArnsburgOCist_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Arnsburg,
+									Zisterzienser</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_ArnsburgOCist_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_WinklernPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Winklern, Pfarre</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WinklernPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienKircheStMichaelStNiklasKapelle_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Kirche St. Michael / St.
+									Niklas-Kapelle, Wien</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienKircheStMichaelStNiklasKapelle_MOM-CA"
+									/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1"
+									>AT-HHStA_WienStStephanPf_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Wien, St. Stephan, Pfarre
+									(1483-1540)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_WienStStephanPf_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_FuldeppOP_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Fuldepp, Dominikanerinnen
+									(1299-1484)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_FuldeppOP_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+						<c>
+							<did>
+								<unitid encodinganalog="3.1.1">AT-HHStA_SeckauCanReg_MOM-CA</unitid>
+								<unittitle encodinganalog="3.1.2">Seckau, Augustiner-Chorherren
+									(1170-1489)</unittitle>
+							</did>
+							<otherfindaid>
+								<p><extref xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="AT-HHStA_SeckauCanReg_MOM-CA"/></p>
+							</otherfindaid>
+						</c>
+					</c>
+				</c>
+			</c>
+		</dsc>
+	</archdesc>
+</ead>

@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a62ef07189941b5757243e06c379f8cc',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'ac590aed9a1a2538c694c8763b60d4ca',
+  'native_key' => 'OnSiteSettingsRender',
+  'object' => '{"name":"OnSiteSettingsRender","service":1,"groupname":"Settings"}',
+);

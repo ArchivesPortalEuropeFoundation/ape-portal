@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'moregallery-1.10.2-pl/xPDOScriptVehicle/7d60c18682c0a439d894eef2613c36ee.encryption.resolver.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '16fdf333366397c19169e11617acdb4a',
+  'package' => '',
+  'signature' => '7d60c18682c0a439d894eef2613c36ee',
+  'native_key' => '16fdf333366397c19169e11617acdb4a',
+);

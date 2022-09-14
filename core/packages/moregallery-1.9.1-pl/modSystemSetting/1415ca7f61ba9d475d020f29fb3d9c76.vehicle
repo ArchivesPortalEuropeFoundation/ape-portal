@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '3927bf2b51e60a0d8ed1526f4f765637',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1415ca7f61ba9d475d020f29fb3d9c76',
+  'native_key' => 'moregallery.sanitize_pattern',
+  'object' => '{"key":"moregallery.sanitize_pattern","value":"\\/([[:alnum:]_\\\\.-]*)\\/","xtype":"textfield","namespace":"moregallery","area":"Sanitize","editedon":1571229263}',
+);

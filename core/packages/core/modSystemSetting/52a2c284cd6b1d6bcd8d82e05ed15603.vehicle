@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '58405fc5e2da9fa4a21d889d3d27a45a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '52a2c284cd6b1d6bcd8d82e05ed15603',
+  'native_key' => 'manager_js_document_root',
+  'object' => '{"key":"manager_js_document_root","value":"","xtype":"textfield","namespace":"core","area":"manager","editedon":null}',
+);

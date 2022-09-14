@@ -1,0 +1,45 @@
+Postgre results:
+PG Query (collection): SELECT * FROM archival_institution WHERE id = '888';
+id 888
+
+ainame University of Dundee Archive Services
+
+registration_date
+
+eag_path /GB/888/EAG/GB-254.xml
+
+user_id 201
+
+repositorycode GB-254
+
+autform University of Dundee Archive Services
+
+isgroup f
+
+parent_ai_id 846
+
+alorder 36
+
+internal_al_id A1367443602669-506737.78
+
+country_id 27
+
+contain_searchable_items t
+
+content_lastmodified_date 2019-07-07 07:33:11.768
+
+using_mets f
+
+feedback_email
+
+openDataEnabled f
+
+totalsolrdocsforopendata
+
+unprocessedsolrdocs
+
+opendataenabled
+
+totalsolrdocscount
+
+opendataqueueid

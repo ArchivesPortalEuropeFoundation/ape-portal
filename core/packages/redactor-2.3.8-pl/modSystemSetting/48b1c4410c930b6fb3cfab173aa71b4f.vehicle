@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'redactor',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd599a390b74cc04616a17024f71917bd',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '48b1c4410c930b6fb3cfab173aa71b4f',
+  'native_key' => 'redactor.plugin_replacer',
+  'object' => '{"key":"redactor.plugin_replacer","value":true,"xtype":"modx-combo-boolean","namespace":"redactor","area":"Plugin","editedon":1569928469}',
+);

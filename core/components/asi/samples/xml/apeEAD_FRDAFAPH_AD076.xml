@@ -1,0 +1,3101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:isbn:1-931666-22-9"
+     xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.archivesportaleurope.net/Portal/profiles/apeEAD.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
+     audience="external">
+   <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b"
+              repositoryencoding="iso15511"
+              scriptencoding="iso15924"
+              relatedencoding="MARC21">
+      <eadid identifier="FR-FRAN_FRDAFAPH_AD076" countrycode="FR" mainagencycode="FR-FRAN">FRDAFAPH_AD076</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="245">Archives photographiques conservées dans le département de Seine-Maritime (76) </titleproper>
+            <subtitle>Etat des fonds</subtitle>
+         </titlestmt>
+         <publicationstmt>
+            <publisher>Direction des Archives de France</publisher>
+            <address>
+               <addressline>Paris</addressline>
+            </address>
+            <date encodinganalog="260$c" calendar="gregorian" era="ce" normal="2006-10">Mars 2008</date>
+         </publicationstmt>
+      </filedesc>
+      <profiledesc>
+         <langusage>Instrument de recherche rédigé en<language encodinganalog="041" langcode="fre" scriptcode="Latn"> français</language>
+         </langusage>
+      </profiledesc>
+      <revisiondesc>
+         <change>
+            <date/>
+            <item>Converted_apeEAD_version_2.0.14</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <archdesc level="fonds" type="inventory" encodinganalog="3.1.4"
+             relatedencoding="ISAD(G)v2">
+      <did>
+         <unittitle encodinganalog="3.1.2">Département de Seine-Maritime (76)</unittitle>
+      </did>
+     <controlaccess><genreform>photographie</genreform></controlaccess>
+      <dsc type="othertype">
+         <c encodinganalog="3.1.4" id="d1e39">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives départementales de Seine-Maritime</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e43">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">2 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Documents iconographiques isolés de format inférieur à 24 x 30 cm des Archives départementales de Seine-Maritime</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1850/1990">1850 - 1990</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="tout_support">&lt; 240 x 300</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>, <genreform>carte postale moderne</genreform>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Logiciel documentaire Clara</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Sous-série cloturée depuis 2000 comprenant des cartes postales et photographies isolées entrées avant 2001. Quelques photographies ont été réalisées par le photographe des Archives.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e86">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">3 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Négatifs isolés des Archives départementales de Seine-Maritime</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950/2000">1950 - 2000</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>,  <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier manuel sur papier, qui ne couvre pas totalement la sous-série</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Sous-série cloturée depuis 2000 comprenant des négatifs photographiques isolés. La plupart des clichés ont été réalisés par le photographe des Archives.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>architecture</subject>
+                  <subject>personnalité</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e128">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">4 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Diapositives isolées des Archives départementales de Seine-Maritime</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960/1990">1960 - 1990</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>,  <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier manuel sur papier, qui ne couvre pas totalement la sous-série</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Sous-série cloturée depuis 2000 des diapositives isolées. La plupart des diapositives ont  été réalisées par le photographe des Archives.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>architecture</subject>
+                  <subject>personnalité</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e170">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">6 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de la Commission départementale des Antiquités</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1850/1930">1850 - 1930</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Seine-maritime. Commission départementale des Antiquités</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <container>10 albums</container>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Diapositives et microfilm</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1880 - 1930</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>
+                     <emph render="italic">Albums de dessins et gravures de la Commission départementale des Antiquités</emph>, Inventaire détaillé, 1991, 40 pages  repris dans le logiciel documentaire Clara</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p>Voir les versements complémentaires de ce service en série W</p>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble composé de 10 albums et plusieurs boîtes de photographies, calques et gravures ayant servi à illustrer les travaux de la Commission départementale des Antiquités.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>France</geogname>
+                  <geogname>Haute-Normandie (région administrative)</geogname>
+                  <subject>architecture</subject>
+                  <subject>patrimoine culturel</subject>
+                  <subject>objet d'art</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e228">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">9 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection de cartes postales sur Le Havre</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900">1900</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Logiciel documentaire Clara</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection anonyme de cartes postales anciennes sur Le Havre et ses environs.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Le Havre (Seine-Maritime)</geogname>
+                  <subject>architecture</subject>
+                  <subject>vie quotidienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e264">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">10 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés du Journal de Rouen  et du Petit Normand </unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1928/1944">1928 - 1944</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <corpname>Journal de Rouen </corpname>  ; <corpname>Journal Le Petit Normand </corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1965 - 1966</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de clichés photographiques sur plaques de verre négatives et positives du <emph render="italic">Journal de Rouen</emph> et du <emph render="italic">Petit Normand</emph>,  donnés par la famille Lafond.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>presse</subject>
+                  <subject>société</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e325">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">11 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Eudes</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920/1950">1920 - 1950</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Eudes, Robert</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>8 740</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>,   <physfacet>film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1966</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Logiciel documentaire Clara</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Clichés sur  verre  et négatifs réalisés par Robert Eudes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Haute-Normandie (région administrative)</geogname>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <geogname>étranger</geogname>
+                  <subject>vie religieuse</subject>
+                  <subject>artiste</subject>
+                  <subject>ministre du culte</subject>
+                  <subject>catholicisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1378">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">13 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés Quennedey</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920">1920</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Quennedey (Commandant)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>530</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Des tirages de ces clichés sont cotés en sous-série 14 Fi</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt avec clauses pour l'exploitation des images, 1966</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Logiciel documentaire Clara</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble d'environ 530 clichés sur  verre  du Commandant Quennedey, concernant des exemples d'architecture civile et religieuse dans l'agglomération rouennaise, à Paris et dans d'autres provinces françaises que la Normandie.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>France</geogname>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <geogname>Paris (département et ville)</geogname>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1379">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">14 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies Quennedey</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920">1920</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Seine-Maritime. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+               </did>
+               <originalsloc encodinganalog="3.5.1">
+                  <p>Plaques de verre originales cotées en sous-série 13 Fi</p>
+               </originalsloc>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt avec clauses pour l'exploitation des images, 1966</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Les tirages ont été réalisés par le laboratoire photographique des Archives à partir des clichés sur verre  conservés en 13 Fi</p>
+               </custodhist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Logiciel documentaire Clara</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Epreuves photographiques réalisées à partir des clichés sur verre conservés dans la sous-série 13 Fi.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <geogname>Bihorel (Seine-Maritime)</geogname>
+                  <geogname>Canteleu (Seine-Maritime)</geogname>
+                  <geogname>Les Essarts  (Seine-Maritime)</geogname>
+                  <geogname>Mont-Saint-Aignan (Seine-Maritime)</geogname>
+                  <geogname>Oissel (Seine-Maritime)</geogname>
+                  <geogname>La Vaupalière (Seine-Maritime)</geogname>
+                  <geogname>Saint-Martin-du-Vivier (Seine-Maritime)</geogname>
+                  <persname>Quennedey (commandant)</persname>
+                  <subject>architecture</subject>
+                  <subject>musée</subject>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e526">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">15 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés Vannier</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1930">1900 - 1930</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Vannier, Georges</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>180</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don [ou après dépôt en 1966 par les filles de Georges Vannier], 1966</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble d'environ 180 clichés sur verre concernant des exemples d'architecture civile et religieuse dans l'agglomération rouennaise,  réunis par Georges Vannier et déposés en 1966 aux Archives par ses filles.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e572">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">16 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Galerie brayonne illustrée</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1920">1900 - 1920</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Riden, C.</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <container>8 albums. Tirages collés sur papier très acide</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1928</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié repris dans le logiciel documentaire Clara</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Le vocable de Galerie brayonne illustrée désigne huit albums de photographies, de dessins et de gravures sur le Pays de Bray offerts à la commission départementale des Antiquités.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Bray, Pays de (France)</geogname>
+                  <subject>architecture</subject>
+                  <subject>vie quotidienne</subject>
+                  <subject>arts plastiques</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4065">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">17 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Tragin</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1970/2008">1970 - 2008</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname> Tragin, Didier</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Plusieurs centaines</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement chronologique</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert. Entrée régulière (au fur et à mesure de nouveaux reportages).</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 2006</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds donné par l'auteur des reportages</p>
+               </custodhist>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Didier Tragin, photographe des ADSM et auteur de nombreux reportages à titre privé.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Récolement sous Excel</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Manifestations culturelles et grands travaux d'urbanisme à Rouen. </p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>manifestation culturelle</subject>
+                  <subject>travaux</subject>
+                  <subject>urbanisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e685">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">18 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Germain de Montauzan</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1914/1931">1914 - 1931</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Germain de Montauzan</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de clichés sur verre concernant la Première Guerre mondiale.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Haute-Normandie (région administrative)</geogname>
+                  <geogname>France</geogname>
+                  <subject> guerre mondiale (1914-1918)</subject>
+                  <subject>opération militaire</subject>
+                  <subject>transport aérien</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e725">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">19 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies de Rouen après les bombardements de 1940</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1940">1940</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>300</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1967</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié repris dans le logiciel documentaire Clara</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble d'environ 300 tirages photographiques provenant d'une collection anonyme et représentant les quartiers de Rouen touchés par les bombardements aériens de 1940 et 1944.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>architecture</subject>
+                  <subject>bombardement</subject>
+                  <subject>dommages de guerre</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e768">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">20 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Coutan</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1930">1900 - 1930</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Coutan (Dr.)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Microfilm 16 mm avec recherche automatisée</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1966</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Logiciel documentaire Clara</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de cartes postales antérieures à 1938, dite collection Coutan.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>architecture</subject>
+                  <subject>vie quotidienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e812">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">21 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Lecerf</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1940">1900 - 1940</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Lecerf</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>, <physfacet>film souple au nitrate de cellulose</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>, <physfacet>tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Nombre important de clichés sur verre cassés, négatifs souples dégradés, nitrate de cellulose</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1968</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier dactylographié pour les clichés concernant Rouen, récolement sous Excel pour les épreuves</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Clichés sur verre, négatifs souples et épreuves réalisés pour les publications de  l'imprimeur-éditeur Lecerf et représentant pour la plupart des monuments et objets d'art.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Haute-Normandie (région administrative)</geogname>
+                  <subject> architecture</subject>
+                  <subject>vie quotidienne</subject>
+                  <subject>objet d'art</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e870">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">24 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Daniel Lavallée</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920">1920</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Lavallée, Daniel</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1969</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Daniel Lavallée, ancien conservateur du Musée de Martainville (76116 Martainville-Epreville).</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Récolement</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Clichés sur verre représentant des maisons anciennes donnés par Daniel Lavallée.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <corpname>Musée de Martainville (Seine-Maritime)</corpname>
+                  <function>conservateur</function>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4066">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">36 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Touflet</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1925">1900 - 1925</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>  Touflet (Abbé)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>391</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions type="support_negatif">85 x 100</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement géographique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don de Madame Heulot, 2000</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>L'Abbé Toufflet organisait des visites conférences sur le patrimoine régional.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique </p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Patrimoine religieux régional et national.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <geogname>Seine-Maritime</geogname>
+                  <geogname> France</geogname>
+                  <geogname> Etranger</geogname>
+                  <subject>manifestation culturelle</subject>
+                  <subject>patrimoine</subject>
+                  <subject>édifice cultuel</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4067">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">38 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Flamant</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/1945">1890 - 1945</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname> Flamant,  Roland</persname> ; <persname>Flamant, Eugène</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 500</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions type="support_negatif">90 x 120</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement géographique et thématique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt, 1998</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur autorisation du déposant</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation du déposant</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds légué par les auteurs à la mairie d'Etretat et déposé par celle-ci aux Archives départementales de Seine-Maritime.</p>
+               </custodhist>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Les photographies ont été réalisées par Eugéne Flamant et son fils Roland dans le cadre de leur activité professionnelle.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique </p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Vie quotidienne à Etretat de 1890 à 1945.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Etretat (Seine-Maritime)</geogname>
+                  <subject>hôpital militaire</subject>
+                  <subject>guerre mondiale (1914-1918)</subject>
+                  <subject>guerre mondiale (1939-1945)</subject>
+                  <subject>vie quotidienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4068">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">39 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Ellebé</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949/1980">1949 - 1980</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Lefebvre, Bernard</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Etat de conservation inégal. Certains négatifs sont dégradés.</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement chronologique et thématique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 2000</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre de droits mais problème de droits de l'image et de respect de la vie privée pour certains reportages</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds vendu aux Archives départementales de Seine-Maritime après le décès de l'épouse du photographe.</p>
+               </custodhist>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Les reportages ont été réalisés par Bernard Lefevbre et ses employés dans le cadre d'une activité professionnelle.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Carnet de commande détaillé établi par le producteur et saisi sous Excel par les Archives départementales de Seine-Maritime.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Activité économique, commerciale et culturelle, grands chantiers de la reconstruction et cérémonies familiales à Rouen de 1950 à 1980.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>reconstruction</subject>
+                  <subject>événement</subject>
+                  <subject>vie économique</subject>
+                  <subject>commerce</subject>
+                  <subject>manifestation culturelle</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4069">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">40 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Gaspérini</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1930">[1900 - 1930]</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname> Gaspérini, Alain</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>116</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">90 x 120</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement géographique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 2001</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Collection conservée par Alain Gaspérini.</p>
+               </custodhist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Rouen, patrimoine monumental ; Seine.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <geogname>Seine (fleuve, France)</geogname>
+                  <subject>patrimoine</subject>
+                  <subject>monument</subject>
+                  <subject>fleuve</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4070">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">42 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies de Rouen après les bombardements de 1944</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1944">1944</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>28</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">180 x 240</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement géographique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 2002</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds vendu aux Archives départementales de Seine-Maritime après le décès d'un collectionneur de la banlieue rouennaise.</p>
+               </custodhist>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Les photographies ont été réalisées par un photographe professionnel probablement pour une publication de presse.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Rouen et sa banlieue en ruines.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>guerre mondiale (1939-1945)</subject>
+                  <subject>ruine</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4071">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">44 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Coty</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1954/1958">1954 - 1958</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <famname>Coty</famname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <container>43 albums</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement chronologique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 2002</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droit d'auteurs à rechercher pour certains reportages</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds donné par les descendants directs de René Coty.</p>
+               </custodhist>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Les reportages ont été réalisés par le service de presse de l'Elysée.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Récolement sous Excel</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Manifestations officielles du président de la république en exercice de 1954 à 1958.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Paris (France)</geogname>
+                  <persname>Coty, René</persname>
+                  <subject>manifestation officielle</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4072">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">48 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Hesse</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1930">[1900 - 1930]</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname> Mério (Chanoine)</persname>
+                  </origination>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 2006</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds donné à Jean Hesse par un ecclésiastique rouennais.</p>
+               </custodhist>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Jean Hesse a transmis une collection rassemblée par un ecclésiastique érudit qui organisait des visites guidées du Patrimoine monumental de Rouen et de la Normandie.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Aucun instrument de recherche</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Patrimoine naturel, archéologique et monumental.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>patrimoine</subject>
+                  <subject>archéologie</subject>
+                  <subject>monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4073">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">49 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies du journal Paris-Normandie (édition du Havre)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1980/2000">1980 - 2000</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname> Paris-Normandie</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement thématique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction interdite</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Fonds déposé lors du changement de locaux de la rédaction havraise de <emph render="italic">Paris-Normandie</emph>, du <emph render="italic">Havre-Libre</emph> et du <emph render="italic">Havre-Presse</emph>.</p>
+               </custodhist>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Agence de presse.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Récolement sous excel</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Activité économique, commerciale et culturelle, vie politique locale au Havre et dans sa région de 1980 à 2000.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Le Havre (Seine-Maritime) </geogname>
+                  <subject>vie économique</subject>
+                  <subject>commerce</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject>vie politique</subject>
+                  <subject>vie locale</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4074">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">55 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Epreuves photographiques couleur isolées (format supérieur à 24 x 30 cm)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1970/2099">1970 - </unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname> Seine-Maritime. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">&gt; 240 x 300</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé. Rangé dans l'ordre d'entrée des documents. </p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, 2001 -</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Aucun instrument de recherche</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Patrimoine naturel, archéologique et monumental de la Seine-Maritime.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>patrimoine</subject>
+                  <subject>archéologie</subject>
+                  <subject>monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4075">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">56 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Epreuves photographiques couleur isolées (format inférieur à  24 x 30 cm)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1970/2099">1970 - </unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname> Seine-Maritime. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">&lt; 240 x 300</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé. Rangé dans l'ordre d'entrée des documents. </p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, 2001 -</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Aucun instrument de recherche</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Patrimoine naturel, archéologique et monumental de la Seine-Maritime.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>patrimoine</subject>
+                  <subject>archéologie</subject>
+                  <subject>monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4076">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">57 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Epreuves photographiques noir et blanc (format supérieur à 24 x 30 cm)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1858/2099">1858 - </unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname> Seine-Maritime. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">&gt; 240 x 300</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé. Rangé dans l'ordre d'entrée des documents. </p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, 2001 -</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Aucun instrument de recherche</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Patrimoine naturel, archéologique et monumental de la Seine-Maritime.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>patrimoine</subject>
+                  <subject>archéologie</subject>
+                  <subject>monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4077">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">58 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Epreuves photographiques noir et blanc isolées (format inférieur à  24 x 30 cm)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/2099">1880 - </unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname> Seine-Maritime. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier albuminé</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>110</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">&gt; 240 x 300</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé. Rangé dans l'ordre d'entrée des documents. </p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, 2001 -</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre pour les documents les plus anciens, droits d'auteur à vérifier pour les autres.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Tableau d'indexation sous Excel</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Patrimoine naturel, archéologique et monumental de la Seine-Maritime.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>patrimoine</subject>
+                  <subject>archéologie</subject>
+                  <subject>monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4078">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">59 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Albums de tirages photographiques isolés (format supérieur à 24 x 30 cm)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/2099">1880 - </unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname> Seine-Maritime. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">&gt; 240 x 300</dimensions>
+                  </physdesc>
+                  <container>1 album</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé. Rangé dans l'ordre d'entrée des documents.</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, 2001 -</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques.</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre pour les documents les plus anciens, droits d'auteur à vérifier pour les autres.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Pas d'instrument de recherche.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Patrimoine naturel, archéologique et monumental de la Seine-Maritime.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>patrimoine</subject>
+                  <subject>archéologie</subject>
+                  <subject>monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4079">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">60 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Albums de tirages photographiques isolés (format supérieur à 24 x 30 cm)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/2099">1880 - </unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname> Seine-Maritime. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">&lt; 240 x 300</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé. Rangé dans l'ordre d'entrée des documents. </p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, 2001 -</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre pour les documents les plus anciens, droits d'auteur à vérifier pour les autres.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Pas d'instrument de recherche</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Patrimoine naturel, archéologique et monumental de la Seine-Maritime.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>patrimoine</subject>
+                  <subject>archéologie</subject>
+                  <subject>monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4080">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">61 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés sur verre isolés</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/2099">1890 - </unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1">
+                     <corpname> Seine-Maritime. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>100</extent>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé. Rangé dans l'ordre d'entrée des documents. </p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, 2001 -</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre pour les documents les plus anciens, droits d'auteur à vérifier pour les autres.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Logiciel Clara</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Patrimoine naturel, archéologique et monumental de la Seine-Maritime.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>patrimoine</subject>
+                  <subject>archéologie</subject>
+                  <subject>monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph4081">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">64 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Cartes postales entrées depuis 2001</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/2099">1890 - </unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname> Seine-Maritime. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>200</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé. Rangé dans l'ordre d'entrée des documents. </p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, 2001 -</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès sur rendez-vous auprès du responsable des fonds iconographiques</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre pour les documents les plus anciens, droits d'auteur à vérifier pour les autres.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Logiciel Clara</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Patrimoine naturel, archéologique et monumental de la Seine-Maritime.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>patrimoine</subject>
+                  <subject>archéologie</subject>
+                  <subject>monument</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1895">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">74 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de Vaux de Folletier</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1940">1900 - 1940</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1">
+                     <persname>Vaux de Foletier, François de</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <container>19 albums</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Récolement sous Excel en cours</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Albums de photographies, cartes postales, cartes, plans, gravures, rassemblés par un ancien archiviste.</p>
+               </scopecontent>
+               <controlaccess>
+                  <subject>architecture</subject>
+                  <subject>vie quotidienne</subject>
+                  <subject>art</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1939">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">78 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Lacombe</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1860/1870">1860 - 1870</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Lacombe</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction argentique</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>34</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1971</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier dactylographié</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Reproductions de photographies de Rouen et de Bonsecours sous le Second Empire.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>architecture</subject>
+                  <subject>Second Empire</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1986">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">80 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Herval</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950/1960">1950 - 1960</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Herval, René</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>Albums</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1971</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier dactylographié qui ne permet la recherche que pour les photographies concernant le département de la Seine-Maritime</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Albums de tirages photographiques réalisés  lors d'excursions et de voyages en France et à l'étranger entre 1925 et 1940.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>France</geogname>
+                  <geogname>étranger</geogname>
+                  <subject>architecture</subject>
+                  <subject>tourisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2034">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">81 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies Louvel</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900">1900</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Louvel</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>M.  Louvel, pharmacien à Elbeuf au début du XXe  siècle.</p>
+               </bioghist>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies familiales de M. Louvel.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>famille</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2077">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">86 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés Trottier</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1930">1930</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>259</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1974</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de 259 clichés sur verre composé en majorité de portraits.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Haute-Normandie (région administrative)</geogname>
+                  <geogname>Paris (département et ville)</geogname>
+                  <subject>site</subject>
+                  <subject> tourisme</subject>
+                  <subject>portrait</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1392">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">87 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés Bailly</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900">1900</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1">
+                     <persname>Bailly, Jean</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Epreuves photographiques cotées en 88 Fi</p>
+               </altformavail>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Sous-fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1974</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Clichés sur verre du début du XXe  siècle, représentant des églises et des objets d'art de Haute-Normandie.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Haute-Normandie (région administrative)</geogname>
+                  <subject>architecture</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>objet d'art</subject>
+                  <subject>portrait</subject>
+                  <subject> famille</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1393">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">88 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies Bailly</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900">1900</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Bailly, Jean</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+               </did>
+               <originalsloc encodinganalog="3.5.1">
+                  <p>Plaques de verre originales cotées en 87 Fi</p>
+               </originalsloc>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don,  1983</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié repris dans le logiciel documentaire Clara</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Epreuves photographiques obtenues pour certaines par tirage des clichés sur verre dans la sous-série 87 Fi et représentant des églises et des objets d'art de Haute-Normandie.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Haute-Normandie (région administrative)</geogname>
+                  <subject>architecture</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>objet d'art</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1394">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">89 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies aériennes de l'Institut géographique national (IGN)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1947">1947</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname authfilenumber="FRDAF00APH_NA002">Institut Géographique National (IGN)</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Tableau d'assemblage</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p>Voir les notices des fonds de l'I.G.N. conservés par les autres services</p>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues aériennes zénithales (verticales) de l'Institut géographique national (I.G.N.),  2, rue de Paris à Saint-Mandé (Val-de-Marne).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>commune</subject>
+                  <subject>vue aérienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2294">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">41 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Lemale</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1895/1905">Vers 1900</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Lemale</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>,  <physfacet>tirage papier albuminé</physfacet>
+                  </physdesc>
+                  <container>Tirages albuminés collés sur carton de très mauvaise qualité</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Récolement sous Excel</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Tirages photographiques anciens de monuments de Rouen et du département de la Seine-Maritime.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>site</subject>
+                  <subject>architecture</subject>
+                  <subject>patrimoine culturel</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>objet d'art</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1396">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">90 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Bretocq</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1940/1950">1940 - 1950</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Bretocq, Gabriel (abbé)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <originalsloc encodinganalog="3.5.1">
+                  <p>Plaques de verre originales conservées aux Archives départementales de l'Eure sous la cote 6 Fi</p>
+               </originalsloc>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1975</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention obligatoire "Archives départementales de L'Eure, Fonds Bretocq"</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié repris dans le logiciel documentaire Clara</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Tirages photographiques concernant les monuments de Rouen réalisés à partir des clichés sur  verre de l'abbé Gabriel Bretocq, prêtre, curé de Ménesqueville (Eure).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1397">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">93 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies Bernard Legrand (épreuves)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1975">1975</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Legrand, Bernard</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p> Bernard Legrand, photographe amateur et restaurateur d'objets d'art.</p>
+               </bioghist>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Tirages photographiques réalisés en 1975 par Bernard Legrand, restaurateur d'objets d'art.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>architecture</subject>
+                  <subject>objet d'art</subject>
+                  <subject>arts plastiques</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1398">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">94 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés Bernard Legrand</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1975">1975</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Legrand, Bernard</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p> Bernard Legrand, photographe amateur et restaurateur d'objets d'art.</p>
+               </bioghist>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Clichés réalisées en 1975 par Bernard Legrand, restaurateur d'objets d'art.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>architecture</subject>
+                  <subject>objet d'art</subject>
+                  <subject>arts plastiques</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2532">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">99 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Ellebé</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/1922">1880 - 1922</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Avenel</persname>,  <persname>Witz</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1987</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Récolement sous Excel</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Tirages photographiques anciens concernant l'architecture religieuse, la vie locale et les bateaux dans l'agglomération rouennaise et ses environs.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <persname>Ellebé</persname>
+                  <subject>architecture</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>vie quotidienne</subject>
+                  <subject>commune</subject>
+                  <subject>navire</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1400">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">100 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photothèque aérienne de la Documentation française</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1977">1977</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Documentation française</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1978</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre pour les épreuves</p>
+                  <p>Accès interdit pour les négatifs</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Interphotothèque, n° 35 : <emph render="italic">Reportage aérien, Haute Normandie</emph>, mai 1978, 42 pages</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de clichés  et de tirages réalisés par la Documentation Française en 1977, dans le cadre d'<emph render="italic">Interphotothèque</emph>.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <geogname>Eure (département)</geogname>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1401">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">101 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photothèque aérienne de la Documentation française (diapositives)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1977">1977</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Documentation française</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Duplicata de diapositives</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1978</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Interphotothèque, n° 35 :<emph render="italic">Reportage aérien, Haute Normandie</emph>, mai 1978, 42 pages</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de diapositives réalisées par le Documentation Française en 1977, dans le cadre d' <emph render="italic">Interphotothèque</emph>.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <geogname>Eure (département)</geogname>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1402">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">102 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photothèque aérienne de la Documentation française (tirages 13 x 18 cm)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1977">1977</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Documentation française</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">130 x 180</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1978</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Interphotothèque, n° 35 : <emph render="italic">Reportage aérien, Haute Normandie</emph>, mai 1978, 42 pages</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de tirages photographiques au format 13 x 18 cm, réalisés par le Documentation française en 1977, dans le cadre d' <emph render="italic">Interphotothèque</emph>.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <geogname>Eure (département)</geogname>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph1403">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">106 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies aériennes Roger Henrard</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1948/1972">1948 - 1972</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname authfilenumber="FRDAF00APH_NA003">Henrard, Roger (photographe)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1978</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié repris dans le logiciel documentaire Clara</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p>Voir les notices  des fonds Henrard conservés par les autres services d'archives</p>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies aériennes obliques réalisées entre 1948 et 1972 par Roger Henrard,  fondateur de la "Société d'exploitation de la Photographie aérienne Roger Henrard", acquises par le département de la Seine-Maritime en 1978.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <corpname>Société d'exploitation de la photographie aérienne Roger Henrard</corpname>
+                  <subject>commune</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2850">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">107 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés Rigondet</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920">1920</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Rigondet</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>453</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1972</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>
+                     <emph render="italic">Collection Lebouc</emph>, répertoire numérique, 1991, 9 pages</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de 453 clichés sur  verre illustrant principalement l'agglomération rouennaise entre 1900 et 1914.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>architecture</subject>
+                  <subject>agglomération urbaine</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2899">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">153 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Prod'homme</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1930/1970">1930 - 1970</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1987</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Tirages photographiques réalisés par des photographes ayant travaillé pour le compte des entreprises Chouard et Morillon-Corvol à Rouen.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <corpname>Chouard et Morillon-Corvol</corpname>
+                  <subject>travaux d'utilité publique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2940">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">154 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies Marie-Hélène Delpeuch</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1978">1978</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1">
+                     <persname>Delpeuch-Joly, Marie-Hélène</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt, 1980</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de photographies réalisées par Marie-Hélène Delpeuch dans le cadre de sa thèse de l'École nationale des Chartes sur l'architecture religieuse dans le Pays de Caux aux XVe  et XVIe  siècles.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Caux, Pays de (Seine-Maritime)</geogname>
+                  <subject>architecture</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>recherche scientifique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2989">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">155 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés Lucien Levrat</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1930/1935">1930 - 1935</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Levrat, Lucien</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1973</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Lucien Levrat, président du Photo-club rouennais.</p>
+               </bioghist>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de clichés sur verre de Lucien Levrat vers 1930.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Dieppe (Seine-Maritime)</geogname>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <geogname>Seine (fleuve)</geogname>
+                  <geogname>Eure (département)</geogname>
+                  <persname>Charcot (commandant)</persname>
+                  <subject>commune</subject>
+                  <subject>architecture</subject>
+                  <subject>personnalité</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3047">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">157 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Chesneau</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/1920">1890 - 1920</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Chesneau, Louis</persname>  ; <persname>Panthou, Paul</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>,  <physfacet>tirage papier albuminé</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Une partie des clichés a été endommagée lors d'un dégat des eaux ancien</p>
+               </phystech>
+               <accruals encodinganalog="3.3.3">
+                  <p>Ce dépôt ne concerne qu'un tiers du fonds, d'autres clichés sont susceptibles de faire l'objet d'un don</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt avec clauses pour l'exploitation des images, 1983</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>En cas de publication des images un exemplaire de la publication doit être remis au déposant</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Récolement sous Excel</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Clichés sur verre et tirages photographiques réalisés par Louis Chesneau et Paul Panthou photographes amateurs entre 1895 et 1920.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>France</geogname>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <geogname>étranger</geogname>
+                  <persname>Aymes</persname>
+                  <subject>commune</subject>
+                  <subject>architecture</subject>
+                  <subject> guerre mondiale (1914-1918)</subject>
+                  <subject>association</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3115">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1"> 158 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés sur  verre</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1860/1920">1860 - 1920</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Avenel</persname> ;  <persname>Witz</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>300</extent>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Collection non classée</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1987</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de clichés sur verre réalisés dans l'agglomération rouennaise vers 1900.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>commune</subject>
+                  <subject>transport</subject>
+                  <subject>vie religieuse</subject>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3166">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">159 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Pelay</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900">1900</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1">
+                     <persname>Poussin (abbé)</persname>
+                     <persname>Merio, A.</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1972</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès interdit ou soumis à autorisation</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique, 1992 (ne couvre pas l'ensemble du fonds)</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de clichés sur verre concernant essentiellement l'architecture religieuse de la France vers 1900.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <geogname>France</geogname>
+                  <geogname>étranger</geogname>
+                  <persname>Pelay</persname>
+                  <subject>architecture</subject>
+                  <subject>portrait</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3218">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">160 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies Normandie-Sport</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1930/1940">1930 - 1940</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble d'épreuves de photographies de presse réalisées lors de compétitions sportives dans les années 1930-1940.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>manifestation sportive</subject>
+                  <subject>discipline sportive</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3257">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">161 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies Senille</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920">1920</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>105</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1979</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Logiciel documentaire Clara</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de 105 photographies sur le sport à Rouen vers 1920.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>sport</subject>
+                  <subject>manifestation sportive</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3298">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">162 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies familiales et touristiques</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1930">1930</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <container>Albums</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1980</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Récolement sous Excel</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Albums de photographies familiales et touristique d'origine  inconnue.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>France</geogname>
+                  <famname> Aymes (famille)</famname>
+                  <subject>tourisme</subject>
+                  <subject>famille</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3340">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">163 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Sigaut et de La Grandière</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1897/1902">1897 - 1902</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Sigaut</persname> ;  <persname>Grandière, de la</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>31</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds non classé</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1980</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies (tirages et clichés sur verre) prises vers 1900 par M. Sigaut, industriel, lors de ses déplacements à Rouen puis par son successeur M. de La Grandière.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3388">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">174 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Album normand d'A Beaucousin</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900">1900</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Beaucousin, A.</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <container>1 album</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>A.Beaucousin, érudit local, historien d'Yvetot.</p>
+               </bioghist>
+               <scopecontent encodinganalog="summary">
+                  <p>Album de gravures et de photographies concernant l'architecture civile et religieuse, l'héraldique  et le Pays de Caux.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Caux, Pays de (Seine-Maritime)</geogname>
+                  <subject>architecture</subject>
+                  <subject>patrimoine culturel</subject>
+                  <subject>édifice cultuel</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3431">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">176 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Album Bergoin</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian">Non précisées</unitdate>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Bergoin</persname>
+                  </origination>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>1 album</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1971</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Mr Bergoin, photographe professionnel à Fécamp.</p>
+               </bioghist>
+               <scopecontent encodinganalog="summary">
+                  <p>Album de tirages photographiques réalisés par un photographe fécampois donné à la Commission départementale des Antiquités.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Fécamp (Seine-Maritime)</geogname>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3475">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">183 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés Stihl</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900">1900</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Stihl</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1992</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Récolement</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Clichés négatifs de cartes postales, sur supports souples négatifs et tirage papier représentant l'architecture et la vie religieuse dans la Seine-Maritime, vers le début du XXe  siècle.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <subject>vie religieuse</subject>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3525">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">194 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Portraits de magistrats de la Cour d'appel de Rouen</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/1930">189 - 1930</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Rouen. Cour d'appel</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>1 album</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1990</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié, 1990, 3 pages</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Album de portraits photographiques des magistrats de la cour d'appel de Rouen entré aux Archives départementales de la Seine-Maritime dans un versement de cette instance.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <persname>Jeanne d'Arc (1412 - 1431)</persname>
+                  <subject>portrait</subject>
+                  <subject>commémoration</subject>
+                  <subject>décès</subject>
+                  <subject>magistrat</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3578">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">196 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Valle</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1950">1ère  moitié du XXe  siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Valle, Paul</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>17</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique, 1991, 1 page</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>17 photographies de fêtes et manifestations religieuses à Rouen par Paul Valle, photographe à Rouen.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <occupation>président de la république</occupation>
+                  <subject>vie religieuse</subject>
+                  <subject>fête</subject>
+                  <subject>population</subject>
+                  <subject>ministre du culte</subject>
+                  <subject>catholicisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3639">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">197 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies de véhicules automobiles anciens</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1898/1938">1898 - 1938</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction argentique</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>45</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique, 1991, 3 pages</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>45 reproductions de photographies de véhicules automobiles anciens.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Rouen (Seine-Maritime)</geogname>
+                  <geogname>Normandie (France)</geogname>
+                  <subject> transport en commun</subject>
+                  <subject>véhicule automobile</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e3683">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">198 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Lebouc</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920/1970">1920 - 1970</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Lebouc</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container> 6 classeurs</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>
+                     <emph render="italic">Collection Lebouc</emph>, répertoire numérique, 1991, 9 pages</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de 6 classeurs d'épreuves photographiques représentant des bateaux construits entre 1920 et 1970  aux chantiers du Trait. Ces photographies sont accompagnées de fiches techniques.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Le Trait (Seine-Maritime)</geogname>
+                  <subject>construction navale</subject>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e3729">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales d'Elbeuf</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="ph1941">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photothèque des archives d'Elbeuf</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1867/1996">1867 - 1996</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Elbeuf. Services municipaux</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>8 597</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2 630</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>6 198</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>, <genreform>carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 000</extent>
+                  </physdesc>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Certaines cartes postales et vues aériennes sont consultables sur le site <emph render="italic">Patrimoine numérique, catalogue des collections numérisées</emph>  à l'adresse suivante : http://www.numerique.culture.fr/mpf/pub-fr/document.html?base=institution&amp;id=FR-IN-AC076231&amp;ext=true</p>
+               </altformavail>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, don et achat, 1983 - 1996</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Pour la totalité du fonds : Fichier provisoire établi selon un plan de classement spécifique regroupant les épreuves papier, les négatifs et les diapositives</p>
+                  <p>Pour une partie de pièces sélectionnées en fonction de leur intérêt : Accès aux analyses et images numérisées par une base de données développée avec le logiciel Avenio</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> La photothèque couvre essentiellement, en ce qui concerne Elbeuf et son agglomération, les trois grands thèmes suivants :  l'activité textile avec les vues d'intérieurs et extérieurs des bâtiments des usines, l'urbanisme d'hier avec la reconstruction qui suivit la Deuxième guerre mondiale, les travaux d'aujourd'hui, et enfin les loisirs et l'activité culturelle.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <geogname>Elbeuf (Seine-Maritime)</geogname>
+                  <subject>industrie textile</subject>
+                  <subject>bâtiment industriel</subject>
+                  <subject>urbanisme</subject>
+                  <subject>guerre mondiale (1939-1945)</subject>
+                  <subject>reconstruction</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject>loisir</subject>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e3828">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales du Petit-Quevilly</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e3832">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">2 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies du service communication de la ville de Petit-Quevilly</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1946/2000">1946 - 2000</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Le Petit-Quevilly. Service communication</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique moderne baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">&lt; 240 x 300</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique plastifié</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>, <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">&lt; 240 x 300</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction argentique</genreform>
+                  </physdesc>
+                  <container>Pochettes</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Bon état de conservation</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement opéré par thème.</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 2001</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire numérique informatisé.</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies relatives à l'activité du service.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Seine-Maritime (département)</geogname>
+                  <geogname>Le Petit-Quevilly (Seine-Maritime)</geogname>
+                  <subject>urbanisme</subject>
+                  <subject> réception</subject>
+                  <subject> enfance</subject>
+                  <subject> jeunesse</subject>
+                  <subject> sport</subject>
+                  <subject> art</subject>
+                  <subject> spectacle</subject>
+                  <subject> fête</subject>
+                  <subject> exposition</subject>
+                  <subject> personne âgée</subject>
+                  <subject> protocole</subject>
+                  <subject> distinction honorifique</subject>
+                  <subject> élu</subject>
+                  <subject> réunion</subject>
+                  <subject> équipement sportif</subject>
+                  <subject> établissement scolaire</subject>
+                  <subject> commerce</subject>
+                  <subject> marché</subject>
+                  <subject> patrimoine architectural</subject>
+                  <subject> rue</subject>
+                  <subject> place</subject>
+                  <subject> voirie</subject>
+                  <subject> industrie</subject>
+                  <subject> bâtiment communal</subject>
+                  <subject> grève</subject>
+                  <subject> manifestation</subject>
+               </controlaccess>
+            </c>
+         </c>
+      </dsc>
+   </archdesc>
+</ead>

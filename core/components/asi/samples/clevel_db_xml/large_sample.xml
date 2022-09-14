@@ -1,0 +1,870 @@
+<c xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" level="file" encodinganalog="3.1.4" id="DE-BA_eadid_c-fonds-unitid_c-file-unitid">
+    <did>
+        <unitid encodinganalog="3.1.1" type="call number">c-file-unitid <extptr xlink:href="DE-BA_eadid2_c-file-unitid" xlink:title=""/></unitid>
+        <unittitle encodinganalog="3.1.2">c-file-unittitle<lb/>with a
+            linebreak</unittitle>
+        <unitdate calendar="gregorian" era="ce" normal="2011" encodinganalog="3.1.3">c-file-unitdate</unitdate>
+        <dao xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file1-dao1"/>
+        <unitid type="former call number" encodinganalog="3.1.1">c-file-unitid-former
+            <title> not allowed anymore within c-file-unitid-title</title>
+        </unitid>
+        <unitid type="former call number" encodinganalog="3.1.1">c-file-unitid-former
+            (repeated) <title>c-file-unitid-title</title>
+        </unitid>
+        <unitid type="file reference" encodinganalog="3.1.1">c-file-unitid reference
+            <title>c-file-unitid-title</title>
+        </unitid>
+        <unitid type="file reference" encodinganalog="3.1.1">c-file-unitid reference
+            (repeated) <title>c-file-unitid-title</title>
+        </unitid>
+        <origination encodinganalog="3.2.1"> c-file-origination</origination>
+        <origination label="pre" encodinganalog="3.2.1">c-file-origination
+            (pre)</origination>
+        <origination label="final" encodinganalog="3.2.1">c-file-origination
+            (final)</origination>
+        <origination label="organisational unit" encodinganalog="3.2.1">
+            c-file-origination (organisational unit) </origination>
+        <origination encodinganalog="3.2.1">
+            <corpname authfilenumber="DE/BA/BA_29">c-file-origination-corpname</corpname>
+        </origination>
+        <origination label="pre" encodinganalog="3.2.1">
+            <corpname authfilenumber="DE/BA/BA_30">c-file-origination-corpname
+                (pre)</corpname>
+        </origination>
+        <origination label="final" encodinganalog="3.2.1">
+            <corpname authfilenumber="DE/BA/BA_31">c-file-origination-corpname
+                (final)</corpname>
+        </origination>
+        <origination label="organisational unit" encodinganalog="3.2.1">
+            <corpname authfilenumber="DE/BA/BA_32">c-file-origination-corpname
+                (organisational unit)</corpname>
+        </origination>
+        <origination encodinganalog="3.2.1">
+            <name authfilenumber="DE/BA/BA_33">c-file-origination-name</name>
+        </origination>
+        <origination label="pre" encodinganalog="3.2.1">
+            <name authfilenumber="DE/BA/BA_34">c-file-origination-name (pre)</name>
+        </origination>
+        <origination label="final" encodinganalog="3.2.1">
+            <name authfilenumber="DE/BA/BA_35">c-file-origination-name (final)</name>
+        </origination>
+        <origination label="organisational unit" encodinganalog="3.2.1">
+            <name authfilenumber="DE/BA/BA_36">c-file-origination-name (organisational
+                unit)</name>
+        </origination>
+        <origination encodinganalog="3.2.1">
+            <persname authfilenumber="DE/BA/BA_37">c-file-origination-persname</persname>
+        </origination>
+        <origination label="pre" encodinganalog="3.2.1">
+            <persname authfilenumber="DE/BA/BA_38">c-file-origination-persname (pre)
+            </persname>
+        </origination>
+        <origination label="final" encodinganalog="3.2.1">
+            <persname authfilenumber="DE/BA/BA_39">c-file-origination-persname (final)
+            </persname>
+        </origination>
+        <origination encodinganalog="3.2.1">
+            <famname authfilenumber="DE/BA/BA_40">c-file-origination-famname</famname>
+        </origination>
+        <origination label="pre" encodinganalog="3.2.1">
+            <famname authfilenumber="DE/BA/BA_41">c-file-origination-famname (pre)
+            </famname>
+        </origination>
+        <origination label="final" encodinganalog="3.2.1">
+            <famname authfilenumber="DE/BA/BA_42">c-file-origination-famname (final)
+            </famname>
+        </origination>
+        <langmaterial encodinganalog="3.4.3">c-file-langmaterial <language langcode="eng" scriptcode="Latn">language 1</language>, <language langcode="fre" scriptcode="Latn">language 2 </language>and <language langcode="ger" scriptcode="Latn">language 3</language>.</langmaterial>
+        <repository>c-file-repository <address>
+            <addressline>c-file-repository-addressline</addressline>
+        </address>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title=""/>
+        </repository>
+        <repository>c-file-repository (repeated) <address>
+            <addressline>c-file-repository-addressline</addressline>
+        </address>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title=""/>
+        </repository>
+        <physloc label="c-file-physloc-label">c-file-physloc</physloc>
+        <materialspec>c-file-materialspec</materialspec>
+        <physdesc encodinganalog="3.1.5">c-file-physdesc (without subelements)</physdesc>
+        <physdesc encodinganalog="3.1.5">c-file-physdesc (with subelements and mixed
+            content) <physfacet type="condition">c-file-physfacet-condition</physfacet>
+            <physfacet type="damage">c-file-physfacet-damage</physfacet>
+            <extent unit="unit of measurement">c-file-extent</extent>
+            <extent unit="unit of measurement">c-file-extent (repeated)</extent>
+            <genreform>c-file-genreform</genreform>
+            <genreform>c-file-genreform (repeated)</genreform>
+            <dimensions type="specified type" unit="unit of measurement">c-file-dimensions</dimensions>
+            <dimensions type="specified type" unit="unit of measurement">c-file-dimensions
+                (repeated)</dimensions>
+        </physdesc>
+        <physdesc encodinganalog="3.1.5">
+            <physfacet type="condition">c-file-physfacet-condition</physfacet>
+            <physfacet type="damage">c-file-physfacet-damage</physfacet>
+            <extent unit="unit of measurement">c-file-extent</extent>
+            <extent unit="unit of measurement">c-file-extent (repeated)</extent>
+            <genreform>c-file-genreform</genreform>
+            <genreform>c-file-genreform (repeated)</genreform>
+            <dimensions type="specified type" unit="unit of measurement">c-file-dimensions</dimensions>
+            <dimensions type="specified type" unit="unit of measurement">c-file-dimensions
+                (repeated)</dimensions>
+        </physdesc>
+        <note encodinganalog="3.6.1" label="c-file-note-label">
+            <p>c-file-note-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+                use <expan abbr="abbr."> abbreviations </expan> or to link to a related
+                <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-note-p-extref">online publication </extref><extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-note-p-extref">or two </extref>.</p>
+        </note>
+        <note encodinganalog="3.6.1" label="c-file-note-label">
+            <p>c-file-note-p (repeated)<lb/> after a single line break with some text in
+                <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr>
+                to use <expan abbr="abbr."> abbreviations </expan> or to link to a related
+                <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-note-p-extref">online publication </extref><extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-note-p-extref">or two </extref>.</p>
+        </note>
+    </did>
+    <appraisal encodinganalog="3.3.2">
+        <head>c-file-appraisal-head</head>
+        <p>c-file-appraisal-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-appraisal-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-appraisal-p-extref"> or two </extref> .</p>
+
+        <p>c-file-appraisal-p (repeated)<lb/> after a single line break with some text in
+            <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-appraisal-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-appraisal-p-extref"> or two </extref> .</p>
+        <list type="marked">
+
+            <item>c-file-appraisal-item 1 in a simple list</item>
+            <item>c-file-appraisal-item 2 in a simple list</item>
+            <item>c-file-appraisal-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+
+            <item>c-file-appraisal-item 1 in an enumeration</item>
+            <item>c-file-appraisal-item 2 in an enumeration</item>
+            <item>c-file-appraisal-item 3 in an enumeration</item>
+        </list>
+        <table>
+
+            <head>c-file-appraisal-table-head</head>
+            <tgroup cols="3">
+
+                <thead>
+                    <row>
+                        <entry>c-file-appraisal-table-thead-entry 1</entry>
+                        <entry>c-file-appraisal-table-thead-entry 2</entry>
+                        <entry>c-file-appraisal-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-appraisal-table-thead-entry 1</entry>
+                        <entry>c-file-appraisal-table-thead-entry 2</entry>
+                        <entry>c-file-appraisal-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-appraisal-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-appraisal-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-appraisal-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-appraisal-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-appraisal-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-appraisal-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-appraisal-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-appraisal-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-appraisal-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </appraisal>
+    <processinfo encodinganalog="3.7.1">
+
+        <head>c-file-processinfo-head</head>
+        <p>c-file-processinfo-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-processinfo-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-processinfo-p-extref"> or two </extref> .</p>
+        <p>c-file-processinfo-p (repeated)<lb/> after a single line break with some text
+            in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-processinfo-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-processinfo-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-processinfo-item 1 in a simple list</item>
+            <item>c-file-processinfo-item 2 in a simple list</item>
+            <item>c-file-processinfo-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-processinfo-item 1 in an enumeration</item>
+            <item>c-file-processinfol-item 2 in an enumeration</item>
+            <item>c-file-processinfo-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-processinfo-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-processinfo-table-thead-entry 1</entry>
+                        <entry>c-file-processinfo-table-thead-entry 2</entry>
+                        <entry>c-file-processinfo-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-processinfo-table-thead-entry 1</entry>
+                        <entry>c-file-processinfo-table-thead-entry 2</entry>
+                        <entry>c-file-processinfo-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-processinfo-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-processinfo-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-processinfo-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-processinfo-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-processinfo-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-processinfo-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-processinfo-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-processinfo-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-processinfo-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </processinfo>
+    <custodhist encodinganalog="3.2.3">
+        <head>c-file-custodhist-head</head>
+        <p>c-file-custodhist-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-custodhist-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-custodhist-p-extref"> or two </extref> .</p>
+        <p>c-file-custodhist-p (repeated)<lb/> after a single line break with some text in
+            <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-custodhist-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-custodhist-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-custodhist-item 1 in a simple list</item>
+            <item>c-file-custodhist-item 2 in a simple list</item>
+            <item>c-file-custodhist-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-custodhist-item 1 in an enumeration</item>
+            <item>c-file-custodhist-item 2 in an enumeration</item>
+            <item>c-file-custodhist-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-custodhist-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-custodhist-table-thead-entry 1</entry>
+                        <entry>c-file-custodhist-table-thead-entry 2</entry>
+                        <entry>c-file-custodhist-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-custodhist-table-thead-entry 1</entry>
+                        <entry>c-file-custodhist-table-thead-entry 2</entry>
+                        <entry>c-file-custodhist-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-custodhist-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-custodhist-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-custodhist-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-custodhist-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-custodhist-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-custodhist-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-custodhist-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-custodhist-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-custodhist-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </custodhist>
+    <bioghist encodinganalog="3.2.2">
+        <head>c-file-bioghist-head</head>
+        <p>c-file-bioghist-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-bioghist-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-bioghist-p-extref"> or two </extref> .</p>
+        <p>c-file-bioghist-p (repeated)<lb/> after a single line break with some text in
+            <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-bioghist-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-bioghist-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-bioghist-item 1 in a simple list</item>
+            <item>c-file-bioghist-item 2 in a simple list</item>
+            <item>c-file-bioghist-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-bioghist-item 1 in an enumeration</item>
+            <item>c-file-bioghist-item 2 in an enumeration</item>
+            <item>c-file-bioghist-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-bioghist-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-bioghist-table-thead-entry 1</entry>
+                        <entry>c-file-bioghist-table-thead-entry 2</entry>
+                        <entry>c-file-bioghist-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-bioghist-table-thead-entry 1</entry>
+                        <entry>c-file-bioghist-table-thead-entry 2</entry>
+                        <entry>c-file-bioghist-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-bioghist-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-bioghist-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-bioghist-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-bioghist-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-bioghist-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-bioghist-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-bioghist-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-bioghist-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-bioghist-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </bioghist>
+    <accruals encodinganalog="3.3.3">
+        <head>c-file-accruals-head</head>
+        <p>c-file-accruals-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-accruals-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-accruals-p-extref"> or two </extref> .</p>
+        <p>c-file-accruals-p (repeated)<lb/> after a single line break with some text in
+            <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-accruals-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-accruals-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-accruals-item 1 in a simple list</item>
+            <item>c-file-accruals-item 2 in a simple list</item>
+            <item>c-file-accruals-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-accruals-item 1 in an enumeration</item>
+            <item>c-file-accruals-item 2 in an enumeration</item>
+            <item>c-file-accruals-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-accruals-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-accruals-table-thead-entry 1</entry>
+                        <entry>c-file-accruals-table-thead-entry 2</entry>
+                        <entry>c-file-accruals-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-accruals-table-thead-entry 1</entry>
+                        <entry>c-file-accruals-table-thead-entry 2</entry>
+                        <entry>c-file-accruals-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-accruals-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-accruals-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-accruals-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-accruals-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-accruals-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-accruals-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-accruals-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-accruals-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-accruals-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </accruals>
+    <altformavail encodinganalog="3.5.2">
+        <head>c-file-altformavail-head</head>
+        <p>c-file-altformavail-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-altformavail-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-altformavail-p-extref"> or two </extref> .</p>
+        <p>c-file-altformavail-p (repeated)<lb/> after a single line break with some text
+            in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-altformavail-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-altformavail-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-altformavail-item 1 in a simple list</item>
+            <item>c-file-altformavail-item 2 in a simple list</item>
+            <item>c-file-altformavail-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-altformavail-item 1 in an enumeration</item>
+            <item>c-file-altformavail-item 2 in an enumeration</item>
+            <item>c-file-altformavail-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-altformavail-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-altformavail-table-thead-entry 1</entry>
+                        <entry>c-file-altformavail-table-thead-entry 2</entry>
+                        <entry>c-file-altformavail-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-altformavail-table-thead-entry 1</entry>
+                        <entry>c-file-altformavail-table-thead-entry 2</entry>
+                        <entry>c-file-altformavail-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-altformavail-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-altformavail-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-altformavail-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-altformavail-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-altformavail-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-altformavail-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-altformavail-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-altformavail-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-altformavail-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </altformavail>
+    <relatedmaterial encodinganalog="3.5.3">
+        <head>c-file-relatedmaterial-head</head>
+        <p>c-file-relatedmaterial-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-relatedmaterial-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-relatedmaterial-p-extref"> or two </extref> .</p>
+        <p>c-file-relatedmaterial-p (repeated)<lb/> after a single line break with some
+            text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-relatedmaterial-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-relatedmaterial-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-relatedmaterial-item 1 in a simple list</item>
+            <item>c-file-relatedmaterial-item 2 in a simple list</item>
+            <item>c-file-relatedmaterial-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-relatedmaterial-item 1 in an enumeration</item>
+            <item>c-file-relatedmaterial-item 2 in an enumeration</item>
+            <item>c-file-relatedmaterial-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-relatedmaterial-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-relatedmaterial-table-thead-entry 1</entry>
+                        <entry>c-file-relatedmaterial-table-thead-entry 2</entry>
+                        <entry>c-file-relatedmaterial-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-relatedmaterial-table-thead-entry 1</entry>
+                        <entry>c-file-relatedmaterial-table-thead-entry 2</entry>
+                        <entry>c-file-relatedmaterial-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-relatedmaterial-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-relatedmaterial-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-relatedmaterial-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-relatedmaterial-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-relatedmaterial-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-relatedmaterial-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-relatedmaterial-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-relatedmaterial-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-relatedmaterial-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </relatedmaterial>
+    <otherfindaid encodinganalog="3.4.5">
+        <head>c-file-otherfindaid-head</head>
+        <p>c-file-otherfindaid-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-otherfindaid-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-otherfindaid-p-extref"> or two </extref> .</p>
+        <p>c-file-otherfindaid-p (repeated)<lb/> after a single line break with some text
+            in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-otherfindaid-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-otherfindaid-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-otherfindaid-item 1 in a simple list</item>
+            <item>c-file-otherfindaid-item 2 in a simple list</item>
+            <item>c-file-otherfindaid-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-otherfindaid-item 1 in an enumeration</item>
+            <item>c-file-otherfindaid-item 2 in an enumeration</item>
+            <item>c-file-otherfindaid-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-otherfindaid-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-otherfindaid-table-thead-entry 1</entry>
+                        <entry>c-file-otherfindaid-table-thead-entry 2</entry>
+                        <entry>c-file-otherfindaid-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-otherfindaid-table-thead-entry 1</entry>
+                        <entry>c-file-otherfindaid-table-thead-entry 2</entry>
+                        <entry>c-file-otherfindaid-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-otherfindaid-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-otherfindaid-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-otherfindaid-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-otherfindaid-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-otherfindaid-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-otherfindaid-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-otherfindaid-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-otherfindaid-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-otherfindaid-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </otherfindaid>
+    <accessrestrict encodinganalog="3.4.1">
+        <head>c-file-accessrestrict-head</head>
+        <p>c-file-accessrestrict-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-accessrestrict-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-accessrestrict-p-extref"> or two </extref> .</p>
+        <p>c-file-accessrestrict-p (repeated)<lb/> after a single line break with some
+            text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-accessrestrict-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-accessrestrict-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-accessrestrict-item 1 in a simple list</item>
+            <item>c-file-accessrestrict-item 2 in a simple list</item>
+            <item>c-file-accessrestrict-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-accessrestrict-item 1 in an enumeration</item>
+            <item>c-file-accessrestrict-item 2 in an enumeration</item>
+            <item>c-file-accessrestrict-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-accessrestrict-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-accessrestrict-table-thead-entry 1</entry>
+                        <entry>c-file-accessrestrict-table-thead-entry 2</entry>
+                        <entry>c-file-accessrestrict-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-accessrestrict-table-thead-entry 1</entry>
+                        <entry>c-file-accessrestrict-table-thead-entry 2</entry>
+                        <entry>c-file-accessrestrict-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-accessrestrict-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-accessrestrict-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-accessrestrict-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-accessrestrict-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-accessrestrict-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-accessrestrict-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-accessrestrict-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-accessrestrict-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-accessrestrict-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </accessrestrict>
+    <userestrict encodinganalog="3.4.2">
+        <head>c-file-userestrict-head</head>
+        <p>c-file-userestrict-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-userestrict-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-userestrict-p-extref"> or two </extref> .</p>
+        <p>c-file-userestrict-p (repeated)<lb/> after a single line break with some text
+            in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-userestrict-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-userestrict-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-userestrict-item 1 in a simple list</item>
+            <item>c-file-userestrict-item 2 in a simple list</item>
+            <item>c-file-userestrict-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-userestrict-item 1 in an enumeration</item>
+            <item>c-file-userestrict-item 2 in an enumeration</item>
+            <item>c-file-userestrict-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-userestrict-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-userestrict-table-thead-entry 1</entry>
+                        <entry>c-file-userestrict-table-thead-entry 2</entry>
+                        <entry>c-file-userestrict-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-userestrict-table-thead-entry 1</entry>
+                        <entry>c-file-userestrict-table-thead-entry 2</entry>
+                        <entry>c-file-userestrict-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-userestrict-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-userestrict-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-userestrict-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-userestrict-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-userestrict-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-userestrict-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-userestrict-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-userestrict-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-userestrict-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </userestrict>
+    <phystech encodinganalog="3.4.4">
+        <head>c-file-phystech-head</head>
+        <p>c-file-phystech-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-phystech-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-phystech-p-extref"> or two </extref> .</p>
+        <p>c-file-phystech-p (repeated)<lb/> after a single line break with some text in
+            <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-phystech-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-phystech-p-extref"> or two </extref> .</p>
+    </phystech>
+    <scopecontent encodinganalog="summary">
+        <head>c-file-scopecontent1-head</head>
+        <p>c-file-scopecontent1-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-scopecontent1-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-scopecontent1-p-extref"> or two </extref> .</p>
+        <p>c-file-scopecontent1-p (repeated)<lb/> after a single line break with some text
+            in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-scopecontent1-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-scopecontent1-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-scopecontent1-item 1 in a simple list</item>
+            <item>c-file-scopecontent1-item 2 in a simple list</item>
+            <item>c-file-scopecontent1-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-scopecontent1-item 1 in an enumeration</item>
+            <item>c-file-scopecontent1-item 2 in an enumeration</item>
+            <item>c-file-scopecontent1-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-scopecontent1-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-scopecontent1-table-thead-entry 1</entry>
+                        <entry>c-file-scopecontent1-table-thead-entry 2</entry>
+                        <entry>c-file-scopecontent1-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-scopecontent1-table-thead-entry 1</entry>
+                        <entry>c-file-scopecontent1-table-thead-entry 2</entry>
+                        <entry>c-file-scopecontent1-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-scopecontent1-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-scopecontent1-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-scopecontent1-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-scopecontent1-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-scopecontent1-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-scopecontent1-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-scopecontent1-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-scopecontent1-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-scopecontent1-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </scopecontent>
+    <bibliography encodinganalog="3.5.4">
+        <head>c-file-bibliography-head</head>
+        <p>c-file-bibliography-p with a link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-bibliography-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-bibliography-p-extref"> or two </extref>. </p>
+        <bibref xlink:href="http://www.archivesportaleurope.net">c-file-bibliography-bibref <name>c-file-bibliography-bibref-name</name>
+            <name>c-file-bibliography-bibref-name (repeated)</name>
+            <title>c-file-bibliography-bibref-title</title>
+            <title>c-file-bibliography-bibref-title (repeated)</title>
+            <imprint>c-file-bibliography-bibref-imprint
+                <publisher>c-file-bibliography-bibref-publisher</publisher>
+                <publisher>c-file-bibliography-bibref-publisher (repeated)</publisher>
+                <geogname>c-file-bibliography-bibref-geogname</geogname>
+                <geogname>c-file-bibliography-bibref-geogname (repeated)</geogname>
+                <date>c-file-bibliography-bibref-date</date>
+                <date>c-file-bibliography-bibref-date (repeated)</date>
+            </imprint>
+            <imprint>c-file-bibliography-bibref-imprint (repeated)
+                <publisher>c-file-bibliography-bibref-publisher</publisher>
+                <publisher>c-file-bibliography-bibref-publisher (repeated)</publisher>
+                <geogname>c-file-bibliography-bibref-geogname</geogname>
+                <geogname>c-file-bibliography-bibref-geogname (repeated)</geogname>
+                <date>c-file-bibliography-bibref-date</date>
+                <date>c-file-bibliography-bibref-date (repeated)</date>
+            </imprint>
+        </bibref>
+    </bibliography>
+    <bibliography encodinganalog="3.5.4">
+        <head>c-file-bibliography-head</head>
+        <p>c-file-bibliography-p with a link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-bibliography-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-bibliography-p-extref"> or two </extref>. </p>
+        <bibref xlink:href="http://www.archivesportaleurope.net">c-file-bibliography-bibref <name>c-file-bibliography-bibref-name</name>
+            <name>c-file-bibliography-bibref-name (repeated)</name>
+            <title>c-file-bibliography-bibref-title</title>
+            <title>c-file-bibliography-bibref-title (repeated)</title>
+            <imprint>c-file-bibliography-bibref-imprint
+                <publisher>c-file-bibliography-bibref-publisher</publisher>
+                <publisher>c-file-bibliography-bibref-publisher (repeated)</publisher>
+                <geogname>c-file-bibliography-bibref-geogname</geogname>
+                <geogname>c-file-bibliography-bibref-geogname (repeated)</geogname>
+                <date>c-file-bibliography-bibref-date</date>
+                <date>c-file-bibliography-bibref-date (repeated)</date>
+            </imprint>
+            <imprint>c-file-bibliography-bibref-imprint (repeated)
+                <publisher>c-file-bibliography-bibref-publisher</publisher>
+                <publisher>c-file-bibliography-bibref-publisher (repeated)</publisher>
+                <geogname>c-file-bibliography-bibref-geogname</geogname>
+                <geogname>c-file-bibliography-bibref-geogname (repeated)</geogname>
+                <date>c-file-bibliography-bibref-date</date>
+                <date>c-file-bibliography-bibref-date (repeated)</date>
+            </imprint>
+        </bibref>
+    </bibliography>
+    <odd encodinganalog="3.6.1">
+        <head>c-file-odd-head</head>
+        <p>c-file-odd-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-odd-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-odd-p-extref"> or two </extref> .</p>
+        <p>c-file-odd-p (repeated)<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-odd-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-odd-p-extref"> or two </extref> .</p>
+        <list type="marked">
+            <item>c-file-odd-item 1 in a simple list</item>
+            <item>c-file-odd-item 2 in a simple list</item>
+            <item>c-file-odd-item 3 in a simple list</item>
+        </list>
+        <list type="ordered" numeration="arabic">
+            <item>c-file-odd-item 1 in an enumeration</item>
+            <item>c-file-odd-item 2 in an enumeration</item>
+            <item>c-file-odd-item 3 in an enumeration</item>
+        </list>
+        <table>
+            <head>c-file-odd-table-head</head>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>c-file-odd-table-thead-entry 1</entry>
+                        <entry>c-file-odd-table-thead-entry 2</entry>
+                        <entry>c-file-odd-table-thead-entry 3</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>c-file-odd-table-thead-entry 1</entry>
+                        <entry>c-file-odd-table-thead-entry 2</entry>
+                        <entry>c-file-odd-table-thead-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-odd-table-tbody-row 1-entry 1</entry>
+                        <entry>c-file-odd-table-tbody-row 1-entry 2</entry>
+                        <entry>c-file-odd-table-tbody-row 1-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-odd-table-tbody-row 2-entry 1</entry>
+                        <entry>c-file-odd-table-tbody-row 2-entry 2</entry>
+                        <entry>c-file-odd-table-tbody-row 2-entry 3</entry>
+                    </row>
+                    <row>
+                        <entry>c-file-odd-table-tbody-row 3-entry 1</entry>
+                        <entry>c-file-odd-table-tbody-row 3-entry 2</entry>
+                        <entry>c-file-odd-table-tbody-row 3-entry 3</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </odd>
+    <controlaccess>
+        <head>c-file-controlaccess-head</head>
+        <p>c-file-controlaccess-p<lb/> after a single line break with some text in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>.
+            It is furthermore <abbr expan="possible"> poss. </abbr> to use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-controlaccess-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-controlaccess-p-extref"> or two </extref> .</p>
+        <p>c-file-controlaccess-p (repeated)<lb/> after a single line break with some text
+            in <emph render="bold">bold</emph> and some in <emph render="italic">italic</emph>. It is furthermore <abbr expan="possible"> poss. </abbr> to
+            use <expan abbr="abbr."> abbreviations </expan> or to link to a related <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-controlaccess-p-extref">online publication </extref>
+            <extref xlink:href="http://www.archivesportaleurope.net" xlink:title="c-file-controlaccess-p-extref"> or two </extref> .</p>
+        <name> c-file-controlaccess-name </name>
+        <name> c-file-controlaccess-name </name>
+        <geogname> c-file-controlaccess-geogname </geogname>
+        <geogname> c-file-controlaccess-geogname </geogname>
+        <famname> c-file-controlaccess-famname </famname>
+        <famname> c-file-controlaccess-famname </famname>
+        <subject> c-file-controlaccess-subject </subject>
+        <subject> c-file-controlaccess-subject </subject>
+        <corpname> c-file-controlaccess-corpname </corpname>
+        <corpname> c-file-controlaccess-corpname </corpname>
+        <persname> c-file-controlaccess-persname </persname>
+        <persname> c-file-controlaccess-persname </persname>
+        <occupation> c-file-controlaccess-occupation </occupation>
+        <occupation> c-file-controlaccess-occupation </occupation>
+        <function> c-file-controlaccess-function </function>
+        <function> c-file-controlaccess-function </function>
+        <title> c-file-controlaccess-title </title>
+        <title> c-file-controlaccess-title </title>
+        <genreform> c-file-controlaccess-genreform </genreform>
+        <genreform> c-file-controlaccess-genreform </genreform>
+    </controlaccess>
+</c>

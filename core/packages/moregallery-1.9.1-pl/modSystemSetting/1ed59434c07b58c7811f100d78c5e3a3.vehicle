@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7605fcb7d4f7f728b5d3a7b72dc9f5ff',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1ed59434c07b58c7811f100d78c5e3a3',
+  'native_key' => 'moregallery.prefill_from_iptc',
+  'object' => '{"key":"moregallery.prefill_from_iptc","value":true,"xtype":"modx-combo-boolean","namespace":"moregallery","area":"Advanced","editedon":1571229263}',
+);

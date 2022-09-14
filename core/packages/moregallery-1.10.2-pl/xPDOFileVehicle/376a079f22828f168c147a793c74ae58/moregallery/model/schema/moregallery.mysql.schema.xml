@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="moregallery" baseClass="xPDOSimpleObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+    <object class="mgResource" extends="modResource">
+        <composite alias="Images" class="mgImage" local="id" foreign="resource" cardinality="many" owner="local" />
+
+        <!--
+            properties keys:
+            - mediasource
+        -->
+    </object>
+
+    <object class="mgImage" table="moregallery_image" extends="xPDOSimpleObject" inherit="single">
+        <field key="class_key" dbtype="varchar" precision="100" phptype="string" null="false" default="mgImage" />
+        <field key="resource" dbtype="int" precision="11" phptype="integer" null="false" />
+
+        <field key="filename" dbtype="varchar" precision="250" phptype="string" null="false" default="" />
+        <field key="file" dbtype="varchar" precision="250" phptype="string" null="false" default="" />
+        <field key="extension" dbtype="varchar" precision="50" phptype="string" null="false" default="" />
+        <field key="mgr_thumb" dbtype="varchar" precision="250" phptype="string" null="false" default="" />
+        <field key="custom" dbtype="text" phptype="array" null="true" />
+        <field key="exif" dbtype="text" phptype="array" null="true" />
+        <field key="iptc" dbtype="text" phptype="array" null="true" />
+
+        <field key="width" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="height" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+
+        <field key="name" dbtype="varchar" precision="250" phptype="string" null="true" />
+        <field key="description" dbtype="text" phptype="string" null="true" />
+        <field key="url" dbtype="varchar" precision="250" phptype="string" null="true" />
+        <field key="sortorder" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+
+        <field key="uploadedon" dbtype="int" precision="20" phptype="integer" null="false" default="0" />
+        <field key="uploadedby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="editedon" dbtype="int" precision="20" phptype="integer" null="false" default="0" />
+        <field key="editedby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+
+        <field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="false" default="1" />
+
+        <field key="properties" dbtype="text" phptype="array" null="true" />
+
+        <index alias="class_key" name="class_key" primary="false" unique="false" type="BTREE">
+            <column key="class_key" length="" collation="A" null="false" />
+        </index>
+        <index alias="resource" name="resource" primary="false" unique="false" type="BTREE">
+            <column key="resource" length="" collation="A" null="false" />
+        </index>
+        <index alias="sortorder" name="sortorder" primary="false" unique="false" type="BTREE">
+            <column key="sortorder" length="" collation="A" null="false" />
+        </index>
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
+            <column key="name" length="" collation="A" null="false" />
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
+            <column key="active" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Resource" class="mgResource" local="resource" foreign="id" cardinality="one" owner="foreign" />
+        <composite alias="Tags" class="mgImageTag" local="id" foreign="image" cardinality="many" owner="local" />
+    </object>
+    <object class="mgVideo" extends="mgImage" inherit="single" />
+    <object class="mgMediaManagerImage" extends="mgImage" inherit="single" />
+    <object class="mgYouTubeVideo" extends="mgVideo" inherit="single" />
+    <object class="mgVimeoVideo" extends="mgVideo" inherit="single" />
+
+    <object class="mgTag" table="moregallery_tag" extends="xPDOSimpleObject">
+        <field key="display" dbtype="varchar" precision="250" phptype="string" null="false" default="" />
+        <field key="createdon" dbtype="int" precision="20" phptype="integer" null="false" default="0" />
+        <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+
+        <index alias="display" name="display" primary="false" unique="false" type="BTREE">
+            <column key="display" length="" collation="A" null="false" />
+        </index>
+
+        <composite alias="Images" class="mgImageTag" local="id" foreign="tag" cardinality="many" owner="local" />
+    </object>
+
+    <object class="mgImageTag" table="moregallery_image_tag" extends="xPDOSimpleObject">
+        <field key="resource" dbtype="int" precision="11" phptype="integer" null="false" default="0" />
+        <field key="image" dbtype="int" precision="11" phptype="integer" null="false" default="0" />
+        <field key="tag" dbtype="int" precision="11" phptype="integer" null="false" default="0" />
+
+        <index alias="resource" name="resource" primary="false" unique="false" type="BTREE">
+            <column key="resource" length="" collation="A" null="false" />
+        </index>
+        <index alias="image" name="image" primary="false" unique="false" type="BTREE">
+            <column key="image" length="" collation="A" null="false" />
+        </index>
+        <index alias="tag" name="tag" primary="false" unique="false" type="BTREE">
+            <column key="tag" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Resource" class="mgResource" local="resource" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Image" class="mgImage" local="image" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Tag" class="mgTag" local="tag" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="mgImageCrop" table="moregallery_image_crop" extends="xPDOSimpleObject">
+        <field key="image" dbtype="int" precision="11" phptype="integer" null="false" default="0" />
+        <field key="crop" dbtype="varchar" precision="100" phptype="string" null="false" />
+        <field key="thumbnail" dbtype="varchar" precision="255" phptype="string" default="" null="false" />
+        <field key="thumbnail_hash" dbtype="varchar" precision="255" phptype="string" default="" null="false" />
+        <field key="x" dbtype="int" precision="11" phptype="integer" default="0" null="false" />
+        <field key="y" dbtype="int" precision="11" phptype="integer" default="0" null="false" />
+        <field key="x2" dbtype="int" precision="11" phptype="integer" default="0" null="false" />
+        <field key="y2" dbtype="int" precision="11" phptype="integer" default="0" null="false" />
+        <field key="width" dbtype="int" precision="11" phptype="integer" default="0" null="false" />
+        <field key="height" dbtype="int" precision="11" phptype="integer" default="0" null="false" />
+
+        <index alias="image" name="image" primary="false" unique="false" type="BTREE">
+            <column key="image" length="" collation="A" null="false" />
+        </index>
+        <index alias="crop" name="crop" primary="false" unique="false" type="BTREE">
+            <column key="crop" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Image" class="mgImage" local="image" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+</model>
+

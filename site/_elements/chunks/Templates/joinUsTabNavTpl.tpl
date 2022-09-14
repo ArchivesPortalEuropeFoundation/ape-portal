@@ -1,0 +1,1 @@
+<li[[+idx:is=`1`:then=` class="active"`]]><a href="#tab[[+idx]]" data-toggle="tab">[[+title]]</a></li>

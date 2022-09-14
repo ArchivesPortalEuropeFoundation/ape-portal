@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eag xmlns="http://www.archivesportaleurope.net/Portal/profiles/eag_2012/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" audience="external" xsi:schemaLocation="http://www.archivesportaleurope.net/Portal/profiles/eag_2012/ http://www.archivesportaleurope.net/Portal/profiles/eag_2012.xsd">
+    <control>
+        <recordId>BE-648616</recordId>
+        <otherRecordId localType="yes">BE-648616</otherRecordId>
+        <maintenanceAgency>
+            <agencyCode>BE-648616</agencyCode>
+            <agencyName>Heemkundige Kring De Kaeck te Wommelgem</agencyName>
+        </maintenanceAgency>
+        <maintenanceStatus>revised</maintenanceStatus>
+        <maintenanceHistory>
+            <maintenanceEvent xml:lang="eng">
+                <agent xml:lang="eng">automatically created agent by Archiefbank Vlaanderen</agent>
+                <agentType>human</agentType>
+                <eventDateTime standardDateTime="2006-11-27">2006-11-27</eventDateTime>
+                <eventType>created</eventType>
+            </maintenanceEvent>
+            <maintenanceEvent>
+                <agent xml:lang="eng">automatically created agent by Archiefbank Vlaanderen</agent>
+                <agentType>human</agentType>
+                <eventDateTime standardDateTime="2017-04-05T07:33:47">05.04.2017</eventDateTime>
+                <eventType>revised</eventType>
+            </maintenanceEvent>
+            <maintenanceEvent>
+                <agent xml:lang="eng">automatically created agent by Archiefbank Vlaanderen</agent>
+                <agentType>human</agentType>
+                <eventDateTime standardDateTime="2017-04-05T07:34:29">05.04.2017</eventDateTime>
+                <eventType>revised</eventType>
+            </maintenanceEvent>
+        </maintenanceHistory>
+        <conventionDeclaration>
+            <abbreviation>ISDIAH</abbreviation>
+            <citation>International Standard for Describing Institutions with Archival Holdings</citation>
+        </conventionDeclaration>
+        <localControl localType="detailLevel">
+            <term lastDateTimeVerified="2017-04-05T07:34:29" vocabularySource="http://www.archivesportaleurope.eu/vocabularies/EAG/" scriptCode="Latn">extended</term>
+        </localControl>
+    </control>
+    <archguide>
+        <identity>
+            <repositorid countrycode="BE" repositorycode="BE-648616"/>
+            <autform>Heemkundige Kring De Kaeck te Wommelgem</autform>
+            <parform>Heemkundige Kring De Kaeck, Wommelgem</parform>
+            <parform>Documentatiecentrum</parform>
+        </identity>
+        <desc>
+            <repositories>
+                <repository>
+                    <geogarea>Europe</geogarea>
+                    <location localType="visitors address">
+                        <country xml:lang="dut">België</country>
+                        <municipalityPostalcode xml:lang="dut">2160 Wommelgem</municipalityPostalcode>
+                        <street xml:lang="dut">Fort II straat  1</street>
+                    </location>
+                    <telephone>03 354 40 72</telephone>
+                    <fax>03 354 40 73</fax>
+                    <email href="eduard.smits@skynet.be"></email>
+                    <timetable>
+                        <opening>elke woensdag van 19u tot 21u of op afspraak</opening>
+                    </timetable>
+                    <access question="yes">
+                        <restaccess>alleen na afspraak, uitlening aan derden</restaccess>
+                    </access>
+                    <accessibility question="yes"/>
+                </repository>
+            </repositories>
+        </desc>
+    </archguide>
+</eag>

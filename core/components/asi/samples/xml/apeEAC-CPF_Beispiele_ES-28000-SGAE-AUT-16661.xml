@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eac-cpf xmlns="urn:isbn:1-931666-33-4"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="urn:isbn:1-931666-33-4 http://www.archivesportaleurope.net/Portal/profiles/apeEAC-CPF.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd">
+   <control>
+      <recordId>ES-28079-PARES-AUT-16661</recordId>
+      <otherRecordId localType="original">ES-28079-PARES-AUT-16661</otherRecordId>
+      <maintenanceStatus>derived</maintenanceStatus>
+      <maintenanceAgency>
+         <agencyCode>ES-37274-CDMH1</agencyCode>
+         <otherAgencyCode localType="localIDconverted">ES-28000-SGAE</otherAgencyCode>
+         <agencyName>SGAE</agencyName>
+      </maintenanceAgency>
+      <languageDeclaration>
+         <language languageCode="spa"/>
+         <script scriptCode="Latn"/>
+      </languageDeclaration>
+      <conventionDeclaration>
+         <abbreviation>NPA2</abbreviation>
+         <citation xlink:type="simple">NPA2 - Normas para la elaboración de Puntos de Acceso normalizados de instituciones, personas, familias, lugares y materias en el sistema de descripción archivística de los Archivos Estatales. 2º Versión. Noviembre de 2012. [Norma no publicada. En proceso de evaluación].</citation>
+      </conventionDeclaration>
+      <conventionDeclaration>
+         <abbreviation>ISAAR(CPF)</abbreviation>
+         <citation xlink:type="simple"
+                   xlink:href="http://www.mecd.gob.es/cultura-mecd/dms/mecd/cultura-mecd/areas-cultura/archivos/recursos-profesionales/normas-archivisticas/isaar.pdf">ISAAR(CPF) - Norma Internacional sobre los Registros de Autoridad de Archivos relativos a Instituciones, Personas y Familias, 2ª ed., Viena: Consejo Internacional de Archivos, 2004.</citation>
+      </conventionDeclaration>
+      <localControl localType="detailLevel">
+         <term>Básico</term>
+      </localControl>
+      <maintenanceHistory>
+         <maintenanceEvent>
+            <eventType>created</eventType>
+            <eventDateTime standardDateTime="2019-07-31T09:44:36">2019-07-31T09:44:36</eventDateTime>
+            <agentType>machine</agentType>
+            <agent>Generado automaticamente por el Portal de Archivos Españoles (PARES) con los datos de sus registros de autoridad.</agent>
+         </maintenanceEvent>
+         <maintenanceEvent>
+            <eventType>derived</eventType>
+            <eventDateTime standardDateTime="2020-05-14">2020-05-14</eventDateTime>
+            <agentType>machine</agentType>
+            <agent>Archives Portal Europe</agent>
+            <eventDescription>Converted_apeEAC-CPF_version_unknown</eventDescription>
+         </maintenanceEvent>
+      </maintenanceHistory>
+      <sources>
+         <source xlink:type="simple">
+            <sourceEntry>Código de Referencia de PARES: ES.37274.CDMH/2.8.4.13.1691//</sourceEntry>
+         </source>
+         <source xlink:type="simple">
+            <sourceEntry>Código de Referencia de PARES: ES.28005.AGA/1.2.1.1.3//</sourceEntry>
+         </source>
+      </sources>
+   </control>
+   <cpfDescription>
+      <identity>
+         <entityId localType="PARESnde">16661</entityId>
+         <entityId localType="APENET">ES-28079-PARES-AUT-16661</entityId>
+         <entityType>corporateBody</entityType>
+         <nameEntry localType="preferred">
+            <part xml:lang="spa">Junta Delegada de Defensa de Madrid (España)</part>
+            <authorizedForm>NPA2</authorizedForm>
+         </nameEntry>
+         <nameEntry localType="other">
+            <part xml:lang="spa">Junta de Defensa de Madrid (España, 1936-1937)</part>
+            <alternativeForm>NPA2</alternativeForm>
+         </nameEntry>
+         <nameEntry localType="other">
+            <part xml:lang="spa">Junta Delegada de la Defensa de Madrid (España, 1936-1937)</part>
+            <alternativeForm>NPA2</alternativeForm>
+         </nameEntry>
+      </identity>
+      <description>
+         <existDates>
+            <dateRange>
+               <fromDate standardDate="1936-11-25">1936-11-25</fromDate>
+               <toDate standardDate="1937-04-21">1937-04-21</toDate>
+            </dateRange>
+         </existDates>
+         <places>
+            <place>
+               <placeEntry latitude="40.418888"
+                           longitude="-3.691944"
+                           vocabularySource="http://pares.mcu.es/ParesBusquedas20/catalogo/autoridad/82253"
+                           xml:lang="spa">Madrid (España)</placeEntry>
+            </place>
+         </places>
+         <languagesUsed>
+            <languageUsed>
+               <language languageCode="spa"/>
+               <script scriptCode="Latn"/>
+            </languageUsed>
+         </languagesUsed>
+         <structureOrGenealogy>
+            <p>La Junta tenía facultades delegadas del Gobierno para todos los asuntos relacionados con la defensa de Madrid, excepto las actuaciones militares. La Junta se estructuró en Consejerías que fueron: Guerra, Orden Público, Industrias de Guerra, Abastecimientos, Comunicaciones, Finanzas, Información y enlace y Evacuación.  </p>
+            <p>A partir del 15 de enero de 1937 pasan a denominarse Delegaciones y se estructuran en: Presidencia, Secretariado, Orden Público, Frente (también denominada Servicios del Frente), Evacuación, Milicias, Transportes, Industrias de Guerra, Abastecimientos y Propaganda y Prensa.</p>
+         </structureOrGenealogy>
+         <biogHist>
+            <p>On the 25th November, the Board of Defense of Madrid was abolished and replaced by the Commissioning Board of Defense of Madrid, whose aim was to  fulfill and comply with the orders of the Government of the Republic. It therefore became an administrative body. The decree of 21 April 1937 established the official abolition of the Commissioning Board of Defense of Madrid, whose functions were taken over by the provincial and municipal corporation of Madrid.</p>
+         </biogHist>
+         <biogHist>
+            <p>El 25 de noviembre la Junta de Defensa de Madrid era disuelta y sustituida por la Junta Delegada de Defensa de Madrid, cuya finalidad era observar y cumplimentar las órdenes emanadas del Gobierno de la República, con lo que pasaba a convertirse en un órgano administrativo. Por decreto de 21 de abril de 1937 fue disuelta oficialmente la Junta Delegada de Defensa de Madrid, cuyas funciones asumirían la corporación provincial y municipal madrileñas.</p>
+         </biogHist>
+      </description>
+      <relations>
+         <resourceRelation resourceRelationType="creatorOf"
+                           xlink:type="simple"
+                           xlink:href="http://www.archivesportaleurope.net/ead-display/-/ead/pl/aicode/ES-28005-AGA4/type/hg/id/ES-28005-AGA/unitid/ES-28005-AGA-UD-2368113">
+            <relationEntry> Junta Delegada de Defensa de Madrid</relationEntry>
+         </resourceRelation>
+         <resourceRelation resourceRelationType="creatorOf"
+                           xlink:type="simple"
+                           xlink:href="http://www.archivesportaleurope.net/ead-display/-/ead/pl/aicode/ES-37274-CDMH1/type/fa/id/ES-37274-CDMH-UD-1584697/unitid/ES-37274-CDMH-UD-1584697+-+ES-37274-CDMH-UD-7526682">
+            <relationEntry> Fichero de fotógrafos autorizados por la Delegación de Madrid de la Subsecretaría de Propaganda del Ministerio de Estado.</relationEntry>
+         </resourceRelation>
+         <resourceRelation resourceRelationType="creatorOf"
+                           xlink:type="simple"
+                           xlink:href="http://www.archivesportaleurope.net/ead-display/-/ead/pl/aicode/ES-37274-CDMH1/type/fa/id/ES-37274-CDMH-UD-1584697/unitid/ES-37274-CDMH-UD-1584697+-+ES-37274-CDMH-UD-12689616">
+            <relationEntry> Carné salvoconducto del fotógrafo Alfonso Sánchez Portela</relationEntry>
+         </resourceRelation>
+         <resourceRelation resourceRelationType="creatorOf"
+                           xlink:type="simple"
+                           xlink:href="http://www.archivesportaleurope.net/ead-display/-/ead/pl/aicode/ES-37274-CDMH1/type/fa/id/ES-37274-CDMH-UD-1584697/unitid/ES-37274-CDMH-UD-1584697+-+ES-37274-CDMH-UD-12689995">
+            <relationEntry> Carta de presentación del fotógrafo Per Monsen</relationEntry>
+         </resourceRelation>
+         <resourceRelation resourceRelationType="creatorOf"
+                           xlink:type="simple"
+                           xlink:href="http://www.archivesportaleurope.net/ead-display/-/ead/pl/aicode/ES-37274-CDMH1/type/fa/id/ES-37274-CDMH-UD-1584697/unitid/ES-37274-CDMH-UD-1584697+-+ES-37274-CDMH-UD-12707737">
+            <relationEntry> Avales, solicitudes y autorizaciones para desarrollar trabajos fotográficos en el frente de Madrid.</relationEntry>
+            <descriptiveNote>
+               <p>Custodio/Gestor</p>
+            </descriptiveNote>
+         </resourceRelation>
+      </relations>
+   </cpfDescription>
+</eac-cpf>

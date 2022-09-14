@@ -1,0 +1,66 @@
+<?php
+
+if ($object->xpdo) {
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+        case xPDOTransport::ACTION_UPGRADE:
+            /** @var modX $modx */
+            $modx =& $object->xpdo;
+
+            if (version_compare('2.3.0-dev', $modx->getOption('settings_version'), '>=')) {
+                // < 2.3.0
+                $menu = $modx->getObject('modMenu', array('text' => 'moregallery.new'));
+                if (!$menu) {
+                    $action = $modx->getObject('modAction', array('namespace' => 'core', 'controller' => 'resource/create'));
+                    if ($action instanceof modAction) {
+                        $menu = $modx->newObject('modMenu');
+                        $menu->fromArray(array(
+                            'text' => 'moregallery.new',
+                            'description' => 'moregallery.new_description',
+                            'parent' => 'site',
+                            'menuindex' => '9',
+                            'action' => $action->get('id'),
+                            'params' => '&class_key=mgResource',
+                        ), '', true);
+                        if ($menu->save()) {
+                            $modx->log(modX::LOG_LEVEL_INFO, 'Added New Gallery menu item.');
+                        }
+                    }
+                }
+            }
+            else {
+                // 2.3.0+
+                /** @var modMenu $menu */
+                $menu = $modx->getObject('modMenu', array('text' => 'moregallery.new'));
+                if (!$menu) {
+                    $menu = $modx->newObject('modMenu');
+                    $menu->fromArray(array(
+                        'text' => 'moregallery.new',
+                        'description' => 'moregallery.new_description',
+                        'parent' => 'site',
+                        'menuindex' => '9',
+                        'action' => 'resource/create',
+                        'params' => '&class_key=mgResource',
+                        'namespace' => 'core',
+                    ), '', true);
+                    if ($menu->save()) {
+                        $modx->log(modX::LOG_LEVEL_INFO, 'Added New Gallery menu item.');
+                    }
+                }
+            }
+
+            break;
+        case xPDOTransport::ACTION_UNINSTALL:
+            $modx =& $object->xpdo;
+            if ($modx instanceof modX) {
+                $menu = $modx->getObject('modMenu', array('text' => 'moregallery.new'));
+                if ($menu instanceof modMenu) {
+                    if ($menu->remove()) {
+                        $modx->log(modX::LOG_LEVEL_WARN,'Removed New Gallery menu item.');
+                    }
+                }
+            }
+            break;
+    }
+}
+return true;

@@ -1,0 +1,1 @@
+<a class="button [[+id:is=`[[*id]]`:then=`blue disabled`:else=`pink`]]" href="[[~[[+id]]]]">[[+pagetitle]]</a>

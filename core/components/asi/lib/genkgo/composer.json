@@ -1,0 +1,5 @@
+{
+    "require": {
+        "genkgo/xsl": "^1.0"
+    }
+}

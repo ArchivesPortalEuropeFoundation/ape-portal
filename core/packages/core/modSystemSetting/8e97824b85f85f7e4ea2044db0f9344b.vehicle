@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '03f331d32fd3c0c21f53c4ba4dbfe836',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8e97824b85f85f7e4ea2044db0f9344b',
+  'native_key' => 'manager_language',
+  'object' => '{"key":"manager_language","value":"en","xtype":"modx-combo-language","namespace":"core","area":"language","editedon":null}',
+);

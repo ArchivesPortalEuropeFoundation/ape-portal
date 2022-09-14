@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'da5c91e2db9c22580104e5175d284d5c',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'd6b591e9ad4d529b681d7543747fa6f3',
+  'native_key' => 'MoreGallery_OnImageRemove',
+  'object' => '{"name":"MoreGallery_OnImageRemove","service":6,"groupname":"moregallery"}',
+);

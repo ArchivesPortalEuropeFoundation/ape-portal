@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eac-cpf xmlns="urn:isbn:1-931666-33-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-33-4 apeEAC-CPF.xsd">
+    <control>
+        <recordId>GB-100_123456789</recordId>
+        <otherRecordId localType="original">123456789</otherRecordId>
+        <maintenanceStatus>revised</maintenanceStatus>
+        <publicationStatus>approved</publicationStatus>
+        <maintenanceAgency>
+            <agencyCode>GB-100</agencyCode>
+            <agencyName>Archive of Test</agencyName>
+        </maintenanceAgency>
+        <languageDeclaration>
+            <language languageCode="eng">English</language>
+            <script scriptCode="Latn">Latin</script>
+        </languageDeclaration>
+        <conventionDeclaration>
+            <abbreviation>Ex.</abbreviation>
+            <citation xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.exampleRule.eu">Example rule and convention</citation>
+        </conventionDeclaration>
+        <localTypeDeclaration>
+            <abbreviation>Authorised</abbreviation>
+            <citation xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.archivesportaleurope.net/Portal/profiles/apeEAC-CPF.xsd"
+                >Authorised and other name types</citation>
+        </localTypeDeclaration>
+        <localTypeDeclaration>
+            <abbreviation>Part</abbreviation>
+            <citation xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.archivesportaleurope.net/Portal/profiles/apeEAC-CPF.xsd"
+                >Parts of names</citation>
+        </localTypeDeclaration>
+        <localTypeDeclaration>
+            <abbreviation>Address</abbreviation>
+            <citation xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.archivesportaleurope.net/Portal/profiles/apeEAC-CPF.xsd"
+                >Types of addresses and address lines</citation>
+        </localTypeDeclaration>
+        <localTypeDeclaration>
+            <abbreviation>Place</abbreviation>
+            <citation xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.archivesportaleurope.net/Portal/profiles/apeEAC-CPF.xsd"
+                >Types and roles of places</citation>
+        </localTypeDeclaration>
+        <localTypeDeclaration>
+            <abbreviation>Relation</abbreviation>
+            <citation xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.archivesportaleurope.net/Portal/profiles/apeEAC-CPF.xsd"
+                >Attributes of relations</citation>
+        </localTypeDeclaration>
+        <localTypeDeclaration>
+            <abbreviation>Dates</abbreviation>
+            <citation xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.archivesportaleurope.net/Portal/profiles/apeEAC-CPF.xsd"
+                >Unknown and uncertain date types</citation>
+        </localTypeDeclaration>
+        <localControl localType="detaillevel">
+            <term>Simple</term>
+        </localControl>
+        <localControl localType="detaillevel">
+            <term>Extended</term>
+        </localControl>
+        <maintenanceHistory>
+            <maintenanceEvent>
+                <eventType>created</eventType>
+                <eventDateTime>13 August 2020</eventDateTime>
+                <agentType>human</agentType>
+                <agent>Kerstin Arnold</agent>
+            </maintenanceEvent>
+            <maintenanceEvent>
+                <eventType>revised</eventType>
+                <eventDateTime>13 August 2020</eventDateTime>
+                <agentType>human</agentType>
+                <agent>Kerstin Arnold</agent>
+            </maintenanceEvent>
+        </maintenanceHistory>
+        <sources>
+            <source xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.original.eu">
+                <sourceEntry>Original file from database ABC</sourceEntry>
+            </source>
+        </sources>
+    </control>
+    <cpfDescription>
+        <identity>
+            <entityId>123456789</entityId>
+            <entityType>person</entityType>
+            <!-- Similar to the predefined sequence for the various localType-s on <part> elements, 
+                 there is a preference in display depending on the localType of the whole <nameEntry>.
+                 If at least one <nameEntry> with one of the following localType-s is available, this would
+                 be used as the first - and main - name, while potentially existing other <nameEntry>-s 
+                 would follow as alternative/other names.
+                 1. "preferred" (available in this example)
+                 2. "authorized" (available in this example)
+                 3. "alternative" (available in this example)
+                 4. "abbreviation" (not available in this example)
+                 5. "other" (available in this example)
+                 6. The first <nameEntry> within the file, if no @localType-s are used with <nameEntry> at all
+            -->
+            <nameEntry localType="authorized">
+                <part localType="firstname">Jean</part>
+                <part localType="patronymic">Sergeyevna</part>
+                <part localType="surname">DeLaCour</part>
+                <part localType="birthname">Smith</part>
+                <part localType="prefix">Dame</part>
+                <part localType="suffix">OBE</part>
+                <part localType="alias">Duchess</part>
+            </nameEntry>
+            <nameEntry localType="preferred">
+                <part localType="firstname">Jean</part>
+                <part localType="surname">DeLaCour</part>
+                <part localType="title">PhD</part>
+            </nameEntry>
+            <nameEntry localType="alternative">
+                <part localType="persname">Dr. Jean DeLaCour, OBE</part>
+            </nameEntry>
+        </identity>
+        <description>
+            <existDates>
+                <!-- The possible localType-s for a date range, "open", "unknown", "unknownStart" and "unknownEnd"
+                     are mainly used to classify the start and end dates and to provide some context in case either
+                     of these is left empty. In the example here, <toDate> is left empty as the person is still alive.
+                     Alternatively, it might be the case that the word "open" or "living" or similar is actually used
+                     as content of the element.
+                -->
+                <dateRange localType="open">
+                    <fromDate standardDate="1924-12-06">6 December 1924</fromDate>
+                    <toDate></toDate>
+                </dateRange>
+            </existDates>
+            <places>
+                <place>
+                    <placeEntry vocabularySource="http://www.places.eu/london" countryCode="GB" localType="birth">London</placeEntry>
+                    <address>
+                        <addressLine>Kings Road</addressLine>
+                        <addressLine>AB1 2CD</addressLine>
+                    </address>
+                    <date standardDate="1924-12-06">6 December 1924</date>
+                    <citation xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.duchess.eu/early-years">Birth and childhood</citation>
+                </place>
+                <place>
+                    <placeEntry vocabularySource="http://www.places.eu/paris" countryCode="FR" localType="private-residence">Paris</placeEntry>
+                </place>
+                <place>
+                    <placeEntry localType="business-residence">Dover</placeEntry>
+                </place>
+                <place>
+                    <placeEntry localType="business-residence">Calais</placeEntry>
+                </place>
+            </places>
+            <occupations>
+                <occupation>
+                    <term vocabularySource="http://www.occupations.eu/teacher">Teacher</term>
+                    <placeEntry>Dover</placeEntry>
+                    <dateRange>
+                        <fromDate standardDate="1939-03">March 1939</fromDate>
+                        <toDate standardDate="1952-02">February 1952</toDate>
+                    </dateRange>
+                </occupation>
+                <occupation>
+                    <term vocabularySource="http://www.occupations.eu/journalist">Journalist</term>
+                    <placeEntry>Madrid</placeEntry>
+                    <placeEntry>Calais</placeEntry>
+                    <placeEntry>Paris</placeEntry>
+                    <dateSet>
+                        <dateRange>
+                            <fromDate standardDate="1942">March 1939</fromDate>
+                            <toDate standardDate="1945">February 1952</toDate>
+                        </dateRange>
+                        <dateRange>
+                            <fromDate standardDate="1948">1948</fromDate>
+                            <toDate standardDate="1952">1952</toDate>
+                        </dateRange>
+                        <dateRange>
+                            <fromDate standardDate="1953">1953</fromDate>
+                            <toDate>active</toDate>
+                        </dateRange>
+                    </dateSet>
+                </occupation>
+            </occupations>
+            <functions>
+                <function>
+                    <term>Mayor</term>
+                    <placeEntry>Paris</placeEntry>
+                    <citation xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.duchess.eu/mayor-of-paris">Duchess elected mayor of Paris</citation>
+                </function>
+                <function>
+                    <term vocabularySource="http://www.functions.eu/member-of-parliament">Member of Parliament</term>
+                    <dateRange>
+                        <fromDate standardDate="1975">1975</fromDate>
+                        <toDate standardDate="2000">2000</toDate>
+                    </dateRange>
+                </function>
+            </functions>
+            <mandates>
+                <mandate>
+                    <term>Election law for the Mayor of Paris</term>
+                    <date standardDate="1946-05-07">7 May 1946</date>
+                    <citation xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.legislation.eu/election-mayor-of-paris_1946">See legal text</citation>
+                </mandate>
+                <mandate>
+                    <term>Legislation on general elections (Members of Parliament)</term>
+                    <date standardDate="1982-09-20">20 September 1982</date>
+                    <citation xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.legislation.eu/general-elections_1982">See legal text</citation>
+                </mandate>
+            </mandates>
+            <languagesUsed>
+                <languageUsed>
+                    <language languageCode="eng">English</language>
+                    <script scriptCode="Latn">Latn</script>
+                </languageUsed>
+                <languageUsed>
+                    <language languageCode="fre">French</language>
+                    <script scriptCode="Latn"/>
+                </languageUsed>
+                <languageUsed>
+                    <language languageCode="ita"/>
+                    <script scriptCode="Latn"/>
+                </languageUsed>
+            </languagesUsed>
+            <localDescriptions localType="subjects">
+                <localDescription localType="subjects">
+                    <term>Maths</term>
+                </localDescription>
+                <localDescription localType="subjects">
+                    <term>Chemistry</term>
+                </localDescription>
+                <localDescription localType="subjects">
+                    <term>Biology</term>
+                </localDescription>
+                <descriptiveNote>
+                    <p>While working as a teacher, the Duchess tutored in Maths, Chemistry, and Biology.</p>
+                </descriptiveNote>
+            </localDescriptions>
+            <generalContext>
+                <p>Some additional information on the Duchess.</p>
+                <p>Some more details.</p>
+                <p>And a note to finish.</p>
+            </generalContext>
+            <biogHist>
+                <abstract>This is a summary of the Duchess' biography.</abstract>
+                <p>Some additional biographical information on the Duchess.</p>
+                <p>Some more details.</p>
+                <p>And a note to finish.</p>
+            </biogHist>
+        </description>
+        <relations>
+            <cpfRelation cpfRelationType="family">
+                <relationEntry>Father</relationEntry>
+                <dateRange>
+                    <fromDate>1899</fromDate>
+                    <toDate>1942</toDate>
+                </dateRange>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="family">
+                <relationEntry>Mother</relationEntry>
+                <dateRange>
+                    <fromDate>1905</fromDate>
+                    <toDate>1982</toDate>
+                </dateRange>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="family" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="GB-100_123456790">
+                <relationEntry localType="title">Sister</relationEntry>
+                <dateRange>
+                    <fromDate>1921</fromDate>
+                    <toDate>1999</toDate>
+                </dateRange>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="family" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="GB-100_987654322">
+                <relationEntry>Smith Family</relationEntry>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="associative" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="GB-100_987654321">
+                <relationEntry>Parliament</relationEntry>
+            </cpfRelation>
+            <resourceRelation resourceRelationType="creatorOf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="eadid">
+                <relationEntry localType="title">Administrative records (Mayor of Paris)</relationEntry>
+            </resourceRelation>
+            <resourceRelation resourceRelationType="creatorOf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.duchess.eu/articles">
+                <relationEntry localType="title">Collection of articles</relationEntry>
+            </resourceRelation>
+            <functionRelation functionRelationType="performs" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.functions.eu/member-of-parliament">
+                <relationEntry>Member of Parliament</relationEntry>
+            </functionRelation>
+        </relations>
+    </cpfDescription>
+</eac-cpf>

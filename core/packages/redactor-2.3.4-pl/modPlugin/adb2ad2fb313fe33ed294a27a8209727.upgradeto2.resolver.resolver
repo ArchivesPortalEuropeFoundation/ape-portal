@@ -1,0 +1,94 @@
+<?php
+/**
+ * Redactor WYSIWYG Editor for MODx Revolution
+ *
+ *
+ * @package redactor
+ */
+
+/**
+ * Resolver to set which_editor to Redactor
+ * 
+ * @package redactor
+ * @subpackage build
+ */
+
+switch ($options[xPDOTransport::PACKAGE_ACTION])
+{
+    case xPDOTransport::ACTION_INSTALL:
+    case xPDOTransport::ACTION_UPGRADE:
+        $object->xpdo->log(xPDO::LOG_LEVEL_INFO,'Attempting to migrate redactor.stylesJson to redactor.formattingAdd.');
+
+        /**
+         * Automatically migrate stylesJson (styles/custom formats plugin) to redactor native formattingAdd feature
+         */
+        $stylesJsonSetting = $object->xpdo->getObject('modSystemSetting', array('key' => 'redactor.stylesJson'));
+        if ($stylesJsonSetting instanceof modSystemSetting) {
+            $value = $stylesJsonSetting->get('value');
+            
+            $old = $object->xpdo->fromJSON($value);
+            $new = array();
+            foreach ($old as $oldItem) {
+                $newItem = array();
+
+                $newItem['tag'] = (!empty($oldItem['wrap'])) ? $oldItem['wrap'] : 'span';
+                if (isset($oldItem['btnName'])) {
+                    $newItem['title'] = $oldItem['btnName'];
+                }
+                if (isset($oldItem['spanClass'])) {
+                    $newItem['class'] = $oldItem['spanClass'];
+                }
+                if (isset($oldItem['style'])) {
+                    $newItem['style'] = $oldItem['style'];
+                }
+
+                $new[] = $newItem;
+            }
+            
+            $newValue = $object->xpdo->toJSON($new);
+
+            if (!empty($newValue)) {
+                $formattingAddSetting = $object->xpdo->getObject('modSystemSetting', array('key' => 'redactor.formattingAdd'));
+                if ($formattingAddSetting instanceof modSystemSetting) {
+                    $formattingAddSetting->set('value', $newValue);
+                    if ($formattingAddSetting->save()) {
+                        $stylesJsonSetting->remove();
+                    }
+                }
+            }
+        }
+
+        $removeSettings = array(
+            'air',
+            'airButtons',
+            'iframe',
+            'formattingPre',
+            'boldTag',
+            'italicTag',
+            'imageTabLink',
+            'mobile',
+            'observeImages',
+            'observeLinks',
+            'modalOverlay',
+            'tidyHtml',
+            'toolbarFixedBox',
+            'browse_recursive',
+            'displayImageNames',
+            'tabSpaces',
+            'searchImages'
+        );
+
+        foreach ($removeSettings as $key) {
+            $setting = $object->xpdo->getObject('modSystemSetting', array('key' => 'redactor.' . $key));
+            if ($setting instanceof modSystemSetting) {
+                $setting->remove();
+            }
+        }
+        
+        break;
+    case xPDOTransport::ACTION_UNINSTALL:
+        $success= true;
+        break;
+}
+
+return true;

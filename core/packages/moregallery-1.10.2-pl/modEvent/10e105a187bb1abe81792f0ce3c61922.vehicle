@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '771af416d57e241eb389a4ba98734290',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '10e105a187bb1abe81792f0ce3c61922',
+  'native_key' => 'MoreGallery_OnTagCreate',
+  'object' => '{"name":"MoreGallery_OnTagCreate","service":6,"groupname":"moregallery"}',
+);

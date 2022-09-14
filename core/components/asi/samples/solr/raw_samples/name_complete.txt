@@ -1,0 +1,54 @@
+Solr Results 1 - 1 of 1:
+id	4436
+recordId	NAE110000013544
+entityTypeFacet	corporatebody
+names	Masinatööstus John Madison
+spell	array(4) { [0]=> string(28) "Masinatööstus John Madison" [1]=> string(119) " Masinatööstus John Madison alustas tegevust Pärnus 1935. aastal. Natsionaliseeriti 1940. aastal. Masinate tootmine." [2]=> string(11) "1935 - 1940" [3]=> string(57) " Masinatööstus John Madison ERA.3783 Rahvusarhiiv EE-RA" }
+description	Masinatööstus John Madison alustas tegevust Pärnus 1935. aastal. Natsionaliseeriti 1940. aastal. Masinate tootmine.
+dateDescription	1935 - 1940
+dateType	otherdate
+country	ESTONIA:G:19
+language	est
+ai	The National Archives of Estonia:421
+other	Masinatööstus John Madison ERA.3783 Rahvusarhiiv EE-RA
+repositoryCode	EE-RA
+numberOfArchivalMaterialRelations	1
+numberOfNameRelations	0
+openData
+timestamp	2019-06-18T12:42:16.845Z
+Postgre results:
+PG Query (collection): SELECT * FROM finding_aid WHERE eadid = 'NAE110000013544';
+PG Query (unit): SELECT * FROM eac_cpf WHERE identifier = 'NAE110000013544';
+id 4436
+
+title Masinatööstus John Madison
+
+upload_date 2014-10-14 08:26:11.927
+
+path /EE/421/EAC-CPF/Data091014_2_NAE110000013544.xml
+
+um_id 3
+
+ai_id 421
+
+published t
+
+converted f
+
+validated 2
+
+cpfrelations 0
+
+resourcerelations 1
+
+functionrelations 0
+
+europeana 0
+
+queuing 0
+
+publish_date 2019-06-18 00:00:00
+
+identifier NAE110000013544
+
+ead3_id

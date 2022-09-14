@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '62487369d64d4a56a74d83eaf2131835',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '198ce1e3282d251fa30097391fc13ea5',
+  'native_key' => 'moregallery.add_icon_to_toolbar',
+  'object' => '{"key":"moregallery.add_icon_to_toolbar","value":true,"xtype":"modx-combo-boolean","namespace":"moregallery","area":"Advanced","editedon":1584397769}',
+);

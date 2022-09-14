@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eac-cpf xmlns="urn:isbn:1-931666-33-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-33-4 apeEAC-CPF.xsd">
+    <control>
+        <recordId>GB-100_123456790</recordId>
+        <otherRecordId localType="original">123456790</otherRecordId>
+        <maintenanceStatus>new</maintenanceStatus>
+        <publicationStatus>approved</publicationStatus>
+        <maintenanceAgency>
+            <agencyCode>GB-100</agencyCode>
+            <agencyName>Archive of Test</agencyName>
+        </maintenanceAgency>
+        <languageDeclaration>
+            <language languageCode="eng">English</language>
+            <script scriptCode="Latn">Latin</script>
+        </languageDeclaration>
+        <maintenanceHistory>
+            <maintenanceEvent>
+                <eventType>created</eventType>
+                <eventDateTime>13 August 2020</eventDateTime>
+                <agentType>human</agentType>
+                <agent>Kerstin Arnold</agent>
+            </maintenanceEvent>
+        </maintenanceHistory>
+    </control>
+    <cpfDescription>
+        <identity>
+            <entityId>123456790</entityId>
+            <entityType>person</entityType>
+            <nameEntryParallel>
+                <nameEntry localType="authorized">
+                    <part localType="firstname" xml:lang="eng">Nicole</part>
+                    <part localType="patronymic" xml:lang="eng">Sergeyevna</part>
+                    <part localType="surname" xml:lang="eng">Smith</part>
+                </nameEntry>
+                <nameEntry localType="authorized">
+                    <part localType="firstname" xml:lang="bul">Никол</part>
+                    <part localType="patronymic" xml:lang="bul">Сергеевна</part>
+                    <part localType="surname" xml:lang="bul">ковач</part>
+                </nameEntry>
+            </nameEntryParallel>
+        </identity>
+        <description>
+            <existDates>
+                <dateRange localType="open">
+                    <fromDate standardDate="1921-02-10">10 February 1921</fromDate>
+                    <toDate standardDate="1999-04-30">30 April 1930</toDate>
+                </dateRange>
+            </existDates>
+            <places>
+                <place>
+                    <placeEntry vocabularySource="http://www.places.eu/london" countryCode="GB" localType="birth">London</placeEntry>
+                    <address>
+                        <addressLine>Kings Road</addressLine>
+                        <addressLine>AB1 2CD</addressLine>
+                    </address>
+                    <date standardDate="1921-02-10">10 February 1921</date>
+                </place>
+                <place>
+                    <placeEntry vocabularySource="http://www.places.eu/london" countryCode="BG" localType="death">Sofia</placeEntry>
+                    <date standardDate="1999-04-30">30 April 1930</date>
+                </place>
+            </places>
+            <languagesUsed>
+                <languageUsed>
+                    <language languageCode="eng">English</language>
+                    <script scriptCode="Latn">Latn</script>
+                </languageUsed>
+                <languageUsed>
+                    <language languageCode="bul">Bulgarian</language>
+                    <script scriptCode="Cyrl">Cyrillic</script>
+                </languageUsed>
+            </languagesUsed>
+            <biogHist>
+                <chronList>
+                    <chronItem>
+                        <date standardDate="1921-02-10">10 February 1921</date>
+                        <event>Born in London</event>
+                    </chronItem>
+                    <chronItem>
+                        <date>1941</date>
+                        <event>Some life event</event>
+                    </chronItem>
+                    <chronItem>
+                        <dateRange>
+                            <fromDate>1944</fromDate>
+                            <toDate>1950</toDate>
+                        </dateRange>
+                        <event>Some life other event</event>
+                    </chronItem>
+                    <chronItem>
+                        <date>1967</date>
+                        <event>Another life event</event>
+                    </chronItem>
+                    <chronItem>
+                        <date>1974</date>
+                        <event>One more life event</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1999-04-30">30 April 1999</date>
+                        <event>Died in Sofia</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1999-05-10">10 May 1999</date>
+                        <event>Buried in family grave at London Cemetery</event>
+                    </chronItem>
+                </chronList>
+            </biogHist>
+        </description>
+        <relations>
+            <cpfRelation cpfRelationType="family">
+                <relationEntry>Father</relationEntry>
+                <dateRange>
+                    <fromDate>1899</fromDate>
+                    <toDate>1942</toDate>
+                </dateRange>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="family">
+                <relationEntry>Mother</relationEntry>
+                <dateRange>
+                    <fromDate>1905</fromDate>
+                    <toDate>1982</toDate>
+                </dateRange>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="family" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="GB-100_123456789">
+                <relationEntry localType="title">Sister</relationEntry>
+                <dateRange>
+                    <fromDate>1924</fromDate>
+                    <toDate>1999</toDate>
+                </dateRange>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="family" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="GB-100_987654322">
+                <relationEntry>Smith Family</relationEntry>
+            </cpfRelation>
+            <resourceRelation resourceRelationType="creatorOf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.smith-family.eu/archives">
+                <relationEntry>Smith Family Archives</relationEntry>
+            </resourceRelation>
+        </relations>
+    </cpfDescription>
+</eac-cpf>

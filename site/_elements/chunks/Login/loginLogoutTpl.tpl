@@ -1,0 +1,1 @@
+<a class="button large blue full" href="[[+logoutUrl]]">Log out</a>

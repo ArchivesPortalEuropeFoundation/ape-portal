@@ -1,0 +1,1 @@
+<a class="button pink helpLink" data-category="[[!TaggerGetTags? &resources=`[[+id]]` &rowTpl=`taggerAliasTpl`]]" href="[[~[[+id]]]]">[[+pagetitle]]</a>

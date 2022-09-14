@@ -1,0 +1,26 @@
+<?php
+
+if ($object->xpdo) {
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+        case xPDOTransport::ACTION_UPGRADE:
+            /** @var modX $modx */
+            $modx =& $object->xpdo;
+
+            $current = $modx->getOption('upload_maxsize');
+            if ($current == '1048576') { //default is 1MB, which isn't really all that big for photos
+                $setting = $modx->getObject('modSystemSetting', array('key' => 'upload_maxsize'));
+                if ($setting) {
+                    $setting->set('value', '10485760'); // Set it to 10MB instead
+                    if ($setting->save()) {
+                        $modx->log(modX::LOG_LEVEL_INFO, 'Set the upload_maxsize setting from 1MB to 10MB to allow larger uploads.');
+                    }
+                }
+            }
+
+            break;
+        case xPDOTransport::ACTION_UNINSTALL:
+            break;
+    }
+}
+return true;

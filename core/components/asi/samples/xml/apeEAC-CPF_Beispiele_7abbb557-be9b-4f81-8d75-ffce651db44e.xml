@@ -1,0 +1,452 @@
+
+        <eac-cpf xsi:schemaLocation="urn:isbn:1-931666-33-4 http://www.archivesportaleurope.net/Portal/profiles/apeEAC-CPF.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd" xmlns="urn:isbn:1-931666-33-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <control>
+    <recordId>7abbb557-be9b-4f81-8d75-ffce651db44e</recordId>
+    <otherRecordId>https://hdl.handle.net/10648/7abbb557-be9b-4f81-8d75-ffce651db44e</otherRecordId>
+    <maintenanceStatus>new</maintenanceStatus>
+    <publicationStatus>approved</publicationStatus>
+    <maintenanceAgency>
+      <agencyCode>NL-NHDD</agencyCode>
+      <agencyName>Doc-Direkt</agencyName>
+      <descriptiveNote>
+        <p>CC0 "No Rights Reserved" http://creativecommons.org/publicdomain/zero/1.0</p>
+      </descriptiveNote>
+    </maintenanceAgency>
+    <languageDeclaration>
+      <language languageCode="dut">Dutch</language>
+      <script scriptCode="Latn">Latin</script>
+    </languageDeclaration>
+    <conventionDeclaration>
+      <abbreviation/>
+      <citation/>
+    </conventionDeclaration>
+    <localControl localType="detailLevel">
+      <term>partial</term>
+    </localControl>
+    <maintenanceHistory>
+      <maintenanceEvent>
+        <eventType>created</eventType>
+        <eventDateTime standardDateTime="2013-07-23T08:41:16">2013-07-23</eventDateTime>
+        <agentType>human</agentType>
+        <agent xml:lang="dut"/>
+      </maintenanceEvent>
+    </maintenanceHistory>
+  </control>
+  <cpfDescription>
+    <identity>
+      <entityId localType="HANDLE">10648/7abbb557-be9b-4f81-8d75-ffce651db44e</entityId>
+      <entityType>corporateBody</entityType>
+      <nameEntry localType="authorized">
+        <part>Sociaal-Economische Raad</part>
+      </nameEntry>
+      <nameEntry>
+        <part localType="corpname">Sociaal-Economische Raad</part>
+      </nameEntry>
+      <nameEntryParallel>
+        <nameEntry>
+          <part>SER</part>
+        </nameEntry>
+      </nameEntryParallel>
+    </identity>
+    <description>
+      <existDates>
+        <dateRange>
+          <fromDate standardDate="1950">1950</fromDate>
+        </dateRange>
+      </existDates>
+      <legalStatuses>
+        <legalStatus>
+          <term>Rijksoverheid</term>
+          <dateRange>
+            <fromDate standardDate="1950">1950</fromDate>
+          </dateRange>
+        </legalStatus>
+      </legalStatuses>
+      <functions>
+        <function>
+          <descriptiveNote>
+            <p>De Sociaal-Economische Raad is een adviesorgaan van ondernemers, werknemers en onafhankelijke deskundigen (kroonleden). De SER wil een bijdrage leveren aan maatschappelijke consensus (overeenstemming) over nationale en internationale onderwerpen op sociaal-economisch terrein. De SER streeft hierbij naar kwaliteit en draagvlak: hoge deskundigheid in combinatie met breed gedragen overeenstemming en steun in de samenleving. De SER adviseert aan regering en parlement over sociaal-economisch beleid. Daarnaast heeft de SER bestuurlijke taken voor het bedrijfsleven. Zo houdt de SER toezicht op product- en bedrijfschappen.Deze taken vervult de SER binnen het kader van de Wet op de bedrijfsorganisatie, op grond waarvan de SER is ingesteld. Taken:</p>
+            <p>Het adviseren aan kabinet en parlement over belangrijke onderwerpen in het sociaal-economisch beleid. De raad geeft zowel gevraagd als ook ongevraagd advies.</p>
+            <p>Goedkeuren van verordeningen en besluiten van schappen en het stellen van regels voor hun financiële huishouding. Als toezichthouder let de SER daarbij o.a. op de bestuurssamenstelling, de financiën en de bevoegdheden van de schappen.</p>
+            <p>Onder meer advisering over instelling en opheffing schappen; periodiek samenstellen van besturen van schappen.</p>
+            <p>Al dan niet op verzoek van de minister van SZW entameren en coördineren van PBO-brede operaties; stimuleren en bevorderen van het goed functioneren van schappen.</p>
+            <p>Stimuleren dat het bedrijfsleven op maatschappelijk verantwoorde wijze functioneert; behartiging van de gezamenlijke belangen van het bedrijfsleven.</p>
+            <p>Uitvoering van wetgeving inclusief het stellen van nadere regels.  </p>
+            <p>De SER moet volgens de Wet op de bedrijfsorganisatie niet alleen de bijzondere belangen behartigen van het bedrijfsleven (zowel werkgevers als werknemers), maar ook het bedrijfsleven stimuleren om altijd het algemeen belang in het oog te houden.Daarom is houdt de SER zich ook bezig met het toezicht op de naleving van fusiegedragsregels en met zelfregulering op consumententerrein.</p>
+          </descriptiveNote>
+        </function>
+      </functions>
+      <structureOrGenealogy>
+        <p>De SER is in 1950 bij wet opgericht. Dat was na een lange periode van discussie over de sociale en economische orde in Nederland. Die ging vooral over de rol die de overheid en maatschappelijke organisaties daarin moesten spelen.Het was de tijd van de wederopbouw na de Tweede Wereldoorlog. De zware economische crisis van de jaren dertig lag nog vers in het geheugen. Men was het er in brede kring over eens: de overheid moet zich meer gaan bemoeien met economische groei, werkgelegenheid en sociale zekerheid.Maar ook was duidelijk: de overheid kan dit niet alleen. Ze kan die zware taak slechts waarmaken door het bedrijfsleven (ondernemers en werknemers) blijvend bij het oplossen van deze maatschappelijke vraagstukken te betrekken.Deze grotere betrokkenheid van ondernemers en werknemers bij het sociaal-economisch beleid is in 1950 vastgelegd in de Wet op de bedrijfsorganisatie.  Met deze wet is de SER opgericht. Via de SER krijgt het bedrijfsleven (ondernemers en werknemers) een adviserende taak.  Ook krijgt het bedrijfsleven bestuurlijke bevoegdheden: zij krijgt dan de mogelijkheid om product- en bedrijfschappen (PBO’s) op te richten. In deze schappen kunnen ondernemers en werknemers gemeenschappelijke zaken regelen die zij belangrijk vinden voor hun eigen sector.</p>
+      </structureOrGenealogy>
+      <biogHist/>
+    </description>
+    <relations>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/1a56d57b-9274-4ba2-a5c4-da7543bdd624" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Groothandel en Tussenpersonen in Aardappelen (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2003</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/de7f118a-835a-4b81-adcb-41746167ee6f" xlink:type="simple">
+        <relationEntry>Nederlandse Orde van Advocaten (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/41087460-965e-4608-98cf-65e368b4b6b1" xlink:type="simple">
+        <relationEntry>Hoofdproductschap Akkerbouw (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/22584965-1ab8-4f99-b58e-d69f4a572f15" xlink:type="simple">
+        <relationEntry>Productschap Dranken (SER)</relationEntry>
+        <dateRange>
+          <fromDate>2002</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/825390c4-d9c4-4a63-b164-cad5a1340c89" xlink:type="simple">
+        <relationEntry>Productschap Margarine, Vetten en Oliën (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/d3c8aa45-88a5-4a86-a7b6-a22777ca4732" xlink:type="simple">
+        <relationEntry>Productschap Pluimvee en Eieren (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/d9b60275-0912-4322-8e01-a1be614c2b20" xlink:type="simple">
+        <relationEntry>Productschap Vee en Vlees (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/fd6b3871-29d4-4331-b1a3-95125825d181" xlink:type="simple">
+        <relationEntry>Productschap Vis (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/4c473099-1c99-4f91-9113-71fd4dc42b63" xlink:type="simple">
+        <relationEntry>Productschap Tuinbouw (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1996</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/a6a33968-2ac7-44bf-850d-06585b33db98" xlink:type="simple">
+        <relationEntry>Productschap Zuivel (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/3eadbf3e-604c-457e-95e5-4a7463b1c779" xlink:type="simple">
+        <relationEntry>Productschap voor Bier (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2002</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/ed041328-e6ea-45b0-b37a-ee2499c313f6" xlink:type="simple">
+        <relationEntry>Productschap voor Gedestilleerde Dranken (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2002</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/74512af1-2639-4c87-8636-e8592ba8ba7f" xlink:type="simple">
+        <relationEntry>Landbouwschap (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2003</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/54ff84d4-d2ad-4d96-a773-4fb93750b3d0" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor het Slagersbedrijf (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2004</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/fe06224a-5295-49f0-a9a8-6ded9a7e3b05" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor het Schilders- en Afwerkingsbedrijf (EZ)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2003</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/7e0ac54f-234a-4c14-8959-428bc32594aa" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Vleeswarenindustrie (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1999</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/5dc2f22e-1270-489c-9790-6a4db63fb3d2" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Groothandel in Eieren en Eiproducten en de Eiproductenindustrie (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2001</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/c7152ba2-9c79-49d1-bfbd-9c2af4d8d46d" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Groothandel en de Tussenpersonen in Groente en Fruit (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2003</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/f13ed104-983c-46ee-b6ff-c5300b4592a0" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Steenkolenmijnindustrie (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1976</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/2a7f5a52-2527-4059-ba94-bbdf60e66763" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Schoenindustrie (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1995</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/0c915040-04a8-4101-85a0-acf1a97d04aa" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Lederwarenindustrie (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1995</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/3ab329ab-a1df-4bfd-b482-de9883188e92" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Lederwaren- en Schoenindustrie (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1995</fromDate>
+          <toDate>2001</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/70f0de90-f4ee-418e-98f4-50475b7aa617" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Groothandel in Kruidenierswaren (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1976</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/a94e6ee4-e78a-4b0c-a31b-38b13cc84ccd" xlink:type="simple">
+        <relationEntry>Bedrijfschap Pluimveehandel en -industrie (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2001</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/4ca571be-8a31-4d91-8e9a-dd317c8a8f42" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Export van Boomkwekerijprodukten (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1979</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/627416e6-d942-4747-aa77-2d04b8e80af8" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Handel in Tuinbouwzaden (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2003</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/76a78691-e86e-4865-a1df-da515c424e8d" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Handel in Vee (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2004</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/062c792b-b779-46cc-8af1-d5f6c706e9e7" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor het Banketbakkersbedrijf (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1998</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/1ad797e0-539c-4795-bc25-161227a6815b" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor het Bakkersbedrijf (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1998</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/aa402eeb-fd05-488e-b55d-ea6b373ae6fe" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor het Brood- en Banketbakkersbedrijf (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1998</fromDate>
+          <toDate>2002</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/0ace3a64-ce26-4607-8167-666a50d4fd04" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Groothandel in Bloemkwekerijproducten (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2003</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/c595f9cb-feab-4182-9d4a-ed535746cef3" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor het Maatkledingbedrijf (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1988</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/f19684f8-1248-4455-acbf-e8eec5f8b008" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Detailhandel in Alcoholhoudende Dranken (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2002</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/8609140b-cb5a-4c03-89cc-5dd1948426b6" xlink:type="simple">
+        <relationEntry>Bedrijfschap Frisdranken en Waters (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2002</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/80d42e09-a721-4248-874c-fd37dcef63ee" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Detailhandel in Aardappelen, Groenten en Fruit (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1999</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/6d97e529-b8d0-4c5e-b8dd-e73b83c01456" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Vlasindustrie (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1977</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/6c0f405d-c111-4d56-a99a-69f9aeae9de9" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Lederindustrie (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/c13f09c4-11ff-4525-b2ea-15a8101e074a" xlink:type="simple">
+        <relationEntry>Hoofdbedrijfschap voor de Agrarische Groothandel (SER)</relationEntry>
+        <dateRange>
+          <fromDate>2003</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/4ec66893-2b2e-4232-8659-13e831e43644" xlink:type="simple">
+        <relationEntry>Hoofdbedrijfschap Ambachten (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/4c421e2e-797d-4995-8d30-eef7d0fd0f4e" xlink:type="simple">
+        <relationEntry>Hoofdbedrijfschap Detailhandel (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/de20b66d-2072-4b83-90af-9f355d1284ec" xlink:type="simple">
+        <relationEntry>Bedrijfschap Afbouw (SER)</relationEntry>
+        <dateRange>
+          <fromDate>2003</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/dbbded23-095e-4bd1-8a48-3fdb76e61afc" xlink:type="simple">
+        <relationEntry>Bosschap (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/85b03eb5-2c71-418b-8776-7678d3730104" xlink:type="simple">
+        <relationEntry>Bedrijfschap Horeca en Catering (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate/>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/f5bdd690-0dff-4ce5-a251-d3fa24ef6c68" xlink:type="simple">
+        <relationEntry>Productschap voor Aardappelen (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1998</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/0a38f17b-8b44-4f8d-aaab-6a8ed856db46" xlink:type="simple">
+        <relationEntry>Productschap voor Landbouwzaaizaden (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1995</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/885a3609-8c33-4e9f-86a4-ba6bd9f92ce7" xlink:type="simple">
+        <relationEntry>Productschap voor Groenten en Fruit (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1998</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/f9dea5fd-39c2-4b73-8532-a4bedc3ff455" xlink:type="simple">
+        <relationEntry>Productschap voor Siergewassen (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1999</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/16ea7b62-ecb3-45b4-94b8-21700e8bf43c" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor het Natuursteenbedrijf (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2006</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/249f2baf-eb76-4bab-8453-18f647627d67" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor het Stukadoors, Afbouw- en Terrazzo-/Vloerenbedrijf (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>2003</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/bffefdac-9bf7-4a0c-a22d-77c5aff9d28f" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Groothandel in Vis en Aanverwante Bedrijven (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1991</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/5f52f717-cf33-4745-8b29-5df79e46c24e" xlink:type="simple">
+        <relationEntry>Bedrijfschap voor de Detailhandel in Melk en Melk- en Zuivelprodukten (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1985</toDate>
+        </dateRange>
+      </cpfRelation>
+      <cpfRelation cpfRelationType="hierarchical-child" xlink:href="https://hdl.handle.net/10648/d3ff5355-1d9a-4f0f-b598-7c98a58ded96" xlink:type="simple">
+        <relationEntry>Productschap voor Veevoeder (SER)</relationEntry>
+        <dateRange>
+          <fromDate>1975</fromDate>
+          <toDate>1996</toDate>
+        </dateRange>
+      </cpfRelation>
+    </relations>
+  </cpfDescription>
+</eac-cpf>
+      

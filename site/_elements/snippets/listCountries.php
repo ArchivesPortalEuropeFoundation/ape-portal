@@ -1,0 +1,1 @@
+return $modx->runSnippet('FormItCountryOptions',array('tpl'=>'@CODE [[+text]]==[[+value]]','outputSeparator'=>'||','limited'=>'GB,DE,FR'));

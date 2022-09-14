@@ -1,0 +1,16 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'object' => 
+  array (
+    'source' => 'redactor-2.3.4-pl/xPDOScriptVehicle/a7a7a359cfdcc2907c0e59943683f789.modmorevehicle.resolver.script',
+  ),
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'namespace' => 'redactor',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => '927607a1ea7c5d7c4ab601a4b9791adf',
+  'package' => '',
+  'signature' => 'a7a7a359cfdcc2907c0e59943683f789',
+  'native_key' => '927607a1ea7c5d7c4ab601a4b9791adf',
+);

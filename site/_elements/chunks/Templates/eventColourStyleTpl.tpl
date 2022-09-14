@@ -1,0 +1,1 @@
+#calendar .categoryCheckboxes .checkbox input[name="[[+category:stripString=` `:lcase]]"]::before {color: [[+bgColour]];}

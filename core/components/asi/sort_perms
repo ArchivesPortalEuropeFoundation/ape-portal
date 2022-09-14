@@ -1,0 +1,2 @@
+chmod -R 775 public
+sudo chown -R gel:nobody public

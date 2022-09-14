@@ -1,0 +1,1625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:isbn:1-931666-22-9"
+     xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.archivesportaleurope.net/Portal/profiles/apeEAD.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
+     audience="external">
+   <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b"
+              repositoryencoding="iso15511"
+              scriptencoding="iso15924"
+              relatedencoding="MARC21">
+      <eadid identifier="FR-FRAN_FRDAFAPH_AD002" countrycode="FR" mainagencycode="FR-FRAN">FRDAFAPH_AD002</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="245">Archives photographiques conservées dans le département de l'Aisne (02) </titleproper>
+            <subtitle>Etat des fonds</subtitle>
+         </titlestmt>
+         <publicationstmt>
+            <publisher>Direction des Archives de France</publisher>
+            <address>
+               <addressline>Paris</addressline>
+            </address>
+            <date encodinganalog="260$c" calendar="gregorian" era="ce" normal="2006-10">Décembre 2007</date>
+         </publicationstmt>
+      </filedesc>
+      <profiledesc>
+         <langusage>Instrument de recherche rédigé en<language encodinganalog="041" langcode="fre" scriptcode="Latn"> français</language>
+         </langusage>
+      </profiledesc>
+      <revisiondesc>
+         <change>
+            <date/>
+            <item>Converted_apeEAD_version_2.0.14</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <archdesc level="fonds" type="inventory" encodinganalog="3.1.4"
+             relatedencoding="ISAD(G)v2">
+      <did>
+         <unittitle encodinganalog="3.1.2">Département de l'Aisne (02)</unittitle>
+      </did>
+	  <controlaccess><genreform>photographie</genreform></controlaccess>
+      <dsc type="othertype">
+         <c encodinganalog="3.1.4" id="d1e39">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives départementales de l'Aisne</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e43">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Documents figurés isolés. Tirages papier de dimensions supérieures à 24 x 30 cm conservés aux Archives départementales de l'Aisne</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/2099">Avant 1914 à nos jours</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>50 - 60</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">Supérieur à 240 x 300</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, avant 1914 - années 1980</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>En salle de lecture un fichier intitulé <emph render="italic">Toutes séries sauf 3 Fi et 4 Fi</emph>
+                  </p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces documents concernent des lieux, des monuments, des personnages et des sceaux.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>monument historique</subject>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e89">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">2 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Documents figurés isolés. Tirages papier de format inférieur à 24 x 30 cm conservés aux Archives départementales de l'Aisne</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/2099">Avant 1914 à nos jours</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>4 200</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif"> Inférieur à 240 x 300</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, Avant 1914 - années 1980</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier en salle de lecture intitulé <emph render="italic">Toutes séries, sauf 3 Fi et 4 Fi</emph>
+                  </p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces documents concernent des lieux, des monuments, des personnages, des sceaux.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>monument historique</subject>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e135">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">3 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Documents iconographiques. Négatifs conservés aux Archives départementales de l'Aisne</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/1990">1980 - 1990</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Film souple</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>11 264</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>,  <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <container>Les négatifs sont montés sous montures 50 x 50 mm</container>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <originalsloc encodinganalog="3.5.1">
+                  <p>Reproductions de documents originaux appartenant aux Archives départementales ou prêtés par des particuliers</p>
+               </originalsloc>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Production interne, 1980 - 1990</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier en salle de lecture intitulé <emph render="italic">3 Fi et 4 Fi</emph>
+                  </p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Documents isolés concernant des lieux, monuments, objets, personnages et des thématiques diverses réalisés par Jan-Lou Girard.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <persname>Girard, Jan-Lou</persname>
+                  <subject>paysage</subject>
+                  <subject>monument historique</subject>
+                  <subject>vie quotidienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e196">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">4 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Documents iconographiques. Diapositives conservées aux Archives départementales de l'Aisne</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1980/1990">1980 - 1990</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">24 x 36</dimensions>
+                  </physdesc>
+                  <container> Les diapositives sont montées sous monture 50 x 50 mm</container>
+               </did>
+               <originalsloc encodinganalog="3.5.1">
+                  <p>Reproductions des documents iconographiques utilisés lors des 7 expositions organisées ou accueillies par les Archives départementales de l'Aisne</p>
+               </originalsloc>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Reproduction interne, 1980 - 1990</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier intitulé <emph render="italic">3 Fi et 4 Fi</emph>
+                  </p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Documents isolés concernant des lieux, monuments, objets, personnages et des thématiques diverses réalisés par Jan-Lou Girard.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <persname>Girard, Jan-Lou</persname>
+                  <subject>monument historique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e247">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">9 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies de l'Office municipal de tourisme de Laon</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1992">1992</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Laon. Office municipal de tourisme</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>28</extent>
+                  </physdesc>
+                  <container>Les tirages papier sont montés sur carton plume</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt puis don  avec contrat et clauses, 3 mars 1993</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire de 12 pages dactylographiées, par Jean-Pierre Allart et Michelle Hermant</p>
+               </otherfindaid>
+               <bibliography encodinganalog="3.5.4">
+                  <bibref>Yves-Marie Lucot, Le père Marquette à la découverte du Mississippi , Zulma, 1992.</bibref>
+               </bibliography>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de l'exposition "Découvreurs d'Amériques" organisée à Laon entre octobre 1992 et janvier 1993 à l'occasion du 500e anniversaire de la découverte de l'Amérique ( Expédition du Père Marquette en Amérique, au XVIe siècle.), et spécialement à l'occasion de la parution de l'ouvrage que M. Yves Marie Lucot consacra au missionnaire  jésuite et explorateur Jacques Marquette, né à Laon le 1er juin 1637. Il s'agit pour la quasi-totalité de reproductions en couleurs d'images anciennes (gravures en noir-et-blanc).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Amérique</geogname>
+                  <persname>Marquette, Jacques (Père)</persname>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e297">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">10 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Lapie</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950/1970">1950 - 1970</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Lapie, Roger (photographe)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1973</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire dactylographié</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues aériennes obliques des communes de plus de 500 habitants du département de l'Aisne.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>vue aérienne</subject>
+                  <corpname>Société d'exploitation de la photographie aérienne Roger Lapie (Saint-Maur-des-Fossés)</corpname>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e338">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">11 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Lapie, cartes postales</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950/1970">1950 - 1970</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Lapie, Roger (photographe)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1973</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Droits réservés</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire dactylographié</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues aériennes obliques des communes de plus de 500 habitants du département de l'Aisne.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>vue aérienne</subject>
+                  <corpname>Société d'exploitation de la photographie aérienne Roger Lapie (Saint-Maur-des-Fossés)</corpname>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e379">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">13 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Vergnol</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1839/1950">1839 - 1950</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Vergnol, Antoine</persname> ; <persname>Vergnol, André</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>9 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don avec contrat et clauses, 25 juin 1982, 1996</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre. Consultation des tirages papier</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre des tirages papier avec mention du nom du donateur</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire alphabétique et thématique,  fichier topographique et méthodique et répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces photographies proviennent  des établissements Vergnol à Soissons et représentent des sujets variés tels que la Première Guerre mondiale, des monuments, des villages, des portaits, des fêtes, etc…</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>Soissons (Aisne)</geogname>
+                  <corpname>Etablissements Vergnol</corpname>
+                  <subject>fête</subject>
+                  <subject>portrait</subject>
+                  <subject>monument historique</subject>
+                  <subject>guerre mondiale (1914-1918)</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph476">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">14 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Henrard</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950/1970">1950 - 1970</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname authfilenumber="FRDAF00APH_NA003">Henrard, Roger</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>287</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>,   <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>194</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1986 - 1988</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre. Consultation des tirages papier</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction des tirages papier soumise à autorisation avec la mention obligatoire "cliché Roger Henrard"</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Vues aériennes obliques des communes et monuments de l'Aisne.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>monument historique</subject>
+                  <subject>agglomération urbaine</subject>
+                  <subject>vue aérienne</subject>
+                  <corpname>Société d'exploitation de la photographie aérienne Roger Henrard</corpname>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e503">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">15 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Bidaut</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920/1950">1920 - 1950</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Bidaut</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>290</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1985 - 1990</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre. Consultation sous forme numérique</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de la cathédrale de Laon, des églises de Laon et de quelques autres du Laonnois.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>édifice cultuel</subject>
+                  <subject>monument historique</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="AD02ph16">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">16 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds André Leroy</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920/1950">1920 - 1950</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Leroy, André</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2 612</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <container>Les films souples sont montés sous montures 50 x 50 mm</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1988</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier manuscrit intitulé <emph render="italic">16 Fi-22 Fi</emph> et  répertoire numérique</p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Monuments, sites et événements concernant l'Aisne.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>monument historique</subject>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e621">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">18 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection de cartes postales conservées aux Archives départementales de l'Aisne</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/2099">Avant 1914 à nos jours</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne et moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>4 000</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, depuis 1914</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier manuscrit intitulé <emph render="italic">18 Fi Cartes postales</emph>
+                  </p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de cartes postales relatives au département de l'Aisne.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <persname> La Fontaine</persname>
+                  <persname>Desmoulins, Camille</persname>
+                  <persname>Racine</persname>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e666">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">20 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de la reconstruction industrielle de l'Aisne</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1921/1930">Années 1920</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>337</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>337</extent>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Les plaques de verre négatives sont fragiles</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 28 février 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre. Consultation des tirages papier</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre des tirages papier</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces documents représentent des sites industriels détruits pendant la Première Guerre mondiale.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>bâtiment industriel</subject>
+                  <subject>dommages de guerre</subject>
+                  <subject>guerre mondiale (1914-1918)</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e718">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">21 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photothèque départementale (Aisne)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1981/1990">Années 1980</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Boureux, Michel</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet> Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>100 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>,  <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1993 - 1997</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier manuscrit intitulé <emph render="italic">21 Fi</emph>
+                  </p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de vues aériennes de la Photothèque aérienne départementale.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>vue aérienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="AD02ph22">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">22 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds André Leroy</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1920/1950">1920 - 1950 </unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2746</extent>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1994</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre. Consultation des films souples de substitution ou sous forme numérique</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre des documents de substitution</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique sous Excel et  Fichier manuscrit intitulé <emph render="italic">16 Fi-22 Fi</emph>
+                  </p>
+               </otherfindaid>
+               <separatedmaterial encodinganalog="3.5.3">
+                  <p/>
+               </separatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Ces documents représentent des monuments, des sites et des événements concernant l'Aisne.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>monument historique</subject>
+                  <subject>événement</subject>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e832">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">23 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">L'Aisne au fil de l'eau</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1994">1994</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Marival, Guy</persname> ; <persname>Keraudrau, Jean</persname> ; <persname>Sicard </persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>412</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">24 x 36</dimensions>
+                  </physdesc>
+                  <container>Les diapositives sont sous monture 50 x 50 mm</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Fichier manuscrit intitulé <emph render="italic">23 Fi</emph>
+                  </p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies aériennes du cours de l'Aisne réalisées dans le cadre de l'exposition "l'Aisne au fil de l'eau" en 1994.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (cours d'eau)</geogname>
+                  <subject>site</subject>
+                  <subject>cours d'eau</subject>
+                  <subject>vue aérienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e894">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">24 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Mangin</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1914/1918">1914 - 1918</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>111</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire méthodique dactylographié</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies aériennes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>vue aérienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e933">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">28 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Jean Hallade</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1918/1919">1918 - 1919</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique ancien baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>112</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">180 x 240</dimensions>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds classé alphabétiquement par commune</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1997</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire méthodique dactylographié</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies aériennes prises durant la Première Guerre mondiale.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>guerre mondiale (1914-1918)</subject>
+                  <subject> armée</subject>
+                  <subject> site</subject>
+                  <subject> habitat</subject>
+                  <subject>vue aérienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3266">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">29 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Alfred Normand</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1889/1994">1889 - 1994</unitdate>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname authfilenumber="FRDAF00APH_NA005">Normand, Alfred</persname>
+                  </origination>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>24</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique ancien baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">165 x 225</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds classé alphabétiquement par commune</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1997</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire méthodique dactylographié</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de monuments et édifices caractéristiques du département, réalisées par Alfred Normand à l'occasion de tournées d'inspections des prisons départementales (essentiellement régions de Soissons et Laon).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>Soissons (Aisne)</geogname>
+                  <geogname> Laon (Aisne)</geogname>
+                  <geogname> Coucy (Aisne)</geogname>
+                  <geogname> Taillefontaine (Aisne)</geogname>
+                  <subject>architecture</subject>
+                  <subject> monument</subject>
+                  <subject> édifice cultuel</subject>
+                  <subject> site</subject>
+                  <subject> habitat</subject>
+                  <subject> art</subject>
+                  <subject> bâtiment public</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1064">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">30 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Association "Vie et Culture de l'Aisne"</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1914/1918">1914 - 1918</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque stéréoscopique au gélatinobromure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>136</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">440 x 1060</dimensions>, <dimensions unit="mm" type="support_positif">580 x 1290</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds classé alphabétiquement par département et thème</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1990</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre cependant les originaux sont incommunicables pour des raisons matérielles. Se servir des fichiers numériques.</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre. Se servir des reproductions numériques.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire méthodique dactylographié</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies réalisées sur le front durant la guerre 1914-1918.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname> Haut-Rhin (département)</geogname>
+                  <geogname> Vosges (département)</geogname>
+                  <geogname> Pas-de-Calais (département)</geogname>
+                  <geogname> Nord (département)</geogname>
+                  <geogname> Somme (département)</geogname>
+                  <geogname> Oise (département)</geogname>
+                  <geogname> Meuse (département)</geogname>
+                  <geogname> Belgique</geogname>
+                  <geogname> Italie</geogname>
+                  <geogname> Carpates</geogname>
+                  <subject>guerre mondiale (1914-1918)</subject>
+                  <subject> armée</subject>
+                  <subject> site</subject>
+                  <subject> vie quotidienne</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1145">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">32 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies aériennes des zones de combats autour du Fort de La Malmaison en octobre 1917</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1917-10">16 octobre - 29 octobre 1917</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique ancien baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>224</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">180 x 240</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds classé chronologiquement</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1998</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre cependant les originaux sont incommunicables pour des raisons matérielles. Se servir des fichiers numériques.</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre. Se servir des reproductions numériques.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique dactylographié</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies aériennes de l'offensive lancée par le général Pétain en octobre 1917 et limitée au secteur ouest du Chemin des Dames autour du fort de La Malmaison</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>La Malmaison (Aisne)</geogname>
+                  <subject>guerre mondiale (1914-1918)</subject>
+                  <subject> armée</subject>
+                  <subject> site</subject>
+                  <subject> habitat</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1208">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">33 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Exposition sur les grimpettes de Laon</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1996/1997">1996 - 1997</unitdate>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Archives départementales de l'Aisne</corpname>
+                  </origination>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple en papier RC</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">24 x 36</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">60 x 70</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">24 x 36</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Tirages classés par lieux (quartiers) puis par grimpettes/rues/ruelles ; négatifs classés par ordre alphabétique ; certains tirages/négatifs en vrac.</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Réalisation interne, 1996</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction réservée</p>
+               </userestrict>
+               <scopecontent encodinganalog="summary">
+                  <p>Exposition de photographies sur les grimpettes de Laon réalisée par le service des Archives départementales de l'Aisne en 1997.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>Laon (Aisne)</geogname>
+                  <subject>voirie</subject>
+                  <subject> habitat</subject>
+                  <subject> tourisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1275">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">37 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Service de la Reconstitution foncière (Ministère des régions libérées)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1917/1922">1917 - 1922</unitdate>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Service de la Reconstitution foncière, Compagnie aérienne française</corpname>
+                  </origination>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique ancien baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1378</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">180 x 240</dimensions>, <dimensions unit="mm" type="support_positif">300 x 400</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds classé alphabétiquement par communes.</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre, cependant les originaux sont incommunicables pour des raisons matérielles. Se servir des fichiers numériques.</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre. Se servir des reproductions numériques.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Le service de la Reconstitution foncière a réalisé après la Première Guerre mondiale une série de vues aériennes couvrant une partie des communes sinistrées du département de l’Aisne. Ces vues montrent l’étendue des destructions dues au premier conflit mondial, les installations provisoires et les prémices de la reconstruction (1920-1922). </p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <subject>guerre mondiale (1914-1918)</subject>
+                  <subject> armée</subject>
+                  <subject> site</subject>
+                  <subject> habitat</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3271">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">38 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Jean Belcour</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1857">1857</unitdate>
+                  <origination encodinganalog="3.2.1">
+                     <persname authfilenumber="FRDAF00APH_NA006">Belcour, Jean</persname>
+                  </origination>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>21</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier salé</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">205 x 130</dimensions>, <dimensions unit="mm" type="support_positif">130 x 180</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Documents conservés sous forme d'album au  <extref xlink:href="http://www.musee-soissons.org/">Musée de Soissons</extref> .</p>
+               </altformavail>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 2002</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre, cependant les originaux sont incommunicables pour des raisons matérielles. Se servir des fichiers numériques.</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre. Se servir des reproductions numériques.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Jean Belcour était photographe à Soissons, au 60 rue des Cordeliers.</p>
+               </bioghist>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de monuments, rues et panoramas de la ville de Soissons realisées en 1857 par Jean Belcour.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>Soissons (Aisne)</geogname>
+                  <subject>architecture</subject>
+                  <subject> monument</subject>
+                  <subject> édifice cultuel</subject>
+                  <subject>art</subject>
+                  <subject> bâtiment public</subject>
+                  <subject> vie quotidienne</subject>
+                  <subject> site</subject>
+                  <subject> habitat</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1421">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">41 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Emile Contant</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1916/1918">1916 - 1918</unitdate>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Contant, Emile</persname>
+                  </origination>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique ancien baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>186</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">180 x 240</dimensions>, <dimensions unit="mm" type="support_positif">130 x 180</dimensions>, <dimensions unit="mm" type="support_positif">130 x 80</dimensions>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Fonds classé par départements puis par communes.</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 2004</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <custodhist encodinganalog="3.2.3">
+                  <p>Émile Contant né à Blida en Algérie, le 23 avril 1890, officier observateur durant la Première Guerre mondiale dans plusieurs éscadrilles (MF36, C226, 228, 74 et 204) réalise des photographies aériennes entre 1916 et 1918 dans les secteurs de Moreuil (Somme), Roye (Somme), Westende (Belgique) et Saint-Quentin (Aisne).</p>
+               </custodhist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies aériennes réalisées de 1916 à 1918 dans les secteurs de Moreuil (Somme), Roye (Somme), Westende (Belgique) et Saint Quentin (Aisne).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>Saint-Quentin (Aisne)</geogname>
+                  <geogname> Laon (Aisne)</geogname>
+                  <geogname> Somme (département)</geogname>
+                  <geogname> Oise (département)</geogname>
+                  <geogname> Pas-de-Calais (département)</geogname>
+                  <geogname> Belgique</geogname>
+                  <subject>guerre mondiale (1914-1918)</subject>
+                  <subject> habitat</subject>
+                  <subject> architecture</subject>
+                  <subject>bâtiment industriel</subject>
+                  <subject> monument</subject>
+                  <subject> édifice cultuel</subject>
+                  <subject>art</subject>
+                  <subject> bâtiment public</subject>
+                  <subject> site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1510">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">43 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Centenaire Alexandre Dumas à Villers-Cotterêts</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1902">1902</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage stéréoscopique argentique ancien baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>17</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">75 x 158</dimensions>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 2004</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Fonds constitués de photographies de la commémoration du centenaire de la naissance d'Alexandre Dumas à Villers-Cotterêts en 1902.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>Villers-Cotterêts (Aisne)</geogname>
+                  <subject>personnalité</subject>
+                  <subject>  fête</subject>
+                  <subject> auteur</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1561">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">46 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Plaques photographiques de monuments situés en Thiérache</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1870/1930">Fin XIXe  - début XXe siècle</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>70</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre au gélatinobromure</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Documents fragiles</p>
+               </phystech>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don/Dépôt, 1998</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre, cependant les originaux sont incommunicables pour des raisons matérielles. Se servir des fichiers numériques.</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre. Se servir des reproductions numériques.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Plaques photographiques en verre concernant des monuments situés en Thiérache (églises fortifiées, châteaux, pigeonniers…).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>Thiérache (Aisne)</geogname>
+                  <subject>architecture</subject>
+                  <subject> fortification</subject>
+                  <subject> monument</subject>
+                  <subject> site</subject>
+                  <subject> tourisme</subject>
+                  <subject> habitat</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1618">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">47 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Clichés datant de la Première Guerre mondiale</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1914/1918">1914 - 1918</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>55</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 2005</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre, cependant les originaux sont incommunicables pour des raisons matérielles. Se servir des fichiers numériques.</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre. Se servir des reproductions numériques.</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire numérique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Lot de 55 négatifs souples datant de 1914-1918 et concernant Berry-au-Bac et Pontavert. La plupart des clichés ont été légendés dans la marge.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>Berry-au-Bac (Aisne)</geogname>
+                  <geogname> Pontavert (Aisne)</geogname>
+                  <subject>guerre mondiale (1914-1918)</subject>
+                  <subject> édifice cultuel</subject>
+                  <subject> art</subject>
+                  <subject> bâtiment</subject>
+                  <subject> militaire</subject>
+                  <subject>architecture</subject>
+                  <subject> monument</subject>
+                  <subject> site</subject>
+                  <subject> habitat</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1684">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">48 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Paul Delaruelle</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1915/1918">1915 - 1918</unitdate>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Delaruelle, Paul</persname>
+                  </origination>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique ancien baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>488</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction numérique</genreform>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p> Classement chronologique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt, 2006</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès après autorisation du dépôsant. Se servir des fichiers numériques.</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction après autorisation du dépôsant. Se servir des reproductions numériques.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Paul Delaruelle était capitaine au 347e régiment d'infanterie.</p>
+               </bioghist>
+               <scopecontent encodinganalog="summary">
+                  <p>Album photographique datant de la Première Guerre mondiale élaboré par le capitaine Paul Delaruelle du 347e régiment d'infanterie.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>Marne (département)</geogname>
+                  <geogname>Paris (France)</geogname>
+                  <geogname> Meuse (département)</geogname>
+                  <subject>guerre mondiale (1914-1918)</subject>
+                  <subject> édifice cultuel</subject>
+                  <subject> art</subject>
+                  <subject> bâtiment</subject>
+                  <subject> militaire</subject>
+                  <subject>architecture</subject>
+                  <subject> monument</subject>
+                  <subject> site</subject>
+                  <subject> habitat</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1757">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">53 J</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Marie Moret</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1862/1905">1862 - 1905</unitdate>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Moret, Marie</persname>; <persname>Dallet, Émilie</persname>
+                  </origination>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>9</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">130 x 180</dimensions>, <dimensions unit="mm" type="support_negatif">240 x 180</dimensions>, <dimensions unit="mm" type="support_negatif">119 x 90</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique ancien baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>182</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Reproduction de tirage argentique ancien baryté</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>7</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="mode_reproduction">60 x 85</dimensions>, <dimensions unit="mm" type="mode_reproduction">45 x 140</dimensions>, <dimensions unit="mm" type="mode_reproduction">63 x 159</dimensions>, <dimensions unit="mm" type="mode_reproduction">130 x 182</dimensions>, <dimensions unit="mm" type="mode_reproduction">169 x 131</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage argentique ancien baryté</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">53 x 89</dimensions>, <dimensions unit="mm" type="support_positif">110 x 80</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage  argentique ancien baryté stéréoscopique</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>118</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">175 x 85</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre ambrotype</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_positif">240 x 180</dimensions>, <dimensions unit="mm" type="support_positif">155 x 115</dimensions>
+                  </physdesc>
+               </did>
+               <phystech encodinganalog="3.4.4">
+                  <p>Plaques de verre fragiles. Certaines sont endommagées.</p>
+               </phystech>
+               <arrangement encodinganalog="3.3.4">
+                  <p> Classement chronologique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1999</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès soumis à l'application de la loi sur les archives.</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à l'application de la loi sur les archives.</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Jean-Baptiste André Godin (1817-1888) est à la fois un industriel de génie et un expérimentateur social pragmatique. Godin attache une grande importance à l'éducation, il entend " éduquer pour émanciper ". Il ouvre une école dès 1862 et le bâtiment des écoles est construit en 1869, en face des pavillons d'habitation ; il est agrandi en 1882 pour tenir compte de l'augmentation de la population enfantine du Familistère. Marie Moret est née en 1840 à Brie-Comte-Robert en Seine-et-Marne. Seconde épouse de Jean-Baptiste Godin, fondateur du Familistère de Guise, elle est très liée au système d'éducation original que Godin avait souhaité voir se développer : " Il s'agit de déterminer comment on donnera à tous les enfants l'éducation et l'instruction en rapport avec les égard dus à la dignité de la personne humaine, quels que soient la naissance et le rang de la famille de l'enfant". Elle élabore une méthode pour l'enseignement du calcul tandis que sa sœur, Émilie Dallet, met au point une méthode d'apprentissage de la lecture.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Répertoire méthodique</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Tirages photographiques noir et blanc, colorisés et stéréoscopiques, reproductions de tirages, ambrotypes, représentant l'usine Godin, le Familistère, les proches de Godin (familles et amis).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Guise (Aisne)</geogname>
+                  <persname>Godin, Jean-Baptiste</persname>
+                  <subject>enseignement</subject>
+                  <subject>bâtiment industriel</subject>
+                  <subject> société</subject>
+                  <subject> vie familiale</subject>
+                  <subject> vie quotidienne</subject>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e1901">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales de Saint-Quentin</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e1905">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Cartes postales et photographies conservées aux Archives municipales de Saint-Quentin</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1995">1900 - 1995</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 10</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 15</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>Environ 50</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre aux reproductions</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Instrument de recherche papier en cours</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Cette collection qui  regroupe sous cette cote, l'ensemble du fonds photographique des Archives municipales de Saint-Quentin, concerne tous les aspects de la ville et de ses réalisations.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Aisne (département)</geogname>
+                  <geogname>Saint-Quentin (Aisne)</geogname>
+                  <subject>agglomération urbaine</subject>
+                  <subject>aménagement du territoire</subject>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e1961">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales de Soissons</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="ph3903">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">73 W 36 - 51</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection de photographies du Service Information - Communication</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1977/1988">1977 - 1988</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Soissons. Service information-communication</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent unit="metre_lineaire">1,32</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Non renseigné</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Non renseigné</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Pas d'instrument de recherche</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Photographies réalisées par l’attachée de presse, du Service Information-Communication.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Soissons (Aisne)</geogname>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph3904">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">137 W 62-65</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection de photographies du Service Information - Communication</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1986/1995">1986, 1990  - 1995</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Soissons. Service information-communication</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent unit="metre_lineaire">0,40</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Non renseigné</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Non renseigné</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Pas d'instrument de recherche</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> Photographies réalisées par l’attachée de presse, le photographe ou le journaliste du Service Information-Communication.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Soissons (Aisne)</geogname>
+               </controlaccess>
+            </c>
+         </c>
+      </dsc>
+   </archdesc>
+</ead>

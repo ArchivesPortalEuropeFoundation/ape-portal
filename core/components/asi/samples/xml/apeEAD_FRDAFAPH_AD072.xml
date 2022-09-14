@@ -1,0 +1,1499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:isbn:1-931666-22-9"
+     xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.archivesportaleurope.net/Portal/profiles/apeEAD.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
+     audience="external">
+   <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b"
+              repositoryencoding="iso15511"
+              scriptencoding="iso15924"
+              relatedencoding="MARC21">
+      <eadid identifier="FR-FRAN_FRDAFAPH_AD072" countrycode="FR" mainagencycode="FR-FRAN">FRDAFAPH_AD072</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="245">Archives photographiques conservées dans le département de la Sarthe (72) </titleproper>
+            <subtitle>Etat des fonds</subtitle>
+         </titlestmt>
+         <publicationstmt>
+            <publisher>Direction des Archives de France</publisher>
+            <address>
+               <addressline>Paris</addressline>
+            </address>
+            <date encodinganalog="260$c" calendar="gregorian" era="ce" normal="2006-10">Février 2007</date>
+         </publicationstmt>
+      </filedesc>
+      <profiledesc>
+         <langusage>Instrument de recherche rédigé en<language encodinganalog="041" langcode="fre" scriptcode="Latn"> français</language>
+         </langusage>
+      </profiledesc>
+      <revisiondesc>
+         <change>
+            <date/>
+            <item>Converted_apeEAD_version_2.0.14</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <archdesc level="fonds" type="inventory" encodinganalog="3.1.4"
+             relatedencoding="ISAD(G)v2">
+      <did>
+         <unittitle encodinganalog="3.1.2">Département de la Sarthe (72)</unittitle>
+      </did>
+     <controlaccess><genreform>photographie</genreform></controlaccess>
+      <dsc type="othertype">
+         <c encodinganalog="3.1.4" id="d1e39">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives départementales de la Sarthe</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e43">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">11 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Casimir Lambert</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1880/1944">Fin XIXe  - 1944</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Lambert, Casimir</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet> Tirage  papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>167</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1962 - 1963</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> Dufay-Péré (Dominique), <emph render="italic">Sous-série 11 Fi, Fonds Lambert</emph>,  Répertoire numérique, 1990, 15 pages dactylographiées, issues de la base « Fimage »</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de tirages de clichés du photographe sablésien Casimir Lambert réalisés entre la fin du XIXe  siècle et 1944 concernant essentiellement Sablé et sa région ou des événements s'y étant déroulés.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sablé-sur-Sarthe (Sarthe)</geogname>
+                  <geogname>Solesmes (Sablé-Sur-Sarthe), abbaye de </geogname>
+                  <subject>agglomération urbaine</subject>
+                  <subject>action économique</subject>
+                  <subject>libération</subject>
+                  <subject>guerre mondiale (1939-1945)</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e102">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">12 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Maillard</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1965/1985">Vers 1970 - 1980</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Maillard</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>46</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1984</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation en cas d'utilisation commerciale</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données textuelles "Fimage"</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Ensemble de cartes postales : dessin édités (et réalisés) par le sarthois Maillard.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <subject>artisan</subject>
+                  <subject>sport</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="ph68">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">13 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Henrard</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1952/1972">1952 - 1972</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname authfilenumber="FRDAF00APH_NA003">Henrard, Roger (photographe)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="support_negatif">180 x 240</dimensions>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat avec les droits, 1984</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> Dufay-Péré (Dominique), <emph render="italic">La Sarthe vue d'avion (1952-1972), Inventaire analytique de la collection de photographies aérienne Roger Henrard (13 Fi) </emph>, Le Mans, 1986, 88 p imprimé</p>
+                  <p>Base de données textuelles créée en 1988-1989 sur le logiciel DBases 3</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies aériennes obliques réalisées entre 1952 et 1972 par Roger Henrard, fondateur de la "Société d'exploitation de la Photographie aérienne Roger Henrard" acquises par le département de la Sarthe en 1984, après le décès de leur auteur. Sarthe : 36 communes dans les cantons de la vallée du Loir.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <geogname>Loir, Vallée du (France)</geogname>
+                  <corpname>Société d'exploitation de la photographie aérienne Roger Henrard</corpname>
+                  <subject>commune</subject>
+                  <subject>agglomération urbaine</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>catholicisme</subject>
+                  <subject>patrimoine culturel</subject>
+                  <subject>site</subject>
+                  <subject> tourisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e215">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">21 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Pattier</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1940">1900 - 1940</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Pattier, Madeleine</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 201</extent>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement par commune</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don, 1999</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction en partie soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> Dufay-Péré (Dominique), <emph render="italic">Sous-série 21 Fi, Collection Pattier</emph>,  Répertoire numérique, 2001, 92 pages dactylographiées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de cartes postales de Madeleine Pattier concernant Sillé-le-Guillaume et sa région. Sarthe : 20 communes, série de costumes sarthois. Quelques cartes postales d'autres départements : Eure, Loir-et-Cher, et surtout Mayenne.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sillé-le-Guillaume (Sarthe)</geogname>
+                  <geogname>Assé-le-Riboul (Sarthe)</geogname>
+                  <geogname>Brûlon (Sarthe)</geogname>
+                  <geogname>Chemiré-en-Charnie (Sarthe)</geogname>
+                  <geogname>Conlie (Sarthe)</geogname>
+                  <geogname>Crissé (Sarthe)</geogname>
+                  <geogname>Epineu-le-Chevreuil (Sarthe)</geogname>
+                  <geogname>Le Grez (Sarthe)</geogname>
+                  <geogname>Le Mans (Sarthe)</geogname>
+                  <geogname>Mont-Saint-Jean (Sarthe)</geogname>
+                  <geogname>Neuvillette-en-Charnie (Sarthe)</geogname>
+                  <geogname>Parennes (Sarthe)</geogname>
+                  <geogname>Pezé-le-Robert (Sarthe)</geogname>
+                  <geogname>Rouessé-Vassé (Sarthe)</geogname>
+                  <geogname>Rouez-en-Champagne (Sarthe)</geogname>
+                  <geogname>Saint-Cosme-en-Vairais (Sarthe)</geogname>
+                  <geogname>Saint-Denis-d'Orques (Sarthe)</geogname>
+                  <geogname>Saint-Rémy-de-Sillé (Sarthe)</geogname>
+                  <geogname>Segrie (Sarthe)</geogname>
+                  <geogname>Tennie (Sarthe)</geogname>
+                  <geogname>Vibraye (Sarthe)</geogname>
+                  <geogname>Sarthe (département)</geogname>
+                  <geogname>Eure (département)</geogname>
+                  <geogname>Loir-et-Cher (département)</geogname>
+                  <geogname>Mayenne (département)</geogname>
+                  <subject>commune</subject>
+                  <subject>site</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e315">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">14 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de diapositives des Archives départementales de la Sarthe</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1988/1991">1988 - 1991</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Sarthe. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>469</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <accruals encodinganalog="3.3.3">
+                  <p>Sous-série ouverte susceptible d'accroissement</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Reproduction interne, à partir de 1988</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Dufay-Péré (Dominique), <emph render="italic">Sous-série 14 Fi, Fonds Archives départementales de la Sarthe : Diapositives</emph>, Répertoire numérique, 33 pages dactylographiées commencé en 1992</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de terrain et tirages  de documents prêtés, réalisées par le Service des Archives départementales de la Sarthe.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <subject>manifestation culturelle</subject>
+                  <subject>patrimoine écrit</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e368">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">16 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Coutard</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1870/1990">1870 - 1990</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Sarthe. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Diapositive</genreform>, <genreform>reproduction argentique</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>323</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Reproduction interne de documents prêtés,  1984</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Dufay-Péré (Dominique), <emph render="italic">Sous-série 16 Fi Fonds Coutard</emph>, Répertoire numérique, 1990, 18 pages dactylographiées</p>
+                  <p>  Base de données textuelles créée en 1988-1990 sous le logiciel DBase3</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Documentation photographique accompagnée de textes rassemblée par André Coutard et reproduite par les Archives sur les moulins sarthois et mayennais ainsi que sur les quartiers autour de la rue des Acacias, de l'avenue de la Libération et de l'avenue O. Heuzé au Mans. Sarthe : Le Mans (quartiers du Mans entre l'avenue de la Libération et et l'avenue O. Heuzé, notamment la rue des Acacias.), Mayenne.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Mayenne (département)</geogname>
+                  <geogname>Le Mans (Sarthe)</geogname>
+                  <persname>Coutard, André</persname>
+                  <subject>agglomération urbaine</subject>
+                  <subject>voie communale</subject>
+                  <subject>patrimoine culturel</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e426">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">19 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds du Conseil d'architecture d'urbanisme et de l'environnement de la Sarthe (CAUE)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1989">1989</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Sarthe. Conseil d'architecture, d'urbanisme et de l'environnement</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 305</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Reproduction interne de documents prêtés, 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre sous réserve d'avertir le CAUE des éventuelles publications parues</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Dufay-Péré (Dominique), <emph render="italic">Sous-série 19 Fi, Conseil d'architecture, d'urbanisme et de l'Environnement de la Sarthe</emph>, Répertoire numérique, 1992, 14 pages dactylographiées</p>
+                  <p> Base textuelle informatisée "Fimage", créée en 1988-1990 sous le logiciel DBase 3 qui n'est pas réservé aux photographies</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Enquête sur l'architecture rurale Sarthoise menée en 1989 par le Conseil d'architecture, d'urbanisme et de l'environnement de la Sarthe (C.A.U.E.), chargé en particulier de conseiller collectivités et particulier en matière de restauration de l'habitat ancien. (bâtiments agricoles, étables, etc., à l'abandon ou en activité, restaurés ou non, exemples ou contre-exemples des principes conseillés en matière de restauration classés par régions naturelles, puis, à l'intérieur de celles-ci, par communes).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <subject>architecture</subject>
+                  <subject> restauration immobilière</subject>
+                  <subject>exploitation agricole</subject>
+                  <subject>habitat rural</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e482">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">2 Fi 1 à 2 Fi 6014</unitid>
+                  <unittitle encodinganalog="3.1.2">Cartes postales des  Archives départementales de la Sarthe</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/1945">1890 - 1945</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>6 000</extent>
+                  </physdesc>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Photocopies pour la consutation</p>
+               </altformavail>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement par commune</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Sous-série ouverte susceptible d'accroissement</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt, don et achat, à partir de 1970</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction en partie soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données images</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de cartes postales en accroissement régulier, consultées sous forme de photocopies ; puis contenant des "spécialités" du département concernant par exemple le sport automobile, l'aviation, mais aussi le folklore et des personnages locaux.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <subject>transport aérien</subject>
+                  <subject>discipline sportive</subject>
+                  <subject>véhicule automobile</subject>
+                  <subject>patrimoine ethnologique</subject>
+                  <subject>élu</subject>
+                  <subject>ministre du culte</subject>
+                  <subject>catholicisme</subject>
+                  <subject>personnalité</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e544">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">5 Fi ; 6 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Photographies des Archives départementales de la Sarthe</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1850/1989">1850 - 1989</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Sous-série ouverte susceptible d'accroissement</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt, don et achat,  à partir de 1963</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction en partie soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Dufay-Péré (Dominique), <emph render="italic">Sous-série 5 Fi-6 Fi Photographies</emph>, Répertoire numérique commencé en 1988,  102 pages (5 Fi) et 20 pages (6 Fi)</p>
+                  <p>Base textuelle informatisée dénommée « Fimage », créée en 1988-1990 sous logiciel DBase3 qui n'est pas réservée aux photographies</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collections de photographies dont les Archives ne détiennent pas les négatifs,  entrées par voie extraordinaire, dont la taille est inférieure à 21 x 30 cm (5 Fi) ou supérieure à ce format (6 Fi). Elles concernent le département de la Sarthe.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <persname>Poitevin, Louis-Alphonse (1819-1882)</persname>
+                  <subject>patrimoine culturel</subject>
+                  <subject>objet d'art</subject>
+                  <subject>personnalité</subject>
+                  <subject>ministre du culte</subject>
+                  <subject>catholicisme</subject>
+                  <subject>armée</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e600">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">20 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Barranger</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/1920">Début du XXe  siècle</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Barranger, Daniel</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 554</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1992</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction en partie soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> Tertre (Céline) et  Papin (Florence),  <emph render="italic">Répertoire numérique de la sous-série 20 Fi</emph>, 1992, 32 pages dactylographiées</p>
+                  <p> Base de données textuelle "Fimage", créée en 1988-1990 sous le logiciel DBase 3, qui n'est pas réservée aux photographies</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de carte postales de Daniel Barranger concernant les moulins à eau sarthois et, plus accessoirement les lavoirs. Un tiers des moulins à eau existant au début du siècle dans le département de la Sarthe s'y trouvent représentés. Sarthe : 152 communes.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <subject>patrimoine culturel</subject>
+                  <subject>commune</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e653">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">15 F 23 à 15 F 30</unitid>
+                  <unittitle encodinganalog="3.1.2">Objets d'art du département de la Sarthe</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1930">1900 - 1930</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>L'Hermitte, Julien</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement par commune</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Legs, 1947</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation </p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Berranger (Henri de), <emph render="italic">Sous-séries 1 F à 15 F</emph>. Répertoire numérique, Le Mans, 1962, 87 pages</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Dossiers sur les objets d'art classés du département de la Sarthe  légués par Julien L'Hermitte, archiviste de la Sarthe de 1900 à 1935.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <subject>objet d'art</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>catholicisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e705">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">13 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Albums de la Collection Louis Calendini</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1945">1900 - 1945</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Calendini, Louis (abbé)</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien et moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>3 900</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <container>Album</container>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Photocopies pour la consultation</p>
+               </altformavail>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Les cartes postales sont classées par commune ou par thème</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Legs, 1947</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>L’abbé Louis Calendini (1876-1947), vicaire au Lude, curé à Chassillé, doyen de Changé puis d’Yvré-l’Evêque et enfin aumônier des religieuses Marianites à Précigné. Il rassembla au cours de sa carrière des documents, ouvrages et notes sur les différentes communes de la Sarthe sur des questions aussi bien religieuses que générales.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Berranger (Henri de), <emph render="italic">Sous-séries 1 F à 15 F</emph>. Répertoire numérique, Le Mans, 1962, 87 pages</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Cartes postales extraites de la documentation manuscrite rassemblée par l'abbé Louis Calendini (dans une partie de la sous-série 13 F), et photocopiées pour la consultation. [pour info : les épreuves photographiques contenues par cette collection n'ont pas fait l'objet d'un recensement particulier et sont à consulter dans les liasses de la sous-série].</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <geogname>Mayenne (département)</geogname>
+                  <subject>commune</subject>
+                  <subject>patrimoine ethnologique</subject>
+                  <subject>transport aérien</subject>
+                  <subject>personnalité</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e772">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">18 J 774 à 18 J 1766 ; 18 J 1857 à 18 J 1932</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Paul Cordonnier</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1870/1957">1870 - 1957</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Cordonnier, Paul</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>6 000</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>480</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Diapositive</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>17</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque métallique</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>7</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Typon</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation en cas d'utilisation commerciale</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> Mirouse (Florence) et  Dufay-Péré (Dominique),<emph render="italic">Collection Paul Cordonnier</emph>, Répertoire numérique détaillé de la sous-série 18 J,  Le Mans, 1994, 306 pages imprimées. Hamm (Frédérique), supplément, 42 pages dactylographiées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>6 500 plaques photographiques concernant essentiellement la Sarthe de la 1ère  moitié de ce siècle : 18 J 774-1758, 1853-1901 : plaques de verres ; 18 J 1759-1766, 1902-2032 : tirages sur papier, 2 tirages sur métal, 2 typons, 7 cartes postales, plusieurs centaines de négatifs souples, dont les tirages sont rangés dans les dossiers par communes de cette sous-série qui contient également des documents originaux et des dossiers constitués sur des thèmes très divers.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Espagne</geogname>
+                  <geogname> Egypte</geogname>
+                  <geogname> Grèce</geogname>
+                  <geogname> Afrique</geogname>
+                  <geogname> Asie</geogname>
+                  <geogname> Amérique</geogname>
+                  <geogname> Europe</geogname>
+                  <geogname> Océanie</geogname>
+                  <geogname>Sarthe (département)</geogname>
+                  <geogname>Eure-et-Loir (département)</geogname>
+                  <geogname>Gard (département)</geogname>
+                  <geogname>Ille-et-Vilaine (département)</geogname>
+                  <geogname>Indre-et-Loire (département)</geogname>
+                  <geogname>Loiret (département)</geogname>
+                  <geogname>Paris (département et ville)</geogname>
+                  <geogname>Loir-et-Cher (département)</geogname>
+                  <geogname>Maine-et-Loire (département)</geogname>
+                  <geogname>Manche (département)</geogname>
+                  <geogname>Mayenne (département)</geogname>
+                  <geogname>Meuse (département)</geogname>
+                  <geogname>Orne (département)</geogname>
+                  <geogname>Vaucluse (département)</geogname>
+                  <subject>objet d'art</subject>
+                  <subject>patrimoine écrit</subject>
+                  <subject>ministre du culte</subject>
+                  <subject>catholicisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e910">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">3 O 2956</unitid>
+                  <unittitle encodinganalog="3.1.2">Monuments historiques et sites</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1899">1899</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Sarthe. Service vicinal</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>4</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>34</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>6</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement,  avant 1980</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Inventaire de la série O</p>
+                  <p> Cité dans le répertoire numérique détaillé de la série O, <emph render="italic">Administration et comptabilité communales, Voirie communale Dons et legs (An VIII-1940)</emph>, par Gérard Naud, 1980, 654 pages imprimées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Dossier du service vicinal (celui-ci participant à la surveillance des monuments historiques), renfermant une série de photographies datant de 1899 de mégalithes, parfois accompagnées de dessins et de plans de situation.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <subject>monument historique</subject>
+                  <subject>patrimoine culturel</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e971">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">4 T 39</unitid>
+                  <unittitle encodinganalog="3.1.2">Monuments et objets d'art de la Sarthe</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1900/1910">1900 - 1910</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Sarthe. Commission des monuments historiques</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier ancien</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>67</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement,  avant 1967</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Cote sitée dans <emph render="italic">Répertoire méthodique Série T</emph> par M. Terneau et Chr. Naud, 1967, 57 pages dactylographiées [répertoire et cotation provisoires]</p>
+                  <p>
+                     <emph render="italic">Etat des séries, série T</emph>, Supplément Archives départementales de la Sarthe</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Dossier intitulé « Commission des monuments historiques de la Sarthe ». Photographies de monuments et d'objets d'art.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <subject>patrimoine culturel</subject>
+                  <subject>objet d'art</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1022">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1 Mi 235 (R 1)</unitid>
+                  <unittitle encodinganalog="3.1.2">Reproduction de l'abbé Pottier</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1979">1979</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Sarthe. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform> Microfilm négatif</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="mode_reproduction">35</dimensions>
+                  </physdesc>
+                  <container>Rouleau de 28 mètres</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Reproduction interne de documents prêtés,  1979</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction en partie soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>
+                     <emph render="italic">Microfilms de complément, Répertoire numérique détaillé de la Sous-série 1 Mi des Archives départementales de la Sarthe</emph>, sous la Direction de Robert Chanaud, Le Mans, 1988, 173 pages imprimées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Reproduction sur microfilm d'un choix  de cartes postales du XXe  siècle  représentant la ville de Mamers et ses environs.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Mamers (Sarthe)</geogname>
+                  <geogname>Orne (département)</geogname>
+                  <persname>Morin (abbé)</persname>
+                  <persname>Pottier (abbé)</persname>
+                  <persname>Marin Aubry</persname>
+                  <corpname>Confrérie de la Rillette</corpname>
+                  <subject>industrie textile</subject>
+                  <subject>vie quotidienne</subject>
+                  <subject>agriculture</subject>
+                  <subject>patrimoine ethnologique</subject>
+                  <subject>libération</subject>
+                  <subject>guerre mondiale (1939-1945)</subject>
+                  <subject>commémoration</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1097">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1 Mi 281 (R 1)</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection de Mlle Tessier (Mamers)</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1982">1982</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Sarthe. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Microfilm négatif</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="mode_reproduction">35</dimensions>
+                  </physdesc>
+                  <container>Rouleau de 14 mètres</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Reproduction interne de documents prêtés, 1982</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction en partie soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>
+                     <emph render="italic">Microfilms de complément. Répertoire numérique détaillé de la Sous-série 1 Mi des Archives départementales de la Sarthe</emph>, sous la Direction de Robert Chanaud, Le Mans, 1988, 173 pages imprimées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Microfilm du recueil de notes souvenirs et documents sur Mamers et sa région  (textes, cartes postales, illustrations)  : historique, anecdotes, industries, fascicule Joseph Caillaux.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Mamers (Sarthe)</geogname>
+                  <persname>Aveline, Joseph (président de la Société hippique percheronne)</persname>
+                  <persname>Aveline, Robert (président de la Société hippique percheronne)</persname>
+                  <persname>Gourdeau, Gaston</persname>
+                  <persname>Caillaux, Joseph</persname>
+                  <persname>Mauboussin, Alexandre</persname>
+                  <persname>Gibert, Léonce</persname>
+                  <persname>Granger, Charles</persname>
+                  <subject>association</subject>
+                  <subject>patrimoine culturel</subject>
+                  <subject>manifestation commerciale</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject>guerre mondiale (1939-1945)</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1169">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1 Mi 490 - 491 (R 1-2)</unitid>
+                  <unittitle encodinganalog="3.1.2">Papiers personnels de M Tessier, prêtés par M Plessis, de Mamers</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1991">1991</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Sarthe. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform> Microfilm négatif</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="mode_reproduction">35</dimensions>
+                  </physdesc>
+                  <container> Rouleaux de 28 mètres</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Reproduction interne de documents prêtés, 1991</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction en partie soumise à autorisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>
+                     <emph render="italic">Microfilms de complément, Répertoire numérique détaillé de la Sous-série 1 Mi des Archives départementales de la Sarthe</emph>, sous la Direction de Robert Chanaud, Le Mans, 1988, 173 pages imprimées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Reproduction sur microfilm de manuscrits ; 1 Mi 490 : Monographie de Duneau, manuscrit illustré de photographies et de cartes postales anciennes, vers 1960 ;  1 Mi 491 : Manuscrits de Jules Tessier, instituteur et professeur de gymnastique à l'école primaire supérieure de filles de Mamers, 1908 - 1948 ; cours de gymnastique et de sports, manuscrit illustré de croquis et de photographies, vers 1908 - 1950.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Duneau (Sarthe)</geogname>
+                  <geogname>Mamers (Sarthe)</geogname>
+                  <geogname>Vouvray-sur-Huisne (Sarthe)</geogname>
+                  <geogname>Thorigné-sur-Dué (Sarthe)</geogname>
+                  <subject>patrimoine culturel</subject>
+                  <subject>école</subject>
+                  <subject>artisan</subject>
+                  <subject> bois</subject>
+                  <subject>exploitation agricole</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>catholicisme</subject>
+                  <subject>vie religieuse</subject>
+                  <subject>patrimoine écrit</subject>
+                  <subject>sport</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1243">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">1 Mi 349</unitid>
+                  <unittitle encodinganalog="3.1.2">Manufacture des Tabacs du Mans</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1988">1988</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Sarthe. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform> Microfilm négatif</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <dimensions unit="mm" type="mode_reproduction">35</dimensions>
+                  </physdesc>
+                  <container>Rouleau de 4 mètres</container>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Reproduction interne de documents prêtés, 1988</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction en partie soumise à autorisation</p>
+               </userestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>
+                     <emph render="italic">Microfilms de complément, Répertoire numérique détaillé de la Sous-série 1 Mi des Archives départementales de la Sarthe</emph>, sous la Direction de Robert Chanaud, Le Mans, 1988, 173 pages imprimées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies de groupes d'ateliers et de machines de la manufactures des Tabacs du Mans, fin XIXe  siècle - début XXe  siècle.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Le Mans (Sarthe)</geogname>
+                  <subject>bâtiment industriel</subject>
+                  <subject>tabac</subject>
+                  <subject>personnel</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1305">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">22 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Quaglia</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1964/1991">1964 - 1991</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Quaglia, Georges</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>106</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+               </did>
+               <accruals encodinganalog="3.3.3">
+                  <p>Fonds ouvert susceptible d'accroissement</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt, 1999 - 2005</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation en cas d'utilisation commerciale</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> Dufay-Péré (Dominique), <emph render="italic"> Sous-série 22 Fi, Fonds Quaglia</emph>,  Répertoire numérique, 2000-2006, 10 pages dactylographiées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies sur les vendanges dans le sud de la Sarthe (1978-1991), la cité des Bruyères au Mans (1964-1965), commune de La Chapelle-Saint-Aubin (1974-1991).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Beaumont-sur-Dême (Sarthe)</geogname>
+                  <geogname>Chahaignes (Sarthe)</geogname>
+                  <geogname>La Chartre-sur-le-Loir (Sarthe)</geogname>
+                  <geogname>Lhomme (Sarthe)</geogname>
+                  <geogname>Marçon (Sarthe)</geogname>
+                  <geogname>Poncé-sur-le-Loir (Sarthe)</geogname>
+                  <geogname>Ruilllé-sur-Loir (Sarthe)</geogname>
+                  <geogname>Saint-Pierre-du-Lorouër (Sarthe)</geogname>
+                  <geogname>Vouvray-sur-Loir (Sarthe)</geogname>
+                  <geogname>Le Mans (Sarthe)</geogname>
+                  <geogname>La Chapelle-Saint-Aubin (Sarthe)</geogname>
+                  <subject>commune</subject>
+                  <subject>viticulture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1379">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">23 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Jagot</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1899/1936">1899 - 1936</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Jagot, Georges</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>2 699</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>, <physfacet>film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>7</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Dépôt, 1995</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation en cas d'utilisation commerciale</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Georges Jagot, propriétaire d'une petite entreprise d'articles ménagers et passionné de photographie.</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p> Bailly (Roger), <emph render="italic"> Sous-série 23 Fi, Fonds Jagot</emph>,  Répertoire numérique, 2003, 115 pages dactylographiées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies prises entre 1899 et 1936 : famille Jagot et amis de la famille, vie des sarthois et notamment des manceaux au début du XXe  siècle (évènements politiques, religieux et surtout sportifs).</p>
+               </scopecontent>
+               <controlaccess>
+                  <famname>Jagot (famille)</famname>
+                  <subject>vie quotidienne</subject>
+                  <subject>vie politique</subject>
+                  <subject>vie religieuse</subject>
+                  <subject>manifestation sportive</subject>
+                  <subject>famille</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1448">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">24 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds Bollée</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1874/1938">Vers 1879 - 1933</unitdate>
+                  <repository/>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Plaque de verre</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>13</extent>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 2000</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <bioghist encodinganalog="3.2.2">
+                  <p>Léon Bollée, inventeur et industriel dont la famille fut le fer de lance de l'industrie mancelle, dans les secteurs voitures, machines à calculer et aviation (vols de Wilbur Wright en 1908)</p>
+               </bioghist>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Hamm (Frédérique) et Dufay-péré (Dominique),<emph render="italic">Sous-série 24 Fi, Fonds Bollée </emph>,  Répertoire numérique provisoire, 2001, 2005, 14 pages dactylographiées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies peut-être prises par un photographe professionnel travaillant pour le compte de Léon Bollée : activité de Léon Bollée fin XIXe  - début XXe  siècle.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Le Mans (Sarthe)</geogname>
+                  <famname>Bollée (famille)</famname>
+                  <subject>construction automobile</subject>
+                  <subject>transport aérien</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1503">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">26 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Collection Rossard</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1980/1989">Années 1980</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <persname>Rossard, Raymond</persname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>160</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat, 2003</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction soumise à autorisation en cas d'utilisation commerciale</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Dufay-Péré (Dominique), <emph render="italic">Sous-série 26 Fi, Collection Rossard</emph>,  Répertoire numérique, 2003, 10 pages dactylographiées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Photographies  réalisées dans le cadre d'un concours proposé par l'enseigne Camara, dans les années 1980 : églises et chapelles en sarthe (une vue sur Saint-Cénéri-le-Gérei dans le département de l'Orne).</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <geogname>Saint-Cénéri-le-Gérei (Orne)</geogname>
+                  <subject>édifice cultuel</subject>
+                  <subject>catholicisme</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1555">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">7 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Plaques de verre, négatifs des Archives départementales de la Sarthe</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1890/2000">1890 - 2000</unitdate>
+                  <repository/>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Sarthe. Archives départementales</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>582</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>,  <physfacet>plaque de verre</physfacet>
+                  </physdesc>
+               </did>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Achat et don, à partir des années 1930</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre avec mention de l'auteur et de la provenance en cas d'utilisation</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Bailly (Roger) et  Dufay-Péré (Dominique), <emph render="italic">Sous-série 7 Fi, Plaques de verre, négatifs</emph>,  Répertoire numérique commencé en 2000, 19 pages dactylographiées</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Collection de plaques de verre et négatifs souples, entrés par voie extraordinaire, concernant le département de la Sarthe.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+               </controlaccess>
+            </c>
+         </c>
+         <c encodinganalog="3.1.4" id="d1e1601">
+            <did>
+               <unittitle encodinganalog="3.1.2">Collections des Archives municipales du Mans</unittitle>
+            </did>
+            <c encodinganalog="3.1.4" id="d1e1605">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">3 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds de cartes postales des archives du Mans</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1901/2005">1901 - 2005</unitdate>
+                  <repository>Archives municipales du Mans</repository>
+                  <origination encodinganalog="3.2.1" label="Producteur">
+                     <corpname>Le Mans. Service communication</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne et moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>410</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <genreform>Carte postale ancienne et moderne</genreform>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>341</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <altformavail encodinganalog="3.5.2">
+                  <p>Documents numérisés</p>
+               </altformavail>
+               <accruals encodinganalog="3.3.3">
+                  <p>Sous-série ouverte susceptible d'accroissement</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Don et achat, 1994 - 2005</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre et payante</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données générée par le logiciel Avenio (fichier Fi)</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p> La sous-série 3 Fi représente essentiellement Le Mans. Les principaux thèmes abordés sont les bâtiments recevant du public (école, lycée, préfecture, palais de justice, caserne, gare, théâtre) ou cultuels (églises, cathédrale), les monuments de la vieille ville et la voirie urbaine (tunnels, ponts, avenues, rues) mais aussi des manifestations culturelles contemporaines.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <geogname>Le Mans (Sarthe)</geogname>
+                  <subject>agglomération urbaine</subject>
+                  <subject>urbanisme</subject>
+                  <subject>bâtiment recevant du public</subject>
+                  <subject>voie de communication</subject>
+                  <subject>réseau routier</subject>
+                  <subject>ouvrage d'art</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>monument historique</subject>
+                  <subject>manifestation culturelle</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1682">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">4 Fi ; 5 Fi</unitid>
+                  <unittitle encodinganalog="3.1.2">Fonds photographique issus de versements des services municipaux</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1930/2002">1930 - 2002</unitdate>
+                  <repository>Archives municipales du Mans</repository>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Vildard, Bertrand (photographe)</persname> ; <persname>Mesnage, Pierre (photographe)</persname> ; <persname>Joubert, Annie (photographe)</persname> ; <persname>Delourmel, André (photographe)</persname> ; <corpname>Ministère de la reconstruction</corpname> ; <corpname>Entreprise photoaérienne</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>1 226</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>401</extent>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Couleur</physfacet>
+                  </physdesc>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement thématique</p>
+               </arrangement>
+               <accruals encodinganalog="3.3.3">
+                  <p>Sous-séries ouvertes susceptible d 'accroissement</p>
+               </accruals>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 1976 - ...</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre et payante</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Base de données générée par le logiciel Avenio</p>
+               </otherfindaid>
+               <relatedmaterial encodinganalog="3.5.3">
+                  <p> Voir aussi :</p>
+               </relatedmaterial>
+               <scopecontent encodinganalog="summary">
+                  <p>Construction et inauguration d'édifices publics (école, lycée, gymnase…) ; reportage sur des opérations d'urbanisme ; photographies aériennes de l'agglomération mancelle ; inondations de rivières ; manifestations sportives et culturelles locales (24 heures du Mans, Scénomanies, Europa jazz) ; visites de personnalités officielles.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <geogname>Le Mans (Sarthe)</geogname>
+                  <persname>Gaulle, Charles de (1890-1970 ; général)</persname>
+                  <persname> Lattre de Tassigny, de (général)</persname>
+                  <persname>Maury, Jacques (maire du Mans)</persname>
+                  <persname>Chapalain, Jean-Yves (maire du Mans)</persname>
+                  <persname>Jarry, Robert (maire du Mans)</persname>
+                  <persname>Boulard, Jean-Claude (maire du Mans)</persname>
+                  <subject>agglomération urbaine</subject>
+                  <subject>urbanisme</subject>
+                  <subject>voie de communication</subject>
+                  <subject>réseau routier</subject>
+                  <subject>édifice cultuel</subject>
+                  <subject>monument historique</subject>
+                  <subject>inauguration</subject>
+                  <subject>école</subject>
+                  <subject>lycée</subject>
+                  <subject>installation sportive</subject>
+                  <subject>tourisme</subject>
+                  <subject>espace vert</subject>
+                  <subject>caserne</subject>
+                  <subject>centre de vacances</subject>
+                  <subject>visite officielle</subject>
+                  <subject>manifestation sportive</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject>vue aérienne</subject>
+                  <subject>maire</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1902">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">479 W</unitid>
+                  <unittitle encodinganalog="3.1.2">479 W, Communication</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960/1995">1960 - 1995</unitdate>
+                  <repository>Archives municipales du Mans</repository>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Vildard, Bertrand (photographe)</persname> ; <persname>Mesnage, Pierre (photographe)</persname> ; <persname>Gineste, Philippe (photographe)</persname> ; <corpname>Le Mans. Service de communication</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Tirage papier moderne</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Noir et blanc</physfacet>,  <physfacet>couleur</physfacet>
+                  </physdesc>
+                  <container>9 albums</container>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement par type de support et ensuite thématique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 2003</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre et payante</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Bordereau de versement</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Cérémonies publiques ; manifestations sportives, culturelles et économiques locales ; conseil municipal ; espaces verts ; voirie ; jeunesse ; équipements de quartier ; urbanisme ; jumelage ; équipements culturels ; transports publics ; marchés de détail ; retraités ; colonies de vacances.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <geogname>Le Mans (Sarthe)</geogname>
+                  <persname>Gaulle, Charles de (1890-1970 ; général)</persname>
+                  <persname> Deferre, Gaston (1910-1986)</persname>
+                  <persname>Jarry, Robert (maire du Mans)</persname>
+                  <persname>Boulard, Jean-Claude (maire du Mans)</persname>
+                  <subject>urbanisme</subject>
+                  <subject>voie communale</subject>
+                  <subject>espace vert</subject>
+                  <subject>centre de vacances</subject>
+                  <subject>cérémonie publique</subject>
+                  <subject>manifestation sportive</subject>
+                  <subject>manifestation culturelle</subject>
+                  <subject>relations internationales</subject>
+                  <subject>conseil municipal</subject>
+                  <subject>jeune</subject>
+                  <subject>équipement collectif</subject>
+                  <subject>transport en commun</subject>
+                  <subject>marché de détail</subject>
+                  <subject>personne âgée</subject>
+                  <subject>maire</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e1999">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">594 W Cum</unitid>
+                  <unittitle encodinganalog="3.1.2">594 W CUM Drim</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960/1971">1960 - 1971</unitdate>
+                  <repository>Archives municipales du Mans</repository>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Joubert, Annie (photographe)</persname> ; <persname>Vaillant (photographe)</persname> ; <corpname>Services Urbanisme et Architecture. Section Photo</corpname>
+                  </origination>
+                  <container>15 albums</container>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement chronologique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 2006</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre et payante</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Bordereau de versement</p>
+                  <p>Base de données générée sur Avenio</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Opération d'urbanisme ; architecture publique locale.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <geogname>Le Mans (Sarthe)</geogname>
+                  <persname>Maury, Jacques (maire du Mans)</persname>
+                  <persname>Chapalain, Jean-Yves (maire du Mans)</persname>
+                  <subject>urbanisme</subject>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+            <c encodinganalog="3.1.4" id="d1e2055">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">301 W Cum</unitid>
+                  <unittitle encodinganalog="3.1.2">301 W CUM Drim</unittitle>
+                  <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960/2006">1960 - 2006</unitdate>
+                  <repository>Archives municipales du Mans</repository>
+                  <origination encodinganalog="3.2.1" label="Producteurs">
+                     <persname>Joubert, Annie (photographe)</persname> ; <persname>Vaillant (photographe)</persname> ; <persname>Mesnage, Pierre (photographe)</persname>  ; <corpname>Services Urbanisme et Architecture. Section Photo</corpname>
+                  </origination>
+                  <physdesc encodinganalog="3.1.5">
+                     <physfacet>Film souple</physfacet>
+                  </physdesc>
+                  <physdesc encodinganalog="3.1.5">
+                     <extent>237 440</extent>
+                  </physdesc>
+                  <container>498 albums</container>
+               </did>
+               <arrangement encodinganalog="3.3.4">
+                  <p>Classement par type de support, puis chronologique</p>
+               </arrangement>
+               <acqinfo encodinganalog="3.2.4">
+                  <p>Versement, 2006</p>
+               </acqinfo>
+               <accessrestrict encodinganalog="3.4.1">
+                  <p>Accès libre</p>
+               </accessrestrict>
+               <userestrict encodinganalog="3.4.5">
+                  <p>Reproduction libre et payante</p>
+               </userestrict>
+               <otherfindaid encodinganalog="3.4.5">
+                  <p>Bordereau de versement</p>
+                  <p>Base de données générée sur Avenio</p>
+               </otherfindaid>
+               <scopecontent encodinganalog="summary">
+                  <p>Opération d'urbanisme ; architecture publique locale.</p>
+               </scopecontent>
+               <controlaccess>
+                  <geogname>Sarthe (département)</geogname>
+                  <geogname>Le Mans (Sarthe)</geogname>
+                  <geogname>Coulaines (Sarthe)</geogname>
+                  <geogname>Sargé-Lès-Le Mans (Sarthe)</geogname>
+                  <geogname>Yvré l'Eveque (Sarthe)</geogname>
+                  <geogname>Arnage (Sarthe)</geogname>
+                  <geogname>Allonnes (Sarthe)</geogname>
+                  <geogname>Rouillon (Sarthe)</geogname>
+                  <geogname>La Chapelle Saint-Aubin (Sarthe)</geogname>
+                  <persname>Maury, Jacques (maire du Mans)</persname>
+                  <persname>Chapalain, Jean-Yves (maire du Mans)</persname>
+                  <persname>Jarry, Robert (maire du Mans)</persname>
+                  <persname>Boulard, Jean-Claude (maire du Mans)</persname>
+                  <subject>urbanisme</subject>
+                  <subject>architecture</subject>
+               </controlaccess>
+            </c>
+         </c>
+      </dsc>
+   </archdesc>
+</ead>

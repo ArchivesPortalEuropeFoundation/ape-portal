@@ -1,0 +1,1 @@
+[[+text:notempty=`hasButton`:default=`noButton`]]

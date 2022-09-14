@@ -1,0 +1,84 @@
+
+        <eac-cpf xsi:schemaLocation="urn:isbn:1-931666-33-4 http://www.archivesportaleurope.net/Portal/profiles/apeEAC-CPF.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd" xmlns="urn:isbn:1-931666-33-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <control>
+    <recordId>fc1d1ff6-19f7-4208-884d-bee8c063d049</recordId>
+    <otherRecordId>https://hdl.handle.net/10648/fc1d1ff6-19f7-4208-884d-bee8c063d049</otherRecordId>
+    <maintenanceStatus>new</maintenanceStatus>
+    <publicationStatus>approved</publicationStatus>
+    <maintenanceAgency>
+      <agencyCode>NL-NHDD</agencyCode>
+      <agencyName>Doc-Direkt</agencyName>
+      <descriptiveNote>
+        <p>CC0 "No Rights Reserved" http://creativecommons.org/publicdomain/zero/1.0</p>
+      </descriptiveNote>
+    </maintenanceAgency>
+    <languageDeclaration>
+      <language languageCode="dut">Dutch</language>
+      <script scriptCode="Latn">Latin</script>
+    </languageDeclaration>
+    <conventionDeclaration>
+      <abbreviation/>
+      <citation/>
+    </conventionDeclaration>
+    <localControl localType="detailLevel">
+      <term>partial</term>
+    </localControl>
+    <maintenanceHistory>
+      <maintenanceEvent>
+        <eventType>created</eventType>
+        <eventDateTime standardDateTime="2013-02-21T10:18:34">2013-02-21</eventDateTime>
+        <agentType>human</agentType>
+        <agent xml:lang="dut"/>
+      </maintenanceEvent>
+    </maintenanceHistory>
+  </control>
+  <cpfDescription>
+    <identity>
+      <entityId localType="HANDLE">10648/fc1d1ff6-19f7-4208-884d-bee8c063d049</entityId>
+      <entityType>corporateBody</entityType>
+      <nameEntry localType="authorized">
+        <part>Directie Begroting en Beleidscontrol (VenW)</part>
+      </nameEntry>
+      <nameEntry>
+        <part localType="corpname">Directie Begroting en Beleidscontrol (VenW)</part>
+      </nameEntry>
+    </identity>
+    <description>
+      <existDates>
+        <dateRange>
+          <fromDate standardDate="2008">2008</fromDate>
+          <toDate standardDate="2010">2010</toDate>
+        </dateRange>
+      </existDates>
+      <legalStatuses>
+        <legalStatus>
+          <term>Rijksoverheid</term>
+          <dateRange>
+            <fromDate standardDate="2008">2008</fromDate>
+            <toDate standardDate="2010">2010</toDate>
+          </dateRange>
+        </legalStatus>
+      </legalStatuses>
+      <functions>
+        <function>
+          <descriptiveNote>
+            <p>het regisseren van het proces en de inhoud van de managementcyclus en begrotingscyclus;</p>
+            <p>het gestructureerd toetsen van en adviseren over beleidsvoorstellen van de diensten in het kader van beleidscontrol; </p>
+            <p>het beoordelen van en adviseren aan de bewindspersonen, de algemene leiding en diensthoofden over de organisatie van het ministerie als deel van het openbaar bestuur, de kwaliteit van de bedrijfsvoering en de mate waarin het ministerie de financiële en bedrijfs-economische processen beheerst, ook wel aan te duiden met de term in control.</p>
+          </descriptiveNote>
+        </function>
+      </functions>
+      <biogHist/>
+    </description>
+    <relations>
+      <cpfRelation cpfRelationType="hierarchical-parent" xlink:href="https://hdl.handle.net/10648/479ed5a6-5124-4315-8f2f-2e71f621e48a" xlink:type="simple">
+        <relationEntry>Hoofddirectie Financiën, Management en Control (VenW)</relationEntry>
+        <dateRange>
+          <fromDate>2008</fromDate>
+          <toDate>2010</toDate>
+        </dateRange>
+      </cpfRelation>
+    </relations>
+  </cpfDescription>
+</eac-cpf>
+      

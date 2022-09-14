@@ -1,0 +1,23 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'magicpreview-1.0.1-pl/xPDOFileVehicle/7a9b76006320dc0b2c6d6b04e3427735/',
+    'target' => 'return MODX_CORE_PATH . \'components/\';',
+    'name' => 'magicpreview',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'validate' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"type":"php","source":"magicpreview-1.0.1-pl\\/xPDOFileVehicle\\/7a9b76006320dc0b2c6d6b04e3427735.requirements.validator.validator","name":"requirements.validator"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'guid' => 'abf498a627ebb96b6f59df252b990054',
+  'package' => '',
+  'signature' => '7a9b76006320dc0b2c6d6b04e3427735',
+  'native_key' => 'abf498a627ebb96b6f59df252b990054',
+);

@@ -1,0 +1,77 @@
+.apiBlock {
+    padding: 30px;
+    border: 1px solid #aeaeae;
+    line-height: 1.42857;
+}
+.apiBlock h3 {
+    color: #b23063;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+form.search {
+    position: relative;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+form.search input[type="text"].searchField, form.search select.searchField {
+    width: calc(100% - 48px);
+    border-right: none;
+    padding-right: 25px;
+}
+form.search input[type="text"], form.search select {
+    display: block;
+    width: 100%;
+    padding: 12px 15px 13px 15px;
+    height: 48px;
+    font-size: 15px;
+    color: #000;
+    border: 1px solid #aeaeae;
+    background-color: #fff;
+    margin: 0;
+    text-indent: 0px;
+    box-sizing: border-box;
+}
+form.search input[type="submit"] {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 48px;
+    width: 48px;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+form.search:after {
+    content: "\f002";
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    text-align: center;
+    background-color: #b23063;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    transition: 0.3s ease-in-out 0s;
+    cursor: pointer;
+}
+.mt10 {
+    margin-top: 10px !important;
+}
+
+small, .small {
+    font-size: 85%;
+}
+p {
+    margin: 0 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
+}

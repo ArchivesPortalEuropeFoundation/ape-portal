@@ -1,0 +1,246 @@
+<?php return array (
+  'preserve_keys' => true,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Permissions' => 
+    array (
+      '2ffb0ba09937f1bfa8d94f8469ecced5' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_view_gallery","description":"moregallery.permission.view_gallery","value":1}',
+        'guid' => '1dcfd2f6c0afafe23a74f58a5ed22bf2',
+        'native_key' => NULL,
+        'signature' => 'ee21835ddc6b4a8b36823cbf02597c14',
+      ),
+      'b1ce3cbee5e75f50ec485d8d2b55d5e4' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_upload","description":"moregallery.permission.upload","value":1}',
+        'guid' => '86f871e62fbadf6b3531dcca95338ffc',
+        'native_key' => NULL,
+        'signature' => 'eafe2021e478cef2263a2a97fdba6efe',
+      ),
+      '13eba821a08fa8a4761178a8cc80d4b9' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_import","description":"moregallery.permission.import","value":1}',
+        'guid' => 'f48118c9c798255a239a276958d5cfd1',
+        'native_key' => NULL,
+        'signature' => 'af4cc30ab215d4a3cb7d33d0f8f0bd37',
+      ),
+      '432ee9d9e5d9c3fe93d20b1001d39c2f' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_import_media","description":"moregallery.permission.import_media","value":1}',
+        'guid' => 'cc549b57a48c2ccdacd1bf69ab427dc9',
+        'native_key' => NULL,
+        'signature' => '01011866e99f6ce62e95b372c6a7982f',
+      ),
+      '4b8ee04fcfeb719f1a6635f13f20ff8a' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_video","description":"moregallery.permission.video","value":1}',
+        'guid' => 'ca28fdbb81849816fb7071d964777f5f',
+        'native_key' => NULL,
+        'signature' => '5259eb1895769d62c1cac32c4da48a9c',
+      ),
+      'bc68ecb68e3247c87cba52db832a1eab' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_resource_settings","description":"moregallery.permission.resource_settings","value":1}',
+        'guid' => '04e2dab80cb0f4b6379ade5a066cb2fc',
+        'native_key' => NULL,
+        'signature' => 'd125c635d8f05fa58bf53131ebdccd5e',
+      ),
+      '3ee80de95444dca0dd14d0a5ab71c012' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_image_active","description":"moregallery.permission.image_active","value":1}',
+        'guid' => '7523fcdfdf53aabc33dbf73070489bc3',
+        'native_key' => NULL,
+        'signature' => 'd7f5a9d46bba947386527ac9957a55c4',
+      ),
+      '858750b58dcb27183b2a9d5721bb7c04' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_image_delete","description":"moregallery.permission.image_delete","value":1}',
+        'guid' => 'af2c2438f4eb8fa9507198d5508b21aa',
+        'native_key' => NULL,
+        'signature' => '996a56bd84b0655234ff568cd117be13',
+      ),
+      '95a31ee97b14482d1b0f1d5d4f2d1926' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_image_edit","description":"moregallery.permission.image_edit","value":1}',
+        'guid' => '5e030496392de14303a41da07c5d6f25',
+        'native_key' => NULL,
+        'signature' => 'f3e60f3531815f35962b4bcd76006f17',
+      ),
+      '421d72b9fd816a0759a29285a1e22605' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_image_tags","description":"moregallery.permission.image_tags","value":1}',
+        'guid' => '3a6b44ffe49640583e52a629659c74b4',
+        'native_key' => NULL,
+        'signature' => '7236eef58970bec6f3b44bb4f4831293',
+      ),
+      '3e059136df0c6e6f547aa34e1f2e1099' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_image_tags_new","description":"moregallery.permission.image_tags_new","value":1}',
+        'guid' => '04838390702b9fb18fb8447c729fdf50',
+        'native_key' => NULL,
+        'signature' => '32edfc9f2f6c6a7e60ca32252a1af7c0',
+      ),
+      '5a511df82bd438683fadc476a7b2ce18' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"moregallery_image_crop_edit","description":"moregallery.permission.image_crop_edit","value":1}',
+        'guid' => 'addfd6dbfa86a4b3de83af96075516b9',
+        'native_key' => NULL,
+        'signature' => 'fab624ebbbfdad1b4fb01ce3aee7f3a7',
+      ),
+    ),
+    'Policies' => 
+    array (
+      '7722518edb3e253dab22bd136e57ea7a' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPolicy',
+        'object' => '{"id":null,"name":"MoreGallery Full Access","description":"Access Policy for MoreGallery that includes all permissions. Overwritten on upgrade.","parent":0,"template":0,"class":"","data":"{\\"moregallery_image_active\\":true,\\"moregallery_image_crop_edit\\":true,\\"moregallery_image_delete\\":true,\\"moregallery_image_edit\\":true,\\"moregallery_image_tags\\":true,\\"moregallery_image_tags_new\\":true,\\"moregallery_import\\":true,\\"moregallery_import_media\\":true,\\"moregallery_resource_settings\\":true,\\"moregallery_upload\\":true,\\"moregallery_video\\":true,\\"moregallery_view_gallery\\":true}","lexicon":"moregallery:permissions"}',
+        'guid' => '68b98af006624b14c2ad6ef94e89a545',
+        'native_key' => NULL,
+        'signature' => '693542450d8319c6b089bb00f6c378d8',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Permissions' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'template',
+        1 => 'name',
+      ),
+    ),
+    'Policies' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'template',
+        1 => 'name',
+      ),
+    ),
+  ),
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '08d157ff80fee513c9d6d9859fe1626f',
+  'package' => 'modx',
+  'class' => 'modAccessPolicyTemplate',
+  'signature' => '9d031b7bd07932363b22d4d0b1c2b97e',
+  'native_key' => NULL,
+  'object' => '{"id":null,"template_group":1,"name":"MoreGalleryTemplate","description":"Policy Template for using the various MoreGallery features.","lexicon":"moregallery:permissions"}',
+);

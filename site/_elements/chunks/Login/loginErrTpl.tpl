@@ -1,0 +1,1 @@
+<p class="formError text-center" style="display:block;"><i class="fas fa-exclamation-triangle"></i> [[+msg]]</p>

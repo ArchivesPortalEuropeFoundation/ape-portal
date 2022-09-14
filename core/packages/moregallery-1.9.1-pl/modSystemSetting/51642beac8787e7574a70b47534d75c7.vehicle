@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'moregallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '288720cafcd7ed01fe929f6774ec1301',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '51642beac8787e7574a70b47534d75c7',
+  'native_key' => 'moregallery.source_relative_url',
+  'object' => '{"key":"moregallery.source_relative_url","value":"assets\\/galleries\\/","xtype":"textfield","namespace":"moregallery","area":"Storage","editedon":1571229263}',
+);
