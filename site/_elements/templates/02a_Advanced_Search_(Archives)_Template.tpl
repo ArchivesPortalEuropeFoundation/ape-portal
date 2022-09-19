@@ -67,6 +67,18 @@
         align-self: flex-start;
     }
 
+    [data-facet-set="countries"] li {
+        display: none;
+    }
+
+    [data-facet-set="institutions"] li {
+        display: none;
+    }
+
+    [data-facet-set="topics"] li {
+        display: none;
+    }
+
     @media (max-width: 767px) {
 
         .searchResult .details .header {

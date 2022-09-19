@@ -4,78 +4,15 @@
 <head>
     [[$head]]
     <style>
-        .otherLink {
-            color: #b23063;
-            font-weight: 700;
-        }
-
-        .boxrow {
-            display: block;
-            content-visibility: auto;
-        }
-
-        .boxcol {
-            display: inline-block;
-        }
-
-        .boxcol.left {
-            float: left;
-        }
-
-        .boxcol.right {
-            float: right;
-        }
 
         [data-facet-set="countries"] li {
             display: none;
         }
 
-        #showMore-countries {
-            color: #b23063;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        #showMore-countries:hover {
-            color: black;
-        }
-
-        #showLess-countries {
-            color: #b23063;
-            font-weight: 700;
-            cursor: pointer;
-            display: none;
-        }
-
-        #showLess-countries:hover {
-            color: black;
-        }
-
-
         [data-facet-set="repositoryTypeFacet"] li {
             display: none;
         }
 
-        #showMore-repositoryTypeFacet {
-            color: #b23063;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        #showMore-repositoryTypeFacet:hover {
-            color: black;
-        }
-
-        #showLess-repositoryTypeFacet {
-            color: #b23063;
-            font-weight: 700;
-            cursor: pointer;
-            display: none;
-        }
-
-        #showLess-repositoryTypeFacet:hover {
-            color: black;
-        }
     </style>
 </head>
 
