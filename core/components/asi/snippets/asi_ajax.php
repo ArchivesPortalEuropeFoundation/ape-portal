@@ -34,21 +34,20 @@ $response = array('status' => '500', 'message' => 'sorry, something went wrong, 
 switch ($_REQUEST['action']) {
 
     case "heirarchical_tree":
+        //Set variables from $_REQUEST that are needed in API calls
+        $repoCode   = $_REQUEST['repositoryCode'];
+        $ecId       = $_REQUEST['ecid'] ?? $_REQUEST['recordId'] ?? null;
+        $cLevelId   = $_REQUEST['clevelid'] ?? $_REQUEST['c'] ?? null;
+        $unitId     = $_REQUEST['unitId'] ?? null;
+        $pg         = $_REQUEST['page'] ?? 1;
+        $rst        = $_REQUEST['max'] ?? 10;
+        $type       = $_REQUEST['type'] ?? 'fa';
+        $term       = $_REQUEST['term'] ?? null;
+        $levelName  = $_REQUEST['levelName'];
+        $lang       = $_REQUEST['lang'] ?? $modx->getOption('cultureKey') ?? 'en';
+        $typeDesc   = '';
 
-        $repoCode = $_REQUEST['repositoryCode'];
-        $ecId = $_REQUEST['ecid'] ?? $_REQUEST['recordId'] ?? null;
-        $cLevelId = $_REQUEST['clevelid'] ?? $_REQUEST['c'] ?? null;
-        $unitId = $_REQUEST['unitId'] ?? null;
-        $pg = $_REQUEST['page'] ?? 1;
-        $rst = $_REQUEST['max'] ?? 10;
-        $type = $_REQUEST['type'] ?? 'fa';
-        $term = $_REQUEST['term'] ?? null;
-        $levelName = $_REQUEST['levelName'];
-        $lang = $_REQUEST['lang'] ?? $modx->getOption('cultureKey') ?? 'en';
-        $typeDesc = '';
-        //https://acceptance.archivesportaleurope.net/Dashboard/eadTreeApi.action?ecId=H30117&xmlTypeName=fa&parentId=332533608
-        //https://acceptance.archivesportaleurope.net/Dashboard/eadTreeApi.action?clevelId=C332533608&xmlTypeName=fa&request_locale=en
-        //https://acceptance.archivesportaleurope.net/Dashboard/eadTreeApi.action?clevelId=C332533724&xmlTypeName=fa
+        //Set up API query string using variables above
         $queryString = "{$APIbase}Dashboard/eadTreeApi.action?xmlTypeName={$type}&request_locale={$lang}";
         if (!is_null($ecId)) {
             $queryString .= "&ecId={$ecId}";
@@ -57,14 +56,15 @@ switch ($_REQUEST['action']) {
             $cLevel = substr($cLevelId, '1');
             $queryString .= "&clevelId={$cLevelId}";
         }
+        //Run API query and if successful, echo out the JSON response, otherwise return an error
         try {
             $treeResponse = json_decode(file_get_contents($queryString));
-
             header_remove();
             $response['status'] = 200;
             http_response_code($response['status']);
             header('Content-Type: application/json');
             echo json_encode($treeResponse, JSON_PRETTY_PRINT);
+            //Since ASI Ajax is quite a long CASE switching snippet, we can exit on this item as no further processing is needed.
             exit();
         } catch (Exception $e) {
             $response['status'] = 400;
@@ -73,7 +73,6 @@ switch ($_REQUEST['action']) {
         break;
 
     case "translate_label":
-
         $translate = false;
         $label = $_REQUEST['label'];
         $setName = $_REQUEST['set_name'];
@@ -100,19 +99,21 @@ switch ($_REQUEST['action']) {
         $response['result'] = $translated;
         break;
     case "archive_children":
+        //Set variables from $_REQUEST that are needed in API calls
+        $repoCode   = $_REQUEST['repositoryCode'];
+        $eadid      = $_REQUEST['eadid'] ?? $_REQUEST['recordId'] ?? null;
+        $cLevelId   = $_REQUEST['clevelid'] ?? $_REQUEST['c'] ?? null;
+        $unitId     = $_REQUEST['unitId'] ?? null;
+        $pg         = $_REQUEST['page'] ?? 1;
+        $rst        = $_REQUEST['max'] ?? 10;
+        $type       = $_REQUEST['type'] ?? 'fa';
+        $term       = $_REQUEST['term'] ?? null;
+        $levelName  = $_REQUEST['levelName'];
+        $filter     = $_REQUEST['search'] ?? null;
+        $lang       = $_REQUEST['lang'] ?? $modx->getOption('cultureKey') ?? 'en';
+        $typeDesc   = '';
 
-        $repoCode = $_REQUEST['repositoryCode'];
-        $eadid = $_REQUEST['eadid'] ?? $_REQUEST['recordId'] ?? null;
-        $cLevelId = $_REQUEST['clevelid'] ?? $_REQUEST['c'] ?? null;
-        $unitId = $_REQUEST['unitId'] ?? null;
-        $pg = $_REQUEST['page'] ?? 1;
-        $rst = $_REQUEST['max'] ?? 10;
-        $type = $_REQUEST['type'] ?? 'fa';
-        $term = $_REQUEST['term'] ?? null;
-        $levelName = $_REQUEST['levelName'];
-        $filter = $_REQUEST['search'] ?? null;
-        $lang = $_REQUEST['lang'] ?? $modx->getOption('cultureKey') ?? 'en';
-        $typeDesc = '';
+        //Set up API query string using variables above
         $queryString = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&eadid={$eadid}&xmlType={$type}&page={$pg}";
         if ($levelName === 'clevel') {
             $cLevel = substr($cLevelId, '1');
@@ -122,12 +123,12 @@ switch ($_REQUEST['action']) {
             $queryString .= "&clevelunitid={$unitId}";
         }
 
+        //Run API query and if successful, echo out the JSON response, otherwise return an error
         try {
             $compDetails = json_decode(file_get_contents($queryString));
             $paginationDetails = array();
             $paginationDetails['page'] = $pg;
             $paginationDetails['limit'] = $rst;
-
             $totalRecords = $compDetails->totalNumberOfChildren;
             $paginationDetails['resultsTotal'] = $totalRecords;
             $total = ceil($totalRecords / $rst);
@@ -158,11 +159,8 @@ switch ($_REQUEST['action']) {
                     $childDom = asi::domHTML($childHTML);
                     $childObject = new DomXPath($childDom);
                     $componentUnitId = $childObject->query("//td[@class='expand-unitid']")[0]->nodeValue;
-
                     $componentTitle = $childObject->query("//td[@class='expand-unittitle']")[0]->nodeValue;
-
                     $componentDate = $childObject->query("//td[@class='expand-unitdate']")[0]->nodeValue;
-
                     $contentObjects = $childObject->query("//div[@class='childContent']")[0];
                     $childHeaders = $childObject->query("//h2");
                     foreach ($childHeaders as $childHeader) {
@@ -171,7 +169,6 @@ switch ($_REQUEST['action']) {
                             $h4 = $childDom->createElement('h4');
                             $h4->nodeValue = $dObjectsHeader;
                             $childHeader->parentNode->replaceChild($h4, $childHeader);
-//                        $digitalObjectsHeader->parentNode->removeChild($digitalObjectsHeader);
                         }
                     }
 
@@ -204,12 +201,10 @@ switch ($_REQUEST['action']) {
                         $digitalObjectsOriginalParent->parentNode->removeChild($digitalObjectsOriginalParent);
                     }
                     $contentChildren = $contentObjects->childNodes;
-
                     $childReworkHtml = "";
                     if ($contentObjects) {
                         $childReworkHtml .= $contentObjects->C14N();
                     }
-
                     $c = array();
                     $c['html'] = $childReworkHtml;
                     $c['date'] = $componentDate;
@@ -218,7 +213,6 @@ switch ($_REQUEST['action']) {
                     $html .= $modx->getChunk("asi_search_result_archive_component", $c);
                 }
             }
-
             $paginationDetails['html'] = $html;
             $response['status'] = 200;
             $response['message'] = "Pagination results loaded successfully";
@@ -230,27 +224,31 @@ switch ($_REQUEST['action']) {
         break;
 
     case "institute_archival_materials":
+        //Set variables from $_REQUEST that are needed in API calls
+        $repoCode   = $_REQUEST['repositoryCode'] ?? $_REQUEST['id'];
+        $pg         = $_REQUEST['page'] ?? 1;
+        $rst        = $_REQUEST['max'] ?? 10;
+        $type       = $_REQUEST['type'] ?? 'fa';
+        $term       = $_REQUEST['term'] ?? null;
+        $filter     = $_REQUEST['search'] ?? null;
+        $lang       = $_REQUEST['lang'] ?? $modx->getOption('cultureKey') ?? 'en';
+        $typeDesc   = '';
 
-        $repoCode = $_REQUEST['repositoryCode'] ?? $_REQUEST['id'];
-        $pg = $_REQUEST['page'] ?? 1;
-        $rst = $_REQUEST['max'] ?? 10;
-        $type = $_REQUEST['type'] ?? 'fa';
-        $term = $_REQUEST['term'] ?? null;
-        $filter = $_REQUEST['search'] ?? null;
-        $lang = $_REQUEST['lang'] ?? $modx->getOption('cultureKey') ?? 'en';
-        $typeDesc = '';
+        //If a filter has been set, urlencode it for query string
         if ($filter) {
             $filter = urlencode($filter);
         }
+
+        //Set up API query string using variables above
         $queryString = "{$APIbase}Dashboard/eagDetailsApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&type={$type}&xmlType={$type}&page={$pg}&max={$rst}";
         if (!is_null($filter)) {
             $queryString .= "&qdb={$filter}";
         }
+
+        //Run API query and if successful, echo out the JSON response, otherwise return an error
         try {
             $instDetails = json_decode(file_get_contents($queryString));
             $paginationDetails = array();
-
-
             $paginationDetails['page'] = $pg;
             $paginationDetails['limit'] = $rst;
             if ($type === 'ec') {
@@ -262,7 +260,6 @@ switch ($_REQUEST['action']) {
                 $totalRecords = $instDetails->eadTotalCount;
                 $total = ceil($totalRecords / $rst);
             }
-
             $paginationDetails['pageTotal'] = $total;
 
             //Check and set previous and next page numbers. If they cant go further or back, set to false.
@@ -298,11 +295,8 @@ switch ($_REQUEST['action']) {
                 case 'sg':
                     $typeDesc = 'Source Guide';
                     foreach ($instDetails->sg as $sg) {
-
                         $eadid = $sg->eadid;
-
                         $link = "/advanced-search/search-in-archives/results-(archives)/?&repositoryCode={$repoCode}&term={$term}&levelName=archdesc&t=sg&recordId={$eadid}";
-
                         $html .= $modx->getChunk("asi_finding_aid_item", array(
                             'title' => $sg->title,
                             'recordId' => $eadid,
@@ -341,7 +335,6 @@ switch ($_REQUEST['action']) {
                     break;
             }
 
-
             $paginationDetails['html'] = $html;
             $response['status'] = 200;
             $response['message'] = "Pagination results loaded successfully";
@@ -376,7 +369,6 @@ switch ($_REQUEST['action']) {
         break;
 
     case "spell":
-        //https://acceptance.archivesportaleurope.net/Dashboard/searchSuggestApi.action?term=lond&sourceType=ead
         $term = $_REQUEST['term'];
         $termType = 'ead';
         if ($_REQUEST['section'] === 'search-in-names') {
@@ -387,9 +379,6 @@ switch ($_REQUEST['action']) {
         }
         $queryString = "{$APIbase}Dashboard/searchSuggestApi.action?term={$term}&sourceType={$termType}";
         $items = json_decode(file_get_contents($queryString));
-        //$items = asi::getSpellingSuggestions($_REQUEST['term'], $_REQUEST['section']);
-
-
         $results = array();
         $counter = 0;
         foreach ($items as $item) {
@@ -399,16 +388,13 @@ switch ($_REQUEST['action']) {
             }
             $counter++;
         }
-
         $response['status'] = 200;
         $response['message'] = "Spelling loaded successfully";
         $response['result'] = $results;
         break;
 
     case "suggest":
-
         $items = asi::getSuggestions($_REQUEST['term'], $_REQUEST['section']);
-
         $results = array();
         $counter = 0;
         foreach($items AS $k => $v) {
@@ -416,7 +402,6 @@ switch ($_REQUEST['action']) {
             $results[$counter]['link'] = "/advanced-search/".$_REQUEST['section']."?term=".$k;
             $counter++;
         }
-
         $response['status'] = 200;
         $response['message'] = "Suggestions loaded successfully";
         $response['result'] = $results;
@@ -484,61 +469,11 @@ switch ($_REQUEST['action']) {
         $response['result'] = json_encode($result);
         break;
 
-//    case "load_archive_detail":
-//
-//        $params = $_REQUEST;
-//        $id = $params['recordId'];
-//        $term = $params['term'];
-//        ini_set('max_execution_time', 0);
-//        $result = asi::fetchSingleResult("search-in-archives");
-//
-//        $gallery_content_slider = null;
-//        $gallery_content_caption = null;
-//        foreach ($result['images'] AS $image) {
-//            $gallery_content_slider .= $modx->getChunk("asi_gallery_content_slider", array(
-//                'thumb' => $image['thumb'],
-//                'link' => $image['link'],
-//                'caption' => $image['caption']
-//            ));
-//            $gallery_content_caption .= $modx->getChunk("asi_gallery_content_caption", array(
-//                'thumb' => $image['thumb'],
-//                'link' => $image['link'],
-//                'caption' => $image['caption']
-//            ));
-//            $gallery_content_tab .= $modx->getChunk("asi_gallery_content_tab", array(
-//                'thumb' => $image['thumb'],
-//                'link' => $image['link'],
-//                'caption' => $image['caption']
-//            ));
-//        }
-//
-//        $modx->setPlaceholder('gallery_content_slider', $gallery_content_slider);
-//        $modx->setPlaceholder('gallery_content_caption', $gallery_content_caption);
-//        $modx->setPlaceholder('gallery_content_tab', $gallery_content_tab);
-//        $modx->setPlaceholders($result['solr_detail'], "solr_data.");
-//        $modx->setPlaceholders($result,'search_result.');
-//
-//        $response['status'] = 200;
-//        $response['message'] = "Archive detail successfully loaded";
-//        $response['result']['rhs'] = $modx->getChunk("asi_search_result_archive_rhs");
-//        $response['result']['top'] = $modx->getChunk("asi_search_result_archive_top");
-//        $response['result']['top_left'] = $modx->getChunk("asi_search_result_archive_top_left");
-//        break;
-
     case "load_archive_detail":
-        //        $params = $_REQUEST;
-//        $id = $params['recordId'];
-//        $term = $params['term'];
-//        ini_set('max_execution_time', 0);
-//        $result = asi::fetchSingleResult("search-in-archives");
-
-
-        //TODO Check on tests
         ini_set('max_execution_time', 0);
         $params       = $modx->sanitize($_REQUEST);
         $cLevelId     = $params['c'];
-
-        $originC    = $cLevelId;
+        $originC      = $cLevelId;
         if(isset($params['level']) && $params['level'] === 'archdesc') {
             if($params['type'] === 'hg') {
                 $cLevelId = 'H'.$cLevelId;
@@ -560,11 +495,11 @@ switch ($_REQUEST['action']) {
             }
         }
 
-        $result = asi::fetchSingleResult("search-in-archives");
+        $result       = asi::fetchSingleResult("search-in-archives");
         $id           = rawurlencode($params['recordId']);    //Also known as the eadId
         $unitId       = rawurlencode($params['unitId']) ?? null;
         if(isset($result['solr_detail']['reference_value'])) {
-            $unitId = $result['solr_detail']['reference_value'];
+            $unitId   = $result['solr_detail']['reference_value'];
         }
         $repoCode     = $result['solr_detail']['code_value'] ?? null;
         $term         = $params['term'];
@@ -579,9 +514,9 @@ switch ($_REQUEST['action']) {
 
         $aiId         = $instDetails->aiId;
         $repoCode     = $instDetails->aiRepositoryCode;
-        $instDoc    = asi::domHTML($instDetails->html);
-        $instFinder = new DomXPath($instDoc);
-// Placeholders for institutions
+        $instDoc      = asi::domHTML($instDetails->html);
+        $instFinder   = new DomXPath($instDoc);
+        // Placeholders for institutions
         $placeholders['institution']['name']    = $instFinder->query("//h2[@class='blockHeader']")[0]->nodeValue;
         $placeholders['institution']['country'] = $instFinder->query("//*[contains(@class, 'gel_country gel_contactDetails')]")[0]->nodeValue;
 
@@ -595,12 +530,7 @@ switch ($_REQUEST['action']) {
         } else {
             $archiveUrl .= "&type=frontpage";
         }
-//        if(!is_null($unitId)) {
-//            $encodedUnitId = urlencode($unitId);
-//            $archiveUrl .= "&clevelunitid={$encodedUnitId}";
-//            $placeholders['archive']['unitid'] = $unitId;
-//        }
-        
+
         $placeholders['archive']['repocode'] = $repoCode;
         $placeholders['archive']['type'] = $type;
         $placeholders['archive']['recordid'] = $id;
@@ -620,9 +550,6 @@ switch ($_REQUEST['action']) {
 
         $treeResponse = json_decode(file_get_contents($treeQueryString));
         $placeholders['archive']['tree'] = file_get_contents($treeQueryString);
-//echo $archiveDetails->html;
-//var_dump('Final stages');
-//die();
         $doc = asi::domHTML($archiveDetails->html);
         $finder = new DomXPath($doc);
 
@@ -647,7 +574,6 @@ switch ($_REQUEST['action']) {
             $placeholders['archive']['original_link_text']   = $linkItem->nodeValue;
             $linkItem->parentNode->removeChild($linkItem);
         }
-
 
         $titleProper = $finder->query("//h1[@class='titleproper']")[0];
         if(!is_null($titleProper)) {
@@ -705,7 +631,6 @@ switch ($_REQUEST['action']) {
                 }
             }
 
-
             $gallery_content_slider .= $modx->getChunk("asi_gallery_content_slider", array(
                 'thumb' => $imageThumb,
                 'link' => $imageLink,
@@ -746,7 +671,6 @@ switch ($_REQUEST['action']) {
             'institution' => $placeholders['institution']
         ));
 
-
         if($archiveDetails->totalNumberOfChildren > 0) {
             $rst = 10;
             $pg = 1;
@@ -771,26 +695,15 @@ switch ($_REQUEST['action']) {
         $archiveDetailRHS = $modx->getChunk("asi_search_result_archive_rhs", array(
             'archive' => $placeholders['archive']
         ));
-        
-        $gallery_content_slider = null;
-        $gallery_content_caption = null;
 
-
-        $modx->setPlaceholders($result['solr_detail'], "solr_data.");
-
-        $components = null;
-
-        $modx->setPlaceholder('gallery_content_slider', $gallery_content_slider);
-        $modx->setPlaceholder('gallery_content_caption', $gallery_content_caption);
-        $modx->setPlaceholder('gallery_content_tab', $gallery_content_tab);
         $modx->setPlaceholders($result['solr_detail'], "solr_data.");
         $modx->setPlaceholders($result,'search_result.');
+
         $response['status'] = 200;
         $response['message'] = "Archive detail successfully loaded";
         $response['result']['rhs'] = $archiveDetailRHS;
         $response['result']['top'] = $archiveDetailTop;
         $response['result']['top_left'] = $archiveDetailTopLeft;
-
         $response['result']['repoCode'] = $placeholders['archive']['repocode'];
         $response['result']['recordId'] = $placeholders['archive']['recordid'];
         $response['result']['eadId'] = $placeholders['archive']['eadid'];
@@ -803,20 +716,10 @@ switch ($_REQUEST['action']) {
         $response['result']['compCurrentPg'] = $placeholders['archive']['components']['page'];
         $response['result']['compResultsTotal'] = $placeholders['archive']['components']['resultsTotal'];
         $response['result']['compPageTotal'] = $placeholders['archive']['components']['pageTotal'];
-
-
-//        var_dump($response['result']);
-//        die();
         break;
+
     case "load_tree_children":
         if($result = asi::loadTreeChildren($_REQUEST['parent_id'],$_REQUEST['type'])) {
-        //if($result = asi::loadTreeChildren($_REQUEST['parent_id'], $start=0, $limit=10, $_REQUEST['xmlTypeName'])) {
-//            header_remove();
-//            $response['status'] = 200;
-//            http_response_code($response['status']);
-//            header('Content-Type: application/json');
-//            echo $result;
-//            return;
             $response['status'] = 200;
             $response['message'] = "Tree children successfully loaded";
             $response['result'] = $result;
@@ -843,27 +746,13 @@ switch ($_REQUEST['action']) {
         }
 
         break;
-//Below has been rewritten using new API
+
     case "load_components":
         $response['status'] = 200;
         $response['message'] = "Components bypassed!";
         $html = null;
-//        foreach($result['components'] AS $c) {
-//            $html .= $modx->getChunk("asi_search_result_archive_component", $c);
-//        }
         $response['result'] = $html;
         $response['count'] = 0;
-//        if($result = asi::fetchXmlComponents($_REQUEST['recordId'], $_REQUEST['start'])) {
-//
-//            $response['status'] = 200;
-//            $response['message'] = "Components loaded successfully";
-//            $html = null;
-//            foreach($result['components'] AS $c) {
-//                $html .= $modx->getChunk("asi_search_result_archive_component", $c);
-//            }
-//            $response['result'] = $html;
-//            $response['count'] = $result['components_count'];
-//        }
         break;
 
     case "update_preference_delete_confirm":
@@ -884,9 +773,7 @@ switch ($_REQUEST['action']) {
         break;
 
     case "save_search":
-
         if($response['search_id'] = asi::saveSearch($_REQUEST)) {
-
             $response['status'] = 200;
             $response['message'] = "Search saved successfully";
         }
@@ -980,7 +867,6 @@ switch ($_REQUEST['action']) {
         break;
 
     case "account_saved_bookmark_delete":
-        //var_dump($_REQUEST);
         $result = asi::deleteBookmark($_REQUEST['id']);
         $response['status'] = 200;
         $response['message'] = "Bookmark deleted successfully";
@@ -989,7 +875,6 @@ switch ($_REQUEST['action']) {
         break;
 
     case "account_saved_collection_delete":
-        //var_dump($_REQUEST);
         $result = asi::deleteCollection($_REQUEST['id']);
         $response['status'] = 200;
         $response['message'] = "Collection deleted successfully";

@@ -29,98 +29,6 @@
         text-overflow: ellipsis;
     }
 
-    .boxrow {
-        display: block;
-        content-visibility: auto;
-    }
-
-    .boxcol {
-        display: inline-block;
-    }
-
-    .boxcol.left {
-        float: left;
-    }
-
-    .boxcol.right {
-        float: right;
-    }
-
-    [data-facet-set="countries"] li {
-        display: none;
-    }
-
-    #showMore-countries {
-        color: #b23063;
-        font-weight: 700;
-        cursor: pointer;
-    }
-
-    #showMore-countries:hover {
-        color: black;
-    }
-
-    #showLess-countries {
-        color: #b23063;
-        font-weight: 700;
-        cursor: pointer;
-        display: none;
-    }
-
-    #showLess-countries:hover {
-        color: black;
-    }
-
-    [data-facet-set="institutions"] li {
-        display: none;
-    }
-
-    #showMore-institutions {
-        color: #b23063;
-        font-weight: 700;
-        cursor: pointer;
-    }
-
-    #showMore-institutions:hover {
-        color: black;
-    }
-
-    #showLess-institutions {
-        color: #b23063;
-        font-weight: 700;
-        cursor: pointer;
-        display: none;
-    }
-
-    #showLess-institutions:hover {
-        color: black;
-    }
-
-    [data-facet-set="topics"] li {
-        display: none;
-    }
-
-    #showMore-topics {
-        color: #b23063;
-        font-weight: 700;
-        cursor: pointer;
-    }
-
-    #showMore-topics:hover {
-        color: black;
-    }
-
-    #showLess-topics {
-        color: #b23063;
-        font-weight: 700;
-        cursor: pointer;
-        display: none;
-    }
-
-    #showLess-topics:hover {
-        color: black;
-    }
-
     .searchResult .details .header {
         display: flex;
         justify-content: space-between;
@@ -961,14 +869,9 @@
 [[!$asi_logged_in_js]]
 
 [[$scripts]]
-<script src="https://cdnjs.cloudflare.com/ajax/libs/shave/2.5.9/jquery.shave.js"
-        integrity="sha512-IGdsmWzpdb37yT2K9ViMXSYwJHc8uw0uDZKYyy/LDeC61zG42tF/0lm4HbUubZhL/OrVcC7mA5KVACSOgir9TA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
-    $('document').ready(function () {
-        $('.description').shave(120);
-    });
+
 
     $('.countryItem, .institutionItem').click(function () {
         $(this).toggleClass('active');

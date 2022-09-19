@@ -2,3 +2,97 @@
   font-size: 15px;
   font-weight: 700;
 }
+
+
+.boxrow {
+  display: block;
+  content-visibility: auto;
+}
+
+.boxcol {
+  display: inline-block;
+}
+
+.boxcol.left {
+  float: left;
+}
+
+.boxcol.right {
+  float: right;
+}
+
+[data-facet-set="countries"] li {
+  display: none;
+}
+
+#showMore-countries {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#showMore-countries:hover {
+  color: black;
+}
+
+#showLess-countries {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+}
+
+#showLess-countries:hover {
+  color: black;
+}
+
+[data-facet-set="institutions"] li {
+  display: none;
+}
+
+#showMore-institutions {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#showMore-institutions:hover {
+  color: black;
+}
+
+#showLess-institutions {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+}
+
+#showLess-institutions:hover {
+  color: black;
+}
+
+[data-facet-set="topics"] li {
+  display: none;
+}
+
+#showMore-topics {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#showMore-topics:hover {
+  color: black;
+}
+
+#showLess-topics {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+}
+
+#showLess-topics:hover {
+  color: black;
+}
+
