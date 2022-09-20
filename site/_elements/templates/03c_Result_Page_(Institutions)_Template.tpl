@@ -100,7 +100,7 @@
                 </div>                
             </div>
             <div class="right">
-                <a class="yellowIcon" href="#bookmarkPopup" data-trigger="save_bookmark"><i class="fas fa-bookmark mr"></i> [[!%asi.action_bookmark? &topic=`actions` &namespace=`asi`]]</a>
+                [[-  <a class="yellowIcon" href="#bookmarkPopup" data-trigger="save_bookmark"><i class="fas fa-bookmark mr"></i> [[!%asi.action_bookmark? &topic=`actions` &namespace=`asi`]]</a>]]
                 <a class="pinkIcon" href="#suggestionPopup" data-trigger="suggestion"><i class="fas fa-pencil mr"></i> [[!%asi.action_make_a_suggestion? &topic=`actions` &namespace=`asi`]]</a>
                 <a class="blueIcon" onclick="contactInstitutionClick()"><i class="fas fa-comment mr"></i> [[!%asi.action_contact_institution? &topic=`actions` &namespace=`asi`]]</a>
                 

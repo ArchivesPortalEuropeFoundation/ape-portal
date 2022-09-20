@@ -1,11 +1,12 @@
 <?php
+if(!function_exists("getSenderIp")) {
 function getSenderIp() {
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {$ip=$_SERVER['HTTP_CLIENT_IP'];}
     elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {$ip=$_SERVER['HTTP_X_FORWARDED_FOR'];}
     else {$ip=$_SERVER['REMOTE_ADDR'];}
     return $ip;
 }
-
+}
 $data = array (
     'url'       => 'https://www.google.com/recaptcha/api/siteverify',
     'secret'    => $modx->getOption('recaptcha_secret_key'),
