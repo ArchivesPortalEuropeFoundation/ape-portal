@@ -3806,21 +3806,21 @@ class AsiManager
             foreach ($_REQUEST['starttimespan_y'] as $y) {
                 $got_sd[] = substr($y, 0, 3) . "0";
                 $got_sc[] = substr($y, 0, 2) . "00";
-                $parts['start'][] = self::addDateFacetQueryPart($y, "y");
+                $parts['start'][] = self::addDateFacetQueryPart($y, "y", 0);
             }
         }
         if (isset($_REQUEST['starttimespan_d'])) { // 1720
             foreach ($_REQUEST['starttimespan_d'] as $d) {
                 if (!in_array($d, $got_sd)) {
                     $got_sc[] = substr($d, 0, 2) . "00";
-                    $parts['start'][] = self::addDateFacetQueryPart($d, "d");
+                    $parts['start'][] = self::addDateFacetQueryPart($d, "d", 0);
                 }
             }
         }
         if (isset($_REQUEST['starttimespan_c'])) { // 1700
             foreach ($_REQUEST['starttimespan_c'] as $c) {
                 if (!in_array($c, $got_sc)) {
-                    $parts['start'][] = self::addDateFacetQueryPart($c, "c");
+                    $parts['start'][] = self::addDateFacetQueryPart($c, "c", 0);
                 }
             }
         }
@@ -3832,62 +3832,88 @@ class AsiManager
             foreach ($_REQUEST['endtimespan_y'] as $y) {
                 $got_ed[] = substr($y, 0, 3) . "0";
                 $got_ec[] = substr($y, 0, 2) . "00";
-                $parts['end'][] = self::addDateFacetQueryPart($y, "y");
+                $parts['end'][] = self::addDateFacetQueryPart($y, "y", 1);
             }
         }
         if (isset($_REQUEST['endtimespan_d'])) { // 1720
             foreach ($_REQUEST['endtimespan_d'] as $d) {
                 if (!in_array($d, $got_ed)) {
                     $got_ec[] = substr($d, 0, 2) . "00";
-                    $parts['end'][] = self::addDateFacetQueryPart($d, "d");
+                    $parts['end'][] = self::addDateFacetQueryPart($d, "d", 1);
                 }
             }
         }
         if (isset($_REQUEST['endtimespan_c'])) { // 1700
             foreach ($_REQUEST['endtimespan_c'] as $c) {
                 if (!in_array($c, $got_ec)) {
-                    $parts['end'][] = self::addDateFacetQueryPart($c, "c");
+                    $parts['end'][] = self::addDateFacetQueryPart($c, "c", 1);
                 }
-            }
-        }
-
-        if (isset($parts['start'])) {
-            if (count($parts['start']) == 1) {
-                $fq[] = "{!tag=startDate}startDate: " . $parts['start'][0];
-            } else {
-                $fq[] = "{!tag=startDate}startDate: (" . implode(" OR ", $parts['start']) . ")";
             }
         }
 
         if (isset($parts['end'])) {
             if (count($parts['end']) == 1) {
-                $fq[] = "{!tag=endDate}endDate: " . $parts['end'][0];
+                $fq[] = "{!tag=startDate}startDate: " . $parts['end'][0];
             } else {
-                $fq[] = "{!tag=endDate}endDate: (" . implode(" OR ", $parts['end']) . ")";
+                $fq[] = "{!tag=startDate}startDate: (" . implode(" OR ", $parts['end']) . ")";
+            }
+        }
+
+        if (isset($parts['start'])) {
+            if (count($parts['start']) == 1) {
+                $fq[] = "{!tag=endDate}endDate: " . $parts['start'][0];
+            } else {
+                $fq[] = "{!tag=endDate}endDate: (" . implode(" OR ", $parts['start']) . ")";
             }
         }
 
         return $fq;
     }
 
-    protected static function addDateFacetQueryPart($value, $period)
+    protected static function addDateFacetQueryPart($value, $period, $type)
     {
 
         if ($period == "y") {
-            $start = $value . "-01-01T00\:00\:00.000Z";
-            $end = $value . "-12-31T23\:59\:59.999Z";
+//            $start = $value . "-01-01T00\:00\:00.000Z";
+//            $end = $value . "-12-31T23\:59\:59.999Z";
+            if ($type == 0){ //start type
+                $start = $value . "-01-01T00\:00\:00.000Z";
+                $end = "9999-12-31T23\:59\:59.999Z";
+            }
+            else {
+                $start = "0000-01-01T00\:00\:00.000Z";
+                $end = $value . "-12-31T23\:59\:59.999Z";
+            }
         }
 
         if ($period == "d") {
             $value = substr($value, 0, 3);
-            $start = $value . "0-01-01T00\:00\:00.000Z";
-            $end = $value . "9-12-31T23\:59\:59.999Z";
+            $end_of_decade = intval( $value."0" ) + 9;
+//            $start = $value . "0-01-01T00\:00\:00.000Z";
+//            $end = $value . "9-12-31T23\:59\:59.999Z";
+            if ($type == 0){ //start type
+                $start = $value . "0-01-01T00\:00\:00.000Z";
+                $end = "9999-12-31T23\:59\:59.999Z";
+            }
+            else {
+                $start = "0000-01-01T00\:00\:00.000Z";
+                $end = $end_of_decade . "-12-31T23\:59\:59.999Z";
+            }
         }
 
         if ($period == "c") {
             $value = substr($value, 0, 2);
-            $start = $value . "00-01-01T00\:00\:00.000Z";
-            $end = $value . "99-12-31T23\:59\:59.999Z";
+            $end_of_century = intval( $value."00" ) + 99;
+//            $start = $value . "00-01-01T00\:00\:00.000Z";
+//            $end = $value . "99-12-31T23\:59\:59.999Z";
+            if ($type == 0){ //start type
+                $start = $value . "00-01-01T00\:00\:00.000Z";
+                $end = "9999-12-31T23\:59\:59.999Z";
+            }
+            else {
+                $start = "0000-01-01T00\:00\:00.000Z";
+                $end = $end_of_century . "-12-31T23\:59\:59.999Z";
+            }
         }
 
         $string = "[$start TO $end]";
