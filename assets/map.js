@@ -36,11 +36,6 @@ function initMap() {
         current_map_id = $(this).attr('id');
         console.log(current_map_id);
         console.log(google_map_id);
-
-//New Code - Justin
-
-//End of New Code - Justin
-
     });
 });
 

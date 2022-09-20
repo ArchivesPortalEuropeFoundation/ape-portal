@@ -2,3 +2,111 @@
   font-size: 15px;
   font-weight: 700;
 }
+
+
+.boxrow {
+  display: block;
+  content-visibility: auto;
+}
+
+.boxcol {
+  display: inline-block;
+}
+
+.boxcol.left {
+  float: left;
+}
+
+.boxcol.right {
+  float: right;
+}
+
+#showMore-countries {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#showMore-countries:hover {
+  color: black;
+}
+
+#showLess-countries {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+}
+
+#showLess-countries:hover {
+  color: black;
+}
+
+#showMore-institutions {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#showMore-institutions:hover {
+  color: black;
+}
+
+#showLess-institutions {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+}
+
+#showLess-institutions:hover {
+  color: black;
+}
+
+#showMore-topics {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#showMore-topics:hover {
+  color: black;
+}
+
+#showLess-topics {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+}
+
+#showLess-topics:hover {
+  color: black;
+}
+
+#showMore-repositoryTypeFacet {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#showMore-repositoryTypeFacet:hover {
+  color: black;
+}
+
+#showLess-repositoryTypeFacet {
+  color: #b23063;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+}
+
+#showLess-repositoryTypeFacet:hover {
+  color: black;
+}
+
+.otherLink {
+  color: #b23063;
+  font-weight: 700;
+}
+

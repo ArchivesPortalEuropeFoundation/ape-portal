@@ -94,47 +94,10 @@
             display: none;
         }
 
-        .boxrow {
-            display: block;
-            content-visibility: auto;
-        }
-
-        .boxcol {
-            display: inline-block;
-        }
-
-        .boxcol.left {
-            float: left;
-        }
-
-        .boxcol.right {
-            float: right;
-        }
-
         [data-facet-set="institutions"] li {
             display: none;
         }
 
-        #showMore-institutions {
-            color: #b23063;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        #showMore-institutions:hover {
-            color: black;
-        }
-
-        #showLess-institutions {
-            color: #b23063;
-            font-weight: 700;
-            cursor: pointer;
-            display: none;
-        }
-
-        #showLess-institutions:hover {
-            color: black;
-        }
 
         @media (max-width: 767px) {
 
@@ -545,12 +508,9 @@
     [[!$asi_logged_in_js]]
 
     [[$scripts]]
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shave/2.5.9/jquery.shave.js" integrity="sha512-IGdsmWzpdb37yT2K9ViMXSYwJHc8uw0uDZKYyy/LDeC61zG42tF/0lm4HbUubZhL/OrVcC7mA5KVACSOgir9TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        $('document').ready(function () {
-            $('.description').shave(120);
-        });
+
         $('.countryItem, .institutionItem').click(function () {
             $(this).toggleClass('active');
         });
