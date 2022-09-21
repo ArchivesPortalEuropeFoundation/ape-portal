@@ -183,7 +183,7 @@ function removeItemFromCollection(collection_id, id, target) {
             var count_elem = $('[data-collection-id="'+collection_id+'"][data-count="total_'+target+'"]');
             var number = parseInt(count_elem.html());
             count_elem.html(number-1);
-            console.log("re-loading saved collections...");
+            log("re-loading saved collections...");
             loadSavedCollections();
             return; // carry on
         })
@@ -305,17 +305,6 @@ function listenForUsernameChange() {
         alert('Please contact a system admin if you want to change your username or email');
     })
 }
-
-// function listenForSearchParamsDrill() {
-//
-//     $( "body" ).on( "click", '.savedSearch .contentDropdown .param_title', function(event) {
-//         var t = $(this).parent();
-//         // console.log('Swing open!');
-//         // console.log(t);
-//         //TODO Ask Mark what he was thinking with below line
-//         // $(t).toggleClass("open"), $(t).children(".inner").slideToggle(300, "swing", reloadSortables())
-//     });
-// }
 
 // general logging function
 function log(msg) {
@@ -494,12 +483,12 @@ function loadCollectionContents(collection_id) {
     var search_target = $('[data-populate="account_saved_collection_searches"][data-collection-id="'+collection_id+'"]');
     var bookmark_target = $('[data-populate="account_saved_collection_bookmarks"][data-collection-id="'+collection_id+'"]');
 
-    console.log("loading collection saved searches...");
+    log("loading collection saved searches...");
     loadSavedSearches(params, search_target);
-    console.log("<< completed >>");
-    console.log("loading collection saved bookmarks...");
+    log("<< completed >>");
+    log("loading collection saved bookmarks...");
     loadSavedBookmarks(params, bookmark_target);
-    console.log("<< completed >>");
+    log("<< completed >>");
    // $('[data-container="collection_drill"][data-collection-id="'+collection_id+'"]').toggle();
 }
 
@@ -644,8 +633,8 @@ function loadSavedSearches(params, target) {
     var default_target = $('[data-populate="account_saved_searches"]'); // default html target if not specified
     target = target || default_target;
 
-    console.log("params is...");
-    console.log(params);
+    log("params is...");
+    log(params);
 
     $.ajax({
         method: "POST",
@@ -653,23 +642,21 @@ function loadSavedSearches(params, target) {
         data: params
     })
         .done(function(data) {
-            //console.log("data returned is...");
-            //console.log(data);
             var response=JSON.parse(data);
-            console.log(response.result);
+            log(response.result);
             if(response.result == "") {
-                console.log("Response is empty, so hide results");
+                log("Response is empty, so hide results");
                 if(target == default_target) {
                     target.replaceWith("<p class='text-center'>You currently have no saved searches</p>");
                     //$('[data-container="account_saved_searches_filters"]').hide();
-                    console.log("target == default_target, so hide results");
+                    log("target == default_target, so hide results");
                     if(typeof params.params !== "undefined")  {
-                        console.log("typeof params.params !== undefined, so hide results");
+                        log("typeof params.params !== undefined, so hide results");
                         //$('[data-collection-search-headings="'+params.params.collection_id+'"]').hide();
                     }
                 } else {
                     target.html("<p class='text-center'>You currently have no saved searches</p>");
-                    console.log("target != default_target, so hide results");
+                    log("target != default_target, so hide results");
                     //$('[data-container="account_saved_searches_filters"]').hide();
                     if(typeof params.params !== "undefined") {
                         //$('[data-collection-search-headings="'+params.params.collection_id+'"]').hide();
@@ -677,9 +664,9 @@ function loadSavedSearches(params, target) {
                 }
                 return;
             }
-            console.log(response.result);
+            log(response.result);
             target.html(response.result);
-            console.log("Response found so show results");
+            log("Response found so show results");
         //    $('[data-container="account_saved_searches_filters"]').show();
             if(typeof params.params !== "undefined") {
                // $('[data-collection-search-headings="'+params.params.collection_id+'"]').show();
@@ -752,19 +739,14 @@ function loadSavedCollections(target) {
     })
         .done(function(data) {
             var response=JSON.parse(data);
-            //log('collections response is');
-            //log(response);
             if(response.result == "") {
                 target.replaceWith("<p class='text-center'>You currently have no saved collections</p>");
-            //    $('[data-container="account_saved_collections_filters"]').hide();
                 return;
             }
             $('[data-populate="account_saved_collections"]').html(response.result);
-          //  $('[data-container="account_saved_collections_filters"]').show();
         })
         .fail(function() {
             log('Saved collections could not be loaded');
-          //  $('[data-container="account_saved_collections_filters"]').hide();
         })
 }
 
@@ -774,7 +756,7 @@ function listenForSaveBookmark() {
     $('[data-trigger="save_bookmark"]').click(function (event) {
 
         event.preventDefault();
-
+    //TODO KOSTAS The below was not commented out as the overall bookmarking functionality was commented out in the HTML. However this would make it need an Account before showing correctly.
         if(logged_in == false) {
 
             // accountNeededPopup
@@ -833,6 +815,9 @@ function listenForSuggestion() {
     $('[data-trigger="suggestion"]').click(function (event) {
 
         event.preventDefault();
+
+        //TODO KOSTAS - The below was commented out so that suggestions would be able to be made without being logged in.
+
         // if(logged_in == false) {
         //
         //     $('#accountNeededPopup').modal('show');
@@ -860,7 +845,7 @@ function listenForSaveSearch() {
 
         event.preventDefault();
 
-        console.log(ApeSearch);
+        log(ApeSearch);
 
         if(logged_in == false) {
 
@@ -1007,8 +992,8 @@ function loadCollections() {
 
 function loadCollectionsNotAssignedToThis() {
 
-    console.log("target = "+current_collection_target);
-    console.log("target id = "+current_collection_target_id);
+    log("target = "+current_collection_target);
+    log("target id = "+current_collection_target_id);
 
     $.ajax({
         method: "POST",
@@ -1054,21 +1039,21 @@ function loadCollectionsNotAssignedToThis() {
 }
 
 function renderResponseFiltersToList(request_filters) {
-    console.log('ApeSearch.request_filters');
-    console.log(ApeSearch.request_filters);
+    log('ApeSearch.request_filters');
+    log(ApeSearch.request_filters);
 
     request_filters = request_filters || ApeSearch.request_filters;
-    console.log('request_filters');
-    console.log(request_filters);
+    log('request_filters');
+    log(request_filters);
 
     var params = "";
     var current_filter = null;
 
     $.each(request_filters, function (filter, item) {
-        console.log('request_filter');
-        console.log(filter);
-        console.log('item');
-        console.log(item);
+        log('request_filter');
+        log(filter);
+        log('item');
+        log(item);
         $.each(item, function (k, v) {
 
                 if(filter == current_filter) {
@@ -1081,17 +1066,10 @@ function renderResponseFiltersToList(request_filters) {
         });
 
     });
-    console.log('Params');
-    console.log(params);
+    log('Params');
+    log(params);
     return params;
 }
-
-/*
-<div class="alignedText p240">
-                <span class="title">Countries:</span>
-                <p>United Kingdom, Germany</p>
-            </div>
- */
 
 function renderResponseFiltersToListAlt(request_filters) {
 
@@ -1141,7 +1119,7 @@ function copyTextToClipboard(text) {
         var successful = document.execCommand('copy');
         var msg = successful ? 'successful' : 'unsuccessful';
     } catch (err) {
-        console.log('Unable to copy');
+        log('Unable to copy');
     }
     document.body.removeChild(textArea);
 }

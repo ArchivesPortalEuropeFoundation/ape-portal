@@ -492,9 +492,8 @@
     }
 
     function updateResults(type,newPage, search) {
-        console.log(type);
-        console.log(newPage);
-        console.log("#"+type+"Content");
+        var prevHeight = document.documentElement.scrollHeight;
+        var prevPosition = document.documentElement.scrollTop;
         $.ajax({
             method: "GET",
             url: `${conf.ajax_endpoint}&page=${newPage}&repositoryCode=${conf.repo_code}&type=${type}&search=${search}`,
@@ -543,7 +542,11 @@
                     }
                 }
                 $("#"+type+"Content").html(data.result.html);
-                console.log(data);
+                var newHeight = document.documentElement.scrollHeight;
+                adjustHeight = prevHeight - newHeight;
+                adjustPosition = prevPosition - adjustHeight;
+                document.documentElement.scrollTop = adjustPosition;
+                var newPosition = document.documentElement.scrollTop;
             }).fail(function (err) {
             console.log(err);
         }).always(function () {
@@ -555,28 +558,24 @@
         faSearch = $('#faSearchInput').val();
         updateResults('fa', 1, faSearch);
 
-        console.log(faOptions);
     });
 
     $("#hgSearchBtn").button().click(function(){
         hgSearch = $('#hgSearchInput').val();
         updateResults('hg', 1, hgSearch);
 
-        console.log(hgOptions);
     });
 
     $("#sgSearchBtn").button().click(function(){
         sgSearch = $('#sgSearchInput').val();
         updateResults('sg', 1, sgSearch);
 
-        console.log(sgOptions);
     });
 
     $("#ecSearchBtn").button().click(function(){
         ecSearch = $('#ecSearchInput').val();
         updateResults('ec', 1, ecSearch);
 
-        console.log(ecOptions);
     });
 
 

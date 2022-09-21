@@ -24,5 +24,4 @@
 
 // @codekit-prepend quiet "templates/institutions.js";
 
-// @codekit-prepend quiet "includes/gel_search.js";
  

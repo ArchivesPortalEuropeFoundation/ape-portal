@@ -106,8 +106,8 @@ if (typeof enable_institution_search !== 'undefined') {
     function getCountryFilters() {
         var selectedCountries = [];
         $.each(filters, function(key, value) {
-            console.log(key +' - '+ value);
-            console.log(value);
+            log(key +' - '+ value);
+            log(value);
             if(value.name == "country") {
                 log('a country is selected');
                 selectedCountries.push(value.value);
@@ -124,7 +124,7 @@ if (typeof enable_institution_search !== 'undefined') {
                 selectedLandscapes.push(value.value);
             }
         });
-        console.log(selectedLandscapes);
+        log(selectedLandscapes);
         return selectedLandscapes;
     }
 
