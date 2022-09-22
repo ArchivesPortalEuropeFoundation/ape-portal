@@ -258,7 +258,21 @@ class SimpleSearch
                     $pagination .= $this->getChunk($pagePrevTpl,$pageArray);
                 }
             }
-            if (empty($pageLimit) || ((int)$pageArray['offset'] >= $currentOffset - ($pageLimit * $perPage) && (int)$pageArray['offset'] <= $currentOffset + ($pageLimit * $perPage))) {
+            $pageLimitBelow = floor(($pageLimit - 1) / 2);
+            $pageLimitAbove = $pageLimit - 1 - $pageLimitBelow;
+
+            $currentPage = floor($currentOffset / $perPage);
+            if ($currentPage < $pageLimitBelow){
+                $pageLimitBelow = $currentPage;
+                $pageLimitAbove = $pageLimit - 1 - $pageLimitBelow;
+            }
+
+            if (($pageLinkCount - 1 - $currentPage) < $pageLimitAbove){
+                $pageLimitAbove = ($pageLinkCount - 1 - $currentPage);
+                $pageLimitBelow = $pageLimit - 1 - $pageLimitAbove;
+            }
+
+            if (empty($pageLimit) || ((int)$pageArray['offset'] >= $currentOffset - ($pageLimitBelow * $perPage) && (int)$pageArray['offset'] <= $currentOffset + ($pageLimitAbove * $perPage))){
                 if ($currentOffset === $pageArray['offset']) {
                     $pageArray['text'] = $i + 1;
                     $pageArray['link'] = $i + 1;

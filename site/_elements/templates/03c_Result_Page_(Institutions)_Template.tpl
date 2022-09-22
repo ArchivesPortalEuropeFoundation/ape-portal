@@ -428,8 +428,6 @@
         currentPage: faCurrentPg,
         totalPages: faPageTotal,
         onPageClicked: function(e,originalEvent,type,page){
-            console.log(type);
-            console.log('Page no:'+page);
             updateResults('fa', page, faSearch);
         }
     }
@@ -577,8 +575,6 @@
         updateResults('ec', 1, ecSearch);
 
     });
-
-
 </script>
 <script src="assets/map.js?[[!cache_buster]]"></script>
 [[- <script src="https://cdn.jsdelivr.net/gh/igorlino/elevatezoom-plus@1.2.3/src/jquery.ez-plus.js"></script> ]]

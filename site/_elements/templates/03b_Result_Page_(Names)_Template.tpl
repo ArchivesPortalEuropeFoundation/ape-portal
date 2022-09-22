@@ -317,47 +317,6 @@
         e.preventDefault();
     });
 
-
-    // function showMore(classKey, branch) {
-    //     console.log('Test');
-    //     if(branch != null) {
-    //         $('[data-branch="' + branch + '"] .' + classKey + ' .displayLinkSeeMore').hide();
-    //         $('[data-branch="' + branch + '"] .' + classKey + ' .displayLinkSeeLess').show();
-    //         $('[data-branch="' + branch + '"] .' + classKey + ' .longDisplay').slideDown({
-    //             start: function () {
-    //                 $(this).css({
-    //                     display: "flex"
-    //                 })
-    //             }
-    //         });
-    //     } else {
-    //         $('.' + classKey + ' .displayLinkSeeMore').hide();
-    //         $('.' + classKey + ' .displayLinkSeeLess').show();
-    //         $('.' + classKey + ' .longDisplay').slideDown({
-    //             start: function () {
-    //                 $(this).css({
-    //                     display: "flex"
-    //                 })
-    //             }
-    //         });
-    //     }
-    // }
-    //
-    // function showLess(classKey, branch) {
-    //     if(branch != null) {
-    //         $('[data-branch="' + branch + '"] .' + classKey + ' .displayLinkSeeMore').show();
-    //         $('[data-branch="' + branch + '"] .' + classKey + ' .displayLinkSeeLess').hide();
-    //
-    //         $('[data-branch="' + branch + '"] .' + classKey + ' .longDisplay').slideUp();
-    //     } else {
-    //         $('.' + classKey + ' .displayLinkSeeMore').show();
-    //         $('.' + classKey + ' .displayLinkSeeLess').hide();
-    //
-    //         $('.' + classKey + ' .longDisplay').slideUp();
-    //     }
-    //
-    // }
-
     function setupShowHide() {
         var moreItems = document.getElementsByClassName("moreDisplay");
         moreItems.forEach(myFunction);

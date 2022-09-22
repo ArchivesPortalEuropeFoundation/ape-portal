@@ -88,6 +88,7 @@
                         &processTVs=`refImage60`
                         &placeholderPrefix=`blogSearch.`
                         &toPlaceholder=`blogSearchResults`
+                        &pageLimit=`10`
                         &pageNextTpl=`@INLINE <li class="next"><a href="[[+link]]">[[!%asi.pg_next? &topic=`default` &namespace=`asi`]] <i class="far fa-angle-right ml"></i></a></li>`
                         &pagePrevTpl=`@INLINE <li class="prev"><a href="[[+link]]"><i class="far fa-angle-left mr"></i> [[!%asi.pg_previous? &topic=`default` &namespace=`asi`]]</a></li>`
                         &pageFirstTpl=`@INLINE <li class="first"><a href="[[+link]]"><i class="far fa-angle-double-left mr"></i> [[!%asi.pg_first? &topic=`default` &namespace=`asi`]]</a></li>`

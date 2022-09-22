@@ -47,7 +47,6 @@ if($modx->getOption('search_spoof_solr') == 1) {
     header('Content-Type: application/json');
     $file = file_get_contents($path);
     echo $file;
-
 }
 else {
     $lang         = $_REQUEST['lang'] ?? $modx->getOption('cultureKey') ?? 'en';
@@ -57,7 +56,6 @@ else {
     $params = asi::buildParams($_REQUEST);
     $results = asi::fetchResults($params);
     $filters = asi::fetchFiltersFromResults($params);
-
 
     $html = null;
     $aid_html = null;
@@ -146,8 +144,6 @@ else {
         default: // search-in-archives
 
             foreach ($results AS $r) {
-//                var_dump($r);
-//                die();
                 $html .= $modx->getChunk("asi_search_result_archive_list", array(
                     'type'=>'Hitting Here',
                     'id' => $r['id'],
@@ -166,7 +162,6 @@ else {
                     "dao" => $r['dao'],
                     "daoType" => $r['daoType'],
                     "fa_title" => asi::cleanLabel($r['description_value']),
-//                    "fa_id" => asi::cleanLabel($r['code_value']),
                     "extract" => asi::highlightTermInExtract($r['scopeContent'], $_REQUEST['term']),
                     'other_value' => asi::highlightTermInExtract($r['other_value'], $_REQUEST['term']),
                     'code' => $r['code_value'],
@@ -297,7 +292,6 @@ else {
         "start" => asi::getStart(),
         "end" => asi::getEnd(),
     );
-
 
     header('Content-Type: application/json');
     echo json_encode($response);

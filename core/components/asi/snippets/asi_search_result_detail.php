@@ -128,13 +128,14 @@ if($section == "search-in-archives") {
         $linkItem->parentNode->removeChild($linkItem);
     }
 
-
+    //Process the title
     $titleProper = $finder->query("//h1[@class='titleproper']")[0];
     if(!is_null($titleProper)) {
         $placeholders['archive']['title']   = $titleProper->nodeValue;
         $titleProper->parentNode->removeChild($titleProper);
     }
 
+    //Process other finding aids
     $otherFindingAidsInt = $finder->query("//div[@class='otherfindingaids']/div[@class='linkButton']/a");
     foreach ($otherFindingAidsInt as $intLink) {
         $newId = $intLink->getAttribute('href');
@@ -142,6 +143,8 @@ if($section == "search-in-archives") {
         $intLink->setAttribute('href', $newHref);
     }
 
+    //Process digital objects takes place below
+    //First up is to call the object rights(if any) and assign their value the correct icons or images.
     $digitalObjectsRestriction = $finder->query("//div[@class='userestrict-dao']/p/a")[0];
     if(!is_null($digitalObjectsRestriction)) {
         $testAttributes = (array)json_decode(file_get_contents(MODX_ASSETS_PATH.'/creative-commons-types.json'));
@@ -153,9 +156,12 @@ if($section == "search-in-archives") {
             }
         }
     }
+
+    //Process the digital objects header
     $digitalObjectsHeader = $finder->query("//h2[@class='dao-list']")[0];
     if(!is_null($digitalObjectsHeader)) {
         $dObjectsHeader = $digitalObjectsHeader->nodeValue;
+        //Remove the header from the DOM as it has been accounted for.
         $digitalObjectsHeader->parentNode->removeChild($digitalObjectsHeader);
     }
 
@@ -186,7 +192,7 @@ if($section == "search-in-archives") {
             }
         }
 
-
+        //Assign the object to the image slider now that it is processed into the correct variables.
         $gallery_content_slider .= $modx->getChunk("asi_gallery_content_slider", array(
             'thumb' => $imageThumb,
             'link' => $imageLink,
@@ -206,20 +212,26 @@ if($section == "search-in-archives") {
             'attribution' => $attribution
         ));
     }
+
+    //Remove the object from the DOM as it is now accounted for.
     $digitalObjectsOriginalParent = $finder->query("//div[@class='daolistContainer']")[0];
     if(!is_null($digitalObjectsOriginalParent)) {
         $digitalObjectsOriginalParent->parentNode->removeChild($digitalObjectsOriginalParent);
     }
+
+    //Set the placeholders that show the digital objects on the page.
     $placeholders['archive']['gallery'] = [
         'slider'    => $gallery_content_slider,
         'caption'   => $gallery_content_caption,
         'tab'       => $gallery_content_tab,
     ];
 
+    //Set other placeholders for pagetitle and date and then render the rest of the DOM that has not needed to be processed as HTML for viewing on the page.
     $placeholders['pagetitle']          = $placeholders['archive']['title'];
     $placeholders['archive']['date']    = $finder->query("//div[@class='subtitle']")[0]->nodeValue;
     $placeholders['archive']['html']    = $doc->saveHTML();
 
+    //Set the pagination for child components if they require it or if they exist
     if($archiveDetails->totalNumberOfChildren > 0) {
         $rst = 10;
         $pg = 1;
@@ -243,56 +255,42 @@ if($section == "search-in-archives") {
 
     $result['params_json'] = asi::generateParamsString($result, "archive");
 
-    $gallery_content_slider = null;
-    $gallery_content_caption = null;
-//    foreach ($result['images'] AS $image) {
-//        $gallery_content_slider .= $modx->getChunk("asi_gallery_content_slider", array(
-//            'thumb' => $image['thumb'],
-//            'link' => $image['link'],
-//            'caption' => $image['caption']
-//        ));
-//        $gallery_content_caption .= $modx->getChunk("asi_gallery_content_caption", array(
-//            'thumb' => $image['thumb'],
-//            'link' => $image['link'],
-//            'caption' => $image['caption']
-//        ));
-//        $gallery_content_tab .= $modx->getChunk("asi_gallery_content_tab", array(
-//            'thumb' => $image['thumb'],
-//            'link' => $image['link'],
-//            'caption' => $image['caption']
-//        ));
-//    }
-//
-//    $placeholders['archive']['gallery'] = [
-//        'slider'    => $gallery_content_slider,
-//        'caption'   => $gallery_content_caption,
-//        'tab'       => $gallery_content_tab,
-//    ];
-
+    //Set a placeholder for all the SOLR data.
     $modx->setPlaceholders($result['solr_detail'], "solr_data.");
 
+    //Clear out the gallery and components variables.
+    $gallery_content_slider = null;
+    $gallery_content_caption = null;
     $components = null;
 }
 
 if($section == "search-in-institutions") {
+    //Set the variables we will be filling in the call
     $finding_aids = '';
     $holding_guides = '';
     $source_guides = '';
     $names_items = '';
     $branchDetails = array();
+    //Set the branch count to 1 as there will always be a main branch to start with.
     $count = 1;
+    //Fill in the first branch variable for processing before we start the while loop
     $div = $instDoc->getElementById('repository_'.$count);
+    //Get the map details for main branch from the API for institution.
     $instMapDetails = json_decode(file_get_contents("{$APIbase}Dashboard/geoApi.action?aiRepositoryCode={$repoCode}"));
-
+    //Set the lat and long placeholders to 0 for processing.
     $placeholders['coords']['lat']      = 0;
     $placeholders['coords']['lng']      = 0;
+
+    //Start the while loop that will process each branch info 1 by 1 until there are no more for this institute
     while (!is_null($div)) {
         $branch = array();
         $branch['counter'] = $count;
 
+        //Initiate a new DOMDoc instance for processing the HTML for the branch
         $branchItem = new DOMDocument();
         $branchItem->loadHTML(mb_convert_encoding($div->C14N(), 'HTML-ENTITIES', 'UTF-8'));
         $finder = new DomXPath($branchItem);
+        //Get the 3 sections that need processing for branch by their class name.
         $contactDetails = $finder->query("//*[contains(@class, 'aiSection contactDisplay')]")[0];
         $accessDisplay  = $finder->query("//*[contains(@class, 'aiSection accessDisplay')]")[0];
         $archiveHolding = $finder->query("//*[contains(@class, 'aiSection archivesDisplay')]")[0];
@@ -307,19 +305,23 @@ if($section == "search-in-institutions") {
         if (!is_null($accessDisplay)) {
             $branch['institution']['access'] = $accessDisplay->C14N();
         }
-        
+
+        //Take the rest of the branch info and process accordingly
         foreach ($div->childNodes as $node) {
             if($node->tagName == 'h3' && $node->getAttribute('class') == 'repositoryName') {
                 $branch['label'] = $node->nodeValue;
                 $branch['name_text'] = $node->nodeValue;
             }
         }
+        //If this is the main branch, we need the initial institution map coordinates to be set which will be called from the variable set earlier.
+        //For further coordinates, javascript is implemented to update the map on the page.
         if($count === 1) {
             $placeholders['institution']['latitude'] = floatval($instMapDetails->repos[0]->latitude);
 
             $placeholders['institution']['longitude'] = floatval($instMapDetails->repos[0]->longitude);
         }
 
+        //Set the location details for all branches
         if($count === 1) {
             $branch['location'] = $instMapDetails->repos[0];
             unset($instMapDetails->repos[0]);
@@ -338,26 +340,30 @@ if($section == "search-in-institutions") {
       
         }
 
-
+        //Set other display info html
         $otherInfo = $instFinder->query("//*[contains(@class, 'aiSection otherDisplay')]")[0];
      
         if (!is_null($otherInfo)) {
             $placeholders['institution']['other_info'] = $otherInfo->C14N();
         }
 
+        //Finalise this run of loop by adding new processed data to the branch details array, and then updating count to process the next in the list
         $branchDetails[] = $branch;
         $count++;
-
+        //Before the while loop restarts, update the object to the new item based on the updated count value.
         $div = $instDoc->getElementById('repository_'.$count);
 
     }
 
+    //Set the variables needed for Archival Materials
     $archival_materials = 0;
     $rst = 10;
     if(!is_null($params['max'])) {
         $rst = $params['max'];
     }
-    //Check for finding aids and holding guides for institution
+    //Check for finding aids, holding guides, source guides and names for institution
+    //Each section below fetches the relevant section from the API and creates the pagination parameters if required before adding it to the placeholders later on
+    //Finding Aids processing
     if($instDetails->hasFindingAids === true) {
         $faPg = 1;
         $type = 'fa';
@@ -377,6 +383,8 @@ if($section == "search-in-institutions") {
         $finding_aids = true;
         $archival_materials++;
     }
+
+    //Holding Guides processing
     if($instDetails->hasHoldingGuides === true) {
         $hgPg = 1;
         $type = 'hg';
@@ -396,6 +404,8 @@ if($section == "search-in-institutions") {
         $holding_guides = true;
         $archival_materials++;
     }
+
+    //Source Guides processing
     if($instDetails->hasSourceGuides === true) {
         $sgPg = 1;
         $type = 'sg';
@@ -414,6 +424,8 @@ if($section == "search-in-institutions") {
         $source_guides = true;
         $archival_materials++;
     }
+
+    //Names Processing
     if($instDetails->hasEacCpfs === true) {
         $ecPg = 1;
         $type = 'ec';
@@ -433,14 +445,14 @@ if($section == "search-in-institutions") {
         $archival_materials++;
     }
 
-    // $result['agency_name_shortened'] = Tools::truncate($result['agency_name'], 18);
+    //Initialise the branches, selector and counter variables to initial states for use in the placeholder creation of branches below.
     $selector = null;
     $branches = null;
     $counter = 1;
 
+    //Run through the branchDetails from earlier and assign them to the selector with the correct HTML.
     foreach($branchDetails AS $b) {
         $b['counter'] = $counter;
-        // $label = ($b['counter'] == 1) ? $result['agency_name'] : $b['name_text'];
         $label = $b['name_text'];
         $active = false;
 
@@ -452,8 +464,9 @@ if($section == "search-in-institutions") {
 
         $b['label'] = $label;
         $short = Tools::truncate($label, 18);
+        //add the selector item to the list with correct html.
         $selector .= "<a data-short-label='{$short}' data-switch-branch='{$b['counter']}' data-latitude='{$b['location']->latitude}' data-longitude='{$b['location']->longitude}' class='{$active}'>{$label}</a>";
-        // $selector .= "<a data-short-label='".$short."' data-switch-branch=\"".$b['counter']."\">".$label."</a>";
+        //Process the branch info into the correct HTML format by running it through the chunk template.
         $branches .= $modx->getChunk("asi_search_result_institution_branch",
             $b
         );
@@ -465,6 +478,7 @@ if($section == "search-in-institutions") {
         $placeholders['pagetitle'] = $placeholders['institution']['name'];
     }
 
+    //Set all placeholders for use in template display
     $placeholders['institution']['repo_code'] = $repoCode;
     $placeholders['institution']['archival_materials'] = $archival_materials;
     $placeholders['institution']['finding_aids'] = $finding_aids;
@@ -478,32 +492,34 @@ if($section == "search-in-institutions") {
 
     $modx->setPlaceholder('selector', $selector);
     $modx->setPlaceholder('branches', $branches);
-
+    //Generate the parameters JSON string for institution
     $result['params_json'] = asi::generateParamsString($result, "institution");
 }
 
 if($section == "search-in-names") {
-
-    $faItemDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eagDetailsApi.action?aiRepositoryCode=".$repoCode."&type=fa&page=1&max=50"));
-    //$finding_aids = $faResultDetails;
-
+    //Get the name details from the API for processing
     $nameDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eacApi.action?aiRepositoryCode=".$repoCode."&eaccpfId=".$id."&translationLanguage=default&langNavigator=it&request_locale={$lang}"));
-
+    //Generate the parameters JSON string for names
     $result['params_json'] = asi::generateParamsString($result, "name");
-
+    //Process the html received from the API and intitialise it with DomDocument for further processing
     $doc = asi::domHTML($nameDetails->html);
     $finder = new DomXPath($doc);
+    //Initialise entity type default values which will be corporate body unless return gives different
     $entityTypeCheck = '';
     $entityType = 'corporatebody';
     $entityIcon = 'fa-landmark';
+
+    //Check for H1 tags on the returned HTML and if there are any, they will based on HTML markup from Kostas, give a class that will include the entity type
     $header1Tag = $doc->getElementsByTagName('h1');
     foreach ($header1Tag as $h1tag) {
         foreach ($h1tag->attributes as $attribute) {
+            //Take the class from the H1 tag and assign the value to the entity type
             if($attribute->name === 'class') {
                 $entityTypeCheck = $attribute->value;
             }
         }
     }
+    //Depending on the class name, it will be one of 3 items. Assign the correct values instead of the default from above.
     switch ($entityTypeCheck) {
         case "blockHeader iconCorporateBody":
             $entityType = 'corporatebody';
@@ -518,12 +534,15 @@ if($section == "search-in-names") {
             $entityIcon = 'fa-users';
             break;
     }
-    $siteParts = explode('/', $siteUrl);
+
+    //Get material for Name and if it exists, process data
     $materialDiv = $doc->getElementById('material');
     if(!is_null($materialDiv)) {
         $materialItem = new DOMDocument();
         $materialItem->loadHTML(mb_convert_encoding($materialDiv->C14N(), 'HTML-ENTITIES', 'UTF-8'));
+        //Get the material items based on how many li tags are listed here. Each li should technically be another material item
         $items = $materialItem->getElementsByTagName('li');
+        //Set the variables we will need for processing these list items.
         $archiveMaterials = array();
         $archRelsObject = array();
         $archRelsCount = 0;
@@ -539,24 +558,17 @@ if($section == "search-in-names") {
                         $materialLink = '#';
                         $linkParts = explode('/', $attribute->nodeValue);
                         if($linkParts) {
-//                            $linkParts[0] = $siteParts[0];
-//                            $linkParts[2] = $siteParts[2];
                             $materialLink = implode('/', $linkParts);
-//                            $archiveMaterial['repoCode'] = $linkParts[8];
-//                            $archiveMaterial['recordId'] = $linkParts[12];
                         }
                         $archiveMaterial['link'] = $materialLink;
-                        //$archiveMaterial['link'] = $attribute->nodeValue;
-
                     }
                 }
             } else {
                 $archiveMaterial['type'] = 'text';
                 $archiveMaterial['name'] = $item->firstChild->nodeValue;
             }
-
-
-                $archiveMaterials[] = $archiveMaterial;
+            //Assign the material to the material array
+            $archiveMaterials[] = $archiveMaterial;
 
             $archRelsCount++;
             if($archiveMaterial['type'] === 'link') {
@@ -589,21 +601,15 @@ if($section == "search-in-names") {
                         $relatedLink = '#';
                         $linkParts = explode('/', $attribute->nodeValue);
                         if($linkParts) {
-//                            $linkParts[0] = $siteParts[0];
-//                            $linkParts[2] = $siteParts[2];
                             $relatedLink = implode('/', $linkParts);
-//                            $relatedName['repoCode'] = $linkParts[8];
-//                            $relatedName['recordId'] = $linkParts[12];
                         }
                         $relatedName['link'] = $relatedLink;
-//                        $relatedName['link'] = $attribute->nodeValue;
                     }
                 }
             } else {
                 $relatedName['type'] = 'text';
                 $relatedName['name'] = $item->firstChild->nodeValue;
             }
-
 
             $relatedNames[] = $relatedName;
 

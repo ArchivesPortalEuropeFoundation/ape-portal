@@ -480,7 +480,6 @@
             if (unitId) {
                 apiCall = apiCall + `&unitId=${unitId}`;
             }
-            console.log(newPage);
             $(document).find("#componentChildren").css("opacity", "0.3");
 
             $.ajax({
@@ -504,8 +503,6 @@
                     $(document).find("#componentChildren").css("opacity", "1");
                     $(document).find("#componentChildren").show();
 
-                   
-                    console.log(data);
                 }).fail(function (err) {
                     console.log(err);
                 }).always(function () {
@@ -515,13 +512,6 @@
         }
 
         function updateTree(newPage) {
-            console.log('Ids below:');
-            console.log('RECORDID: ' + recordId);
-            console.log('EADID: ' + eadId);
-            console.log('C Level ID: ' + clevelId);
-            console.log('Unit ID: ' + unitId);
-            console.log('Level Name: ' + levelName);
-            console.log('Tree ID: ' + treeId);
             var apiCall = `${conf.ajax_endpoint}&page=${newPage}&repositoryCode=${conf.repo_code}&levelName=${levelName}&recordId=${recordId}`;
             if (clevelId) {
                 apiCall = apiCall + `&c=C${clevelId}`;
@@ -529,7 +519,6 @@
             if (unitId) {
                 apiCall = apiCall + `&unitId=${unitId}`;
             }
-            console.log(newPage);
             $(document).find("#componentChildren").css("opacity", "0.3");
             $.ajax({
                 method: "GET",
@@ -538,22 +527,17 @@
                 dataType: 'json'
             })
                 .done(function (data) {
-
                     compOptions.currentPage = data.result.page;
                     compOptions.totalPages = data.result.pageTotal;
                     $("#componentChildren").html(data.result.html);
-
                     if (compOptions.totalPages > 1) {
                         $('#componentChildren').show();
                         $('#ComponentsPagination').bootstrapPaginator(compOptions);
                     } else {
                         $('#componentChildren').hide();
                     }
-
                     $(document).find("#componentChildren").css("opacity", "1");
                     $(document).find("#componentChildren").show();
-
-                
                 }).fail(function (err) {
                     console.log(err);
                 });
