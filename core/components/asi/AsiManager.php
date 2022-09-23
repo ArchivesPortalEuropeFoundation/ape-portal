@@ -115,9 +115,7 @@ class AsiManager
         if (self::$mode == "TEST") {
             // we crate 2 sets, one that is paginated for results, and one that isn't for filters
             self::$results = Fixtures::getResultSet($term, self::translate_params($params), self::$results_per_page, $start);
-            //var_dump(self::$results);
             self::$filter_results = Fixtures::getResultSet($term, self::translate_params($params));
-            //var_dump(self::$filter_results);
         } else {
             // for live, we use the facets for the filters
             $results = self::getSolrResults($term, $params);
@@ -144,7 +142,6 @@ class AsiManager
     protected static function getSolrUrl($core)
     {
         $modx = self::$modx;
-
         return 'http://' . $modx->getOption("solr_address") . ':' . $modx->getOption("solr_port") . '/solr/' . $core . '/';
     }
 
@@ -218,8 +215,6 @@ class AsiManager
 
         $transport = new \Apache_Solr_HttpTransport_FileGetContents;
         $results = $transport->performGetRequest(self::getSolrUrl(self::getSolrCore($section)) . "select?q=" . $query . "&qt=list&spellcheck=true&spellcheck.collate=true&wt=json");
-
-        // self::dump($results);
     }
 
     public static function testLandscapeSolr()
@@ -251,14 +246,12 @@ class AsiManager
         $additionalParameters['defType'] = "edismax";
 
         $results = self::processSolrResults($solr, $query, $additionalParameters);
-        // self::dump($results);
         exit();
     }
 
 
     public static function nestLandscape($country_code = "DE")
     {
-
         // first fetch all the nodes - it's different for each country
         // and even different within each country
         // so we put these into much cleaner objects
@@ -279,10 +272,8 @@ class AsiManager
         $flat = self::traverseChildren($landscapes[0], $flat);
 
         echo "<h2>Flat</h2>";
-        // self::dump($flat);
 
         echo "<h2>Original</h2>";
-        //self::dump($landscapes);
 
         exit();
         return $results;
@@ -328,13 +319,11 @@ class AsiManager
     // takes an array of landscape codes and loads the details into an array
     public static function loadLandscapesSolr()
     {
-
         $modx = self::$modx;
-
         $landscapes = array();
         $institutions = array();
-
         $country_landscapes = array();
+
         if (isset($_REQUEST['landscapes'])) foreach ($_REQUEST['landscapes'] as $k => $v) {
             $parts = explode("_", $v);
             $country_landscapes[$parts[0]][] = $parts[1];
@@ -410,11 +399,6 @@ class AsiManager
             if (isset($r['aiGroupsFacet'])) {
                 $parts[] = self::cleanLabel($r['aiGroupsFacet']);
             }
-            /*
-            if(isset($r['type_value'])) {
-                $parts[] = $r['type_value'];
-            }
-	*/
             $parts[] = $r['institution_value'];
             $clean[] = implode(" : ", $parts);
         }
@@ -437,7 +421,6 @@ class AsiManager
         }
         return $params;
     }
-
 
     // takes an array of landscape codes and loads the details into an array
     public static function loadLandscapes($country_codes_arr, $landscape_codes_arr = array())
@@ -496,7 +479,6 @@ class AsiManager
 
     public static function loadFlattenedLandscapeInstitutions($xmlObj, $key)
     {
-
         $landscapesXml = $xmlObj->archdesc->dsc->c->c;
         $counter = 0;
         foreach ($landscapesXml as $k => $v) {
@@ -515,7 +497,6 @@ class AsiManager
     // takes the single landscape code and loads the detail into an array
     public static function loadLandscapeInstitutionsOLD($landscape_code)
     {
-
         $parts = explode("_", $landscape_code);
         $xml_filepath = self::$landscape_path . $parts[0] . "AL.xml";
         $xmlObj = simplexml_load_file($xml_filepath);
@@ -526,7 +507,6 @@ class AsiManager
     // formats the XML for the landscape
     public static function formatLandscapeXML($xmlObj, $depth = 1)
     {
-
         $landscapes = array();
         $xmllandscapes = $xmlObj->archdesc->dsc->c->c;
         $counter = 0;
@@ -534,22 +514,15 @@ class AsiManager
             $landscapes[$counter] = $v->did->unittitle[0]->__toString();
             foreach ($v->c as $ik => $iv) {
                 if ($depth == 2) {
-                    //self::dump($iv);
                     foreach ($iv->c as $iik => $iiv) {
                         $institutions[$counter][] = $iiv->did->unittitle[0]->__toString() . "::";
                     }
-                    //$institutions[$counter][] = $iv->did->unittitle[0]->__toString()."::";
                 } else {
                     $institutions[$counter][] = $iv->did->unittitle[0]->__toString();
                 }
             }
             $counter++;
         }
-
-        //self::dump($landscapes);
-        //self::dump($institutions);
-        //self::dump($xmlObj);
-
         return array("landscapes" => $landscapes, "institutions" => $institutions);
     }
 
@@ -557,8 +530,6 @@ class AsiManager
     // stores relevant params into json string
     public static function generateParamsString($data, $section, $addSlashes = false)
     {
-
-
         switch ($section) {
             case "archive":
 
@@ -606,14 +577,10 @@ class AsiManager
 
         if ($addSlashes) return addslashes($json);
         return $json;
-
-        //self::dump($data);
-
     }
 
     public static function getCoordsForAddress($request)
     {
-
         // this function checks the hash for security
         // checks the cache and loads the cache or makes a new one
 
@@ -653,7 +620,6 @@ class AsiManager
 
     public static function geocode($address = false, $url_encoded_address = false)
     {
-
         $modx = self::$modx;
 
         // url encode the address
@@ -708,7 +674,6 @@ class AsiManager
     {
 
         $params = json_decode($json);
-
         $html = null;
         foreach ($params as $k => $v) {
             $html .= "<li>" . self::getIcon($k) . "<strong>$k:</strong> $v</li>";
@@ -827,9 +792,6 @@ class AsiManager
                     $output .= "<a>" . $treeDetail->title . "</a>";
                     $output .= "</li>";
                 }
-
-
-//                $position_counter++;
             }
         }
         $output .= "</ul>";
@@ -929,33 +891,13 @@ class AsiManager
         $type = $data['results'][$solr_record_id]['recordType'];
         $array = $data['results'][$solr_record_id];
         $html = self::buildTreeNodesApi($solr_record_id, $type, $array);
-        //$html = self::buildTreeNodes($data['results'][$solr_record_id], null, 0);
-
         return $html;
-//        $data = self::getSolrSingleResult($solr_record_id, "archive");
-//        $array = $data['results'][$solr_record_id];
-//        $APIbase = $modx->getOption("ape_api");
-//        $TreeDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eadTreeApi.action?clevelId={$array['id']}&xmlTypeName={$array['recordType']}"));
-////        var_dump($array);
-//        $json_pretty = json_encode($TreeDetails, JSON_PRETTY_PRINT);
-//        return $json_pretty;
-//        echo "<pre>".$json_pretty."<pre/>";
-//
-//        $html = self::buildTreeNodes($data['results'][$solr_record_id], null, 0);
-//
-//        return $html;
     }
 
     public static function loadTreeSiblings($parent_id, $position, $direction = "UP", $limit = 10)
     {
         $position = intval($position);
-
-
-//        $APIbase = $modx->getOption("ape_api");
-//        $TreeDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eadTreeApi.action?parentId={$parent_id}&xmlTypeName={$type}&more={$direction}&max={$limit}&orderId={$order}"));
-//        $json_pretty = json_encode($TreeDetails, JSON_PRETTY_PRINT);
-//        return $json_pretty;
-            $startPosition = $position;
+        $startPosition = $position;
         if($direction == "UP") { // before / left (items with a lower order id)
             //This stops the duplication of the clicked on before result.
 
@@ -969,11 +911,6 @@ class AsiManager
             $start = $position + 1;
             $limit = $limit + 1; // checking for more
         }
-
-        // var_dump($start);
-        // var_dump($limit);
-
-        //echo "start is ".$start." limit is ".$limit;
 
         $modx = self::$modx;
         self::$solr_core = $core = $modx->getOption("solr_core_archives");
@@ -992,7 +929,6 @@ class AsiManager
             return false;
         }
 
-        //self::dump($s_results->response->docs);
         if ($direction == "DOWN") {
             if (count($s_results->response->docs) == $limit) { // there's more to come
                 $show_more = true;
@@ -1006,7 +942,6 @@ class AsiManager
         foreach ($s_results->response->docs as $doc) {
             $items[$counter]['id'] = $doc->id;
             $items[$counter]['label'] = $doc->unitTitle;
-            //$items[$counter]['label'] = $doc->titleProper;
             $items[$counter]['recordId'] = $doc->recordId;
             if (isset($doc->unitId)) {
                 $items[$counter]['unitId'] = $doc->unitId;
@@ -1037,11 +972,7 @@ class AsiManager
             $output .= "</li>";
         }
 
-
         return $output;
-
-        //self::dump($items);
-
     }
 
     public static function loadTreeSiblingsApi($clevel, $parent_id, $position, $direction="UP", $limit=10, $type = null) {
@@ -1080,7 +1011,6 @@ class AsiManager
             } else {
                 $treeDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eadTreeApi.action?&parentId={$parent_id}&more={$more}&orderId={$position}"));
             }
-           // $treeDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eadTreeApi.action?&parentId={$parent_id}&more={$more}&orderId={$position}"));
 
         }
 
@@ -1106,115 +1036,10 @@ class AsiManager
                     $output .= "<a>" . $treeDetail->title . "</a>";
                     $output .= "</li>";
                 }
-//                $output .= "<li class='parent' data-trigger='load_tree_children' data-position='' data-id='" . $treeDetail->id . "' data-unitid=''>";
-//                $output .= "<i class=\"fas fa-caret-right openGroup\"></i><a>" . $treeDetail->title . "</a>";
-//                $output .= "</li>";
-
-//                $position_counter++;
             }
         }
 
         return $output;
-
-//            if($show_more == true && $direction != "UP") { // down button (if req)
-//                $output.="<li class='parent open' data-trigger='load_tree_siblings' data-direction='DOWN' data-position='" . $position_counter . "' data-id='" . $items[(count($items) -1)]['id'] . "'>";
-//                $output .= "<br /><span class=\"moreAfter\">More after <i class=\"fas fa-angle-down\"></i></span>";
-//                $output.="</li>";
-//            }
-
-//var_dump($treeDetails);
-//        $json_pretty = json_encode($treeDetails, JSON_PRETTY_PRINT);
-//        echo "<pre>".$json_pretty."<pre/>";
-//        return $json_pretty;
-
-        $position = intval($position);
-
-        if ($direction == "UP") { // before / left (items with a lower order id)
-            //This stops the duplication of the clicked on before result.
-
-            $start = ($position) - $limit;
-
-            if ($start < 0) {
-                $start = 0;
-                $limit = $position;
-            }
-        } else {
-            $start = $position + 1;
-            $limit = $limit + 1; // checking for more
-        }
-
-        //echo "start is ".$start." limit is ".$limit;
-
-        $modx = self::$modx;
-        self::$solr_core = $core = $modx->getOption("solr_core_archives");
-        $solr = self::getSolr($core);
-        $query = $parent_id." AND !id:".$parent_id;
-
-        $additionalParameters = array(
-            'df' => 'parentId',
-            'sort' => 'orderId asc',
-        );
-
-        try
-        {
-            $s_results = $solr->search($query, $start, $limit, $additionalParameters);
-        }
-        catch (Exception $e)
-        {
-            self::logError("SOLR ERROR - ".print_r($e, 1));
-            return false;
-        }
-
-        //self::dump($s_results->response->docs);
-        if($direction == "DOWN") {
-            if(count($s_results->response->docs) == $limit) { // there's more to come
-                $show_more = true;
-                array_pop($s_results->response->docs); // punch out the extra record
-            }
-            else {
-                $show_more = false;
-            }
-        }
-
-        $counter = 0;
-        foreach ($s_results->response->docs as $doc) {
-            $items[$counter]['id'] = $doc->id;
-            $items[$counter]['label'] = $doc->unitTitle;
-            //$items[$counter]['label'] = $doc->titleProper;
-            $items[$counter]['recordId'] = $doc->recordId;
-            if(isset($doc->unitId)) {
-                $items[$counter]['unitId'] = $doc->unitId;
-            }
-            // @TODO ->numberOfDescendents (for drill down)
-            $counter++;
-        }
-
-
-        $position_counter = $start;
-        $output = null;
-
-        if($start > 0 && $direction != "DOWN") { // up button (if req)
-            $output.="<li class='parent open' data-level='clevel' data-type='$type' data-trigger='load_tree_siblings' data-direction='UP' data-position='".$position_counter."' data-id='".$items[0]['id']."'>";
-            $output.= "<span class=\"moreBefore\">More before <i class=\"fas fa-angle-up\"></i></span>";
-            $output.="</li>";
-        }
-        foreach($items AS $k => $v) { // loop of siblings
-
-            $output.="<li class='parent' data-trigger='load_tree_children' data-position='".$position_counter."' data-id='".$items[$k]['id']."' data-unitid='".$items[$k]['unitId']."'>";
-            $output.= "<i class=\"fas fa-caret-right openGroup\"></i><a>".$items[$k]['label']."</a>";
-            $output.="</li>";
-            $position_counter++;
-        }
-        if($show_more == true && $direction != "UP") { // down button (if req)
-            $output.="<li class='parent open' data-level='clevel' data-type='$type' data-trigger='load_tree_siblings' data-direction='DOWN' data-position='" . $position_counter . "' data-id='" . $items[(count($items) -1)]['id'] . "'>";
-            $output .= "<br /><span class=\"moreAfter\">More after <i class=\"fas fa-angle-down\"></i></span>";
-            $output.="</li>";
-        }
-
-        return $output;
-
-        //self::dump($items);
-
     }
 
     public function buildTreeApi($array, $type, $output, $parentId = null) {
@@ -1286,14 +1111,8 @@ class AsiManager
         } else {
             $treeDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eadTreeApi.action?ecId={$solrParentId}&xmlTypeName={$type}"));
         }
-//        var_dump($array);
-        $originLevel = $array['levelName'];
-//        $recordType = $array['recordType'];
-//        var_dump($solr_record_id);
-//        var_dump($array);
-//        var_dump($treeDetails);
-//        die();
 
+        $originLevel = $array['levelName'];
 
         $parentId = '';
         $output = '';
@@ -1335,7 +1154,6 @@ class AsiManager
                         $openState = 'open';
                         $openGroupState = 'openGroup';
                     }
-//                    var_dump($treeDetail);
                     $output.="<li class='parent $openState' data-level='archdesc' data-type='$type' data-trigger='load_tree_children' data-position='$position' data-id='$treeDetail->id'>";
 
                     if($treeDetail->isFolder === true) {
@@ -1352,123 +1170,6 @@ class AsiManager
         } else {
             $treeDetail = $treeDetails;
             $treeArray = false;
-        }
-
-        return $output;
-
-        if(isset($array[$key])) {
-            $parts = explode(":", $array[$key]);
-            if($counter == 0) {
-                $position = 0;
-                $label = $parts[0];
-                $id = $parts[2];
-            }else{
-                $position = intval(ltrim($parts[0], "0") ?? 0);
-                $label = $parts[1];
-                $id = $parts[3];
-                if($parts[4]) {
-                    $id = $parts[4];
-                }
-            }
-
-            $testPosition = $array['orderId'];
-            $output.="<ul class='subGroups'>";
-
-
-            if ($counter != 0) {
-                if ($position != 0) {
-                    $output .= "<li class='parent' data-trigger='load_tree_siblings' data-direction='UP' data-position='$position' data-id='$id'>";
-                    $output .= "<span class=\"moreBefore\">More before <i class=\"fas fa-angle-up\"></i></span>";
-
-                    $output .= "</li>";
-
-                }
-            }
-
-            $output.="<li class='parent open' data-trigger='load_tree_children' data-position='$position' data-id='$id'>";
-
-            $output.= "<i class=\"fas fa-caret-right openGroup\"></i><a>$label</a>";
-
-
-            $counter++;
-            $output= self::buildTreeNodes($array, $output, $counter);
-            $output.="</li>";
-            if($counter != 1) {
-                $output.="<li class='parent' data-trigger='load_tree_siblings' data-direction='DOWN' data-position='$position' data-id='$id'>";
-                $output.="<span class=\"moreAfter\">More after <i class=\"fas fa-angle-down\"></i></span>";
-                $output.="</li>";
-            }
-            $output.="</ul>";
-        } else {
-
-            $parent_id = $array['parentId'];
-
-            $modx = self::$modx;
-            self::$solr_core = $core = $modx->getOption("solr_core_archives");
-            $solr = self::getSolr($core);
-            $query = $parent_id." AND !id:".$parent_id;
-
-            $additionalParameters = array(
-                'df' => 'parentId',
-                'sort' => 'orderId asc',
-            );
-
-            try
-            {
-                $s_results = $solr->search($query, 0, 9999, $additionalParameters);
-            }
-            catch (Exception $e)
-            {
-                self::logError("SOLR ERROR - ".print_r($e, 1));
-                return false;
-            }
-
-            $more_after = false;
-            $more_before = false;
-            $found_it = false;
-            $counter = 0;
-            foreach ($s_results->response->docs as $doc) {
-                if($doc->id == $array['id']) { // match
-                    if($counter != 0) {
-                        $more_before = true;
-                    }
-                    $found_it = true;
-                }
-                else {
-                    if($found_it == true) {
-                        $more_after = true;
-                    }
-                }
-                $counter++;
-            }
-
-
-            $output.="<ul class='subGroups'>";
-            if($array['orderId'] > 0) {
-
-            }
-
-            if($more_before) {
-                $output.="<li class='parent' data-trigger='load_tree_siblings' data-direction='UP' data-position='".$array['orderId']."' data-id='".$array['id']."'>";
-                $output.= "<span class=\"moreBefore\">More before <i class=\"fas fa-angle-up\"></i></span>";
-                $output.="</li>";
-            }
-            $descendents = intval($array['numberOfDescendents']);
-            $output.="<li class='parent' data-trigger='load_tree_children' data-position='".$array['orderId']."' data-id='".$array['id']."'  data-unitid='".$array['reference_value']."'>";
-            if($descendents > 0) {
-                $output.= "<i class=\"fas fa-caret-right openGroup\"></i><a>".$array['title_value']."</a>";
-            } else {
-                $output.= "<a>".$array['title_value']."</a>";
-            }
-            $output.="</li>";
-
-            if($more_after) {
-                $output.="<li class='parent' data-trigger='load_tree_siblings' data-direction='DOWN' data-position='".$array['orderId']."' data-id='".$array['id']."'>";
-                $output.="<span class=\"moreAfter\">More after <i class=\"fas fa-angle-down\"></i></span>";
-                $output.="</li>";
-            }
-
-            $output.="</ul>";
         }
 
         return $output;
@@ -1503,7 +1204,6 @@ class AsiManager
 
             $output.="<ul class='subGroups'>";
 
-
             if ($counter != 0) {
                 if ($position != 0) {
                     $output .= "<li class='parent' data-trigger='load_tree_siblings' data-direction='UP' data-position='$position' data-id='$id'>";
@@ -1515,9 +1215,7 @@ class AsiManager
             }
 
             $output.="<li class='parent open' data-trigger='load_tree_children' data-position='$position' data-id='$id'>";
-
-                $output.= "<i class=\"fas fa-caret-right openGroup\"></i><a>$label</a>";
-
+            $output.= "<i class=\"fas fa-caret-right openGroup\"></i><a>$label</a>";
 
             $counter++;
             $output= self::buildTreeNodes($array, $output, $counter);
@@ -1599,70 +1297,6 @@ class AsiManager
 
         return $output;
     }
-
-    // protected static function buildTreeNodesOLD($array, $output, $counter)
-    // {
-
-    //     // @TODO - add triangles when desc
-
-    //     /*
-    //      * queries for loading more siblings
-    //      *
-    //      * $query=$_REQUEST['s_query']." AND orderId:[* TO 9]";
-    //      *
-    //      * 'sort' => 'orderId asc',
-    //      *
-    //      *  this will only work for less than - doesn;t seem to be a more than
-    //      *  easier to calculate the START and limit 10 from there
-    //      *
-    //      */
-
-
-    //     $key = "F" . $counter . "_s";
-    //     if (isset($array[$key])) {
-    //         $parts = explode(":", $array[$key]);
-    //         if ($counter == 0) {
-    //             $position = 0;
-    //             $label = $parts[0];
-    //             $id = $parts[2];
-    //         } else {
-    //             $position = ltrim($parts[0], "0");
-    //             $label = $parts[1];
-    //             $id = $parts[3];
-    //         }
-    //         $output .= "<ul class='subGroups'>";
-    //         if ($counter != 0) {
-    //             $output .= "<li class='parent' data-trigger='load_tree_siblings' data-direction='UP' data-position='$position' data-id='$id'>";
-    //             $output .= "<span class=\"moreBefore\">More before <i class=\"fas fa-angle-up\"></i></span>";
-    //             $output .= "</li>";
-    //         }
-    //         $output .= "<li class='parent' data-trigger='load_tree_children' data-position='$position' data-id='$id'>";
-    //         $output .= "<i class=\"fas fa-caret-right openGroup\"></i><a>$label</a>";
-    //         $counter++;
-    //         $output = self::buildTreeNodes($array, $output, $counter);
-    //         $output .= "</li>";
-    //         if ($counter != 1) {
-    //             $output .= "<li class='parent' data-trigger='load_tree_siblings' data-direction='DOWN' data-position='$position' data-id='$id'>";
-    //             $output .= "<span class=\"moreAfter\">More after <i class=\"fas fa-angle-down\"></i></span>";
-    //             $output .= "</li>";
-    //         }
-    //         $output .= "</ul>";
-    //     } else {
-    //         $output .= "<ul>";
-    //         $output .= "<li class='parent' data-trigger='load_tree_siblings' data-direction='UP' data-position='" . $array['orderId'] . "' data-id='" . $array['id'] . "'>";
-    //         $output .= "<span class=\"moreBefore\">More before <i class=\"fas fa-angle-up\"></i></span>";
-    //         $output .= "</li>";
-    //         $output .= "<li class='parent' data-trigger='load_tree_children' data-position='" . $array['orderId'] . "' data-id='" . $array['id'] . "'>";
-    //         $output .= "<i class=\"fas fa-caret-right openGroup\"></i><a>" . $array['title_value'] . "</a>";
-    //         $output .= "</li>";
-    //         $output .= "<li class='parent' data-trigger='load_tree_siblings' data-direction='DOWN' data-position='" . $array['orderId'] . "' data-id='" . $array['id'] . "'>";
-    //         $output .= "<span class=\"moreAfter\">More after <i class=\"fas fa-angle-down\"></i></span>";
-    //         $output .= "</li>";
-    //         $output .= "</ul>";
-    //     }
-
-    //     return $output;
-    // }
 
     protected static function getSolrSingleResult($solr_record_id, $section)
     {
@@ -1796,9 +1430,6 @@ class AsiManager
             require_once(__DIR__ . "/samples/postgre/c_level.php");
         } else {
 
-            //echo "<h3>Params...</h3>";
-            //self::dump($params);
-
             $data['fa'] = self::doPostgreQuery("SELECT * FROM finding_aid WHERE eadid = '" . pg_escape_string($params['recordId']) . "'");
             $data['institution_id'] = $data['fa']['ai_id'];
             $c_level_id = substr($params['c'], 1);
@@ -1825,9 +1456,6 @@ class AsiManager
             return self::formatCLevelDetail($data['c_level']);
         }
 
-
-        //echo $data['fa']['path_apenetead'];
-
         $xmlObj = self::getXmlObj($data['fa']['path_apenetead']);
         $data['xml'] = self::processArchiveXml($xmlObj);
         $data['components'] = self::getXmlComponents($xmlObj);
@@ -1837,12 +1465,7 @@ class AsiManager
 
     public static function formatCLevelDetail($data)
     {
-
-        //self::dump($data['xml']);
-
         $xml = simplexml_load_string($data['xml']);
-
-        //echo "XML FILE IS ".$data['xml'];
 
         $data['xml'] = self::processArchiveXmlCLevel($xml);
         $data['components'] = self::getXmlComponents($xml);
@@ -1866,7 +1489,6 @@ class AsiManager
         $transpiler = new XsltProcessor(new NullCache());
         $transpiler->importStylesheet($xslDoc);
         $result = $transpiler->transformToXML($xmlDoc);
-        // self::dump($result);
 
         exit();
     }
@@ -1878,8 +1500,6 @@ class AsiManager
         $xml = simplexml_load_file(MODX_CORE_PATH . '../apeEAD_sample.xml');
 
         $result = self::processArchiveXml($xml);
-
-        // self::dump($result);
 
         exit();
     }
@@ -1905,18 +1525,13 @@ class AsiManager
             case "ARCHIVE_C_LEVEL":
                 $xsl = self::loadXSL("ead/cdetails.xsl");
                 echo "<h2>XSL</h2>";
-                // self::dump($xsl);
                 $proc = new \XSLTProcessor();
                 $proc->importStyleSheet($xsl);
 
                 echo "<h2>Processor</h2>";
-                // self::dump($proc);
-
                 $doc = new \DOMDocument();
                 $doc->loadXML(utf8_encode($xml_data));
                 echo "XML Doc";
-                // self::dump($doc);
-
 
                 $result = $proc->transformToXML($doc);
 
@@ -1952,10 +1567,6 @@ class AsiManager
             $data['name'] = self::doPostgreQuery("SELECT * FROM eac_cpf WHERE id = '" . pg_escape_string($params['id']) . "'");
         }
 
-
-        //echo "ihere:::";
-        //self::dump($data['name']);
-
         $xmlObj = self::getXmlObj($data['name']['path'], "names");
         $data['xml'] = self::processNameXml($xmlObj);
         $data['components'] = self::getXmlComponents($xmlObj);
@@ -1984,9 +1595,6 @@ class AsiManager
             $data['country'] = self::doPostgreQuery("SELECT * FROM country WHERE id = '" . pg_escape_string($data['institution']['country_id']) . "'");
             $data['fas'] = self::doPostgreQuery("SELECT * FROM finding_aid WHERE ai_id = '" . pg_escape_string($data['institution']['id']) . "'");
         }
-
-        //self::dump($data['fas']);
-        //exit();
 
         $xmlObj = self::getXmlObj($data['institution']['eag_path'], "institutions");
         $data['xml'] = self::processInstitutionXml($xmlObj);
@@ -2045,10 +1653,6 @@ class AsiManager
             'scope_rest' => self::xmlParaRest($data['xml']['scope']),
             "link_id" => self::arrToPs($data['xml']['link_id']),
             "original_presentation" => $data['xml']['original_presentation'],
-            //"original_presentation_html" => $data['xml']['original_presentation_html'],
-
-            // external url
-            // echo "HERE: ".$data[''];
 
             // dropdown blocks
             'creator_history' => self::renderSection(self::arrToPs($data['xml']['creator_history']), "Records creator's history"),
@@ -2150,7 +1754,6 @@ class AsiManager
         $nameRelsCount = 0;
 
         foreach ($data['xml']['relations']->cpfRelation as $r) {
-            //echo "PPP:".$r['cpfRelationType'];
 
             $dateRange = null;
             if (isset($r->dateRange)) {
@@ -2200,8 +1803,6 @@ class AsiManager
         }
 
         $biography = self::sortBio($data['xml']['biogHist']);
-
-
 
         $places = null;
         if (isset($data['xml']['places']->place)) {
@@ -2383,31 +1984,6 @@ class AsiManager
             }
         }
 
-        /*
-*
-* description -> places -> place -> placeEntry [vocabularySource] [countryCode] [localType] "places"
-* description -> legalStatuses -> legalStatus -> term "legal"
-*                                             -> placeEntry
-*                                             -> citation [xlink:href]
-* description -> structureOrGenealogy ps "structure"
-*                                     outline -> ps
-*                                                level(s) ->level(s) -> level(s)  (each level can contain levels, or items)
-*
-* description -> localDescriptions -> localDescription[localType] -> term "local"
-*                                  -> descriptiveNote
-*
-* description -> generalContext ps "general"
-* description -> biogHist -> abstract "history"
-*                bioghist ps
-*
-*
-*   occupations ??
-*
-*
-* functions??
-*
-*/
-
         $local = null;
         if (isset($data['xml']['local'])) {
             if (isset($data['xml']['local']->localDescription)) {
@@ -2436,24 +2012,17 @@ class AsiManager
 
         return array(
             "title_value" => $data['xml']['nameEntry'],
-            //"alternative_names" => $data['xml']['alternative_names'],
             "alternative_names_html" => self::renderFeature($data['xml']['alternative_names'], "Alternative names"),
             "biography_html" => self::renderExtendableFeature($biography, "Biography"),
             "identifier" => $data['xml']['recordId'][0]->__toString(),
-            //"other_identifier" => $data['xml']['otherRecordId'][0]->__toString(),
             "other_identifier_html" => self::renderFeature($data['xml']['otherRecordId'][0]->__toString(), "Other identifier"),
             'date_display_value' => $date_display_value,
             "entity_type" => ucfirst($entity_type),
             "icon" => $icon,
-            //"from_date" => $data['xml']['fromDate'],
             "from_date_html" => self::renderFeature($data['xml']['fromDate'], "Date of birth / foundation"),
-            //"to_date" => $to_date,
             "to_date_html" => self::renderFeature($to_date, "Date of death / closing"),
-            //"languages" => self::objsToCommaList($data['xml']['languages'], "languageUsed", "language"),
             "languages_html" => self::renderFeature(self::objsToCommaList($data['xml']['languages'], "languageUsed", "language"), "Used languages"),
-            //"scripts" => self::objsToCommaList($data['xml']['languages'], "languageUsed", "script"),
             "scripts_html" => self::renderFeature(self::objsToCommaList($data['xml']['languages'], "languageUsed", "script"), "Used scripts"),
-            //'last_updated' => $data['xml']['last_updated'],
             'last_updated_html' => self::renderFeature($data['xml']['last_updated'], "Last update"),
             "agency_name" => $data['xml']['agencyName'][0]->__toString(),
             "nameRels" => $nameRels,
@@ -2497,8 +2066,6 @@ class AsiManager
 
         $items = array();
 
-        //self::dump($data);
-
         if (isset($data->abstract)) {
             $items[] = $data->abstract->__toString();
         }
@@ -2522,31 +2089,9 @@ class AsiManager
             }
         }
 
-
-        //self::dump($items);
-
         return $items;
     }
 
-    protected static function renderBioHTML($items)
-    {
-
-        /*
-         * <div class="content mt40">
-            <h2>Biography</h2>
-            <hr>
-            <p>[[!+search_result.biography_first]]</p>
-            <div class="moreDropdown">
-                <div class="inner">
-                    <p>[[!+search_result.biography_last]]</p>
-                </div>
-                <div class="title inContent">
-                    More
-                </div>
-            </div>
-        </div>
-         */
-    }
 
     protected static function renderExtendableFeature($arr, $title, $size = 40)
     {
@@ -2576,36 +2121,23 @@ class AsiManager
         return $content;
     }
 
+    //The below functions have been left in incase they are called somewhere that we have not seen but in theory they can be removed.
+    protected static function renderBioHTML($items)
+    {
+        return null;
+    }
     protected static function flattenXmlGeneral($xmlObj)
     {
-
         return null;
-
-        $json = json_encode($xmlObj);
-        $array = json_decode($json, TRUE);
-        return self::flattenXmlSet($array, null);
     }
 
     protected static function flattenXmlSet($set, $output = null)
     {
-
         return null;
-
-        $count = 0;
-        foreach ($set as $k => $v) {
-            if (is_array($v)) {
-                $output = self::flattenXmlSet($v, $output);
-            } else {
-                $output .= "<p>" . $v . "</p>";
-            }
-            $count++;
-        }
-        return $output;
     }
 
     protected static function arrToPs($arr)
     {
-
         $string = null;
         foreach ($arr as $p) {
             $string .= "<p>" . $p . "</p>";
@@ -2615,7 +2147,6 @@ class AsiManager
 
     protected static function arrToCommaList($arr)
     {
-
         return implode(", ", $arr);
     }
 
@@ -2704,43 +2235,18 @@ class AsiManager
 
                 switch ($example) {
                     case 1:
-                        //$path =  __DIR__."/samples/xml/apeEAD_Beispiele_ES-37274-CDMH-UD-7523902.xml";
                         $path =  __DIR__ . "/samples/xml/apeEAD_sample.xml";
                         break;
                     case 2:
-                        //$path =  __DIR__."/samples/xml/apeEAD_Beispiele_ES-47186-ARCHV-UD-6099049.xml";
                         $path =  __DIR__ . "/samples/xml/apeEAD_sample.xml";
                         break;
                     default:
-                        //$path =  __DIR__."/samples/xml/ead-gb418-agecroft_0000000.xml";
                         $path =  __DIR__ . "/samples/xml/apeEAD_sample.xml";
                 }
             }
         } else {
             $path = "/ape/data/repo" . $filename;
         }
-
-        /*
-        echo "<h1>XSL Testing...</h1>";
-
-        $xsl_path = __DIR__."/xsl/names/";
-
-        $xml = new \DOMDocument();
-        $xml->load($path, getenv("HOME"));
-
-        $xsl = new \DOMDocument;
-        $xsl->load($xsl_path."commons.xsl");
-
-        $proc = new \XSLTProcessor();
-        $proc->importStyleSheet($xsl);
-
-        self::dump($proc->transformToXML($xml));
-
-        exit();
-*/
-
-
-
         $xmlObj = simplexml_load_file($path);
 
         return $xmlObj;
@@ -2749,11 +2255,7 @@ class AsiManager
     // grabs the archive data from the XML
     protected static function processArchiveXml($xml_obj, $doc_level = "archdesc")
     {
-
         $xml = $xml_obj;
-
-
-        //self::dump($xml);
 
         // straight fields
 
@@ -2783,7 +2285,6 @@ class AsiManager
         if (isset($xml->eadheader->eadid['url'][0])) {
             $data['original_presentation'] = $xml->eadheader->eadid['url'][0]->__toString();
         }
-
 
         // images (many)
         $images = array();
@@ -2831,42 +2332,6 @@ class AsiManager
             $counter++;
         }
 
-        /*
-         *
-         * [0] => Array
-        (
-            [id] => d1e181
-            [title] => Documents relating to the Langleys of Agecroft
-            [date] => 1412-1550
-            [encoding] => 3.1.5
-            [extent] => 41 files
-            [repository] => Chetham's Library
-            [unit_id] => GB/418/Agecroft/1
-        )
-         */
-
-        /*
-
-        // @TODO - this is formatting really should be moved
-        $counter = 0;
-        $tree = "<ul>";
-        foreach($xml->archdesc->dsc->c AS $c) {
-
-            // @TODO - remove this and replace with pagination
-            if($counter == 11) break;
-
-            $tree.="<li class=\"parent\"><i class=\"fas fa-caret-right openGroup\"></i> <a href=\"#\">".$c->did->unittitle->__toString()." <span class=\"count\">(".count($c->c).")</span> <i class=\"far fa-angle-right\"></i></a><ul>";
-            foreach($c->c AS $cc){
-                $tree.="<li class=\"parent\"><i class=\"fas fa-caret-right openGroup\"></i> <a href=\"#\">".$cc->did->unittitle->__toString()."<i class=\"far fa-angle-right\"></i></a></li>";
-            }
-            $tree.="</ul></li>";
-            $counter++;
-        }
-        $tree.="</ul>";
-
-        $data['tree'] = $tree;
-        */
-
         return $data;
     }
 
@@ -2885,16 +2350,10 @@ class AsiManager
         $data['origination'] = $xml->did->origination;
         $data['unit_id'] = $xml->did->unitid;
 
-        // self::dump($xml);
-
-        //exit();
-
-
         if (is_object($xml->did->unitid->extptr) && isset($xml->did->unitid->extptr->attributes("xlink", true)['href'])) {
             $data['original_presentation'] = $xml->did->unitid->extptr->attributes("xlink", true)['href']->__toString();
 
             // @TODO - need to figure out translation on this - maybe run the translator as a snippet as code?
-            // [[!%asi.view_orig_presentation? &topic=`default` &namespace=`asi`]]
 
             self::$modx->getService('lexicon', 'modLexicon');
             self::$modx->lexicon->load('asi:default');
@@ -2902,9 +2361,6 @@ class AsiManager
 
             $data['original_presentation_html'] = "<a class=\"originalLink\" href=\"" . $xml->did->unitid->extptr->attributes("xlink", true)['href']->__toString() . "\" target=\"_blank\">" . $lexiconLabel . " <i class=\"far fa-external-link-alt ml\"></i></a>";
         }
-
-
-
 
         $data['scope'] = $xml->scopecontent->p;
         $data['creator_history'] = $xml->bioghist->p;
@@ -2924,16 +2380,11 @@ class AsiManager
         $parentCounter = 0;
         $counter = 0;
 
-        // self::dump($xml->did->dao);
-
         if (is_object($xml->did->dao)) {
             foreach ($xml->did->dao as $dao) {
-
-                //self::dump($dao->attributes('xlink'));
                 $images[$parentCounter][$counter][] = $dao->attributes('xlink', true)['href']->__toString();
                 $images[$parentCounter][$counter][] = $dao->attributes('xlink', true)['title']->__toString();
                 $images[$parentCounter][$counter][] = $dao->attributes('xlink', true)['role']->__toString();
-
                 $counter++;
             }
         }
@@ -2943,7 +2394,6 @@ class AsiManager
         $limitCounter = 0;
         $imagesKeyed = array();
 
-        //self::dump($images);
         $placeholderImg = "image";
 
         foreach ($images as $k2 => $v2) {
@@ -2976,9 +2426,6 @@ class AsiManager
             }
         }
         $data['images'] = $imagesKeyed;
-
-        //self::dump($data['images']);
-
 
         // format tree into componenets (from what I can tell it's just anotehr view of the tree? - confirm)
         $data['components'] = array();
@@ -3015,15 +2462,12 @@ class AsiManager
             $counter++;
         }
         $tree .= "</ul>";
-
         $data['tree'] = $tree;
-
         return $data;
     }
 
     protected static function renderSection($content, $title)
     {
-
         $modx = self::$modx;
         if (strlen($content) > 0) {
             return $modx->getChunk("asi_dropdown_section", array(
@@ -3036,7 +2480,6 @@ class AsiManager
 
     protected static function renderFeature($content, $title, $size = 240)
     {
-
         $modx = self::$modx;
         if (strlen($content) > 0) {
             return $modx->getChunk("asi_feature", array(
@@ -3061,7 +2504,6 @@ class AsiManager
         $names_values = self::sortXmlNameComponent($xml->cpfDescription->identity);
         $data['nameEntry'] = $names_values['default'];
         $data['alternative_names'] = $names_values['alternatives'];
-        //$data['nameEntry'] = $xml->cpfDescription->identity->nameEntry[0]->part;
         $data['entityType'] = $xml->cpfDescription->identity->entityType;
         $data['languages'] = $xml->cpfDescription->description->languagesUsed;
         $data['term'] = $xml->cpfDescription->description->legalStatuses->legalStatus->term;
@@ -3104,10 +2546,6 @@ class AsiManager
 
     protected static function sortXmlNameComponent($xmlIdentityObject)
     {
-
-        //self::dump($xmlIdentityObject);
-        //exit();
-
         // sort the names into order
         $nameObjs = array();
         $nameCounter = 5;
@@ -3214,9 +2652,7 @@ class AsiManager
 
     protected static function processInstitutionXml($xml_obj)
     {
-
         $xml = $xml_obj;
-
         if (isset($xml->control->recordId)) $data['recordId'] = $xml->control->recordId;
         if (isset($xml->control->otherRecordId)) $data['otherRecordId'] = $xml->control->otherRecordId;
         if (isset($xml->control->maintenanceAgency->agencyCode)) $data['agencyCode'] = $xml->control->maintenanceAgency->agencyCode;
@@ -3257,11 +2693,6 @@ class AsiManager
         }
 
         $address = (count($add_bits) > 0) ? implode(", ", $add_bits) : null;
-        //$geo_code = self::geocode($address);
-
-        //self::dump($geo_code);
-
-        //exit();
 
         $other_info_string = null;
         if (isset($data['xml']['relations'])) {
@@ -3328,7 +2759,6 @@ class AsiManager
             "access" => $access_public,
             "access_info" => (isset($data['xml']['repository']->access->restaccess)) ? $data['xml']['repository']->access->restaccess->__toString() : null,
             "accessibility" => (isset($data['xml']['repository']->accessibility)) ? $data['xml']['repository']->accessibility->__toString() : null,
-            //"holdings_desc" => $data['xml']['repository']->holdings->descriptiveNote->p->__toString(),
             "holdings_desc" => (isset($data['xml']['repository']->holdings->descriptiveNote->p)) ? self::renderSection(self::arrToPs($data['xml']['repository']->holdings->descriptiveNote->p), "Archives & holding description") : null,
             "holdings_hist" => (isset($data['xml']['repository']->repositorhist->descriptiveNote->p)) ? self::renderSection(self::arrToPs($data['xml']['repository']->repositorhist->descriptiveNote->p), "History") : null,
             "holdings_extent" => (isset($data['xml']['repository']->holdings->extent->num)) ? $data['xml']['repository']->holdings->extent->num->__toString() : null,
@@ -3371,23 +2801,19 @@ class AsiManager
             }
 
             $repos_sorted[$counter]['name_text'] =  $repo->repositoryName->__toString();
-            //$access_public = ($repo->access['question'] == "yes") ? "Accessible to the public" : "Not accessible to the public" ;
             $repos_sorted[$counter]['name'] = (isset($repo->repositoryName)) ? self::renderFeature($repo->repositoryName->__toString(), "Name") : null;
             $repos_sorted[$counter]['role'] = (isset($repo->repositoryRole)) ? self::renderFeature($repo->repositoryRole->__toString(), "Role", 160) : null;
             $repos_sorted[$counter]['full_name'] = (isset($repo->repositoryName) && isset($repo->repositoryRole)) ? self::renderFeature($repo->repositoryName->__toString() . " (" . $repo->repositoryRole->__toString() . ")", "Full name") : null;
             $add_bits = array();
             if (isset($repo->location->street[0])) $add_bits[] = $repo->location->street[0]->__toString();
-            // if(isset($repo->location->country[0])) $add_bits[] = $repo->location->country[0]->__toString(); country now listed separately
             if (isset($repo->location->firstdem[0])) $add_bits[] = $repo->location->firstdem[0]->__toString();
             if (isset($repo->location->secondem[0])) $add_bits[] = $repo->location->secondem[0]->__toString();
             if (isset($repo->location->localentity[0])) $add_bits[] = $repo->location->localentity[0]->__toString();
             if (isset($repo->location->municipalityPostalcode[0])) $add_bits[] = $repo->location->municipalityPostalcode[0]->__toString();
 
-
             $address = (count($add_bits) > 0) ? implode(", ", $add_bits) : null;
             $map_address = urlencode($address);
             $map_key = sha1(self::$gmap_hash_salt . $map_address);
-
 
             $repos_sorted[$counter]['address'] = $address;
             $repos_sorted[$counter]['map_address'] = $map_address;
@@ -3399,7 +2825,6 @@ class AsiManager
             $repos_sorted[$counter]['opening'] = (isset($repo->timetable->opening)) ? self::renderFeature(self::flattenXmlParts($repo->timetable->opening), "Opening hours") : null;
             $repos_sorted[$counter]['closing'] = (isset($repo->timetable->closing)) ? self::renderFeature(self::flattenXmlParts($repo->timetable->closing), "Closing hours") : null;
             $repos_sorted[$counter]['directions'] = (isset($repo->directions)) ? self::renderFeature(self::flattenXmlParts($repo->directions), "Directions") : null;
-            //$repos_sorted[$counter]['access'] =  self::renderFeature($access_public, "Access conditions");
             $repos_sorted[$counter]['disabled_access'] = self::renderFeature($access_public, "Disabled access");
             $repos_sorted[$counter]['access_info'] = (isset($repo->access->restaccess)) ? self::renderFeature(self::flattenXmlParts($repo->access->restaccess), "Access information") : null;
             $repos_sorted[$counter]['terms'] = (isset($repo->access->termsOfUse)) ? self::renderFeature(self::flattenXmlPartsWithLinks($repo->access->termsOfUse), "Terms of use") : null;
@@ -3460,9 +2885,6 @@ class AsiManager
                 $history_string .= self::arrToPs($repo->repositorhist->descriptiveNote->p);
             }
             $repos_sorted[$counter]['holdings_hist'] = (isset($repo->repositorhist->descriptiveNote->p)) ? self::renderSection($history_string, "History") : null;
-
-
-
 
             $repos_sorted[$counter]['country'] = (isset($repo->location->country[0])) ? self::renderFeature($repo->location->country[0]->__toString(), "Country", 160) : null;
 
@@ -3544,8 +2966,6 @@ class AsiManager
                 $repos_sorted[$counter]['library'] = self::renderFeature($library_string, "Library details");
             }
 
-
-
             if (isset($repo->services->internetAccess)) {
                 $repos_sorted[$counter]['internet_access'] = self::renderFeature($repo->services->internetAccess['question'][0]->__toString(), "Internet access");
                 $repos_sorted[$counter]['internet_details'] = self::renderFeature(self::arrToPs($repo->services->internetAccess->descriptiveNote->p), "Internet details");
@@ -3578,19 +2998,6 @@ class AsiManager
             if (isset($repo->services->techservices->reproductionser)) {
                 $repos_sorted[$counter]['reproduction'] = self::renderFeature($repo->services->techservices->reproductionser['question'][0]->__toString(), "Reproduction");
             }
-
-            /*
-            Conservation laboratory
-            ?
-            */
-
-            // restorationlab
-
-            /*
-            if(isset($repo->services->techservices->restorationlab)) {
-                $repos_sorted[$counter]['restoration'] = self::renderFeature($repo->services->techservices->restorationlab['question'][0]->__toString(), "Restoration");
-            }
-            */
 
             $repos_sorted[$counter]['has_restoration'] = (isset($repo->services->techservices->restorationlab) && $repo->services->techservices->restorationlab['question'] == "yes") ? "Conservation laboratory available" : "No conservation laboratory available";
             $repos_sorted[$counter]['has_restoration'] = self::renderFeature($repos_sorted[$counter]['has_restoration'], "Restoration");
@@ -3741,7 +3148,6 @@ class AsiManager
         );
     }
 
-    //Justin added in for Names
     protected static function getNameFacets()
     {
         return array(
@@ -3756,7 +3162,6 @@ class AsiManager
         );
     }
 
-    //Justin added in for Institutions
     protected static function getInstitutionFacets()
     {
         return array(
@@ -3767,12 +3172,6 @@ class AsiManager
 
     protected static function escapeFilterValues($params)
     {
-
-        // return $params;
-
-        // $search = array("+","-","&&","||","!","(",")","{","}","[","]","^","\"","~","*","?",":",chr(92),"/");
-        // $replace = array("\+","\-","\&&","\||","\!","\(","\)","\{","\}","\[","\]","\^","".chr(92)."\"","\~","\*","\?","\:",chr(92).chr(92),"\/");
-
         foreach ($params['filters'] as $set => $values) {
             foreach ($params['filters'][$set] as $k => $v) {
                 $params['filters'][$set][$k] = self::escapeSolrValue($params['filters'][$set][$k]);
@@ -3872,7 +3271,6 @@ class AsiManager
 
     protected static function addDateFacetQueryPart($value, $period)
     {
-
         if ($period == "y") {
             $start = $value . "-01-01T00\:00\:00.000Z";
             $end = $value . "-12-31T23\:59\:59.999Z";
@@ -3896,11 +3294,7 @@ class AsiManager
 
     protected static function processArchiveFilters($params)
     {
-
         $params = self::escapeFilterValues($params);
-
-        //self::dump($params);
-
         $tags = array();
         $fq = array();
         foreach ($params['filters'] as $set => $values) {
@@ -3931,15 +3325,12 @@ class AsiManager
             "fq" => $fq,
             "ff" => $ff
         );
-        //self::dump($data);
-
         return array(
             "fq" => $fq,
             "ff" => $ff
         );
     }
 
-    //Added by Justin for Names as not in previously
     protected static function processNameFilters($params)
     {
         $params = self::escapeFilterValues($params);
@@ -3981,7 +3372,6 @@ class AsiManager
         );
     }
 
-    //Added by Justin for Names as not in previously
     protected static function processInstitutionFilters($params)
     {
         $params = self::escapeFilterValues($params);
@@ -4038,19 +3428,6 @@ class AsiManager
 
         $fData = self::processArchiveFilters($params);
 
-
-        /*
-$fData['fq'] = array(
- "0" => "{!tag=country}country:UNITED_KINGDOM\:G\:27",
- //"1" => "{!tag=startDate}startDate:2016-02-01T03\:00Z",
-  "1" => "{!tag=startDate}startDate:1901\-01\-01T00\:00\:01Z+10YEAR",
-  //"1" => "{!tag=startDate}startDate:1901\-01\-01T00\:00\:01Z",
- //"1" => "{!tag=startDate}startDate:2016-02-01T03:00Z",
-);
-        */
-
-
-
         $additionalParameters = array(
             //'qt' => "list",
             'facet' => 'true',
@@ -4083,8 +3460,6 @@ $fData['fq'] = array(
             $additionalParameters['df'] = "unitTitle";
             $additionalParameters['qf'] = "unitTitle^2.5 scopeContent^1.3 other^0.5 unitDate^0.4";
         }
-
-
 
         // sort by
         if (isset($params['sort'])) {
@@ -4121,14 +3496,9 @@ $fData['fq'] = array(
             $additionalParameters['defType'] = "edismax";
         }
 
-        // since
-        //self::dump($params);
         if (isset($params['since']) && strlen($params['since']) == 10) {
             $additionalParameters['fq'][] = "timestamp: [" . $params['since'] . "T00\:00\:00.000Z TO *]";
         }
-        //self::dump($additionalParameters);
-        //exit();
-
 
         return self::processSolrResults($solr, $query, $additionalParameters);
     }
@@ -4333,12 +3703,7 @@ $fData['fq'] = array(
                 $results['results'][$doc->id][self::mapSolrFieldToWeb($field)] = $value;
             }
         }
-        //        var_dump($_REQUEST);
-        //        var_dump($all);
-        //        var_dump($query);
-        //        var_dump($additionalParameters);
-        //        var_dump($results);
-        //        die();
+
         return $results;
     }
 
@@ -4573,8 +3938,6 @@ $fData['fq'] = array(
 
     public static function renderParametersHtmlFull($search, $format)
     {
-
-        //TODO JUSTIN - Have a look at the mapValueToEnglish function and see if this is right for approach
         $params = $search['params'];
         $params_decoded = json_decode($params);
 
@@ -4602,7 +3965,6 @@ $fData['fq'] = array(
                 $html .= "</div>";
             }
         }
-
 
         return $html;
     }
@@ -4655,14 +4017,9 @@ $fData['fq'] = array(
 
     public static function fetchUniqueFilterValues($name, $params)
     {
-
-        //echo "<br />NAME IS ".$name;
-
         $vals = array();
         $map = self::getMapping();
         $map_flipped = array_flip($map);
-
-        //var_dump(self::$filter_results);
 
         foreach (self::$filter_results as $r) {
 
@@ -4680,7 +4037,6 @@ $fData['fq'] = array(
 
 
                 if (!is_array($params['filters'][$map_flipped[$name]])) {
-                    //self::logError($name." could not be found in the mapping!");
                     continue;
                 }
 
@@ -4696,12 +4052,7 @@ $fData['fq'] = array(
 
     protected static function sortDateFilterValues($result)
     {
-
         // 'date_value' => string '1984-06-04T00:00:01Z' (length=20)
-
-
-
-
     }
 
     // sorts params into array from request
@@ -4755,18 +4106,13 @@ $fData['fq'] = array(
             "separate" => $separate,
         );
 
-        //var_dump($params);
-
         return $params;
     }
 
-    //JUSTIN I have been editing this to be used on Find An Institution searches
     // searches landscapes based on selected countries
     public static function searchLandscapes($countriesArr)
     {
         $fixtures = self::loadLandscapesSolr();
-        //        var_dump($landscapesSolr);
-        //        $fixtures = Fixtures::getFixtures();
         $results = array();
         $counter = 0;
         foreach ($countriesArr as $k => $v) {
@@ -4829,9 +4175,7 @@ $fData['fq'] = array(
     // note - this function doesn't check user ownership!
     public static function getCollectionSearches($collection_id)
     {
-
         $modx = self::$modx;
-
         $collection_id = $modx->quote($collection_id);
 
         $sql = "SELECT 
@@ -4990,9 +4334,6 @@ $fData['fq'] = array(
     // @TODO - add ID option for update and check ownership
     public static function saveSearch($request)
     {
-
-        //self::logError(print_r($request, 1));
-
         $modx = self::$modx;
 
         if (!$request['term']) {
@@ -5017,8 +4358,6 @@ $fData['fq'] = array(
         }
 
         if ($search->save() == true) {
-            //            var_export($data);
-            //            die();
             return $search->get('id');
         }
 
@@ -5028,7 +4367,6 @@ $fData['fq'] = array(
     // @TODO - add ID option for update and check ownership
     public static function saveBookmark($request)
     {
-
         $modx = self::$modx;
         $data = array(
             'created_at' => date('Y-m-d h:i:s'),
@@ -5055,7 +4393,6 @@ $fData['fq'] = array(
         $data = array(
             'created_at' => date('Y-m-d h:i:s'),
             'name' => $request['name'],
-            //'description' => $request['description'],
             'user_id' => $modx->getUser()->get('id'),
             'token' => sha1("APE_" . rand(0, 999999) . date('U')),
         );
@@ -5088,9 +4425,6 @@ $fData['fq'] = array(
             user_id = $user_id 
             GROUP BY c.id 
             ORDER BY priority ASC";
-
-        //echo $sql;
-        //self::logError($sql);
 
         $result = $modx->query($sql);
         $data = $result->fetchAll(\PDO::FETCH_ASSOC);
@@ -5127,11 +4461,6 @@ $fData['fq'] = array(
             user_id = $user_id 
             GROUP BY c.id 
             ORDER BY priority ASC";
-
-
-
-        //echo $sql;
-        //self::logError($sql);
 
         $result = $modx->query($sql);
         $data = $result->fetchAll(\PDO::FETCH_ASSOC);
@@ -5191,8 +4520,6 @@ $fData['fq'] = array(
             $sql .= " GROUP BY b.id";
         }
 
-        //echo $sql;
-
         $result = $modx->query($sql);
         $data = $result->fetchAll(\PDO::FETCH_ASSOC);
         return $data;
@@ -5200,7 +4527,6 @@ $fData['fq'] = array(
 
     public static function addSearchToCollection($search, $collection)
     {
-
         $modx = self::$modx;
         $data = array(
             'created_at' => date('Y-m-d h:i:s'),
@@ -5217,7 +4543,6 @@ $fData['fq'] = array(
 
     public static function removeSearchFromCollection($search, $collection)
     {
-
         $modx = self::$modx;
 
         $search_id = $search['id'];
@@ -5234,7 +4559,6 @@ $fData['fq'] = array(
 
     public static function removeBookmarkFromCollection($bookmark, $collection)
     {
-
         $modx = self::$modx;
 
         $bookmark_id = $bookmark['id'];
@@ -5251,7 +4575,6 @@ $fData['fq'] = array(
 
     public static function addBookmarkToCollection($bookmark, $collection)
     {
-
         self::logError("Bookmark : " . print_r($bookmark, 1));
         self::logError("Collection : " . print_r($collection, 1));
 
@@ -5271,7 +4594,6 @@ $fData['fq'] = array(
 
     public static function deleteSearch($search_id)
     {
-
         $modx = self::$modx;
         $user_id = $modx->getUser()->get('id');
 
@@ -5285,7 +4607,6 @@ $fData['fq'] = array(
 
     public static function deleteBookmark($bookmark_id)
     {
-
         $modx = self::$modx;
         $user_id = $modx->getUser()->get('id');
 
@@ -5299,7 +4620,6 @@ $fData['fq'] = array(
 
     public static function deleteCollection($collection_id)
     {
-
         $modx = self::$modx;
         $user_id = $modx->getUser()->get('id');
 
@@ -5313,7 +4633,6 @@ $fData['fq'] = array(
 
     public static function query($method, $args = false)
     {
-
         // @TODO - load presets from user here...
 
         $call = "get" . ucfirst($method);
@@ -5324,7 +4643,6 @@ $fData['fq'] = array(
 
     public static function storeFilters($filters)
     {
-
         foreach ($filters as $key => $value) {
             $_SESSION['filters'][$key] = $value;
         }
@@ -5343,7 +4661,6 @@ $fData['fq'] = array(
     // extracts arrays of avail centuries, decades, years, months from an array of dates
     protected static function extractDateParts($datesArr)
     {
-
         $centuries = array();
         $decades = array();
         $years = array();
@@ -5353,7 +4670,6 @@ $fData['fq'] = array(
         $datesArr = array_reverse($datesArr);
 
         foreach ($datesArr as $d) {
-
             // create the date object
             $short = substr($d, 0, 10);
             $date = \DateTime::createFromFormat("Y-m-d", $short);
@@ -5394,9 +4710,7 @@ $fData['fq'] = array(
 
     public static function getStartTimespan()
     {
-
         // 1920-01-01T00:00:01Z - this is a sample date from the system - 'c' format?
-
         $dates = array(
             "1972-06-11T00:00:01Z",
             "1981-06-17T00:00:01Z",
@@ -5472,13 +4786,6 @@ $fData['fq'] = array(
 
     public static function getCountries($args = false)
     {
-
-        /*
-        $countries = self::fetchUniqueFilterValues('country');
-        var_dump($countries);
-        return self::fetchUniqueFilterValues('country');
-        */
-
         $countries = array(
             "Austria",
             "Belgium",
@@ -5524,7 +4831,6 @@ $fData['fq'] = array(
 
     public static function getInstitutions($args = false)
     {
-
         $ins = array(
             "School of Oriental and African Studies (SOAS) Archives, University of London",
             "Hull University Archives, Hull History Centre",
@@ -5564,7 +4870,6 @@ $fData['fq'] = array(
 
     public static function getAids($args = false)
     {
-
         $aids = array(
             "Finding Aid 1",
             "Finding Aid 2",
@@ -5623,7 +4928,6 @@ $fData['fq'] = array(
 
     public static function getContainsDigital($args = false)
     {
-
         $items = array(
             "No digital objects",
             "Contains digital objects"
@@ -5642,7 +4946,6 @@ $fData['fq'] = array(
 
     public static function getDigitalTypes($args = false)
     {
-
         $items = array(
             "Unspecified",
             "Image",
@@ -5665,7 +4968,6 @@ $fData['fq'] = array(
 
     public static function getDateTypes($args = false)
     {
-
         $items = array(
             "Full date",
             "Only descriptive date",
@@ -5685,7 +4987,6 @@ $fData['fq'] = array(
 
     public static function getNameDateTypes($args = false)
     {
-
         $items = array(
             "Unknown date",
             "Timespan with unknown start date",
@@ -5708,7 +5009,6 @@ $fData['fq'] = array(
 
     public static function getMaterialLanguage($args = false)
     {
-
         $items = array(
             "English",
             "French",
@@ -5729,7 +5029,6 @@ $fData['fq'] = array(
 
     public static function getLanguage($args = false)
     {
-
         $items = array(
             "English",
             "French",
@@ -5750,7 +5049,6 @@ $fData['fq'] = array(
 
     public static function getTopic($args = false)
     {
-
         $items = array(
             "Agriculture",
             "Architecture",
@@ -5829,7 +5127,6 @@ $fData['fq'] = array(
 
     public static function getUsing($args = false)
     {
-
         $items = array(
             "Title",
             "Content Summary",
@@ -5849,7 +5146,6 @@ $fData['fq'] = array(
 
     public static function getNameusing($args = false)
     {
-
         $items = array(
             "Name",
             "Identifier",
@@ -5872,7 +5168,6 @@ $fData['fq'] = array(
 
     public static function getInstusing($args = false)
     {
-
         $items = array(
             "Name",
             "Place",
@@ -5891,7 +5186,6 @@ $fData['fq'] = array(
 
     public static function getEntitytypes($args = false)
     {
-
         $items = array(
             "Person",
             "Family",
@@ -5916,7 +5210,6 @@ $fData['fq'] = array(
 
     public static function getEntityTypeFacet($args = false)
     {
-
         $items = array(
             "Person",
             "Family",
@@ -5936,7 +5229,6 @@ $fData['fq'] = array(
 
     public static function getArchivetypes($args = false)
     {
-
         $items = array(
             "Business archives",
             "Church and religious archives",
@@ -5965,7 +5257,6 @@ $fData['fq'] = array(
 
     public static function updateUserPrefConfirmDelete($value)
     {
-
         $modx = self::$modx;
         $user =  $modx->getUser();
         $profile = $user->getOne('Profile');
