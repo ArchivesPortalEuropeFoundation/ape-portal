@@ -504,9 +504,9 @@
                     $(document).find("#componentChildren").show();
 
                 }).fail(function (err) {
-                    console.log(err);
+                    
                 }).always(function () {
-                    console.log('Always');
+                    
                     
                 });
         }
@@ -539,7 +539,7 @@
                     $(document).find("#componentChildren").css("opacity", "1");
                     $(document).find("#componentChildren").show();
                 }).fail(function (err) {
-                    console.log(err);
+                    
                 });
         }
 

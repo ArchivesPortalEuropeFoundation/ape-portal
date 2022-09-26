@@ -127,7 +127,7 @@ if (typeof enable_search !== 'undefined') {
         function listenForContextSwitch() {
 
             $('[href="#listTab"], [href="#contextTab"]').click(function () {
-                console.log("context tab clicked");
+                
                 ApeSearch.context = $(this).attr("href").replace("#", "");
                 updateRequest();
                 cycle();
@@ -142,7 +142,7 @@ if (typeof enable_search !== 'undefined') {
 
             //  data-control="update_term"
             $("body").on("keyup", '[data-control="update_term"]', function (event) {
-                console.log("term updated in context view...");
+                
                 ApeSearch.term = $(this).val();
                 updateRequest();
                 cycle();
@@ -182,8 +182,8 @@ if (typeof enable_search !== 'undefined') {
                 } else {
                     ApeSearch.tab_target = null;
                 }
-                console.log("Updated tab target");
-                console.log(ApeSearch.tab_target);
+                
+                
             });
         }
 
@@ -238,7 +238,7 @@ if (typeof enable_search !== 'undefined') {
                     string += v.elem.prop('outerHTML');
                 });
 
-                console.log(string);
+                
 
                 $(target_container + " .inner .row").html(string);
                 $(this).parent().hide().siblings(".title").html($(this).html()).parent().removeClass('open');
@@ -252,7 +252,7 @@ if (typeof enable_search !== 'undefined') {
 
             $("body").on("keyup", '[data-filter-type="tile_filter"]', function (event) {
 
-                console.log("keyup");
+                
 
                 var filter_target = $(this).attr('data-filter-target');
                 var targetFieldName = $(this).attr("data-filter-field-name");
@@ -261,8 +261,8 @@ if (typeof enable_search !== 'undefined') {
                 var term = $(this).val().toLowerCase();
                 var n = term.length;
 
-                console.log("term is " + term);
-                console.log("n is " + n);
+                
+                
 
                 if (n == 0) {
                     targetElems.each(function () {
@@ -277,7 +277,7 @@ if (typeof enable_search !== 'undefined') {
 
                 targetElems.each(function () {
 
-                    //console.log($(this));
+                    //
 
                     var elem = $(this);
                     elem.parent().addClass('hidden');
@@ -320,7 +320,7 @@ if (typeof enable_search !== 'undefined') {
                     if (Array.isArray(ApeSearch.request_filters['endtimespan_y'])) {} else {
                         ApeSearch.request_filters['endtimespan_y'] = [];
                     }
-                    console.log(val);
+                    
                     ApeSearch.request_filters['endtimespan_y'].push(val);
                     updateRequest();
                     cycle();
@@ -370,8 +370,8 @@ if (typeof enable_search !== 'undefined') {
             var start_years = [];
             var end_date = [];
             $.each(ApeSearch.response_filters[db_field], function (key, value) {
-                //console.log("key is "+key);
-                //console.log("value is "+value);
+                //
+                //
                 if (value > 0) {
                     var year = key.substring(0, 4);
                     start_years[year] = value;
@@ -401,8 +401,8 @@ if (typeof enable_search !== 'undefined') {
                     }
                 }
             });
-            //console.log(start_c);
-            //console.log(start_d);
+            //
+            //
 
             // empty the centuries
             $(parentElem + ' [data-section="date_set_century"] .checkboxList li').each(function () {
@@ -542,6 +542,12 @@ if (typeof enable_search !== 'undefined') {
             } else {
                 $('[data-filter-field="containsdigital"]').prop('checked', false);
             }
+            
+            if (typeof ApeSearch['using'] != "undefined") {
+                console.warn(ApeSearch.value);
+                $(document).find(`input[data-value="${ApeSearch.value}"]`).prop('checked', true);
+            } 
+            
         }
 
         function lazyLoadData() {
@@ -568,12 +574,12 @@ if (typeof enable_search !== 'undefined') {
             });
             $('#searchContainer').on("click", '[data-filter-field]', function (event) {
                 if ($(this).attr('data-type') == "preset_filter") {
-                    console.log("homepage");
+                    
                     return;
                 }
                 if ($(this).attr('data-type') == "sortTypes") {
                     updateRequestFilter($(this), $(this).prop('checked'));
-                    console.log(ApeSearch.request_filters);
+                    
                     return;
                 }
                 updateRequestFilter($(this), $(this).prop('checked'));
@@ -590,17 +596,17 @@ if (typeof enable_search !== 'undefined') {
             var field_label = elem.attr('data-filter-label');
 
             if (ApeSearch.exclusive_filters.includes(field_name)) {
-                console.log("exclusive...");
+                
                 removeFilter(field_name, "true");
                 removeFilter(field_name, "false");
                 if (elem.attr('data-type') == "top_filter_switch") {
-                    console.log("top switch");
-                    console.log(params);
+                    
+                    
                     if (elem.prop("checked") == false) {
-                        console.log("is false");
+                        
                         //params[field_name].splice("true", 1);
                         params[field_name] = [];
-                        console.log(params);
+                        
                         return;
                         //params[field_name].push("false");
                     }
@@ -669,10 +675,32 @@ if (typeof enable_search !== 'undefined') {
             ApeSearch.current_page = 1;
             
             let params = '';
-            if( Object.keys(ApeSearch.request_filters).length !== 0 && ApeSearch.request_filters.countries !== 'undefined' ) {
-                $.each(ApeSearch.request_filters.countries, function (key, value) {
-                    params += "&countries[]=" + value;
-                });
+
+            if (Object.keys(ApeSearch.request_filters).length !== 0) {
+                // Create new params based on whats set 
+                if ("countries" in ApeSearch.request_filters) {
+                    $.each(ApeSearch.request_filters.countries, function (key, value) {
+                        params += "&countries[]=" + value;
+                    });
+                }
+                // Add aid for digital objects
+                if ("containsdigital" in ApeSearch.request_filters) {
+                    params += "&containsdigital[]=true";
+                }
+                // Add aid for term separation 
+                if ("separate" in ApeSearch.request_filters) {
+                    params += "&separate[]=true";
+                }
+                // Set finding types
+                if ("types" in ApeSearch.request_filters) {
+                    $.each(ApeSearch.request_filters.types, function (key, value) {
+                        params += "&types[]=" + value;
+                    });
+                }
+            }
+            // Sort
+            if ("using" in ApeSearch) {
+                params += "&using=" + ApeSearch.using;
             }
 
             ApeSearch.request_filters = {};
@@ -697,10 +725,10 @@ if (typeof enable_search !== 'undefined') {
                     params += "&" + key + "[]=" + v;
                 });
             });
-            console.log("Checking since...");
+            
             var since = "";
             if (ApeSearch.since != null) {
-                console.log("since is not null");
+                
                 since = "&since=" + ApeSearch.since;
             }
             var query = params + "&using=" + ApeSearch.using + "&sort=" + ApeSearch.sort + "&context=" + ApeSearch.context + "&page=" + ApeSearch.current_page + since;
@@ -735,7 +763,7 @@ if (typeof enable_search !== 'undefined') {
                         var response = JSON.parse(data);
                         ApeSearch.response_filters = response.filters;
                         $('[data-populate="results_start"]').html(response.start);
-                        console.log(response.count);
+                        
                         if (response.count < response.end) {
 
                             $('[data-populate="results_end"]').html(response.count);
@@ -775,16 +803,16 @@ if (typeof enable_search !== 'undefined') {
                         $('[data-section="has_results"]').css("opacity", "1");
                         $('footer').css("margin-top", "0");
                         if (scrollToTop == true) {
-                            console.log("scroll top...");
+                            
                             if ($('[data-section="search_results"]').is(':visible')) {
-                                console.log("main view...");
+                                
                                 var position = $('[data-section="search_results"]').offset();
-                                console.log("position top is " + position.top);
+                                
                                 scrollTo(0, (position.top - 160));
                             } else {
-                                console.log("context view...");
+                                
                                 var position = $('[data-section="search_aids"]').offset();
-                                console.log("position top is " + position.top);
+                                
                                 setTimeout(function () {
                                     scrollTo(0, (position.top + 10));
                                 }, 1000);
@@ -838,7 +866,7 @@ if (typeof enable_search !== 'undefined') {
 
                     var label = ApeSearch.clean_label(key, "countries");
 
-                    // console.log(ApeSearch.request_filters);
+                    // 
 
                     var active = "inactive";
                     if (filterRequested("countries", key) == true) {
@@ -892,7 +920,7 @@ if (typeof enable_search !== 'undefined') {
                             var display = "style='display: block'";
                             var output = "<div class='countryList'><h5><i class=\"fas fa-globe-europe\"></i> " + country_label + "</h5><div class='row moreListInst'>";
 
-                            if( Object.keys(filters.institutions).length !== 0 ) {
+                            if ("institutions" in filters) {
 
                                 $.each(filters.institutions, function (key, instval) {
     
@@ -972,11 +1000,11 @@ if (typeof enable_search !== 'undefined') {
             });
 
             $('[data-g="search-select-countries"]').on("click", ".moreDropdown > .title", function (event) {
-                console.log("countries more has been clicked >>>>>>> ");
-                console.log("Current term is " + ApeSearch.term);
+                
+                
                 if (typeof ApeSearch.term === "undefined") {
                     var parent = $(this).parent();
-                    console.log(parent);
+                    
                     if ($(parent).is('.open')) {
                         $(parent).removeClass('open');
                         $(this).text('More')
@@ -994,10 +1022,10 @@ if (typeof enable_search !== 'undefined') {
             $('#filterSidebar [data-facet-set]').each(function () {
                 var set_container_elem = $(this);
                 var set_name = $(this).attr('data-facet-set');
-                //console.log("New set is "+set_name+" - clearing out checkbox list....");
+                //
                 $('#filterSidebar [data-facet-set="' + set_name + '"] .checkboxList').empty();
                 var context_country_content = null;
-                console.log(ApeSearch.response_filters);
+                
                 if (typeof ApeSearch.response_filters[set_name] != "undefined") {
                     var filter_counter = 0;
                     $.each(ApeSearch.response_filters[set_name], function (key, value) {
@@ -1049,14 +1077,14 @@ if (typeof enable_search !== 'undefined') {
                         if (liCounts[set_name + '-x'] >= liCounts[set_name]) {
                             $('#showMore-' + set_name).hide();
                         }
-                        console.log('Show more: ' + liCounts[set_name + '-x'] + ' of a total of: ' + liCounts[set_name]);
+                        
                     });
                     $('#showLess-' + set_name).click(function () {
-                        console.log(x);
-                        console.log(x - 10 < 0);
-                        console.log(x - 10);
+                        
+                        
+                        
                         liCounts[set_name + '-x'] = (liCounts[set_name + '-x'] - 10 < 10) ? 10 : liCounts[set_name + '-x'] - 10;
-                        console.log(liCounts[set_name + '-x']);
+                        
 
                         $('#filterSidebar [data-facet-set="' + set_name + '"] .checkboxList li').not(':lt(' + liCounts[set_name + '-x'] + ')').hide();
                         $('#showMore-' + set_name).show();
@@ -1084,7 +1112,7 @@ if (typeof enable_search !== 'undefined') {
             var url = route;
 
             if (typeof force_redirect !== 'undefined' && force_redirect == true) {
-                //console.log("this here");
+                //
 
                 return;
                 if (ApeSearch.search_clicked == true) {
@@ -1182,9 +1210,13 @@ if (typeof enable_search !== 'undefined') {
             var content = "";
             $.each(all_types, function (key, value) {
                 var checked = "";
-                if (ApeSearch.using == value) {
-                    checked = "checked='checked'";
-                }
+
+                if (typeof ApeSearch.request_filters['types'] != "undefined") {
+                    if (ApeSearch.request_filters.types.includes(value)) {
+                        checked = "checked='checked'";
+                    }
+                } 
+
                 content += '<li class="checkbox">\n' +
                     '    <input type="checkbox" ' + checked + ' data-filter-field="' + set_name + '" data-filter-value="' + value + '">\n' +
                     '    <span>' + ApeSearch.clean_label(value, set_name) + '</span>\n' +
@@ -1233,9 +1265,9 @@ if (typeof enable_search !== 'undefined') {
             //     "<div class='boxcol right'><div id='showLess-"+ set_name +"'>Show less</div></div></div>";
             // $('[data-facet-set="' + set_name + '"] .checkboxList').append(more_container);
             //
-            // console.log(country_li_count);
+            // 
             // // size_li = $(".checkboxList li").size();
-            // console.log(country_li_count + ' Number of lis');
+            // 
             // var country_x = 10;
             // $('[data-facet-set="' + set_name + '"] .checkboxList li:lt('+country_x+')').show();
             // if(country_li_count < country_x) {
@@ -1243,7 +1275,7 @@ if (typeof enable_search !== 'undefined') {
             //     $('#showLess-'+ set_name).hide();
             // }
             // $('#showMore-'+ set_name).click(function () {
-            //     console.log('Clicked here countries!');
+            //     
             //     country_x= (country_x+10 <= country_li_count) ? country_x+10 : country_li_count;
             //     $('[data-facet-set="' + set_name + '"] .checkboxList li:lt('+country_x+')').show();
             //     $('#showLess-'+ set_name).show();
@@ -1253,14 +1285,14 @@ if (typeof enable_search !== 'undefined') {
             //     if(country_x>=country_li_count){
             //         $('#showMore-'+ set_name).hide();
             //     }
-            //     console.log('Show more: '+country_x+' of a total of: '+country_li_count);
+            //     
             // });
             // $('#showLess-'+ set_name).click(function () {
-            //     console.log(x);
-            //     console.log(x-10<0);
-            //     console.log(x-10);
+            //     
+            //     
+            //     
             //     country_x=(country_x-10<10) ? 10 : country_x-10;
-            //     console.log(country_x);
+            //     
             //
             //     $('[data-facet-set="' + set_name + '"] .checkboxList li').not(':lt('+country_x+')').hide();
             //     $('#showMore-'+ set_name).show();
@@ -1342,7 +1374,7 @@ if (typeof enable_search !== 'undefined') {
                 $('#advSearchControls').hide();
                 term = $('[data-input="search_term"]').val();
                 if (term == "") {
-                    console.log("this here");
+                    
                     alert("Please enter a search term");
                     return false;
                 } else {
@@ -1368,13 +1400,13 @@ if (typeof enable_search !== 'undefined') {
             var date_to = $('[data-input-type="homepage_date_to"]').val();
             if (date_from.length) {
                 if (date_from != "") {
-                    console.log("date from val is " + date_from);
+                    
                     url += buildDateUrlQueryString(date_from, "starttimespan");
                 }
             }
             if (date_to.length) {
                 if (date_to != "") {
-                    console.log("date to val is " + date_to);
+                    
                     url += buildDateUrlQueryString(date_to, "endtimespan");
                 }
             }
@@ -1427,7 +1459,7 @@ if (typeof enable_search !== 'undefined') {
         }
 
         function populateSectionSuggests(temp_term) {
-            console.log(temp_term);
+            
             var encodedTerm = encodeURIComponent(temp_term);
             var all_sections = ["search-in-archives", "search-in-names", "search-in-institutions"];
             $('[data-count-type="' + section + '"]').html("(" + ApeSearch.format_number(ApeSearch.results_count) + ")");
@@ -1456,7 +1488,7 @@ if (typeof enable_search !== 'undefined') {
                         }
                         var record = "<a class=\"entry\" href=\"/advanced-search/" + value + "/?term=" + encodedTerm + "\"><strong data-populate=\"term\" data-action=\"update_term\" data-template=\"City of %\">" + temp_term + "</strong> <i class=\"fas " + icon + "\"></i> <span data-populate=\"suggestion_count_archives\">" + response.count + "</span></a>";
                         if (value == "search-in-archives") {
-                            console.log(record);
+                            
                             archiveSuggestions = record;
                         }
                         if (value == "search-in-names") {
@@ -1517,9 +1549,9 @@ if (typeof enable_search !== 'undefined') {
         }
 
         function populateSpellingSuggests(temp_term) {
-            console.log(temp_term);
-            console.log("spelling suggest triggered!");
-            console.log("/asi-ajax/?action=spell&term=" + temp_term + "&section=" + section);
+            
+            
+            
 
             $.ajax({
                     method: "GET",
@@ -1527,7 +1559,7 @@ if (typeof enable_search !== 'undefined') {
                 })
                 .done(function (data) {
 
-                    console.log(data);
+                    
 
                     var response = JSON.parse(data);
                     var icon = "fa-file";
@@ -1572,7 +1604,7 @@ if (typeof enable_search !== 'undefined') {
                 })
                 .done(function (data) {
 
-                    console.log(data);
+                    
 
                     var response = JSON.parse(data);
                     var icon = "fa-file";
@@ -1648,7 +1680,7 @@ if (typeof enable_search !== 'undefined') {
                 $('[data-g="filter-summary"] p a').remove();
                 $.each(ApeSearch.request_filters, function (key, value) {
                     $.each(value, function (k, v) {
-                        console.log(ApeSearch.clean_label(v, key));
+                        
                         $('[data-g="filter-summary"] p').append('<a data-g="filter-summary-item" data-g-entity="' + key + '" data-g-value="' + v + '" href="#">' + ApeSearch.clean_label(v, key) + ' <i class="far fa-times ml"></i></a>');
                     });
                 });
@@ -1754,13 +1786,13 @@ if (typeof enable_search !== 'undefined') {
             }
             $('[data-paginate="pages"]').html(pageItemsHtml);
             if (current_page == last_page) {
-                console.log("last page");
+                
                 $('[data-paginate="last"], [data-paginate="next"]').hide();
             } else {
                 $('[data-paginate="last"], [data-paginate="next"]').show();
             }
             if (current_page == start_page) {
-                console.log("first page");
+                
                 $('[data-paginate="first"], [data-paginate="prev"]').hide();
             } else {
                 $('[data-paginate="first"], [data-paginate="prev"]').show();
@@ -1776,19 +1808,19 @@ if (typeof enable_search !== 'undefined') {
 
             $("body").on("keyup", '[data-g="search-filter"]', function (event) {
 
-                console.log("keyup");
+                
 
                 var filter_target = $(this).attr('data-search-target');
                 var targetElems = $('[data-facet-item-set="' + filter_target + '"]');
 
-                console.log("filter target is " + filter_target);
-                console.log("target element is " + targetElems);
+                
+                
 
                 var term = $(this).val().toLowerCase();
                 var n = term.length;
 
-                console.log("term is " + term);
-                console.log("n is " + n);
+                
+                
 
                 if (n == 0) {
                     targetElems.removeClass('hidden');
@@ -1799,7 +1831,7 @@ if (typeof enable_search !== 'undefined') {
 
                 targetElems.each(function () {
 
-                    //console.log($(this));
+                    //
 
                     var elem = $(this);
                     elem.addClass('hidden');
@@ -1864,7 +1896,7 @@ if (typeof enable_search !== 'undefined') {
             translateText = label;
             if (ApeSearch.filterTranslations[label]) {
                 translateText = ApeSearch.filterTranslations[label];
-                console.log(translateText);
+                
                 translate = true;
                 return translateText;
             }

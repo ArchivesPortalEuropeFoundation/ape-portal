@@ -478,7 +478,7 @@
                 $('html, body').animate({
                     scrollTop: $(archivalMaterials).offset().top-50
                 }, 1000);
-                console.log('Scrolled Here: '+scrollName);
+                
             }
         }
     });
@@ -546,9 +546,9 @@
                 document.documentElement.scrollTop = adjustPosition;
                 var newPosition = document.documentElement.scrollTop;
             }).fail(function (err) {
-            console.log(err);
+            
         }).always(function () {
-            console.log('Always');
+            
         });
     }
 

@@ -307,24 +307,24 @@
 
                     var targetBlocks = document.getElementById("exploreTabs").getElementsByClassName("searchMore")[0];
                     for(let tbI = 0; i < targetBlocks.length; tbI++){
-                        console.log(targetBlocks[tbI]);
+                        
                         targetBlocks[tbI].className = "searchMoreDisabled";
                     }
-                    console.log(params.searchTopic);
+                    
                 }
             } else if("search" in params) {
                 if(params.search != null) {
                     var targetBlocks = document.getElementById("exploreTabs").getElementsByClassName("searchMore")[0];
                     for(let tbI = 0; i < targetBlocks.length; tbI++){
-                        console.log(targetBlocks[tbI]);
+                        
                         targetBlocks[tbI].className = "searchMoreDisabled";
                     }
-                    console.log(params.search);
+                    
                 }
             }
-            console.log(params);
-            console.log(searchUrlRemove);
-            console.log('Main URL is: '+mainUrl);
+            
+            
+            
             $('.clear_search.topic a').attr('href', mainUrl+'?searchTopic=');
         }
 

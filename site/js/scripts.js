@@ -598,7 +598,7 @@ $(document).ready(function () {
 
         // data-override="dont_toggle_show"
         if ($(this).attr("data-override") == "dont_toggle_show") {
-            console.log("preventing show...");
+            
             return false;
         }
 
@@ -1166,7 +1166,7 @@ $(document).ready(function () {
                 }
             })
                 .done(function (data) {
-                    console.log('Subscribed to blog newsletter');
+                    
                     var response = JSON.parse(data);
                     $('[data-populate="blog_subscribe_email"]').html(email_data);
                     $('[data-trigger="blog_subscribe_success"]').trigger('click');

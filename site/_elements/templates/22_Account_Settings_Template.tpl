@@ -188,9 +188,9 @@
     $(document).ready(function(){
         var hash = window.location.hash.substr(1);
 
-        console.log(hash);
+        
         if(hash == "tab2") {
-            console.log('opening tab 2...');
+            
             $('a[href="#tab2"]').tab('show');
         }
     });

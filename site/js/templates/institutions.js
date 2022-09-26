@@ -84,7 +84,7 @@ function seeLessMaterials(classKey) {
 }
 
 function seeMore(classKey, branch) {
-    console.log('Test');
+    
     if(branch != null) {
         $('[data-branch="' + branch + '"] .' + classKey + ' .displayLinkSeeMore').hide();
         $('[data-branch="' + branch + '"] .' + classKey + ' .displayLinkSeeLess').show();

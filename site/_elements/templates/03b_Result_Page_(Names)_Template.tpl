@@ -354,8 +354,8 @@
      * @param id
      */
     function showLess(className, id){
-        console.log(className);
-        console.log(id);
+        
+        
         var prefix = "#" + className + " ";
         $(prefix + ".displayLinkShowLess").click(function(){
             $(this).addClass("hidden");
