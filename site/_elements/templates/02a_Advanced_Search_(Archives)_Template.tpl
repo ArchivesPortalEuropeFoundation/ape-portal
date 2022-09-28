@@ -574,6 +574,7 @@
                             </form>
                         </div>
                         <div class="col-md-9">
+                            <div id="noResults" style="display: none;">[[%asi.no_search_results? &topic=`default` &namespace=`asi`]]</div>
                             <div data-section="search_results">
 
                             </div>

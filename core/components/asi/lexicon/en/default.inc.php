@@ -4,6 +4,7 @@ $_lang['asi.results'] = 'results';
 $_lang['asi.list_view'] = 'List view';
 $_lang['asi.context_view'] = 'Context view';
 $_lang['asi.search_results'] = 'Search results';
+$_lang['asi.no_search_results'] = '<p class="h3 text-center">No results found for "<strong>[[#GET.term]]</strong>"</p>';
 $_lang['asi.sort_filters'] = 'Sort / Filters';
 $_lang['asi.sort_by'] = 'Sort by';
 $_lang['asi.filter_relevance'] = 'Relevance';

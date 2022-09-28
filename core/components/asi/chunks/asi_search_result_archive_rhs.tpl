@@ -104,49 +104,49 @@
     <h2 class="iconTitle"><i class="fas fa-thumbs-up"></i> [[!%asi.action_rate_this_content? &topic=`actions` &namespace=`asi`]]</h2>
 
     [[!FormIt?
-    &hooks=`email,FormItSaveForm`
-    &emailTpl=`allFormMessage`
-    &emailSubject=`Content has been rated - [[*pagetitle]]`
-    &emailTo=`[[++contact_email]]`
-    &emailFrom=`[[++contact_email]]`
-    &formName=`Rating Form - [[*pagetitle]]`
-    &formFields=`rating,feedback`
-    &fieldNames=`rating==Rating,feedback==Feedback (if any)`
-    &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
-    &submitVar=`sendRating`
-    &validate=`confirmEmail:blank`
+        &hooks=`email,FormItSaveForm`
+        &emailTpl=`allFormMessage`
+        &emailSubject=`Content has been rated - [[*pagetitle]]`
+        &emailTo=`[[++contact_email]]`
+        &emailFrom=`[[++contact_email]]`
+        &formName=`Rating Form - [[*pagetitle]]`
+        &formFields=`rating,feedback`
+        &fieldNames=`rating==Rating,feedback==Feedback (if any)`
+        &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
+        &submitVar=`sendRatingDym`
+        &validate=`confirmHDY:blank`
     ]]
 
     [[!+fi.successMessage:notempty=`<h5>[[+fi.successMessage]]</h5>`:default=`
     [[++rate_content_text]]
-    <div class="row">
-        <div class="col-md-7">
-            <form class="standard mt20" id="rateForm" action="[[~[[*id]]]]#rateContent" method="post">
-                <input type="hidden" name="emailTitle" value="Content has been rated">
-                <input type="text" name="confirmEmail" class="confirmField" value="">
-                <div class="rating">
-                    <input type="radio" name="rating" value="Good" class="good">
-                    <input type="radio" name="rating" value="Neutral" class="neutral">
-                    <input type="radio" name="rating" value="Bad" class="bad">
-                </div>
-                <div class="hiddenContent">
-                    <div class="title"><strong>[[!%asi.action_add_feedback? &topic=`actions` &namespace=`asi`]]</strong>
-                        <i class="far fa-angle-down"></i></div>
-                    <div class="inner">
-                        <div class="inputWrapper">
-                                    <textarea name="feedback"
-                                              placeholder="[[!%asi.input_your_feedback? &topic=`input` &namespace=`asi`]]"></textarea>
+        <div class="row">
+            <div class="col-md-7">
+                <form class="standard mt20" id="rateForm" action="[[~[[*id]]]]#rateContent" method="post">
+                    <input type="hidden" name="emailTitle" value="Content has been rated">
+                    <input type="text" name="confirmHDY" class="confirmField" value="">
+                    <div class="rating">
+                        <input type="radio" name="rating" value="Good" class="good">
+                        <input type="radio" name="rating" value="Neutral" class="neutral">
+                        <input type="radio" name="rating" value="Bad" class="bad">
+                    </div>
+                    <div class="hiddenContent">
+                        <div class="title"><strong>[[!%asi.action_add_feedback? &topic=`actions` &namespace=`asi`]]</strong>
+                            <i class="far fa-angle-down"></i></div>
+                        <div class="inner">
+                            <div class="inputWrapper">
+                                        <textarea name="feedback"
+                                                placeholder="[[!%asi.input_your_feedback? &topic=`input` &namespace=`asi`]]"></textarea>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <input class="disabled" type="submit" name="sendRating"
-                       value="[[!%asi.action_send_rating? &topic=`actions` &namespace=`asi`]]">
-                <input type="hidden" name="institution_id" value="[[+search_result.institution_id]]">
-                <input type="hidden" name="form_type" value="RATE" />
-                <input type="hidden" name="form_location" value="ARCHIVE_DETAIL" />
-            </form>
+                    <input class="disabled" type="submit" name="sendRatingDym"
+                        value="[[!%asi.action_send_rating? &topic=`actions` &namespace=`asi`]]">
+                    <input type="hidden" name="institution_id" value="[[+search_result.institution_id]]">
+                    <input type="hidden" name="form_type" value="RATE" />
+                    <input type="hidden" name="form_location" value="ARCHIVE_DETAIL" />
+                </form>
+            </div>
         </div>
-    </div>
     `]]
 </div>
 <div class="mt60" id="contactInstitutionForm">

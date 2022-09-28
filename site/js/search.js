@@ -761,6 +761,17 @@ if (typeof enable_search !== 'undefined') {
                     })
                     .done(function (data) {
                         var response = JSON.parse(data);
+
+                        if (response.results == null || response.results == undefined) {
+                            $('#resultsTabs').removeClass('hidden');
+                            $(document).find("#noResults").show();
+                            setTimeout(function () {
+                                $('[data-display="loading-spinner"]').hide();
+                                $('[data-section="has_results"]').css("opacity", "1");
+                            }, 200);
+                            return false;
+                        }
+
                         ApeSearch.response_filters = response.filters;
                         $('[data-populate="results_start"]').html(response.start);
                         
@@ -800,6 +811,7 @@ if (typeof enable_search !== 'undefined') {
 
                         $('[data-section="has_results"]').removeClass("hidden");
                         $('[data-display="loading-spinner"]').hide();
+
                         $('[data-section="has_results"]').css("opacity", "1");
                         $('footer').css("margin-top", "0");
                         if (scrollToTop == true) {
@@ -821,12 +833,25 @@ if (typeof enable_search !== 'undefined') {
                         // $('h3.shaveitem').shave(70);
                         // $('.description').shave(120);
 
+                    })
+                    .fail(function() {
+                        console.error('Failed to return results');
+                        // Show error message 
+                        $('#resultsTabs').removeClass('hidden');
+                        $(document).find("#noResults").show();
+                        setTimeout(function () {
+                            $('[data-display="loading-spinner"]').hide();
+                            $('[data-section="has_results"]').css("opacity", "1");
+                        }, 200);
+                    })
+                    .always(function() {
+                        // set a time large timeout to take into account large searches
+                        setTimeout(function () {
+                            $('[data-display="loading-spinner"]').hide();
+                            $('[data-section="has_results"]').css("opacity", "1");
+                        }, 25000);
                     });
 
-                setTimeout(function () {
-                    $('[data-display="loading-spinner"]').hide();
-                    $('[data-section="has_results"]').css("opacity", "1");
-                }, 5000);
             }
         }
 
