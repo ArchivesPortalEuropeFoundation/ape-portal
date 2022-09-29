@@ -19,3 +19,6 @@ core/components/redactor/.pubkey_c
 #IDE specific
 .idea
 .vscode/launch.json
+
+#codekit
+config.codekit3
