@@ -762,15 +762,21 @@ if (typeof enable_search !== 'undefined') {
                     .done(function (data) {
                         var response = JSON.parse(data);
 
+                        $('[data-populate="results_count"]').html(ApeSearch.format_number(response.count));
+                        $('[data-display="results_count"]').show();
+                        
                         if (response.results == null || response.results == undefined) {
-                            $('#resultsTabs').removeClass('hidden');
                             $(document).find("#noResults").show();
-                            setTimeout(function () {
-                                $('[data-display="loading-spinner"]').hide();
-                                $('[data-section="has_results"]').css("opacity", "1");
-                            }, 200);
+                            $('#resultsTabs').removeClass('hidden');
+                            $('[data-display="loading-spinner"]').hide();
+                            $('[data-section="has_results"]').css("opacity", "1");
+                            
                             return false;
                         }
+
+                        $('#resultsTabs').removeClass('hidden');
+                        $('[data-display="loading-spinner"]').hide();
+                        $('[data-section="has_results"]').css("opacity", "1");
 
                         ApeSearch.response_filters = response.filters;
                         $('[data-populate="results_start"]').html(response.start);
@@ -786,8 +792,7 @@ if (typeof enable_search !== 'undefined') {
                         } else {
                             $('.sortBy').show();
                         }
-                        $('[data-populate="results_count"]').html(ApeSearch.format_number(response.count));
-                        $('[data-display="results_count"]').show();
+                        
                         $('[data-section="search_results"]').html(response.results);
                         $('[data-section="search_aids"]').html(response.aids);
                         if (section == "search-in-institutions") $('[data-section="inst_search_within"]').html(response.checks);
@@ -809,10 +814,6 @@ if (typeof enable_search !== 'undefined') {
                             sortDates("endtimespan", "endDate");
                         }
 
-                        $('[data-section="has_results"]').removeClass("hidden");
-                        $('[data-display="loading-spinner"]').hide();
-
-                        $('[data-section="has_results"]').css("opacity", "1");
                         $('footer').css("margin-top", "0");
                         if (scrollToTop == true) {
                             
@@ -849,7 +850,7 @@ if (typeof enable_search !== 'undefined') {
                         setTimeout(function () {
                             $('[data-display="loading-spinner"]').hide();
                             $('[data-section="has_results"]').css("opacity", "1");
-                        }, 25000);
+                        }, 5000);
                     });
 
             }
