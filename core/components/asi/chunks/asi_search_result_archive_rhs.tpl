@@ -61,8 +61,8 @@
                 </div>
             </div>
             <div class="content">
-                <p><strong>[[!%asi.title_usage_rights? &topic=`default` &namespace=`asi`]]:</strong></p>
-                <p>[[!%asi.usage_rights_description? &topic=`default` &namespace=`asi`]]</p>
+                [[- <p><strong>[[!%asi.title_usage_rights? &topic=`default` &namespace=`asi`]]:</strong></p>
+                <p>[[!%asi.usage_rights_description? &topic=`default` &namespace=`asi`]]</p> ]]
             </div>
             [[!+gallery_content_tab:eq=``:then=`
             <div class="noObjects">
