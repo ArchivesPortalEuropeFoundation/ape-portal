@@ -840,17 +840,13 @@ if (typeof enable_search !== 'undefined') {
                         // Show error message 
                         $('#resultsTabs').removeClass('hidden');
                         $(document).find("#noResults").show();
-                        setTimeout(function () {
-                            $('[data-display="loading-spinner"]').hide();
-                            $('[data-section="has_results"]').css("opacity", "1");
-                        }, 200);
+                        $('[data-display="loading-spinner"]').hide();
+                        $('[data-section="has_results"]').css("opacity", "1");
                     })
                     .always(function() {
                         // set a time large timeout to take into account large searches
-                        setTimeout(function () {
-                            $('[data-display="loading-spinner"]').hide();
-                            $('[data-section="has_results"]').css("opacity", "1");
-                        }, 5000);
+                        $('[data-display="loading-spinner"]').hide();
+                        $('[data-section="has_results"]').css("opacity", "1");
                     });
 
             }
