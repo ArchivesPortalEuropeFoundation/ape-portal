@@ -747,10 +747,10 @@ if (typeof enable_search !== 'undefined') {
                     marginTop: '200px'
                 }, 200);
 
-                setTimeout(function () {
-                    $('[data-display="loading-spinner"]').show();
-                    $('[data-section="has_results"]').css("opacity", "0.4");
-                }, 200);
+                // Removed timeout to prevent edge case of ajax request completing before timeout finishes
+                $('[data-display="loading-spinner"]').show();
+                $('[data-section="has_results"]').css("opacity", "0.4");
+                
 
                 if (typeof scrollToTop === 'undefined') {
                     scrollToTop = false;
@@ -760,6 +760,11 @@ if (typeof enable_search !== 'undefined') {
                         url: asi_search_url + "?term=" + ApeSearch.term + "&section=" + section + "&sort=" + ApeSearch.sort + "&context=" + ApeSearch.context + "&page=" + ApeSearch.current_page + generateParamsString(),
                     })
                     .done(function (data) {
+                        // remove loader and open the tab as soon as possible
+                        $('#resultsTabs').removeClass('hidden');
+                        $('[data-display="loading-spinner"]').hide();
+                        $('[data-section="has_results"]').css("opacity", "1");
+                        
                         var response = JSON.parse(data);
 
                         $('[data-populate="results_count"]').html(ApeSearch.format_number(response.count));
@@ -767,16 +772,9 @@ if (typeof enable_search !== 'undefined') {
                         
                         if (response.results == null || response.results == undefined) {
                             $(document).find("#noResults").show();
-                            $('#resultsTabs').removeClass('hidden');
-                            $('[data-display="loading-spinner"]').hide();
-                            $('[data-section="has_results"]').css("opacity", "1");
                             
                             return false;
                         }
-
-                        $('#resultsTabs').removeClass('hidden');
-                        $('[data-display="loading-spinner"]').hide();
-                        $('[data-section="has_results"]').css("opacity", "1");
 
                         ApeSearch.response_filters = response.filters;
                         $('[data-populate="results_start"]').html(response.start);
