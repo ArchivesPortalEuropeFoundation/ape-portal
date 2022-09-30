@@ -19,7 +19,7 @@
 			</div>
 			
 			[[!FormIt?
-			&hooks=`reCaptchaV3,setRecipient,email,FormItSaveForm`
+			&hooks=`reCaptchaV3,setRecipient,FormItSaveForm,email`
 			&emailTpl=`allFormMessage`
 			&emailSubject=`A new suggestion regarding [[*pagetitle]]`
 			&emailTo=`[[++contact_email]]`
