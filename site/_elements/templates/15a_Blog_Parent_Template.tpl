@@ -97,7 +97,7 @@
                         [[!+blogSearchTrue:notempty=`
                         [[+blogSearchResults]]
                         `:default=`
-                        <h5 class="tagsHidden">[[!%asi.title_highlights? &topic=`default` &namespace=`asi`]]:</h5>
+                        <h4 class="tagsHidden">[[!%asi.title_highlights? &topic=`default` &namespace=`asi`]]:</h4>
                         <div id="blogFeaturedSlider" class="tagsHidden">
                             [[!pdoResources?
                             &parents=`[[*id]]`
@@ -110,7 +110,6 @@
                             &processTVs=`refImage60`
                             ]]
                         </div>
-                        <h5 class="tagsHidden">[[!%asi.title_import_content? &topic=`default` &namespace=`asi`]]:</h5>
                         <div class="row mb40 tagsHidden">
                             [[!pdoResources?
                             &parents=`[[*id]]`
