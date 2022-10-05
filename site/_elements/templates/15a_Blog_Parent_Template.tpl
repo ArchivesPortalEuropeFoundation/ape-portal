@@ -97,7 +97,7 @@
                         [[!+blogSearchTrue:notempty=`
                         [[+blogSearchResults]]
                         `:default=`
-                        <h4 class="tagsHidden">[[!%asi.title_highlights? &topic=`default` &namespace=`asi`]]:</h4>
+                        <h3 class="tagsHidden">[[!%asi.title_highlights? &topic=`default` &namespace=`asi`]]:</h3>
                         <div id="blogFeaturedSlider" class="tagsHidden">
                             [[!pdoResources?
                             &parents=`[[*id]]`
