@@ -19,7 +19,19 @@
   "http://creativecommons.org/licenses/by-nc-sa/4.0/": "cc-byncsa",
   "https://creativecommons.org/licenses/by-nc-sa/4.0/": "cc-byncsa",
   "http://creativecommons.org/licenses/by-nc-nd/4.0/": "cc-byncnd",
-  "https://creativecommons.org/licenses/by-nc-nd/4.0/": "cc-byncnd"
+  "https://creativecommons.org/licenses/by-nc-nd/4.0/": "cc-byncnd",
+  "http://rightsstatements.org/vocab/InC/1.0/": "rs-inc",
+  "https://rightsstatements.org/vocab/InC/1.0/": "rs-inc",
+  "http://rightsstatements.org/vocab/InC-OW-EU/1.0/": "rs-inc-ow-eu",
+  "http://rightsstatements.org/vocab/InC-OW-EU/1.0/": "rs-inc-ow-eu",
+  "http://rightsstatements.org/vocab/InC-EDU/1.0/": "rs-inc-edu",
+  "https://rightsstatements.org/vocab/InC-EDU/1.0/": "rs-inc-edu",
+  "http://rightsstatements.org/vocab/NoC-NC/1.0/": "rs-noc-nc",
+  "https://rightsstatements.org/vocab/NoC-NC/1.0/": "rs-noc-nc",
+  "http://rightsstatements.org/vocab/NoC-OKLR/1.0/": "rs-noc-oklr",
+  "https://rightsstatements.org/vocab/NoC-OKLR/1.0/": "rs-noc-oklr",
+  "http://rightsstatements.org/vocab/CNE/1.0/": "rs-cne",
+  "https://rightsstatements.org/vocab/CNE/1.0/": "rs-cne"
 }
 
 

@@ -337,5 +337,46 @@
         </div>
 	</span>
 
+	<span id="copyIconRSNONCOMTooltip">
+		<span class="closeIcon"><i class="fas fa-times"></i></span>
+		<div class="content">
+             [[++copy_logo_noncom_tooltip]]
+        </div>
+	</span>
+
+	<span id="copyIconRSEUORPHANTooltip">
+		<span class="closeIcon"><i class="fas fa-times"></i></span>
+		<div class="content">
+             [[++copy_logo_euorphan_tooltip]]
+        </div>
+	</span>
+
+	<span id="copyIconRSOTHERTooltip">
+		<span class="closeIcon"><i class="fas fa-times"></i></span>
+		<div class="content">
+             [[++copy_logo_other_tooltip]]
+        </div>
+	</span>
+
+	<span id="copyIconRSINCOPYTooltip">
+		<span class="closeIcon"><i class="fas fa-times"></i></span>
+		<div class="content">
+             [[++copy_logo_incopy_tooltip]]
+        </div>
+	</span>
+
+	<span id="copyIconRSNOTEVALTooltip">
+		<span class="closeIcon"><i class="fas fa-times"></i></span>
+		<div class="content">
+             [[++copy_logo_noteval_tooltip]]
+        </div>
+	</span>
+
+	<span id="copyIconRSEDUUSETooltip">
+		<span class="closeIcon"><i class="fas fa-times"></i></span>
+		<div class="content">
+             [[++copy_logo_eduuse_tooltip]]
+        </div>
+	</span>
 
 </div>

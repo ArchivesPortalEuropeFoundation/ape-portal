@@ -30,7 +30,7 @@
     </div>
     <hr>
     <div class="inner" style="display: block;">
-        [[!+gallery_content_tab:neq=``:then=`
+        [[-[[!+archive.gallery.tab:neq=``:then=`
         <div class="view">
             <strong>[[!%asi.view_doc_label? &topic=`default` &namespace=`asi`]]: </strong>
             <ul class="nav-tabs">
@@ -38,7 +38,7 @@
                 <li><a href="#tabGalleryList" data-toggle="tab"><i class="fas fa-list"></i></a></li>
             </ul>
         </div>
-        `]]
+        `]]]]
         <div class="tab-content">
             <div id="tabGallerySlider" class="tab-pane fade active in">
                 <div class="row">
@@ -64,7 +64,7 @@
                 [[- <p><strong>[[!%asi.title_usage_rights? &topic=`default` &namespace=`asi`]]:</strong></p>
                 <p>[[!%asi.usage_rights_description? &topic=`default` &namespace=`asi`]]</p> ]]
             </div>
-            [[!+gallery_content_tab:eq=``:then=`
+            [[!+archive.gallery.tab:eq=``:then=`
             <div class="noObjects">
                 <p><strong>[[!%asi.err_msg_there_are_no_digital_objects? &topic=`forms` &namespace=`asi`]]</strong></p>
                 <a class="button blue aLink" href="#contactInstitution">[[!%asi.action_enquire_about_digitisation?
