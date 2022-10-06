@@ -1,25 +1,25 @@
 <?php
-$_lang['asi.photography'] = 'Fotografie';
-$_lang['asi.economics'] = 'Wirtschaft';
+$_lang['asi.photography'] = 'Photography';
+$_lang['asi.economics'] = 'Economics';
 $_lang['asi.german.democratic.republic'] = 'GDR (German Democratic Republic)';
 $_lang['asi.transport'] = 'Transport';
-$_lang['asi.education'] = 'Ausbildung';
-$_lang['asi.science'] = 'Wissenschaft';
-$_lang['asi.justice'] = 'Gerechtigkeit';
-$_lang['asi.culture'] = 'Kultur';
-$_lang['asi.buildings'] = 'Gebäude';
-$_lang['asi.schools'] = 'Schulen';
-$_lang['asi.architecture'] = 'Die Architektur';
-$_lang['asi.first.world.war'] = 'Erster Weltkrieg (1914-1918)';
-$_lang['asi.industrialisation'] = 'Industrie';
-$_lang['asi.health'] = 'Die Gesundheit';
-$_lang['asi.maps'] = 'Karten';
-$_lang['asi.national.administration'] = 'nationale Regierung';
+$_lang['asi.education'] = 'Education';
+$_lang['asi.science'] = 'Science';
+$_lang['asi.justice'] = 'Justice';
+$_lang['asi.culture'] = 'Culture';
+$_lang['asi.buildings'] = 'Buildings';
+$_lang['asi.schools'] = 'Schools';
+$_lang['asi.architecture'] = 'Architecture';
+$_lang['asi.first.world.war'] = 'First World War (1914-1918)';
+$_lang['asi.industrialisation'] = 'Industry';
+$_lang['asi.health'] = 'Health';
+$_lang['asi.maps'] = 'Maps';
+$_lang['asi.national.administration'] = 'National government';
 $_lang['asi.genealogy'] = 'Geneaology';
-$_lang['asi.concentration.camp'] = 'Konzentrationslager';
-$_lang['asi.politics'] = 'Politik';
-$_lang['asi.agriculture'] = 'Landwirtschaft';
-$_lang['asi.notaries'] = 'Notare';
+$_lang['asi.concentration.camp'] = 'Concentration camps';
+$_lang['asi.politics'] = 'Politics';
+$_lang['asi.agriculture'] = 'Agriculture';
+$_lang['asi.notaries'] = 'Notaries';
 $_lang['asi.taxation'] = 'Taxation';
 $_lang['asi.democracy'] = 'Democracy';
 $_lang['asi.crime'] = 'Crime';
@@ -61,11 +61,9 @@ $_lang['asi.french.napoleon.i'] = 'Napoléon I, Emperor of the French, 1769-1821
 $_lang['asi.heresy'] = 'Heresy';
 $_lang['asi.revolutions.of.1848'] = 'Revolutions of 1848';
 $_lang['asi.statistics'] = 'Statistics';
-
-$_lang['asi.corporatebody'] = 'Corporate Body';
+$_lang['asi.corporatebody'] = 'Corporate body';
 $_lang['asi.family'] = 'Family';
 $_lang['asi.person'] = 'Person';
-
 $_lang['asi.GERMANY'] = 'Germany';
 $_lang['asi.NETHERLANDS'] = 'Netherlands';
 $_lang['asi.SWEDEN'] = 'Sweden';
@@ -84,7 +82,7 @@ $_lang['asi.IRELAND'] = 'Ireland';
 $_lang['asi.LATVIA'] = 'Latvia';
 $_lang['asi.HUNGARY'] = 'Hungary';
 $_lang['asi.ICELAND'] = 'Iceland';
-$_lang['asi.MULTINATIONAL_INSTITUTIONS'] = 'Multinational Institutions';
+$_lang['asi.MULTINATIONAL_INSTITUTIONS'] = 'Multinational institutions';
 $_lang['asi.AUSTRIA'] = 'Austria';
 $_lang['asi.SLOVENIA'] = 'Slovenia';
 $_lang['asi.BULGARIA'] = 'Bulgaria';
@@ -111,7 +109,6 @@ $_lang['asi.TURKEY'] = 'Turkey';
 $_lang['asi.CYPRUS'] = 'Cyprus';
 $_lang['asi.JAPAN'] = 'Japan';
 $_lang['asi.VANUATU'] = 'Vanuatu';
-
 $_lang['asi.municipalArchives'] = 'Municipal archives';
 $_lang['asi.countyArchives'] = 'County/local authority archives';
 $_lang['asi.universityArchives'] = 'University and research archives';
@@ -124,14 +121,12 @@ $_lang['asi.politicalArchives'] = 'Archives of political parties, popular/labour
 $_lang['asi.businessArchives'] = 'Business archives';
 $_lang['asi.privateArchives'] = 'Private persons and family archives';
 $_lang['asi.mediaArchives'] = 'Media archives';
-
 $_lang['asi.otherdate'] = 'Only descriptive date';
 $_lang['asi.normal'] = 'Full date';
 $_lang['asi.unknowndate'] = 'Unknown date';
 $_lang['asi.unknownstartdate'] = 'Timespan with unknown start date';
 $_lang['asi.nodate'] = 'No date specified';
 $_lang['asi.unknownenddate'] = 'Timespan with unknown end date';
-
 $_lang['asi.est'] = 'Estonian';
 $_lang['asi.dut'] = 'Dutch';
 $_lang['asi.spa'] = 'Spanish';
@@ -140,18 +135,14 @@ $_lang['asi.isl'] = 'Icelandic';
 $_lang['asi.hun'] = 'Hungarian';
 $_lang['asi.ger'] = 'German';
 $_lang['asi.eng'] = 'English';
-
 $_lang['asi.fa'] = 'Finding aid';
 $_lang['asi.hg'] = 'Holdings guide';
 $_lang['asi.sg'] = 'Source guide';
-
 $_lang['asi.clevel'] = 'Other descriptions';
 $_lang['asi.archdesc'] = 'Fonds description';
-
 $_lang['asi.UNSPECIFIED'] = 'Unspecified';
 $_lang['asi.IMAGE'] = 'Image';
 $_lang['asi.TEXT'] = 'Text';
 $_lang['asi.VIDEO'] = 'Video';
 $_lang['asi.3D'] = '3D';
 $_lang['asi.SOUND'] = 'Sound';
-
