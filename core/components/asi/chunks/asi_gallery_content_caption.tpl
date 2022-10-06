@@ -13,8 +13,8 @@
         [[!+attribution:eq=`cc-zero`:then=`
         <span class="[[++copy_icon_by_tooltip:notempty=`tipIcon`]]" data-tooltip-content="#copyIconZeroTooltip">
             <img style="width: 100px" src="assets/images/licences/CC-cc-zero.png"/>
-                                            <i class="fab fa-creative-commons"></i>
-                                            <i class="fab fa-creative-commons-zero"></i>
+                                            [[- <i class="fab fa-creative-commons"></i>
+                                            <i class="fab fa-creative-commons-zero"></i>]]
                                         </span>
         `]]
         [[!+attribution:eq=`cc-by`:then=`
