@@ -310,7 +310,7 @@
 
                         </div>
 
-                        <div class="col-sm-12 col-md-6 hidden">
+                        <div class="col-sm-12 col-md-6">
                             <div class="advControl">
                                 [[++tt_search_by_date:notempty=`
                                 <div class="tipTitle">
@@ -536,12 +536,12 @@
                                     &topic=`label` &namespace=`asi`]]` &tip_id=`DateType`]]
                                 </div>
 
-                                <div class="contentDropdown select-start" data-g="search-date-starttimespan">
+                                <div class="contentDropdown select-start2" data-g="search-date-starttimespan">
                                     [[!asi_search_date? &entity=`startTimespan` &label=`[[!%asi.label_start_timespan?
                                     &topic=`label` &namespace=`asi`]]` &tip_id=`StartTime`]]
                                 </div>
 
-                                <div class="contentDropdown select-end" data-g="search-date-endtimespan">
+                                <div class="contentDropdown select-end2" data-g="search-date-endtimespan">
                                     [[!asi_search_date? &entity=`endTimespan` &label=`[[!%asi.label_end_timespan?
                                     &topic=`label` &namespace=`asi`]]` &tip_id=`EndTime`]]
                                 </div>

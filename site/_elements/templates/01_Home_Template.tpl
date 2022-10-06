@@ -215,7 +215,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-12 col-md-6 hidden">
+								<div class="col-sm-12 col-md-6">
 									<div class="advControl">
 										[[++tt_search_by_date:notempty=`
 										<div class="tipTitle">

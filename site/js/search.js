@@ -1418,13 +1418,13 @@ if (typeof enable_search !== 'undefined') {
         function appendHomepageDates(url) {
             var date_from = $('[data-input-type="homepage_date_from"]').val();
             var date_to = $('[data-input-type="homepage_date_to"]').val();
-            if (date_from.length) {
+            if (date_from.length>0) {
                 if (date_from != "") {
                     
                     url += buildDateUrlQueryString(date_from, "starttimespan");
                 }
             }
-            if (date_to.length) {
+            if (date_to.length>0) {
                 if (date_to != "") {
                     
                     url += buildDateUrlQueryString(date_to, "endtimespan");
