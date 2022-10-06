@@ -1,6 +1,8 @@
 #configs
 core/config
 config.core.php
+manager/config.core_manager.php
+connectors/config.core_connectors.php
 
 #uploads
 uploads/
