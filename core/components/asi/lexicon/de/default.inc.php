@@ -103,7 +103,6 @@ $_lang['asi.title_follow_us'] = 'Veranstaltungen zeigen in der Zeitzone';
 $_lang['asi.title_full_search_parameters'] = 'Folge uns';
 $_lang['asi.title_get_directions'] = 'Vollsuchparameter';
 $_lang['asi.title_highlights'] = 'Anweisungen bekommen';
-$_lang['asi.title_import_content'] = 'Highlights';
 $_lang['asi.title_in_archives'] = 'wichtiger Inhalt';
 $_lang['asi.title_institution_country'] = 'in Archiven';
 $_lang['asi.title_is_related_to'] = 'Institution / Land';
