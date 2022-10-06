@@ -110,6 +110,7 @@ $_lang['asi.KOSOVO'] = 'Kosovo';
 $_lang['asi.TURKEY'] = 'Turkey';
 $_lang['asi.CYPRUS'] = 'Cyprus';
 $_lang['asi.JAPAN'] = 'Japan';
+$_lang['asi.VANUATU'] = 'Vanuatu';
 
 $_lang['asi.municipalArchives'] = 'Municipal archives';
 $_lang['asi.countyArchives'] = 'County/local authority archives';
