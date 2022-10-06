@@ -97,8 +97,55 @@ if (typeof enable_tree !== 'undefined') {
                             initGallerySlider();
                         }
                         updateComponentResults(1);
+                        initializeTooltipFunctionality();
                     });
             });
+        }
+
+        function initializeTooltipClicks() {
+            $('.tipIcon').click(function (e) {
+                if ($(this).is('.active')) {
+                    $(this).tooltipster('close');
+                    $(this).removeClass('active');
+                } else {
+                    $(this).tooltipster('open');
+                    $(this).addClass('active');
+                }
+                e.stopPropagation();
+            });
+        }
+
+        function initializeTooltips() {
+            $('.tipIcon').tooltipster({
+                plugins: ['sideTip'],
+                contentCloning: 'true',
+                trigger: 'click',
+                interactive: 'true',
+                maxWidth: 320,
+                minWidth: 200,
+                side: ['right', 'left', 'bottom', 'top'],
+                repositionOnScroll: 'true',
+                trigger: 'custom',
+                triggerOpen: {},
+                triggerClose: {},
+                functionBefore: function (instance, helper) {
+                    $.each($.tooltipster.instances(), function (i, instance) {
+                        instance.close();
+                    });
+                    $('.tipIcon').removeClass('active');
+                },
+                functionReady: function () {
+                    $('.closeIcon').click(function () {
+                        $('.tipIcon').tooltipster('close');
+                        $('.tipIcon').removeClass('active');
+                    });
+                }
+            });
+        }
+
+        function initializeTooltipFunctionality(){
+            initializeTooltipClicks();
+            initializeTooltips();
         }
 
         function updateComponentResults(newPage) {
