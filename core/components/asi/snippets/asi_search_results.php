@@ -205,7 +205,9 @@ else {
     
     $translatedCountries = array();
     foreach($filters['countries'] as $country => $countryCount) {
-        $translated = $modx->lexicon('asi.'.$country);
+        $pos = strpos($country, ':');
+        $countryKey = substr($country, 0, $pos);
+        $translated = $modx->lexicon('asi.'.$countryKey);
         $translatedCountries[$country]['translated'] = $translated;
         $translatedCountries[$country]['count'] = $countryCount;
     }
