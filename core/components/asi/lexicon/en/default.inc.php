@@ -60,7 +60,6 @@ $_lang['asi.title_categories'] = 'Categories';
 $_lang['asi.title_search_the_blog'] = 'Search the blog';
 $_lang['asi.title_events'] = 'Events';
 $_lang['asi.title_highlights'] = 'Highlights';
-$_lang['asi.title_import_content'] = 'Important Content';
 $_lang['asi.title_all_content'] = 'All Content';
 $_lang['asi.title_showing_n_results_for_term'] = 'Showing [[+page.total]] result(s) for "[[+tag.tag_name]]"';
 $_lang['asi.title_by_author'] = 'By [[*authorName]]';
