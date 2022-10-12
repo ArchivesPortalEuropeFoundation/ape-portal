@@ -144,7 +144,7 @@
 							</div>
 						</div>
 						<div class="advSubmit">
-							<span class="checkbox">
+							[[-<span class="checkbox">
 								<input type="checkbox" name="context" value="1">
 								[[++tt_search_in_context:notempty=`
 								<span class="tipText">
@@ -156,7 +156,7 @@
 								`:default=`
 								<span>[[!%asi.view_in_context? &topic=`search` &namespace=`asi`]]</span>
 								`]]
-							</span>
+							</span>]]
 						</div>
 					</div>			    
 			    

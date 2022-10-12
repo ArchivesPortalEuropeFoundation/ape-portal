@@ -310,7 +310,7 @@
 
                         </div>
 
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-sm-12 col-md-6 hidden">
                             <div class="advControl">
                                 [[++tt_search_by_date:notempty=`
                                 <div class="tipTitle">
@@ -343,7 +343,7 @@
                         </div>
                     </div>
                     <div class="advSubmit">
-							<span class="checkbox">
+							[[-<span class="checkbox">
 								<input type="checkbox" name="context" value="1">
 								[[++tt_search_in_context:notempty=`
 								<span class="tipText">
@@ -355,7 +355,7 @@
 								`:default=`
 								<span>[[!%asi.view_in_context? &topic=`search` &namespace=`asi`]]</span>
 								`]]
-							</span>
+							</span>]]
                         <a class="button large pink borders submitSearch1" data-control="search_term_trigger"><i
                                     class="fas fa-search"></i> [[!%asi.btn_search? &topic=`actions`
                             &namespace=`asi`]]</a>
@@ -536,12 +536,12 @@
                                     &topic=`label` &namespace=`asi`]]` &tip_id=`DateType`]]
                                 </div>
 
-                                <div class="contentDropdown select-start2" data-g="search-date-starttimespan">
+                                <div class="contentDropdown select-start" data-g="search-date-starttimespan">
                                     [[!asi_search_date? &entity=`startTimespan` &label=`[[!%asi.label_start_timespan?
                                     &topic=`label` &namespace=`asi`]]` &tip_id=`StartTime`]]
                                 </div>
 
-                                <div class="contentDropdown select-end2" data-g="search-date-endtimespan">
+                                <div class="contentDropdown select-end" data-g="search-date-endtimespan">
                                     [[!asi_search_date? &entity=`endTimespan` &label=`[[!%asi.label_end_timespan?
                                     &topic=`label` &namespace=`asi`]]` &tip_id=`EndTime`]]
                                 </div>
