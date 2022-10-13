@@ -3569,6 +3569,7 @@ class AsiManager
                     break;
                 default:
                     $additionalParameters['df'] = "names";
+                    $additionalParameters['qf'] = "names^1.3 description other^0.5 places^0.7 mandates^0.7 functions^0.7 occupations^0.7";
             }
         } else {
             $additionalParameters['df'] = "names";
@@ -3635,6 +3636,7 @@ class AsiManager
                     break;
                 default:
                     $additionalParameters['df'] = "name";
+                    $additionalParameters['qf'] = "name^2.5 otherNames^2 repositories^1.3 address^0.7 places^0.5 description^0.5 other^0.2 countries^0.7 aiGroups^0.7";
             }
         } else {
             $additionalParameters['df'] = "name";
