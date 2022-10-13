@@ -6,11 +6,11 @@
 		</div>
 		[[++footer_text_1]]
 		<div class="logos">
-			[[++footer_logo_1:isnot=`/uploads/`:then=`<img class="logo" src="[[++footer_logo_1]]">`]]
-			[[++footer_logo_2:isnot=`/uploads/`:then=`<img class="logo" src="[[++footer_logo_2]]">`]]
-			[[++footer_logo_3:isnot=`/uploads/`:then=`<img class="logo" src="[[++footer_logo_3]]">`]]
-			[[++footer_logo_4:isnot=`/uploads/`:then=`<img class="logo" src="[[++footer_logo_4]]">`]]
-		</div>
+			[[++footer_logo_1:isnot=`/uploads/`:then=`<a href="https://ec.europa.eu/cip/ict-psp/index_en.htm" target="_blank"><img class="logo" src="[[++footer_logo_1]]"></a>`]]
+			[[++footer_logo_2:isnot=`/uploads/`:then=`<a href="https://ec.europa.eu/info/index_en" target="_blank"><img class="logo" src="[[++footer_logo_2]]"></a>`]]
+			[[++footer_logo_3:isnot=`/uploads/`:then=`<a href="https://www.europeana.eu/en" target="_blank"><img class="logo" src="[[++footer_logo_3]]"></a>`]]
+            [[++footer_logo_4:isnot=`/uploads/`:then=`<img class="logo" src="[[++footer_logo_4]]">`]]
+        </div>
 		[[++footer_text_2]]
 		[[pdoResources?
 		  &parents=`0`
@@ -18,7 +18,7 @@
 		  &tpl=`footerLinksTpl`
 		  &sortby=`{"menuindex":"ASC"}`
 		]]
-		Created by <a href="https://www.gelstudios.co.uk" target="_blank">GEL Studios</a>
+		Re-design by <a href="https://www.gelstudios.co.uk" target="_blank">GEL Studios</a>
 	</div>
 	<div class="col-xs-12 text-center" style="padding:30px 0 20px;">
         <div id="google_translate_element"></div>
