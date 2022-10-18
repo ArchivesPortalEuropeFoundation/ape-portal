@@ -480,6 +480,7 @@
             if (unitId) {
                 apiCall = apiCall + `&unitId=${unitId}`;
             }
+            apiCall = encodeURI(apiCall);
             $(document).find("#componentChildren").css("opacity", "0.3");
 
             $.ajax({
