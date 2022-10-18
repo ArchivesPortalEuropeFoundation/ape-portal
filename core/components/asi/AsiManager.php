@@ -873,12 +873,12 @@ class AsiManager
         $APIbase = $modx->getOption("ape_api");
         if($solr_record_id === 'undefined') {
             if($solr_unit_id === 'undefined') {
-                $archiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale=en&eadid={$recordId}&type=cdetails&xmlType={$type}";
+                $archiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale=en&eadid=".urlencode($recordId)."&type=cdetails&xmlType={$type}";
                 $archiveDetails = json_decode(file_get_contents($archiveUrl));
                 $solr_record_id = $archiveDetails->clevelid;
             }
             else {
-                $archiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale=en&eadid={$recordId}&type=cdetails&xmlType={$type}&clevelunitid={$solr_unit_id}";
+                $archiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale=en&eadid=".urlencode($recordId)."&type=cdetails&xmlType={$type}&clevelunitid=".urlencode($solr_unit_id);
                 $archiveDetails = json_decode(file_get_contents($archiveUrl));
                 $solr_record_id = 'C'.$archiveDetails->clevelid;
             }
