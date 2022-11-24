@@ -309,7 +309,7 @@ class StercSEO
                     $resource->toArray(),
                     array(
                         'url'        => $this->modx->makeUrl($resource->get('id'), '', '', 'full'),
-                        'alternates' => $this->getAlternateLinks($resource, $options),
+//                        'alternates' => $this->getAlternateLinks($resource, $options),
                         'lastmod'    => date('c', $lastmod),
                         'changefreq' => (!empty($properties['changefreq']) ? $properties['changefreq'] : $this->defaults['changefreq']),
                         'priority'   => (!empty($properties['priority']) ? $properties['priority'] : $this->defaults['priority']),
