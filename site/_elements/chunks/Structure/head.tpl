@@ -21,7 +21,7 @@
 
         <link rel="shortcut icon" href="[[++base_url]]assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
     	<link rel="icon" href="[[++base_url]]assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
-        <link rel="canonical" href="[[~[[*id]]? &scheme=`full`]]" />
+        <!--<link rel="canonical" href="[[~[[*id]]? &scheme=`full`]]" />-->
         
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="[[++base_url]]assets/css/tooltipster.bundle.css" media="screen" />
