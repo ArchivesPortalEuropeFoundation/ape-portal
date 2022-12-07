@@ -15,7 +15,7 @@
        	<meta property="og:title" content="[[*longtitle:default=`[[*pagetitle]]`]]">
         <meta property="og:type" content="website">
         <meta property="og:url" content="[[fullURL? &id=`[[*id]]`]]">
-        <meta property="og:image" content="[[++site_url]][[*og_image:replace=`/assets/==assets/`:default=`assets/images/og_img.jpg`]]">
+        <meta property="og:image" content="[[++site_url]][[*og_image:replace=`/assets/==assets/`:default=`assets/images/fb_img.jpg`]]">
         <meta property="og:site_name" content="[[++site_name]]">
         <meta property="og:description" content="[[*description]]">
 
