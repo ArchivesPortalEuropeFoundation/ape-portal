@@ -61,6 +61,7 @@ $instFinder = new DomXPath($instDoc);
 // Placeholders for institutions
 $placeholders['institution']['name']    = $instFinder->query("//h2[@class='blockHeader']")[0]->nodeValue;
 $placeholders['institution']['country'] = $instFinder->query("//*[contains(@class, 'gel_country gel_contactDetails')]")[0]->nodeValue;
+$placeholders['institution']['repositoryCode'] = $repoCode;
 
 if(!is_null($scroll)) {
     $placeholders['scroll'] = $scroll;

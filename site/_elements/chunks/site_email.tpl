@@ -22,7 +22,7 @@
                                             <tr>
                                                 <td>
                                                     <a href="[[++site_url]]">
-                                                        <img class="image_logo" src="[[++email_logo]]" alt="[[++site_name]] logo"/>
+                                                        <img style="width: 200px" class="image_logo" src="[[++site_url]]/[[++email_logo]]" alt="[[++site_name]] logo"/>
                                                     </a>
                                                 </td>
                                             </tr>

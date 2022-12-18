@@ -278,54 +278,56 @@
                 </div>
             </div>
             `]]
-
+            
             <div class="mt40">
                 <a class="anchor" id="rateContent"></a>
                 <h2 class="iconTitle"><i class="fas fa-thumbs-up"></i> [[!%asi.action_rate_this_content? &topic=`actions` &namespace=`asi`]]</h2>
 
                 [[!FormIt?
-                    &hooks=`reCaptchaV3,email,FormItSaveForm`
-                    &emailTpl=`allFormMessage`
-                    &emailSubject=`Content has been rated - [[!+archive.title:striptags]]`
-                    &emailTo=`[[++contact_email]]`
-                    &emailFrom=`[[++contact_email]]`
-                    &formName=`Rating Form - [[!+archive.title:striptags]]`
-                    &formFields=`rating,feedback`
-                    &fieldNames=`rating==Rating,feedback==Feedback (if any)`
-                    &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
+                &hooks=`reCaptchaV3,email,FormItSaveForm`
+                &emailTpl=`allFormMessage`
+                &emailSubject=`Content Rating (Archives) - [[!+archive.title:striptags]]`
+                &emailTo=`[[++contact_email]]`
+                &emailFrom=`[[++contact_email]]`
+                &formName=`Rating Form - [[!+archive.title:striptags]]`
+                &formFields=`rating,feedback,repositoryCode`
+                &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode`
+                &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
                     &submitVar=`sendRating`
-                    &validate=`confirmHSL:blank`
+                &validate=`confirmHSL:blank`
                 ]]
                 [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
                 [[!+fi.successMessage:notempty=`<h5>[[+fi.successMessage]]</h5>`:default=`
-                    [[++rate_content_text]]
-                    <div class="row">
-                        <div class="col-md-7">
-                            <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
-                                <input type="hidden" name="emailTitle" value="Content has been rated">
-                                <input type="text" name="confirmHSL" class="confirmField" value="">
-                                <div class="rating">
-                                    <input type="radio" name="rating" value="Good" class="good">
-                                    <input type="radio" name="rating" value="Neutral" class="neutral">
-                                    <input type="radio" name="rating" value="Bad" class="bad">
+                [[++rate_content_text]]
+                <div class="row">
+                    <div class="col-md-7">
+                        <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
+                            <input type="hidden" name="emailTitle" value="Content (Archive) has been rated">
+                            <input type="hidden" name="repositoryCode" value="[[!+archive.repocode]]"/>
+                            <input type="hidden" name="institutionLink" value="[[~[[*id]]? &scheme=`full` &repositoryCode=`[[!+archive.repocode]]`]]">
+                            <input type="text" name="confirmHSL" class="confirmField" value="">
+                            <div class="rating">
+                                <input type="radio" name="rating" value="Good" class="good">
+                                <input type="radio" name="rating" value="Neutral" class="neutral">
+                                <input type="radio" name="rating" value="Bad" class="bad">
+                            </div>
+                            <div class="hiddenContent">
+                                <div class="title"><strong>[[!%asi.action_add_feedback? &topic=`actions` &namespace=`asi`]]</strong>
+                                    <i class="far fa-angle-down"></i>
                                 </div>
-                                <div class="hiddenContent">
-                                    <div class="title"><strong>[[!%asi.action_add_feedback? &topic=`actions` &namespace=`asi`]]</strong>
-                                        <i class="far fa-angle-down"></i>
-                                    </div>
-                                    <div class="inner">
-                                        <div class="inputWrapper">
-                                            <textarea name="feedback" placeholder="[[!%asi.input_your_feedback? &topic=`input` &namespace=`asi`]]"></textarea>
-                                        </div>
+                                <div class="inner">
+                                    <div class="inputWrapper">
+                                        <textarea name="feedback" placeholder="[[!%asi.input_your_feedback? &topic=`input` &namespace=`asi`]]"></textarea>
                                     </div>
                                 </div>
+                            </div>
                                 <input class="disabled" type="submit" name="sendRating" value="[[!%asi.action_send_rating? &topic=`actions` &namespace=`asi`]]">
-                                <input type="hidden" name="institution_id" value="[[+search_result.institution_id]]">
+                            <input type="hidden" name="institution_id" value="[[+search_result.institution_id]]">
                                 <input type="hidden" name="form_type" value="RATE" />
-                                <input type="hidden" name="form_location" value="ARCHIVE_DETAIL" />
-                            </form>
-                        </div>
+                            <input type="hidden" name="form_location" value="ARCHIVE_DETAIL" />
+                        </form>
                     </div>
+                </div>
                 `]]
             </div>
             <div class="mt60" id="contactInstitutionForm">
@@ -338,7 +340,7 @@
                         [[!FormIt?
                         &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
                         &emailTpl=`allFormMessage`
-                        &emailSubject=`A message regarding [[!+archive.title:striptags]]`
+                        &emailSubject=`Contact Form (Archives): [[!+archive.title:striptags]]`
                         &emailTo=`[[++contact_email]]`
                         &emailFrom=`[[++contact_email]]`
                         &formName=`Contact Archive - [[!+archive.title:striptags]]`
@@ -350,7 +352,8 @@
                         ]]
                         [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
                         <form class="standard mt20" action="[[!requestURI]]" method="post">
-                            <input type="hidden" name="emailTitle" value="A new message from the APE website">
+                            <input type="hidden" name="emailTitle" value="A new message from the Archive's Contact Form">
+                            <input type="hidden" name="institutionLink" value="[[~[[*id]]? &scheme=`full` &repositoryCode=`[[!+archive.repocode]]`]]">
                             <input type="text" name="confirmHSL" class="confirmField" value="">
                             <p class="formError"><i class="fas fa-exclamation-triangle"></i>
                                 [[!%asi.form_required_fields_empty_err_msg? &topic=`forms` &namespace=`asi`]]</p>
@@ -400,7 +403,7 @@
                     </div>
                 </div>
             </div>
-
+            
         </div>
     </section>
 
