@@ -69,6 +69,7 @@ if(!is_null($scroll)) {
 
 
 if($section == "search-in-archives") {
+    $placeholders['result_type'] = "Archives";
     $output = '';
     $counter = 0;
     $archiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&eadid={$id}&xmlType={$type}";
@@ -76,17 +77,22 @@ if($section == "search-in-archives") {
         $cLevel = substr($cLevelId, '1');
         $archiveUrl .= "&clevelid=".$cLevel."&type=cdetails";
         $placeholders['archive']['clevelid'] = $cLevel;
+        $placeholders['result_clevelid'] = $cLevel;
     } else {
         $archiveUrl .= "&type=frontpage";
     }
     if(!is_null($unitId)) {
         $archiveUrl .= "&clevelunitid={$unitId}";
         $placeholders['archive']['unitid'] = $unitId;
+
+        $placeholders['result_unitid'] = $unitId;
     }
     $placeholders['archive']['repocode'] = $repoCode;
     $placeholders['archive']['type'] = $type;
     $placeholders['archive']['recordid'] = $id;
     $placeholders['archive']['levelname'] = 'clevel';
+
+    $placeholders['result_record_id'] = $id;
 
     $fAidArchiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode=".$repoCode."&request_locale={$lang}&eadid=".$id."&type=cdetails&clevelunitid=".$unitId."&xmlType=".$type;
     $FAarchiveDetails = json_decode(file_get_contents($fAidArchiveUrl));
@@ -254,6 +260,8 @@ if($section == "search-in-archives") {
         $placeholders['archive']['components']['pageTotal'] = $total;
     }
 
+    $placeholders['result_name'] = $placeholders['archive']['title'];
+
     $result['params_json'] = asi::generateParamsString($result, "archive");
 
     //Set a placeholder for all the SOLR data.
@@ -266,6 +274,8 @@ if($section == "search-in-archives") {
 }
 
 if($section == "search-in-institutions") {
+    $placeholders['result_type'] = "Institutions";
+
     //Set the variables we will be filling in the call
     $finding_aids = '';
     $holding_guides = '';
@@ -491,6 +501,8 @@ if($section == "search-in-institutions") {
     $placeholders['institution']['names_items'] = $names_items;
     $placeholders['institution']['names_items_pagination'] = $ecPaginationDetails;
 
+    $placeholders['result_name'] = $placeholders['institution']['name'];
+
     $modx->setPlaceholder('selector', $selector);
     $modx->setPlaceholder('branches', $branches);
     //Generate the parameters JSON string for institution
@@ -498,6 +510,9 @@ if($section == "search-in-institutions") {
 }
 
 if($section == "search-in-names") {
+
+    $placeholders['result_type'] = "Names";
+
     //Get the name details from the API for processing
     $nameDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eacApi.action?aiRepositoryCode=".$repoCode."&eaccpfId=".$id."&translationLanguage=default&langNavigator=it&request_locale={$lang}"));
     //Generate the parameters JSON string for names
@@ -636,12 +651,17 @@ if($section == "search-in-names") {
         }
     }
 
+    $placeholders['result_record_id'] = $id;
+    $placeholders['name']['id']      = $id;
+    $placeholders['name']['repocode']      = $repoCode;
     $placeholders['name']['title']      = $finder->query("//*[@id='nameTitle']")[0]->nodeValue;
     $placeholders['name']['lifedates']  = $finder->query("//*[@class='nameEtryDates']")[0]->nodeValue;
     $placeholders['result_details']     = $finder->query("//*[@id='details']")[0]->C14N();
     $placeholders['pagetitle']          = $placeholders['name']['title'];
     $placeholders['name_description'] = $entityType;
     $placeholders['name_icon'] = $entityIcon;
+    $placeholders['result_name'] = $placeholders['name']['title'];
+
     $modx->setPlaceholders($result['solr_detail'], "solr_data.");
 }
 

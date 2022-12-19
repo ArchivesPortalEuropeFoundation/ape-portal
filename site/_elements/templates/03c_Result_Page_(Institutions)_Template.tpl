@@ -304,9 +304,9 @@
    &emailSubject=`Contact Form (Institutions): [[!+institution.name]]`
    &emailTo=`[[++contact_email]]`
    &emailFrom=`[[++contact_email]]`
-   &formName=`Contact Institution - [[*pagetitle]]`
-   &formFields=`name,email,message`
-   &fieldNames=`name==Full name,email==Email address,message==Message`
+   &formName=`Contact Form (Institutions): [[*pagetitle]]`
+   &formFields=`name,email,message,repositoryCode`
+   &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode`
    &redirectTo=`24`
    &submitVar=`contactInstitution`
    &validate=`confirmHSL:blank`
@@ -314,6 +314,7 @@
                 [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
                     <form class="standard mt20" id="instituteContact" action="[[!requestURI]]" method="post">
                         <input type="hidden" name="emailTitle" value="A new message from the Institution's Contact Form">
+                        <input type="hidden" name="repositoryCode" value="[[!+institution.repo_code]]"/>
                         <input type="hidden" name="institutionLink" value="[[~[[*id]]? &scheme=`full` &repositoryCode=`[[!+institution.repo_code]]`]]">
                         <input type="text" name="confirmHSL" class="confirmField" value="">
                         <p class="formError"><i class="fas fa-exclamation-triangle"></i> [[!%asi.form_required_fields_empty_err_msg? &topic=`forms` &namespace=`asi`]]</p>

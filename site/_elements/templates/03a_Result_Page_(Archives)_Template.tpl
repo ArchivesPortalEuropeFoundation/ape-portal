@@ -286,12 +286,12 @@
                 [[!FormIt?
                 &hooks=`reCaptchaV3,email,FormItSaveForm`
                 &emailTpl=`allFormMessage`
-                &emailSubject=`Content Rating (Archives) - [[!+archive.title:striptags]]`
+                &emailSubject=`Content Rating (Archives): [[!+archive.title:striptags]]`
                 &emailTo=`[[++contact_email]]`
                 &emailFrom=`[[++contact_email]]`
-                &formName=`Rating Form - [[!+archive.title:striptags]]`
-                &formFields=`rating,feedback,repositoryCode`
-                &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode`
+                &formName=`Content Rating (Archives): [[!+archive.title:striptags]]`
+                &formFields=`rating,feedback,repositoryCode,archiveid,unitid,clevelid`
+                &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
                 &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
                     &submitVar=`sendRating`
                 &validate=`confirmHSL:blank`
@@ -304,7 +304,10 @@
                         <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
                             <input type="hidden" name="emailTitle" value="Content (Archive) has been rated">
                             <input type="hidden" name="repositoryCode" value="[[!+archive.repocode]]"/>
-                            <input type="hidden" name="institutionLink" value="[[~[[*id]]? &scheme=`full` &repositoryCode=`[[!+archive.repocode]]`]]">
+                            <input type="hidden" name="archiveid" value="[[!+archive.recordid]]"/>
+                            <input type="hidden" name="unitid" value="[[!+archive.unitid]]"/>
+                            <input type="hidden" name="clevelid" value="[[!+archive.clevelid]]"/>
+                            <input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+archive.repocode]]">
                             <input type="text" name="confirmHSL" class="confirmField" value="">
                             <div class="rating">
                                 <input type="radio" name="rating" value="Good" class="good">
@@ -343,9 +346,9 @@
                         &emailSubject=`Contact Form (Archives): [[!+archive.title:striptags]]`
                         &emailTo=`[[++contact_email]]`
                         &emailFrom=`[[++contact_email]]`
-                        &formName=`Contact Archive - [[!+archive.title:striptags]]`
-                        &formFields=`name,email,message`
-                        &fieldNames=`name==Full name,email==Email address,message==Message`
+                        &formName=`Contact Form (Archives): [[!+archive.title:striptags]]`
+                        &formFields=`name,email,message,repositoryCode,archiveid,unitid,clevelid`
+                        &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
                         &redirectTo=`24`
                         &submitVar=`contactInstitution`
                         &validate=`confirmHSL:blank`
@@ -353,7 +356,11 @@
                         [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
                         <form class="standard mt20" action="[[!requestURI]]" method="post">
                             <input type="hidden" name="emailTitle" value="A new message from the Archive's Contact Form">
-                            <input type="hidden" name="institutionLink" value="[[~[[*id]]? &scheme=`full` &repositoryCode=`[[!+archive.repocode]]`]]">
+                            <input type="hidden" name="repositoryCode" value="[[!+archive.repocode]]"/>
+                            <input type="hidden" name="archiveid" value="[[!+archive.recordid]]"/>
+                            <input type="hidden" name="unitid" value="[[!+archive.unitid]]"/>
+                            <input type="hidden" name="clevelid" value="[[!+archive.clevelid]]"/>
+                            <input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+archive.repocode]]">
                             <input type="text" name="confirmHSL" class="confirmField" value="">
                             <p class="formError"><i class="fas fa-exclamation-triangle"></i>
                                 [[!%asi.form_required_fields_empty_err_msg? &topic=`forms` &namespace=`asi`]]</p>

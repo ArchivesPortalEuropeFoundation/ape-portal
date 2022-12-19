@@ -159,12 +159,12 @@
             [[!FormIt?
                 &hooks=`reCaptchaV3,email,FormItSaveForm`
                 &emailTpl=`allFormMessage`
-                &emailSubject=`Content has been rated - Names archive - [[!#GET.recordId]]`
+                &emailSubject=`Content Rating (Names): [[!+name.title:striptags]]`
                 &emailTo=`[[++contact_email]]`
                 &emailFrom=`[[++contact_email]]`
-                &formName=`Rating Form - [[!#GET.recordId]]`
-                &formFields=`rating,feedback`
-                &fieldNames=`rating==Rating,feedback==Feedback (if any)`
+                &formName=`Content Rating (Names): [[!+name.title:striptags]]`
+            &formFields=`rating,feedback,repositoryCode,nameid`
+            &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,nameid=Name ID`
                 &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
                 &submitVar=`sendRating`
                 &validate=`confirmEFm:blank`
@@ -175,7 +175,10 @@
                 <div class="row">
                     <div class="col-md-7">
                         <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
-                            <input type="hidden" name="emailTitle" value="Content has been rated">
+                            <input type="hidden" name="emailTitle" value="Content (Name) has been rated">
+                            <input type="hidden" name="repositoryCode" value="[[!+name.repocode]]"/>
+                            <input type="hidden" name="nameid" value="[[!+name.id]]"/>
+                            <input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+name.repocode]]">
                             <input type="text" name="confirmEFm" class="confirmField">
 
                             <div class="rating">
@@ -217,9 +220,9 @@
                     &emailSubject=`Contact Form (Names): [[!+name.title]]`
                     &emailTo=`[[++contact_email]]`
                     &emailFrom=`[[++contact_email]]`
-                    &formName=`Contact Names`
-                    &formFields=`name,email,message`
-                    &fieldNames=`name==Full name,email==Email address,message==Message`
+                    &formName=`Contact (Names): [[!+name.title]]`
+                    &formFields=`name,email,message,repositoryCode,recordid`
+                    &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode,recordid=Name ID`
                     &redirectTo=`24`
                     &submitVar=`contactInstitution`
                     &validate=`confirmEFm:blank`
@@ -227,7 +230,9 @@
                     [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
                     <form class="standard mt20" action="[[!requestURI]]" method="post">
                         <input type="hidden" name="emailTitle" value="A new message from the Name's Contact Form">
-                        <input type="hidden" name="institutionLink" value="[[~[[*id]]? &scheme=`full` &repositoryCode=`[[!+institution.repositoryCode]]`]]">
+                        <input type="hidden" name="repositoryCode" value="[[!+name.repocode]]"/>
+                        <input type="hidden" name="recordid" value="[[!+name.id]]"/>
+                        <input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+name.repocode]]">
                         <input type="text" name="confirmEFm" class="confirmField" value="">
                         
                         <p class="formError"><i class="fas fa-exclamation-triangle"></i> [[!%asi.form_required_fields_empty_err_msg? &topic=`forms` &namespace=`asi`]]</p>

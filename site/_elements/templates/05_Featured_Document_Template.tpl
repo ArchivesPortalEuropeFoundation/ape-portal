@@ -99,10 +99,10 @@
 [[!FormIt?
    &hooks=`reCaptchaV3,email,FormItSaveForm`
    &emailTpl=`allFormMessage`
-   &emailSubject=`Content has been rated - [[*pagetitle]]`
+   &emailSubject=`Content Rating (Topics|Highlights) - [[*pagetitle]]`
    &emailTo=`[[++contact_email]]`
    &emailFrom=`[[++contact_email]]`
-   &formName=`Rating Form - [[*pagetitle]]`
+   &formName=`Content Rating (Topics|Highlights) - [[*pagetitle]]`
    &formFields=`rating,feedback`
    &fieldNames=`rating==Rating,feedback==Feedback (if any)`
    &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
@@ -115,7 +115,7 @@
         <div class="row">
             <div class="col-md-7">    
                 <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
-                    <input type="hidden" name="emailTitle" value="Content has been rated">
+                    <input type="hidden" name="emailTitle" value="Content (Topics|Highlights) has been rated">
                     <input type="text" name="confirmHSL" class="confirmField" value="">
                     <div class="rating">
                         <input type="radio" name="rating" value="Good" class="good">
@@ -149,10 +149,10 @@
 [[!FormIt?
    &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
    &emailTpl=`allFormMessage`
-   &emailSubject=`A message regarding [[*pagetitle]]`
+   &emailSubject=`Contact Form (Topics|Highlights) - [[*pagetitle]]`
    &emailTo=`[[++contact_email]]`
    &emailFrom=`[[++contact_email]]`
-   &formName=`Contact Institution - [[*pagetitle]]`
+   &formName=`Contact Form (Topics|Highlights) - [[*pagetitle]]`
    &formFields=`name,email,message`
    &fieldNames=`name==Full name,email==Email address,message==Message`
    &redirectTo=`24`
