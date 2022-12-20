@@ -284,7 +284,7 @@
                 <h2 class="iconTitle"><i class="fas fa-thumbs-up"></i> [[!%asi.action_rate_this_content? &topic=`actions` &namespace=`asi`]]</h2>
 
                 [[!FormIt?
-                &hooks=`reCaptchaV3,email,FormItSaveForm`
+                &hooks=`reCaptchaV3,email,FormItSaveForm,removePost`
                 &emailTpl=`allFormMessage`
                 &emailSubject=`Content Rating (Archives): [[!+archive.title:striptags]]`
                 &emailTo=`[[++contact_email]]`
