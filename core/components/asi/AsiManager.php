@@ -3697,11 +3697,13 @@ class AsiManager
 
         // sort facets
         $filters = array();
-        foreach ($s_results->facet_counts->facet_fields as $fk => $ff) {
+        if (isset($s_results->facet_counts)) {
+            foreach ($s_results->facet_counts->facet_fields as $fk => $ff) {
 
-            foreach ($ff as $fi => $v) {
-                if ($v > 0) {
-                    $filters[self::mapSolrFacetsToWeb($fk)][$fi] = $v;
+                foreach ($ff as $fi => $v) {
+                    if ($v > 0) {
+                        $filters[self::mapSolrFacetsToWeb($fk)][$fi] = $v;
+                    }
                 }
             }
         }

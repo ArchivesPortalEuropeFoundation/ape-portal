@@ -159,12 +159,13 @@
             [[!FormIt?
                 &hooks=`reCaptchaV3,email,FormItSaveForm`
                 &emailTpl=`allFormMessage`
-                &emailSubject=`Content Rating (Names): [[!+name.title:striptags]]`
+                &emailSubject=`Content Rating (Names)`
+                &emailUseFieldForSubject=`1`
                 &emailTo=`[[++contact_email]]`
                 &emailFrom=`[[++contact_email]]`
-                &formName=`Content Rating (Names): [[!+name.title:striptags]]`
-            &formFields=`rating,feedback,repositoryCode,nameid`
-            &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,nameid=Name ID`
+                &formName=`Content Rating (Names)`
+                &formFields=`rating,feedback,repositoryCode,nameid`
+                &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,nameid=Name ID`
                 &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
                 &submitVar=`sendRating`
                 &validate=`confirmEFm:blank`
@@ -175,6 +176,7 @@
                 <div class="row">
                     <div class="col-md-7">
                         <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
+                            <input type="hidden" name="subject" value="Content Rating (Names): [[!+name.title:striptags]]"/>
                             <input type="hidden" name="emailTitle" value="Content (Name) has been rated">
                             <input type="hidden" name="repositoryCode" value="[[!+name.repocode]]"/>
                             <input type="hidden" name="nameid" value="[[!+name.id]]"/>
@@ -218,9 +220,10 @@
                     &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
                     &emailTpl=`allFormMessage`
                     &emailSubject=`Contact Form (Names): [[!+name.title]]`
+                    &emailUseFieldForSubject=`1`
                     &emailTo=`[[++contact_email]]`
                     &emailFrom=`[[++contact_email]]`
-                    &formName=`Contact (Names): [[!+name.title]]`
+                    &formName=`Contact (Names)`
                     &formFields=`name,email,message,repositoryCode,recordid`
                     &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode,recordid=Name ID`
                     &redirectTo=`24`
@@ -229,6 +232,7 @@
                 ]]
                     [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
                     <form class="standard mt20" action="[[!requestURI]]" method="post">
+                        <input type="hidden" name="subject" value="Contact Form (Names): [[!+name.title]]"/>
                         <input type="hidden" name="emailTitle" value="A new message from the Name's Contact Form">
                         <input type="hidden" name="repositoryCode" value="[[!+name.repocode]]"/>
                         <input type="hidden" name="recordid" value="[[!+name.id]]"/>

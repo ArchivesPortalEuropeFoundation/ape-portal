@@ -21,14 +21,15 @@
 			[[!FormIt?
 			&hooks=`reCaptchaV3,setRecipient,FormItSaveForm,email`
 			&emailTpl=`allFormMessage`
-			&emailSubject=`Make a Suggestion ([[!+result_type:is=``:then=`Topics|Highlights`:else=`[[!+result_type]]`]]): [[!+result_name:is=``:then=`[[!*pagetitle:striptags]]`:else=`[[!+result_name:striptags]]`]]`
+			&emailSubject=`Make a Suggestion`
+			&emailUseFieldForSubject=`1`
 			&emailTo=`[[++contact_email]]`
 			&emailFrom=`[[++contact_email]]`
 			&emailTopic=`[[++contact_email]]`
 			&emailTranslation=`[[++contact_email]]`
 			&emailConnect=`[[++contact_email]]`
 			&emailOther=`[[++contact_email]]	`
-			&formName=`Make a Suggestion ([[!+result_type:is=``:then=`Topics|Highlights`:else=`[[!+result_type]]`]]): [[!+result_name:is=``:then=`[[!*pagetitle:striptags]]`:else=`[[!+result_name:striptags]]`]]`
+			&formName=`Make a Suggestion ([[!+result_type:is=``:then=`Topics|Highlights`:else=`[[!+result_type]]`]])`
 			&formFields=`name,email,suggestion,recipient,resulttype,repositoryCode,recordid,clevelid,unitid,resourceid`
 			&fieldNames=`name==Full name,email==Email address,suggestion==Suggestion,recipient==Recipient,repositoryCode=RepositoryCode,resulttype=Result Type,recordid=Record ID,unitid=UnitId,clevelid=CLevelId,resourceid=Resource Id`
 			&submitVar=`makeSuggestion`
@@ -38,6 +39,7 @@
 			]] 			
 			[[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
 			<form class="standard" action="[[!requestURI]]" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="subject" value="Make a Suggestion ([[!+result_type:is=``:then=`Topics|Highlights`:else=`[[!+result_type]]`]]): [[!+result_name:is=``:then=`[[!*pagetitle:striptags]]`:else=`[[!+result_name:striptags]]`]]"/>
                 <input type="hidden" name="emailTitle" value="A suggestion has been made">
 				<input type="hidden" name="resulttype" value="[[!+result_type:is=``:then=`Topics|Highlights`:else=`[[!+result_type]]`]]"/>
 				<input type="hidden" name="recordid" value="[[!+result_record_id]]"/>

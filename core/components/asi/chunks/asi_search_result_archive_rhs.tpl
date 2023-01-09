@@ -104,25 +104,34 @@
     <h2 class="iconTitle"><i class="fas fa-thumbs-up"></i> [[!%asi.action_rate_this_content? &topic=`actions` &namespace=`asi`]]</h2>
 
     [[!FormIt?
-        &hooks=`email,FormItSaveForm`
+        &hooks=`reCaptchaV3,email,FormItSaveForm,removePost`
         &emailTpl=`allFormMessage`
-        &emailSubject=`Content has been rated - [[*pagetitle]]`
+        &emailSubject=`Content Rating (Archives)`
+        &emailUseFieldForSubject=`1`
         &emailTo=`[[++contact_email]]`
         &emailFrom=`[[++contact_email]]`
-        &formName=`Rating Form - [[*pagetitle]]`
-        &formFields=`rating,feedback`
-        &fieldNames=`rating==Rating,feedback==Feedback (if any)`
+        &formName=`Content Rating (Archives)`
+        &formFields=`rating,feedback,repositoryCode,archiveid,unitid,clevelid`
+        &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
         &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
-        &submitVar=`sendRatingDym`
-        &validate=`confirmHDY:blank`
+        &submitVar=`sendRating`
+        &validate=`confirmHSL:blank`
     ]]
-
+    [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
     [[!+fi.successMessage:notempty=`<h5>[[+fi.successMessage]]</h5>`:default=`
     [[++rate_content_text]]
         <div class="row">
             <div class="col-md-7">
-                <form class="standard mt20" id="rateForm" action="[[~[[*id]]]]#rateContent" method="post">
-                    <input type="hidden" name="emailTitle" value="Content has been rated">
+                <form class="standard mt20" id="rateForm" action="[[+request_uri]]#rateContent" method="post">
+                    
+                    <input type="hidden" name="subject" value="Content Rating (Archives): [[!+archive.title:striptags]]"/>
+                    <input type="hidden" name="emailTitle" value="Content (Archive) has been rated">
+                    <input type="hidden" name="repositoryCode" value="[[!+archive.repocode]]"/>
+                    <input type="hidden" name="archiveid" value="[[!+archive.recordid]]"/>
+                    <input type="hidden" name="unitid" value="[[!+archive.unitid]]"/>
+                    <input type="hidden" name="clevelid" value="[[!+archive.clevelid]]"/>
+                    <input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+archive.repocode]]">
+
                     <input type="text" name="confirmHDY" class="confirmField" value="">
                     <div class="rating">
                         <input type="radio" name="rating" value="Good" class="good">
@@ -139,8 +148,7 @@
                             </div>
                         </div>
                     </div>
-                    <input class="disabled" type="submit" name="sendRatingDym"
-                        value="[[!%asi.action_send_rating? &topic=`actions` &namespace=`asi`]]">
+                    <input class="disabled" type="submit" name="sendRating" value="[[!%asi.action_send_rating? &topic=`actions` &namespace=`asi`]]">
                     <input type="hidden" name="institution_id" value="[[+search_result.institution_id]]">
                     <input type="hidden" name="form_type" value="RATE" />
                     <input type="hidden" name="form_location" value="ARCHIVE_DETAIL" />
@@ -157,44 +165,48 @@
         <div class="col-md-7">
 
             [[!FormIt?
-            &hooks=`email,FormItSaveForm,redirect`
+            &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
             &emailTpl=`allFormMessage`
-            &emailSubject=`A message regarding [[*pagetitle]]`
+            &emailSubject=`Contact Form (Archives)`
+            &emailUseFieldForSubject=`1`
             &emailTo=`[[++contact_email]]`
             &emailFrom=`[[++contact_email]]`
-            &formName=`Contact Institution - [[*pagetitle]]`
-            &formFields=`name,email,message`
-            &fieldNames=`name==Full name,email==Email address,message==Message`
+            &formName=`Contact Form (Archives)`
+            &formFields=`name,email,message,repositoryCode,archiveid,unitid,clevelid`
+            &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
             &redirectTo=`24`
             &submitVar=`contactInstitution`
-            &validate=`confirmEmail:blank`
+            &validate=`confirmHSL:blank`
             ]]
-
-            <form class="standard mt20" action="[[~[[*id]]]]" method="post">
-                <input type="hidden" name="emailTitle" value="A new message from the APE website">
-                <input type="text" name="confirmEmail" class="confirmField" value="">
+            [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
+            <form class="standard mt20" action="[[+request_uri]]" method="post">
+                <input type="hidden" name="subject" value="Contact Form (Archives): [[!+archive.title:striptags]]"/>
+                <input type="hidden" name="emailTitle" value="A new message from the Archive's Contact Form">
+                <input type="hidden" name="repositoryCode" value="[[!+archive.repocode]]"/>
+                <input type="hidden" name="archiveid" value="[[!+archive.recordid]]"/>
+                <input type="hidden" name="unitid" value="[[!+archive.unitid]]"/>
+                <input type="hidden" name="clevelid" value="[[!+archive.clevelid]]"/>
+                <input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+archive.repocode]]">
+                <input type="text" name="confirmHSL" class="confirmField" value="">
                 <p class="formError"><i class="fas fa-exclamation-triangle"></i>
                     [[!%asi.form_required_fields_empty_err_msg? &topic=`forms` &namespace=`asi`]]</p>
                 <p class="fieldLabel">[[!%asi.label_full_name? &topic=`label` &namespace=`asi`]]*</p>
                 <div class="inputWrapper required">
-                    <input type="text" name="name"
-                           placeholder="[[!%asi.input_ph_full_name? &topic=`label` &namespace=`asi`]]">
+                    <input type="text" name="name" placeholder="[[!%asi.input_ph_full_name? &topic=`label` &namespace=`asi`]]">
                     <span class="errorMessage">[[!%asi.form_full_name_required_err_msg? &topic=`forms`
-                                &namespace=`asi`]]</span>
+                                    &namespace=`asi`]]</span>
                 </div>
                 <p class="fieldLabel">[[!%asi.label_email_address? &topic=`label` &namespace=`asi`]]*</p>
                 <div class="inputWrapper required">
-                    <input type="text" name="email"
-                           placeholder="[[!%asi.input_ph_email_address? &topic=`input` &namespace=`asi`]]">
+                    <input type="text" name="email" placeholder="[[!%asi.input_ph_email_address? &topic=`input` &namespace=`asi`]]">
                     <span class="errorMessage">[[!%asi.form_email_address_required_err_msg? &topic=`forms`
-                                &namespace=`asi`]]</span>
+                                    &namespace=`asi`]]</span>
                 </div>
                 <p class="fieldLabel">[[!%asi.label_your_message? &topic=`label` &namespace=`asi`]]*</p>
                 <div class="inputWrapper required">
-                            <textarea class="tall" name="message"
-                                      placeholder="[[!%asi.input_ph_your_message? &topic=`input` &namespace=`asi`]]"></textarea>
+                    <textarea class="tall" name="message" placeholder="[[!%asi.input_ph_your_message? &topic=`input` &namespace=`asi`]]"></textarea>
                     <span class="errorMessage">[[!%asi.form_message_required_err_msg? &topic=`forms`
-                                &namespace=`asi`]]</span>
+                                    &namespace=`asi`]]</span>
                 </div>
                 [[- <div class="checkbox">
                     <input type="checkbox" name="translate" value="1">
@@ -216,9 +228,8 @@
                     </div>
                 </div>
                 ]]
-                <input type="submit" name="contactInstitution"
-                       value="[[!%asi.action_send_message? &topic=`actions` &namespace=`asi`]]">
-                <input type="hidden" name="institution_id" value="[[+search_result.institution_id]]">
+                <input type="submit" name="contactInstitution" value="[[!%asi.action_send_message? &topic=`actions` &namespace=`asi`]]">
+                <input type="hidden" name="recordId" value="[[!#GET.recordId]]" />
                 <input type="hidden" name="form_type" value="DIRECT" />
                 <input type="hidden" name="form_location" value="ARCHIVE_DETAIL" />
             </form>

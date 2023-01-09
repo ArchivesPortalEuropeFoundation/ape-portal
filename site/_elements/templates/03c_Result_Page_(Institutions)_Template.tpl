@@ -301,10 +301,11 @@
 [[!FormIt?
    &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
    &emailTpl=`allFormMessage`
-   &emailSubject=`Contact Form (Institutions): [[!+institution.name]]`
+   &emailSubject=`Contact Form (Institutions)`
+                    &emailUseFieldForSubject=`1`
    &emailTo=`[[++contact_email]]`
    &emailFrom=`[[++contact_email]]`
-   &formName=`Contact Form (Institutions): [[*pagetitle]]`
+   &formName=`Contact Form (Institutions)`
    &formFields=`name,email,message,repositoryCode`
    &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode`
    &redirectTo=`24`
@@ -313,6 +314,7 @@
 ]]                
                 [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
                     <form class="standard mt20" id="instituteContact" action="[[!requestURI]]" method="post">
+                        <input type="hidden" name="subject" value="Contact Form (Institutions): [[!+institution.name]]"/>
                         <input type="hidden" name="emailTitle" value="A new message from the Institution's Contact Form">
                         <input type="hidden" name="repositoryCode" value="[[!+institution.repo_code]]"/>
                         <input type="hidden" name="institutionLink" value="[[~[[*id]]? &scheme=`full` &repositoryCode=`[[!+institution.repo_code]]`]]">

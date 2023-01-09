@@ -523,18 +523,26 @@ switch ($_REQUEST['action']) {
         $output = '';
         $counter = 0;
         $archiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&eadid={$id}&xmlType={$type}";
+        $detailUrl = "advanced-search/search-in-archives/results-(archives)/?";
+        //repositoryCode=[[!+archive.repocode]]\"&term=archive&levelName=clevel&t=fa&recordId=[[!+archive.recordid]]&c=C[[!+archive.clevelid]]";
+        $detailUrl .= "&repositoryCode=".$repoCode;
+        $detailUrl .= "&recordId=".$id;
         if($levelName === 'clevel') {
             $cLevel = substr($cLevelId, '1');
             $archiveUrl .= "&clevelid=".$cLevel."&type=cdetails";
             $placeholders['archive']['clevelid'] = $cLevel;
+            $detailUrl .= "&c=".$params['c'];
         } else {
             $archiveUrl .= "&type=frontpage";
         }
+        $detailUrl .= "&levelName=".$params['level'];
+        $detailUrl .= "&t=".$params['type'];
 
         $placeholders['archive']['repocode'] = $repoCode;
         $placeholders['archive']['type'] = $type;
         $placeholders['archive']['recordid'] = $id;
         $placeholders['archive']['levelname'] = 'clevel';
+        $placeholders['request_uri'] = $detailUrl;
 
         $fAidArchiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode=".$repoCode."&request_locale={$lang}&eadid=".$id."&type=cdetails&clevelunitid=".$unitId."&xmlType=".$type;
         $FAarchiveDetails = json_decode(file_get_contents($fAidArchiveUrl));
@@ -693,7 +701,7 @@ switch ($_REQUEST['action']) {
         $result['params_json'] = asi::generateParamsString($result, "archive");
 
         $archiveDetailRHS = $modx->getChunk("asi_search_result_archive_rhs", array(
-            'archive' => $placeholders['archive']
+            'archive' => $placeholders['archive'], 'request_uri' => $placeholders['request_uri']
         ));
 
         $modx->setPlaceholders($result['solr_detail'], "solr_data.");

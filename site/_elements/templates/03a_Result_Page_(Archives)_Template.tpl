@@ -286,10 +286,11 @@
                 [[!FormIt?
                 &hooks=`reCaptchaV3,email,FormItSaveForm,removePost`
                 &emailTpl=`allFormMessage`
-                &emailSubject=`Content Rating (Archives): [[!+archive.title:striptags]]`
+                &emailSubject=`Content Rating (Archives)`
+                &emailUseFieldForSubject=`1`
                 &emailTo=`[[++contact_email]]`
                 &emailFrom=`[[++contact_email]]`
-                &formName=`Content Rating (Archives): [[!+archive.title:striptags]]`
+                &formName=`Content Rating (Archives)`
                 &formFields=`rating,feedback,repositoryCode,archiveid,unitid,clevelid`
                 &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
                 &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
@@ -302,6 +303,7 @@
                 <div class="row">
                     <div class="col-md-7">
                         <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
+                            <input type="hidden" name="subject" value="Content Rating (Archives): [[!+archive.title:striptags]]"/>
                             <input type="hidden" name="emailTitle" value="Content (Archive) has been rated">
                             <input type="hidden" name="repositoryCode" value="[[!+archive.repocode]]"/>
                             <input type="hidden" name="archiveid" value="[[!+archive.recordid]]"/>
@@ -325,7 +327,7 @@
                                 </div>
                             </div>
                                 <input class="disabled" type="submit" name="sendRating" value="[[!%asi.action_send_rating? &topic=`actions` &namespace=`asi`]]">
-                            <input type="hidden" name="institution_id" value="[[+search_result.institution_id]]">
+                                <input type="hidden" name="institution_id" value="[[+search_result.institution_id]]">
                                 <input type="hidden" name="form_type" value="RATE" />
                             <input type="hidden" name="form_location" value="ARCHIVE_DETAIL" />
                         </form>
@@ -343,10 +345,11 @@
                         [[!FormIt?
                         &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
                         &emailTpl=`allFormMessage`
-                        &emailSubject=`Contact Form (Archives): [[!+archive.title:striptags]]`
+                        &emailSubject=`Contact Form (Archives)`
+                        &emailUseFieldForSubject=`1`
                         &emailTo=`[[++contact_email]]`
                         &emailFrom=`[[++contact_email]]`
-                        &formName=`Contact Form (Archives): [[!+archive.title:striptags]]`
+                        &formName=`Contact Form (Archives)`
                         &formFields=`name,email,message,repositoryCode,archiveid,unitid,clevelid`
                         &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
                         &redirectTo=`24`
@@ -355,6 +358,7 @@
                         ]]
                         [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
                         <form class="standard mt20" action="[[!requestURI]]" method="post">
+                            <input type="hidden" name="subject" value="Contact Form (Archives): [[!+archive.title:striptags]]"/>
                             <input type="hidden" name="emailTitle" value="A new message from the Archive's Contact Form">
                             <input type="hidden" name="repositoryCode" value="[[!+archive.repocode]]"/>
                             <input type="hidden" name="archiveid" value="[[!+archive.recordid]]"/>
