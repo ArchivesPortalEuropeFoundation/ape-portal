@@ -236,3 +236,24 @@
         </div>
     </div>
 </div>
+<script>
+    gRecap();
+
+    $('#rateForm .rating input').click(function () {
+        alert("test");
+        if ($(this).is('.checked')) {
+            $(this).removeAttr('checked');
+            $(this).removeClass('checked');
+            $('#rateForm input[type="submit"]').addClass('disabled');
+        } else {
+            $('#rateForm .rating input').removeClass('checked');
+            $(this).addClass('checked');
+        }
+    });
+
+    $('#rateForm input[name="rating"]').on('change', function (e) {
+        if ($('#rateForm input[name="rating"]:checked').val()) {
+            $('#rateForm input[type="submit"]').removeClass('disabled');
+        }
+    });
+</script>

@@ -32,3 +32,8 @@
     </div>]]
 </div>
 [[!+archive.original_link:notempty=`<a class="originalLink" href="[[!+archive.original_link]]" target="_blank">[[!+archive.original_link_text]] <i class="far fa-external-link-alt ml"></i></a>`]]
+
+<script>
+    listenForSuggestion();
+    listenForDropdownButtons();
+</script>

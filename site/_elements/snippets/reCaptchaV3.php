@@ -15,7 +15,7 @@ $data = array (
     'message'   => $modx->getOption('recaptcha_error_message')
 );
 
-if (empty($data['secret'] && empty($data['token']))) {
+if (!isset($data['secret']) || !isset($data['token'])) {
     //Not setup
     return true;
 }
@@ -30,7 +30,8 @@ curl_setopt_array($ch, array(
     )
 ));
 
-$reply = json_decode(curl_exec($ch), 1);
+$raw_reply = curl_exec($ch);
+$reply = json_decode($raw_reply, 1);
 curl_close($ch);
 
 //Do we fail the minimum score?

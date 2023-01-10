@@ -1123,3 +1123,18 @@ function copyTextToClipboard(text) {
     }
     document.body.removeChild(textArea);
 }
+
+function listenForDropdownButtons() {
+    $('#innerHero .buttons .buttonDropdown a.button').click(function () {
+        var buttons = $('#innerHero .buttons');
+        var inner = $(this).siblings('.inner');
+        if ($(this).is('.active')) {
+            $(buttons).removeClass('faded');
+            $(this).removeClass('active');
+        } else {
+            $(buttons).addClass('faded');
+            $(this).addClass('active');
+        }
+        $(inner).slideToggle(300, 'swing');
+    });
+}
