@@ -240,7 +240,6 @@
     gRecap();
 
     $('#rateForm .rating input').click(function () {
-        alert("test");
         if ($(this).is('.checked')) {
             $(this).removeAttr('checked');
             $(this).removeClass('checked');
