@@ -31,6 +31,8 @@ $_REQUEST = $sanitizedRequests;
 $success = false;
 $response = array('status' => '500', 'message' => 'sorry, something went wrong, please try again.');
 
+$FULL_HOST = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
+
 switch ($_REQUEST['action']) {
 
     case "heirarchical_tree":
@@ -532,9 +534,16 @@ switch ($_REQUEST['action']) {
             $archiveUrl .= "&clevelid=".$cLevel."&type=cdetails";
             $placeholders['archive']['clevelid'] = $cLevel;
             $detailUrl .= "&c=".$params['c'];
+            $placeholders['result_clevelid'] = $cLevel;
         } else {
             $archiveUrl .= "&type=frontpage";
         }
+        if(!is_null($unitId)) {
+            $placeholders['archive']['unitid'] = $unitId;
+
+            $placeholders['result_unitid'] = $unitId;
+        }
+
         $detailUrl .= "&levelName=".$params['level'];
         $detailUrl .= "&t=".$params['type'];
 
@@ -671,8 +680,18 @@ switch ($_REQUEST['action']) {
         $placeholders['pagetitle']          = $placeholders['archive']['title'];
         $placeholders['archive']['date']    = $finder->query("//div[@class='subtitle']")[0]->nodeValue;
         $placeholders['archive']['html']    = $doc->saveHTML();
+        $placeholders['result_type'] = "Archives";
+        $placeholders['result_name'] = $placeholders['archive']['title'];
+        $placeholders['result_record_id'] = $placeholders['archive']['recordid'];
+        $placeholders['institution']['repositoryCode'] = $repoCode;
+        $placeholders['sharing_uri'] = $FULL_HOST.'/'.$detailUrl;
+        
         $archiveDetailTop = $modx->getChunk("asi_search_result_archive_top", array(
-            'archive' => $placeholders['archive']
+            'archive' => $placeholders['archive'], 'result_type' => $placeholders['result_type'], 'result_name' => $placeholders['result_name'],
+            'result_record_id' => $placeholders['result_record_id'], 'result_clevelid' => $placeholders['result_clevelid'],
+            'result_unitid' => $placeholders['result_unitid'], 'institution.repositoryCode' => $placeholders['institution']['repositoryCode'],
+            'suggestion_request_uri' =>  $placeholders['request_uri'], 'sharing_uri' => urlencode($placeholders['sharing_uri']),
+            'sharing_uri_unescaped' => $placeholders['sharing_uri'], 'sharing_text' => $placeholders['pagetitle']
         ));
 
         $archiveDetailTopLeft = $modx->getChunk("asi_search_result_archive_top_left", array(
@@ -724,6 +743,7 @@ switch ($_REQUEST['action']) {
         $response['result']['compCurrentPg'] = $placeholders['archive']['components']['page'];
         $response['result']['compResultsTotal'] = $placeholders['archive']['components']['resultsTotal'];
         $response['result']['compPageTotal'] = $placeholders['archive']['components']['pageTotal'];
+
         break;
 
     case "load_tree_children":

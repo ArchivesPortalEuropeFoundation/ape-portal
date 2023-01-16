@@ -60,10 +60,10 @@
                         <div class="buttonDropdown">
                             <a class="button blue"><i class="fas fa-share-alt"></i><span class="hidden-xs"> [[!%asi.tools_share? &topic=`default` &namespace=`asi`]]</span></a>
                             <div class="inner">
-                                <a href="[[++sharing_facebook]]" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-                                <a href="[[++sharing_twitter]]" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-                                <a href="[[++sharing_linkedin]]" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a>
-                                <a href="[[!+URI]]" class="copyUrl"><i class="fas fa-link"></i> <span>[[!%asi.tools_copy_link? &topic=`default` &namespace=`asi`]]</span></a>
+                                <a href="[[!++sharing_facebook_content]]" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                                <a href="[[!++sharing_twitter_content]]" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                                <a href="[[++sharing_linkedin_content]]" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a>
+                                <a href="[[!+URI]]" id="copyUrl" class="copyUrl"><i class="fas fa-link"></i> <span>[[!%asi.tools_copy_link? &topic=`default` &namespace=`asi`]]</span></a>
                             </div>
                         </div>
                         [[-<div class="buttonDropdown">
@@ -84,6 +84,7 @@
             </div>
         </div>
     </div>
+
 
     <section id="innerHero">
         <div class="container">
@@ -110,9 +111,9 @@
                     <div class="buttonDropdown">
                         <a class="button blue"><i class="fas fa-share-alt"></i><span class="hidden-xs"> [[!%asi.tools_share? &topic=`default` &namespace=`asi`]]</span></a>
                         <div class="inner">
-                            <a href="[[++sharing_facebook]]" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-                            <a href="[[++sharing_twitter]]" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-                            <a href="[[++sharing_linkedin]]" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a>
+                            <a href="[[++sharing_facebook_content]]" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="[[++sharing_twitter_content]]" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href="[[++sharing_linkedin_content]]" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a>
                             <a href="[[!+URI]]" class="copyUrl"><i class="fas fa-link"></i> <span>[[!%asi.tools_copy_link? &topic=`default` &namespace=`asi`]]</span></a>
                         </div>
                     </div>
@@ -127,8 +128,16 @@
                 </div>
                 [[!+archive.original_link:notempty=`<a class="originalLink" href="[[!+archive.original_link]]" target="_blank">[[!+archive.original_link_text]] <i class="far fa-external-link-alt ml"></i></a>`]]
                 [[!+search_result.original_presentation_html]]
-            </div>
 
+                <script>
+                    document.querySelector('meta[property="og:title"]').setAttribute("content", "[[!+archive.title]]");
+                    document.querySelector('meta[property="og:url"]').setAttribute("content", "[[!+URI]]");
+                </script>
+                
+                <div style="text-align: left">
+                    [[$suggestionPopup]]
+                </div>
+            </div>
         </div>
     </section>
 
@@ -428,7 +437,7 @@
 
     [[$accountNeededPopup]]
 
-    [[$suggestionPopup]]
+    [[- [[$suggestionPopup]] ]]
 
     <div id="optionsSlideUp" class="slideUp">
         <span class="closeIcon toggleSlideUp"><i class="fas fa-times"></i></span>
