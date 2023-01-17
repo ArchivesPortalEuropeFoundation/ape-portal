@@ -83,9 +83,9 @@
                     <div class="buttonDropdown">
                         <a class="button blue"><i class="fas fa-share-alt"></i><span class="hidden-xs"> [[!%asi.tools_share? &topic=`default` &namespace=`asi`]]</span></a>
                         <div class="inner">
-                            <a href="[[++sharing_facebook]]" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-                            <a href="[[++sharing_twitter]]" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-                            <a href="[[++sharing_linkedin]]" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a>
+                            <a href="[[++sharing_facebook_content]]" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="[[++sharing_twitter_content]]" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href="[[++sharing_linkedin_content]]" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a>
                             <a href="[[!+URI]]" class="copyUrl"><i class="fas fa-link"></i> <span>[[!%asi.tools_copy_link? &topic=`default` &namespace=`asi`]]</span></a>
                         </div>
                     </div>
@@ -125,9 +125,9 @@
             <div class="buttonDropdown">
                 <a class="button blue"><i class="fas fa-share-alt"></i><span class="hidden-xs"> [[!%asi.tools_share? &topic=`default` &namespace=`asi`]]</span></a>
                 <div class="inner">
-                    <a href="[[++sharing_facebook]]" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-                    <a href="[[++sharing_twitter]]" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-                    <a href="[[++sharing_linkedin]]" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a>
+                    <a href="[[++sharing_facebook_content]]" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="[[++sharing_twitter_content]]" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="[[++sharing_linkedin_content]]" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a>
                     <a href="[[!+URI]]" class="copyUrl"><i class="fas fa-link"></i> <span>[[!%asi.tools_copy_link? &topic=`default` &namespace=`asi`]]</span></a>
                 </div>
             </div>

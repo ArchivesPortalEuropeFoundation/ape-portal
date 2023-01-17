@@ -946,9 +946,81 @@ $(document).ready(function () {
             $(this).removeAttr('checked');
             $(this).removeClass('checked');
             $('#rateForm input[type="submit"]').addClass('disabled');
+
+            var field = $('.hiddenContent');
+            if (field.hasClass('open')) {
+                field.toggleClass('open');
+                field.children('.inner').slideToggle(300, 'swing');
+
+                var txtarea = $('.hiddenContent textarea');
+                txtarea.val('');
+            }
+
         } else {
             $('#rateForm .rating input').removeClass('checked');
             $(this).addClass('checked');
+            if ($(this).hasClass('bad') || $(this).hasClass('neutral')){
+                var field = $('.hiddenContent');
+                if (!field.hasClass('open')) {
+                    field.toggleClass('open');
+                    field.children('.inner').slideToggle(300, 'swing');
+                }
+
+                var txtarea = $('.hiddenContent textarea');
+                if (txtarea.val().length >= 10) {
+                    $('#rateForm input[type="submit"]').removeClass('disabled');
+                }
+                else {
+                    $('#rateForm input[type="submit"]').addClass('disabled');
+                }
+            }
+            else {
+                var field = $('.hiddenContent');
+                if (field.hasClass('open')) {
+                    field.toggleClass('open');
+                    field.children('.inner').slideToggle(300, 'swing');
+
+                    var txtarea = $('.hiddenContent textarea');
+                    txtarea.val('');
+                }
+
+                $('#rateForm input[type="submit"]').removeClass('disabled');
+            }
+        }
+    });
+
+    $('#rateForm input[name="rating"]').on('change', function (e) {
+
+        if ($('#rateForm input[name="rating"]:checked').val()) {
+            var mood = $('#rateForm input[name="rating"]:checked').val();
+            if (mood == 'Good'){
+                $('#rateForm input[type="submit"]').removeClass('disabled');
+            }
+            else {
+                var txtarea = $('.hiddenContent textarea');
+                if (txtarea.val().length >= 10) {
+                    $('#rateForm input[type="submit"]').removeClass('disabled');
+                }
+                else {
+                    $('#rateForm input[type="submit"]').addClass('disabled');
+                }
+            }
+        }
+    });
+
+    $('.hiddenContent textarea').keyup(function() {
+        var mood = $('#rateForm input[name="rating"]:checked').val();
+        if (mood == 'Good'){
+            $('#rateForm input[type="submit"]').removeClass('disabled');
+        }
+        else {
+            var txtarea = $('.hiddenContent textarea');
+            if (txtarea.val().length >= 10) {
+                $('#rateForm input[type="submit"]').removeClass('disabled');
+            }
+            else {
+                $('#rateForm input[type="submit"]').addClass('disabled');
+            }
         }
     });
 
@@ -1018,12 +1090,6 @@ $(document).ready(function () {
         $(input).val(recipient);
     });
 
-    $('#rateForm input[name="rating"]').on('change', function (e) {
-        if ($('#rateForm input[name="rating"]:checked').val()) {
-            $('#rateForm input[type="submit"]').removeClass('disabled');
-        }
-    });
-
     $('form input[name="agreeTerms"]').on('change', function (e) {
         var parent = $(this).parents('form');
         var button = $(parent).find('input[type="submit"]');
@@ -1063,8 +1129,8 @@ $(document).ready(function () {
 
     $('form input[type="text"], form textarea').change(function () {
         var wrapper = $(this).parent('.inputWrapper');
-        if ($(this).val()) {
-            $(wrapper).addClass('correct');
+        if ($(this).val() && $(this).val().length>0) {
+            // $(wrapper).addClass('correct');
             $(wrapper).removeClass('error');
             $(wrapper).children('span').remove('.error');
         } else {
