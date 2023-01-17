@@ -4,7 +4,9 @@
 [[$head]]
 	</head>
 	<body>
-[[$header]]
+    [[identifyExploreType]]
+
+    [[$header]]
 
 <section id="innerHero">
     <div class="container">
@@ -99,10 +101,10 @@
 [[!FormIt?
    &hooks=`reCaptchaV3,email,FormItSaveForm`
    &emailTpl=`allFormMessage`
-   &emailSubject=`Content Rating (Topics|Highlights) - [[*pagetitle]]`
+   &emailSubject=`Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
    &emailTo=`[[++contact_email]]`
    &emailFrom=`[[++contact_email]]`
-   &formName=`Content Rating (Topics|Highlights) - [[*pagetitle]]`
+   &formName=`Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
    &formFields=`rating,feedback`
    &fieldNames=`rating==Rating,feedback==Feedback (if any)`
    &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
@@ -115,7 +117,7 @@
         <div class="row">
             <div class="col-md-7">    
                 <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
-                    <input type="hidden" name="emailTitle" value="Content (Topics|Highlights) has been rated">
+                    <input type="hidden" name="emailTitle" value="Content ([[!+result_type_explore]]) has been rated">
                     <input type="text" name="confirmHSL" class="confirmField" value="">
                     <div class="rating">
                         <input type="radio" name="rating" value="Good" class="good">
@@ -149,10 +151,10 @@
 [[!FormIt?
    &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
    &emailTpl=`allFormMessage`
-   &emailSubject=`Contact Form (Topics|Highlights) - [[*pagetitle]]`
+   &emailSubject=`Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
    &emailTo=`[[++contact_email]]`
    &emailFrom=`[[++contact_email]]`
-   &formName=`Contact Form (Topics|Highlights) - [[*pagetitle]]`
+   &formName=`Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
    &formFields=`name,email,message`
    &fieldNames=`name==Full name,email==Email address,message==Message`
    &redirectTo=`24`

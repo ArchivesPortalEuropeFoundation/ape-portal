@@ -78,6 +78,11 @@
     <strong><span style="text-decoration: underline;">Page information:</span></strong><br>
     [[*pagetitle]] (Resource ID: [[*id]])
 
+    [[+explore_exists:notempty=`
+    <br/>
+    <a href="[[!+URI]]">Visit here</a>
+    `]]
+
     [[+archive.type:notempty=`
         <br/>
         <strong>Archive: </strong>
