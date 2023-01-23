@@ -78,6 +78,11 @@
     <strong><span style="text-decoration: underline;">Page information:</span></strong><br>
     [[*pagetitle]] (Resource ID: [[*id]])
 
+    [[+captcha_score:notempty=`
+    <br/>
+    reCaptcha score: [[!+captcha_score]]
+    `]]
+
     [[+explore_exists:notempty=`
     <br/>
     <a href="[[!+URI]]">Visit here</a>

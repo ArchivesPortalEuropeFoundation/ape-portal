@@ -34,6 +34,9 @@ $raw_reply = curl_exec($ch);
 $reply = json_decode($raw_reply, 1);
 curl_close($ch);
 
+$modx->setPlaceholder('captcha_score', $reply['score']);
+//error_log("reCaptcha score: ".$reply['score'], 0);
+
 //Do we fail the minimum score?
 if ($reply['score'] < $data['score']) {
     $modx->setPlaceholder('fi.error.captcha', $data['message']);

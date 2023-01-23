@@ -35,10 +35,13 @@
 			&submitVar=`makeSuggestion`
 			&successMessagePlaceholder=`ms.successMessage`
 			&successMessage=`<script>$("#suggestionMadePopup").modal('show');</script>`
-			&validate=`suggestion:allowTags:allowSpecialChars,confirmHSL:blank`
+			&validate=`suggestion:allowTags:allowSpecialChars,confirmHSL:blank,spamchecker:blank`
+			&validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 			]] 			
 			[[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
+			[[!+fi.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.validation_error_message]]</h5>`]]
 			<form class="standard" action="[[!+suggestion_request_uri]]" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="spamchecker" value=""/>
 				<input type="hidden" name="subject" value="Make a Suggestion ([[!+result_type:is=``:then=`[[!+result_type_explore]]`:else=`[[!+result_type]]`]]): [[!+result_name:is=``:then=`[[!*pagetitle:striptags]]`:else=`[[!+result_name:striptags]]`]]"/>
                 <input type="hidden" name="emailTitle" value="A suggestion has been made">
 				<input type="hidden" name="resulttype" value="[[!+result_type:is=``:then=`[[!+result_type_explore]]`:else=`[[!+result_type]]`]]"/>

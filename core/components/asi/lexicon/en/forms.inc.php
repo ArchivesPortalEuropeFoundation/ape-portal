@@ -1,5 +1,6 @@
 <?php
 $_lang['asi.form_rating_success_msg'] = 'Thank you, your rating has been sent';
+$_lang['asi.form_validation_error'] = 'A form validation error occurred. Please check the values you have entered.';
 $_lang['asi.form_required_fields_empty_err_msg'] = 'Not all required fields have been filled in.';
 $_lang['asi.form_full_name_required_err_msg'] = 'Your full name is required';
 $_lang['asi.form_email_address_required_err_msg'] = 'Your email address is required';
