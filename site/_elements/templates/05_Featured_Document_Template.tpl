@@ -101,7 +101,7 @@
 [[!FormIt?
    &hooks=`reCaptchaV3,email,FormItSaveForm`
    &emailTpl=`allFormMessage`
-   &emailSubject=`Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
+   &emailSubject=`[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
    &emailTo=`[[++contact_email]]`
    &emailFrom=`[[++contact_email]]`
    &formName=`Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
@@ -109,14 +109,17 @@
    &fieldNames=`rating==Rating,feedback==Feedback (if any)`
    &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
    &submitVar=`sendRating`
-   &validate=`confirmHSL:blank`
+   &validate=`rating:required,confirmHSL:blank,spamchecker:blank`
+   &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 ]]
 [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
+        [[!+fi.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.validation_error_message]]</h5>`]]
         [[!+fi.successMessage:notempty=`<h5>[[+fi.successMessage]]</h5>`:default=`
         [[++rate_content_text]]
         <div class="row">
             <div class="col-md-7">    
                 <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
+                    <input type="hidden" name="spamchecker" value=""/>
                     <input type="hidden" name="emailTitle" value="Content ([[!+result_type_explore]]) has been rated">
                     <input type="text" name="confirmHSL" class="confirmField" value="">
                     <div class="rating">
@@ -151,7 +154,7 @@
 [[!FormIt?
    &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
    &emailTpl=`allFormMessage`
-   &emailSubject=`Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
+   &emailSubject=`[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
    &emailTo=`[[++contact_email]]`
    &emailFrom=`[[++contact_email]]`
    &formName=`Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
@@ -159,11 +162,14 @@
    &fieldNames=`name==Full name,email==Email address,message==Message`
    &redirectTo=`24`
    &submitVar=`contactInstitution`
-   &validate=`confirmHSL:blank`
+   &validate=`confirmHSL:blank,spamchecker:blank`
+   &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 ]]                
                 [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
+                [[!+fi.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.validation_error_message]]</h5>`]]
                 <form class="standard mt20" action="[[!requestURI]]" method="post">
-                    <input type="hidden" name="emailTitle" value="A new message from the APE website">
+                    <input type="hidden" name="spamchecker" value=""/>
+                    <input type="hidden" name="emailTitle" value="Contact institution form for content ([[!+result_type_explore]])">
                     <input type="text" name="confirmHSL" class="confirmField" value="">
                     <p class="formError"><i class="fas fa-exclamation-triangle"></i> [[!%asi.form_required_fields_empty_err_msg? &topic=`forms` &namespace=`asi`]]</p>
                     <p class="fieldLabel">[[!%asi.label_full_name? &topic=`label` &namespace=`asi`]]*</p>
