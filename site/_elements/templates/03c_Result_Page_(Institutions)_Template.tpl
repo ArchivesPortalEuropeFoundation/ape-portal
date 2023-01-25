@@ -310,11 +310,12 @@
    &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode`
    &redirectTo=`24`
    &submitVar=`contactInstitution`
+                    &placeholderPrefix=`fo.`
    &validate=`confirmHSL:blank,spamchecker:blank`
    &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 ]]                
-                [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
-                    [[!+fi.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.validation_error_message]]</h5>`]]
+                [[!+fo.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.error.captcha]]</h5>`]]
+                    [[!+fo.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.validation_error_message]]</h5>`]]
                     <form class="standard mt20" id="instituteContact" action="[[!requestURI]]" method="post">
                         <input type="hidden" name="spamchecker" value=""/>
                         <input type="hidden" name="subject" value="[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Contact Form (Institutions): [[!+institution.name]]"/>

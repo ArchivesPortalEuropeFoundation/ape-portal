@@ -303,13 +303,14 @@
                 &formFields=`rating,feedback,repositoryCode,archiveid,unitid,clevelid`
                 &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
                 &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
-                    &submitVar=`sendRating`
+                &submitVar=`sendRating`
+                &placeholderPrefix=`fa.`
                 &validate=`rating:required,confirmHSL:blank,spamchecker:blank`
                 &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
                 ]]
-                [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
-                [[!+fi.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.validation_error_message]]</h5>`]]
-                [[!+fi.successMessage:notempty=`<h5>[[+fi.successMessage]]</h5>`:default=`
+                [[!+fa.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fa.error.captcha]]</h5>`]]
+                [[!+fa.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fa.validation_error_message]]</h5>`]]
+                [[!+fa.successMessage:notempty=`<h5>[[+fa.successMessage]]</h5>`:default=`
                 [[++rate_content_text]]
                 <div class="row">
                     <div class="col-md-7">
@@ -365,12 +366,13 @@
                         &formFields=`name,email,message,repositoryCode,archiveid,unitid,clevelid`
                         &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
                         &redirectTo=`24`
+                        &placeholderPrefix=`fo.`
                         &submitVar=`contactInstitution`
                         &validate=`confirmHSL:blank,spamchecker:blank`
                         &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
                         ]]
-                        [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
-                        [[!+fi.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.validation_error_message]]</h5>`]]
+                        [[!+fo.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.error.captcha]]</h5>`]]
+                        [[!+fo.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.validation_error_message]]</h5>`]]
                         <form class="standard mt20" action="[[!requestURI]]" method="post">
                             <input type="hidden" name="spamchecker" value=""/>
                             <input type="hidden" name="subject" value="[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Contact Form (Archives): [[!+archive.title:striptags]]"/>
