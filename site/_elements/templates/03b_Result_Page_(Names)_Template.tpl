@@ -169,17 +169,16 @@
                 &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
                 &submitVar=`sendRating`
                 &placeholderPrefix=`fa.`
-                &validate=`rating:required,confirmEFm:blank,spamchecker:blank`
+                &validate=`rating:required,confirmEFm:blank`
                 &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
             ]]
             [[!+fa.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fa.error.captcha]]</h5>`]]
             [[!+fa.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fa.validation_error_message]]</h5>`]]
-            [[!+fa.successMessage:notempty=`<h5>[[+fa.successMessage]]</h5>`:default=`
+            [[!+fi.successMessage:notempty=`<h5>[[+fi.successMessage]]</h5>`:default=`
                 [[++rate_content_text]]
                 <div class="row">
                     <div class="col-md-7">
                         <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
-                            <input type="hidden" name="spamchecker" value=""/>
                             <input type="hidden" name="subject" value="[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Content Rating (Names): [[!+name.title:striptags]]"/>
                             <input type="hidden" name="emailTitle" value="Content (Name) has been rated">
                             <input type="hidden" name="repositoryCode" value="[[!+name.repocode]]"/>
@@ -233,13 +232,12 @@
                     &redirectTo=`24`
                     &submitVar=`contactInstitution`
                     &placeholderPrefix=`fo.`
-                    &validate=`confirmEFm:blank,spamchecker:blank`
+                    &validate=`confirmEFm:blank`
                     &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
                 ]]
                     [[!+fo.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.error.captcha]]</h5>`]]
                     [[!+fo.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.validation_error_message]]</h5>`]]
                     <form class="standard mt20" action="[[!requestURI]]" method="post">
-                        <input type="hidden" name="spamchecker" value=""/>
                         <input type="hidden" name="subject" value="[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Contact Form (Names): [[!+name.title]]"/>
                         <input type="hidden" name="emailTitle" value="A new message from the Name's Contact Form">
                         <input type="hidden" name="repositoryCode" value="[[!+name.repocode]]"/>

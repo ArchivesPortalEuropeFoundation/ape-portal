@@ -105,22 +105,22 @@
    &emailTo=`[[++contact_email]]`
    &emailFrom=`[[++contact_email]]`
    &formName=`Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
-   &formFields=`rating,feedback`
-   &fieldNames=`rating==Rating,feedback==Feedback (if any)`
+   &formFields=`rating,feedback,itemtitle`
+   &fieldNames=`rating==Rating,feedback==Feedback,itemtitle==Item title`
    &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
    &submitVar=`sendRating`
         &placeholderPrefix=`fo.`
-   &validate=`rating:required,confirmHSL:blank,spamchecker:blank`
+   &validate=`rating:required,confirmHSL:blank`
    &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 ]]
-[[!+fo.error.captcha:isnotempty=`<p>[[+fo.error.captcha]]</p>`]]
+[[!+fo.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.error.captcha]]</h5>`]]
         [[!+fo.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.validation_error_message]]</h5>`]]
-        [[!+fo.successMessage:notempty=`<h5>[[+fo.successMessage]]</h5>`:default=`
+        [[!+fi.successMessage:notempty=`<h5>[[+fi.successMessage]]</h5>`:default=`
         [[++rate_content_text]]
         <div class="row">
             <div class="col-md-7">    
                 <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
-                    <input type="hidden" name="spamchecker" value=""/>
+                    <input type="hidden" name="itemtitle" value="[[*pagetitle]]"/>
                     <input type="hidden" name="emailTitle" value="Content ([[!+result_type_explore]]) has been rated">
                     <input type="text" name="confirmHSL" class="confirmField" value="">
                     <div class="rating">
@@ -159,18 +159,18 @@
    &emailTo=`[[++contact_email]]`
    &emailFrom=`[[++contact_email]]`
    &formName=`Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
-   &formFields=`name,email,message`
-   &fieldNames=`name==Full name,email==Email address,message==Message`
+   &formFields=`name,email,message,itemtitle`
+   &fieldNames=`name==Full name,email==Email address,message==Message,itemtitle==Item title`
    &redirectTo=`24`
    &submitVar=`contactInstitution`
                 &placeholderPrefix=`fa.`
-   &validate=`confirmHSL:blank,spamchecker:blank`
+   &validate=`confirmHSL:blank`
    &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 ]]                
                 [[!+fa.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fa.error.captcha]]</h5>`]]
                 [[!+fa.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fa.validation_error_message]]</h5>`]]
                 <form class="standard mt20" action="[[!requestURI]]" method="post">
-                    <input type="hidden" name="spamchecker" value=""/>
+                    <input type="hidden" name="itemtitle" value="[[*pagetitle]]"/>
                     <input type="hidden" name="emailTitle" value="Contact institution form for content ([[!+result_type_explore]])">
                     <input type="text" name="confirmHSL" class="confirmField" value="">
                     <p class="formError"><i class="fas fa-exclamation-triangle"></i> [[!%asi.form_required_fields_empty_err_msg? &topic=`forms` &namespace=`asi`]]</p>

@@ -40,14 +40,16 @@
                         &emailUseFieldForSubject=`1`
                         &emailTo=`[[++contact_email]]`
                         &emailFrom=`[[++contact_email]]`
-                        &formName=`Contact Form`
+                        &formName=`Contact Us`
                         &formFields=`name,email,subject,message`
                         &fieldNames=`name==Full name,email==Email address,subject==Topic,message==Message`
                         &validate=`name:required,subject:required,email:email:required,:message:required:confirmHSL:blank`
                         &redirectTo=`24`
                         &submitVar=`contactForm`
+                        &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
                     ]]
-                    [[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
+                    [[!+fi.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.error.captcha]]</h5>`]]
+                    [[!+fi.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.validation_error_message]]</h5>`]]
                     <form class="standard" action="[[~[[*id]]]]" method="post">
                         <div class="conf_email hidden">
                             <input type="text" name="confirmHSL" class="confirmField" >
