@@ -314,7 +314,7 @@
    &validate=`confirmHSL:blank`
    &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 ]]                
-                [[!+fo.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.error.captcha]]</h5>`]]
+                [[!+fi.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.error.captcha]]</h5>`]]
                     [[!+fo.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.validation_error_message]]</h5>`]]
                     <form class="standard mt20" id="instituteContact" action="[[!requestURI]]" method="post">
                         <input type="hidden" name="subject" value="[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Contact Form (Institutions): [[!+institution.name]]"/>
