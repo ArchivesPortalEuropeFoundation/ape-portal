@@ -302,7 +302,8 @@
                 &formName=`Content Rating (Archives)`
                 &formFields=`rating,feedback,repositoryCode,archiveid,unitid,clevelid`
                 &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
-                &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
+                &successMessagePlaceholder=`ms.successMessage`
+                &successMessage=`<script>$("#ratingSentPopup").modal('show');</script>`
                 &submitVar=`sendRating`
                 &placeholderPrefix=`fa.`
                 &validate=`rating:required,confirmHSL:blank`
@@ -310,11 +311,10 @@
                 ]]
                 [[!+fi.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.error.captcha]]</h5>`]]
                 [[!+fa.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fa.validation_error_message]]</h5>`]]
-                [[!+fi.successMessage:notempty=`<h5>[[+fi.successMessage]]</h5>`:default=`
                 [[++rate_content_text]]
                 <div class="row">
                     <div class="col-md-7">
-                        <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
+                        <form class="standard mt20" id="rateForm" action="[[!requestURI]]" method="post">
                             <input type="hidden" name="subject" value="[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Content Rating (Archives): [[!+archive.title:striptags]]"/>
                             <input type="hidden" name="emailTitle" value="Content (Archive) has been rated">
                             <input type="hidden" name="repositoryCode" value="[[!+archive.repocode]]"/>
@@ -345,7 +345,6 @@
                         </form>
                     </div>
                 </div>
-                `]]
             </div>
             <div class="mt60" id="contactInstitutionForm">
                 <a class="anchor" id="contactInstitution"></a>
@@ -355,7 +354,7 @@
                     <div class="col-md-7">
 
                         [[!FormIt?
-                        &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
+                        &hooks=`reCaptchaV3,email,FormItSaveForm`
                         &emailTpl=`allFormMessage`
                         &emailSubject=`Contact Form (Archives)`
                         &emailUseFieldForSubject=`1`
@@ -364,8 +363,9 @@
                         &formName=`Contact Form (Archives)`
                         &formFields=`name,email,message,repositoryCode,archiveid,unitid,clevelid`
                         &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
-                        &redirectTo=`24`
                         &placeholderPrefix=`fo.`
+                        &successMessagePlaceholder=`ms.successMessage`
+                        &successMessage=`<script>$("#contactInstitutionSentPopup").modal('show');</script>`
                         &submitVar=`contactInstitution`
                         &validate=`confirmHSL:blank`
                         &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
