@@ -15,9 +15,14 @@ $data = array (
     'message'   => $modx->getOption('recaptcha_error_message')
 );
 
-if (!isset($data['secret']) || !isset($data['token'])) {
+if (!isset($data['secret'])) {
     //Not setup
     return true;
+}
+
+if (!isset($data['token'])){
+    $modx->setPlaceholder('fi.error.captcha', $data['message']);
+    return false;
 }
 
 $ch = curl_init($data['url']);
