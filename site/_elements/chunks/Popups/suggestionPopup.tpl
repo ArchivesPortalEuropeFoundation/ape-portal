@@ -95,7 +95,7 @@
         <div class="modal-content standard">
             <span class="closeButton" data-dismiss="modal"><i class="fas fa-times"></i></span>
 			<div class="content">
-			    [[++suggestion_made_text]]
+			    [[!%asi.form_suggestion_success_msg_full? &topic=`forms` &namespace=`asi`]]
 			    <a class="button pink" data-dismiss="modal">[[!%asi.action_return_to_page? &topic=`actions` &namespace=`asi`]]</a>
 			</div>
 		</div>
