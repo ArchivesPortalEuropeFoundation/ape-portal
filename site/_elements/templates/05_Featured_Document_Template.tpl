@@ -107,19 +107,19 @@
    &formName=`Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
    &formFields=`rating,feedback,itemtitle`
    &fieldNames=`rating==Rating,feedback==Feedback,itemtitle==Item title`
-   &successMessage=`[[!%asi.form_rating_success_msg? &topic=`forms` &namespace=`asi`]]`
+   &successMessagePlaceholder=`ms.successMessage`
+   &successMessage=`<script>$("#ratingSentPopup").modal('show');</script>`
    &submitVar=`sendRating`
-        &placeholderPrefix=`fo.`
+   &placeholderPrefix=`fo.`
    &validate=`rating:required,confirmHSL:blank`
    &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 ]]
-[[!+fi.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.error.captcha]]</h5>`]]
+        [[!+fi.error.captcha:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.error.captcha]]</h5>`]]
         [[!+fo.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fo.validation_error_message]]</h5>`]]
-        [[!+fi.successMessage:notempty=`<h5>[[+fi.successMessage]]</h5>`:default=`
         [[++rate_content_text]]
         <div class="row">
             <div class="col-md-7">    
-                <form class="standard mt20" id="rateForm" action="[[!requestURI]]#rateContent" method="post">
+                <form class="standard mt20" id="rateForm" action="[[!requestURI]]" method="post">
                     <input type="hidden" name="itemtitle" value="[[*pagetitle]]"/>
                     <input type="hidden" name="emailTitle" value="Content ([[!+result_type_explore]]) has been rated">
                     <input type="text" name="confirmHSL" class="confirmField" value="">
@@ -140,7 +140,6 @@
                 </form>
             </div>
         </div>
-        `]]
     </div>
 </section>
 
@@ -153,7 +152,7 @@
             <div class="col-md-7">
                 
 [[!FormIt?
-   &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
+   &hooks=`reCaptchaV3,email,FormItSaveForm`
    &emailTpl=`allFormMessage`
    &emailSubject=`[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
    &emailTo=`[[++contact_email]]`
@@ -161,9 +160,10 @@
    &formName=`Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
    &formFields=`name,email,message,itemtitle`
    &fieldNames=`name==Full name,email==Email address,message==Message,itemtitle==Item title`
-   &redirectTo=`24`
    &submitVar=`contactInstitution`
-                &placeholderPrefix=`fa.`
+   &placeholderPrefix=`fa.`
+   &successMessagePlaceholder=`ms.successMessage`
+   &successMessage=`<script>$("#contactInstitutionSentPopup").modal('show');</script>`
    &validate=`confirmHSL:blank`
    &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 ]]                
