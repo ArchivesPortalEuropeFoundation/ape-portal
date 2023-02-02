@@ -299,7 +299,7 @@
                 <div class="col-md-7">
                 
 [[!FormIt?
-   &hooks=`reCaptchaV3,email,FormItSaveForm,redirect`
+   &hooks=`reCaptchaV3,email,FormItSaveForm`
    &emailTpl=`allFormMessage`
    &emailSubject=`Contact Form (Institutions)`
                     &emailUseFieldForSubject=`1`
@@ -308,9 +308,11 @@
    &formName=`Contact Form (Institutions)`
    &formFields=`name,email,message,repositoryCode`
    &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode`
-   &redirectTo=`24`
+
    &submitVar=`contactInstitution`
                     &placeholderPrefix=`fo.`
+                    &successMessagePlaceholder=`ms.successMessage`
+                    &successMessage=`<script>$("#contactInstitutionSentPopup").modal('show');</script>
    &validate=`confirmHSL:blank`
    &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 ]]                
