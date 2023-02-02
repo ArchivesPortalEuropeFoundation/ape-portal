@@ -108,7 +108,7 @@
    &formFields=`rating,feedback,itemtitle`
    &fieldNames=`rating==Rating,feedback==Feedback,itemtitle==Item title`
    &successMessagePlaceholder=`ms.successMessage`
-   &successMessage=`<script>$("#ratingSentPopup").modal('show');</script>`
+   &successMessage=`<script>$("#ratingSentPopupExplore").modal('show');</script>`
    &submitVar=`sendRating`
    &placeholderPrefix=`fo.`
    &validate=`rating:required,confirmHSL:blank`
@@ -163,7 +163,7 @@
    &submitVar=`contactInstitution`
    &placeholderPrefix=`fa.`
    &successMessagePlaceholder=`ms.successMessage`
-   &successMessage=`<script>$("#contactInstitutionSentPopup").modal('show');</script>`
+   &successMessage=`<script>$("#contactInstitutionSentPopupExplore").modal('show');</script>`
    &validate=`confirmHSL:blank`
    &validationErrorMessage=`[[!%asi.form_validation_error? &topic=`forms` &namespace=`asi`]]`
 ]]                

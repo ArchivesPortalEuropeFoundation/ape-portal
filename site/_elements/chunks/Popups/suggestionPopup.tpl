@@ -126,3 +126,28 @@
 		</div>
 	</div>
 </div>
+
+<div id="ratingSentPopupExplore" class="modal fade">
+	<div class="modal-dialog larger">
+		<div class="modal-content standard">
+			<span class="closeButton" data-dismiss="modal"><i class="fas fa-times"></i></span>
+			<div class="content">
+				[[!%asi.form_rating_success_msg_full_explore? &topic=`forms` &namespace=`asi`]]
+				<br/>
+				<a class="button pink" data-dismiss="modal">[[!%asi.action_return_to_page? &topic=`actions` &namespace=`asi`]]</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="contactInstitutionSentPopupExplore" class="modal fade">
+	<div class="modal-dialog larger">
+		<div class="modal-content standard">
+			<span class="closeButton" data-dismiss="modal"><i class="fas fa-times"></i></span>
+			<div class="content">
+				[[!%asi.form_contact_institution_success_msg_full_explore? &topic=`forms` &namespace=`asi`]]
+				<a class="button pink" data-dismiss="modal">[[!%asi.action_return_to_page? &topic=`actions` &namespace=`asi`]]</a>
+			</div>
+		</div>
+	</div>
+</div>
