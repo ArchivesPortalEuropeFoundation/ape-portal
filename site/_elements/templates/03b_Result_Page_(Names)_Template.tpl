@@ -161,7 +161,9 @@
                 &emailTpl=`allFormMessage`
                 &emailSubject=`Content Rating (Names)`
                 &emailUseFieldForSubject=`1`
-                &emailTo=`[[++contact_email]]`
+                &emailTo=`[[!+rating_form_detail_page_to]]`
+                &emailCC=`[[!+rating_form_detail_page_cc]]`
+                &emailBCC=`[[!+rating_form_detail_page_bcc]]`
                 &emailFrom=`[[++contact_email]]`
                 &formName=`Content Rating (Names)`
                 &formFields=`rating,feedback,repositoryCode,nameid`
@@ -225,7 +227,9 @@
                     &emailTpl=`allFormMessage`
                     &emailSubject=`Contact Form (Names): [[!+name.title]]`
                     &emailUseFieldForSubject=`1`
-                    &emailTo=`[[++contact_email]]`
+                    &emailTo=`[[!+contact_form_detail_page_to]]`
+                    &emailCC=`[[!+contact_form_detail_page_cc]]`
+                    &emailBCC=`[[!+contact_form_detail_page_bcc]]`
                     &emailFrom=`[[++contact_email]]`
                     &formName=`Contact (Names)`
                     &formFields=`name,email,message,repositoryCode,recordid`

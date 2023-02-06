@@ -297,7 +297,9 @@
                 &emailTpl=`allFormMessage`
                 &emailSubject=`Content Rating (Archives)`
                 &emailUseFieldForSubject=`1`
-                &emailTo=`[[++contact_email]]`
+                &emailTo=`[[!+rating_form_detail_page_to]]`
+                &emailCC=`[[!+rating_form_detail_page_cc]]`
+                &emailBCC=`[[!+rating_form_detail_page_bcc]]`
                 &emailFrom=`[[++contact_email]]`
                 &formName=`Content Rating (Archives)`
                 &formFields=`rating,feedback,repositoryCode,archiveid,unitid,clevelid`
@@ -358,7 +360,9 @@
                         &emailTpl=`allFormMessage`
                         &emailSubject=`Contact Form (Archives)`
                         &emailUseFieldForSubject=`1`
-                        &emailTo=`[[++contact_email]]`
+                        &emailTo=`[[!+contact_form_detail_page_to]]`
+                        &emailCC=`[[!+contact_form_detail_page_cc]]`
+                        &emailBCC=`[[!+contact_form_detail_page_bcc]]`
                         &emailFrom=`[[++contact_email]]`
                         &formName=`Contact Form (Archives)`
                         &formFields=`name,email,message,repositoryCode,archiveid,unitid,clevelid`

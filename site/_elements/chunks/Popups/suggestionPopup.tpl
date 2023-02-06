@@ -19,16 +19,15 @@
 			</div>
 
 			[[!FormIt?
-			&hooks=`reCaptchaV3,setRecipient,FormItSaveForm,email`
+			&hooks=`reCaptchaV3,FormItSaveForm,email`
 			&emailTpl=`allFormMessage`
 			&emailSubject=`Make a Suggestion`
 			&emailUseFieldForSubject=`1`
-			&emailTo=`[[++contact_email]]`
+{*			&emailTo=`[[!++contact_email]]`*}
+			&emailTo=`[[!+result_type:is=``:then=`[[!+suggestion_form_explore_to]]`:else=`[[!+suggestion_form_detail_page_to]]`]]`
+			&emailCC=`[[!+result_type:is=``:then=`[[!+suggestion_form_explore_cc]]`:else=`[[!+suggestion_form_detail_page_cc]]`]]`
+			&emailBCC=`[[!+result_type:is=``:then=`[[!+suggestion_form_explore_bcc]]`:else=`[[!+suggestion_form_detail_page_cc]]`]]`
 			&emailFrom=`[[++contact_email]]`
-			&emailTopic=`[[++contact_email]]`
-			&emailTranslation=`[[++contact_email]]`
-			&emailConnect=`[[++contact_email]]`
-			&emailOther=`[[++contact_email]]	`
 			&formName=`Make a Suggestion ([[!+result_type:is=``:then=`[[!+result_type_explore]]`:else=`[[!+result_type]]`]])`
 			&formFields=`name,email,suggestion,recipient,resulttype,repositoryCode,recordid,clevelid,unitid,resourceid`
 			&fieldNames=`name==Full name,email==Email address,suggestion==Suggestion,recipient==Recipient,repositoryCode=RepositoryCode,resulttype=Result Type,recordid=Record ID,unitid=UnitId,clevelid=CLevelId,resourceid=Resource Id`
@@ -41,7 +40,7 @@
 			[[!+fi.error.captcha:isnotempty=`<p>[[+fi.error.captcha]]</p>`]]
 			[[!+fi.validation_error_message:isnotempty=`<h5 style="color: #c92828;margin-bottom: 10px;">[[+fi.validation_error_message]]</h5>`]]
 			<form class="standard" action="[[!+suggestion_request_uri]]" method="post" enctype="multipart/form-data">
-				<input type="hidden" name="subject" value="Make a Suggestion ([[!+result_type:is=``:then=`[[!+result_type_explore]]`:else=`[[!+result_type]]`]]): [[!+result_name:is=``:then=`[[!*pagetitle:striptags]]`:else=`[[!+result_name:striptags]]`]]"/>
+				<input type="hidden" name="subject" value="[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Make a Suggestion ([[!+result_type:is=``:then=`[[!+result_type_explore]]`:else=`[[!+result_type]]`]]): [[!+result_name:is=``:then=`[[!*pagetitle:striptags]]`:else=`[[!+result_name:striptags]]`]]"/>
                 <input type="hidden" name="emailTitle" value="A suggestion has been made">
 				<input type="hidden" name="resulttype" value="[[!+result_type:is=``:then=`[[!+result_type_explore]]`:else=`[[!+result_type]]`]]"/>
 				<input type="hidden" name="recordid" value="[[!+result_record_id]]"/>

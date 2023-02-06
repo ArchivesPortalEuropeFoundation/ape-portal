@@ -69,6 +69,9 @@ if(!is_null($scroll)) {
     $placeholders['scroll'] = $scroll;
 }
 
+$modx->runSnippet('contactFinder',array('repoCode' => $repoCode,'type' => 'contact_form_detail_page'));
+$modx->runSnippet('contactFinder',array('repoCode' => $repoCode,'type' => 'rating_form_detail_page'));
+$modx->runSnippet('contactFinder',array('repoCode' => $repoCode,'type' => 'suggestion_form_detail_page'));
 
 if($section == "search-in-archives") {
     $placeholders['result_type'] = "Archives";

@@ -93,6 +93,10 @@
     </div>
 </section>
 
+    [[!contactFinder? &repoCode=`[[*docRepositoryId]]` &type=`contact_form_explore`]]
+    [[!contactFinder? &repoCode=`[[*docRepositoryId]]` &type=`rating_form_explore`]]
+    [[!contactFinder? &repoCode=`[[*docRepositoryId]]` &type=`suggestion_form_explore`]]
+
 <section class="standard">
     <div class="container">
         <a class="anchor" id="rateContent"></a>
@@ -102,7 +106,9 @@
    &hooks=`reCaptchaV3,email,FormItSaveForm`
    &emailTpl=`allFormMessage`
    &emailSubject=`[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
-   &emailTo=`[[++contact_email]]`
+    &emailTo=`[[!+rating_form_explore_to]]`
+    &emailCC=`[[!+rating_form_explore_cc]]`
+    &emailBCC=`[[!+rating_form_explore_bcc]]`
    &emailFrom=`[[++contact_email]]`
    &formName=`Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
    &formFields=`rating,feedback,itemtitle`
@@ -155,7 +161,9 @@
    &hooks=`reCaptchaV3,email,FormItSaveForm`
    &emailTpl=`allFormMessage`
    &emailSubject=`[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
-   &emailTo=`[[++contact_email]]`
+    &emailTo=`[[!+contact_form_explore_to]]`
+    &emailCC=`[[!+contact_form_explore_cc]]`
+    &emailBCC=`[[!+contact_form_explore_bcc]]`
    &emailFrom=`[[++contact_email]]`
    &formName=`Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
    &formFields=`name,email,message,itemtitle`
