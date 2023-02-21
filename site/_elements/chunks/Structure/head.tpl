@@ -159,4 +159,15 @@
                     });
                 });
             </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/plain" data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-8S35HEVVZT"></script>
+<script type="text/plain" data-cookiecategory="analytics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8S35HEVVZT');
+</script>
+
 [[-++scripts]]
