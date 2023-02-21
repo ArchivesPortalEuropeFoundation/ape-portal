@@ -1,4 +1,5 @@
 <footer>
+<button type="button" data-cc="c-settings">Show cookie settings</button>
     <div class="container">
 		<div class="contactSocial">
 			<p>[[!%asi.title_follow_us? &topic=`default` &namespace=`asi`]]:</p>
