@@ -14,14 +14,14 @@
 
        	<meta property="og:title" content="[[*longtitle:default=`[[*pagetitle]]`]]">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="[[fullURL? &id=`[[*id]]`]]">
+        [[-<meta property="og:url" content="[[fullURL? &id=`[[*id]]`]]">]]
         <meta property="og:image" content="[[++site_url]][[*og_image:replace=`/assets/==assets/`:default=`assets/images/fb_img.jpg`]]">
         <meta property="og:site_name" content="[[++site_name]]">
         <meta property="og:description" content="[[*description]]">
 
         <link rel="shortcut icon" href="[[++base_url]]assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
     	<link rel="icon" href="[[++base_url]]assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
-        <!--<link rel="canonical" href="[[~[[*id]]? &scheme=`full`]]" />-->
+        [[-<link rel="canonical" href="[[~[[*id]]? &scheme=`full`]]" />]]
         
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="[[++base_url]]assets/css/tooltipster.bundle.css" media="screen" />
