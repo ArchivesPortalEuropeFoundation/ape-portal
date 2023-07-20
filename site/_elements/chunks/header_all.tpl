@@ -58,6 +58,7 @@
                         </div>
                     </div>
                 </div>]]
+                [[-
                 [[!+user.logged_in:eq=`1`:then=`
                 <!-- account menu -->
                 <div class="item fades">
@@ -88,6 +89,7 @@
                 </div>
 
                 `]]
+                ]]
 
             </div>
         </div>
