@@ -82,11 +82,13 @@
                 <div class="item fades">
                 </div>
                 <div class="item fades[[*id:is=`78`:then=` active`]]">
-                    <a href="https://deprecated.archivesportaleurope.net/sign-in"><i class="mr fas fa-sign-in"></i> [[!%asi.action_create_account? &topic=`actions` &namespace=`asi`]]</a>
+                    [[~78]]<a href="https://deprecated.archivesportaleurope.net/sign-in"><i class="mr fas fa-sign-in"></i> [[!%asi.action_create_account? &topic=`actions` &namespace=`asi`]]</a>
                 </div>
                 <div class="item fades[[*id:is=`79`:then=` active`]]">
                     <a href="https://deprecated.archivesportaleurope.net/sign-in"><i class="mr fas fa-user"></i> [[!%asi.label_login? &topic=`label` &namespace=`asi`]]</a>
                 </div>
+
+
 
                 `]]
                 ]]

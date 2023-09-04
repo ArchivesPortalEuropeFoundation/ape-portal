@@ -812,7 +812,7 @@ $modx->setPlaceholders($result,'search_result.');
 
 // Set the pagetitle
 if(!empty($placeholders['pagetitle'])) {
-    $modx->regClientStartupScript('<script>document.title = "'. $placeholders['pagetitle'] .'";</script>');
+//    $modx->regClientStartupScript('<script>document.title = "'. $placeholders['pagetitle'] .'";</script>');
 }
 
 return;

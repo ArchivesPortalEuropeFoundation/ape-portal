@@ -1,23 +1,25 @@
 [[!user]]
 [[!language]]
 
+[[!asi_search_result_detail_metatags? &section=`search-in-institutions`]]
+
         <!-- Website created by GEL Studios Ltd https://www.gelstudios.co.uk/ //-->
-		<title>[[+seoPro.title]]</title>
+		<title>[[!+metatags.metaTags.title:is=null:then=`[[!+seoPro.title]]`:else=`[[+metatags.metaTags.title]] | [[++site_name]]`]]</title>
         <base href="[[++site_url]]" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <meta name="description" content="[[*description]]">
+        <meta name="description" content="[[*description:is=null:then=`[[!+metatags.metaTags.description]]`:else=`[[*description]]`]]">
         <meta name="keywords" content="[[getKeywords]]">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="robots" content="[[+seoTab.robotsTag]]">
         <meta name="author" content="[[++site_name]]">
 
-       	<meta property="og:title" content="[[*longtitle:default=`[[*pagetitle]]`]]">
+       	<meta property="og:title" content="[[!+metatags.metaTags.title:is=null:then=`[[!+seoPro.title]]`:else=`[[+metatags.metaTags.title]] | [[++site_name]]`]]">
         <meta property="og:type" content="website">
         [[-<meta property="og:url" content="[[fullURL? &id=`[[*id]]`]]">]]
         <meta property="og:image" content="[[++site_url]][[*og_image:replace=`/assets/==assets/`:default=`assets/images/fb_img.jpg`]]">
         <meta property="og:site_name" content="[[++site_name]]">
-        <meta property="og:description" content="[[*description]]">
+        <meta property="og:description" content="[[*description:is=null:then=`[[!+metatags.metaTags.description]]`:else=`[[*description]]`]]">
 
         <link rel="shortcut icon" href="[[++base_url]]assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
     	<link rel="icon" href="[[++base_url]]assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
