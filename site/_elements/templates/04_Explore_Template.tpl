@@ -97,8 +97,8 @@
                             &tvFilters=`showInList==yes`
                             [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"publishedon":"DESC"}``? &name=`sortbyD`]]
                             [[!getUrlParam:is=`oldest`:then=`&sortby=`{"publishedon":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"heroTitle":"ASC", "pagetitle":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"heroTitle":"DESC", "pagetitle":"DESC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyD`]]
                             &where=`[[!getUrlParam:notempty=`[{"parent:=":[[!++highlight_parent_id]]}, {"pagetitle:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" },{ "OR:refText:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" }]`? &name=`search`]] `
                             ]]
 
@@ -155,8 +155,8 @@
                             &tvFilters=`showInList==yes`
                             [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"publishedon":"DESC"}``? &name=`sortbyD`]]
                             [[!getUrlParam:is=`oldest`:then=`&sortby=`{"publishedon":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"heroTitle":"ASC", "pagetitle":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"heroTitle":"DESC", "pagetitle":"DESC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyD`]]
                             &where=`[[!getUrlParam:notempty=`[{"parent:=":[[!++highlight_parent_id]]}, {"pagetitle:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" },{ "OR:refText:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" }]`? &name=`search`]] `
                             ]]
                         </div>
@@ -217,8 +217,8 @@
                             &tvFilters=`showInList==yes`
                             [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"publishedon":"DESC"}``? &name=`sortbyD`]]
                             [[!getUrlParam:is=`oldest`:then=`&sortby=`{"publishedon":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"heroTitle":"ASC", "pagetitle":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"heroTitle":"DESC", "pagetitle":"DESC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyD`]]
 
                             &where=`[{"pagetitle:LIKE":"%[[#GET.searchTopic]]%","OR:refText:LIKE":"%[[#GET.searchTopic]]%","AND:context_key:LIKE":"[[+contextKey]]","AND:parent:=":"[[+context.topic_parent_id]]"}]`
                             ]]
@@ -231,8 +231,8 @@
                             &includeTVs=`heroTitle,refImage60,refText,refType,showInList`
                             &processTVs=`refImage60`
                             &tvFilters=`showInList==yes`
-                            [[!getUrlParam:is=``:or:is=`a-z`:then=`&sortby=`{"heroTitle":"ASC", "pagetitle":"ASC"}``? &name=`sortbyT`]]
-                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"heroTitle":"DESC", "pagetitle":"DESC"}``? &name=`sortbyT`]]
+                            [[!getUrlParam:is=``:or:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyT`]]
+                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyT`]]
                             &where=`[[!getUrlParam:notempty=`[{"parent:=":[[!++topic_parent_id]]}, {"pagetitle:LIKE": "%[[!getUrlParam? &name=`searchTopic`]]%", "AND:context_key:LIKE":"[[+contextKey]]" },{ "OR:refText:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" }]`? &name=`search`]] `
                             ]]
                             `]]
@@ -262,8 +262,8 @@
                             &tvFilters=`showInList==yes`
                             [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"publishedon":"DESC"}``? &name=`sortbyD`]]
                             [[!getUrlParam:is=`oldest`:then=`&sortby=`{"publishedon":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"heroTitle":"ASC", "pagetitle":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"heroTitle":"DESC", "pagetitle":"DESC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyD`]]
 
                             &where=`[{"pagetitle:LIKE":"%[[#GET.searchTopic]]%","OR:refText:LIKE":"%[[#GET.searchTopic]]%","AND:context_key:LIKE":"[[+contextKey]]","AND:parent:=":"[[+context.topic_parent_id]]"}]`
                             ]]
