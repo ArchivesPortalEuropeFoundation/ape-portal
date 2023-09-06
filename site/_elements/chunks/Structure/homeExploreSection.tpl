@@ -29,7 +29,7 @@
 					[[*exploreDocsIDs:notempty=`
 					&resources=`[[*exploreDocsIDs]]`
 					`]]
-					&sortby=`{"publishedon":"DESC"}`
+					&sortby=`{"editedon":"DESC"}`
 					&includeTVs=`heroTitle,refImage60,refText`
 					&processTVs=`refImage60`
 					]]
