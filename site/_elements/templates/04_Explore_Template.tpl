@@ -73,10 +73,10 @@
                                 <div class="inner">
 
 
-                                    <a href="[[~[[*id]]]]&sortbyD=newest[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.order_new_first? &topic=`filters` &namespace=`asi`]]</a>
-                                    <a href="[[~[[*id]]]]&sortbyD=oldest[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.order_old_first? &topic=`filters` &namespace=`asi`]]</a>
-                                    <a href="[[~[[*id]]]]&sortbyD=a-z[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.filter_name_a_z? &topic=`filters` &namespace=`asi`]]</a>
-                                    <a href="[[~[[*id]]]]&sortbyD=z-a[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.filter_name_z_a? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a href="[[~[[*id]]]]?sortbyD=newest[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.order_new_first? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a href="[[~[[*id]]]]?sortbyD=oldest[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.order_old_first? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a href="[[~[[*id]]]]?sortbyD=a-z[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.filter_name_a_z? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a href="[[~[[*id]]]]?sortbyD=z-a[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.filter_name_z_a? &topic=`filters` &namespace=`asi`]]</a>
                                 </div>
                             </div>
                         </div>
@@ -195,8 +195,8 @@
                                     [[!getUrlParam:is=`z-a`:then=`[[!%asi.filter_name_z_a? &topic=`filters` &namespace=`asi`]]`? &name=`sortbyT`]]
                                 </div>
                                 <div class="inner">
-                                    <a href="[[~[[*id]]]]&sortbyT=a-z&search=[[!getUrlParam? &name=`search`]]#tabSection">[[!%asi.filter_name_a_z? &topic=`filters` &namespace=`asi`]]</a>
-                                    <a href="[[~[[*id]]]]&sortbyT=z-a&search=[[!getUrlParam? &name=`search`]]#tabSection">[[!%asi.filter_name_z_a? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a href="[[~[[*id]]]]?sortbyT=a-z&searchTopic=[[!getUrlParam? &name=`searchTopic`]]#tabSection">[[!%asi.filter_name_a_z? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a href="[[~[[*id]]]]?sortbyT=z-a&searchTopic=[[!getUrlParam? &name=`searchTopic`]]#tabSection">[[!%asi.filter_name_z_a? &topic=`filters` &namespace=`asi`]]</a>
                                 </div>
                             </div>
                         </div>
@@ -301,7 +301,7 @@
 <script>
     window.addEventListener("load", function(){
         var url = window.location.href;
-        if(url.includes('?searchTopic')){
+        if(url.includes('searchTopic=')){
             $('a[href="#tabTopics"]').tab('show');
             $('html, body').animate({scrollTop: $('#exploreTabs').offset().top -160 }, 'fast');
 
@@ -309,7 +309,7 @@
             $('a[href="#tabDocuments"]').tab('show');
             $('html, body').animate({scrollTop: $('#exploreTabs').offset().top -160 }, 'fast');
         }
-        else if(url.includes('?search')){
+        else if(url.includes('search=')){
             $('html, body').animate({scrollTop: $('#exploreTabs').offset().top -160 }, 'fast');
         }
 
@@ -320,27 +320,29 @@
             if("searchTopic" in params) {
                 if(params.searchTopic != null) {
 
-                    var targetBlocks = document.getElementById("exploreTabs").getElementsByClassName("searchMore")[0];
-                    for(let tbI = 0; i < targetBlocks.length; tbI++){
-                        
-                        targetBlocks[tbI].className = "searchMoreDisabled";
-                    }
+                    //var targetBlocks = document.getElementById("exploreTabs").getElementsByClassName("searchMore")[0];
+                    //for(let tbI = 0; i < targetBlocks.length; tbI++){
+                    //    targetBlocks[tbI].className = "searchMoreDisabled";
+                    //}
                     
                 }
             } else if("search" in params) {
                 if(params.search != null) {
-                    var targetBlocks = document.getElementById("exploreTabs").getElementsByClassName("searchMore")[0];
-                    for(let tbI = 0; i < targetBlocks.length; tbI++){
-                        
-                        targetBlocks[tbI].className = "searchMoreDisabled";
-                    }
+                    //var targetBlocks = document.getElementById("exploreTabs").getElementsByClassName("searchMore")[0];
+                    //for(let tbI = 0; tbI < targetBlocks.length; tbI++){
+                    //   targetBlocks[tbI].className = "searchMoreDisabled";
+                    //}
                     
                 }
             }
             
             
-            
-            $('.clear_search.topic a').attr('href', mainUrl+'?searchTopic=');
+            if("searchTopic" in params) {
+                $('.clear_search.topic a').attr('href', mainUrl+'&searchTopic=&sortbyT=a-z');
+            }
+            else {
+                $('.clear_search.topic a').attr('href', mainUrl+'?search=&sortbyD=newest');
+            }
         }
 
     });
