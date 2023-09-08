@@ -341,7 +341,7 @@
                 }
             }
             
-            $('.clear_search.topic a').attr('href', mainUrl+'&searchTopic=&sortbyT=a-z');
+            $('.clear_search.topic a').attr('href', mainUrl+'?searchTopic=&sortbyT=a-z');
             $('.clear_search.documents a').attr('href', mainUrl+'?search=&sortbyD=newest');
 
         }
