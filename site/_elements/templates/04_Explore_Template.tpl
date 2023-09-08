@@ -367,8 +367,8 @@
         $( "#a_view_t_list" ).on( "click", function() {
             $( "#viewT_input" ).val("list");
             var href = $('#a_sorting_t1').attr('href');
-            $('#a_sorting_t1').attr('href', href.replace("viewD=full","viewD=list"));
-            $('#a_sorting_t2').attr('href', href.replace("viewD=full","viewD=list"));
+            $('#a_sorting_t1').attr('href', href.replace("viewT=full","viewT=list"));
+            $('#a_sorting_t2').attr('href', href.replace("viewT=full","viewT=list"));
         } );
         $( "#a_view_t_full" ).on( "click", function() {
             $( "#viewT_input" ).val("full");
