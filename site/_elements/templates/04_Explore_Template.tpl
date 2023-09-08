@@ -46,8 +46,10 @@
                         <form class="searchLight">
                             <div class="inputWrapper">
                                 <i class="fas fa-search"></i>
-                                <span class="clear_search topic"><a href=""><i class="fas fa-times"></i></a></span>
+                                <span class="clear_search documents"><a href=""><i class="fas fa-times"></i></a></span>
                                 <input type="text" name="search" placeholder="[[!%asi.input_ph_find_featured_doc? &topic=`input` &namespace=`asi`]]" value="[[!getUrlParam? &name=`search`]]">
+                                <input type="hidden" name="sortbyD" value="[[!getUrlParam? &name=`sortbyD`]]"/>
+                                <input type="hidden" id="viewD_input" name="viewD" value="[[!getUrlParam:is=``:or:is=`full`:then=`full`:else=`list`? &name=`viewD`]]"/>
                             </div>
                         </form>
                     </div>
@@ -55,8 +57,8 @@
                         <div class="view">
                             <strong>[[!%asi.view_doc_label? &topic=`default` &namespace=`asi`]]: </strong>
                             <ul class="nav-tabs">
-                                <li class="active"><a href="#tabDocumentsFull" data-tabID="10" data-toggle="tab"><i class="fas fa-images"></i></a></li>
-                                <li><a href="#tabDocumentsList" data-tabID="11" data-toggle="tab"><i class="fas fa-list"></i></a></li>
+                                <li class="[[!getUrlParam:is=``:or:is=`full`:then=`active`:else=``? &name=`viewD`]]"><a id="a_view_full" href="#tabDocumentsFull" data-tabID="10" data-toggle="tab"><i class="fas fa-images"></i></a></li>
+                                <li class="[[!getUrlParam:is=`list`:then=`active`:else=``? &name=`viewD`]]"><a id="a_view_list" href="#tabDocumentsList" data-tabID="11" data-toggle="tab"><i class="fas fa-list"></i></a></li>
                             </ul>
                         </div>
                         <div class="sortBy">
@@ -74,10 +76,10 @@
                                 <div class="inner">
 
 
-                                    <a href="[[~[[*id]]]]?sortbyD=newest[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.order_new_first? &topic=`filters` &namespace=`asi`]]</a>
-                                    <a href="[[~[[*id]]]]?sortbyD=oldest[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.order_old_first? &topic=`filters` &namespace=`asi`]]</a>
-                                    <a href="[[~[[*id]]]]?sortbyD=a-z[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.filter_name_a_z? &topic=`filters` &namespace=`asi`]]</a>
-                                    <a href="[[~[[*id]]]]?sortbyD=z-a[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]]#tabSection">[[!%asi.filter_name_z_a? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a id="a_sorting_d1" href="[[~[[*id]]]]?sortbyD=newest[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]][[!getUrlParam:ne=``:then=`&viewD=[[!getUrlParam? &name=`viewD`]]`:else=`&viewD=full`? &name=`viewD`]]#tabSection">[[!%asi.order_new_first? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a id="a_sorting_d2" href="[[~[[*id]]]]?sortbyD=oldest[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]][[!getUrlParam:ne=``:then=`&viewD=[[!getUrlParam? &name=`viewD`]]`:else=`&viewD=full`? &name=`viewD`]]#tabSection">[[!%asi.order_old_first? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a id="a_sorting_d3" href="[[~[[*id]]]]?sortbyD=a-z[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]][[!getUrlParam:ne=``:then=`&viewD=[[!getUrlParam? &name=`viewD`]]`:else=`&viewD=full`? &name=`viewD`]]#tabSection">[[!%asi.filter_name_a_z? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a id="a_sorting_d4" href="[[~[[*id]]]]?sortbyD=z-a[[!getUrlParam:ne=``:then=`&search=[[!getUrlParam? &name=`search`]]`? &name=`search`]][[!getUrlParam:ne=``:then=`&viewD=[[!getUrlParam? &name=`viewD`]]`:else=`&viewD=full`? &name=`viewD`]]#tabSection">[[!%asi.filter_name_z_a? &topic=`filters` &namespace=`asi`]]</a>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +87,7 @@
                 </div>
 
                 <div class="tab-content">
-                    <div id="tabDocumentsFull" class="tab-pane fade active in">
+                    <div id="tabDocumentsFull" class="tab-pane fade [[!getUrlParam:is=``:or:is=`full`:then=`active in`:else=``? &name=`viewD`]]">
 
                         <div class="row moreList">
 
@@ -146,7 +148,7 @@
                             </div>`]]
                         </div>
                     </div>
-                    <div id="tabDocumentsList" class="tab-pane fade">
+                    <div id="tabDocumentsList" class="tab-pane [[!getUrlParam:is=`list`:then=`active in`:else=``? &name=`viewD`]] fade">
                         <div class="row">
                             [[!pdoResources?
                             &parents=`[[+context.highlight_parent_id]]`
@@ -177,6 +179,8 @@
                                 <i class="fas fa-search"></i>
                                 <span class="clear_search topic"><a href=""><i class="fas fa-times"></i></a></span>
                                 <input type="text" name="searchTopic" placeholder="[[!%asi.input_ph_find_featured_topic? &topic=`input` &namespace=`asi`]]" value="[[!getUrlParam? &name=`searchTopic`]]">
+                                <input type="hidden" name="sortbyT" value="[[!getUrlParam? &name=`sortbyT`]]"/>
+                                <input type="hidden" id="viewT_input" name="viewT" value="[[!getUrlParam:is=``:or:is=`full`:then=`full`:else=`list`? &name=`viewT`]]"/>
                             </div>
                         </form>
                     </div>
@@ -184,8 +188,8 @@
                         <div class="view">
                             <strong>[[!%asi.view_doc_label? &topic=`default` &namespace=`asi`]]: </strong>
                             <ul class="nav-tabs">
-                                <li class="active"><a href="#tabTopicsFull" data-tabID="20" data-toggle="tab"><i class="fas fa-images"></i></a></li>
-                                <li><a href="#tabTopicsList" data-tabID="21" data-toggle="tab"><i class="fas fa-list"></i></a></li>
+                                <li class="[[!getUrlParam:is=``:or:is=`full`:then=`active`:else=``? &name=`viewT`]]"><a id="a_view_t_full" href="#tabTopicsFull" data-tabID="20" data-toggle="tab"><i class="fas fa-images"></i></a></li>
+                                <li class="[[!getUrlParam:is=`list`:then=`active`:else=``? &name=`viewT`]]"><a id="a_view_t_list" href="#tabTopicsList" data-tabID="21" data-toggle="tab"><i class="fas fa-list"></i></a></li>
                             </ul>
                         </div>
                         <div class="sortBy">
@@ -196,15 +200,15 @@
                                     [[!getUrlParam:is=`z-a`:then=`[[!%asi.filter_name_z_a? &topic=`filters` &namespace=`asi`]]`? &name=`sortbyT`]]
                                 </div>
                                 <div class="inner">
-                                    <a href="[[~[[*id]]]]?sortbyT=a-z&searchTopic=[[!getUrlParam? &name=`searchTopic`]]#tabSection">[[!%asi.filter_name_a_z? &topic=`filters` &namespace=`asi`]]</a>
-                                    <a href="[[~[[*id]]]]?sortbyT=z-a&searchTopic=[[!getUrlParam? &name=`searchTopic`]]#tabSection">[[!%asi.filter_name_z_a? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a id="a_sorting_t1"  href="[[~[[*id]]]]?sortbyT=a-z&searchTopic=[[!getUrlParam? &name=`searchTopic`]][[!getUrlParam:ne=``:then=`&viewT=[[!getUrlParam? &name=`viewT`]]`:else=`&viewT=full`? &name=`viewT`]]#tabSection">[[!%asi.filter_name_a_z? &topic=`filters` &namespace=`asi`]]</a>
+                                    <a id="a_sorting_t2"  href="[[~[[*id]]]]?sortbyT=z-a&searchTopic=[[!getUrlParam? &name=`searchTopic`]][[!getUrlParam:ne=``:then=`&viewT=[[!getUrlParam? &name=`viewT`]]`:else=`&viewT=full`? &name=`viewT`]]#tabSection">[[!%asi.filter_name_z_a? &topic=`filters` &namespace=`asi`]]</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="tab-content">
-                    <div id="tabTopicsFull" class="tab-pane fade active in">
+                    <div id="tabTopicsFull" class="tab-pane fade [[!getUrlParam:is=``:or:is=`full`:then=`active in`:else=``? &name=`viewT`]]">
                         <div class="row moreList">
                             [[!#GET.searchTopic:notempty=`
 
@@ -248,7 +252,7 @@
                             `]]
                         </div>
                     </div>
-                    <div id="tabTopicsList" class="tab-pane fade">
+                    <div id="tabTopicsList" class="tab-pane fade [[!getUrlParam:is=`list`:then=`active in`:else=``? &name=`viewT`]]">
                         [[+context.topic_parent_id]]
                         <div class="row">
                             [[!#GET.searchTopic:notempty=`
@@ -337,14 +341,41 @@
                 }
             }
             
-            
-            if("searchTopic" in params) {
-                $('.clear_search.topic a').attr('href', mainUrl+'&searchTopic=&sortbyT=a-z');
-            }
-            else {
-                $('.clear_search.topic a').attr('href', mainUrl+'?search=&sortbyD=newest');
-            }
+            $('.clear_search.topic a').attr('href', mainUrl+'&searchTopic=&sortbyT=a-z');
+            $('.clear_search.documents a').attr('href', mainUrl+'?search=&sortbyD=newest');
+
         }
+
+
+        $( "#a_view_list" ).on( "click", function() {
+            $( "#viewD_input" ).val("list");
+            var href = $('#a_sorting_d1').attr('href');
+            $('#a_sorting_d1').attr('href', href.replace("viewD=full","viewD=list"));
+            $('#a_sorting_d2').attr('href', href.replace("viewD=full","viewD=list"));
+            $('#a_sorting_d3').attr('href', href.replace("viewD=full","viewD=list"));
+            $('#a_sorting_d4').attr('href', href.replace("viewD=full","viewD=list"));
+        } );
+        $( "#a_view_full" ).on( "click", function() {
+            $( "#viewD_input" ).val("full");
+            var href = $('#a_sorting_d1').attr('href');
+            $('#a_sorting_d1').attr('href', href.replace("viewD=list","viewD=full"));
+            $('#a_sorting_d2').attr('href', href.replace("viewD=list","viewD=full"));
+            $('#a_sorting_d3').attr('href', href.replace("viewD=list","viewD=full"));
+            $('#a_sorting_d4').attr('href', href.replace("viewD=list","viewD=full"));
+        } );
+        
+        $( "#a_view_t_list" ).on( "click", function() {
+            $( "#viewT_input" ).val("list");
+            var href = $('#a_sorting_t1').attr('href');
+            $('#a_sorting_t1').attr('href', href.replace("viewD=full","viewD=list"));
+            $('#a_sorting_t2').attr('href', href.replace("viewD=full","viewD=list"));
+        } );
+        $( "#a_view_t_full" ).on( "click", function() {
+            $( "#viewT_input" ).val("full");
+            var href = $('#a_sorting_t1').attr('href');
+            $('#a_sorting_t1').attr('href', href.replace("viewT=list","viewT=full"));
+            $('#a_sorting_t2').attr('href', href.replace("viewT=list","viewT=full"));
+        } );
 
     });
 
