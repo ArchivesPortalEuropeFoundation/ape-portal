@@ -29,12 +29,13 @@
             [[*exploreTitle]]
         </div>
         <ul class="nav-tabs buttons">
-            <li class="active"><a href="#tabDocuments" data-tabID="10" data-toggle="tab">[[!%asi.title_highlights? &topic=`default` &namespace=`asi`]]</a></li>
-            <li><a href="#tabTopics" data-tabID="20" data-toggle="tab">[[!%asi.tab_topics? &topic=`default` &namespace=`asi`]]</a></li>
+            <li class="[[!getUrlParamBoth:is=`true`:or:is=`both`:then=`active`:else=``? &param1=`search` &param2=`searchTopic`]]"><a href="#tabDocuments" data-tabID="10" data-toggle="tab">[[!%asi.title_highlights? &topic=`default` &namespace=`asi`]]</a></li>
+            <li class="[[!getUrlParamBoth:is=`true`:then=`active`:else=``? &param1=`searchTopic` &param2=`search`]]"><a href="#tabTopics" data-tabID="20" data-toggle="tab">[[!%asi.tab_topics? &topic=`default` &namespace=`asi`]]</a></li>
         </ul>
         <a class="anchor" id="tabSection"></a>
+
         <div class="tab-content">
-            <div id="tabDocuments" class="tab-pane fade active in">
+            <div id="tabDocuments" class="tab-pane fade [[!getUrlParamBoth:is=`true`:or:is=`both`:then=`active in`:else=``? &param1=`search` &param2=`searchTopic`]]">
                 [[*exploreDocsText:notempty=`
                 <div class="content text-center">
                     [[*exploreDocsText]]
@@ -163,7 +164,7 @@
                     </div>
                 </div>
             </div>
-            <div id="tabTopics" class="tab-pane fade">
+            <div id="tabTopics" class="tab-pane fade [[!getUrlParamBoth:is=`true`:then=`active in`:else=``? &param1=`searchTopic` &param2=`search`]]">
                 [[*exploreTopicsText:notempty=`
                 <div class="content text-center">
                     [[*exploreTopicsText]]
@@ -302,7 +303,7 @@
     window.addEventListener("load", function(){
         var url = window.location.href;
         if(url.includes('searchTopic=')){
-            $('a[href="#tabTopics"]').tab('show');
+            [[-$('a[href="#tabTopics"]').tab('show');]]
             $('html, body').animate({scrollTop: $('#exploreTabs').offset().top -160 }, 'fast');
 
         } else if(url.includes('?tab=documents')){
