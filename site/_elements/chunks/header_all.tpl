@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </div>]]
-                [[-
+
                 [[!+user.logged_in:eq=`1`:then=`
                 <!-- account menu -->
                 <div class="item fades">
@@ -79,6 +79,7 @@
                     </div>
                 </div>
                 `:else=`
+                [[!Login]]
                 <div class="item fades">
                 </div>
                 <div class="item fades[[*id:is=`78`:then=` active`]]">
@@ -89,7 +90,7 @@
                 </div>
 
                 `]]
-                ]]
+                
 
             </div>
         </div>
