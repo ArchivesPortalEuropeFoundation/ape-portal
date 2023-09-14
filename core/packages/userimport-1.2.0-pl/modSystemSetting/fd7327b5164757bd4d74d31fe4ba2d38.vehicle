@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'userimport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9d862e00d043ba41c26fec0110b4faba',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'fd7327b5164757bd4d74d31fe4ba2d38',
+  'native_key' => 'userimport.notifyusers',
+  'object' => '{"key":"userimport.notifyusers","value":"0","xtype":"combo-boolean","namespace":"userimport","area":"","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'userimport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '827068fb14c04cf4b08b2a075bc41328',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8c30f38a29bae198cdf87bf0469101bf',
+  'native_key' => 'userimport.enclosure',
+  'object' => '{"key":"userimport.enclosure","value":"\\"","xtype":"textfield","namespace":"userimport","area":"","editedon":null}',
+);

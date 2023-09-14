@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'userimport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6fa60c8bb4d8c1e3197d874fcd3f3058',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd697ba73bfa241c24beec10e1d3e996b',
+  'native_key' => 'userimport.mailbody',
+  'object' => '{"key":"userimport.mailbody","value":"<!DOCTYPE html>\\n<html lang=\\"[[++cultureKey]]\\">\\n    <head>\\n        <meta http-equiv=\\"Content-Type\\" content=\\"text\\/html; charset=[[++modx_charset]]\\">\\n        <title>Account Notification<\\/title>\\n    <\\/head>\\n    <body>\\n        <p>\\n            Hello,<br>\\n            <br>\\n            we\'d like to inform you, that your user credentials were imported \\n            into our system and a new user account was created for you!\\n        <\\/p>\\n        <p>\\n            <strong>Here are your new account credentials:<\\/strong><br>\\n            <br>\\n            Name: [[+fullname]]<br>\\n            Email: [[+email]]<br>\\n            Your username: [[+username]]<br>\\n            Your password: [[+password]]\\n        <\\/p>\\n        <p>\\n            If you have any questions please don\'t hesitate to contact us!\\n        <\\/p>\\n        <p>\\n            Your [[++site_name]] team\\n        <\\/p>\\n    <\\/body>\\n<\\/html>","xtype":"textarea","namespace":"userimport","area":"","editedon":null}',
+);

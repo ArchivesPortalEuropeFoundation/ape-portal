@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'userimport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '972f9880ab69d13a7b3d2af0e30215f9',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '83cb7fec0a5d7bc27ab6b577cb6d0836',
+  'native_key' => 'userimport.delimiter',
+  'object' => '{"key":"userimport.delimiter","value":",","xtype":"textfield","namespace":"userimport","area":"","editedon":null}',
+);

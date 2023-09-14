@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'userimport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'bd43be2a152072effc51a17ca04720c3',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '18d64e8eb9f2d9342b83a3a0ca2affdf',
+  'native_key' => 'userimport.mailsubject',
+  'object' => '{"key":"userimport.mailsubject","value":"Notification: Your New User Account!","xtype":"textfield","namespace":"userimport","area":"","editedon":null}',
+);

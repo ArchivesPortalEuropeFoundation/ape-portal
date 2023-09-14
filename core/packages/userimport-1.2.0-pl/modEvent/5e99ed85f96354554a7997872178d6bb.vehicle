@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'userimport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b3c68ed7892b8ae89c4dde2af53b78f0',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '5e99ed85f96354554a7997872178d6bb',
+  'native_key' => 'onAfterUserImport',
+  'object' => '{"name":"onAfterUserImport","service":6,"groupname":"userImport"}',
+);

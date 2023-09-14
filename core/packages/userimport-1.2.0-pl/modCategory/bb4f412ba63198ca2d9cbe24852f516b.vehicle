@@ -1,0 +1,81 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+    ),
+    'Chunks' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+    'Templates' => 
+    array (
+      'unique_key' => 'templatename',
+      'preserve_keys' => false,
+      'update_object' => true,
+    ),
+    'TemplateVars' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+    ),
+  ),
+  'abort_install_on_vehicle_fail' => true,
+  'copy_exclude_patterns' => 
+  array (
+    0 => '/^__/',
+  ),
+  'namespace' => 'userimport',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"userimport-1.2.0-pl\\/modCategory\\/bb4f412ba63198ca2d9cbe24852f516b\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"userimport"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"userimport-1.2.0-pl\\/modCategory\\/bb4f412ba63198ca2d9cbe24852f516b\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"userimport"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0b2ad0ab22349055eedf1c75ddcea29e',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'bb4f412ba63198ca2d9cbe24852f516b',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"UserImport","rank":0}',
+);

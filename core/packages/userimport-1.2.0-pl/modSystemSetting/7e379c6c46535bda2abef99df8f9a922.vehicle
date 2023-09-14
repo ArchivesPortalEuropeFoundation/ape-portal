@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'userimport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4b0d97e2262a0f190cadbe38bb8029b4',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7e379c6c46535bda2abef99df8f9a922',
+  'native_key' => 'userimport.autousername',
+  'object' => '{"key":"userimport.autousername","value":"0","xtype":"combo-boolean","namespace":"userimport","area":"","editedon":null}',
+);

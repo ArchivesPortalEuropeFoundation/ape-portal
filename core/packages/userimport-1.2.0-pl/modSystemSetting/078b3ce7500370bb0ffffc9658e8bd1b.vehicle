@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'userimport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '06a8b89b1dd4e6803666806e7567b7e1',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '078b3ce7500370bb0ffffc9658e8bd1b',
+  'native_key' => 'userimport.setimportmarker',
+  'object' => '{"key":"userimport.setimportmarker","value":"1","xtype":"combo-boolean","namespace":"userimport","area":"","editedon":null}',
+);
