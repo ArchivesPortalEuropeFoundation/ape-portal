@@ -68,6 +68,7 @@
                                 class="far fa-angle-down"></i>
                         </div>
                         <div class="inner">
+                            [[-[[!getUserFirstName]]]]
                             <ul>
                                 <li><a href="[[~[[BabelTranslation:default=`72`? &contextKey=`[[+contextKey:default=`web`]]` &resourceId=`72`]]]]">[[!%asi.dashboard? &topic=`account` &namespace=`asi`]]</a></li>
                                 <li><a href="[[~[[BabelTranslation:default=`73`? &contextKey=`[[+contextKey:default=`web`]]` &resourceId=`73`]]]]">[[!%asi.saved_searches? &topic=`account` &namespace=`asi`]]</a></li>
@@ -79,14 +80,13 @@
                     </div>
                 </div>
                 `:else=`
-                [[!Login]]
                 <div class="item fades">
                 </div>
                 <div class="item fades[[*id:is=`78`:then=` active`]]">
-                    <a href="https://deprecated.archivesportaleurope.net/sign-in"><i class="mr fas fa-sign-in"></i> [[!%asi.action_create_account? &topic=`actions` &namespace=`asi`]]</a>
+                    <a href="[[~78]]"><i class="mr fas fa-sign-in"></i> [[!%asi.action_create_account? &topic=`actions` &namespace=`asi`]]</a>
                 </div>
                 <div class="item fades[[*id:is=`79`:then=` active`]]">
-                    <a href="https://deprecated.archivesportaleurope.net/sign-in"><i class="mr fas fa-user"></i> [[!%asi.label_login? &topic=`label` &namespace=`asi`]]</a>
+                    <a href="[[~79]]"><i class="mr fas fa-user"></i> [[!%asi.label_login? &topic=`label` &namespace=`asi`]]</a>
                 </div>
 
                 `]]
