@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div class="right">
-                  [[-  <a class="yellowIcon" href="#bookmarkPopup" data-trigger="save_bookmark"><i class="fas fa-bookmark mr"></i> [[!%asi.action_bookmark? &topic=`actions` &namespace=`asi`]]</a>]]
+                    <a class="yellowIcon" href="#bookmarkPopup" data-trigger="save_bookmark"><i class="fas fa-bookmark mr"></i> [[!%asi.action_bookmark? &topic=`actions` &namespace=`asi`]]</a>
                     <a class="pinkIcon" href="#suggestionPopup" data-trigger="suggestion"><i class="fas fa-pencil mr"></i> [[!%asi.action_make_a_suggestion? &topic=`actions` &namespace=`asi`]]</a>
                     <a class="aLink blueIcon" onclick="contactInstitutionClick()"><i class="fas fa-comment mr"></i> [[!%asi.action_contact_institution? &topic=`actions` &namespace=`asi`]]</a>
                 </div>
@@ -105,7 +105,7 @@
                 <div class="buttons">
                     <a class="button blue visible-xs visible-sm toggleSlideUp viewContext" href="#affix"><i class="fas fa-sitemap"></i>[[!%asi.view_context? &topic=`default` &namespace=`asi`]]</a>
                     <a class="button blue visible-xs visible-sm toggleSlideUp" href="#optionsSlideUp"><i class="fas fa-cogs"></i></a>
-                    [[- <a class="button blue hidden-xs hidden-sm" href="#bookmarkPopup" data-trigger="save_bookmark"><i class="fas fa-bookmark"></i> [[!%asi.action_bookmark? &topic=`actions` &namespace=`asi`]]</a>]]
+                    <a class="button blue hidden-xs hidden-sm" href="#bookmarkPopup" data-trigger="save_bookmark"><i class="fas fa-bookmark"></i> [[!%asi.action_bookmark? &topic=`actions` &namespace=`asi`]]</a>
                     <a class="button blue hidden-xs hidden-sm" href="#suggestionPopup" data-trigger="suggestion"><i class="fas fa-pencil"></i> [[!%asi.action_make_a_suggestion? &topic=`actions` &namespace=`asi`]]</a>
                     <a class="button blue aLink hidden-xs hidden-sm" onclick="contactInstitutionClick()"><i class="fas fa-comment"></i> [[!%asi.action_contact_institution? &topic=`actions` &namespace=`asi`]]</a>
                     <div class="buttonDropdown">
@@ -452,7 +452,7 @@
     <div id="optionsSlideUp" class="slideUp">
         <span class="closeIcon toggleSlideUp"><i class="fas fa-times"></i></span>
         <a onclick="history.back(-1)"><i class="far fa-angle-left"></i> [[!%asi.return_to_search? &topic=`default` &namespace=`asi`]]</a>
-        [[- <a class="toggleSlideUp" href="#bookmarkPopup" data-trigger="save_bookmark"><i class="fas fa-bookmark yellow"></i> [[!%asi.action_bookmark? &topic=`actions` &namespace=`asi`]]</a>]]
+        <a class="toggleSlideUp" href="#bookmarkPopup" data-trigger="save_bookmark"><i class="fas fa-bookmark yellow"></i> [[!%asi.action_bookmark? &topic=`actions` &namespace=`asi`]]</a>
         <a class="toggleSlideUp" data-trigger="suggestion" href="#suggestionPopup"><i class="fas fa-pencil blue"></i> [[!%asi.action_make_a_suggestion? &topic=`actions` &namespace=`asi`]]</a>
         <a class="aLink toggleSlideUp" onclick="contactInstitutionClick()"><i class="fas fa-comment pink"></i> [[!%asi.action_contact_this_institution? &topic=`actions` &namespace=`asi`]]</a>
     </div>
