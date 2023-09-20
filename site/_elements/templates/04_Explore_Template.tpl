@@ -221,10 +221,8 @@
                             &includeTVs=`heroTitle,refImage60,refText,refType,showInList`
                             &processTVs=`refImage60`
                             &tvFilters=`showInList==yes`
-                            [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"publishedon":"DESC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`oldest`:then=`&sortby=`{"publishedon":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=``:or:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyT`]]
+                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyT`]]
 
                             &where=`[{"pagetitle:LIKE":"%[[#GET.searchTopic]]%","OR:refText:LIKE":"%[[#GET.searchTopic]]%","AND:context_key:LIKE":"[[+contextKey]]","AND:parent:=":"[[+context.topic_parent_id]]"}]`
                             ]]
@@ -283,10 +281,8 @@
                             &includeTVs=`heroTitle,refImage60,refText,refType,showInList`
                             &processTVs=`refImage60`
                             &tvFilters=`showInList==yes`
-                            [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"publishedon":"DESC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`oldest`:then=`&sortby=`{"publishedon":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=``:or:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyT`]]
+                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyT`]]
 
                             &where=`[{"pagetitle:LIKE":"%[[#GET.searchTopic]]%","OR:refText:LIKE":"%[[#GET.searchTopic]]%","AND:context_key:LIKE":"[[+contextKey]]","AND:parent:=":"[[+context.topic_parent_id]]"}]`
                             ]]
