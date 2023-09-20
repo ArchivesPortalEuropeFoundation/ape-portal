@@ -14,7 +14,7 @@
         <div class="content">
             <h1>[[*heroTitle:notempty=`[[*heroTitle]]`:default=`[[*pagetitle]]`]]</h1>
             [[*heroText]]
-            [[*heroShowPublished:is=`yes`:then=`<div style="font-size:12px; color:#545454;margin-bottom:2px">last updated on</div><span class="date">[[*editedon:strtotime:date=`%d-%m-%Y`]]</span>`]]
+            [[*heroShowPublished:is=`yes`:then=`<div style="font-size:12px; color:#545454;margin-bottom:2px">last updated on</div><span class="date">[[*editedon:date=`%d-%m-%Y`]]</span>`]]
         </div>
         <div class="buttons">
             <a class="button blue visible-xs toggleSlideUp" href="#optionsSlideUp"><i class="fas fa-cogs"></i></a>

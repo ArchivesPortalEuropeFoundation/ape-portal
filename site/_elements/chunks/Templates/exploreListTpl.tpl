@@ -5,7 +5,7 @@
 							    [[+tv.refType:is=`tp`:then=`
                   [[-100,000+ [[%asi.results? &topic=`default` &namespace=`asi`]]]]
 							    `:else=`
-							    ([[+publishedon:date=`%d-%m-%Y`]])
+								(last update on: [[+editedon:date=`%d-%m-%Y`]])
 							    `]]
 							</span>
 						</a>

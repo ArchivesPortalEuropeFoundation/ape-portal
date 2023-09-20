@@ -102,7 +102,8 @@
                             [[!getUrlParam:is=`oldest`:then=`&sortby=`{"editedon":"ASC"}``? &name=`sortbyD`]]
                             [[!getUrlParam:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyD`]]
                             [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyD`]]
-                            &where=`[[!getUrlParam:notempty=`[{"parent:=":[[!++highlight_parent_id]]}, {"pagetitle:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" },{ "OR:refText:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" }]`? &name=`search`]] `
+                            [[-&where=`[[!getUrlParam:notempty=`[{"parent:=":[[++highlight_parent_id]]}, {"pagetitle:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" },{ "OR:refText:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" }]`? &name=`search`]] `]]
+                            &where=`[{"pagetitle:LIKE":"%[[#GET.search]]%","OR:refText:LIKE":"%[[#GET.search]]%","AND:context_key:LIKE":"[[+contextKey]]","AND:parent:=":"[[+context.highlight_parent_id]]"}]`
                             ]]
 
                             [[-
@@ -156,11 +157,12 @@
                             &limit=`0`
                             &includeTVs=`heroTitle,refText,showInList`
                             &tvFilters=`showInList==yes`
-                            [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"publishedon":"DESC"}``? &name=`sortbyD`]]
-                            [[!getUrlParam:is=`oldest`:then=`&sortby=`{"publishedon":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"editedon":"DESC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`oldest`:then=`&sortby=`{"editedon":"ASC"}``? &name=`sortbyD`]]
                             [[!getUrlParam:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyD`]]
                             [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyD`]]
-                            &where=`[[!getUrlParam:notempty=`[{"parent:=":[[!++highlight_parent_id]]}, {"pagetitle:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" },{ "OR:refText:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" }]`? &name=`search`]] `
+                            [[-&where=`[[!getUrlParam:notempty=`[{"parent:=":[[!++highlight_parent_id]]}, {"pagetitle:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" },{ "OR:refText:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" }]`? &name=`search`]] `]]
+                            &where=`[{"pagetitle:LIKE":"%[[#GET.search]]%","OR:refText:LIKE":"%[[#GET.search]]%","AND:context_key:LIKE":"[[+contextKey]]","AND:parent:=":"[[+context.highlight_parent_id]]"}]`
                             ]]
                         </div>
                     </div>
@@ -210,6 +212,23 @@
                 <div class="tab-content">
                     <div id="tabTopicsFull" class="tab-pane fade [[!getUrlParam:is=``:or:is=`full`:then=`active in`:else=``? &name=`viewT`]]">
                         <div class="row moreList">
+
+                            [[!pdoResources?
+                            &parents=`[[+context.topic_parent_id]]`
+                            &tpl=`linkBlockStandard60Tpl`
+                            &limit=`0`
+
+                            &includeTVs=`heroTitle,refImage60,refText,refType,showInList`
+                            &processTVs=`refImage60`
+                            &tvFilters=`showInList==yes`
+                            [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"publishedon":"DESC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`oldest`:then=`&sortby=`{"publishedon":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyD`]]
+
+                            &where=`[{"pagetitle:LIKE":"%[[#GET.searchTopic]]%","OR:refText:LIKE":"%[[#GET.searchTopic]]%","AND:context_key:LIKE":"[[+contextKey]]","AND:parent:=":"[[+context.topic_parent_id]]"}]`
+                            ]]
+                            [[-
                             [[!#GET.searchTopic:notempty=`
 
                             [[!pdoResources?
@@ -241,6 +260,7 @@
                             &where=`[[!getUrlParam:notempty=`[{"parent:=":[[!++topic_parent_id]]}, {"pagetitle:LIKE": "%[[!getUrlParam? &name=`searchTopic`]]%", "AND:context_key:LIKE":"[[+contextKey]]" },{ "OR:refText:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" }]`? &name=`search`]] `
                             ]]
                             `]]
+                            ]]
 
                             [[!getUrlParam:empty=`
                             <div class="col-xs-12">
@@ -253,9 +273,25 @@
                         </div>
                     </div>
                     <div id="tabTopicsList" class="tab-pane fade [[!getUrlParam:is=`list`:then=`active in`:else=``? &name=`viewT`]]">
-                        [[+context.topic_parent_id]]
                         <div class="row">
-                            [[!#GET.searchTopic:notempty=`
+
+                            [[!pdoResources?
+                            &parents=`[[+context.topic_parent_id]]`
+                            &tpl=`exploreListTpl`
+                            &limit=`0`
+
+                            &includeTVs=`heroTitle,refImage60,refText,refType,showInList`
+                            &processTVs=`refImage60`
+                            &tvFilters=`showInList==yes`
+                            [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"publishedon":"DESC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`oldest`:then=`&sortby=`{"publishedon":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"pagetitle":"ASC", "heroTitle":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"pagetitle":"DESC", "heroTitle":"DESC"}``? &name=`sortbyD`]]
+
+                            &where=`[{"pagetitle:LIKE":"%[[#GET.searchTopic]]%","OR:refText:LIKE":"%[[#GET.searchTopic]]%","AND:context_key:LIKE":"[[+contextKey]]","AND:parent:=":"[[+context.topic_parent_id]]"}]`
+                            ]]
+                            
+                            [[-[[!#GET.searchTopic:notempty=`
 
                             [[!pdoResources?
                             &parents=`[[+context.topic_parent_id]]`
@@ -273,6 +309,7 @@
                             &where=`[{"pagetitle:LIKE":"%[[#GET.searchTopic]]%","OR:refText:LIKE":"%[[#GET.searchTopic]]%","AND:context_key:LIKE":"[[+contextKey]]","AND:parent:=":"[[+context.topic_parent_id]]"}]`
                             ]]
                             `]]
+
                             [[!#GET.searchTopic:empty=`
                             [[pdoResources?
                             &parents=`[[+context.topic_parent_id]]`
@@ -286,6 +323,7 @@
                             &where=`[[!getUrlParam:notempty=`[{"parent:=":[[!++topic_parent_id]]}, {"pagetitle:LIKE": "%[[!getUrlParam? &name=`searchTopic`]]%", "AND:context_key:LIKE":"[[+contextKey]]" },{ "OR:refText:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" }]`? &name=`search`]] `
                             ]]
                             `]]
+                            ]]
 
                         </div>
                     </div>
