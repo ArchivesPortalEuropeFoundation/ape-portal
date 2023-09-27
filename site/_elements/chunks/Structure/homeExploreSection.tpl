@@ -29,8 +29,8 @@
 					[[*exploreDocsIDs:notempty=`
 					&resources=`[[*exploreDocsIDs]]`
 					`]]
-					&sortby=`{"editedon":"DESC"}`
-					&includeTVs=`heroTitle,refImage60,refText`
+					&sortby=`{"docPriority":"DESC","editedon":"DESC"}`
+					&includeTVs=`heroTitle,refImage60,refText,docPriority`
 					&processTVs=`refImage60`
 					]]
 				</div>
