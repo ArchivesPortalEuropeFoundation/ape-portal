@@ -17,6 +17,9 @@
             <a class="view button blue" href="[[~62]]?repositoryCode=[[!+code]]&term=[[!+term]]">
             <i class="fas fa-eye mr"></i> [[!%asi.action_view? &topic=`actions` &namespace=`asi`]]</a>
 
+            <a style="top: 46px;" class="view button blue" target="_blank" href="/institution/aicode/[[!+code]]">
+                <i class="fas fa-eye mr"></i> [[!%asi.action_view? &topic=`actions` &namespace=`asi`]]</a>
+        
             [[!+searchable_content:gt=`0`:then=`
             <a class="aidsLink" href="[[~62]]?repositoryCode=[[!+code]]&term=[[!+term]]&scroll=archivalMaterials"><i class="fas fa-bars"></i>[[!%asi.label_list_of_archival_materials? &topic=`label` &namespace=`asi`]]</a>`]]
         </div>

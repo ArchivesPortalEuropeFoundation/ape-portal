@@ -10,6 +10,7 @@
                 <p>[[!+description:ellipsis=`120`]]</p>
             </div>
             <a class="view button blue" href="[[~61]]?repositoryCode=[[!+code]]&recordId=[[!+record_id]]&term=[[!+term]]"><i class="fas fa-eye mr"></i> [[!%asi.action_view? &topic=`actions` &namespace=`asi`]]</a>
+            <a class="view button blue" target="_blank" href="/name/aicode/[[!+code]]/id/[[!+record_id]]"><i class="fas fa-eye mr"></i> [[!%asi.action_view? &topic=`actions` &namespace=`asi`]]</a>
         </div>
         <span class="nameType"><i class="fas [[!+name_icon]]"></i> [[!%asi.[[!+name_description]]? &topic=`solr` &namespace=`asi`]]</span>
     </div>
