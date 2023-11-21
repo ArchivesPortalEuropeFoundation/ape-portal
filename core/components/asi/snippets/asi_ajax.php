@@ -733,7 +733,7 @@ switch ($_REQUEST['action']) {
         $response['result']['top_left'] = $archiveDetailTopLeft;
         $response['result']['repoCode'] = $placeholders['archive']['repocode'];
         $response['result']['recordId'] = $placeholders['archive']['recordid'];
-        $response['result']['eadId'] = $placeholders['archive']['eadid'];
+        $response['result']['eadId'] = $placeholders['archive']['recordid'];
         $response['result']['clevelId'] = $placeholders['archive']['clevelid'];
         $response['result']['unitId'] = $placeholders['archive']['unitid'];
         $response['result']['levelName'] = $placeholders['archive']['levelname'];
@@ -743,7 +743,7 @@ switch ($_REQUEST['action']) {
         $response['result']['compCurrentPg'] = $placeholders['archive']['components']['page'];
         $response['result']['compResultsTotal'] = $placeholders['archive']['components']['resultsTotal'];
         $response['result']['compPageTotal'] = $placeholders['archive']['components']['pageTotal'];
-
+        
         break;
 
     case "load_tree_children":

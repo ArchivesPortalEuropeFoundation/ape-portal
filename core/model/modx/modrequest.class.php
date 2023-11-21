@@ -94,6 +94,7 @@ class modRequest {
                 }
             }
         }
+        $this->modx->invokeEvent("OnMidHandleRequest");
         if (empty ($this->modx->resourceMethod)) {
             $this->modx->resourceMethod = "id";
         }

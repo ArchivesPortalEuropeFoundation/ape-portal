@@ -16,6 +16,7 @@
                 [[!+dao:eq=`1`:then=`<span class="digiObject"><i class="fas fa-image"></i> Digital object</span>`]]
             </div>
             <a class="view button blue" href="[[~60]]?&repositoryCode=[[!+code]]&term=[[!+link_term]]&levelName=[[!+levelName]][[!+link_data]]"><i class="fas fa-eye mr"></i> [[!%asi.action_view? &topic=`actions` &namespace=`asi`]]</a>
+            <a class="view button blue" target="_blank" href="/archive/aicode/[[!+code]]/type/[[!+recordType]]/id/[[!+recordId]][[!+extraCLevelIdPart]]"><i class="fas fa-eye mr"></i> [[!%asi.action_view? &topic=`actions` &namespace=`asi`]]</a>
         </div>
         [[!+daoType:eq=`IMAGE`:then=`
         <div class="image" style="background-image:url(uploads/test-images/[[!+image]]);"></div>

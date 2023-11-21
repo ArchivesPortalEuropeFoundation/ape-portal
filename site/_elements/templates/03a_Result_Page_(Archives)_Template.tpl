@@ -481,6 +481,8 @@
         var compCurrentPg = "[[!+archive.components.page:strip]]";
         var compResultsTotal = "[[!+archive.components.resultsTotal:strip]]";
         var compPageTotal = "[[!+archive.components.pageTotal:strip]]";
+
+        var url_parameters = "[[!+archive.url_parameters:strip]]";
     </script>
 
     [[!$asi_logged_in_js]]

@@ -80,7 +80,7 @@
 
                 [[!+name.lifedates]]
             </span>
-            <span class="ref"><strong>[[!%asi.results_identifier? &topic=`default` &namespace=`asi`]]:</strong> [[!#GET.recordId]]</span>
+            <span class="ref"><strong>[[!%asi.results_identifier? &topic=`default` &namespace=`asi`]]:</strong> [[!+name.id]]</span>
         </div>
         <div class="buttons">
             <a class="button blue visible-xs visible-sm toggleSlideUp viewContext" href="#affix"><i class="fas fa-sitemap"></i>[[!%asi.view_context? &topic=`default` &namespace=`asi`]]</a>

@@ -17,6 +17,15 @@
  * @return     sets modx placeholders for usage in the template
  */
 
+function console_log($output, $with_script_tags = true) {
+    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) .
+        ');';
+//    $js_code .= 'history.replaceState(\'page2\', \'Title\', \'/archive/test1/test3\');';
+    if ($with_script_tags) {
+        $js_code = '<script>' . $js_code . '</script>';
+    }
+    echo $js_code;
+}
 
 require_once(MODX_CORE_PATH . 'components/asi/autoload.php');
 use asi\AsiManager AS asi;
@@ -44,9 +53,120 @@ $placeholders = [];
 $scroll = $params['scroll'] ?? null;
 $placeholders['URI'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
+if (substr( $_SERVER['REQUEST_URI'], 0, 9 ) === "/archive/") {
+    //parse path to produce the various sub-params
+    $path = str_replace('/archive/', '', rawurldecode($_SERVER['REQUEST_URI']));
+    $parts = explode('/' , $path);
+
+    $validParams = ['aicode','type','id','dbid','unitid'];
+    $params = [];
+    $previousPart = '';
+    foreach ($parts as $part){
+        if (in_array($part, $validParams)){
+            $params[$part] = '';
+            $previousPart = $part;
+        }
+        else {
+            if ($params[$previousPart] == ''){
+                $params[$previousPart] = $part;
+            }
+            else {
+                $params[$previousPart] = $params[$previousPart] . '/' . $part;
+            }
+        }
+    }
+    if (array_key_exists('aicode', $params)){
+        $repoCode = $params['aicode'];
+    }
+    if (array_key_exists('type', $params)){
+        $type = $params['type'];
+    }
+    if (array_key_exists('id', $params)){
+        $id = rawurlencode($params['id']);
+    }
+    if (array_key_exists('dbid', $params)){
+        $treeId = $params['dbid'];
+        $cLevelId = $treeId;
+        $_REQUEST['c'] = $treeId;
+    }
+    if (array_key_exists('unitid', $params)){
+        $unitId = rawurlencode($params['unitid']);
+    }
+    if (array_key_exists('dbid', $params) || array_key_exists('unitid', $params)){
+        $levelName = 'clevel';
+    }
+    else {
+        $levelName = 'archdesc';
+    }
+
+//    error_log(print_r('itemID2 = ' . $parts, TRUE));
+//    console_log($parts);
+}
+else if (substr( $_SERVER['REQUEST_URI'], 0, 6 ) === "/name/") {
+    //parse path to produce the various sub-params
+    $path = str_replace('/name/', '', rawurldecode($_SERVER['REQUEST_URI']));
+    $parts = explode('/' , $path);
+
+    $validParams = ['aicode','id'];
+    $params = [];
+    $previousPart = '';
+    foreach ($parts as $part){
+        if (in_array($part, $validParams)){
+            $params[$part] = '';
+            $previousPart = $part;
+        }
+        else {
+            if ($params[$previousPart] == ''){
+                $params[$previousPart] = $part;
+            }
+            else {
+                $params[$previousPart] = $params[$previousPart] . '/' . $part;
+            }
+        }
+    }
+    if (array_key_exists('aicode', $params)){
+        $repoCode = $params['aicode'];
+    }
+    if (array_key_exists('id', $params)){
+        $id = rawurlencode($params['id']);
+    }
+
+//    error_log(print_r('itemID2 = ' . $parts, TRUE));
+//    console_log($parts);
+}
+else if (substr( $_SERVER['REQUEST_URI'], 0, 13 ) === "/institution/") {
+    //parse path to produce the various sub-params
+    $path = str_replace('/name/', '', rawurldecode($_SERVER['REQUEST_URI']));
+    $parts = explode('/' , $path);
+
+    $validParams = ['aicode'];
+    $params = [];
+    $previousPart = '';
+    foreach ($parts as $part){
+        if (in_array($part, $validParams)){
+            $params[$part] = '';
+            $previousPart = $part;
+        }
+        else {
+            if ($params[$previousPart] == ''){
+                $params[$previousPart] = $part;
+            }
+            else {
+                $params[$previousPart] = $params[$previousPart] . '/' . $part;
+            }
+        }
+    }
+    if (array_key_exists('aicode', $params)){
+        $repoCode = $params['aicode'];
+    }
+
+//    error_log(print_r('itemID2 = ' . $parts, TRUE));
+//    console_log($parts);
+}
+
 ini_set('max_execution_time', 0);
 
-$result      = asi::fetchSingleResult($section);
+//$result      = asi::fetchSingleResult($section);
 
 if(!is_null($repoCode)) {
     $instDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eagApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&preview=false"));
@@ -77,21 +197,26 @@ if($section == "search-in-archives") {
     $placeholders['result_type'] = "Archives";
     $output = '';
     $counter = 0;
+    $prefix = '';
     $archiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&eadid={$id}&xmlType={$type}";
     if($levelName === 'clevel') {
+        $prefix = 'C';
         $cLevel = substr($cLevelId, '1');
         $archiveUrl .= "&clevelid=".$cLevel."&type=cdetails";
         $placeholders['archive']['clevelid'] = $cLevel;
         $placeholders['result_clevelid'] = $cLevel;
+
+        if(!is_null($unitId)) {
+            $archiveUrl .= "&clevelunitid={$unitId}";
+            $placeholders['archive']['unitid'] = $unitId;
+
+            $placeholders['result_unitid'] = $unitId;
+        }
+
     } else {
         $archiveUrl .= "&type=frontpage";
     }
-    if(!is_null($unitId)) {
-        $archiveUrl .= "&clevelunitid={$unitId}";
-        $placeholders['archive']['unitid'] = $unitId;
 
-        $placeholders['result_unitid'] = $unitId;
-    }
     $placeholders['archive']['repocode'] = $repoCode;
     $placeholders['archive']['type'] = $type;
     $placeholders['archive']['recordid'] = $id;
@@ -99,11 +224,15 @@ if($section == "search-in-archives") {
 
     $placeholders['result_record_id'] = $id;
 
-    $fAidArchiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode=".$repoCode."&request_locale={$lang}&eadid=".$id."&type=cdetails&clevelunitid=".$unitId."&xmlType=".$type;
-    $FAarchiveDetails = json_decode(file_get_contents($fAidArchiveUrl));
+//    $fAidArchiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode=".$repoCode."&request_locale={$lang}&eadid=".$id."&type=cdetails&clevelunitid=".$unitId."&xmlType=".$type;
+//    $FAarchiveDetails = json_decode(file_get_contents($fAidArchiveUrl));
     $archiveDetails = json_decode(file_get_contents($archiveUrl));
 
-
+    //Store the URL parameters need to be sent for fetching the tree
+    $placeholders['archive']['url_parameters'] = 'c='.$prefix.$archiveDetails->clevelid.'&unitId='.$unitId.'&recordId='.$id.'&repoCode='.$repoCode.'&type='.$type.'&start=0';
+    $placeholders['archive']['eadid'] = $id;
+    
+    //KSTA: my guess is that thus code for fetching the tree is not used.
     $treeQueryString = "{$APIbase}Dashboard/eadTreeApi.action?xmlTypeName={$type}&request_locale={$lang}";
     if($levelName === 'clevel') {
         $cLevel = substr($cLevelId, '1');
@@ -111,9 +240,9 @@ if($section == "search-in-archives") {
     } elseif(!is_null($id)) {
         $treeQueryString .= "&ecId={$treeId}";
     }
-
     $treeResponse = json_decode(file_get_contents($treeQueryString));
     $placeholders['archive']['tree'] = file_get_contents($treeQueryString);
+
 
     $doc = asi::domHTML($archiveDetails->html);
     $finder = new DomXPath($doc);
@@ -121,7 +250,7 @@ if($section == "search-in-archives") {
     //Process EADID Title
     $eadidItem = $finder->query("//div[@class='eadid']")[0];
     if(!is_null($eadidItem)) {
-        $placeholders['archive']['eadid']   = $eadidItem->nodeValue;
+        //$placeholders['archive']['eadid']   = $eadidItem->nodeValue;
         $eadidItem->parentNode->removeChild($eadidItem);
     }
 

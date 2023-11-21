@@ -144,6 +144,21 @@ else {
         default: // search-in-archives
 
             foreach ($results AS $r) {
+                if ($r['levelName'] == 'archdesc'){
+                    $extraCLevelIdPart = '';
+                }
+                else {
+                    if (isset($r['reference_value']) && $r['reference_value']!=null) {
+                        $idField = 'unitid';
+                        $clevelId = $r['reference_value'];
+                    }
+                    else {
+                        $idField = 'dbid';
+                        $clevelId = $r['id'];
+                    }
+                    $extraCLevelIdPart = '/' . $idField . '/' . $clevelId;
+                }
+
                 $html .= $modx->getChunk("asi_search_result_archive_list", array(
                     'type'=>'Hitting Here',
                     'id' => $r['id'],
@@ -168,7 +183,8 @@ else {
                     'levelName' => $r['levelName'],
                     'recordId' => urlencode($r['recordId']),
                     'recordType' => urlencode($r['recordType']),
-                    'referenceId'=> urlencode($r['reference_value'])
+                    'referenceId'=> urlencode($r['reference_value']),
+                    'extraCLevelIdPart'=> $extraCLevelIdPart
                 ));
 
                 $aid_html .= $modx->getChunk("asi_search_result_archive_context", array(

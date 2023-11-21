@@ -65,7 +65,7 @@ if (typeof enable_tree !== 'undefined') {
                     clicked_element.addClass("open");
                 }
 
-                var detailUrl = tree_load_detail_url + "&recordId=" + encodeURIComponent(ApeTree.page_request_params.recordId) + "&c=" + new_parent_id + addParams;
+                var detailUrl = tree_load_detail_url + "&recordId=" + encodeURIComponent(eadId) + "&c=" + new_parent_id + addParams;
 
                 $(document).find("#documentCaptionSlider").slick('unslick');
                 $(document).find("#documentGallerySlider").slick('unslick');
@@ -225,7 +225,8 @@ if (typeof enable_tree !== 'undefined') {
 
             $.ajax({
                     method: "GET",
-                    url: tree_search_url + "&c=" + ApeTree.page_request_params.c + "&unitId=" + ApeTree.page_request_params.unitId + "&recordId=" + ApeTree.page_request_params.recordId + "&repoCode=" + repoCode + "&type=" + type + "&start=0",
+                    //url: tree_search_url + "&c=" + ApeTree.page_request_params.c + "&unitId=" + ApeTree.page_request_params.unitId + "&recordId=" + ApeTree.page_request_params.recordId + "&repoCode=" + repoCode + "&type=" + type + "&start=0",
+                    url: tree_search_url + "&" + url_parameters,
                 })
                 .done(function (data) {
                     var response = JSON.parse(data);
