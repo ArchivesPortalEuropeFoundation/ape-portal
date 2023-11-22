@@ -65,7 +65,7 @@ if (typeof enable_tree !== 'undefined') {
                     clicked_element.addClass("open");
                 }
 
-                var detailUrl = tree_load_detail_url + "&recordId=" + encodeURIComponent(eadId) + "&c=" + new_parent_id + addParams;
+                var detailUrl = tree_load_detail_url + "&recordId=" + eadId + "&c=" + new_parent_id + addParams;
 
                 $(document).find("#documentCaptionSlider").slick('unslick');
                 $(document).find("#documentGallerySlider").slick('unslick');
