@@ -17,14 +17,16 @@
  * @return     sets modx placeholders for usage in the template
  */
 
-function console_log($output, $with_script_tags = true) {
-    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) .
-        ');';
+if (!function_exists('console_log')) {
+    function console_log($output, $with_script_tags = true)
+    {
+        $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
 //    $js_code .= 'history.replaceState(\'page2\', \'Title\', \'/archive/test1/test3\');';
-    if ($with_script_tags) {
-        $js_code = '<script>' . $js_code . '</script>';
+        if ($with_script_tags) {
+            $js_code = '<script>' . $js_code . '</script>';
+        }
+        echo $js_code;
     }
-    echo $js_code;
 }
 
 require_once(MODX_CORE_PATH . 'components/asi/autoload.php');

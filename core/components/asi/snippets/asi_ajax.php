@@ -526,9 +526,15 @@ switch ($_REQUEST['action']) {
         $counter = 0;
         $archiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&eadid={$id}&xmlType={$type}";
         $detailUrl = "advanced-search/search-in-archives/results-(archives)/?";
+        $newDetailUrl = "archive/";
         //repositoryCode=[[!+archive.repocode]]\"&term=archive&levelName=clevel&t=fa&recordId=[[!+archive.recordid]]&c=C[[!+archive.clevelid]]";
         $detailUrl .= "&repositoryCode=".$repoCode;
+        $newDetailUrl .= "aicode/".$repoCode."/";
+
+        $newDetailUrl .= "type/".$params['type']."/";
+
         $detailUrl .= "&recordId=".$id;
+        $newDetailUrl .= "id/".$id."/";
         if($levelName === 'clevel') {
             $cLevel = substr($cLevelId, '1');
             $archiveUrl .= "&clevelid=".$cLevel."&type=cdetails";
@@ -551,11 +557,18 @@ switch ($_REQUEST['action']) {
         $placeholders['archive']['type'] = $type;
         $placeholders['archive']['recordid'] = $id;
         $placeholders['archive']['levelname'] = 'clevel';
-        $placeholders['request_uri'] = $detailUrl;
 
         $fAidArchiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode=".$repoCode."&request_locale={$lang}&eadid=".$id."&type=cdetails&clevelunitid=".$unitId."&xmlType=".$type;
         $FAarchiveDetails = json_decode(file_get_contents($fAidArchiveUrl));
         $archiveDetails = json_decode(file_get_contents($archiveUrl));
+
+        if (isset($archiveDetails->clevelunitid) && $archiveDetails->clevelunitid!=null){
+            $newDetailUrl .= "unitid/".$archiveDetails->clevelunitid;
+        }
+        else {
+            $newDetailUrl .= "dbid/".$params['c'];
+        }
+        $placeholders['request_uri'] = $newDetailUrl;
 
         $treeQueryString = "{$APIbase}Dashboard/eadTreeApi.action?xmlTypeName={$type}&request_locale={$lang}";
         if($levelName === 'clevel') {
@@ -684,7 +697,7 @@ switch ($_REQUEST['action']) {
         $placeholders['result_name'] = $placeholders['archive']['title'];
         $placeholders['result_record_id'] = $placeholders['archive']['recordid'];
         $placeholders['institution']['repositoryCode'] = $repoCode;
-        $placeholders['sharing_uri'] = $FULL_HOST.'/'.$detailUrl;
+        $placeholders['sharing_uri'] = $FULL_HOST.'/'.$newDetailUrl;
         
         $archiveDetailTop = $modx->getChunk("asi_search_result_archive_top", array(
             'archive' => $placeholders['archive'], 'result_type' => $placeholders['result_type'], 'result_name' => $placeholders['result_name'],
