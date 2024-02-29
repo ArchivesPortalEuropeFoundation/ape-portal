@@ -186,7 +186,7 @@
                             <input type="hidden" name="emailTitle" value="Content (Name) has been rated">
                             <input type="hidden" name="repositoryCode" value="[[!+name.repocode]]"/>
                             <input type="hidden" name="nameid" value="[[!+name.id]]"/>
-                            <input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+name.repocode]]">
+                            <input type="hidden" name="institutionLink" value="[[++site_url]]institution/aicode/[[!+name.repocode]]">
                             <input type="text" name="confirmEFm" class="confirmField">
 
                             <div class="rating">
@@ -248,7 +248,7 @@
                         <input type="hidden" name="emailTitle" value="A new message from the Name's Contact Form">
                         <input type="hidden" name="repositoryCode" value="[[!+name.repocode]]"/>
                         <input type="hidden" name="recordid" value="[[!+name.id]]"/>
-                        <input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+name.repocode]]">
+                        <input type="hidden" name="institutionLink" value="[[++site_url]]institution/aicode/[[!+name.repocode]]">
                         <input type="text" name="confirmEFm" class="confirmField" value="">
                         
                         <p class="formError"><i class="fas fa-exclamation-triangle"></i> [[!%asi.form_required_fields_empty_err_msg? &topic=`forms` &namespace=`asi`]]</p>

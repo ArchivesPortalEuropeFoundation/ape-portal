@@ -47,7 +47,7 @@
 				<input type="hidden" name="clevelid" value="[[!+result_clevelid]]"/>
 				<input type="hidden" name="unitid" value="[[!+result_unitid]]"/>
 				<input type="hidden" name="repositoryCode" value="[[!+institution.repositoryCode]]"/>
-				<input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+institution.repositoryCode]]">
+				<input type="hidden" name="institutionLink" value="[[++site_url]]institution/aicode/[[!+institution.repositoryCode]]">
 				<input type="hidden" name="resourceid" value="[[*id]]"/>
 				<input type="text" name="confirmHSL" class="confirmField" value="">
 			    <p class="fieldLabel">[[!%asi.label_full_name? &topic=`label` &namespace=`asi`]]*</p>

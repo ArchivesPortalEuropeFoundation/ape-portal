@@ -132,7 +132,7 @@
                     <input type="hidden" name="archiveid" value="[[!+archive.recordid]]"/>
                     <input type="hidden" name="unitid" value="[[!+archive.unitid]]"/>
                     <input type="hidden" name="clevelid" value="[[!+archive.clevelid]]"/>
-                    <input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+archive.repocode]]">
+                    <input type="hidden" name="institutionLink" value="[[++site_url]]institution/aicode/[[!+archive.repocode]]">
 
                     <input type="text" name="confirmHDY" class="confirmField" value="">
                     <div class="rating">
@@ -191,7 +191,7 @@
                 <input type="hidden" name="archiveid" value="[[!+archive.recordid]]"/>
                 <input type="hidden" name="unitid" value="[[!+archive.unitid]]"/>
                 <input type="hidden" name="clevelid" value="[[!+archive.clevelid]]"/>
-                <input type="hidden" name="institutionLink" value="[[++site_url]]advanced-search/search-in-institutions/results-(institutions)/?&repositoryCode=[[!+archive.repocode]]">
+                <input type="hidden" name="institutionLink" value="[[++site_url]]institution/aicode/[[!+archive.repocode]]">
                 <input type="text" name="confirmHSL" class="confirmField" value="">
                 <p class="formError"><i class="fas fa-exclamation-triangle"></i>
                     [[!%asi.form_required_fields_empty_err_msg? &topic=`forms` &namespace=`asi`]]</p>

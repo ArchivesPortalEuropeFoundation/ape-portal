@@ -57,23 +57,23 @@ $placeholders['URI'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ?
 
 if (substr( $_SERVER['REQUEST_URI'], 0, 9 ) === "/archive/") {
     //parse path to produce the various sub-params
-    $path = str_replace('/archive/', '', rawurldecode($_SERVER['REQUEST_URI']));
+    $path = str_replace('/archive/', '', rawurldecode(strtok($_SERVER["REQUEST_URI"], '?')));
     $parts = explode('/' , $path);
 
     $validParams = ['aicode','type','id','dbid','unitid'];
     $params = [];
     $previousPart = '';
     foreach ($parts as $part){
-        if (in_array($part, $validParams)){
-            $params[$part] = '';
-            $previousPart = $part;
-        }
-        else {
-            if ($params[$previousPart] == ''){
-                $params[$previousPart] = $part;
-            }
-            else {
-                $params[$previousPart] = $params[$previousPart] . '/' . $part;
+        if ($part != '') {
+            if (in_array($part, $validParams)) {
+                $params[$part] = '';
+                $previousPart = $part;
+            } else {
+                if ($params[$previousPart] == '') {
+                    $params[$previousPart] = $part;
+                } else {
+                    $params[$previousPart] = $params[$previousPart] . '/' . $part;
+                }
             }
         }
     }
@@ -106,23 +106,23 @@ if (substr( $_SERVER['REQUEST_URI'], 0, 9 ) === "/archive/") {
 }
 else if (substr( $_SERVER['REQUEST_URI'], 0, 6 ) === "/name/") {
     //parse path to produce the various sub-params
-    $path = str_replace('/name/', '', rawurldecode($_SERVER['REQUEST_URI']));
+    $path = str_replace('/name/', '', rawurldecode(strtok($_SERVER["REQUEST_URI"], '?')));
     $parts = explode('/' , $path);
 
     $validParams = ['aicode','id'];
     $params = [];
     $previousPart = '';
     foreach ($parts as $part){
-        if (in_array($part, $validParams)){
-            $params[$part] = '';
-            $previousPart = $part;
-        }
-        else {
-            if ($params[$previousPart] == ''){
-                $params[$previousPart] = $part;
-            }
-            else {
-                $params[$previousPart] = $params[$previousPart] . '/' . $part;
+        if ($part != '') {
+            if (in_array($part, $validParams)) {
+                $params[$part] = '';
+                $previousPart = $part;
+            } else {
+                if ($params[$previousPart] == '') {
+                    $params[$previousPart] = $part;
+                } else {
+                    $params[$previousPart] = $params[$previousPart] . '/' . $part;
+                }
             }
         }
     }
@@ -138,23 +138,23 @@ else if (substr( $_SERVER['REQUEST_URI'], 0, 6 ) === "/name/") {
 }
 else if (substr( $_SERVER['REQUEST_URI'], 0, 13 ) === "/institution/") {
     //parse path to produce the various sub-params
-    $path = str_replace('/name/', '', rawurldecode($_SERVER['REQUEST_URI']));
+    $path = str_replace('/name/', '', rawurldecode(strtok($_SERVER["REQUEST_URI"], '?')));
     $parts = explode('/' , $path);
 
     $validParams = ['aicode'];
     $params = [];
     $previousPart = '';
     foreach ($parts as $part){
-        if (in_array($part, $validParams)){
-            $params[$part] = '';
-            $previousPart = $part;
-        }
-        else {
-            if ($params[$previousPart] == ''){
-                $params[$previousPart] = $part;
-            }
-            else {
-                $params[$previousPart] = $params[$previousPart] . '/' . $part;
+        if ($part != '') {
+            if (in_array($part, $validParams)) {
+                $params[$part] = '';
+                $previousPart = $part;
+            } else {
+                if ($params[$previousPart] == '') {
+                    $params[$previousPart] = $part;
+                } else {
+                    $params[$previousPart] = $params[$previousPart] . '/' . $part;
+                }
             }
         }
     }
@@ -282,7 +282,7 @@ if($section == "search-in-archives") {
     $otherFindingAidsInt = $finder->query("//div[@class='otherfindingaids']/div[@class='linkButton']/a");
     foreach ($otherFindingAidsInt as $intLink) {
         $newId = $intLink->getAttribute('href');
-        $newHref = "/advanced-search/search-in-archives/results-(archives)/?&repositoryCode=".$repoCode."&term=&levelName=archdesc&t=fa&recordId=".$newId;
+        $newHref = "/archive/aicode/".$repoCode."/type/fa/id/".$newId;
         $intLink->setAttribute('href', $newHref);
     }
 

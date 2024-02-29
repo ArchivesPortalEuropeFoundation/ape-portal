@@ -89,10 +89,20 @@
     `]]
 
     [[+archive.type:notempty=`
+    [[+archive.title:notempty=`
         <br/>
         <strong>Archive: </strong>
         <a href="[[!+URI]]">[[!+archive.title]]</a>
     `]]
+    ]]
+    
+    [[+archive.type:notempty=`
+    [[+archive.title:empty=`
+    <br/>
+    <strong>Archive: </strong>
+    <a href="[[!+URI]]">No title</a>
+    `]]
+    ]]
 
     [[+name.title:notempty=`
         <br/>

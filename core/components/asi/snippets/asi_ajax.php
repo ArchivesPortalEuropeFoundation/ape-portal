@@ -285,7 +285,8 @@ switch ($_REQUEST['action']) {
                     $typeDesc = 'Finding Aid';
                     foreach ($instDetails->fa as $fa) {
                         $eadid = $fa->eadid;
-                        $link = "/advanced-search/search-in-archives/results-(archives)/?&repositoryCode={$repoCode}&term={$term}&levelName=archdesc&t=fa&recordId={$eadid}";
+                        //$link = "/advanced-search/search-in-archives/results-(archives)/?&repositoryCode={$repoCode}&term={$term}&levelName=archdesc&t=fa&recordId={$eadid}";
+                        $link = "/archive/aicode/{$repoCode}/type/fa/id/{$eadid}";
                         $html .= $modx->getChunk("asi_finding_aid_item", array(
                             'title' => $fa->title,
                             'recordId' => $eadid,
@@ -298,7 +299,8 @@ switch ($_REQUEST['action']) {
                     $typeDesc = 'Source Guide';
                     foreach ($instDetails->sg as $sg) {
                         $eadid = $sg->eadid;
-                        $link = "/advanced-search/search-in-archives/results-(archives)/?&repositoryCode={$repoCode}&term={$term}&levelName=archdesc&t=sg&recordId={$eadid}";
+                        //$link = "/advanced-search/search-in-archives/results-(archives)/?&repositoryCode={$repoCode}&term={$term}&levelName=archdesc&t=sg&recordId={$eadid}";
+                        $link = "/archive/aicode/{$repoCode}/type/sg/id/{$eadid}";
                         $html .= $modx->getChunk("asi_finding_aid_item", array(
                             'title' => $sg->title,
                             'recordId' => $eadid,
@@ -312,7 +314,7 @@ switch ($_REQUEST['action']) {
                     $typeDesc = 'Holding Guide';
                     foreach ($instDetails->hg as $hg) {
                         $eadid = $hg->eadid;
-                        $link = "/advanced-search/search-in-archives/results-(archives)/?&repositoryCode={$repoCode}&term={$term}&levelName=archdesc&t=hg&recordId={$eadid}";
+                        $link = "/archive/aicode/{$repoCode}/type/hg/id/{$eadid}";
                         $html .= $modx->getChunk("asi_finding_aid_item", array(
                             'title' => $hg->title,
                             'recordId' => $eadid,
@@ -326,7 +328,7 @@ switch ($_REQUEST['action']) {
                     $typeDesc = 'Name';
                     foreach ($instDetails->ec as $ec) {
                         $eadid = $ec->id;
-                        $link = "/advanced-search/search-in-names/results-(names)/?&repositoryCode={$repoCode}&term={$term}&levelName=archdesc&t=ec&recordId={$eadid}";
+                        $link = "/name/aicode/{$repoCode}/type/ec/id/{$eadid}";
                         $html .= $modx->getChunk("asi_finding_aid_item", array(
                             'title' => $ec->title,
                             'recordId' => $eadid,
@@ -525,21 +527,15 @@ switch ($_REQUEST['action']) {
         $output = '';
         $counter = 0;
         $archiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&eadid={$id}&xmlType={$type}";
-        $detailUrl = "advanced-search/search-in-archives/results-(archives)/?";
+
         $newDetailUrl = "archive/";
-        //repositoryCode=[[!+archive.repocode]]\"&term=archive&levelName=clevel&t=fa&recordId=[[!+archive.recordid]]&c=C[[!+archive.clevelid]]";
-        $detailUrl .= "&repositoryCode=".$repoCode;
         $newDetailUrl .= "aicode/".$repoCode."/";
-
         $newDetailUrl .= "type/".$params['type']."/";
-
-        $detailUrl .= "&recordId=".$id;
         $newDetailUrl .= "id/".$id."/";
         if($levelName === 'clevel') {
             $cLevel = substr($cLevelId, '1');
             $archiveUrl .= "&clevelid=".$cLevel."&type=cdetails";
             $placeholders['archive']['clevelid'] = $cLevel;
-            $detailUrl .= "&c=".$params['c'];
             $placeholders['result_clevelid'] = $cLevel;
         } else {
             $archiveUrl .= "&type=frontpage";
@@ -549,9 +545,6 @@ switch ($_REQUEST['action']) {
 
             $placeholders['result_unitid'] = $unitId;
         }
-
-        $detailUrl .= "&levelName=".$params['level'];
-        $detailUrl .= "&t=".$params['type'];
 
         $placeholders['archive']['repocode'] = $repoCode;
         $placeholders['archive']['type'] = $type;
@@ -613,7 +606,7 @@ switch ($_REQUEST['action']) {
         $otherFindingAidsInt = $finder->query("//div[@class='otherfindingaids']/div[@class='linkButton']/a");
         foreach ($otherFindingAidsInt as $intLink) {
             $newId = $intLink->getAttribute('href');
-            $newHref = "/advanced-search/search-in-archives/results-(archives)/?&repositoryCode=".$repoCode."&term=&levelName=archdesc&t=fa&recordId=".$newId;
+            $newHref = "/archive/aicode/".$repoCode."/type/fa/id/".$newId;
             $intLink->setAttribute('href', $newHref);
         }
 
