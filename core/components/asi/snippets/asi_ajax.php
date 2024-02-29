@@ -529,9 +529,9 @@ switch ($_REQUEST['action']) {
         $archiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&eadid={$id}&xmlType={$type}";
 
         $newDetailUrl = "archive/";
-        $newDetailUrl .= "aicode/".$repoCode."/";
+        $newDetailUrl .= "aicode/".urlencode($repoCode)."/";
         $newDetailUrl .= "type/".$params['type']."/";
-        $newDetailUrl .= "id/".$id."/";
+        $newDetailUrl .= "id/".urlencode($id)."/";
         if($levelName === 'clevel') {
             $cLevel = substr($cLevelId, '1');
             $archiveUrl .= "&clevelid=".$cLevel."&type=cdetails";
@@ -556,7 +556,7 @@ switch ($_REQUEST['action']) {
         $archiveDetails = json_decode(file_get_contents($archiveUrl));
 
         if (isset($archiveDetails->clevelunitid) && $archiveDetails->clevelunitid!=null){
-            $newDetailUrl .= "unitid/".$archiveDetails->clevelunitid;
+            $newDetailUrl .= "unitid/".urlencode($archiveDetails->clevelunitid);
         }
         else {
             $newDetailUrl .= "dbid/".$params['c'];
