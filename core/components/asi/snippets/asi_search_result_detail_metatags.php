@@ -8,6 +8,18 @@ use GelTools AS Tools;
 
 require_once(MODX_CORE_PATH . 'components/apef/metatags.class.php');
 
+if (!function_exists('console_log')) {
+    function console_log($output, $with_script_tags = true) {
+        $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) .
+            ');';
+//    $js_code .= 'history.replaceState(\'page2\', \'Title\', \'/archive/test1/test3\');';
+        if ($with_script_tags) {
+            $js_code = '<script>' . $js_code . '</script>';
+        }
+        echo $js_code;
+    }
+}
+
 $APIbase      = $modx->getOption("ape_api");
 $siteUrl      = $modx->getOption('site_url');
 
@@ -15,7 +27,7 @@ $params       = $modx->sanitize($_REQUEST);
 $repoCode     = $params['repositoryCode'] ?? null;
 
 //Try to get metatags only for the actual content pages... those with at least a "repositoryCode" url parameter
-if (isset($repoCode)) {
+
     $placeholders = [];
     $placeholders['URI'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -24,12 +36,127 @@ if (isset($repoCode)) {
 //    $result = asi::fetchSingleResult($section);
 
     $metaTags = new MetaTags();
-
     $placeholders['metaTags'] = $metaTags;
 
-    if (!is_null($repoCode)) {
-        $instDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eagApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&preview=false"));
+    if (substr( $_SERVER['REQUEST_URI'], 0, 9 ) === "/archive/") {
+//parse path to produce the various sub-params
+        $path = str_replace('/archive/', '', rawurldecode(strtok($_SERVER["REQUEST_URI"], '?')));
+        $parts = explode('/' , $path);
+
+        $validParams = ['aicode','type','id','dbid','unitid'];
+        $params = [];
+        $previousPart = '';
+        foreach ($parts as $part){
+            if ($part != '') {
+                if (in_array($part, $validParams)) {
+                    $params[$part] = '';
+                    $previousPart = $part;
+                } else {
+                    if ($params[$previousPart] == '') {
+                        $params[$previousPart] = $part;
+                    } else {
+                        $params[$previousPart] = $params[$previousPart] . '/' . $part;
+                    }
+                }
+            }
+        }
+        if (array_key_exists('aicode', $params)){
+            $repoCode = $params['aicode'];
+        }
+        if (array_key_exists('type', $params)){
+            $type = $params['type'];
+        }
+        if (array_key_exists('id', $params)){
+            $id = rawurlencode($params['id']);
+        }
+        if (array_key_exists('dbid', $params)){
+            $treeId = $params['dbid'];
+            $cLevelId = $treeId;
+            $_REQUEST['c'] = $treeId;
+            $clevelPartPart = "clevelId=".$cLevelId;
+        }
+        if (array_key_exists('unitid', $params)){
+            $unitId = rawurlencode($params['unitid']);
+            $clevelPartPart = "clevelUnitId=".$unitId;
+        }
+        if (array_key_exists('dbid', $params) || array_key_exists('unitid', $params)){
+            $levelName = 'clevel';
+            $clevelPart = "&".$clevelPartPart;
+        }
+        else {
+            $levelName = 'archdesc';
+            $clevelPart = "";
+        }
+
+        $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode."&recordId=".$id."&xmlType=".$type.$clevelPart));
     }
+    else if (substr( $_SERVER['REQUEST_URI'], 0, 6 ) === "/name/") {
+        //parse path to produce the various sub-params
+        $path = str_replace('/name/', '', rawurldecode(strtok($_SERVER["REQUEST_URI"], '?')));
+        $parts = explode('/' , $path);
+
+        $validParams = ['aicode','id'];
+        $params = [];
+        $previousPart = '';
+        foreach ($parts as $part){
+            if ($part != '') {
+                if (in_array($part, $validParams)) {
+                    $params[$part] = '';
+                    $previousPart = $part;
+                } else {
+                    if ($params[$previousPart] == '') {
+                        $params[$previousPart] = $part;
+                    } else {
+                        $params[$previousPart] = $params[$previousPart] . '/' . $part;
+                    }
+                }
+            }
+        }
+        if (array_key_exists('aicode', $params)){
+            $repoCode = $params['aicode'];
+        }
+        if (array_key_exists('id', $params)){
+            $id = rawurlencode($params['id']);
+        }
+
+        $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode."&recordId=".$id."&xmlType=ec "));
+    }
+    else if (substr( $_SERVER['REQUEST_URI'], 0, 13 ) === "/institution/") {
+        //parse path to produce the various sub-params
+        $path = str_replace('/name/', '', rawurldecode(strtok($_SERVER["REQUEST_URI"], '?')));
+        $parts = explode('/' , $path);
+
+        $validParams = ['aicode'];
+        $params = [];
+        $previousPart = '';
+        foreach ($parts as $part){
+            if ($part != '') {
+                if (in_array($part, $validParams)) {
+                    $params[$part] = '';
+                    $previousPart = $part;
+                } else {
+                    if ($params[$previousPart] == '') {
+                        $params[$previousPart] = $part;
+                    } else {
+                        $params[$previousPart] = $params[$previousPart] . '/' . $part;
+                    }
+                }
+            }
+        }
+        if (array_key_exists('aicode', $params)){
+            $repoCode = $params['aicode'];
+        }
+
+        $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode));
+    }
+
+//    $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=DE-1958&recordId=NL-BwdADRKF-2&xmlType=fa"));
+
+//    if (!is_null($repoCode)) {
+//        $instDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eagApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&preview=false"));
+//    }
+
+    console_log($metaContent);
 
     $aiId = $instDetails->aiId;
     $repoCode = $instDetails->aiRepositoryCode;
@@ -291,6 +418,6 @@ if (isset($repoCode)) {
 //print_r($placeholders);
 //print_r($temp);
 
-}
+
 
 return;
