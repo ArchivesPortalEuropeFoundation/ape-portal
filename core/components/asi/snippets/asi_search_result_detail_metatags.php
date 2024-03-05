@@ -35,8 +35,8 @@ $repoCode     = $params['repositoryCode'] ?? null;
 
 //    $result = asi::fetchSingleResult($section);
 
-    $metaTags = new MetaTags();
-    $placeholders['metaTags'] = $metaTags;
+//    $metaTags = new MetaTags();
+//    $placeholders['metaTags'] = $metaTags;
 
     if (substr( $_SERVER['REQUEST_URI'], 0, 9 ) === "/archive/") {
 //parse path to produce the various sub-params
@@ -73,7 +73,7 @@ $repoCode     = $params['repositoryCode'] ?? null;
             $treeId = $params['dbid'];
             $cLevelId = $treeId;
             $_REQUEST['c'] = $treeId;
-            $clevelPartPart = "clevelId=".$cLevelId;
+            $clevelPartPart = "clevelId=".substr($cLevelId,1);
         }
         if (array_key_exists('unitid', $params)){
             $unitId = rawurlencode($params['unitid']);
@@ -156,22 +156,23 @@ $repoCode     = $params['repositoryCode'] ?? null;
 //        $instDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eagApi.action?aiRepositoryCode={$repoCode}&request_locale={$lang}&preview=false"));
 //    }
 
+    $placeholders['metacontent'] = $metaContent;
     console_log($metaContent);
 
-    $aiId = $instDetails->aiId;
-    $repoCode = $instDetails->aiRepositoryCode;
-    $instDoc = asi::domHTML($instDetails->html);
-    $instFinder = new DomXPath($instDoc);
+//    $aiId = $instDetails->aiId;
+//    $repoCode = $instDetails->aiRepositoryCode;
+//    $instDoc = asi::domHTML($instDetails->html);
+//    $instFinder = new DomXPath($instDoc);
 // Placeholders for institutions
-    $placeholders['institution']['name'] = $instFinder->query("//h2[@class='blockHeader']")[0]->nodeValue;
-    $placeholders['institution']['country'] = $instFinder->query("//*[contains(@class, 'gel_country gel_contactDetails')]")[0]->nodeValue;
-    $placeholders['institution']['repositoryCode'] = $repoCode;
-    $placeholders['suggestion_request_uri'] = $_SERVER[REQUEST_URI];
-    $placeholders['sharing_uri'] = urlencode($placeholders['URI']);
+//    $placeholders['institution']['name'] = $instFinder->query("//h2[@class='blockHeader']")[0]->nodeValue;
+//    $placeholders['institution']['country'] = $instFinder->query("//*[contains(@class, 'gel_country gel_contactDetails')]")[0]->nodeValue;
+//    $placeholders['institution']['repositoryCode'] = $repoCode;
+//    $placeholders['suggestion_request_uri'] = $_SERVER[REQUEST_URI];
+//    $placeholders['sharing_uri'] = urlencode($placeholders['URI']);
 
 
-    $metaTags->description = "test description";
-    $metaTags->title = $placeholders['institution']['name'];
+//    $metaTags->description = "test description";
+//    $metaTags->title = $placeholders['institution']['name'];
 
 
 //if($section == "search-in-institutions") {
@@ -411,7 +412,7 @@ $repoCode     = $params['repositoryCode'] ?? null;
 //}
 
 // Set placeholders to page
-    $temp = $modx->toPlaceholders($placeholders, "metatags");
+    $temp = $modx->toPlaceholders($placeholders, "metacontent");
 
 //$modx->setPlaceholders($placeholders,'metatags.');
 
