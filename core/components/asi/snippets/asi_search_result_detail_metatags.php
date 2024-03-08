@@ -24,12 +24,22 @@ $APIbase      = $modx->getOption("ape_api");
 $siteUrl      = $modx->getOption('site_url');
 
 $params       = $modx->sanitize($_REQUEST);
+$cLevelId     = $params['c'];
+$id           = rawurlencode($params['recordId']);
+$unitId       = rawurlencode($params['unitId']) ?? null;
+$aiId         = $params['id'];
 $repoCode     = $params['repositoryCode'] ?? null;
+$term         = $params['term'];
+$type         = htmlspecialchars($params['t']);
+$levelName    = $params['levelName'];
+$treeId       = $params['c'];
+$referenceId  = rawurlencode($params['reference']);
+$lang         = $params['lang'] ?? $modx->getOption('cultureKey') ?? 'en';
+$placeholders = [];
+$scroll = $params['scroll'] ?? null;
+$placeholders['URI'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 //Try to get metatags only for the actual content pages... those with at least a "repositoryCode" url parameter
-
-    $placeholders = [];
-    $placeholders['URI'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
     ini_set('max_execution_time', 0);
 
@@ -88,7 +98,7 @@ $repoCode     = $params['repositoryCode'] ?? null;
             $clevelPart = "";
         }
 
-        $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode."&recordId=".$id."&xmlType=".$type.$clevelPart));
+//        $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode."&recordId=".$id."&xmlType=".$type.$clevelPart));
     }
     else if (substr( $_SERVER['REQUEST_URI'], 0, 6 ) === "/name/") {
         //parse path to produce the various sub-params
@@ -119,7 +129,7 @@ $repoCode     = $params['repositoryCode'] ?? null;
             $id = rawurlencode($params['id']);
         }
 
-        $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode."&recordId=".$id."&xmlType=ec "));
+//        $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode."&recordId=".$id."&xmlType=ec "));
     }
     else if (substr( $_SERVER['REQUEST_URI'], 0, 13 ) === "/institution/") {
         //parse path to produce the various sub-params
@@ -147,8 +157,30 @@ $repoCode     = $params['repositoryCode'] ?? null;
             $repoCode = $params['aicode'];
         }
 
-        $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode));
+//        $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode));
     }
+
+if (strpos($_SERVER['REQUEST_URI'], "results-(archives)") != false || strpos( $_SERVER['REQUEST_URI'],"archive/") != false) {
+    if ($cLevelId != null){
+        $clevelPartPart = "clevelId=".substr($cLevelId,1);
+    }
+    if ($unitId != null){
+        $clevelPartPart = "clevelUnitId=".$unitId;
+    }
+    if ($cLevelId != null || $unitId != null){
+        $clevelPart = "&".$clevelPartPart;
+    }
+    else {
+        $clevelPart = "";
+    }
+    $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode."&recordId=".$id."&xmlType=".$type.$clevelPart));
+}
+else if (strpos($_SERVER['REQUEST_URI'], "results-(names)") != false || strpos( $_SERVER['REQUEST_URI'],"name/") != false) {
+    $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode."&recordId=".$id."&xmlType=ec "));
+}
+else if (strpos($_SERVER['REQUEST_URI'], "results-(institutions)") != false || strpos( $_SERVER['REQUEST_URI'],"institution/") != false) {
+    $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode));
+}
 
 //    $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=DE-1958&recordId=NL-BwdADRKF-2&xmlType=fa"));
 
@@ -157,7 +189,7 @@ $repoCode     = $params['repositoryCode'] ?? null;
 //    }
 
     $placeholders['metacontent'] = $metaContent;
-    console_log($metaContent);
+//    console_log($metaContent);
 
 //    $aiId = $instDetails->aiId;
 //    $repoCode = $instDetails->aiRepositoryCode;
@@ -412,6 +444,7 @@ $repoCode     = $params['repositoryCode'] ?? null;
 //}
 
 // Set placeholders to page
+    $metaContent->image = $metaContent->dao[0];
     $temp = $modx->toPlaceholders($placeholders, "metacontent");
 
 //$modx->setPlaceholders($placeholders,'metatags.');

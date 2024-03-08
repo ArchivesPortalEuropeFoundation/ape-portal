@@ -173,7 +173,7 @@ else {
                     'country' => asi::cleanLabel($r['country_value']),
                     'institution' => asi::cleanLabel($r['institution_value']),
                     'link_term' => urlencode($r['matching_term']),
-                    'link_data' => "&t=" . urlencode($r['recordType']) . "&recordId=" . urlencode($r['recordId']) . (substr( $r['id'], 0, 1 ) === "C" ? ("&c=" . urlencode($r['id'])) : ""). "&kostas=".urlencode($r['reference_value']),
+                    'link_data' => "&t=" . urlencode($r['recordType']) . "&recordId=" . urlencode($r['recordId']) . (substr( $r['id'], 0, 1 ) === "C" ? ("&c=" . urlencode($r['id'])) : ""),
                     "dao" => $r['dao'],
                     "daoType" => $r['daoType'],
                     "fa_title" => asi::cleanLabel($r['description_value']),
