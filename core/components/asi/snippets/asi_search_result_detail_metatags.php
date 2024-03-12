@@ -196,6 +196,8 @@ foreach($metaContent->hashtags as $key=>$value) {
     $i++;
 }
 $placeholders['sharing_tw_hashtags'] = urlencode($tw_hashtags);
+$placeholders['sharing_url'] = urlencode($baseurl.($metaContent->url));
+$placeholders['sharing_url_unescaped'] = $baseurl.($metaContent->url);
 
 //    $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=DE-1958&recordId=NL-BwdADRKF-2&xmlType=fa"));
 

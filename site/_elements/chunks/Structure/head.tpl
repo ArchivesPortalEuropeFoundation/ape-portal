@@ -1,7 +1,7 @@
 [[!user]]
 [[!language]]
 
-[[!asi_search_result_detail_metatags]]
+[[!asi_search_result_detail_metatags? &baseurl=`[[!++site_url]]`]]
 
         <!-- Website created by GEL Studios Ltd https://www.gelstudios.co.uk/ //-->
 		<title>[[!+metacontent.metacontent.title:is=null:then=`[[!+seoPro.title]]`:else=`[[+metacontent.metacontent.title]] | [[++site_name]]`]]</title>

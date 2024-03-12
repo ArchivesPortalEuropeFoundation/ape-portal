@@ -86,7 +86,7 @@
                             <a href="[[++sharing_facebook_content]]" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
                             <a href="[[++sharing_twitter_content]]" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
                             <a href="[[++sharing_linkedin_content]]" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a>
-                            <a href="[[!+URI]]" class="copyUrl"><i class="fas fa-link"></i> <span>[[!%asi.tools_copy_link? &topic=`default` &namespace=`asi`]]</span></a>
+                            <a href="[[!++site_url]][[!+metacontent.metacontent.url]]" class="copyUrl"><i class="fas fa-link"></i> <span>[[!%asi.tools_copy_link? &topic=`default` &namespace=`asi`]]</span></a>
                         </div>
                     </div>
                    [[- <div class="buttonDropdown">
@@ -128,7 +128,7 @@
                     <a href="[[++sharing_facebook_content]]" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
                     <a href="[[++sharing_twitter_content]]" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
                     <a href="[[++sharing_linkedin_content]]" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a>
-                    <a href="[[!+URI]]" class="copyUrl"><i class="fas fa-link"></i> <span>[[!%asi.tools_copy_link? &topic=`default` &namespace=`asi`]]</span></a>
+                    <a href="[[!++site_url]][[!+metacontent.metacontent.url]]" class="copyUrl"><i class="fas fa-link"></i> <span>[[!%asi.tools_copy_link? &topic=`default` &namespace=`asi`]]</span></a>
                 </div>
             </div>
             [[-<div class="buttonDropdown">
