@@ -182,6 +182,21 @@ else if (strpos($_SERVER['REQUEST_URI'], "results-(institutions)") != false || s
     $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode));
 }
 
+$placeholders['sharing_title'] = urlencode($metaContent->title);
+$i = 0;
+$tw_hashtags = "";
+foreach($metaContent->hashtags as $key=>$value) {
+    if ($i == 0){
+        $placeholders['sharing_fb_hashtags'] = urlencode("#".$value);
+        $tw_hashtags = $value;
+    }
+    else {
+        $tw_hashtags .= ",".$value;
+    }
+    $i++;
+}
+$placeholders['sharing_tw_hashtags'] = urlencode($tw_hashtags);
+
 //    $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=DE-1958&recordId=NL-BwdADRKF-2&xmlType=fa"));
 
 //    if (!is_null($repoCode)) {
