@@ -23,11 +23,10 @@
 			&emailTpl=`allFormMessage`
 			&emailSubject=`Make a Suggestion`
 			&emailUseFieldForSubject=`1`
-{*			&emailTo=`[[!++contact_email]]`*}
 			&emailTo=`[[!+result_type:is=``:then=`[[!+suggestion_form_explore_to]]`:else=`[[!+suggestion_form_detail_page_to]]`]]`
 			&emailCC=`[[!+result_type:is=``:then=`[[!+suggestion_form_explore_cc]]`:else=`[[!+suggestion_form_detail_page_cc]]`]]`
 			&emailBCC=`[[!+result_type:is=``:then=`[[!+suggestion_form_explore_bcc]]`:else=`[[!+suggestion_form_detail_page_cc]]`]]`
-			&emailFrom=`[[++contact_email]]`
+[[-         &emailFrom=`[[++contact_email]]` ]]
 			&formName=`Make a Suggestion ([[!+result_type:is=``:then=`[[!+result_type_explore]]`:else=`[[!+result_type]]`]])`
 			&formFields=`name,email,suggestion,recipient,resulttype,repositoryCode,recordid,clevelid,unitid,resourceid`
 			&fieldNames=`name==Full name,email==Email address,suggestion==Suggestion,recipient==Recipient,repositoryCode=RepositoryCode,resulttype=Result Type,recordid=Record ID,unitid=UnitId,clevelid=CLevelId,resourceid=Resource Id`

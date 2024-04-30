@@ -109,7 +109,7 @@
     &emailTo=`[[!+rating_form_explore_to]]`
     &emailCC=`[[!+rating_form_explore_cc]]`
     &emailBCC=`[[!+rating_form_explore_bcc]]`
-   &emailFrom=`[[++contact_email]]`
+[[- &emailFrom=`[[++contact_email]]` ]]
    &formName=`Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
    &formFields=`rating,feedback,itemtitle`
    &fieldNames=`rating==Rating,feedback==Feedback,itemtitle==Item title`
@@ -164,7 +164,7 @@
     &emailTo=`[[!+contact_form_explore_to]]`
     &emailCC=`[[!+contact_form_explore_cc]]`
     &emailBCC=`[[!+contact_form_explore_bcc]]`
-   &emailFrom=`[[++contact_email]]`
+[[- &emailFrom=`[[++contact_email]]` ]]
    &formName=`Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
    &formFields=`name,email,message,itemtitle`
    &fieldNames=`name==Full name,email==Email address,message==Message,itemtitle==Item title`

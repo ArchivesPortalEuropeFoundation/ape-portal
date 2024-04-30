@@ -306,7 +306,7 @@
     &emailTo=`[[!+contact_form_detail_page_to]]`
     &emailCC=`[[!+contact_form_detail_page_cc]]`
     &emailBCC=`[[!+contact_form_detail_page_bcc]]`
-   &emailFrom=`[[++contact_email]]`
+[[- &emailFrom=`[[++contact_email]]` ]]
    &formName=`Contact Form (Institutions)`
    &formFields=`name,email,message,repositoryCode`
    &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode`

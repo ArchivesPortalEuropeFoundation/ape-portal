@@ -109,7 +109,7 @@
         &emailSubject=`Content Rating (Archives)`
         &emailUseFieldForSubject=`1`
         &emailTo=`[[++contact_email]]`
-        &emailFrom=`[[++contact_email]]`
+[[-     &emailFrom=`[[++contact_email]]` ]]
         &formName=`Content Rating (Archives)`
         &formFields=`rating,feedback,repositoryCode,archiveid,unitid,clevelid`
         &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`
@@ -171,7 +171,7 @@
             &emailSubject=`Contact Form (Archives)`
             &emailUseFieldForSubject=`1`
             &emailTo=`[[++contact_email]]`
-            &emailFrom=`[[++contact_email]]`
+[[-         &emailFrom=`[[++contact_email]]` ]]
             &formName=`Contact Form (Archives)`
             &formFields=`name,email,message,repositoryCode,archiveid,unitid,clevelid`
             &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode,archiveid=Archive ID,unitid=UnitId,clevelid=CLevelId`

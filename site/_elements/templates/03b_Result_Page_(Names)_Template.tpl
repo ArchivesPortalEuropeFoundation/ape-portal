@@ -164,7 +164,7 @@
                 &emailTo=`[[!+rating_form_detail_page_to]]`
                 &emailCC=`[[!+rating_form_detail_page_cc]]`
                 &emailBCC=`[[!+rating_form_detail_page_bcc]]`
-                &emailFrom=`[[++contact_email]]`
+[[-             &emailFrom=`[[++contact_email]]` ]]
                 &formName=`Content Rating (Names)`
                 &formFields=`rating,feedback,repositoryCode,nameid`
                 &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,nameid=Name ID`
@@ -230,7 +230,7 @@
                     &emailTo=`[[!+contact_form_detail_page_to]]`
                     &emailCC=`[[!+contact_form_detail_page_cc]]`
                     &emailBCC=`[[!+contact_form_detail_page_bcc]]`
-                    &emailFrom=`[[++contact_email]]`
+[[-                 &emailFrom=`[[++contact_email]]` ]]
                     &formName=`Contact (Names)`
                     &formFields=`name,email,message,repositoryCode,recordid`
                     &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode,recordid=Name ID`
