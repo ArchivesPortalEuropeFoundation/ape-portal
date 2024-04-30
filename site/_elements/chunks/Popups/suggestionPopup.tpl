@@ -24,7 +24,7 @@
 			&emailSubject=`Make a Suggestion`
 			&emailUseFieldForSubject=`1`
 			&emailTo=`[[++contact_email]]`
-			&emailFrom=`[[++contact_email]]`
+[[-         &emailFrom=`[[++contact_email]]` ]]
 			&emailTopic=`[[++contact_email]]`
 			&emailTranslation=`[[++contact_email]]`
 			&emailConnect=`[[++contact_email]]`

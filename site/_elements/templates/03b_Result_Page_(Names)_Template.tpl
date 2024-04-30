@@ -162,7 +162,7 @@
                 &emailSubject=`Content Rating (Names)`
                 &emailUseFieldForSubject=`1`
                 &emailTo=`[[++contact_email]]`
-                &emailFrom=`[[++contact_email]]`
+[[-             &emailFrom=`[[++contact_email]]` ]]
                 &formName=`Content Rating (Names)`
                 &formFields=`rating,feedback,repositoryCode,nameid`
                 &fieldNames=`rating==Rating,feedback==Feedback (if any),repositoryCode=RepositoryCode,nameid=Name ID`
@@ -226,7 +226,7 @@
                     &emailSubject=`Contact Form (Names): [[!+name.title]]`
                     &emailUseFieldForSubject=`1`
                     &emailTo=`[[++contact_email]]`
-                    &emailFrom=`[[++contact_email]]`
+[[-                 &emailFrom=`[[++contact_email]]` ]]
                     &formName=`Contact (Names)`
                     &formFields=`name,email,message,repositoryCode,recordid`
                     &fieldNames=`name==Full name,email==Email address,message==Message,repositoryCode=RepositoryCode,recordid=Name ID`

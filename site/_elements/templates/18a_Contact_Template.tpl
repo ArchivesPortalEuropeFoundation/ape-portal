@@ -39,7 +39,7 @@
                         &emailTpl=`allFormMessage`
                         &emailUseFieldForSubject=`1`
                         &emailTo=`[[++contact_email]]`
-                        &emailFrom=`[[++contact_email]]`
+[[-                     &emailFrom=`[[++contact_email]]` ]]
                         &formName=`Contact Us`
                         &formFields=`name,email,subject,message`
                         &fieldNames=`name==Full name,email==Email address,subject==Topic,message==Message`

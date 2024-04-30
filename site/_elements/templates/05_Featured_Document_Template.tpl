@@ -103,7 +103,7 @@
    &emailTpl=`allFormMessage`
    &emailSubject=`[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
    &emailTo=`[[++contact_email]]`
-   &emailFrom=`[[++contact_email]]`
+[[- &emailFrom=`[[++contact_email]]` ]]
    &formName=`Content Rating ([[!+result_type_explore]]) - [[*pagetitle]]`
    &formFields=`rating,feedback,itemtitle`
    &fieldNames=`rating==Rating,feedback==Feedback,itemtitle==Item title`
@@ -156,7 +156,7 @@
    &emailTpl=`allFormMessage`
    &emailSubject=`[[++site_env:isequalto=`PROD`:then=``:else=`([[++site_env]]) `]]Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
    &emailTo=`[[++contact_email]]`
-   &emailFrom=`[[++contact_email]]`
+[[- &emailFrom=`[[++contact_email]]` ]]
    &formName=`Contact Form ([[!+result_type_explore]]) - [[*pagetitle]]`
    &formFields=`name,email,message,itemtitle`
    &fieldNames=`name==Full name,email==Email address,message==Message,itemtitle==Item title`
