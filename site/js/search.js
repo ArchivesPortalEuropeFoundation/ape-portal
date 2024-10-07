@@ -1927,7 +1927,7 @@ if (typeof enable_search !== 'undefined') {
             }
             label = label.replace("_", " ");
             label = label.replace("_", " ");
-            label = ucwords(label, true);
+            //label = ucwords(label, true);
 
             if (label == "Containsdigital") label = "Contains Digital";
 
