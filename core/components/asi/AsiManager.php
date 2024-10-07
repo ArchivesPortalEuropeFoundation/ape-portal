@@ -1337,7 +1337,8 @@ class AsiManager
         $spaced = str_replace("_", " ", $bits[0]);
         $words = explode(" ", $spaced);
         foreach ($words as $k => $v) {
-            $words[$k] = ucfirst(strtolower($v));
+//            $words[$k] = ucfirst(strtolower($v));
+            $words[$k] = $v;
         }
         $name = implode(" ", $words);
         return $name;
