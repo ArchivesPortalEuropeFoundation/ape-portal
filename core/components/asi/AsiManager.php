@@ -3146,6 +3146,8 @@ class AsiManager
             'dateType',
             'startDate',
             'endDate',
+            'hasFulltext',
+            'hasIIIFViewer'
         );
     }
 
@@ -3481,11 +3483,11 @@ class AsiManager
                     break;
                 default:
                     $additionalParameters['df'] = "unitTitle";
-                    $additionalParameters['qf'] = "unitTitle^2.5 scopeContent^1.3 other^0.5 unitDate^0.4";
+                    $additionalParameters['qf'] = "unitTitle^2.5 fulltext^2.5 scopeContent^1.3 other^0.5 unitDate^0.4";
             }
         } else {
             $additionalParameters['df'] = "unitTitle";
-            $additionalParameters['qf'] = "unitTitle^2.5 scopeContent^1.3 other^0.5 unitDate^0.4";
+            $additionalParameters['qf'] = "fulltext^2.5 fulltext^2.5 scopeContent^1.3 other^0.5 unitDate^0.4";
         }
 
         // sort by
@@ -3775,7 +3777,9 @@ class AsiManager
             "topic"         => "topics",
             "language"      => "language",
             "entityTypeFacet" => "entityTypeFacet",
-            "repositoryTypeFacet" => "repositoryTypeFacet"
+            "repositoryTypeFacet" => "repositoryTypeFacet",
+            "hasFulltext"   => "hasfulltext",
+            "hasIIIFViewer" => "hasiiifviewer",
         );
         return $map;
     }
@@ -3885,6 +3889,8 @@ class AsiManager
             "topics" => "topic",
             "usings" => "using",
             "starttimespans" => "starttimespan",
+            "hasFulltext" => "hasfulltext",
+            "hasIIIFViewer" => "hasiiifviewer"
         );
 
         return $map[self::$mode];
@@ -3907,7 +3913,9 @@ class AsiManager
             "endtimespan" => "End Time Span",
             "materiallanguage" => "Material Language",
             "topic" => "Topics",
-            "using" => "Using"
+            "using" => "Using",
+            "hasiiifviewer" => "Has IIIF viewer",
+            "hasfulltext" => "Has fulltext"
         );
 
         if (isset($map[$field_name])) {
@@ -4108,7 +4116,9 @@ class AsiManager
             "endDate",
             "language",
             "entityTypeFacet",
-            "repositoryTypeFacet"
+            "repositoryTypeFacet",
+            "hasiiifviewer",
+            "hasfulltext"
         );
 
         $active_filters = array();
@@ -4962,6 +4972,24 @@ class AsiManager
         $items = array(
             "No digital objects",
             "Contains digital objects"
+        );
+
+        $response = array();
+
+        $counter = 0;
+        foreach ($items as $c) {
+            $response[] = array('name' => $c, 'value' => $counter);
+            $counter++;
+        }
+
+        return $response;
+    }
+
+    public static function getHasFulltext($args = false)
+    {
+        $items = array(
+            "true",
+            "false"
         );
 
         $response = array();

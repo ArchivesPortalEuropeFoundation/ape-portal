@@ -112,6 +112,12 @@ if($section == "search-in-archives") {
     $treeResponse = json_decode(file_get_contents($treeQueryString));
     $placeholders['archive']['tree'] = file_get_contents($treeQueryString);
 
+    foreach($archiveDetails->iiifInfo as $key=>$value) {
+        // do stuff
+        $placeholders['archiveiiif'][$key] = $value;
+    }
+
+
     $doc = asi::domHTML($archiveDetails->html);
     $finder = new DomXPath($doc);
 

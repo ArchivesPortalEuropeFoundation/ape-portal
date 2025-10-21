@@ -44,7 +44,7 @@ if (typeof enable_search !== 'undefined') {
         ApeSearch.all_types.institutions = ["municipalArchives", "countyArchives", "universityArchives", "regionalArchives", "nationalArchives", "culturalArchives", "churchArchives", "specialisedArchives", "politicalArchives", "businessArchives", "privateArchives", "mediaArchives"];
         ApeSearch.all_countries = ["AUSTRIA:G:30", "BELGIUM:G:8", "BULGARIA:G:17", "CROATIA:G:37", "CZECH_REPUBLIC:G:18", "ESTONIA:G:19", "FINLAND:G:14", "FRANCE:G:2", "GEORGIA:G:41", "GERMANY:G:3", "GREECE:G:4", "HUNGARY:G:22", "ICELAND:G:25", "IRELAND:G:10", "ISLE_OF_MAN:G:43", "ITALY:G:34", "LATVIA:G:11", "LITHUANIA:G:35", "LUXEMBOURG:G:26", "MALTA:G:12", "MULTINATIONAL_INSTITUTIONS:G:42", "NETHERLANDS:G:7", "NORWAY:G:33", "POLAND:G:5", "PORTUGAL:G:13", "ROMANIA:G:36", "SLOVAKIA:G:32", "SLOVENIA:G:9", "SPAIN:G:1", "SWEDEN:G:6", "SWITZERLAND:G:28", "UNITED_KINGDOM:G:27"];
 
-        ApeSearch.exclusive_filters = ["containsdigital"];
+        ApeSearch.exclusive_filters = ["containsdigital","hasfulltext","hasiiifviewer"];
 
         ApeSearch.tab_target = null;
 
@@ -542,6 +542,17 @@ if (typeof enable_search !== 'undefined') {
             } else {
                 $('[data-filter-field="containsdigital"]').prop('checked', false);
             }
+
+            if (typeof ApeSearch.request_filters['hasfulltext'] != "undefined" && ApeSearch.request_filters['hasfulltext'] == "true") {
+                $('[data-filter-field="hasfulltext"]').prop('checked', true);
+            } else {
+                $('[data-filter-field="hasfulltext"]').prop('checked', false);
+            }
+            if (typeof ApeSearch.request_filters['hasiiifviewer'] != "undefined" && ApeSearch.request_filters['hasiiifviewer'] == "true") {
+                $('[data-filter-field="hasiiifviewer"]').prop('checked', true);
+            } else {
+                $('[data-filter-field="hasiiifviewer"]').prop('checked', false);
+            }
             
             if (typeof ApeSearch['using'] != "undefined") {
                 console.warn(ApeSearch.value);
@@ -686,6 +697,13 @@ if (typeof enable_search !== 'undefined') {
                 // Add aid for digital objects
                 if ("containsdigital" in ApeSearch.request_filters) {
                     params += "&containsdigital[]=true";
+                }
+
+                if ("hasfulltext" in ApeSearch.request_filters) {
+                    params += "&hasfulltext[]=true";
+                }
+                if ("hasiiifviewer" in ApeSearch.request_filters) {
+                    params += "&hasiiifviewer[]=true";
                 }
                 // Add aid for term separation 
                 if ("separate" in ApeSearch.request_filters) {
@@ -2004,6 +2022,34 @@ if (typeof enable_search !== 'undefined') {
                         // keep the original label
                 }
             }
+
+            // clean up labels (contains digital)
+            if (set_name == "hasfulltext") {
+                switch (label) {
+                    case "False":
+                        label = "No fulltext";
+                        break;
+                    case "True":
+                        label = "Yes fulltext";
+                        break;
+                    default:
+                    // keep the original label
+                }
+            }
+            // clean up labels (contains digital)
+            if (set_name == "hasiiifviewer") {
+                switch (label) {
+                    case "False":
+                        label = "No IIIF";
+                        break;
+                    case "True":
+                        label = "Yes IIIF";
+                        break;
+                    default:
+                    // keep the original label
+                }
+            }
+
 
             // clean up labels (date types)
             if (set_name == "datetypes") {

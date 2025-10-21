@@ -85,7 +85,6 @@
         </div>
     </div>
 
-
     <section id="innerHero">
         <div class="container">
             <a class="returnLink" onclick="history.back(-1)"><i class="far fa-angle-left mr"></i> [[!%asi.return_to_search? &topic=`default` &namespace=`asi`]]</a>
@@ -176,6 +175,17 @@
             [[-$asi_search_result_archive_rhs]]
 
             <div class="content">
+
+                <div>
+                    [[!iiifViewerDisplay]]
+                </div>
+
+                [[-
+                <div>
+                    <iframe src="http://localhost:8085/viewer/index?requestId=146" allow="fullscreen *;" style="width:75%; height:75vh; margin:0 auto; display:block"></iframe>
+                </div>
+                ]]
+                
                 [[-
                 Content supplied by APE API
                 ]]
