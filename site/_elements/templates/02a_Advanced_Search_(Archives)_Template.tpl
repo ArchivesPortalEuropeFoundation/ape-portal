@@ -543,12 +543,12 @@
                                     &tip_id=`DigiType`]]
                                 </div>
 
-                                <!--
+                                [[-
                                 <div class="contentDropdown select-types" data-g="search-select-types">
                                     [[$asi_search_select_dropdown? &entity=`datetypes` &label=`[[!%asi.label_date_type?
                                     &topic=`label` &namespace=`asi`]]` &tip_id=`DateType`]]
                                 </div>
-                                -->
+                                ]]
 
                                 <div class="contentDropdown select-start" data-g="search-date-starttimespan">
                                     [[!asi_search_date? &entity=`startTimespan` &label=`[[!%asi.label_start_timespan?
