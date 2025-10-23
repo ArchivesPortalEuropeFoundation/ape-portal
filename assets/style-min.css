@@ -21524,6 +21524,14 @@ form textarea:-moz-placeholder {
   display: none !important;
 }
 
+[data-facet-set=hasiiifviewer] .searchLight {
+  display: none !important;
+}
+
+[data-facet-set=hasfulltext] .searchLight {
+  display: none !important;
+}
+
 [data-facet-set=levels] .searchLight {
   display: none !important;
 }

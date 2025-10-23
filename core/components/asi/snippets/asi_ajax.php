@@ -576,6 +576,13 @@ switch ($_REQUEST['action']) {
         $doc = asi::domHTML($archiveDetails->html);
         $finder = new DomXPath($doc);
 
+        //error_log("IIIFInfo: " . json_encode($archiveDetails->iiifInfo),0);
+        foreach($archiveDetails->iiifInfo as $key=>$value) {
+            // do stuff
+            error_log("IIIFInfo: " . $key. " -- " . $value,0);
+            $placeholders['archiveiiif'][$key] = $value;
+        }
+        
         //Process EADID Title
         $eadidItem = $finder->query("//div[@class='eadid']")[0];
         if(!is_null($eadidItem)) {
@@ -726,7 +733,7 @@ switch ($_REQUEST['action']) {
         $result['params_json'] = asi::generateParamsString($result, "archive");
 
         $archiveDetailRHS = $modx->getChunk("asi_search_result_archive_rhs", array(
-            'archive' => $placeholders['archive'], 'request_uri' => $placeholders['request_uri']
+            'archive' => $placeholders['archive'],'archiveiiif' => $placeholders['archiveiiif'], 'request_uri' => $placeholders['request_uri']
         ));
 
         $modx->setPlaceholders($result['solr_detail'], "solr_data.");

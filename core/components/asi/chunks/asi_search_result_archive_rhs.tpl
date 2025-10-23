@@ -1,6 +1,11 @@
 [[-$asi_search_result_archive_rhs]]
 
 <div class="content">
+
+    <div>
+        [[!iiifViewerDisplay]]
+    </div>
+    
     [[-
     Content supplied by APE API
     ]]

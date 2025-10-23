@@ -6865,6 +6865,8 @@ form textarea:-moz-placeholder { /* Firefox 18- */
 [data-facet-set="datetypes"] .searchLight {display: none!important;}
 [data-facet-set="digitaltypes"] .searchLight { display: none!important;}
 [data-facet-set="containsdigital"] .searchLight { display: none!important;}
+[data-facet-set="hasiiifviewer"] .searchLight { display: none!important;}
+[data-facet-set="hasfulltext"] .searchLight { display: none!important;}
 [data-facet-set="levels"] .searchLight { display: none!important;}
 [data-facet-set="types"] .searchLight { display: none!important;}
 [data-facet-set="entityTypeFacet"] .searchLight { display: none!important;}

@@ -179,12 +179,6 @@
                 <div>
                     [[!iiifViewerDisplay]]
                 </div>
-
-                [[-
-                <div>
-                    <iframe src="http://localhost:8085/viewer/index?requestId=146" allow="fullscreen *;" style="width:75%; height:75vh; margin:0 auto; display:block"></iframe>
-                </div>
-                ]]
                 
                 [[-
                 Content supplied by APE API
