@@ -202,7 +202,32 @@ else {
     if($translatedTopics) {
         $filters['topics'] = $translatedTopics;
     }
-    
+
+    // if($filters['countries']) {
+    //     //var_dump($filters['countries']);
+    //     //Custom sort to get Multinational on top
+    //     uksort($filters['countries'], function ($a, $b) {
+
+    //          $pos = strpos($a, ':');
+    //          $countryKeyA = substr($a, 0, $pos);
+
+    //          $pos = strpos($b, ':');
+    //          $countryKeyB = substr($b, 0, $pos);
+
+    //          if ($countryKeyA == 'MULTINATIONAL_INSTITUTIONS') {
+    //              return -1;
+    //          }
+    //          else if ($countryKeyB == 'MULTINATIONAL_INSTITUTIONS') {
+    //              return 1;
+    //          }
+    //         else {
+    //             $indexA = array_search($a, $filters['countries']);
+    //             $indexB = array_search($a, $filters['countries']);
+    //             return $indexA < $indexB;
+    //         }
+    //     });
+    // }
+
     $translatedCountries = array();
     foreach($filters['countries'] as $country => $countryCount) {
         $pos = strpos($country, ':');
@@ -284,7 +309,18 @@ else {
     if($translatedDatetypes) {
         $filters['language'] = $translatedLanguages;
     }
-    
+
+    $translatedContainsDigital = array();
+    foreach($filters['containsdigital'] as $value => $valueCount) {
+        $translated = $modx->lexicon('asi.containsdigital.'.$value);
+        $translatedContainsDigital[$value]['translated'] = $translated;
+        $translatedContainsDigital[$value]['count'] = $valueCount;
+    }
+
+    if($translatedContainsDigital) {
+                $filters['containsdigital'] = $translatedContainsDigital;
+            }
+
     $response = array(
         "filters" => $filters,
         "results" => $html,

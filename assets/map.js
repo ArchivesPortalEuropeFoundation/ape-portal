@@ -8,14 +8,23 @@ function initMap() {
     console.log('initMap run!');
     const coords = { lat: current_map_lat, lng: current_map_lng };
     if(!this.mapInit) {
-        instituteMap = new google.maps.Map(document.getElementById('google_map_main'), {
-            zoom: 15,
-            center: coords,
-        });
-        instituteMarker = new google.maps.Marker({
-            position: coords,
-            map: instituteMap,
-        });
+        // instituteMap = new google.maps.Map(document.getElementById('google_map_main'), {
+        //     zoom: 15,
+        //     center: coords,
+        // });
+        // instituteMarker = new google.maps.Marker({
+        //     position: coords,
+        //     map: instituteMap,
+        // });
+        // this.mapInit = true;
+        var map = L.map('google_map_main').setView([coords.lat, coords.lng], 13);
+        instituteMap = map;
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        var marker = L.marker([coords.lat, coords.lng]).addTo(map);
+        instituteMarker = marker;
         this.mapInit = true;
     }
 
@@ -47,7 +56,10 @@ $('[data-switch-branch]').on('click',function(){
         newLat      = $(this).data('latitude');
     console.log(newLng);
     console.log(newLat);
-    myLatlng = new google.maps.LatLng(newLat, newLng);
-    instituteMarker.setPosition(myLatlng);
-    instituteMap.setCenter(myLatlng);
+    // myLatlng = new google.maps.LatLng(newLat, newLng);
+    // instituteMarker.setPosition(myLatlng);
+    // instituteMap.setCenter(myLatlng);
+    myLatlng = L.latLng(newLat, newLng);
+    instituteMarker.setLatLng(myLatlng);
+    instituteMap.flyTo(myLatlng);
 });

@@ -2,6 +2,25 @@
 <html lang="[[!++cultureKey]]">
 
 <head>
+
+	<script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Archives Portal Europe",
+      "alternateName" : "APE",
+      "url" : "https://www.archivesportaleurope.net",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.archivesportaleurope.net/advanced-search/search-in-archives/?term={search_term_string}&using=default"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+	</script>
+
 	[[$head]]
 </head>
 <body>

@@ -1,8 +1,8 @@
 <?php
 $_lang['asi.label_countries'] = 'Countries';
-$_lang['asi.label_archival_institution'] = 'Archival institution';
+$_lang['asi.label_archival_institution'] = 'Archival institutions';
 $_lang['asi.label_funding_aid'] = 'Finding aid';
-$_lang['asi.label_document_type'] = 'Document Type';
+$_lang['asi.label_document_type'] = 'Document types';
 $_lang['asi.label_levels'] = 'Levels';
 $_lang['asi.label_contains_digital_obj'] = 'Contains digital objects';
 $_lang['asi.label_date_type'] = 'Date type';

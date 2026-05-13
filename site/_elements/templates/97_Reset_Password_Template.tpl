@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="[[!++cultureKey]]">
+<html>
 <head>
     [[$head]]
 </head>

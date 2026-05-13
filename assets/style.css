@@ -16090,7 +16090,7 @@ a.anchor {
 }
 .mapContainer a {
   float: right;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   color: #178aa8;
   font-weight: 700;
 }
@@ -24333,4 +24333,17 @@ table.aiSection tr p {
 .goog-te-combo {
   appearance: menulist!important;
   
+}
+
+.leaflet-pane {
+    z-index: 0!important;
+}
+
+.leaflet-control {
+    z-index: 3!important;
+}
+
+.leaflet-control-attribution {
+    display:flex;
+    font-size:14px;
 }
