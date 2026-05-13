@@ -38,9 +38,6 @@
     <li class="checkbox" data-facet-item-set="countries" data-facet-item="LUXEMBOURG:G:26" data-search-filter-field="LUXEMBOURG:G:26" style="display: list-item;"><input data-filter-field="countries" data-filter-label="Luxembourg" data-filter-value="LUXEMBOURG:G:26" data-filter-type="" type="checkbox" null="" name="LUXEMBOURG:G:26" [[!+c_LUXEMBOURG]]> <span>Luxembourg</span></li>
     <li class="checkbox" data-facet-item-set="countries" data-facet-item="MALTA:G:12" data-search-filter-field="MALTA:G:12" style="display: list-item;"><input data-filter-field="countries" data-filter-label="Malta" data-filter-value="MALTA:G:12" data-filter-type="" type="checkbox" null="" name="MALTA:G:12" [[!+c_MALTA]]> <span>Malta</span>
     </li>
-    <li class="checkbox" data-facet-item-set="countries" data-facet-item="MULTINATIONAL_INSTITUTIONS:G:42" data-search-filter-field="MULTINATIONAL_INSTITUTIONS:G:42" style="display: list-item;">
-        <input data-filter-field="countries" data-filter-label="Multinational Institutions" data-filter-value="MULTINATIONAL_INSTITUTIONS:G:42" data-filter-type="" type="checkbox" null="" name="MULTINATIONAL_INSTITUTIONS:G:42" [[!+c_MULTINATIONAL_INSTITUTIONS]]> <span>Multinational Institutions</span>
-    </li>
     <li class="checkbox" data-facet-item-set="countries" data-facet-item="NETHERLANDS:G:7" data-search-filter-field="NETHERLANDS:G:7" style="display: list-item;"><input data-filter-field="countries" data-filter-label="Netherlands" data-filter-value="NETHERLANDS:G:7" data-filter-type="" type="checkbox" null="" name="NETHERLANDS:G:7" [[!+c_NETHERLANDS]]> <span>Netherlands</span></li>
     <li class="checkbox" data-facet-item-set="countries" data-facet-item="NORWAY:G:33" data-search-filter-field="NORWAY:G:33" style="display: list-item;"><input data-filter-field="countries" data-filter-label="Norway" data-filter-value="NORWAY:G:33" data-filter-type="" type="checkbox" null="" name="NORWAY:G:33" [[!+c_NORWAY]]> <span>Norway</span></li>
     <li class="checkbox" data-facet-item-set="countries" data-facet-item="POLAND:G:5" data-search-filter-field="POLAND:G:5" style="display: list-item;"><input data-filter-field="countries" data-filter-label="Poland" data-filter-value="POLAND:G:5" data-filter-type="" type="checkbox" null="" name="POLAND:G:5" [[!+c_POLAND]]>
@@ -64,5 +61,12 @@
     <li class="checkbox" data-facet-item-set="countries" data-facet-item="TURKEY:G:49" data-search-filter-field="TURKEY:G:49" style="display: list-item;"><input data-filter-field="countries" data-filter-label="Turkey" data-filter-value="TURKEY:G:49" data-filter-type="" type="checkbox" null="" name="TURKEY:G:49" [[!+c_TURKEY]]> <span>Turkey</span></li>
     <li class="checkbox" data-facet-item-set="countries" data-facet-item="UKRAINE:G:46" data-search-filter-field="UKRAINE:G:46" style="display: list-item;"><input data-filter-field="countries" data-filter-label="Ukraine" data-filter-value="UKRAINE:G:46" data-filter-type="" type="checkbox" null="" name="UKRAINE:G:46" [[!+c_UKRAINE]]> <span>Ukraine</span></li>
     <li class="checkbox" data-facet-item-set="countries" data-facet-item="UNITED_KINGDOM:G:27" data-search-filter-field="UNITED_KINGDOM:G:27" style="display: list-item;"><input data-filter-field="countries" data-filter-label="United Kingdom" data-filter-value="UNITED_KINGDOM:G:27" data-filter-type="" type="checkbox" null="" name="UNITED_KINGDOM:G:27" [[!+c_UNITED_KINGDOM]]> <span>United Kingdom</span>
+    </li>
+    <hr/>
+    <li class="checkbox" data-facet-item-set="countries" data-facet-item="MULTINATIONAL_INSTITUTIONS:G:47" data-search-filter-field="MULTINATIONAL_INSTITUTIONS:G:47" style="display: list-item;">
+        <input data-filter-field="countries" data-filter-label="Multinational Institutions" data-filter-value="MULTINATIONAL_INSTITUTIONS:G:47" data-filter-type="" type="checkbox" null="" name="MULTINATIONAL_INSTITUTIONS:G:47" [[!+c_MULTINATIONAL_INSTITUTIONS]]> <span>Multinational Institutions</span>
+    </li>
+    <li class="checkbox" data-facet-item-set="countries" data-facet-item="NON-EUROPEAN_COUNTRIES:G:50" data-search-filter-field="NON-EUROPEAN_COUNTRIES:G:50" style="display: list-item;">
+        <input data-filter-field="countries" data-filter-label="Non-European Countries" data-filter-value="NON-EUROPEAN_COUNTRIES:G:50" data-filter-type="" type="checkbox" null="" name="NON-EUROPEAN_COUNTRIES:G:50" [[!+c_NON-EUROPEAN_COUNTRIES]]> <span>Non-European Countries</span>
     </li>
 </div>

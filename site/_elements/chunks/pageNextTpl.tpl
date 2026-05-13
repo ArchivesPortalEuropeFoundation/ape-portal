@@ -1,0 +1,1 @@
+<li class="next"><a href="[[+link]]">[[!%asi.pg_next? &topic=`default` &namespace=`asi`]] <i class="far fa-angle-right ml"></i></a></li>

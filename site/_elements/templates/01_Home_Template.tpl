@@ -3,23 +3,42 @@
 
 <head>
 
-	<script type="application/ld+json">
-		{
-		  "@context" : "https://schema.org",
-		  "@type" : "WebSite",
-		  "name" : "[[++site_name]]",
-		  "alternateName" : "APE",
-		  "url" : "[[++site_url]]",
-		  "potentialAction": {
-			"@type": "SearchAction",
-			"target": {
-			  "@type": "EntryPoint",
-			  "urlTemplate": "[[++site_url]]/advanced-search/search-in-archives/?term={search_term_string}&using=default"
-			},
-			"query-input": "required name=search_term_string"
-		  }
-		}
-	  </script>
+{*	<script type="application/ld+json">*}
+
+{*		{*}
+{*		  "@context" : "https://schema.org",*}
+{*		  "@type" : "WebSite",*}
+{*		  "name" : "[[++site_name]]",*}
+{*		  "alternateName" : "APE",*}
+{*		  "url" : "[[++site_url]]",*}
+{*		  "potentialAction": {*}
+{*			"@type": "SearchAction",*}
+{*			"target": {*}
+{*			  "@type": "EntryPoint",*}
+{*			  "urlTemplate": "[[++site_url]]/advanced-search/search-in-archives/?term={search_term_string}&using=default"*}
+{*			},*}
+{*			"query-input": "required name=search_term_string"*}
+{*		  }*}
+{*		}*}
+{*	  </script>*}
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Archives Portal Europe",
+      "alternateName" : "APE",
+      "url" : "https://www.archivesportaleurope.net",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.archivesportaleurope.net/advanced-search/search-in-archives/?term={search_term_string}&using=default"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+	</script>
+
 
 	[[$head]]
 </head>

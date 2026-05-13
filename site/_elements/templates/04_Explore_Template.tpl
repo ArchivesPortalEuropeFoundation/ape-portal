@@ -121,6 +121,25 @@
                             [[!getUrlParam:is=`a-z`:then=`&sortby=`{"heroTitle":"ASC", "pagetitle":"ASC"}``? &name=`sortbyD`]]
                             [[!getUrlParam:is=`z-a`:then=`&sortby=`{"heroTitle":"DESC", "pagetitle":"DESC"}``? &name=`sortbyD`]]
 
+                            &where=`[[!getUrlParam:notempty=`[{"parent:=":[[!++highlight_parent_id]]}, {"pagetitle:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" },{ "OR:refText:LIKE": "%[[!getUrlParam? &name=`search`]]%", "AND:context_key:LIKE":"[[+contextKey]]" }]`? &name=`search`]] `
+                            ]]
+
+                            [[-
+                            [[!#GET.search:notempty=`
+                                [[!pdoResources?
+                                    &parents=`[[+context.highlight_parent_id]]`
+                                    &tpl=`linkBlockStandard60Tpl`
+                                    &limit=`0`
+
+                                    &includeTVs=`heroTitle,refImage60,refText,refType,showInList`
+                                    &processTVs=`refImage60`
+                                    &tvFilters=`showInList==yes`
+                            [[!getUrlParam:is=``:or:is=`newest`:then=`&sortby=`{"publishedon":"DESC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`oldest`:then=`&sortby=`{"publishedon":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`a-z`:then=`&sortby=`{"heroTitle":"ASC", "pagetitle":"ASC"}``? &name=`sortbyD`]]
+                            [[!getUrlParam:is=`z-a`:then=`&sortby=`{"heroTitle":"DESC", "pagetitle":"DESC"}``? &name=`sortbyD`]]
+
+
                                     &where=`[{"pagetitle:LIKE":"%[[#GET.search]]%","OR:refText:LIKE":"%[[#GET.search]]%","AND:context_key:LIKE":"[[+contextKey]]","AND:parent:=":"[[+context.highlight_parent_id]]"}]`
                                 ]]
                             `]]
