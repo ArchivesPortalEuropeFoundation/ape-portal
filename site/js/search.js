@@ -40,8 +40,11 @@ if (typeof enable_search !== 'undefined') {
 
         ApeSearch.all_types = [];
         ApeSearch.all_types.archives = ["fa", "hg", "sg"];
+        ApeSearch.all_types.archives.expand = ["Finding Aid", "Holdings Guide", "Source Guide"];
         ApeSearch.all_types.names = ["corporatebody", "person", "family"];
+        ApeSearch.all_types.names.expand = ["Corporate Body", "Person", "Family"];
         ApeSearch.all_types.institutions = ["municipalArchives", "countyArchives", "universityArchives", "regionalArchives", "nationalArchives", "culturalArchives", "churchArchives", "specialisedArchives", "politicalArchives", "businessArchives", "privateArchives", "mediaArchives"];
+        ApeSearch.all_types.institutions.expand = ["Municipal Archives", "County Archives", "University Archives", "Regional Archives", "National Archives", "Cultural Archives", "Church Archives", "Specialised Archives", "Political Archives", "Business Archives", "Private Archives", "Media Archives"];
         ApeSearch.all_countries = ["AUSTRIA:G:30", "BELGIUM:G:8", "BULGARIA:G:17", "CROATIA:G:37", "CZECH_REPUBLIC:G:18", "ESTONIA:G:19", "FINLAND:G:14", "FRANCE:G:2", "GEORGIA:G:41", "GERMANY:G:3", "GREECE:G:4", "HUNGARY:G:22", "ICELAND:G:25", "IRELAND:G:10", "ISLE_OF_MAN:G:43", "ITALY:G:34", "LATVIA:G:11", "LITHUANIA:G:35", "LUXEMBOURG:G:26", "MALTA:G:12", "MULTINATIONAL_INSTITUTIONS:G:42", "NETHERLANDS:G:7", "NORWAY:G:33", "POLAND:G:5", "PORTUGAL:G:13", "ROMANIA:G:36", "SLOVAKIA:G:32", "SLOVENIA:G:9", "SPAIN:G:1", "SWEDEN:G:6", "SWITZERLAND:G:28", "UNITED_KINGDOM:G:27"];
 
         ApeSearch.exclusive_filters = ["containsdigital"];
@@ -1217,13 +1220,16 @@ if (typeof enable_search !== 'undefined') {
             log(section);
 
             var all_types = ApeSearch.all_types.institutions;
+            var all_types_expand = ApeSearch.all_types.institutions.expand;
             var set_name = "repositoryTypeFacet";
             if (section == "search-in-archives") {
                 all_types = ApeSearch.all_types.archives;
+                all_types_expand = ApeSearch.all_types.archives.expand;
                 set_name = "types";
             }
             if (section == "search-in-names") {
                 all_types = ApeSearch.all_types.names;
+                all_types_expand = ApeSearch.all_types.names.expand;
                 set_name = "entityTypeFacet";
             }
 
@@ -1239,7 +1245,7 @@ if (typeof enable_search !== 'undefined') {
 
                 content += '<li class="checkbox">\n' +
                     '    <input type="checkbox" ' + checked + ' data-filter-field="' + set_name + '" data-filter-value="' + value + '">\n' +
-                    '    <span>' + ApeSearch.clean_label(value, set_name) + '</span>\n' +
+                    '    <span>' + all_types_expand[key] + '</span>\n' +
                     '</li>';
             });
 
