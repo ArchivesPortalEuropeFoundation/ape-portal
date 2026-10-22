@@ -1,6 +1,6 @@
 <?php
 // this script runs a batch of new results
-error_reporting(E_ALL);
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 ini_set("display_errors", 1);
 
 // @TODO - parameterise these into modx config
