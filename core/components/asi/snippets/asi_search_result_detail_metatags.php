@@ -160,6 +160,7 @@ $placeholders['URI'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ?
 //        $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode));
     }
 
+$metaContent = null;
 if (strpos($_SERVER['REQUEST_URI'], "results-(archives)") != false || strpos( $_SERVER['REQUEST_URI'],"archive/") != false) {
     if ($cLevelId != null){
         $clevelPartPart = "clevelId=".substr($cLevelId,1);
@@ -182,10 +183,15 @@ else if (strpos($_SERVER['REQUEST_URI'], "results-(institutions)") != false || s
     $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=".$repoCode));
 }
 
-$placeholders['sharing_title'] = urlencode($metaContent->title);
+// No matching URL or the API returned nothing/invalid JSON: use an empty object (PHP 8 fatals on property access of null)
+if (!is_object($metaContent)) {
+    $metaContent = new stdClass();
+}
+
+$placeholders['sharing_title'] = urlencode($metaContent->title ?? '');
 $i = 0;
 $tw_hashtags = "";
-foreach($metaContent->hashtags as $key=>$value) {
+foreach(($metaContent->hashtags ?? []) as $key=>$value) {
     if ($i == 0){
         $placeholders['sharing_fb_hashtags'] = urlencode("#".$value);
         $tw_hashtags = $value;
@@ -196,8 +202,8 @@ foreach($metaContent->hashtags as $key=>$value) {
     $i++;
 }
 $placeholders['sharing_tw_hashtags'] = urlencode($tw_hashtags);
-$placeholders['sharing_url'] = urlencode($baseurl.($metaContent->url));
-$placeholders['sharing_url_unescaped'] = $baseurl.($metaContent->url);
+$placeholders['sharing_url'] = urlencode($baseurl.($metaContent->url ?? ''));
+$placeholders['sharing_url_unescaped'] = $baseurl.($metaContent->url ?? '');
 
 //    $metaContent = json_decode(file_get_contents("{$APIbase}Dashboard/metatagsApi.action?aiRepositoryCode=DE-1958&recordId=NL-BwdADRKF-2&xmlType=fa"));
 
@@ -461,7 +467,7 @@ $placeholders['sharing_url_unescaped'] = $baseurl.($metaContent->url);
 //}
 
 // Set placeholders to page
-    $metaContent->image = $metaContent->dao[0];
+    $metaContent->image = $metaContent->dao[0] ?? null;
     $temp = $modx->toPlaceholders($placeholders, "metacontent");
 
 //$modx->setPlaceholders($placeholders,'metatags.');
