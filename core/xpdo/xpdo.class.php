@@ -2776,6 +2776,8 @@ class xPDO {
  *
  */
 class xPDOCriteria {
+    /** @var xPDO Declared explicitly to avoid PHP 8.2 dynamic property deprecation. */
+    public $xpdo= null;
     public $sql= '';
     public $stmt= null;
     public $bindings= array ();
@@ -2981,6 +2983,7 @@ class xPDOIterator implements Iterator {
         }
     }
 
+    #[\ReturnTypeWillChange]
     public function rewind() {
         $this->index = 0;
         if (!empty($this->stmt)) {
@@ -2998,14 +3001,17 @@ class xPDOIterator implements Iterator {
         }
     }
 
+    #[\ReturnTypeWillChange]
     public function current() {
         return $this->current;
     }
 
+    #[\ReturnTypeWillChange]
     public function key() {
         return $this->index;
     }
 
+    #[\ReturnTypeWillChange]
     public function next() {
         $this->fetch();
         if (!$this->valid()) {
@@ -3016,6 +3022,7 @@ class xPDOIterator implements Iterator {
         return $this->current();
     }
 
+    #[\ReturnTypeWillChange]
     public function valid() {
         return ($this->current !== null);
     }

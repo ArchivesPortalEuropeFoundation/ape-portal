@@ -1,4 +1,4 @@
-error_reporting(E_ALL);
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 ini_set("disaplay_errors", 1);
 
 require_once MODX_CORE_PATH . 'components/asi/vendor/autoload.php';
