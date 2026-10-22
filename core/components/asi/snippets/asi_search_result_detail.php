@@ -62,7 +62,7 @@ $instFinder = new DomXPath($instDoc);
 $placeholders['institution']['name']    = $instFinder->query("//h2[@class='blockHeader']")[0]->nodeValue;
 $placeholders['institution']['country'] = $instFinder->query("//*[contains(@class, 'gel_country gel_contactDetails')]")[0]->nodeValue;
 $placeholders['institution']['repositoryCode'] = $repoCode;
-$placeholders['suggestion_request_uri'] = $_SERVER[REQUEST_URI];
+$placeholders['suggestion_request_uri'] = $_SERVER['REQUEST_URI'];
 $placeholders['sharing_uri'] = urlencode($placeholders['URI']);
 
 if(!is_null($scroll)) {
