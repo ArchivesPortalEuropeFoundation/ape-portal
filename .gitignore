@@ -24,3 +24,7 @@ core/components/redactor/.pubkey_c
 
 #codekit
 config.codekit3
+production.codekit-min.js
+
+# extracted transport packages (regenerated from the .transport.zip files)
+core/packages/*/

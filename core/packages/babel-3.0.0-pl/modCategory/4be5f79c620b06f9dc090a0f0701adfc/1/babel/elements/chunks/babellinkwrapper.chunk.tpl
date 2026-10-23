@@ -1,3 +1,0 @@
-<ul>
-    [[+babelLinks]]
-</ul>
