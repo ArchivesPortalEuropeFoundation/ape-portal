@@ -2,24 +2,16 @@
 /**
  * Image+ Input Options Render
  *
- * Copyright 2013-2015 by Alan Pich <alan.pich@gmail.com>
- * Copyright 2015-2020 by Thomas Jakobi <thomas.jakobi@partout.info>
- *
  * @package imageplus
  * @subpackage inputoptions_render
- *
- * @author Alan Pich <alan.pich@gmail.com>
- * @author Thomas Jakobi <thomas.jakobi@partout.info>
- * @copyright Alan Pich 2013-2015
- * @copyright Thomas Jakobi 2015-2020
  */
 
-/** @var \modX $modx */
+/** @var modX $modx */
 $corePath = $modx->getOption('imageplus.core_path', null, $modx->getOption('core_path') . 'components/imageplus/');
 /** @var ImagePlus $imageplus */
-$imageplus = $modx->getService('imageplus', 'ImagePlus', $corePath . 'model/imageplus/', array(
+$imageplus = $modx->getService('imageplus', 'ImagePlus', $corePath . 'model/imageplus/', [
     'core_path' => $corePath
-));
+]);
 
 $selectConfig = json_decode($imageplus->getOption('select_config'), true);
 $forceConfig = $imageplus->getOption('force_config', false);

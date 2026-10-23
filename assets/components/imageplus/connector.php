@@ -2,16 +2,8 @@
 /**
  * Image+ connector
  *
- * Copyright 2013-2015 by Alan Pich <alan.pich@gmail.com>
- * Copyright 2015 by Thomas Jakobi <thomas.jakobi@partout.info>
- *
  * @package imageplus
  * @subpackage connector
- *
- * @author Alan Pich <alan.pich@gmail.com>
- * @author Thomas Jakobi <thomas.jakobi@partout.info>
- * @copyright Alan Pich 2013-2015
- * @copyright Thomas Jakobi 2015
  *
  * @var modX $modx
  */
@@ -23,15 +15,15 @@ if (isset($_REQUEST['action']) && strpos($_REQUEST['action'], $web) === 0) {
     define('MODX_REQP', false);
 }
 
-require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/config.core.php';
+require_once dirname(__FILE__, 4) . '/config.core.php';
 require_once MODX_CORE_PATH . 'config/' . MODX_CONFIG_KEY . '.inc.php';
 require_once MODX_CONNECTORS_PATH . 'index.php';
 
 $corePath = $modx->getOption('imageplus.core_path', null, $modx->getOption('core_path') . 'components/imageplus/');
 /** @var ImagePlus $imageplus */
-$imageplus = $modx->getService('imageplus', 'ImagePlus', $corePath . 'model/imageplus/', array(
+$imageplus = $modx->getService('imageplus', 'ImagePlus', $corePath . 'model/imageplus/', [
     'core_path' => $corePath
-));
+]);
 
 // Set HTTP_MODAUTH for web processors
 if (defined('MODX_REQP') && MODX_REQP === false) {
@@ -39,7 +31,7 @@ if (defined('MODX_REQP') && MODX_REQP === false) {
 }
 
 // Handle request
-$modx->request->handleRequest(array(
+$modx->request->handleRequest([
     'processors_path' => $imageplus->getOption('processorsPath'),
     'location' => ''
-));
+]);
