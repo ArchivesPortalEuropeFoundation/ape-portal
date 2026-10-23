@@ -24,7 +24,7 @@ class StopForumSpam
     {
         $this->modx = $modx;
         $this->config = array_merge([
-            'host' => 'http://api.stopforumspam.org/',
+            'host' => 'https://api.stopforumspam.com/',
             'path' => 'api',
             'method' => 'GET',
         ], $config);
@@ -56,6 +56,10 @@ class StopForumSpam
 
         if (!empty($username)) {
             $params['username'] = $username;
+        }
+
+        if (empty($params)) {
+            return;
         }
 
         $xml = $this->request($params);
