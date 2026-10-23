@@ -6,7 +6,7 @@
  * @package modx
  * @subpackage lexicon
  */
-$_lang['area'] = 'Groupe';
+$_lang['area'] = 'Champs d\'application';
 $_lang['area_authentication'] = 'Authentification et sécurité';
 $_lang['area_caching'] = 'Cache';
 $_lang['area_core'] = 'Code du core';
@@ -22,7 +22,7 @@ $_lang['area_phpthumb'] = 'phpThumb';
 $_lang['area_proxy'] = 'Proxy';
 $_lang['area_session'] = 'Session et Cookie';
 $_lang['area_static_elements'] = 'Contenus statiques';
-$_lang['area_static_resources'] = 'Static Resources';
+$_lang['area_static_resources'] = 'Ressources statiques';
 $_lang['area_lexicon_string'] = 'Entrées du lexique de zone';
 $_lang['area_lexicon_string_msg'] = 'Entrez ici la clé de l\'entrée du lexique pour la zone. S\'il n\'y a pas d\'entrée de lexique, cela affichera la clé de la zone.<br />Zones du coeur : Authentification, cache, fichier, urls simples, passerelle, langue, gestionnaire, session, site, système';
 $_lang['area_site'] = 'Site';
@@ -122,7 +122,7 @@ $_lang['setting_automatic_alias'] = 'Création automatique des alias';
 $_lang['setting_automatic_alias_desc'] = 'Sélectionnez "Oui" pour que le système génère automatiquement un alias basé sur le titre de la page lors de son enregistrement.';
 
 $_lang['setting_automatic_template_assignment'] = 'Affectation automatique de modèle';
-$_lang['setting_automatic_template_assignment_desc'] = 'Choisissez le mode d’affectation des modèles pour les nouvelles Ressources lors de leur création. Les options possibles sont : système (modèle par défaut défini dans le panneau de configuration), parent (paramètres hérité du modèle parent), ou un frère (hérite des paramètres les plus utilisés par les Ressources de même parent)';
+$_lang['setting_automatic_template_assignment_desc'] = 'Choisissez le mode d’affectation des modèles pour les nouvelles Ressources lors de leur création. Les options possibles sont : "system" (modèle par défaut défini dans le panneau de configuration), "parent" (paramètres hérité du modèle parent), ou un "sibling" (hérite des paramètres les plus utilisés par les Ressources de même parent)';
 
 $_lang['setting_base_help_url'] = 'URL de base de l\'aide';
 $_lang['setting_base_help_url_desc'] = 'L\'URL de base à partir de laquelle la construction de liens d\'aide se fait (en haut à droite des pages dans le manager).';
@@ -371,10 +371,10 @@ $_lang['setting_inline_help'] = 'Afficher l\'aide sous les champs';
 $_lang['setting_inline_help_desc'] = '"Oui" affiche le texte d\'aide directement sous le champ. "Non" affiche le texte d\'aide dans un "tooltip".';
 
 $_lang['setting_link_tag_scheme'] = 'Schéma de génération d\'URL';
-$_lang['setting_link_tag_scheme_desc'] = 'Schéma de génération des URLs pour le tag [[~id]]. Les options disponibles sont décrites dans la documentation de la méthode <a href="http://api.modx.com/revolution/2.2/db_core_model_modx_modx.class.html#\modX::makeUrl()">makeURL()</a>.';
+$_lang['setting_link_tag_scheme_desc'] = 'Schéma de génération des URLs pour le tag [[~id]]. Les options disponibles sont décrites <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">ici</a>.';
 
 $_lang['setting_locale'] = 'Localisation';
-$_lang['setting_locale_desc'] = 'Définie la localisation du système. Laissez vide pour utiliser celle par défaut. Consultez <a href="http://php.net/setlocale" target="_blank">la documentation PHP de setlocale()</a> pour plus d\'information.';
+$_lang['setting_locale_desc'] = 'Définie la localisation du système. Laissez vide pour utiliser celle par défaut. Consultez <a href="https://www.php.net/setlocale" target="_blank">la documentation PHP</a> pour plus d\'information.';
 
 $_lang['setting_lock_ttl'] = 'Durée de vie du verrouillage';
 $_lang['setting_lock_ttl_desc'] = 'Nombre de secondes durant laquelle une ressource restera verrouillée lorsque l\'utilisateur l\'éditant est inactif.';
@@ -415,11 +415,11 @@ $_lang['setting_mail_smtp_pass_desc'] = 'Le mot de passe d\'authentification au 
 $_lang['setting_mail_smtp_port'] = 'Port SMTP';
 $_lang['setting_mail_smtp_port_desc'] = 'Défini le port par défaut du serveur SMTP.';
 
-$_lang['setting_mail_smtp_prefix'] = 'SMTP Encryption';
-$_lang['setting_mail_smtp_prefix_desc'] = 'Sets the encryption of the SMTP connection. Options are "", "ssl" or "tls"';
+$_lang['setting_mail_smtp_prefix'] = 'Cryptage SMTP';
+$_lang['setting_mail_smtp_prefix_desc'] = 'Définit le chiffrement de la connexion SMTP. Les options sont "", "ssl" ou "tls"';
 
 $_lang['setting_mail_smtp_autotls'] = 'SMTP Auto TLS';
-$_lang['setting_mail_smtp_autotls_desc'] = 'Whether to enable TLS encryption automatically if a server supports it, even if "SMTP Encryption" is not set to "tls"';
+$_lang['setting_mail_smtp_autotls_desc'] = 'Pour activer le cryptage TLS automatiquement si un serveur le supporte, même si "SMTP Encryption" n\'est pas réglé sur "tls"';
 
 $_lang['setting_mail_smtp_single_to'] = 'Simple destinataire SMTP';
 $_lang['setting_mail_smtp_single_to_desc'] = 'Donne la possibilité d\'effectuer un champ destinataire individuel, au lieu d\'envoyer à tous les destinataires.';
@@ -504,6 +504,9 @@ $_lang['setting_new_file_permissions_desc'] = 'Lorsque vous uploadez un nouveau 
 
 $_lang['setting_new_folder_permissions'] = 'Permissions des nouveaux répertoires';
 $_lang['setting_new_folder_permissions_desc'] = 'Lorsque vous créez un nouveau répertoire dans le gestionnaire de fichiers, ceci-ci essaiera de changer les permissions du répertoire pour celles entrées dans cette option. Il se peut que cela ne fonctionne pas sur certaines configurations, telles qu\'avec IIS, dans quel cas vous devrez changer manuellement les permissions.';
+
+$_lang['setting_package_installer_at_top'] = 'Épingler l\'installateur de paquets en haut';
+$_lang['setting_package_installer_at_top_desc'] = 'Si activé, l\'entrée de l\'installateur sera épinglée en haut du menu Extras. Sinon, elle sera positionnée en fonction de son index de menu.';
 
 $_lang['setting_parser_recurse_uncacheable'] = 'Retarder l\'analyse des éléments non cacheables';
 $_lang['setting_parser_recurse_uncacheable_desc'] = 'Si désactivé, les éléments non cacheables peuvent avoir leur résultat mis en cache à l\'intérieur du contenu d\'éléments cacheables. Désactivez ceci SEULEMENT si vous avez des problèmes avec éléments imbriqués de façon complexe, qui a cessé de fonctionner comme prévu.';
@@ -617,6 +620,12 @@ $_lang['setting_rb_base_url'] = 'URL des fichiers ressources';
 $_lang['setting_rb_base_url_desc'] = 'Entrez le chemin virtuel d\'accès au répertoire des ressources. Cette option est en général définie automatiquement. Cependant, si vous utilisez IIS, MODX peut ne pas trouver l\'URL par lui même, entrainant un message d\'erreur dans le navigateur de ressource. Dans ce cas, vous pouvez entrez l\'URL du répertoire d\'images (l\'URL telle que vous la rentreriez dans Internet Explorer).';
 $_lang['setting_rb_base_url_err'] = 'Veuillez indiquer l\'URL de base du navigateur de ressource.';
 
+$_lang['setting_quick_search_in_content'] = 'Autoriser la recherche dans le contenu';
+$_lang['setting_quick_search_in_content_desc'] = 'Si \'Oui\', alors le contenu de l\'élément (ressource, modèle, chunk, etc.) sera également disponible pour une recherche rapide.';
+
+$_lang['setting_quick_search_result_max'] = 'Nombre d\'éléments dans le résultat de la recherche';
+$_lang['setting_quick_search_result_max_desc'] = 'Nombre maximum d\'éléments pour chaque type (ressource, modèle, chunk, etc.) dans le résultat de recherche rapide.';
+
 $_lang['setting_request_controller'] = 'Nom de fichier du contrôleur de requête';
 $_lang['setting_request_controller_desc'] = 'Le nom de fichier du contrôleur principal de requête par lequel MODX est chargé. La plupart des utilisateurs peuvent laisser index.php.';
 
@@ -672,8 +681,8 @@ $_lang['setting_session_cookie_secure_desc'] = 'Activez cette option pour utilis
 $_lang['setting_session_cookie_httponly'] = 'Cookie de session HTTPOnly';
 $_lang['setting_session_cookie_httponly_desc'] = 'Activez ce paramètre pour utiliser le flag HTTPOnly dans le cookie de session.';
 
-$_lang['setting_session_cookie_samesite'] = 'Session Cookie Samesite';
-$_lang['setting_session_cookie_samesite_desc'] = 'Choose Lax or Strict.';
+$_lang['setting_session_cookie_samesite'] = 'Cookie de session Samesite';
+$_lang['setting_session_cookie_samesite_desc'] = 'Choisissez entre "Lax" ou "Strict".';
 
 $_lang['setting_session_gc_maxlifetime'] = 'Durée de vie maximale des sessions';
 $_lang['setting_session_gc_maxlifetime_desc'] = 'Autorise la personnalisation du paramètre session.gc_maxlifetime (PHP ini) lors de l\'utilisation de \'modSessionHandler\'.';
@@ -746,11 +755,11 @@ $_lang['setting_static_elements_default_category_desc'] = 'Spécifier une catég
 $_lang['setting_static_elements_basepath'] = 'Chemin de base des éléments statiques';
 $_lang['setting_static_elements_basepath_desc'] = 'Chemin de base où stocker les fichiers d\'éléments statiques.';
 
-$_lang['setting_resource_static_allow_absolute'] = 'Allow absolute static resource path';
-$_lang['setting_resource_static_allow_absolute_desc'] = 'This setting enables users to enter a fully qualified absolute path to any readable file on the server as the content of a static resource. Important: enabling this setting may be considered a significant security risk! It\'s strongly recommended to keep this setting disabled, unless you fully trust every single manager user.';
+$_lang['setting_resource_static_allow_absolute'] = 'Permettre d\'utiliser le chemin absolu pour les ressources statiques';
+$_lang['setting_resource_static_allow_absolute_desc'] = 'Ce paramètre permet aux utilisateurs d\'entrer un chemin absolu entièrement qualifié vers n\'importe quel fichier lisible sur le serveur en tant que contenu d\'une ressource statique. Important : l\'activation de ce paramètre peut être considérée comme un risque de sécurité très important ! Il est fortement recommandé de garder ce paramètre désactivé, à moins que vous ne fassiez entièrement confiance à chaque utilisateur du "manager".';
 
-$_lang['setting_resource_static_path'] = 'Static resource base path';
-$_lang['setting_resource_static_path_desc'] = 'When resource_static_allow_absolute is disabled, static resources are restricted to be within the absolute path provided here.  Important: setting this too wide may allow users to read files they shouldn\'t! It is strongly recommended to limit users to a specific directory such as {core_path}static/ or {assets_path} with this setting.';
+$_lang['setting_resource_static_path'] = 'Chemin de base de ressource statique';
+$_lang['setting_resource_static_path_desc'] = 'Lorsque resource_static_allow_absolute est désactivé, les ressources statiques sont limitées à être dans le chemin absolu fourni ici. Important : le paramétrage trop large peut permettre aux utilisateurs de lire les fichiers qu\'ils ne devraient pas ! Il est fortement recommandé de limiter les utilisateurs à un répertoire spécifique tel que {core_path}static/ ou {assets_path} avec ce paramètre.';
 
 $_lang['setting_strip_image_paths'] = 'Réécrire les chemins du navigateur ?';
 $_lang['setting_strip_image_paths_desc'] = 'Sélectionnez "Non" pour que MODX écrive les "src" (images, fichiers, flash, etc.) des fichiers ressources en URL absolues. Les URL relatives sont utiles si vous souhaitez déplacer votre installation MODX, par exemple, depuis un site en temporaire vers un site en production. Si vous ne savez pas ce que cela signifie, il est préférable de laisser "Oui".';
@@ -764,6 +773,9 @@ $_lang['setting_syncsite_default_err'] = 'Prière d\'indiquer si vous voulez ou 
 
 $_lang['setting_topmenu_show_descriptions'] = 'Afficher les descriptions dans la navigation principale';
 $_lang['setting_topmenu_show_descriptions_desc'] = 'Sélectionnez non pour que MODX cache les descriptions dans la navigation principale du manager.';
+
+$_lang['setting_topmenu_subitems_max'] = '';
+$_lang['setting_topmenu_subitems_max_desc'] = 'Le nombre maximum d\'éléments affichés dans les listes déroulantes de la barre de menu supérieure. Les éléments restants seront masqués dans l\'élément \'...\'';
 
 $_lang['setting_tree_default_sort'] = 'Champ de classement de l\'arborescence';
 $_lang['setting_tree_default_sort_desc'] = 'Le champ par défaut utilisé pour classer les ressources dans l\'arborescence lors du chargement du manager.';
@@ -874,3 +886,6 @@ $_lang['setting_error_log_filename_desc'] = 'Personnaliser le nom de fichier du 
 
 $_lang['setting_error_log_filepath'] = 'Chemin d’accès du journal des erreurs';
 $_lang['setting_error_log_filepath_desc'] = 'Éventuellement défini un chemin d’accès absolu pour l’emplacement du journal un message d’erreur personnalisé. Vous pouvez utiliser des placeholders comme {cache_path}.';
+
+$_lang['static_elements_html_extension'] = 'Extension html des éléments statiques';
+$_lang['static_elements_html_extension_desc'] = 'L\'extension pour les fichiers utilisés par les éléments statiques avec du contenu HTML.';

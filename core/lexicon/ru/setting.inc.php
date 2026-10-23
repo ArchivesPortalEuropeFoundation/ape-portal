@@ -122,7 +122,7 @@ $_lang['setting_automatic_alias'] = 'Автоматически генериро
 $_lang['setting_automatic_alias_desc'] = 'Выберите «Да» для автоматической генерации псевдонимов на базе заголовка ресурса при его сохранении.';
 
 $_lang['setting_automatic_template_assignment'] = 'Автоматическое присвоение шаблона';
-$_lang['setting_automatic_template_assignment_desc'] = 'Выберите, как шаблон будет присваиваться при создании нового ресурса. Опции включают: «system» (шаблон по умолчанию из системных настроек), «parent» (наследуется шаблон родительского ресурса), или «sibling» (наследуется наиболее используемый шаблон соседних ресурсов)';
+$_lang['setting_automatic_template_assignment_desc'] = 'Выберите, как шаблон будет присваиваться при создании нового ресурса. Доступно: "system" (шаблон по умолчанию из системных настроек), "parent" (шаблон родительского ресурса), или "sibling" (наиболее используемый шаблон соседних ресурсов).';
 
 $_lang['setting_base_help_url'] = 'URL помощи';
 $_lang['setting_base_help_url_desc'] = 'URL для ссылки помощи в верхнем правом углу страниц системы управления.';
@@ -371,10 +371,10 @@ $_lang['setting_inline_help'] = 'Показывать текст подсказ�
 $_lang['setting_inline_help_desc'] = 'Если выбрано «Да», рядом с полем будет выводиться текст подсказки. Если выбрано «Нет», подсказка будет «всплывающей».';
 
 $_lang['setting_link_tag_scheme'] = 'Схема URL';
-$_lang['setting_link_tag_scheme_desc'] = 'Схема генерации URL для тега [[~id]]. Доступные опции смотрите <a href="http://api.modx.com/revolution/2.2/db_core_model_modx_modx.class.html#\modX::makeUrl()">здесь</a>.';
+$_lang['setting_link_tag_scheme_desc'] = 'URL generation scheme for tag [[~id]]. Available options <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">here</a>.';
 
 $_lang['setting_locale'] = 'Локаль';
-$_lang['setting_locale_desc'] = 'Устанавливает локаль для системы. Оставьте пустым чтобы использовать локаль по умолчанию. <a href="http://php.net/setlocale" target="_blank">Документация по настройке локалей в PHP</a> .';
+$_lang['setting_locale_desc'] = 'Установка языка системы. Оставьте пустым, чтобы использовать значения по умолчанию. Смотрите <a href="https://www.php.net/setlocale" target="_blank">документацию PHP</a> для получения дополнительной информации.';
 
 $_lang['setting_lock_ttl'] = 'Время жизни блокировки';
 $_lang['setting_lock_ttl_desc'] = 'Количество секунд, на которое будет оставаться блокировка ресурса, если пользователь неактивен.';
@@ -505,6 +505,9 @@ $_lang['setting_new_file_permissions_desc'] = 'При загрузке ново�
 $_lang['setting_new_folder_permissions'] = 'Права на новую папку';
 $_lang['setting_new_folder_permissions_desc'] = 'При создании новой папки через диспетчер файлов, будет произведена попытка установить права доступа к этой папке в соответствии с этой настройкой. Может не работать на некоторых серверах, например IIS. В этом случае вам следует вручную установить права.';
 
+$_lang['setting_package_installer_at_top'] = 'Pin Package-Installer at top';
+$_lang['setting_package_installer_at_top_desc'] = 'If enabled, the Installer entry will be pinned to the top of the Extras menu. Otherwise it will be positioned according to its menuindex.';
+
 $_lang['setting_parser_recurse_uncacheable'] = 'Отложенный некэшируемый парсинг';
 $_lang['setting_parser_recurse_uncacheable_desc'] = 'Если отключено, некэшируемые элементы могут показывать кэшированное содержимое внутри кэшируемых элементов. Отключайте ТОЛЬКО если у вас есть проблемы со сложным вложенным парсингом, который перестал работать как ожидалось.';
 
@@ -617,6 +620,12 @@ $_lang['setting_rb_base_url'] = 'URL ресурсов (устарело)';
 $_lang['setting_rb_base_url_desc'] = 'Введите относительный путь к каталогу ресурсов. Обычно, эта настройка устанавливается автоматически. Однако, если вы используете IIS, MODX может быть не способен этого сделать, что приведёт к ошибке в работе диспетчера файлов. В этом случае, вы можете ввести URL здесь (URL, как он бы отображался в Internet Explorer).';
 $_lang['setting_rb_base_url_err'] = 'Пожалуйста, укажите базовый URL диспетчера файлов.';
 
+$_lang['setting_quick_search_in_content'] = 'Разрешить поиск по содержимому';
+$_lang['setting_quick_search_in_content_desc'] = 'Если выбрано «Да», то содержимое элемента (ресурса, шаблона, чанка и т.д.) также будет доступно для быстрого поиска.';
+
+$_lang['setting_quick_search_result_max'] = 'Количество элементов в результатах поиска';
+$_lang['setting_quick_search_result_max_desc'] = 'Максимальное количество элементов для каждого типа (ресурс, шаблон, чанк и т.д.) в результатах быстрого поиска.';
+
 $_lang['setting_request_controller'] = 'Название файла контроллера запроса';
 $_lang['setting_request_controller_desc'] = 'Название файла основного контроллера запроса, из которого MODX загружается. Большинство пользователей может оставить значение «index.php».';
 
@@ -673,7 +682,7 @@ $_lang['setting_session_cookie_httponly'] = 'Сессионные куки в р
 $_lang['setting_session_cookie_httponly_desc'] = 'Включите эту настройку для установки флага HttpOnly для сессионых кук.';
 
 $_lang['setting_session_cookie_samesite'] = 'Session Cookie Samesite';
-$_lang['setting_session_cookie_samesite_desc'] = 'Choose Lax or Strict.';
+$_lang['setting_session_cookie_samesite_desc'] = 'Выберите Lax или Strict.';
 
 $_lang['setting_session_gc_maxlifetime'] = 'Максимальное время жизни сессии';
 $_lang['setting_session_gc_maxlifetime_desc'] = 'Позволяет настроить PHP-параметр «session.gc_maxlifetime» сборщика мусора при использовании обработчика «modSessionHandler».';
@@ -764,6 +773,9 @@ $_lang['setting_syncsite_default_err'] = 'Пожалуйста, укажите, 
 
 $_lang['setting_topmenu_show_descriptions'] = 'Показывать описания пунктов в верхнем меню';
 $_lang['setting_topmenu_show_descriptions_desc'] = 'Если установлено значение «Нет», MODX будет скрывать дополнительное описание для пунктов верхнего меню.';
+
+$_lang['setting_topmenu_subitems_max'] = 'Maximum items in the drop-down lists of the top menu bar';
+$_lang['setting_topmenu_subitems_max_desc'] = 'The maximum number of items displayed in the drop-down lists of the top menu bar. The remaining items will be hidden in the \'...\' item.';
 
 $_lang['setting_tree_default_sort'] = 'Поле сортировки дерева ресурсов';
 $_lang['setting_tree_default_sort_desc'] = 'Поле, по которому сортируется дерево ресурсов при загрузке.';
@@ -874,3 +886,6 @@ $_lang['setting_error_log_filename_desc'] = 'Задайте название ф�
 
 $_lang['setting_error_log_filepath'] = 'Путь к журналу ошибок';
 $_lang['setting_error_log_filepath_desc'] = 'Дополнительно укажите абсолютный путь к пользовательскому файлу ошибок. Вы можете использовать плейсхолдер {cache_path}.';
+
+$_lang['static_elements_html_extension'] = 'Static elements html extension';
+$_lang['static_elements_html_extension_desc'] = 'Расширение для файлов, используемых статическими элементами с HTML-содержимым.';

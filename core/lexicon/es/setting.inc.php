@@ -371,10 +371,10 @@ $_lang['setting_inline_help'] = 'Mostrar Texto de Ayuda Junto a los Campos de un
 $_lang['setting_inline_help_desc'] = 'Si se configura como "Sí", la ayuda de los campos se mostrará directamente debajo de ellos. En caso contrario, los campos mostrarán un mensaje de ayuda al poner el cursor del ratón sobre ellos.';
 
 $_lang['setting_link_tag_scheme'] = 'Esquema de Generación de URLs';
-$_lang['setting_link_tag_scheme_desc'] = 'Esquema de generación de URLs para la etiqueta [[~id]]. Opciones disponibles: <a href="http://rtfm.modx.com/revolution/2.x/developing-in-modx/other-development-resources/class-reference/modx/modx.makeurl">http://rtfm.modx.com/revolution/2.x/developing-in-modx/other-development-resources/class-reference/modx/modx.makeurl</a>.';
+$_lang['setting_link_tag_scheme_desc'] = 'URL generation scheme for tag [[~id]]. Available options <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">here</a>.';
 
 $_lang['setting_locale'] = 'Conriguración Regional';
-$_lang['setting_locale_desc'] = 'Selecciona la configuración regional para el sistema. Dejar en blanco para utilizar la configuración por defecto. Ver <a href="http://php.net/setlocale" target="_blank">la documentación de PHP</a> para más información.';
+$_lang['setting_locale_desc'] = 'Set the locale for the system. Leave blank to use the default. See <a href="https://www.php.net/setlocale" target="_blank">the PHP documentation</a> for more information.';
 
 $_lang['setting_lock_ttl'] = 'Tiempo de Vida de los Bloqueos';
 $_lang['setting_lock_ttl_desc'] = 'El número de segundos que permanecerá el bloqueo sobre un Recurso si el usuario está inactivo.';
@@ -505,6 +505,9 @@ $_lang['setting_new_file_permissions_desc'] = 'Cuando se carga un archivo nuevo 
 $_lang['setting_new_folder_permissions'] = 'Permisos de Carpeta Nueva';
 $_lang['setting_new_folder_permissions_desc'] = 'Cuando se crea una carpeta nueva en el Panel de Administración de Archivos, éste intentará cambiar los permisos de la carpeta a los aquí introducidos. Esto puede no funcionar en algunas instalaciones, tales como IIS, en cuyo caso necesitarás cambiar los permisos manualmente.';
 
+$_lang['setting_package_installer_at_top'] = 'Pin Package-Installer at top';
+$_lang['setting_package_installer_at_top_desc'] = 'If enabled, the Installer entry will be pinned to the top of the Extras menu. Otherwise it will be positioned according to its menuindex.';
+
 $_lang['setting_parser_recurse_uncacheable'] = 'Retardar el proceso/análisis de no cacheables';
 $_lang['setting_parser_recurse_uncacheable_desc'] = 'Si está desactivado, los elementos no cacheables pueden tener su salida en caché dentro del contenido de elementos cacheables. Deshabilita esto SOLAMENTE si estás teniendo problemas con el análisis/proceso anidado complejo, porque dejó de funcionar como se esperaba.';
 
@@ -616,6 +619,12 @@ $_lang['setting_rb_base_dir_err_invalid'] = 'Este recurso no existe o no pudo se
 $_lang['setting_rb_base_url'] = 'URL Base de Recursos';
 $_lang['setting_rb_base_url_desc'] = 'Introduce la ruta virtual al directorio de recursos. Normalmente, ésta es generada automáticamente. Sin embargo, en un servidor IIS MODX podría no generarla correctamente, causando que el Navegador de Recursos muestre un error. En ese caso, puedes introducir la ruta virtual a la carpeta aquí (tal como harías en el navegador web).';
 $_lang['setting_rb_base_url_err'] = 'Por favor indica la URL base del navegador de recursos.';
+
+$_lang['setting_quick_search_in_content'] = 'Allow search in content';
+$_lang['setting_quick_search_in_content_desc'] = 'If \'Yes\', then the content of the element (resource, template, chunk, etc.) will also be available for quick search.';
+
+$_lang['setting_quick_search_result_max'] = 'Number of items in search result';
+$_lang['setting_quick_search_result_max_desc'] = 'Maximum number of elements for each type (resource, template, chunk, etc.) in the quick search result.';
 
 $_lang['setting_request_controller'] = 'Nombre de Archivo del Controlador de Solicitudes';
 $_lang['setting_request_controller_desc'] = 'El nombre de archivo del controlador de solicitudes principal desde el cual se carga MODX. La mayoría de los usuarios pueden dejarlo como "index.php".';
@@ -765,6 +774,9 @@ $_lang['setting_syncsite_default_err'] = 'Por favor, indica si quieres vaciar o 
 $_lang['setting_topmenu_show_descriptions'] = 'Mostrar Descripciones en el Menú Superior';
 $_lang['setting_topmenu_show_descriptions_desc'] = 'Si se configura a "No", MODX ocultará las descripciones de los artículos del menú superior del Panel de Administración.';
 
+$_lang['setting_topmenu_subitems_max'] = 'Maximum items in the drop-down lists of the top menu bar';
+$_lang['setting_topmenu_subitems_max_desc'] = 'The maximum number of items displayed in the drop-down lists of the top menu bar. The remaining items will be hidden in the \'...\' item.';
+
 $_lang['setting_tree_default_sort'] = 'Campo para Ordenar por Defecto los Elementos del Árbol de Recursos';
 $_lang['setting_tree_default_sort_desc'] = 'El campo utilizado por defecto para ordenar los elementos del Árbol de Recursos del Panel de Administración.';
 
@@ -874,3 +886,6 @@ $_lang['setting_error_log_filename_desc'] = 'Personalizar el nombre del archivo 
 
 $_lang['setting_error_log_filepath'] = 'Ruta del registro de errores';
 $_lang['setting_error_log_filepath_desc'] = 'Opcionalmente, establece una ruta absoluta para una ubicación del registro de errores. Puedes utilizar placeholders como {cache_path}.';
+
+$_lang['static_elements_html_extension'] = 'Static elements html extension';
+$_lang['static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';

@@ -371,10 +371,10 @@ $_lang['setting_inline_help'] = 'Visualizza il Testo di Aiuto Inline per i vari 
 $_lang['setting_inline_help_desc'] = 'Se \'SI\', i campi avranno il testo di aiuto direttamente sotto il campo stesso. Se\'NO\', tutti i campi avranno il testo aiuto nel tooltip-based.';
 
 $_lang['setting_link_tag_scheme'] = 'Schema Generazione URL';
-$_lang['setting_link_tag_scheme_desc'] = 'Lo schema di generazione URL per i tag [[~id]]. Opzioni disponibili: <a href="http://api.modxcms.com/modx/modX.html#makeUrl">http://api.modxcms.com/modx/modX.html#makeUrl</a>';
+$_lang['setting_link_tag_scheme_desc'] = 'Schema di generazione URL per il tag [[~id]]. Opzioni disponibili <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">qui</a>.';
 
 $_lang['setting_locale'] = 'Localizzazione';
-$_lang['setting_locale_desc'] = 'Scegli la localizzazione per il sistema (set locale: it_IT.UTF-8). Lascia in bianco per le impostazioni di default. Guarda la <a href="http://php.net/setlocale" target="_blank">documentazione PHP</a> per maggiori informazioni.';
+$_lang['setting_locale_desc'] = 'Impostare il locale per il sistema. Lasciare vuoto per usare il predefinito. Vedere <a href="https://www.php.net/setlocale" target="_blank">la documentazione PHP</a> per maggiori informazioni.';
 
 $_lang['setting_lock_ttl'] = 'Tempo di Vita Blocco';
 $_lang['setting_lock_ttl_desc'] = 'Numero di secondi che un blocco su una risorsa rimarra\' attivo quano l\' utente è inattivo.';
@@ -415,11 +415,11 @@ $_lang['setting_mail_smtp_pass_desc'] = 'La password per autenticatsi con SMTP.'
 $_lang['setting_mail_smtp_port'] = 'Porta SMTP';
 $_lang['setting_mail_smtp_port_desc'] = 'Imposta la porta di default del server SMTP.';
 
-$_lang['setting_mail_smtp_prefix'] = 'SMTP Encryption';
-$_lang['setting_mail_smtp_prefix_desc'] = 'Sets the encryption of the SMTP connection. Options are "", "ssl" or "tls"';
+$_lang['setting_mail_smtp_prefix'] = 'Crittografia SMTP';
+$_lang['setting_mail_smtp_prefix_desc'] = 'Imposta la crittografia della connessione SMTP. Sono opzioni "", "ssl" o "tls"';
 
-$_lang['setting_mail_smtp_autotls'] = 'SMTP Auto TLS';
-$_lang['setting_mail_smtp_autotls_desc'] = 'Whether to enable TLS encryption automatically if a server supports it, even if "SMTP Encryption" is not set to "tls"';
+$_lang['setting_mail_smtp_autotls'] = 'TLS Automatico SMTP';
+$_lang['setting_mail_smtp_autotls_desc'] = 'Se abilitare la crittografia TLS automaticamente se un server la supporta, anche se "Crittografia SMTP" non è impostata a "tls"';
 
 $_lang['setting_mail_smtp_single_to'] = 'SMTP Invio Singolo A:';
 $_lang['setting_mail_smtp_single_to_desc'] = 'Abilita l\'invio selettivo ai singoli destinatari "A:" delle mails, invece di inviare all\'intero elenco A: dei destinatari.';
@@ -504,6 +504,9 @@ $_lang['setting_new_file_permissions_desc'] = 'Quando carichi un nuovo file nel 
 
 $_lang['setting_new_folder_permissions'] = 'Permessi Nuova Cartella';
 $_lang['setting_new_folder_permissions_desc'] = 'Quando crei una nuova cartella nel File Manager, il manager proverà a cambiare i permessi della cartella con quelli inseriti qui. Questo potrebbe non funzionare su alcune installazioni, come con IIS, in questi casi dovrai cambiare manualmente i permessi.';
+
+$_lang['setting_package_installer_at_top'] = 'Pin Package-Installer at top';
+$_lang['setting_package_installer_at_top_desc'] = 'If enabled, the Installer entry will be pinned to the top of the Extras menu. Otherwise it will be positioned according to its menuindex.';
 
 $_lang['setting_parser_recurse_uncacheable'] = 'Ritardo parsing non cacheable';
 $_lang['setting_parser_recurse_uncacheable_desc'] = 'Se disattivato, gli elementi che non vengono inseriti in cache possono avere il loro output cached dentro il contenuto di un elemento in cache. Disattivare questo SOLO se si riscontrano problemi con parsing complesso annidato che smette di funzionare come previsto.';
@@ -617,6 +620,12 @@ $_lang['setting_rb_base_url'] = 'URL Risorse';
 $_lang['setting_rb_base_url_desc'] = 'Inserisci il percorso virtuale alla directory delle risorse. Questa impostazione di solito è generata automaticamente. Se stai usando IIS, tuttavia, MODX potrebbe non riuscire a determinare l\'URL da solo, costringendo il browser delle Risorse a mostrare un errore. In quel caso, qui puoi inserire l\'URL della cartella delle immagini (il percorso come lo scriveresti in Internet Explorer).';
 $_lang['setting_rb_base_url_err'] = 'Per favore specifica l\'URL base del browser delle risorse.';
 
+$_lang['setting_quick_search_in_content'] = 'Consenti la ricerca nel contenuto';
+$_lang['setting_quick_search_in_content_desc'] = 'Se \'Sì\', allora il contenuto dell\'elemento (risorsa, modello, chunk, etc.) sarà disponibile anche alla ricerca rapida.';
+
+$_lang['setting_quick_search_result_max'] = 'Numero di elementi nel risultato di ricerca';
+$_lang['setting_quick_search_result_max_desc'] = 'Numero massimo di elementi per ogni tipo (risorsa, modello, chunk, etc.) nel risultato della ricerca rapida.';
+
 $_lang['setting_request_controller'] = 'Nome File Controllore Richieste';
 $_lang['setting_request_controller_desc'] = 'Il nome del file del controllore delle richieste con cui è caricato MODX. La maggior parte degli utenti possono lasciare index.php.';
 
@@ -672,8 +681,8 @@ $_lang['setting_session_cookie_secure_desc'] = 'Abilita questa opzione per usare
 $_lang['setting_session_cookie_httponly'] = 'Cookie Sessione HttpOnly';
 $_lang['setting_session_cookie_httponly_desc'] = 'Utilizza questa opzione per spuntare il flag HttpOnly sui cookies della sessione.';
 
-$_lang['setting_session_cookie_samesite'] = 'Session Cookie Samesite';
-$_lang['setting_session_cookie_samesite_desc'] = 'Choose Lax or Strict.';
+$_lang['setting_session_cookie_samesite'] = 'Cookie Sessione Sito Stesso';
+$_lang['setting_session_cookie_samesite_desc'] = 'Scegli Lax o Strict.';
 
 $_lang['setting_session_gc_maxlifetime'] = 'Durata Max sessione Garbage Collector';
 $_lang['setting_session_gc_maxlifetime_desc'] = 'Consente la personalizzazione dell\'impostazione gc_maxlifetime di PHP ini quando si usa \'modSessionHandler\'.';
@@ -764,6 +773,9 @@ $_lang['setting_syncsite_default_err'] = 'Indica se desideri o no svuotare la ca
 
 $_lang['setting_topmenu_show_descriptions'] = 'Mostra Descrizioni Top Menu';
 $_lang['setting_topmenu_show_descriptions_desc'] = 'Se impostato su \'NO\', MODX nasconderà le descrizioni dagli oggetti del top menu del manager.';
+
+$_lang['setting_topmenu_subitems_max'] = 'Maximum items in the drop-down lists of the top menu bar';
+$_lang['setting_topmenu_subitems_max_desc'] = 'The maximum number of items displayed in the drop-down lists of the top menu bar. The remaining items will be hidden in the \'...\' item.';
 
 $_lang['setting_tree_default_sort'] = 'Campo per Ordinamento Predefinito Albero Risorse';
 $_lang['setting_tree_default_sort_desc'] = 'Quale campo della Risorsa usare per l\'ordinamento predefinito dell\'albero delle risorse durante il caricamento del manager. Normalmente menuindex';
@@ -874,3 +886,6 @@ $_lang['setting_error_log_filename_desc'] = 'Personalizza il nome del file del f
 
 $_lang['setting_error_log_filepath'] = 'Percorso log degli errori';
 $_lang['setting_error_log_filepath_desc'] = 'Facoltativo, imposta un percorso assoluto del registro di errore personalizzato. È possibile utilizzare placehodlers come {cache_path}.';
+
+$_lang['static_elements_html_extension'] = 'Estensione html degli elementi statici';
+$_lang['static_elements_html_extension_desc'] = 'L\'estensione per i file utilizzati da elementi statici con contenuto HTML.';

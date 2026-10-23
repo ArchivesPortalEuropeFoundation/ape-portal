@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TV Widget English lexicon topic
  *
@@ -6,6 +7,7 @@
  * @package modx
  * @subpackage lexicon
  */
+
 $_lang['attributes'] = 'Ominaisuudet';
 $_lang['capitalize'] = 'Capitalize';
 $_lang['checkbox'] = 'Check Box';
@@ -25,6 +27,8 @@ $_lang['combo_listwidth'] = 'List Width';
 $_lang['combo_listwidth_desc'] = 'The width, in pixels, of the dropdown list itself. Defaults to the width of the combobox.';
 $_lang['combo_maxheight'] = 'Max Height';
 $_lang['combo_maxheight_desc'] = 'The maximum height in pixels of the dropdown list before scrollbars are shown (defaults to 300).';
+$_lang['combo_preserve_selectionorder'] = 'Preserve Entry Order';
+$_lang['combo_preserve_selectionorder_desc'] = 'When set to Yes, saved items display in the order they were originally selected. Otherwise, items follow the order defined in the list options. (Default: Yes)';
 $_lang['combo_stackitems'] = 'Stack Selected Items';
 $_lang['combo_stackitems_desc'] = 'When set to Yes, the items will be stacked 1 per line. Defaults to No, which displays the items inline.';
 $_lang['combo_title'] = 'List Header';
@@ -87,6 +91,8 @@ $_lang['number_allowdecimals'] = 'Allow Decimals';
 $_lang['number_allownegative'] = 'Allow Negatives';
 $_lang['number_decimalprecision'] = 'Decimal Precision';
 $_lang['number_decimalprecision_desc'] = 'The maximum precision to display after the decimal separator (defaults to 2).';
+$_lang['number_strict_decimalprecision'] = 'Strict Decimal Precision';
+$_lang['number_strict_decimalprecision_desc'] = 'When set to “Yes,” preserves trailing zeros in decimal numbers (defaults to “No”).';
 $_lang['number_decimalseparator'] = 'Decimal Separator';
 $_lang['number_decimalseparator_desc'] = 'Character(s) to allow as the decimal separator (defaults to ".")';
 $_lang['number_maxvalue'] = 'Max Value';

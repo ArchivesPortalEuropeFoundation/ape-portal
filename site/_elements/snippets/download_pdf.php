@@ -1,3 +1,4 @@
+<?php
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 ini_set("disaplay_errors", 1);
 

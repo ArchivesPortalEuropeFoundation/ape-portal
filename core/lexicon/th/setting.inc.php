@@ -371,10 +371,10 @@ $_lang['setting_inline_help'] = 'แสดงข้อความช่วย�
 $_lang['setting_inline_help_desc'] = 'ถ้า \'ใช่\' ฟิลด์จะแสดงข้อความช่วยเหลือของพวกมันตรงด้านล่างของฟิลด์ ถ้า \'ไม่\' ฟิลด์ทั้งหมดจะมีความช่วยเหลือแบบทูลทิป';
 
 $_lang['setting_link_tag_scheme'] = 'โครงร่างการสร้าง URL';
-$_lang['setting_link_tag_scheme_desc'] = 'โครงร่างการสร้าง URL สำหรับแท็ก [[~id]] ตัวเลือกที่ใช้งานได้: <a href="http://api.modxcms.com/modx/modX.html#makeUrl">http://api.modxcms.com/modx/modX.html#makeUrl</a>';
+$_lang['setting_link_tag_scheme_desc'] = 'URL generation scheme for tag [[~id]]. Available options <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">here</a>.';
 
 $_lang['setting_locale'] = 'ท้องถิ่น';
-$_lang['setting_locale_desc'] = 'ตั้งท้องถิ่นสำหรับระบบ ปล่อยว่างไว้เพื่อใช้ค่าปริยาย ดูที่ <a href="http://php.net/setlocale" target="_blank">เอกสารประกอบ PHP</a> สำหรับข้อมูลเพิ่มเติม';
+$_lang['setting_locale_desc'] = 'Set the locale for the system. Leave blank to use the default. See <a href="https://www.php.net/setlocale" target="_blank">the PHP documentation</a> for more information.';
 
 $_lang['setting_lock_ttl'] = 'Lock Time-to-Live';
 $_lang['setting_lock_ttl_desc'] = 'The number of seconds a lock on a Resource will remain for if the user is inactive.';
@@ -505,6 +505,9 @@ $_lang['setting_new_file_permissions_desc'] = 'เมื่อทำการอ
 $_lang['setting_new_folder_permissions'] = 'สิทธิ์การใช้งานโฟลเดอร์ใหม่';
 $_lang['setting_new_folder_permissions_desc'] = 'เมื่อทำการอัปโหลดโฟลเดอร์ใหม่ในตัวจัดการไฟล์ซึ่งจะพยายามเปลี่ยนสิทธิ์การใช้งานโฟลเดอร์เหล่านั้นเป็นตามที่คุณป้อนในนี้ อาจจะไม่ทำงานบนบางการติดตั้ง เช่น IIS ซึ่งในกรณีนี้คุณจำเป็นต้องทำการกำหนดสิทธิ์เอง';
 
+$_lang['setting_package_installer_at_top'] = 'Pin Package-Installer at top';
+$_lang['setting_package_installer_at_top_desc'] = 'If enabled, the Installer entry will be pinned to the top of the Extras menu. Otherwise it will be positioned according to its menuindex.';
+
 $_lang['setting_parser_recurse_uncacheable'] = 'Delay Uncacheable Parsing';
 $_lang['setting_parser_recurse_uncacheable_desc'] = 'If disabled, uncacheable elements may have their output cached inside cacheable element content. Disable this ONLY if you are having problems with complex nested parsing which stopped working as expected.';
 
@@ -616,6 +619,12 @@ $_lang['setting_rb_base_dir_err_invalid'] = 'ไดเรกทอรีขอ�
 $_lang['setting_rb_base_url'] = 'URL ของรีซอร์ส';
 $_lang['setting_rb_base_url_desc'] = 'ป้อนเส้นทางเสมือนไปถึงไดเรกทอรีของรีซอร์ส การตั้งค่านี้มักจะถูกทำขึ้นเอง ถ้าหากคุณกำลังใช้ IIS MODX อาจจะไม่สามารถทำงานกับ URL บนตัวมันเอง เป็นสาเหตุให้รีซอร์สเบราว์เซอร์แสดงข้อผิดพลาด ในกรณีนี้คุณสามารถป้อน URL ไปยังโฟลเดอร์รูปภาพที่นี่ (URL เหมือนกับที่คุณป้อนใน Internet Explorer)';
 $_lang['setting_rb_base_url_err'] = 'กรุณากำหนดรีซอร์สเบราว์เซอร์ URL';
+
+$_lang['setting_quick_search_in_content'] = 'Allow search in content';
+$_lang['setting_quick_search_in_content_desc'] = 'If \'Yes\', then the content of the element (resource, template, chunk, etc.) will also be available for quick search.';
+
+$_lang['setting_quick_search_result_max'] = 'Number of items in search result';
+$_lang['setting_quick_search_result_max_desc'] = 'Maximum number of elements for each type (resource, template, chunk, etc.) in the quick search result.';
 
 $_lang['setting_request_controller'] = 'Request Controller Filename';
 $_lang['setting_request_controller_desc'] = 'ชื่อไฟล์ของตัวควบคุม main request จาก MODX ที่ถูกโหลด ผู้ใช้ส่วนใหญ่สามารถปล่อยไว้ให้เป็น index.php';
@@ -765,6 +774,9 @@ $_lang['setting_syncsite_default_err'] = 'Please state whether or not you want t
 $_lang['setting_topmenu_show_descriptions'] = 'แสดงคำอธิยบายในท็อปเมนู';
 $_lang['setting_topmenu_show_descriptions_desc'] = 'ถ้าตั้งเป็น \'ไม่\' MODX จะซ่อนคำอธิบายของไอเท็มของท็อปเมนูในส่วนของเมเนเจอร์';
 
+$_lang['setting_topmenu_subitems_max'] = 'Maximum items in the drop-down lists of the top menu bar';
+$_lang['setting_topmenu_subitems_max_desc'] = 'The maximum number of items displayed in the drop-down lists of the top menu bar. The remaining items will be hidden in the \'...\' item.';
+
 $_lang['setting_tree_default_sort'] = 'ฟิลด์จัดเรียงปริยายของแผนผังรีซอร์ส';
 $_lang['setting_tree_default_sort_desc'] = 'ฟิลด์จัดเรียงปริยายสำหรับแผนผังรีซอร์สเมื่อเรียกใช้เมเนเจอร์';
 
@@ -874,3 +886,6 @@ $_lang['setting_error_log_filename_desc'] = 'Customize the filename of the MODX 
 
 $_lang['setting_error_log_filepath'] = 'Error log path';
 $_lang['setting_error_log_filepath_desc'] = 'Optionally set a absolute path the a custom error log location. You might use placehodlers like {cache_path}.';
+
+$_lang['static_elements_html_extension'] = 'Static elements html extension';
+$_lang['static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';

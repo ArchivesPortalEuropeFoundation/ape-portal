@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TV Widget English lexicon topic
  *
@@ -6,6 +7,7 @@
  * @package modx
  * @subpackage lexicon
  */
+
 $_lang['attributes'] = 'Nitelikler';
 $_lang['capitalize'] = 'Yararlanmak';
 $_lang['checkbox'] = 'Onay Kutusu';
@@ -25,6 +27,8 @@ $_lang['combo_listwidth'] = 'Liste Genişliği';
 $_lang['combo_listwidth_desc'] = 'Aşağı açılır listenin piksel cinsinden genişliği. Varsayılan, açılan kutunun genişliği.';
 $_lang['combo_maxheight'] = 'Maksimum Yükseklik';
 $_lang['combo_maxheight_desc'] = 'Kaydırma çubukları gösterilmeden önce aşağı açılır listenin piksel cinsinden maksimum yüksekliği (varsayılan 300).';
+$_lang['combo_preserve_selectionorder'] = 'Preserve Entry Order';
+$_lang['combo_preserve_selectionorder_desc'] = 'When set to Yes, saved items display in the order they were originally selected. Otherwise, items follow the order defined in the list options. (Default: Yes)';
 $_lang['combo_stackitems'] = 'Seçili öğeleri kümelemek';
 $_lang['combo_stackitems_desc'] = 'Evet olarak ayarlandığında, öğeleri satır başına 1 yığılmış. Varsayılan olarak hayır, öğeleri satır içi görüntüler.';
 $_lang['combo_title'] = 'Liste Başlığı';
@@ -87,6 +91,8 @@ $_lang['number_allowdecimals'] = 'Ondalık sayılara İzin Ver';
 $_lang['number_allownegative'] = 'Negatiflere İzin Ver';
 $_lang['number_decimalprecision'] = 'Ondalık hassasiyet';
 $_lang['number_decimalprecision_desc'] = 'Ondalık ayırıcının ardından görüntülenen maksimum hassaslık (varsayılan olarak 2).';
+$_lang['number_strict_decimalprecision'] = 'Strict Decimal Precision';
+$_lang['number_strict_decimalprecision_desc'] = 'When set to “Yes,” preserves trailing zeros in decimal numbers (defaults to “No”).';
 $_lang['number_decimalseparator'] = 'Ondalık ayıracı';
 $_lang['number_decimalseparator_desc'] = 'Ondalık ayırıcı olarak izin verilecek karakter(ler) (varsayılan değer "."dır)';
 $_lang['number_maxvalue'] = 'Maksimum Değer';

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TV Widget English lexicon topic
  *
@@ -6,6 +7,7 @@
  * @package modx
  * @subpackage lexicon
  */
+
 $_lang['attributes'] = 'Eigenschaften';
 $_lang['capitalize'] = 'Alle Worte groß';
 $_lang['checkbox'] = 'Checkbox';
@@ -25,8 +27,10 @@ $_lang['combo_listwidth'] = 'Listen-Breite';
 $_lang['combo_listwidth_desc'] = 'Die Breite der Dropdown-Liste in Pixeln. Standardmäßig wird die Breite der Combobox verwendet.';
 $_lang['combo_maxheight'] = 'Maximale Höhe';
 $_lang['combo_maxheight_desc'] = 'Die maximale Höhe der Dropdown-Liste in Pixeln, bevor Bildlaufleisten (Scrollbars) angezeigt werden (Standard: 300).';
+$_lang['combo_preserve_selectionorder'] = 'Sortierung der Einträge beibehalten';
+$_lang['combo_preserve_selectionorder_desc'] = 'Wenn diese Einstellung auf „Ja“ gesetzt ist, werden gespeicherte Elemente in der Reihenfolge angezeigt, in der sie ursprünglich ausgewählt wurden. Andernfalls werden sie in der Reihenfolge angezeigt, die in den Listenoptionen festgelegt wurde. (Standard: Ja)';
 $_lang['combo_stackitems'] = 'Ausgewählte Elemente untereinander anzeigen';
-$_lang['combo_stackitems_desc'] = 'Wenn diese Einstellung auf "Ja" gesetzt wird, werden die bereits ausgewählten Elemente untereinander angezeigt (1 Element pro Zeile). Die Standardeinstellung ist "Nein", wodurch die Elemente nebeneinander angezeigt werden; ein Zeilenumbruch erfolgt nur, wenn in einer Zeile kein Platz mehr ist.';
+$_lang['combo_stackitems_desc'] = 'Wenn diese Einstellung auf „Ja“ gesetzt wird, werden die bereits ausgewählten Elemente untereinander angezeigt (1 Element pro Zeile). Die Standardeinstellung ist „Nein“, wodurch die Elemente nebeneinander angezeigt werden; ein Zeilenumbruch erfolgt nur, wenn in einer Zeile kein Platz mehr ist.';
 $_lang['combo_title'] = 'Erster Listeneintrag';
 $_lang['combo_title_desc'] = 'Wird hier etwas eingegeben, so wird an Anfang der Liste ein zusätzliches Element mit dem hier hinterlegten Text eingefügt.';
 $_lang['combo_typeahead'] = 'Autovervollständigung aktivieren';
@@ -87,6 +91,8 @@ $_lang['number_allowdecimals'] = 'Erlaube Dezimalstellen';
 $_lang['number_allownegative'] = 'Erlaube negative Zahlen';
 $_lang['number_decimalprecision'] = 'Dezimalstellen';
 $_lang['number_decimalprecision_desc'] = 'Die maximale Anzahl an Dezimalstellen, die nach dem Dezimaltrennzeichen angezeigt werden (Standard: 2).';
+$_lang['number_strict_decimalprecision'] = 'Strenge Dezimalgenauigkeit';
+$_lang['number_strict_decimalprecision_desc'] = 'Wenn diese Einstellung auf „Ja“ gesetzt ist, werden nachgestellte Nullen in Dezimalzahlen beibehalten (Standardwert ist „Nein“).';
 $_lang['number_decimalseparator'] = 'Dezimaltrennzeichen';
 $_lang['number_decimalseparator_desc'] = 'Ein oder mehrere Zeichen, die als Dezimaltrennzeichen zulässig sind (der Standardwert ist der Punkt; im Deutschen wird jedoch das Komma verwendet, also ggf. anpassen!)';
 $_lang['number_maxvalue'] = 'Höchstwert';
@@ -95,8 +101,8 @@ $_lang['option'] = 'Optionsschaltflächen (Radio Buttons)';
 $_lang['parent_resources'] = 'Eltern-Ressourcen';
 $_lang['radio_columns'] = 'Spalten';
 $_lang['radio_columns_desc'] = 'Die Anzahl der Spalten, in denen die Radio-Buttons angezeigt werden.';
-$_lang['rawtext'] = 'Raw Text (deprecated)';
-$_lang['rawtextarea'] = 'Raw Textarea (deprecated)';
+$_lang['rawtext'] = 'Raw Text (veraltet)';
+$_lang['rawtextarea'] = 'Raw Textarea (veraltet)';
 $_lang['required'] = 'Leere Eingabe erlauben';
 $_lang['required_desc'] = 'Wenn diese Einstellung auf "Nein" gesetzt wird, erlaubt MODX dem Benutzer so lange das Speichern der Ressource nicht, bis ein gültiger Wert eingegeben wurde; das Feld darf dann nicht leer bleiben.';
 $_lang['resourcelist'] = 'Ressourcen-Liste';

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TV Widget English lexicon topic
  *
@@ -6,6 +7,7 @@
  * @package modx
  * @subpackage lexicon
  */
+
 $_lang['attributes'] = 'Atribut';
 $_lang['capitalize'] = 'Memanfaatkan';
 $_lang['checkbox'] = 'Kotak centang';
@@ -25,6 +27,8 @@ $_lang['combo_listwidth'] = 'Lebar daftar';
 $_lang['combo_listwidth_desc'] = 'Lebar, dalam pixel, daftar dropdown itu sendiri. Default untuk lebar combobox.';
 $_lang['combo_maxheight'] = 'Tinggi Maksimum';
 $_lang['combo_maxheight_desc'] = 'Ketinggian maksimum dalam pixel daftar dropdown sebelum scrollbar ditampilkan (defaultnya 300).';
+$_lang['combo_preserve_selectionorder'] = 'Preserve Entry Order';
+$_lang['combo_preserve_selectionorder_desc'] = 'When set to Yes, saved items display in the order they were originally selected. Otherwise, items follow the order defined in the list options. (Default: Yes)';
 $_lang['combo_stackitems'] = 'Tumpukan item yang terpilih';
 $_lang['combo_stackitems_desc'] = 'Bila diatur ke Ya, item akan disusun 1 per baris. Default untuk tidak, yang menampilkan inline item.';
 $_lang['combo_title'] = 'Daftar Header';
@@ -87,6 +91,8 @@ $_lang['number_allowdecimals'] = 'Memungkinkan desimal';
 $_lang['number_allownegative'] = 'Memungkinkan negatif';
 $_lang['number_decimalprecision'] = 'Presisi desimal';
 $_lang['number_decimalprecision_desc'] = 'Ketepatan maksimum untuk menampilkan setelah pemisah desimal (defaultnya 2).';
+$_lang['number_strict_decimalprecision'] = 'Strict Decimal Precision';
+$_lang['number_strict_decimalprecision_desc'] = 'When set to “Yes,” preserves trailing zeros in decimal numbers (defaults to “No”).';
 $_lang['number_decimalseparator'] = 'Pemisah desimal';
 $_lang['number_decimalseparator_desc'] = 'Karakter (s) untuk memungkinkan sebagai pemisah desimal (default ".")';
 $_lang['number_maxvalue'] = 'Nilai maksimal';

@@ -372,10 +372,10 @@ $_lang['setting_inline_help'] = 'Паказваць тэкст падказкі 
 $_lang['setting_inline_help_desc'] = 'Калі выбрана «Так», тэкст падказкі будзе выводзіцца непасрэдна пад полем. Калі выбрана «Не», падказкі будуць «усплывальнымі».';
 
 $_lang['setting_link_tag_scheme'] = 'Схема генерацыі URL';
-$_lang['setting_link_tag_scheme_desc'] = 'Схема генерацыі URL для тэга [[~id]]. Даступныя опцыі глядзіце <a href="http://api.modx.com/revolution/2.2/db_core_model_modx_modx.class.html#\modX::makeUrl()">тут</a>.';
+$_lang['setting_link_tag_scheme_desc'] = 'URL generation scheme for tag [[~id]]. Available options <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">here</a>.';
 
 $_lang['setting_locale'] = 'Лакаль';
-$_lang['setting_locale_desc'] = 'Усталёўвае лакаль для сістэмы. Пакіньце пустым, каб выкарыстоўваць лакаль па змаўчанні. Глядзіце <a href="http://php.net/setlocale" target="_blank">дакументацыю PHP</a> для атрымання дадатковай інфармацыі.';
+$_lang['setting_locale_desc'] = 'Set the locale for the system. Leave blank to use the default. See <a href="https://www.php.net/setlocale" target="_blank">the PHP documentation</a> for more information.';
 
 $_lang['setting_lock_ttl'] = 'Працягласць блакавання';
 $_lang['setting_lock_ttl_desc'] = 'Колькасць секунд, на працягу якой рэсурс будзе заставацца блакаванным, калі карыстальнік неактыўны.';
@@ -506,6 +506,9 @@ $_lang['setting_new_file_permissions_desc'] = 'Падчас запампоўкі
 $_lang['setting_new_folder_permissions'] = 'Правы на новыя каталогі';
 $_lang['setting_new_folder_permissions_desc'] = 'Падчас стварэння новага каталога праз файлавы агляднік будзе праведзена спроба ўсталяваць правы доступу да гэтага каталога ў адпаведнасці з гэтай наладай. Можа не працаваць на некаторых серверах, напрыклад IIS. У гэтым выпадку вам варта самастойна ўсталяваць правы.';
 
+$_lang['setting_package_installer_at_top'] = 'Pin Package-Installer at top';
+$_lang['setting_package_installer_at_top_desc'] = 'If enabled, the Installer entry will be pinned to the top of the Extras menu. Otherwise it will be positioned according to its menuindex.';
+
 $_lang['setting_parser_recurse_uncacheable'] = 'Адкладзены некэшыруемы парсінг';
 $_lang['setting_parser_recurse_uncacheable_desc'] = 'Калі адключана, некэшыруемыя элементы могуць мець свой кэшаваны вывад у змесце кэшаваных элементаў. Адключайце ТОЛЬКІ калі ў вас ёсць праблемы са складаным глыбокім парсінгам, які перастаў працаваць належным чынам.';
 
@@ -617,6 +620,12 @@ $_lang['setting_rb_base_dir_err_invalid'] = 'Каранёвы каталог д�
 $_lang['setting_rb_base_url'] = 'URL рэсурсаў (састарэла)';
 $_lang['setting_rb_base_url_desc'] = 'Увядзіце віртуальны шлях да каталога рэсурсаў. Звычайна гэтая налада ўсталёўваецца аўтаматычна. Аднак, калі вы карыстаецеся IIS, MODX можа быць не здольны зрабіць гэтага, што прывядзе да памылак. У гэтым выпадку, вы можаце ўвесці тут URL да каталога з малюнкамі (такі URL, які вы б увялі праз Internet Explorer).';
 $_lang['setting_rb_base_url_err'] = 'Калі ласка, пазначце базавы URL дыспетчара файлаў.';
+
+$_lang['setting_quick_search_in_content'] = 'Allow search in content';
+$_lang['setting_quick_search_in_content_desc'] = 'If \'Yes\', then the content of the element (resource, template, chunk, etc.) will also be available for quick search.';
+
+$_lang['setting_quick_search_result_max'] = 'Number of items in search result';
+$_lang['setting_quick_search_result_max_desc'] = 'Maximum number of elements for each type (resource, template, chunk, etc.) in the quick search result.';
 
 $_lang['setting_request_controller'] = 'Назва файла кантролера запыту';
 $_lang['setting_request_controller_desc'] = 'Назва файла асноўнага кантролера запыту, праз які загружаецца MODX. Большасць карыстальнікаў можа пакінуць значэнне "index.php".';
@@ -767,6 +776,9 @@ $_lang['setting_syncsite_default_err'] = 'Калі ласка, пазначце,
 $_lang['setting_topmenu_show_descriptions'] = 'Паказваць апісанні пунктаў у верхнім меню';
 $_lang['setting_topmenu_show_descriptions_desc'] = 'Калі ўсталявана значэнне «Не», MODX схавае дадатковае апісанне для пунктаў верхняга меню.';
 
+$_lang['setting_topmenu_subitems_max'] = 'Maximum items in the drop-down lists of the top menu bar';
+$_lang['setting_topmenu_subitems_max_desc'] = 'The maximum number of items displayed in the drop-down lists of the top menu bar. The remaining items will be hidden in the \'...\' item.';
+
 $_lang['setting_tree_default_sort'] = 'Поле сартавання дрэва рэсурсаў па змаўчанні';
 $_lang['setting_tree_default_sort_desc'] = 'Поле, па якім сартуецца дрэва рэсурсаў пры загрузцы ў сістэме кіравання.';
 
@@ -876,3 +888,6 @@ $_lang['setting_error_log_filename_desc'] = 'Пазначце імя файла 
 
 $_lang['setting_error_log_filepath'] = 'Месцазнаходжанне лога памылак';
 $_lang['setting_error_log_filepath_desc'] = 'Па жаданні можна пазначыць абсалютны шлях да карыстацкага лога памылак. Вы можаце выкарыстоўваць запаўняльнікі падобныя да {cache_path}.';
+
+$_lang['static_elements_html_extension'] = 'Static elements html extension';
+$_lang['static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TV Widget English lexicon topic
  *
@@ -6,6 +7,7 @@
  * @package modx
  * @subpackage lexicon
  */
+
 $_lang['attributes'] = 'Attributs';
 $_lang['capitalize'] = 'Majuscules';
 $_lang['checkbox'] = 'Case à cocher';
@@ -25,6 +27,8 @@ $_lang['combo_listwidth'] = 'Largeur de liste';
 $_lang['combo_listwidth_desc'] = 'Largeur, en pixels, de la liste déroulante. Par défaut, taille de la combobox.';
 $_lang['combo_maxheight'] = 'Hauteur maximale';
 $_lang['combo_maxheight_desc'] = 'Hauteur maximale, en pixels, de la liste déroulante avant que les ascenseurs ne soient affichées (300px par défaut).';
+$_lang['combo_preserve_selectionorder'] = 'Conserver l\'ordre d\'entrée';
+$_lang['combo_preserve_selectionorder_desc'] = 'When set to Yes, saved items display in the order they were originally selected. Otherwise, items follow the order defined in the list options. (Default: Yes)';
 $_lang['combo_stackitems'] = 'Empiler les éléments sélectionnés';
 $_lang['combo_stackitems_desc'] = 'Les éléments sont empilés (1 par ligne). Non par défaut, ce qui affiche les éléments en ligne.';
 $_lang['combo_title'] = 'Entête de liste';
@@ -87,6 +91,8 @@ $_lang['number_allowdecimals'] = 'Autoriser les nombres décimaux';
 $_lang['number_allownegative'] = 'Autoriser les nombres négatifs';
 $_lang['number_decimalprecision'] = 'Nombre de décimales';
 $_lang['number_decimalprecision_desc'] = 'Nombre maximum de décimales à afficher après le séparateur décimal (2 par défaut).';
+$_lang['number_strict_decimalprecision'] = 'Précision décimale stricte';
+$_lang['number_strict_decimalprecision_desc'] = 'When set to “Yes,” preserves trailing zeros in decimal numbers (defaults to “No”).';
 $_lang['number_decimalseparator'] = 'Séparateur décimal';
 $_lang['number_decimalseparator_desc'] = 'Caractère(s) autorisé(s) en tant que séparateur de décimale ("." par défaut)';
 $_lang['number_maxvalue'] = 'Valeur maximale';

@@ -74,6 +74,8 @@ class modSmarty extends SmartyBC {
 
         $this->_blocks = array();
         $this->_derived = null;
+
+        $this->muteExpectedErrors();
     }
 
     /**
@@ -89,7 +91,7 @@ class modSmarty extends SmartyBC {
             $this->modx->getCacheManager();
             $this->modx->cacheManager->writeTree($path);
         }
-        $this->compile_dir = $path;
+        $this->setCompileDir($path);
     }
 
     /**

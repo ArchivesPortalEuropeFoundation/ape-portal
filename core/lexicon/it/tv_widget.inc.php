@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TV Widget English lexicon topic
  *
@@ -6,9 +7,10 @@
  * @package modx
  * @subpackage lexicon
  */
+
 $_lang['attributes'] = 'Attributi';
 $_lang['capitalize'] = 'Tutte Maiuscole';
-$_lang['checkbox'] = 'Check Box';
+$_lang['checkbox'] = 'Spunta Casella';
 $_lang['checkbox_columns'] = 'Colonne';
 $_lang['checkbox_columns_desc'] = 'Il numero di colonne in cui vengono visualizzati i checkboxes.';
 $_lang['class'] = 'Classe';
@@ -16,7 +18,7 @@ $_lang['combo_allowaddnewdata'] = 'Consenti Aggiunta Nuovi Elementi';
 $_lang['combo_allowaddnewdata_desc'] = 'Se abilitato, consente che siano aggiunti elementi, non ancora presenti nella lista. Defaults è No.';
 $_lang['combo_forceselection'] = 'Forza Selezione dalla Lista';
 $_lang['combo_forceselection_desc'] = 'Usando l\'auto-completamento, se questo parametro è impostato su Si, viene consentito soltanto l\'inserimento di elementi della lista.';
-$_lang['combo_forceselection_multi_desc'] = 'If this is set to Yes, only items already in the list are allowed. If No, new values can be entered a well.';
+$_lang['combo_forceselection_multi_desc'] = 'Se questo è impostato a Sì, solo gli elementi già nell\'elenco sono consentiti. Se No, sono inseribili anche i nuovi valori.';
 $_lang['combo_listempty_text'] = 'Testo Elemento Lista Vuoto';
 $_lang['combo_listempty_text_desc'] = 'Se l\'auto-completamento è abilitato, e l\'utente digita un valore non in lista, mostra questo testo.';
 $_lang['combo_listheight'] = 'Altezza Lista';
@@ -25,6 +27,8 @@ $_lang['combo_listwidth'] = 'Larghezza Lista';
 $_lang['combo_listwidth_desc'] = 'La larghezza, in pixels, della stessa lista dropdown. Di defaults è la stessa larghezza della combobox.';
 $_lang['combo_maxheight'] = 'Massima Altezza';
 $_lang['combo_maxheight_desc'] = 'L\'altezza massima in pixels della lista dropdown prima che vengano mostrate le scrollbars (defaults è 300).';
+$_lang['combo_preserve_selectionorder'] = 'Preserve Entry Order';
+$_lang['combo_preserve_selectionorder_desc'] = 'When set to Yes, saved items display in the order they were originally selected. Otherwise, items follow the order defined in the list options. (Default: Yes)';
 $_lang['combo_stackitems'] = 'Incolonna Oggetti Selezionati';
 $_lang['combo_stackitems_desc'] = 'Quando impostato su "SI", gli oggetti vengono mostrati 1 per linea. Di defaults il valore è "NO" e vengono mostrati tutti gli oggetti inline.';
 $_lang['combo_title'] = 'Testata Lista';
@@ -36,7 +40,7 @@ $_lang['combo_typeahead_delay_desc'] = 'La durata in millisecondi del tempo che 
 $_lang['date'] = 'Data';
 $_lang['date_format'] = 'Formato Data';
 $_lang['date_use_current'] = 'Se non presente, usa la data corrente';
-$_lang['default'] = 'Default';
+$_lang['default'] = 'Predefinito';
 $_lang['delim'] = 'Delimitatore';
 $_lang['delimiter'] = 'Delimitatore';
 $_lang['disabled_dates'] = 'Date disabilitate';
@@ -60,8 +64,8 @@ $_lang['email'] = 'E-mail';
 $_lang['file'] = 'File';
 $_lang['height'] = 'Altezza';
 $_lang['hidden'] = 'Nascosto';
-$_lang['htmlarea'] = 'HTML Area';
-$_lang['htmltag'] = 'HTML Tag';
+$_lang['htmlarea'] = 'Area HTML';
+$_lang['htmltag'] = 'Tag HTML';
 $_lang['image'] = 'Immagine';
 $_lang['image_align'] = 'Allineamento';
 $_lang['image_align_list'] = '(Nessuno)none,(base)baseline,(alto)top,(metà)middle,(basso)bottom,(testoalto)texttop,absmiddle,absbottom,(sin)left,(des)right';
@@ -79,14 +83,16 @@ $_lang['list-multiple-legacy'] = 'Liste multiple Legacy';
 $_lang['lower_case'] = 'Minuscolo';
 $_lang['max_length'] = 'Massima Lunghezza';
 $_lang['min_length'] = 'Minima Lunghezza';
-$_lang['regex_text'] = 'Regular Expression Error';
-$_lang['regex'] = 'Regular Expression Validator';
+$_lang['regex_text'] = 'Errore dell\'Espressione Regolare';
+$_lang['regex'] = 'Convalidatore dell\'Espressione Regolare';
 $_lang['name'] = 'Nome';
 $_lang['number'] = 'Numero';
 $_lang['number_allowdecimals'] = 'Consenti Decimali';
 $_lang['number_allownegative'] = 'Consenti Negativi';
 $_lang['number_decimalprecision'] = 'Precisione Decimali';
 $_lang['number_decimalprecision_desc'] = 'La massima precisione da mostrare dopo il separatore dei decimali (defaults è 2).';
+$_lang['number_strict_decimalprecision'] = 'Precisione Decimale rigorosa';
+$_lang['number_strict_decimalprecision_desc'] = 'Quando impostato a “Sì,” conserva gli zeri finali in numeri decimali (valori predefiniti a “No”).';
 $_lang['number_decimalseparator'] = 'Separatore Decimali';
 $_lang['number_decimalseparator_desc'] = 'Carattere(i) da consentire come separatore dei decimali (defaults è ".")';
 $_lang['number_maxvalue'] = 'Valore Massimo';
@@ -121,16 +127,16 @@ $_lang['start_day_desc'] = 'Indice del giorno da cui dovrebbe cominciare la sett
 $_lang['string'] = 'Stringa';
 $_lang['string_format'] = 'Formato Stringa';
 $_lang['style'] = 'Stile';
-$_lang['tag_id'] = 'Tag ID';
+$_lang['tag_id'] = 'ID Tag';
 $_lang['tag_name'] = 'Nome Tag';
-$_lang['target'] = 'Target';
+$_lang['target'] = 'Obiettivo';
 $_lang['text'] = 'Testo';
 $_lang['textarea'] = 'Area di testo (Textarea)';
 $_lang['textareamini'] = 'Mini Area Testo(Mini TextArea)';
 $_lang['textbox'] = 'Box Testo';
 $_lang['time_increment'] = 'Incremento Orario';
 $_lang['time_increment_desc'] = 'Il numero di minuti fra ogni valore temporale della lista (defaults è 15).';
-$_lang['hide_time'] = 'Hide time option for user';
+$_lang['hide_time'] = 'Nascondi l\'opzione temporale per l\'utente';
 $_lang['title'] = 'Titolo';
 $_lang['upper_case'] = 'Maiuscolo';
 $_lang['url'] = 'URL';

@@ -22,7 +22,7 @@ $_lang['area_phpthumb'] = 'phpThumb';
 $_lang['area_proxy'] = 'Proxy';
 $_lang['area_session'] = 'Session och cookie';
 $_lang['area_static_elements'] = 'Statiska element';
-$_lang['area_static_resources'] = 'Static Resources';
+$_lang['area_static_resources'] = 'Statisk resurs';
 $_lang['area_lexicon_string'] = 'Områdets lexikonpost';
 $_lang['area_lexicon_string_msg'] = 'Ange lexikonpostens nyckel för området här. Om det inte finns någon lexikonpost så kommer bara områdesnyckeln att visas.<br />Kärnområden: authentication, caching, file, furls, gateway, language, manager, session, site, system';
 $_lang['area_site'] = 'Webbplats';
@@ -371,10 +371,10 @@ $_lang['setting_inline_help'] = 'Visa hjälptexter för fält inline';
 $_lang['setting_inline_help_desc'] = 'Om denna sätts till "Ja" kommer hjälptexten för fält att visas direkt nedanför fältet. Om den sätts till "Nej" kommer alla fält att visa hjälptexten som verktygstips.';
 
 $_lang['setting_link_tag_scheme'] = 'Schema för att skapa URL';
-$_lang['setting_link_tag_scheme_desc'] = 'Schema för URL-skapande för taggen [[~id]]. Tillgängliga alternativ <a href="http://api.modx.com/revolution/2.2/db_core_model_modx_modx.class.html#\modX::makeUrl()">här</a>.';
+$_lang['setting_link_tag_scheme_desc'] = 'Schema för URL-skapande för taggen [[~id]]. Tillgängliga alternativ finns <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">här</a>.';
 
 $_lang['setting_locale'] = 'Systemspråk';
-$_lang['setting_locale_desc'] = 'Anger språket (locale) för systemet. Lämna fältet tomt för att använda standardinställningen. Se <a href="http://php.net/setlocale" target="_blank">PHP-dokumentationen</a> för mer information.';
+$_lang['setting_locale_desc'] = 'Anger språket (locale) för systemet. Lämna fältet tomt för att använda standardinställningen. Se <a href="https://php.net/setlocale" target="_blank">PHP-dokumentationen</a> för mer information.';
 
 $_lang['setting_lock_ttl'] = 'Livstid för lås';
 $_lang['setting_lock_ttl_desc'] = 'Det antal sekunder som ett lås på en resurs kommer att vara kvar om användaren är inaktiv.';
@@ -416,7 +416,7 @@ $_lang['setting_mail_smtp_port'] = 'SMTP-port';
 $_lang['setting_mail_smtp_port_desc'] = 'Anger SMTP-serverns standardport.';
 
 $_lang['setting_mail_smtp_prefix'] = 'SMTP-kryptering';
-$_lang['setting_mail_smtp_prefix_desc'] = 'Krypteringen av SMTP-anslutningen. Alternativen är "", "ssl" eller "tls"';
+$_lang['setting_mail_smtp_prefix_desc'] = 'Krypteringen av SMTP-anslutningen. Alternativen är "", "ssl" eller "tls".';
 
 $_lang['setting_mail_smtp_autotls'] = 'SMTP Auto TLS';
 $_lang['setting_mail_smtp_autotls_desc'] = 'Anger om TLS-kryptering ska aktiveras automatiskt om en server stödjer det även om "SMTP-kryptering" inte är satt till "tls".';
@@ -504,6 +504,9 @@ $_lang['setting_new_file_permissions_desc'] = 'När en ny fil laddas upp med Fil
 
 $_lang['setting_new_folder_permissions'] = 'Behörigheter för nya kataloger';
 $_lang['setting_new_folder_permissions_desc'] = 'När en ny katalog skapas i Filhanteraren, kommer Filhanteraren att försöka ändra katalogbehörigheterna till dom som anges i denna inställning. Det här kanske inte fungerar på alla system, tex IIS, i vilket fall du blir tvungen att ändra behörigheterna manuellt.';
+
+$_lang['setting_package_installer_at_top'] = 'Fäst installeraren överst';
+$_lang['setting_package_installer_at_top_desc'] = 'Om den här aktiveras så kommer installeraren att fästas högst upp i komponentmenyn. Annars kommer den att placeras enligt sitt menyindex.';
 
 $_lang['setting_parser_recurse_uncacheable'] = 'Fördröj o-cachebar tolkning';
 $_lang['setting_parser_recurse_uncacheable_desc'] = 'Om den här inaktiveras kan o-cachebara element bli cachade inuti cachebara element. Inaktivera BARA om du har problem med komplex kapslad tolkning som slutat fungera som förväntat.';
@@ -617,6 +620,12 @@ $_lang['setting_rb_base_url'] = 'Resursens adress';
 $_lang['setting_rb_base_url_desc'] = 'Ange den virtuella sökvägen till resurskatalogen. Den här inställningen görs vanligen automatiskt, men om du använder IIS är det möjligt att MODX inte kan räkna ut adressen på egen hand, vilket orsakar ett felmeddelande i resursläsaren. I så fall kan du skriva in adressen till bildkatalogen här (adressen som du skulle skriva den i Internet Explorer).';
 $_lang['setting_rb_base_url_err'] = 'Ange resursläsarens bas-URL.';
 
+$_lang['setting_quick_search_in_content'] = 'Tillåt sökningar i innehåll';
+$_lang['setting_quick_search_in_content_desc'] = 'Om den här sätts till "Ja" så kommer även innehåll i element (resurser, mallar, chunks etc) att vara tillgängligt vid snabbsökning.';
+
+$_lang['setting_quick_search_result_max'] = 'Antal träffar i sökresultat';
+$_lang['setting_quick_search_result_max_desc'] = 'Maximalt antal träffar för varje typ (resurs, mall, chunk etc) i snabbsökresultat.';
+
 $_lang['setting_request_controller'] = 'Anropscontrollerns filnamn';
 $_lang['setting_request_controller_desc'] = 'Filnamnet på den huvudsakliga anropscontrollern från vilken MODX laddas. De flesta användare kan låta denna vara index.php.';
 
@@ -672,8 +681,8 @@ $_lang['setting_session_cookie_secure_desc'] = 'Aktivera denna inställning för
 $_lang['setting_session_cookie_httponly'] = 'HttpOnly för sessions-cookie';
 $_lang['setting_session_cookie_httponly_desc'] = 'Använd den här inställningen för att ange flaggan HttpOnly för sessions-cookies.';
 
-$_lang['setting_session_cookie_samesite'] = 'Session Cookie Samesite';
-$_lang['setting_session_cookie_samesite_desc'] = 'Choose Lax or Strict.';
+$_lang['setting_session_cookie_samesite'] = 'Sessionscookien Samesite';
+$_lang['setting_session_cookie_samesite_desc'] = 'Välj Lax eller Strict.';
 
 $_lang['setting_session_gc_maxlifetime'] = 'Maximal livslängd för sessionens sophämtning';
 $_lang['setting_session_gc_maxlifetime_desc'] = 'Tillåter anpassning av PHP:s ini-inställning session.gc_maxlifetime när "modSessionHandler" används.';
@@ -746,11 +755,11 @@ $_lang['setting_static_elements_default_category_desc'] = 'Ange en standardkateg
 $_lang['setting_static_elements_basepath'] = 'Bassökväg för statiska element';
 $_lang['setting_static_elements_basepath_desc'] = 'Bassökvägen där statiska elements filer ska sparas.';
 
-$_lang['setting_resource_static_allow_absolute'] = 'Allow absolute static resource path';
-$_lang['setting_resource_static_allow_absolute_desc'] = 'This setting enables users to enter a fully qualified absolute path to any readable file on the server as the content of a static resource. Important: enabling this setting may be considered a significant security risk! It\'s strongly recommended to keep this setting disabled, unless you fully trust every single manager user.';
+$_lang['setting_resource_static_allow_absolute'] = 'Tillåt absolut sökväg till statisk resurs';
+$_lang['setting_resource_static_allow_absolute_desc'] = 'Denna inställning gör det möjligt för användare att ange en fullt kvalificerad absolut sökväg till en läsbar fil på servern som innehållet i en statisk resurs. Observera: aktivering av denna inställning kan anses vara en betydande säkerhetsrisk! Det rekommenderas starkt att hålla den här inställningen inaktiverad, såvida du inte helt litar på varje enskild användare av hanteraren.';
 
-$_lang['setting_resource_static_path'] = 'Static resource base path';
-$_lang['setting_resource_static_path_desc'] = 'When resource_static_allow_absolute is disabled, static resources are restricted to be within the absolute path provided here.  Important: setting this too wide may allow users to read files they shouldn\'t! It is strongly recommended to limit users to a specific directory such as {core_path}static/ or {assets_path} with this setting.';
+$_lang['setting_resource_static_path'] = 'Sökväg till statisk resurs';
+$_lang['setting_resource_static_path_desc'] = 'När resource_static_allow_absolute är inaktiverad begränsas statiska resurser till att vara inom den absoluta sökvägen här. Observera: om denna inställning sätts för brett kan den tillåta användare att läsa filer som de inte borde kunna läsa! Det rekommenderas starkt att begränsa användare till en specifik katalog som {core_path}static/ eller {assets_path} med denna inställning.';
 
 $_lang['setting_strip_image_paths'] = 'Skriv om sökvägar till resurser?';
 $_lang['setting_strip_image_paths_desc'] = 'Om denna inställning sätts till "Nej", så kommer MODX att skriva sökvägarna till resurser i filhanteraren (bilder, filer, flash etc.) som absoluta URL:er. Relativa URL:er är användbara om du ska flytta din MODX-installation, tex från en testserver till en produktionsserver. Om du inte har någon aning om vad det här betyder, så är det bäst att lämna inställningen satt till "Ja".';
@@ -764,6 +773,9 @@ $_lang['setting_syncsite_default_err'] = 'Ange om du vill tömma cachen efter at
 
 $_lang['setting_topmenu_show_descriptions'] = 'Visa beskrivningar i toppmenyn';
 $_lang['setting_topmenu_show_descriptions_desc'] = 'Om denna sätts till "Nej" kommer MODX att dölja beskrivningarna för menyposter i hanterarens toppmeny.';
+
+$_lang['setting_topmenu_subitems_max'] = 'Maximalt antal poster i hanterarens huvudmenyer';
+$_lang['setting_topmenu_subitems_max_desc'] = 'Det maximala antalet poster som visas i hanterarens huvudmenyer. Återstående poster döljs under posten "...".';
 
 $_lang['setting_tree_default_sort'] = 'Standardfält för sortering av resursträdet';
 $_lang['setting_tree_default_sort_desc'] = 'Det resursfält som används som standard för sortering av resursträdet när hanteraren laddas.';
@@ -874,3 +886,6 @@ $_lang['setting_error_log_filename_desc'] = 'Anpassa filnamnet för MODX fellogg
 
 $_lang['setting_error_log_filepath'] = 'Felloggens sökväg';
 $_lang['setting_error_log_filepath_desc'] = 'Du kan ange en absolut sökväg till en anpassad plats för felloggen. Platshållare som {cache_path} kan användas.';
+
+$_lang['static_elements_html_extension'] = 'HTML-tillägg för statiska element';
+$_lang['static_elements_html_extension_desc'] = 'Tillägget för filer som används av statiska element med HTML-innehåll.';

@@ -254,8 +254,7 @@ abstract class modDashboardWidgetInterface {
             $widgetArray['content'] = $output;
             $widgetArray['class'] = $this->cssBlockClass;
             $output = $this->getFileChunk('dashboard/block.tpl',$widgetArray);
-            $output = preg_replace('@\[\[(.[^\[\[]*?)\]\]@si','',$output);
-            $output = preg_replace('@\[\[(.[^\[\[]*?)\]\]@si','',$output);
+            $output = preg_replace('/\[\[([^\[\]]++|(?R))*?]]/s','',$output);
         }
         return $output;
     }
@@ -318,7 +317,15 @@ abstract class modDashboardWidgetInterface {
     public function renderAsSnippet($content = '') {
         if (empty($content)) $content = $this->widget->get('content');
         $content = str_replace(array('<?php','?>'),'',$content);
-        $closure = create_function('$scriptProperties','global $modx;if (is_array($scriptProperties)) {extract($scriptProperties, EXTR_SKIP);}'.$content);
+        $closure = function ($scriptProperties) use ($content) {
+            global $modx;
+            if (is_array($scriptProperties)) {
+                extract($scriptProperties, EXTR_SKIP);
+            }
+
+            return eval($content);
+        };
+
         return $closure(array(
             'controller' => $this->controller,
         ));

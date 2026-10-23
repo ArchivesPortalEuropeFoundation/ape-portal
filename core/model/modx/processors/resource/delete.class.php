@@ -58,7 +58,7 @@ class modResourceDeleteProcessor extends modProcessor {
         $map = [
             'modWebLink' => 'delete_weblink',
             'modSymLink' => 'delete_symlink',
-            'modStaticResource' => 'delete_resource',
+            'modStaticResource' => 'delete_static_resource',
         ];
         if (array_key_exists($classKey, $map)) {
             $permissions[] = $map[$classKey];
@@ -256,12 +256,15 @@ class modResourceDeleteProcessor extends modProcessor {
      * @return void
      */
     public function clearCache() {
-        $this->modx->cacheManager->refresh(array(
-            'db' => array(),
-            'auto_publish' => array('contexts' => array($this->resource->get('context_key'))),
-            'context_settings' => array('contexts' => array($this->resource->get('context_key'))),
-            'resource' => array('contexts' => array($this->resource->get('context_key'))),
-        ));
+	$clear = $this->getProperty('syncsite',$this->modx->getOption('syncsite_default')) || $this->getProperty('clearCache',false);
+        if ($clear) {
+            $this->modx->cacheManager->refresh(array(
+                'db' => array(),
+                'auto_publish' => array('contexts' => array($this->resource->get('context_key'))),
+                'context_settings' => array('contexts' => array($this->resource->get('context_key'))),
+                'resource' => array('contexts' => array($this->resource->get('context_key'))),
+            ));
+        }
     }
 
     /**

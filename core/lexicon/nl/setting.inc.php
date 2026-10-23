@@ -371,10 +371,10 @@ $_lang['setting_inline_help'] = 'Toon inline Help tekst voor velden';
 $_lang['setting_inline_help_desc'] = 'Indien \'Ja\', dan zullen velden hun help tekst direct onder het veld getoond worden. Indien \'Nee\', alle velden krijgen tooltip gebaseerde help.';
 
 $_lang['setting_link_tag_scheme'] = 'URL Generator Schema';
-$_lang['setting_link_tag_scheme_desc'] = 'URL generator schema voor tag . Beschikbare opties: <a href="http://api.modxcms.com/modx/modX.html#makeUrl">http://api.modxcms.com/modx/modX.html#makeUrl</a>';
+$_lang['setting_link_tag_scheme_desc'] = 'URL generation scheme for tag [[~id]]. Available options <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">here</a>.';
 
 $_lang['setting_locale'] = 'Locale';
-$_lang['setting_locale_desc'] = 'Stel de locale in voor het systeem. Laat leeg om de standaard te gebruiken. Zie <a href="http://php.net/setlocale" target="_blank">de PHP documentatie</a> voor meer info.';
+$_lang['setting_locale_desc'] = 'Set the locale for the system. Leave blank to use the default. See <a href="https://www.php.net/setlocale" target="_blank">the PHP documentation</a> for more information.';
 
 $_lang['setting_lock_ttl'] = 'Vergrendel Time-to-Live';
 $_lang['setting_lock_ttl_desc'] = 'Het aantal seconden dat de Resource vergrendeld blijft zodra de gebruiker inactief is.';
@@ -505,6 +505,9 @@ $_lang['setting_new_file_permissions_desc'] = 'Wanneer een nieuw bestand geuploa
 $_lang['setting_new_folder_permissions'] = 'Nieuwe maprechten';
 $_lang['setting_new_folder_permissions_desc'] = 'Wanneer een nieuwe map toegeoegd wordt in de bestandsmanager, zal de bestandsmanager proberen de rechten van de map te veranderen naar deze instelling. Dit werkt niet op alle omgevingen, zoals IIS. In dat geval moet je zelf handmatig de rechten aanpassen.';
 
+$_lang['setting_package_installer_at_top'] = 'Pin Package-Installer at top';
+$_lang['setting_package_installer_at_top_desc'] = 'If enabled, the Installer entry will be pinned to the top of the Extras menu. Otherwise it will be positioned according to its menuindex.';
+
 $_lang['setting_parser_recurse_uncacheable'] = 'Vertraagd Uncacheable Tags Parsen';
 $_lang['setting_parser_recurse_uncacheable_desc'] = 'Mocht je problemen ondervinden met complexe geneste tags, dan kan deze instelling uitgeschakeld worden. In dat geval kan het resultaat van een uncacheable element gecached worden binnen de context van een cacheable element. ';
 
@@ -616,6 +619,12 @@ $_lang['setting_rb_base_dir_err_invalid'] = 'Dit document bestaat niet of kan ni
 $_lang['setting_rb_base_url'] = 'Document URL';
 $_lang['setting_rb_base_url_desc'] = 'Vul een virtueel pad in naar de documentmap. Deze instelling wordt normaal gesproken automatisch gegenereerd. Echter als je IIS gebruikt zal MODX niet in staat zijn het pad goed te genereren, dit veroorzaakt problemen met de document browser. In dat geval, kun je een URL naar de afbeeldingen map hier instellen (zoals je die ziet in Internet Explorer).';
 $_lang['setting_rb_base_url_err'] = 'Vul een document browser basis URL in.';
+
+$_lang['setting_quick_search_in_content'] = 'Allow search in content';
+$_lang['setting_quick_search_in_content_desc'] = 'If \'Yes\', then the content of the element (resource, template, chunk, etc.) will also be available for quick search.';
+
+$_lang['setting_quick_search_result_max'] = 'Number of items in search result';
+$_lang['setting_quick_search_result_max_desc'] = 'Maximum number of elements for each type (resource, template, chunk, etc.) in the quick search result.';
 
 $_lang['setting_request_controller'] = 'Request controller bestandsnaam';
 $_lang['setting_request_controller_desc'] = 'De bestandsnaam van de hoofd request controller vanwaar MODX geladen is. De meeste gebruikers kunnen dit laten staan op index.php.';
@@ -765,6 +774,9 @@ $_lang['setting_syncsite_default_err'] = 'Geef aan of je wel of niet wilt dat de
 $_lang['setting_topmenu_show_descriptions'] = 'Toon omschrijvingen in het topmenu';
 $_lang['setting_topmenu_show_descriptions_desc'] = 'Als op \'No\' ingesteld is, MODX zal de omschrijvingen verbergen in het menu bovenin de manager.';
 
+$_lang['setting_topmenu_subitems_max'] = 'Maximum items in the drop-down lists of the top menu bar';
+$_lang['setting_topmenu_subitems_max_desc'] = 'The maximum number of items displayed in the drop-down lists of the top menu bar. The remaining items will be hidden in the \'...\' item.';
+
 $_lang['setting_tree_default_sort'] = 'Document structuur standaard sorteerveld';
 $_lang['setting_tree_default_sort_desc'] = 'Het standaard sorteerveld voor de document structuur wanneer de manager geladen wordt.';
 
@@ -874,3 +886,6 @@ $_lang['setting_error_log_filename_desc'] = 'Customize the filename of the MODX 
 
 $_lang['setting_error_log_filepath'] = 'Error log path';
 $_lang['setting_error_log_filepath_desc'] = 'Optionally set a absolute path the a custom error log location. You might use placehodlers like {cache_path}.';
+
+$_lang['static_elements_html_extension'] = 'Static elements html extension';
+$_lang['static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';

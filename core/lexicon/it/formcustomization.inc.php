@@ -35,7 +35,7 @@ $_lang['filter_by_rule_type'] = 'Filtrare per Regola...';
 $_lang['filter_by_search'] = 'Cerca...';
 $_lang['for_parent'] = 'Per i Genitori';
 $_lang['for_parent_desc'] = 'Selezionare se si vuole applicare la Regola al Genitore. Utilizzare solo con le Risorse o gli oggetti con un \'padre\' campo. Utile per la pagina "crea" delle risorse.';
-$_lang['form_customization_msg'] = 'Questa è una lista delle regole attualmente applicate. Maggiori informazioni sulle regole e sulla Personalizzazione delle Form si possono trovare <a href="http://rtfm.modx.com/display/revolution20/Customizing+the+Manager" target="_blank">qui</a>.<br/> Le regole disattivate sono mostrate in grigio chiaro.<br/><br/><br/>ATTENZIONE! Un uso errato delle regole potrebbe causare problemi nel funzionamento di MODX Revolution.';
+$_lang['form_customization_msg'] = 'Ecco un elenco di regole attualmente applicate. Ulteriori informazioni sulle regole e la personalizzazione dei moduli possono essere trovate <a href="https://docs.modx.com/current/en/building-sites/client-proofing/form-customization" target="_blank">qui</a>. Si prega di notare che Regole improprie potrebbero causare problemi con l\'installazione di MODX Rivoluzione. Le Regole Inattive sono in grigio chiaro.';
 $_lang['form_rules'] = 'Regole Form';
 $_lang['import'] = 'Importa';
 $_lang['import_from_xml'] = 'Importa Nuovo Set da XML';

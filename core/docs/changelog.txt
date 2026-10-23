@@ -2,6 +2,86 @@
 This file shows the changes in recent releases of MODX. The most current release is usually the
 development release, and is only shown to give an idea of what's currently in the pipeline.
 
+MODX Revolution 2.8.8-pl (November 21, 2024)
+====================================
+- Fix rendering of user-entered values in editable listbox-multiple TVs (#16640)
+- Update of the search processor for content-based search (#16560)
+- Fully support comma-separated constraints in form customization (#16417)
+- Add an asterisk to label of required TVs (#16594)
+- Do not dynamically assign modProcessorResponse to modConnectorResponse (#16563)
+- Avoid modLexicon deprecation warning in PHP 8.2+ (#16589)
+
+MODX Revolution 2.8.7-pl (April 9, 2024)
+====================================
+- Update xPDO to 2.8.6-pl
+- Fix issue working with non-standard ports (#16455)
+- Trim context setting keys on creation (#16498)
+- Fix Element handling from within Categories tree (#16493)
+- Add guard-clause to clearDirty method (#16467)
+- Update Template Build Process (#16540)
+- Fix default value for modManagerLog.occurred column (#16527)
+- Fix sanity check in resource/create controller (#16477)
+- Update phpThumb to v1.7.22-202312071641 (#16506)
+- Avoid deprecation warning during setup for PHP 8.2 (#16482)
+- Fix Trash Manager infinite loading error (#16415)
+- Pin Installer entry to top of Extras menu (#14482)
+
+MODX Revolution 2.8.6-pl (September 28, 2023)
+====================================
+- Change default gravatar type for user (#16461)
+- Change weblink default to https:// (#16458)
+- Fix issue with nested menu items (#16450)
+- Fix undefined variable error in modTemplateVar (#16427)
+- Harden security/profile/get processor (#16439)
+- Fix undefined global variable $_SESSION in a CLI connector (#16425)
+- Update to phpThumb 1.7.21-202307141720 (#16456)
+- Update smarty to 3.1.48 (#16419)
+- Populate scriptProperties in Resource\Locks\Steal processor (#16418)
+
+MODX Revolution 2.8.5-pl (March 7, 2023)
+====================================
+- Prioritize exact matches in search result (#16244)
+- Modify delete and undelete processors to respect syncsite setting (#16060)
+- Update xPDO to 2.8.5-pl
+- Don't pass param by reference in feed_start_element (#16325)
+- Remove create_function from moddashboardwidget (#16290)
+- Suppress PHP8 Smarty warnings (#16301)
+- Fix 'delete_static_resource' permission (#16315)
+- Pass correct type to setlocale to prevent PHP 8 fatal error (#16312)
+- Update phpThumb v1.7.19-202210110924 (#16310)
+- Add support for WebP images in the Media Browser (#16257)
+- Only show deleted resources in trash manager if filtered (#16228)
+- Fix inability to drag/drop files and folders in tree (#16202)
+- Persist non-standard ports in site URL (#16201)
+
+MODX Revolution 2.8.4-pl (April 28, 2022)
+====================================
+- Hide resource create button in resource groups panel (#15833)
+- Fix active state for files in main tree (#15835)
+- Add zero-padding decimal place option for number TVs (#15840)
+- Make hidden TV's work for weblinks, symlinks and static resources  (#16162)
+- Skip creation of thumbnails for SVGs (#15865)
+- Fix setStaticElementPath method (#15912)
+- Ignore E_DEPRECATED and E_STRICT errors in setup (#16147)
+- Update to Smarty 3.1.44 (#16146)
+- Fix issue with special characters in media source folder names (#16071)
+- Make MessageBox minWidth configurable (#15995)
+- Update to xPDO 2.8.4-pl (#16143)
+- Fix combobox not expanding if processor response is slow (#15992)
+- Improve regex for stripping MODX tags in dashboard widgets (#15964)
+- Fix disabled trash button (#15993)
+- Improve stripmodxtags output filter (#15963)
+- Remove duplicate CURLOPT_USER settings in modRest (#15949)
+- Fix isBinary check (#15900)
+- Add configurable extension for static html files (#15722)
+- Hide user settings tab based on permissions (#15756)
+- Update phpThumb v1.7.17-202109221111 (#15816)
+- Lazy load thumbnails in media browser (#15804)
+- Update PHPMailer 6.5.1 (#15808)
+- Fix image TV display via hash (#15731)
+- New edit_media_source lexicon (#15737)
+- Fix PHP 5.6 compatibility issue on system info (#15728)
+
 MODX Revolution 2.8.3-pl (May 28, 2021)
 ====================================
 - XSS issues reported by Solar Security (#15720)

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TV Widget English lexicon topic
  *
@@ -6,6 +7,7 @@
  * @package modx
  * @subpackage lexicon
  */
+
 $_lang['attributes'] = 'Атрибути';
 $_lang['capitalize'] = 'Капіталізація';
 $_lang['checkbox'] = 'Прапорці (checkbox)';
@@ -25,6 +27,8 @@ $_lang['combo_listwidth'] = 'Ширина списку';
 $_lang['combo_listwidth_desc'] = 'Ширина самого випадаючого списку у пікселях. За замовчуванням дорівнює ширині combobox.';
 $_lang['combo_maxheight'] = 'Максимальна висота';
 $_lang['combo_maxheight_desc'] = 'Максимальна висота випадаючого списку у пікселах, до того, як буде показана прокрута (за замовчуванням 300).';
+$_lang['combo_preserve_selectionorder'] = 'Preserve Entry Order';
+$_lang['combo_preserve_selectionorder_desc'] = 'When set to Yes, saved items display in the order they were originally selected. Otherwise, items follow the order defined in the list options. (Default: Yes)';
 $_lang['combo_stackitems'] = 'Обрані значення в стовпчик';
 $_lang['combo_stackitems_desc'] = 'Якщо вибрано "Так", обрані значення розміщуватимуться один під одним. За замовчуванням - "Ні", при цьому значення розміщуються в один рядок.';
 $_lang['combo_title'] = 'Заголовок списку';
@@ -87,6 +91,8 @@ $_lang['number_allowdecimals'] = 'Дозволити десяткові';
 $_lang['number_allownegative'] = 'Дозволити від\'ємні значення';
 $_lang['number_decimalprecision'] = 'Точність';
 $_lang['number_decimalprecision_desc'] = 'Число знаків після десяткового роздільника (за замовчуванням 2).';
+$_lang['number_strict_decimalprecision'] = 'Строга десяткова точність ';
+$_lang['number_strict_decimalprecision_desc'] = 'При значенні "Так" зберігає кінцеві нулі в десяткових знаках (за замовчуванням "Ні"). ';
 $_lang['number_decimalseparator'] = 'Десятковий роздільник';
 $_lang['number_decimalseparator_desc'] = 'Символ(и), що використовуються в якості десяткового роздільника (за замовчуванням ".")';
 $_lang['number_maxvalue'] = 'Максимальне значення';

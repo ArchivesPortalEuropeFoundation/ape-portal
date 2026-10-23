@@ -33,6 +33,7 @@ class modSystemPhpThumbProcessor extends modProcessor {
             'context' => $this->getProperty('wctx')
         ));
         $this->unsetProperty('wctx');
+        $this->unsetProperty('version');
         
         return true;
     }
@@ -53,6 +54,13 @@ class modSystemPhpThumbProcessor extends modProcessor {
 
         $src = $this->source->prepareSrcForThumb($src);
         if (empty($src)) return '';
+
+        if (strtolower(pathinfo($src, PATHINFO_EXTENSION)) === 'svg') {
+            /* Skip thumbnail generation for svg and output the file directly */
+            header('Content-Type: image/svg+xml');
+            echo file_get_contents($src);
+            return '';
+        }
 
         $this->unsetProperty('t');
         $this->loadPhpThumb();

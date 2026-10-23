@@ -621,10 +621,12 @@ class modTemplateVar extends modElement {
 
                     $constraintClass = $rule->get('constraint_class');
                     if (!empty($constraintClass)) {
-                        if (!($resource instanceof $constraintClass)) continue;
+                        if (empty($resource) || !($resource instanceof $constraintClass)) continue;
                         $constraintField = $rule->get('constraint_field');
                         $constraint = $rule->get('constraint');
-                        if ($resource->get($constraintField) != $constraint) {
+                        $constraintList = explode(',', $constraint);
+                        $constraintList = array_map('trim', $constraintList);
+                        if (($resource->get($constraintField) != $constraint) && (!in_array($resource->get($constraintField), $constraintList))) {
                             continue;
                         }
                     }
@@ -990,9 +992,9 @@ class modTemplateVar extends modElement {
         $enabled = ($catEnabled || $rgEnabled);
         if ($enabled) {
             if (empty($this->_policies) || !isset($this->_policies[$context])) {
+                $policyTable = $this->xpdo->getTableName('modAccessPolicy');
                 if ($rgEnabled) {
                     $accessTable = $this->xpdo->getTableName('modAccessResourceGroup');
-                    $policyTable = $this->xpdo->getTableName('modAccessPolicy');
                     $resourceGroupTable = $this->xpdo->getTableName('modTemplateVarResourceGroup');
                     $sql = "SELECT Acl.target, Acl.principal, Acl.authority, Acl.policy, Policy.data FROM {$accessTable} Acl " .
                             "LEFT JOIN {$policyTable} Policy ON Policy.id = Acl.policy " .

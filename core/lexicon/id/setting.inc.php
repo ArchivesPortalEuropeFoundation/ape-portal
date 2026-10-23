@@ -16,7 +16,7 @@ $_lang['area_filter'] = 'Pilih berdasarkan area...';
 $_lang['area_furls'] = 'URL yang berkaitan';
 $_lang['area_gateway'] = 'Gateway';
 $_lang['area_language'] = 'Kosa kata dan bahasa';
-$_lang['area_mail'] = 'Mail';
+$_lang['area_mail'] = 'Surat';
 $_lang['area_manager'] = 'Back-end Manajer';
 $_lang['area_phpthumb'] = 'phpThumb';
 $_lang['area_proxy'] = 'Proxy';
@@ -50,7 +50,7 @@ $_lang['setting_remove'] = 'Hapus pengaturan';
 $_lang['setting_remove_confirm'] = 'Apakah Anda yakin Anda ingin menghapus pengaturan ini? Ini mungkin akan menghentikan instalasi MODX.';
 $_lang['setting_update'] = 'Perbaharui pengaturan';
 $_lang['settings_after_install'] = 'Sebagai instalasi baru, Anda diminta untuk mengendalikan pengaturan ini, dan merubah apapun yang mungkin Anda ingin. Setelah Anda telah menguasai pengaturan, tekan \'Simpan\' untuk memperbarui pengaturan database. <br /><br />';
-$_lang['settings_desc'] = 'Here you can set general preferences and configuration settings for the MODX manager interface, as well as how your MODX site runs. <b>Each setting will be available via the [[++key]] placeholder.</b><br />Double-click on the value column for the setting you\'d like to edit to dynamically edit via the grid, or right-click on a setting for more options. You can also click the "+" sign for a description of the setting.';
+$_lang['settings_desc'] = 'Di sini Anda dapat mengatur preferensi Umum dan pengaturan konfigurasi untuk pengaturan antarmuka MODX, serta bagaimana situs MODX Anda berjalan. Klik dua kali pada kolom nilai pada setelan yang ingin Anda edit secara dinamis mengedit melalui grid, atau klik kanan pada setelan untuk opsi lebih lanjut. Anda juga dapat mengklik tanda "+" untuk keterangan pengaturan.';
 $_lang['settings_furls'] = 'URL yang berkaitan';
 $_lang['settings_misc'] = 'Bermacam-macam';
 $_lang['settings_site'] = 'Situs';
@@ -97,8 +97,8 @@ $_lang['setting_allow_manager_login_forgot_password_desc'] = 'Pengaturan ini ke 
 $_lang['setting_allow_tags_in_post'] = 'Memungkinkan Tag dalam posting';
 $_lang['setting_allow_tags_in_post_desc'] = 'Jika salah, Semua POST yang bervariasi akan dicopot oleh penanda tulisan HTML, numerik entitas dan penanda MODX. MODX merekomendasikan untuk meninggalkan pengaturan ini ke salah untuk konteks lain manager, dimana diatur ke benar dengan standarnya.';
 
-$_lang['setting_allow_tv_eval'] = 'Enable eval in TV bindings';
-$_lang['setting_allow_tv_eval_desc'] = 'Select this option to enable or disable eval in TV bindings. If this option is set to no, the code/value will just be handled as regular text.';
+$_lang['setting_allow_tv_eval'] = 'Nonaktifkan eval di TV binding';
+$_lang['setting_allow_tv_eval_desc'] = 'Pilih opsi ini untuk mengaktifkan atau menonaktifkan eval dalam pengikatan TV. Jika opsi ini disetel ke no, kode / nilai hanya akan ditangani sebagai teks biasa.';
 
 $_lang['setting_anonymous_sessions'] = 'Session Anonymous';
 $_lang['setting_anonymous_sessions_desc'] = 'Jika dinonaktifkan, hanya user yang sudah login akan mendapatkan PHP session. Hal ini dapat mengurangi overhead untuk user anonymus serta mengurangi beban pada situs MODX, jika memang mereka tidak perlu memiliki session PHP yang unik. Jika nilai session_enabled "false", maka hal ini tidak akan berpengaruh karena session PHP tidak pernah dihidupkan.';
@@ -121,8 +121,8 @@ $_lang['setting_allow_multiple_emails_desc'] = 'Jika diaktifkan, pengguna dapat 
 $_lang['setting_automatic_alias'] = 'Secara otomatis menghasilkan alias';
 $_lang['setting_automatic_alias_desc'] = 'Pilih \'Ya\' untuk memiliki sistem yang secara otomatis menghasilkan alias berdasarkan judul halaman sumber daya saat menyimpan.';
 
-$_lang['setting_automatic_template_assignment'] = 'Automatic Template Assignment';
-$_lang['setting_automatic_template_assignment_desc'] = 'Choose how templates are assigned to new Resources on creation. Options include: system (default template from system settings), parent (inherits the parent template), or sibling (inherits the most used sibling template)';
+$_lang['setting_automatic_template_assignment'] = 'Penugasa Template Otomatis';
+$_lang['setting_automatic_template_assignment_desc'] = 'Pilih bagaimana template ditetapkan ke Resources baru saat pembuatan. Pilihannya meliputi: system(template default dari pengaturan sistem), parent (mewarisi template induk), atau sibling(mewarisi template sibling yang paling sering digunakan)';
 
 $_lang['setting_base_help_url'] = 'Bantuan dasar URL';
 $_lang['setting_base_help_url_desc'] = 'URL dasar yang digunakan untuk membangun link bantuan di bagian atas kanan dari halaman di manager.';
@@ -136,8 +136,8 @@ $_lang['setting_cache_action_map_desc'] = 'Bila diaktifkan, tindakan (atau peta 
 $_lang['setting_cache_alias_map'] = 'Mengaktifkan cache konteks Alias peta';
 $_lang['setting_cache_alias_map_desc'] = 'Ketika diaktifkan, Semua URI sumber daya cache ke dalam konteks. Mengaktifkan situs yang lebih kecil dan menonaktifkan pada situs yang lebih besar untuk kinerja yang lebih baik.';
 
-$_lang['setting_use_context_resource_table'] = 'Use the context resource table for context cache refreshes';
-$_lang['setting_use_context_resource_table_desc'] = 'When enabled, context cache refreshes use the context_resource table. This enables you to programmatically have one resource in multiple contexts. If you do not use those multiple resource contexts via the API, you can set this to false. On large sites you will get a potential performance boost in the manager then.';
+$_lang['setting_use_context_resource_table'] = 'Gunakan tabel resource konteks untuk merefresh cache konteks';
+$_lang['setting_use_context_resource_table_desc'] = 'Bila diaktifkan, merefresh konteks menggunakan tabel context_resource. Ini memungkinkan kamu secara programatikal memiliki satu resource dalam beberapa konteks. Jika kamu tidak menggunakan beberapa konteks resource itu melalui API, kamu dapat menyetel ini ke false. Di website besar kamu akan mendapatkan potensi peningkatan kinerja manajer saat itu.';
 
 $_lang['setting_cache_context_settings'] = 'Mengaktifkan konteks pengaturan Cache';
 $_lang['setting_cache_context_settings_desc'] = 'Bila diaktifkan, pengaturan konteks akan di-cache untuk mengurangi beban.';
@@ -371,10 +371,10 @@ $_lang['setting_inline_help'] = 'Tampilkan teks Inline bantuan untuk bidang';
 $_lang['setting_inline_help_desc'] = 'Jika \'Ya\', maka bidang akan menampilkan teks bantuan langsung di bawah bidang. Jika \'Tidak\', semua bidang akan memiliki bantuan berbasis tooltip.';
 
 $_lang['setting_link_tag_scheme'] = 'Skema penghasilan URL';
-$_lang['setting_link_tag_scheme_desc'] = 'Skema penghasilan URL untuk tag [[~ id]]. Pilihan yang tersedia <a href="http://api.modx.com/revolution/2.2/db_core_model_modx_modx.class.html#\modX::makeUrl()"> di sini</a>.';
+$_lang['setting_link_tag_scheme_desc'] = 'URL generation scheme for tag [[~id]]. Available options <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">here</a>.';
 
 $_lang['setting_locale'] = 'Lokal';
-$_lang['setting_locale_desc'] = 'Mengatur lokal untuk sistem. Biarkan kosong untuk menggunakan default. Lihat <a href="http://php.net/setlocale" target="_blank"> dokumentasi PHP</a> untuk informasi lebih lanjut.';
+$_lang['setting_locale_desc'] = 'Set the locale for the system. Leave blank to use the default. See <a href="https://www.php.net/setlocale" target="_blank">the PHP documentation</a> for more information.';
 
 $_lang['setting_lock_ttl'] = 'Mengunci waktu-to-Live';
 $_lang['setting_lock_ttl_desc'] = 'Jumlah detik kunci pada sumber daya yang akan tetap jika pengguna tidak aktif.';
@@ -409,13 +409,13 @@ $_lang['setting_mail_smtp_hosts_desc'] = 'Menetapkan SMTP host.  Semua host haru
 $_lang['setting_mail_smtp_keepalive'] = 'SMTP tetap-hidup';
 $_lang['setting_mail_smtp_keepalive_desc'] = 'Mencegah koneksi SMTP ditutup setelah setiap pengiriman e-mail. Tidak dianjurkan.';
 
-$_lang['setting_mail_smtp_pass'] = 'SMTP Password';
+$_lang['setting_mail_smtp_pass'] = 'Kata sandi SMTP';
 $_lang['setting_mail_smtp_pass_desc'] = 'Password untuk melakukan otentikasi ke SMTP melawan.';
 
 $_lang['setting_mail_smtp_port'] = 'SMTP Port';
 $_lang['setting_mail_smtp_port_desc'] = 'Menetapkan default SMTP server port.';
 
-$_lang['setting_mail_smtp_prefix'] = 'SMTP Encryption';
+$_lang['setting_mail_smtp_prefix'] = 'SMPT enkripsi';
 $_lang['setting_mail_smtp_prefix_desc'] = 'Sets the encryption of the SMTP connection. Options are "", "ssl" or "tls"';
 
 $_lang['setting_mail_smtp_autotls'] = 'SMTP Auto TLS';
@@ -504,6 +504,9 @@ $_lang['setting_new_file_permissions_desc'] = 'Ketika meng-upload file baru di F
 
 $_lang['setting_new_folder_permissions'] = 'Baru Folder Permissions';
 $_lang['setting_new_folder_permissions_desc'] = 'Ketika mengupload file baru, File Manager akan mencoba mengubah setting hak akses pada folder yang dituju. Hal ini mungkin tidak berlaku pada beberapa server, seperti IIS, karenanya Anda perlu secara manual mengubah hak akses pada folder tersebut.';
+
+$_lang['setting_package_installer_at_top'] = 'Pin Package-Installer at top';
+$_lang['setting_package_installer_at_top_desc'] = 'If enabled, the Installer entry will be pinned to the top of the Extras menu. Otherwise it will be positioned according to its menuindex.';
 
 $_lang['setting_parser_recurse_uncacheable'] = 'Delay Uncacheable Parsing';
 $_lang['setting_parser_recurse_uncacheable_desc'] = 'Jika dinonaktifkan, elemen yang tidak dapat dicache mungkin memiliki keluaran mereka dalam cache dalam konten elemen yang dapat disimpan. Nonaktifkan ini ONLY jika Anda mengalami masalah dengan parsing nested yang kompleks yang berhenti bekerja seperti yang diharapkan.';
@@ -616,6 +619,12 @@ $_lang['setting_rb_base_dir_err_invalid'] = 'Direktori sumber ini tidak ada atau
 $_lang['setting_rb_base_url'] = 'Sumber URL';
 $_lang['setting_rb_base_url_desc'] = 'Masukkan jalur virtual ke direktori sumber daya. Pengaturan ini biasanya dibuat secara otomatis. Jika Anda menggunakan IIS, MODX mungkin tidak dapat mengerjakan URL dengan sendirinya, menyebabkan Browser Sumber Daya menunjukkan kesalahan. Dalam hal ini, Anda dapat memasukkan URL ke direktori gambar di sini (URL yang akan Anda masukkan di Internet Explorer).';
 $_lang['setting_rb_base_url_err'] = 'Harap sebutkan URL dasar browser sumber daya.';
+
+$_lang['setting_quick_search_in_content'] = 'Allow search in content';
+$_lang['setting_quick_search_in_content_desc'] = 'If \'Yes\', then the content of the element (resource, template, chunk, etc.) will also be available for quick search.';
+
+$_lang['setting_quick_search_result_max'] = 'Number of items in search result';
+$_lang['setting_quick_search_result_max_desc'] = 'Maximum number of elements for each type (resource, template, chunk, etc.) in the quick search result.';
 
 $_lang['setting_request_controller'] = 'Permintaan pengaturan Filename';
 $_lang['setting_request_controller_desc'] = 'Nama file dari pengontrol permintaan utama dari mana MODX dimuat. Sebagian besar pengguna bisa meninggalkan ini sebagai index.php.';
@@ -765,6 +774,9 @@ $_lang['setting_syncsite_default_err'] = 'Tolong nyatakan apakah Anda ingin meng
 $_lang['setting_topmenu_show_descriptions'] = 'Tampilkan Deskripsi di Menu Atas';
 $_lang['setting_topmenu_show_descriptions_desc'] = 'If set to \'No\', MODX will hide the descriptions from top menu items in the manager.';
 
+$_lang['setting_topmenu_subitems_max'] = 'Maximum items in the drop-down lists of the top menu bar';
+$_lang['setting_topmenu_subitems_max_desc'] = 'The maximum number of items displayed in the drop-down lists of the top menu bar. The remaining items will be hidden in the \'...\' item.';
+
 $_lang['setting_tree_default_sort'] = 'Resource Tree Default Sort Field';
 $_lang['setting_tree_default_sort_desc'] = 'The default sort field for the Resource tree when loading the manager.';
 
@@ -874,3 +886,6 @@ $_lang['setting_error_log_filename_desc'] = 'Customize the filename of the MODX 
 
 $_lang['setting_error_log_filepath'] = 'Error log path';
 $_lang['setting_error_log_filepath_desc'] = 'Optionally set a absolute path the a custom error log location. You might use placehodlers like {cache_path}.';
+
+$_lang['static_elements_html_extension'] = 'Static elements html extension';
+$_lang['static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';

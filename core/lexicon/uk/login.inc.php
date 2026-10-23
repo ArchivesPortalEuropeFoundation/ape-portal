@@ -15,7 +15,7 @@ $_lang['login_blocked_time'] = 'Вам тимчасово заборонено �
 $_lang['login_blocked_too_many_attempts'] = 'Ви були заблоковані через велику кількість невдалих спроб аутентифікації. ';
 $_lang['login_button'] = 'Увійти';
 $_lang['login_cannot_locate_account'] = 'Не вказано ім\'я користувача або пароль. Будь ласка, перевірте введені дані і спробуйте знову. ';
-$_lang['login_copyright'] = '&copy; 2005-[[+current_year]] by <a href="http://modx.com/about/" target="_blank">MODX, LLC</a>. MODX Revolution&trade; розповсюджується за ліцензією GPLv2 або більш пізньою версією даної ліцензії.';
+$_lang['login_copyright'] = '&copy; 2005-[[+current_year]] by <a href="https://modx.com/about/" target="_blank">MODX, LLC</a>. MODX Revolution&trade; розповсюджується за ліцензією GPLv2 або більш пізньою версією.';
 $_lang['login_email_label'] = 'Електронна пошта облікового запису:';
 $_lang['login_err_unknown'] = 'При спробі аутентифікації сталася невідома помилка. ';
 $_lang['login_forget_your_login'] = 'Забули логiн користувача? ';

@@ -17,9 +17,9 @@ $_lang['database_table_datasize'] = 'Dimensione Dati';
 $_lang['database_table_droptablestatements'] = 'Genera istruzioni DROP TABLE.';
 $_lang['database_table_effectivesize'] = 'Dimensione Effettiva';
 $_lang['database_table_indexsize'] = 'Dimensione Indice';
-$_lang['database_table_overhead'] = 'Overhead';
+$_lang['database_table_overhead'] = 'Dall\'alto';
 $_lang['database_table_reserved'] = 'Riservato';//sqlsrv
-$_lang['database_table_records'] = 'Records';
+$_lang['database_table_records'] = 'Registri';
 $_lang['database_table_tablename'] = 'Nome Tabella';
 $_lang['database_table_totalsize'] = 'Dimensione Totale';
 $_lang['database_table_totals'] = 'Totali:';
@@ -44,7 +44,7 @@ $_lang['phpmailer_version'] = 'Versione <a href="https://github.com/PHPMailer/PH
 $_lang['server'] = 'Server';
 $_lang['servertime'] = 'Ora Server';
 $_lang['serveroffset'] = 'Scostamento Orario Server';
-$_lang['smarty_version'] = 'Versione <a href="http://smarty.net/" target="_blank">Smarty</a>';
+$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Versione Smarty</a>';
 $_lang['sysinfo_desc'] = 'Qui puoi vedere le informazioni generali sull\' "ambiente" in cui gira la tua versione di MODX.';
 $_lang['view_sysinfo'] = 'Informazioni Sistema';
 $_lang['table_prefix'] = 'Prefisso Tabella';

@@ -371,10 +371,10 @@ $_lang['setting_inline_help'] = 'Zobrazovat řádkové nápovědy u políček';
 $_lang['setting_inline_help_desc'] = 'Je-li nastaveno na "Ano" pak budou přímo pod políčky zobrazeny jejich nápovědné texty. Pokud je nastaveno na "Ne", budou nápovědné texty zobrazeny v tooltipech.';
 
 $_lang['setting_link_tag_scheme'] = 'Schéma generování URL';
-$_lang['setting_link_tag_scheme_desc'] = 'Schéma generování URL pro tag [[~id]]. Možné volby viz: <a href="http://api.modxcms.com/modx/modX.html#makeUrl">http://api.modxcms.com/modx/modX.html#makeUrl</a>';
+$_lang['setting_link_tag_scheme_desc'] = 'Schéma generování URL pro tag [[~id]]. Možné volby  <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">zde</a>.';
 
 $_lang['setting_locale'] = 'Locale';
-$_lang['setting_locale_desc'] = 'Nastavte locale pro vaše národní použití. Ponechte prázdné pro použití výchozí hodnoty. Více informací v <a href="http://php.net/setlocale" target="_blank">PHP dokumentaci</a>.';
+$_lang['setting_locale_desc'] = 'Nastavte locale pro systém. Ponechte prázdné pro použití výchozího nastavení. Více informací najdete v <a href="https://www.php.net/setlocale" target="_blank">PHP dokumentu</a>.';
 
 $_lang['setting_lock_ttl'] = 'Čas odstranění zámků';
 $_lang['setting_lock_ttl_desc'] = 'Počet sekund, po kterou je dokument uzamčen a uživatel v něm již nic neupravil, po jehož uplynutí bude daný zámek zrušen.';
@@ -505,6 +505,9 @@ $_lang['setting_new_file_permissions_desc'] = 'Souborům nahraným pomocí sprá
 $_lang['setting_new_folder_permissions'] = 'Atributy nové složky';
 $_lang['setting_new_folder_permissions_desc'] = 'Složkám vytvořeným ve správci souborů budou nastaveny tyto atributy. Toto nastavení nemusí fungovat na některých serverech, např. na IIS, v těchto případech budete muset nastavit atributy manuálně.';
 
+$_lang['setting_package_installer_at_top'] = 'Připnout Správce balíčků nahoru';
+$_lang['setting_package_installer_at_top_desc'] = 'Pokud je povoleno, položka Správce balíčků bude připnuta k horní části nabídky Komponent. V opačném případě bude umístěna podle menuindexu.';
+
 $_lang['setting_parser_recurse_uncacheable'] = 'Zpožděné necachované zpracování';
 $_lang['setting_parser_recurse_uncacheable_desc'] = 'Je-li zakázáno, výstup necahovatelných elementů může být cachován uvnitř cachovatelných elementů. Zakažte pouze, pokud máte problémy se zpracováním vnořených komplexní elementů, které nefungují podle očekávání.';
 
@@ -616,6 +619,12 @@ $_lang['setting_rb_base_dir_err_invalid'] = 'Tento adresář buď neexistuje neb
 $_lang['setting_rb_base_url'] = 'URL k souborům';
 $_lang['setting_rb_base_url_desc'] = 'Zadejte virtuální cestu k adresáři souborů. Toto nastavení je obvykle generováno automaticky. Používáte-li IIS, MODX není schopen zjistit automaticky tuto URL, což zapříčiňuje zobrazení chyb ve správci souborů. V tomto případě můžete zadat URL do adresáře s obrázky (stejně jako ji vkládáte do Vašeho prohlížeče).';
 $_lang['setting_rb_base_url_err'] = 'Nastavte URL pro správce souborů.';
+
+$_lang['setting_quick_search_in_content'] = 'Allow search in content';
+$_lang['setting_quick_search_in_content_desc'] = 'If \'Yes\', then the content of the element (resource, template, chunk, etc.) will also be available for quick search.';
+
+$_lang['setting_quick_search_result_max'] = 'Number of items in search result';
+$_lang['setting_quick_search_result_max_desc'] = 'Maximum number of elements for each type (resource, template, chunk, etc.) in the quick search result.';
 
 $_lang['setting_request_controller'] = 'Název souboru kontroleru požadavků';
 $_lang['setting_request_controller_desc'] = 'Název souboru hlavního kontroleru požadavků odkud se načítá MODX. Většina uživatelů by toto měla ponechat na index.php.';
@@ -765,6 +774,9 @@ $_lang['setting_syncsite_default_err'] = 'Prosím zvolte, zda chcete ve výchoz�
 $_lang['setting_topmenu_show_descriptions'] = 'Zobrazovat popisky v horním menu';
 $_lang['setting_topmenu_show_descriptions_desc'] = 'Je-li nastaveno na "Ne", MODX skryje popisky u položek horního menu v rámci správce obsahu.';
 
+$_lang['setting_topmenu_subitems_max'] = 'Maximální počet položek v rozbalovacím seznamu horního panelu hlavní navigace';
+$_lang['setting_topmenu_subitems_max_desc'] = 'Maximální počet položek zobrazených v rozbalovacích seznamech hlavní navigace. Zbývající položky budou skryty v položce \'...\'.';
+
 $_lang['setting_tree_default_sort'] = 'Výchozí řazení dokumentů ve stromu dokumentů';
 $_lang['setting_tree_default_sort_desc'] = 'Políčko, které se má použít pro výchozí řazení dokumentů v rámci stromu dokumentů.';
 
@@ -874,3 +886,6 @@ $_lang['setting_error_log_filename_desc'] = 'Přizpůsobte si název souboru pro
 
 $_lang['setting_error_log_filepath'] = 'Cesta k protokolu chyb';
 $_lang['setting_error_log_filepath_desc'] = 'Volitelně nastavit absolutní cestu umístění protokolu chyb. Můžete použít placehodery jako např. {cache_path}.';
+
+$_lang['static_elements_html_extension'] = 'Statické prvky html rozšíření';
+$_lang['static_elements_html_extension_desc'] = 'Přípona pro soubory použité statickými prvky s HTML obsahem.';
