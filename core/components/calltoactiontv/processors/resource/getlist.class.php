@@ -34,7 +34,7 @@ class callToActionTVResourceGetListProcessor extends modObjectGetListProcessor
     {
         parent::__construct($modx, $properties);
 
-        $this->charset = $this->modx->getOption('modx_charset',null, 'UTF-8');
+        $this->charset = $this->modx->getOption('modx_charset', null, 'UTF-8');
     }
 
     /**
@@ -52,19 +52,37 @@ class callToActionTVResourceGetListProcessor extends modObjectGetListProcessor
     public function process()
     {
         if ($this->getProperty('tvId')) {
-            $this->tvObject        = $this->modx->getObject('modTemplateVar', $this->getProperty('tvId'));
+            $this->tvObject = $this->modx->getObject('modTemplateVar', $this->getProperty('tvId'));
             $this->inputProperties = $this->tvObject ? $this->tvObject->get('input_properties') : [];
 
             if ($this->tvObject && !empty(trim($this->tvObject->get('elements')))) {
                 $options = [];
 
-                foreach (explode('||', $this->tvObject->processBindings($this->tvObject->get('elements'))) as $item) {
+                foreach (explode('||', $this->tvObject->processBindings($this->tvObject->get('elements'), $this->getProperty('resourceId'))) as $item) {
                     list($pagetitle, $id) = explode('==', $item);
 
                     $options[] = [
-                        'id'        => $id,
-                        'pagetitle' => $this->preparePagetitle($pagetitle)
+                        'id' => $id,
+                        'pagetitle' => $this->preparePagetitle($pagetitle),
                     ];
+                }
+
+                if (!$this->getProperty('query') || $this->getProperty('query') == '') {
+                    /* Make sure that selected resource is included in result. For instance if the resource is on second page it would only display the resource id. */
+                    $selectedResource = $this->modx->getObject('modResource', $this->getProperty('selectedResourceId'));
+                    if ($selectedResource) {
+
+                        $pagetitle = $this->preparePagetitle($selectedResource->get('pagetitle'));
+
+                        if (isset($this->inputProperties) && $this->inputProperties['display_resource_id'] === 'true') {
+                            $pagetitle .= ' (' . $selectedResource->get('id') . ')';
+                        }
+
+                        array_unshift($options, [
+                            'id' => $selectedResource->get('id'),
+                            'pagetitle' => $pagetitle,
+                        ]);
+                    }
                 }
 
                 /* Filter results if query is set. */
@@ -77,8 +95,8 @@ class callToActionTVResourceGetListProcessor extends modObjectGetListProcessor
                 }
 
                 $offset = $this->getProperty('start', 0);
-                $limit  = $this->getProperty('limit', 20);
-                $total  = count($options);
+                $limit = $this->getProperty('limit', 20);
+                $total = count($options);
 
                 $options = array_slice($options, $offset, $limit);
 
@@ -90,10 +108,10 @@ class callToActionTVResourceGetListProcessor extends modObjectGetListProcessor
     }
 
     /**
-     * @param \xPDO\Om\xPDOQuery $query
-     * @return \xPDO\Om\xPDOQuery
+     * @param xPDOQuery $query
+     * @return xPDOQuery
      */
-    public function prepareQueryBeforeCount(\xPDO\Om\xPDOQuery $query)
+    public function prepareQueryBeforeCount(xPDOQuery $query)
     {
         if ($this->tvObject) {
             /* Check if only resources related to the current resource context should be retrieved. */
@@ -108,13 +126,13 @@ class callToActionTVResourceGetListProcessor extends modObjectGetListProcessor
 
         if ($this->getProperty('query')) {
             $query->where([
-                'pagetitle:LIKE' => '%' . $this->getProperty('query') . '%'
+                'pagetitle:LIKE' => '%' . $this->getProperty('query') . '%',
             ]);
         }
 
         $query->where([
-            'deleted'   => false,
-            'published' => true
+            'deleted' => false,
+            'published' => true,
         ]);
 
         if (isset($this->inputProperties['where_conditions']) && !empty($this->inputProperties['where_conditions'])) {
@@ -150,7 +168,7 @@ class callToActionTVResourceGetListProcessor extends modObjectGetListProcessor
      */
     public function prepareRow(xPDOObject $object)
     {
-        $objectArray              = $object->toArray();
+        $objectArray = $object->toArray();
         $objectArray['pagetitle'] = $this->preparePagetitle($objectArray['pagetitle']);
 
         /* Add resource id if it is configured in TV properties. */
