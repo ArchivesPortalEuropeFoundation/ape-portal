@@ -12,12 +12,13 @@
  * 
  */
 $eventName = $modx->event->name;
-$browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+// Bots and some clients send no Accept-Language header
+$browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '', 0, 2);
 $acceptLang = explode(',', $modx->getOption('langKeys', $scriptProperties, "en,de,fr,es,it"));
 $resourceTvs;
 
-$holdingID = $modx->getOption('gateway', $scriptProperties, 393);
-$babel_tv_id = $modx->getOption('babel_tv_id', $scriptProperties, 133);
+$holdingID = $modx->getOption('gateway', $scriptProperties, 204);
+$babel_tv_id = $modx->getOption('babel_tv_id', $scriptProperties, 139);
     
 switch($eventName) {
     case 'OnMODXInit':
@@ -87,39 +88,30 @@ switch($eventName) {
                 $lang = 'eng';
                 $cultureKey = 'en';
                 $contextKey = "web";
-                $country = "United Kingdom";
                 break;
             case 'de':
                 $lang = 'ger';
                 $cultureKey = 'de';
                 $contextKey = "de";
-                $country = "Germany";
                 break;
             case 'fr':
                 $lang = 'fra';
                 $cultureKey = 'fr';
                 $contextKey = "fr";
-                $country = "France";
                 break;
             case 'es':
                 $lang = 'spa';
                 $cultureKey = 'es';
                 $contextKey = "es";
-                $country = "Spain";
                 break;
             case 'it':
                 $lang = 'ita';
                 $cultureKey = 'it';
                 $contextKey = "it";
-                $country = "Italy";
                 break;
-            default:
-                $contextKey = "web";
-                $country = "United Kingdom";
         }
         $modx->setOption('cultureKey', $cultureKey);
         $modx->setPlaceholder("language", $lang);
-        $modx->setPlaceholder("usrCountry", $country);
         $modx->setPlaceholder("cultureKey", $cultureKey);
         $modx->setPlaceholder("contextKey", $contextKey);
         // $modx->setPlaceholder("browser", $browser_lang);
@@ -142,7 +134,7 @@ switch($eventName) {
         if ($babel) {
 
             // explode the TV to get the context and resource IDs
-            $resources = explode(';', $babel->get('value'));
+            $resources = explode(';', str_replace(',',';',$babel->get('value')));
             // [
             //     'web:1',
             //     'de:99'

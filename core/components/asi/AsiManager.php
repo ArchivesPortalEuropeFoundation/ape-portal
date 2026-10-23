@@ -5305,6 +5305,10 @@ class AsiManager
     public static function domHTML($html)
     {
         $doc = new \DOMDocument();
+        // PHP 8 throws a ValueError for loadHTML(''), e.g. when the API returns no html; return an empty document instead
+        if ($html === null || $html === '') {
+            return $doc;
+        }
         $doc->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
         return $doc;
     }

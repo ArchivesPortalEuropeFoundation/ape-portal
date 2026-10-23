@@ -99,6 +99,10 @@ if($section == "search-in-archives") {
     $fAidArchiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode=".$repoCode."&request_locale={$lang}&eadid=".$id."&type=cdetails&clevelunitid=".$unitId."&xmlType=".$type;
     $FAarchiveDetails = json_decode(file_get_contents($fAidArchiveUrl));
     $archiveDetails = json_decode(file_get_contents($archiveUrl));
+    // No record found (e.g. page opened without parameters): show the 404 page instead of an empty detail page
+    if (empty($archiveDetails->html)) {
+        $modx->sendErrorPage();
+    }
 
 
     $treeQueryString = "{$APIbase}Dashboard/eadTreeApi.action?xmlTypeName={$type}&request_locale={$lang}";
@@ -276,6 +280,10 @@ if($section == "search-in-archives") {
 }
 
 if($section == "search-in-institutions") {
+    // No institution found (e.g. page opened without parameters): show the 404 page instead of an empty detail page
+    if (empty($instDetails->html)) {
+        $modx->sendErrorPage();
+    }
     $placeholders['result_type'] = "Institutions";
 
     //Set the variables we will be filling in the call
@@ -517,6 +525,10 @@ if($section == "search-in-names") {
 
     //Get the name details from the API for processing
     $nameDetails = json_decode(file_get_contents("{$APIbase}Dashboard/eacApi.action?aiRepositoryCode=".$repoCode."&eaccpfId=".$id."&translationLanguage=default&langNavigator=it&request_locale={$lang}"));
+    // No record found (e.g. page opened without parameters): show the 404 page instead of a fatal error
+    if (empty($nameDetails->html)) {
+        $modx->sendErrorPage();
+    }
     //Generate the parameters JSON string for names
     $result['params_json'] = asi::generateParamsString($result, "name");
     //Process the html received from the API and intitialise it with DomDocument for further processing
@@ -658,7 +670,9 @@ if($section == "search-in-names") {
     $placeholders['name']['repocode']      = $repoCode;
     $placeholders['name']['title']      = $finder->query("//*[@id='nameTitle']")[0]->nodeValue;
     $placeholders['name']['lifedates']  = $finder->query("//*[@class='nameEtryDates']")[0]->nodeValue;
-    $placeholders['result_details']     = $finder->query("//*[@id='details']")[0]->C14N();
+    // PHP 8: calling C14N() on a missing node is fatal, so fall back to an empty string
+    $detailsNode = $finder->query("//*[@id='details']")->item(0);
+    $placeholders['result_details']     = $detailsNode ? $detailsNode->C14N() : '';
     $placeholders['pagetitle']          = $placeholders['name']['title'];
     $placeholders['name_description'] = $entityType;
     $placeholders['name_icon'] = $entityIcon;

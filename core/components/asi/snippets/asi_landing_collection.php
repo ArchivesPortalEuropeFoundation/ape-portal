@@ -3,10 +3,15 @@
 require_once(MODX_CORE_PATH . 'components/asi/autoload.php');
 use asi\AsiManager AS asi;
 asi::init($modx);
-$token = $_REQUEST['token'];
+$token = $_REQUEST['token'] ?? '';
 
 // grab the data
-$collection = asi::getCollectionByToken($token);
+// An empty token must not match: old collections were saved without a token and would be exposed via /collection-landing/
+$collection = $token !== '' ? asi::getCollectionByToken($token) : false;
+// Missing or unknown token: show the 404 page instead of a fatal error
+if (empty($collection)) {
+    $modx->sendErrorPage();
+}
 $searches = asi::getCollectionSearches($collection['id']);
 $bookmarks = asi::getCollectionBookmarks($collection['id']);
 
@@ -16,7 +21,7 @@ $collection['count_bookmarks'] = count($bookmarks);
 
 // fetch owner
 $collection_owner = $modx->getObject("modUser", $collection['user_id']);
-$profile = $collection_owner->getOne('Profile');
+$profile = $collection_owner ? $collection_owner->getOne('Profile') : null;
 
 // Check if this is the owner
 if ($modx->getUser()->get('id') != 0 && $modx->getUser()->get('id') == $collection['user_id'] && 1==2) { // check with Carly - this seems overkill
@@ -27,7 +32,8 @@ else {
 }
 
 //For firstname/lastname splitting
-$parts = explode(" ", $profile->get('fullname'));
+// The owner may have been deleted: keep the collection page working with an empty owner name
+$parts = explode(" ", $profile ? (string)$profile->get('fullname') : '');
 $collection['owner_lastname'] = array_pop($parts);
 $collection['owner_firstname'] = implode(" ", $parts);
 
