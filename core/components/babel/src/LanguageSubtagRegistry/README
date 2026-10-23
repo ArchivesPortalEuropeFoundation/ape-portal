@@ -1,0 +1,16 @@
+Language Tags based on Internet Assigned Numbers Authority (IANA)'s Registry
+PHP language class
+
+@author     goldsky <goldsky@fastmail.fm>
+@date       Jan 04, 2011
+@access     public
+@link       https://www.iana.org/assignments/language-subtag-registry
+@package    LanguageSubtagRegistry
+@return     mixed  array | string
+@repository https://github.com/goldsky/IANA-s-Language-Subtag-Registry
+
+Methods :
+* readSource($filePath)
+* languagesArray()
+* languagesAssoc($assoc=array(), $value=null)
+* languagesAssocArray($arrayKey)

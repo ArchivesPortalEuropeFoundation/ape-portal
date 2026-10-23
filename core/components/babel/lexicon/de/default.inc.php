@@ -1,89 +1,87 @@
 <?php
 /**
- * Babel
- *
- * Copyright 2010 by Jakob Class <jakob.class@class-zec.de>
- *
- * This file is part of Babel.
- *
- * Babel is free software; you can redistribute it and/or modify it under the
- * terms of the GNU General Public License as published by the Free Software
- * Foundation; either version 2 of the License, or (at your option) any later
- * version.
- *
- * Babel is distributed in the hope that it will be useful, but WITHOUT ANY
- * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
- * A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * Babel; if not, write to the Free Software Foundation, Inc., 59 Temple Place,
- * Suite 330, Boston, MA 02111-1307 USA
- *
- * @package babel
- */
-/**
- * Babel German language file
- * 
- * @author Jakob Class <jakob.class@class-zec.de>
+ * Default Lexicon Entries for Babel
  *
  * @package babel
  * @subpackage lexicon
- * 
- * @todo complete babel.language_xx entries for every language
  */
-
-$_lang['babel.tv_caption'] = 'Babel-Übersetzungslinks';
-$_lang['babel.tv_description'] = 'Wird über das Babel-Plugin verwaltet. Bitte nicht ändern';
-$_lang['babel.create_translation'] = 'Übersetzung anlegen';
-$_lang['babel.unlink_translation'] = 'Verknüpfung aufheben';
-$_lang['babel.link_translation_manually'] = 'oder <strong>Übersetzung manuell verknüpfen</strong>:';
-$_lang['babel.id_of_target'] = 'Ziel-ID:';
+$_lang['babel'] = 'Babel';
+$_lang['babel.about'] = 'Über Babel';
+$_lang['babel.all'] = 'Alle';
+$_lang['babel.context_err_invalid_key'] = '[[+context]] ist kein gültiger Kontext-Schlüssel.';
+$_lang['babel.context_err_ns'] = 'Der Kontext wurde nicht angegeben.';
+$_lang['babel.contexts'] = 'Kontexte';
+$_lang['babel.contexts_desc'] = 'Verwalten Sie die Verknüpfungen zwischen den Ressourcen in verschiedenen Kontexten/Sprachen an einem Ort. Verwenden Sie die folgenden Schaltflächen, um die Verknüpfungen zu bearbeiten:';
+$_lang['babel.contexts_desc_create'] = 'Eine neue verknüpfte Ressourcen erstellen';
+$_lang['babel.contexts_desc_create_multiple'] = 'Mehrere neue verknüpfte Ressourcen erstellen';
+$_lang['babel.contexts_desc_delete'] = 'Verknüpfte Ressource löschen';
+$_lang['babel.contexts_desc_delete_all'] = 'Alle verknüpften Ressourcen löschen';
+$_lang['babel.contexts_desc_link'] = 'Verknüpfung zu dieser Ressource und den damit verknüpften Ressourcen';
+$_lang['babel.contexts_desc_refresh'] = 'Verknüpfte Ressource(n) aktualisieren';
+$_lang['babel.contexts_desc_unlink'] = 'Verknüpfung unterbrechen';
+$_lang['babel.contexts_desc_update'] = 'Aktualisieren Sie diese verknüpfte Ressource';
 $_lang['babel.copy_tv_values'] = 'Synchronisierte TVs zum Ziel kopieren';
-$_lang['babel.save'] = 'Speichern';
+$_lang['babel.create_child_translations'] = 'Übersetzungen der Kindressourcen erstellen';
+$_lang['babel.create_multiple_translations'] = 'Mehrere Übersetzungen erstellen';
+$_lang['babel.create_multiple_translations_err_no_contexts'] = 'Keine Kontexte für die Übersetzung verfügbar.';
+$_lang['babel.create_multiple_translations_finished'] = 'Die übersetzten Ressourcen wurden erstellt.';
+$_lang['babel.create_translation'] = 'Übersetzung anlegen';
+$_lang['babel.create_translation_confirm'] = 'Sind Sie sicher, dass Sie eine neue Übersetzung für diese Ressource im Kontext <b>"[[+context]]"</b> anlegen möchten?';
+$_lang['babel.debug_mode'] = 'Debug Modus';
+$_lang['babel.delete'] = 'Löschen';
+$_lang['babel.delete_all'] = 'Alle löschen';
+$_lang['babel.delete_all_translations'] = 'Alle Übersetzungen löschen';
+$_lang['babel.delete_all_translations_confirm'] = 'Sind Sie sicher, dass Sie alle Übersetzungen von dieser Ressource entfernen möchten?';
+$_lang['babel.delete_child_translations'] = 'Übersetzungen von Kindressourcen löschen';
+$_lang['babel.delete_multiple_translations_finished'] = 'Die übersetzten Ressourcen wurden gelöscht.';
+$_lang['babel.delete_successful'] = 'Die Übersetzung wurde erfolgreich gelöscht.';
+$_lang['babel.delete_translation'] = 'Übersetzung löschen';
+$_lang['babel.delete_translation_confirm'] = 'Sind Sie sicher, dass Sie die Übersetzung aus dieser Ressource im Kontext <b>"[[+context]]"</b> löschen wollen?';
+$_lang['babel.desc'] = 'Verwaltungssystem für mehrsprachige Sites';
+$_lang['babel.link_successful'] = 'Die Ressource wurde erfolgreich verknüpft.';
+$_lang['babel.link_translation'] = 'Mit einer existierenden Ressource verknüpfen';
+$_lang['babel.open'] = 'Öffnen';
+$_lang['babel.please_wait'] = 'Bitte warten …';
+$_lang['babel.refresh'] = 'Update';
+$_lang['babel.refresh_cache'] = 'Leeren des [[+packagename]]-Caches';
+$_lang['babel.refresh_child_translations'] = 'Übersetzungen der Kindressourcen aktualisieren';
+$_lang['babel.refresh_multiple_translations'] = 'Mehrere Übersetzungen aktualisieren';
+$_lang['babel.refresh_multiple_translations_err_no_contexts'] = 'Keine Kontexte für die Aktualisierung von Übersetzungen verfügbar.';
+$_lang['babel.refresh_multiple_translations_finished'] = 'Die übersetzten Ressourcen wurden aktualisiert.';
+$_lang['babel.refresh_translation'] = 'Übersetzung aktualisieren';
+$_lang['babel.refresh_translation_confirm'] = 'Sind Sie sicher, dass Sie die Übersetzung für diese Ressource im Kontext <b>"[[+context]]"</b> aktualisieren möchten?';
+$_lang['babel.reset'] = 'Zurücksetzen';
+$_lang['babel.resource_err_from_other_context'] = 'Die Ressource [[+resource]] befindet sich nicht im Kontext <b>"[[+context]]"</b>.';
+$_lang['babel.resource_err_invalid_id'] = '[[+resource]] ist keine gültige Ressourcen-ID.';
+$_lang['babel.resource_err_link_of_selflink_not_possible'] = 'Eine Ressource kann nicht mit sich selbst verknüpft werden.';
+$_lang['babel.search'] = 'Suche …';
+$_lang['babel.select_context'] = 'Kontext auswählen';
+$_lang['babel.select_tree_node'] = 'Wählen Sie einen Knoten im Ressourcenbaum';
+$_lang['babel.settings'] = '<i class="icon icon-cog"><span class="sr-only">Einstellungen</span></i>';
+$_lang['babel.settings_desc'] = 'Bearbeiten Sie die Einstellungen von Babel. Sie können den Wert einer Systemeinstellung mit einem Doppelklick auf die ‚Wert‘-Tabellenzelle oder die Systemeinstellung mit einem Rechtsklick in der Tabellenzelle bearbeiten.';
+$_lang['babel.success_delete_resource'] = 'Die übersetzte Ressource [[+oldid]] der Ressource [[+id]] wurde im Kontext [[+context]] gelöscht.';
+$_lang['babel.success_delete_resources'] = 'Die übersetzten Ressourcen der Ressource [[+id]] wurden in allen Kontexten gelöscht.';
+$_lang['babel.success_duplicate_resource'] = 'Eine übersetzte Ressource für [[+id]] wurde mit [[+newid]] im Kontext [[+context]] erstellt.';
+$_lang['babel.success_sync_resource'] = 'Die übersetzte Ressource [[+newid]] der Ressource [[+id]] wurde im Kontext [[+context]] synchronisiert.';
+$_lang['babel.success_unlink_resource'] = 'Die Verknüpfung der übersetzten Ressource [[+oldid]] zur Ressource [[+id]] im Kontext [[+context]] wurde gelöst.';
+$_lang['babel.success_unlink_resources'] = 'Die Verknüpfung der übersetzten Ressourcen der Ressource [[+id]] wurden in allen Kontexten gelöst.';
+$_lang['babel.sync_linked_translations'] = 'Alle Übersetzungen synchronisieren';
+$_lang['babel.sync_linked_translations_target'] = 'Alle Übersetzungen mit dem Ziel synchronisieren';
+$_lang['babel.systemsetting_key_err_nv'] = 'Sie können nur Einstellungen mit dem Präfix babel bearbeiten.';
+$_lang['babel.systemsetting_usergroup_err_nv'] = 'Nur Benutzer mit einer settings Berechtigung oder einer settings_babel Berechtigung können die Einstellungen ändern.';
+$_lang['babel.target_id'] = 'Ziel-ID';
+$_lang['babel.target_pagetitle'] = 'Seitentitel des Ziels';
+$_lang['babel.translation_err_could_not_duplicate_resource'] = 'Beim Erstellen der Übersetzung im Kontext [[+context]] ist ein Fehler aufgetreten.';
+$_lang['babel.translation_err_could_not_sync_resource'] = 'Beim Versuch, eine Übersetzung im Kontext [[+context]] zu synchronisieren, ist ein Fehler aufgetreten.';
 $_lang['babel.translation_pending'] = '[Übersetzung ausstehend]';
-
-/* language names */
-$_lang['babel.language_ar'] = 'Arabisch';
-$_lang['babel.language_bg'] = 'Bulgarisch';
-$_lang['babel.language_ca'] = 'Katalanisch';
-$_lang['babel.language_cs'] = 'Tschechisch';
-$_lang['babel.language_da'] = 'Dänisch';
-$_lang['babel.language_de'] = 'Deutsch';
-$_lang['babel.language_en'] = 'Englisch';
-$_lang['babel.language_es'] = 'Spanisch';
-$_lang['babel.language_fa'] = 'Persisch';
-$_lang['babel.language_fi'] = 'Finnisch';
-$_lang['babel.language_fr'] = 'Französisch';
-$_lang['babel.language_he'] = 'Hebräisch';
-$_lang['babel.language_hu'] = 'Ungarisch';
-$_lang['babel.language_id'] = 'Indonesisch';
-$_lang['babel.language_it'] = 'Italienisch';
-$_lang['babel.language_ja'] = 'Japanisch';
-$_lang['babel.language_ko'] = 'Koreanisch';
-$_lang['babel.language_lt'] = 'Litauisch';
-$_lang['babel.language_ms'] = 'Malaiisch';
-$_lang['babel.language_nl'] = 'Niederländisch';
-$_lang['babel.language_no'] = 'Norwegisch';
-$_lang['babel.language_pl'] = 'Polnisch';
-$_lang['babel.language_pt'] = 'Portugiesisch';
-$_lang['babel.language_ro'] = 'Rumänisch';
-$_lang['babel.language_ru'] = 'Russisch';
-$_lang['babel.language_sk'] = 'Slowakisch';
-$_lang['babel.language_sl'] = 'Slowenisch';
-$_lang['babel.language_sr'] = 'Serbisch';
-$_lang['babel.language_sv'] = 'Schwedisch';
-$_lang['babel.language_tr'] = 'Türkisch';
-$_lang['babel.language_uk'] = 'Ukrainisch';
-$_lang['babel.language_vi'] = 'Vietnamesisch';
-$_lang['babel.language_zh'] = 'Chinesisch';
-
-/* error messages */
-$_lang['error.invalid_context_key'] = '[[+context]] ist kein gültiger Kontext-Schlüssel.';
-$_lang['error.invalid_resource_id'] = '[[+resource]] ist keine gültige Ressourcen-ID.';
-$_lang['error.resource_from_other_context'] = 'Ressource [[+resource]] befindet sich nicht im Kontext [[+context]].';
-$_lang['error.resource_already_linked'] = 'Ressource [[+resource]] ist bereits mit anderen Ressourcen verknüpft.';
-$_lang['error.no_link_to_context'] = 'Für den Kontext [[+context]] existiert noch keine Verknüpfung.';
-$_lang['error.unlink_of_selflink_not_possible'] = 'Die Verknüpfung einer Ressource auf sich selbst kann nciht entfernt werden.';
-$_lang['error.translation_in_same_context'] = 'Eine Übersetzung kann nicht im gleichen Kontext angelegt werden.';
-$_lang['error.translation_already_exists'] = 'Es existiert bereits eine Übersetzung im Kontext [[+context]].';
-$_lang['error.could_not_create_translation'] = 'Beim Erstellen der Übersetzung im Kontext [[+context]] ist ein Fehler aufgetreten.';
+$_lang['babel.tv_caption'] = 'Babel-Übersetzungslinks';
+$_lang['babel.tv_description'] = 'Wird vom Babel-Plugin verwaltet. Bitte nicht ändern!';
+$_lang['babel.unlink'] = 'Verknüpfung lösen';
+$_lang['babel.unlink_all'] = 'Alle Verknüpfungen lösen';
+$_lang['babel.unlink_all_translations'] = 'Verknüpfungen aller Übersetzungen lösen';
+$_lang['babel.unlink_all_translations_confirm'] = 'Sind Sie sicher, dass Sie die Verknüpfungen aller Übersetzungen von dieser Ressource lösen möchten?';
+$_lang['babel.unlink_child_translations'] = 'Verknüpfung der übersetzten Kinderressourcen lösen';
+$_lang['babel.unlink_multiple_translations_finished'] = 'Die Verknüpfungen der übersetzten Ressourcen wurde gelöst.';
+$_lang['babel.unlink_successful'] = 'Die Verknüpfung der übersetzten Ressource wurde gelöst.';
+$_lang['babel.unlink_translation'] = 'Verknüpfung der Übersetzung lösen';
+$_lang['babel.unlink_translation_confirm'] = 'Sind Sie sicher, dass Sie die Verknüpfung der Übersetzung im Kontext <b>"[[+context]]"</b> von dieser Ressource entfernen möchten?';

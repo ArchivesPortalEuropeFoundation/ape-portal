@@ -1,131 +1,138 @@
 <?php
-
 /**
- * Babel
- *
- * Copyright 2010 by Jakob Class <jakob.class@class-zec.de>
- *
- * This file is part of Babel.
- *
- * Babel is free software; you can redistribute it and/or modify it under the
- * terms of the GNU General Public License as published by the Free Software
- * Foundation; either version 2 of the License, or (at your option) any later
- * version.
- *
- * Babel is distributed in the hope that it will be useful, but WITHOUT ANY
- * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
- * A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * Babel; if not, write to the Free Software Foundation, Inc., 59 Temple Place,
- * Suite 330, Boston, MA 02111-1307 USA
+ * Duplicate resource
  *
  * @package babel
+ * @subpackage processors
  */
 
-/**
- * Processor file for Babel.
- *
- * @author goldsky <goldsky@virtudraft.com>
- *
- * @package babel
- */
-class BabelDuplicateResourceProcessor extends modObjectProcessor
+use mikrobi\Babel\Processors\ObjectUpdateProcessor;
+
+class BabelResourceDuplicateProcessor extends ObjectUpdateProcessor
 {
+    public $classKey = 'modResource';
+    public $objectType = 'resource';
+    public $languageTopics = ['resource', 'babel:default'];
+    public $permission = 'resource_duplicate';
 
-    public $classKey       = 'modResource';
-    public $languageTopics = array('resource', 'babel:default');
-    public $objectType     = 'resource';
+    /** @var modResource $object The resource to duplicate */
+    public $object;
 
-    /** @var xPDOObject $newObject The newly duplicated object */
-    public $newObject;
+    /** @var modResource $duplicatedObject The newly duplicated resource */
+    public $duplicatedObject;
 
-    public function checkPermissions()
-    {
-        return $this->modx->hasPermission('resource_duplicate');
-    }
-
+    /**
+     * {@inheritDoc}
+     * @return boolean
+     */
     public function initialize()
     {
-        $primaryKey = $this->getProperty($this->primaryKeyField, false);
-        if (empty($primaryKey)) {
-            return $this->modx->lexicon($this->objectType.'_err_ns');
-        }
-
-        $this->object = $this->modx->getObject($this->classKey, $primaryKey);
-        if (empty($this->object)) {
-            return $this->modx->lexicon($this->objectType.'_err_nfs', array($this->primaryKeyField => $primaryKey));
-        }
-
-        if ($this->checkSavePermission && $this->object instanceof modAccessibleObject && !$this->object->checkPolicy('save')) {
-            return $this->modx->lexicon('access_denied');
-        }
+        $success = parent::initialize();
 
         $contextKey = $this->getProperty('context_key', false);
         if (empty($contextKey)) {
             return $this->modx->lexicon('babel.context_err_ns');
         }
-
-        $context = $this->modx->getObject('modContext', array('key' => $contextKey));
+        $context = $this->modx->getObject('modContext', [
+            'key' => $contextKey
+        ]);
         if (!$context) {
-            return $this->modx->lexicon('error.invalid_context_key', array('context' => $contextKey));
+            return $this->modx->lexicon('babel.context_err_invalid_key', [
+                'context' => $contextKey
+            ]);
         }
 
-        return true;
+        return $success;
     }
 
+    /**
+     * {@inheritDoc}
+     * @return mixed
+     */
     public function process()
     {
-        $contextKey      = $this->getProperty('context_key');
-        $this->newObject = $this->modx->babel->duplicateResource($this->object, $contextKey);
-        if (!$this->newObject) {
-            /* error: translation could not be created */
-            return $this->failure($this->modx->lexicon('error.could_not_create_translation', array('context' => $contextKey)));
+        $context = $this->getProperty('context_key');
+        $this->duplicatedObject = $this->babel->duplicateResource($this->object, $context);
+        if (!$this->duplicatedObject) {
+            return $this->failure($this->modx->lexicon('babel.translation_err_could_not_duplicate_resource', [
+                'context' => $context
+            ]));
         }
 
-        $linkedResources              = $this->modx->babel->getLinkedResources($this->object->get('id'));
-        $linkedResources[$contextKey] = $this->newObject->get('id');
-        $this->modx->babel->updateBabelTv($linkedResources, $linkedResources);
+        $targetResources = $this->babel->getLinkedResources($this->getProperty('target'));
+        $linkedResources = $this->babel->getLinkedResources($this->object->get('id'));
+        $linkedResources[$context] = $this->duplicatedObject->get('id');
+
+        $syncLinkedTranslations = $this->getProperty('sync');
+        if ($syncLinkedTranslations == 1) {
+            // Join all existing linked resources from both resources
+            $mergedResources = array_merge($targetResources, $linkedResources);
+            $this->babel->updateBabelTv($mergedResources, $mergedResources);
+        } else {
+            // Only join between 2 resources
+            $mergeLinked = array_merge($linkedResources, [
+                $this->getProperty('context_key') => $this->duplicatedObject->get('id')
+            ]);
+            $this->babel->updateBabelTv($this->object->get('id'), $mergeLinked);
+            $mergeTarget = array_merge($targetResources, [
+                $this->object->get('context_key') => $this->object->get('id')
+            ]);
+            $this->babel->updateBabelTv($this->duplicatedObject->get('id'), $mergeTarget);
+        }
+
+        $copyTvValues = $this->getProperty('copy');
+        if ($copyTvValues == 1) {
+            // Copy values of synchronized TVs and resource fields to the target resource
+            $this->babel->synchronizeTvs($this->object->get('id'), $this->duplicatedObject->get('id'));
+            $this->babel->synchronizeFields($this->object->get('id'), $this->duplicatedObject->get('id'));
+        }
 
         $this->fireDuplicateEvent();
         $this->logManagerAction();
+
+        $this->modx->log(xPDO::LOG_LEVEL_INFO, $this->modx->lexicon('babel.success_duplicate_resource', [
+            'id' => $this->object->get('id'),
+            'newid' => $this->duplicatedObject->get('id'),
+            'context' => $context,
+        ]));
+        if ($this->getBooleanProperty('last')) {
+            $this->modx->log(xPDO::LOG_LEVEL_INFO, 'COMPLETED');
+        }
+
         return $this->cleanup();
     }
 
     /**
      * Fire the OnBabelDuplicate event
-     * @return void
      */
     public function fireDuplicateEvent()
     {
-        $this->modx->invokeEvent('OnBabelDuplicate', array(
-            'context_key'        => $this->getProperty('context_key'),
-            'original_id'        => $this->object->get('id'),
-            'original_resource'  => &$this->object,
-            'duplicate_id'       => $this->newObject->get('id'),
-            'duplicate_resource' => &$this->newObject,
-        ));
+        $this->modx->invokeEvent('OnBabelDuplicate', [
+            'context_key' => $this->getProperty('context_key'),
+            'original_id' => $this->object->get('id'),
+            'original_resource' => &$this->object,
+            'duplicate_id' => $this->duplicatedObject->get('id'),
+            'duplicate_resource' => &$this->duplicatedObject,
+        ]);
     }
 
     /**
      * Log a manager action
-     * @return void
      */
     public function logManagerAction()
     {
-        $this->modx->logManagerAction($this->objectType.'_duplicate', $this->classKey, $this->newObject->get('id'));
+        $this->modx->logManagerAction($this->objectType . '_duplicate', $this->classKey, $this->duplicatedObject->get('id'));
     }
 
     /**
-     * Cleanup and return a response.
-     *
+     * {@inheritDoc}
      * @return array
      */
     public function cleanup()
     {
-        return $this->success('', $this->newObject);
+        $output = $this->duplicatedObject->toArray();
+        return $this->success('', $output);
     }
-
 }
 
-return 'BabelDuplicateResourceProcessor';
+return 'BabelResourceDuplicateProcessor';

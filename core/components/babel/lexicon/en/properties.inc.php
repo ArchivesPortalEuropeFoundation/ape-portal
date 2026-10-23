@@ -1,44 +1,26 @@
 <?php
 /**
- * Babel
- *
- * Copyright 2010 by Jakob Class <jakob.class@class-zec.de>
- *
- * This file is part of Babel.
- *
- * Babel is free software; you can redistribute it and/or modify it under the
- * terms of the GNU General Public License as published by the Free Software
- * Foundation; either version 2 of the License, or (at your option) any later
- * version.
- *
- * Babel is distributed in the hope that it will be useful, but WITHOUT ANY
- * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
- * A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * Babel; if not, write to the Free Software Foundation, Inc., 59 Temple Place,
- * Suite 330, Boston, MA 02111-1307 USA
- *
- * @package babel
- */
-/**
- * Babel properties English language file
- * 
- * @author Jakob Class <jakob.class@class-zec.de>
+ * Properties Lexicon Entries for Babel
  *
  * @package babel
  * @subpackage lexicon
  */
-
-/* BabelLinks snippet */
-$_lang['babellinks.tpl'] = 'Chunk to display a language link';
-$_lang['babellinks.activeCls'] = 'CSS class for the active language link';
-$_lang['babellinks.resourceId'] = 'Id of resource of which links to translations should be displayed';
-$_lang['babellinks.showUnpublished'] = 'Flag whether to show unpublished translations';
-$_lang['babellinks.showCurrent'] = 'Flag whether to show a link to a translation of the current language';
-$_lang['babellinks.includeUnlinked'] = 'Flag whether to show unlinked context';
-
-/* BabelTranslation snippet */
-$_lang['babeltranslation.resourceId'] = 'ID of resource of which a translated resource should be determined';
-$_lang['babeltranslation.contextKey'] = 'Key of context in which translated resource should be determined';
-$_lang['babeltranslation.showUnpublished'] = 'Flag whether to show unpublished translations';
+$_lang['babel.babellinks.activeCls'] = 'CSS class for the active language link.';
+$_lang['babel.babellinks.ignoreSiteStatus'] = 'Specifies whether the site_status is ignored (when the site is offline).';
+$_lang['babel.babellinks.includeUnlinked'] = 'Specifies whether the unlinked context are shown.';
+$_lang['babel.babellinks.resourceId'] = 'ID of resource of which links to translations should be displayed.';
+$_lang['babel.babellinks.restrictToGroup'] = 'Restrict the contexts in the snippet output to the group the current context contains to. See `babel.contextKeys` system setting for defining context key groups.';
+$_lang['babel.babellinks.showCurrent'] = 'Specifies whether a link to the current language is shown.';
+$_lang['babel.babellinks.showUnpublished'] = 'Specifies whether the unpublished translations are shown.';
+$_lang['babel.babellinks.sortby'] = 'Context field to sort the results by. The default \'babel\' means to sort by the order of the context keys in the babel.contextKeys system setting.';
+$_lang['babel.babellinks.sortdir'] = 'The direction to sort in.';
+$_lang['babel.babellinks.toArray'] = 'Specifies whether the output is dumped as an array.';
+$_lang['babel.babellinks.toPlaceholder'] = 'Specifies whether the output is dumped into the given placeholder\'s name.';
+$_lang['babel.babellinks.tpl'] = 'Chunk to display a language link.';
+$_lang['babel.babellinks.useRequestProperties'] = 'Specifies whether the current request properties are used in the links to the translated resources.';
+$_lang['babel.babellinks.wrapperTpl'] = 'Chunk to wrap all language links. The placeholder for all links is [[+babelLinks]].';
+$_lang['babel.babeltranslation.contextKey'] = 'Key of context in which translated resource should be determined.';
+$_lang['babel.babeltranslation.cultureKey'] = 'Key of culture in which translated resource should be determined. Used only in case contextKey was not specified. If both omitted the snippet the currently set cultureKey.';
+$_lang['babel.babeltranslation.resourceId'] = 'Comma-separated list of resource IDs of which a comma-separated list of translated resources in the contextKey/cultureKey should be determined.';
+$_lang['babel.babeltranslation.showUnpublished'] = 'Specifies whether the unpublished translations are shown.';
+$_lang['babel.babeltranslation.toPlaceholder'] = 'Specifies whether to dump the output into the given placeholder\'s name.';

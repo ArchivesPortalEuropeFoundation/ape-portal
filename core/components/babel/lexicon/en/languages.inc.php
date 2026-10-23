@@ -1,0 +1,40 @@
+<?php
+/**
+ * Languages Lexicon Entries for Babel
+ *
+ * @package babel
+ * @subpackage lexicon
+ */
+$_lang['babel.language_ar'] = 'Arabic'; // [[%babel.language_ar]]
+$_lang['babel.language_bg'] = 'Bulgarian'; // [[%babel.language_bg]]
+$_lang['babel.language_ca'] = 'Catalan'; // [[%babel.language_ca]]
+$_lang['babel.language_cs'] = 'Czech'; // [[%babel.language_cs]]
+$_lang['babel.language_da'] = 'Danish'; // [[%babel.language_da]]
+$_lang['babel.language_de'] = 'German'; // [[%babel.language_de]]
+$_lang['babel.language_en'] = 'English'; // [[%babel.language_en]]
+$_lang['babel.language_es'] = 'Spanish'; // [[%babel.language_es]]
+$_lang['babel.language_fa'] = 'Persian'; // [[%babel.language_fa]]
+$_lang['babel.language_fi'] = 'Finnish'; // [[%babel.language_fi]]
+$_lang['babel.language_fr'] = 'French'; // [[%babel.language_fr]]
+$_lang['babel.language_he'] = 'Hebrew'; // [[%babel.language_he]]
+$_lang['babel.language_hu'] = 'Hungarian'; // [[%babel.language_hu]]
+$_lang['babel.language_id'] = 'Indonesian'; // [[%babel.language_id]]
+$_lang['babel.language_it'] = 'Italian'; // [[%babel.language_it]]
+$_lang['babel.language_ja'] = 'Japanese'; // [[%babel.language_ja]]
+$_lang['babel.language_ko'] = 'Korean'; // [[%babel.language_ko]]
+$_lang['babel.language_lt'] = 'Lithuanian'; // [[%babel.language_lt]]
+$_lang['babel.language_ms'] = 'Malay'; // [[%babel.language_ms]]
+$_lang['babel.language_nl'] = 'Dutch'; // [[%babel.language_nl]]
+$_lang['babel.language_no'] = 'Norwegian (Bokmål)'; // [[%babel.language_no]]
+$_lang['babel.language_pl'] = 'Polish'; // [[%babel.language_pl]]
+$_lang['babel.language_pt'] = 'Portuguese'; // [[%babel.language_pt]]
+$_lang['babel.language_ro'] = 'Romanian'; // [[%babel.language_ro]]
+$_lang['babel.language_ru'] = 'Russian'; // [[%babel.language_ru]]
+$_lang['babel.language_sk'] = 'Slovak'; // [[%babel.language_sk]]
+$_lang['babel.language_sl'] = 'Slovenian'; // [[%babel.language_sl]]
+$_lang['babel.language_sr'] = 'Serbian'; // [[%babel.language_sr]]
+$_lang['babel.language_sv'] = 'Swedish'; // [[%babel.language_sv]]
+$_lang['babel.language_tr'] = 'Turkish'; // [[%babel.language_tr]]
+$_lang['babel.language_uk'] = 'Ukrainian'; // [[%babel.language_uk]]
+$_lang['babel.language_vi'] = 'Vietnamese'; // [[%babel.language_vi]]
+$_lang['babel.language_zh'] = 'Chinese'; // [[%babel.language_zh]]
