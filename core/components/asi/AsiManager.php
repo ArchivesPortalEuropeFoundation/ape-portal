@@ -1042,7 +1042,8 @@ class AsiManager
         return $output;
     }
 
-    public function buildTreeApi($array, $type, $output, $parentId = null) {
+    // static: it is called as self::buildTreeApi(), which is a fatal Error in PHP 8 for non-static methods
+    public static function buildTreeApi($array, $type, $output, $parentId = null) {
         $output.="<ul class='subGroups'>";
         foreach ($array as $treeDetail) {
             $position = 0;
