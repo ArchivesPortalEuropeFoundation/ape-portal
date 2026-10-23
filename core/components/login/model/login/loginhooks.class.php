@@ -329,17 +329,17 @@ class LoginHooks {
         $message = $this->login->getChunk($tpl,$fields);
 
         /* load mail service */
-        $this->modx->getService('mail', 'mail.modPHPMailer');
-        $this->modx->mail->set(modMail::MAIL_BODY,$emailHtml ? nl2br($message) : $message);
-        $this->modx->mail->set(modMail::MAIL_FROM, $emailFrom);
-        $this->modx->mail->set(modMail::MAIL_FROM_NAME, $emailFromName);
-        $this->modx->mail->set(modMail::MAIL_SENDER, $emailFrom);
-        $this->modx->mail->set(modMail::MAIL_SUBJECT, $subject);
+        $mail = $this->modx->getService('mail', 'mail.modPHPMailer');
+        $mail->set(modMail::MAIL_BODY,$emailHtml ? nl2br($message) : $message);
+        $mail->set(modMail::MAIL_FROM, $emailFrom);
+        $mail->set(modMail::MAIL_FROM_NAME, $emailFromName);
+        $mail->set(modMail::MAIL_SENDER, $emailFrom);
+        $mail->set(modMail::MAIL_SUBJECT, $subject);
 
         /* handle file fields */
         foreach ($fields as $k => $v) {
             if (is_array($v) && !empty($v['tmp_name']) && isset($v['error']) && $v['error'] == UPLOAD_ERR_OK) {
-                $this->modx->mail->mailer->AddAttachment($v['tmp_name'],$v['name'],'base64',!empty($v['type']) ? $v['type'] : 'application/octet-stream');
+                $mail->mailer->AddAttachment($v['tmp_name'],$v['name'],'base64',!empty($v['type']) ? $v['type'] : 'application/octet-stream');
             }
         }
 
@@ -351,7 +351,7 @@ class LoginHooks {
             $etn = !empty($emailToName[$i]) ? $emailToName[$i] : '';
             if (!empty($etn)) $etn = $this->_process($etn,$fields);
             $emailTo[$i] = $this->_process($emailTo[$i],$fields);
-            $this->modx->mail->address('to',$emailTo[$i],$etn);
+            $mail->address('to',$emailTo[$i],$etn);
         }
 
         /* reply to */
@@ -359,7 +359,7 @@ class LoginHooks {
         $emailReplyTo = $this->_process($emailReplyTo,$fields);
         $emailReplyToName = $this->modx->getOption('emailReplyToName',$this->login->config,$emailFromName);
         $emailReplyToName = $this->_process($emailReplyToName,$fields);
-        $this->modx->mail->address('reply-to',$emailReplyTo,$emailReplyToName);
+        $mail->address('reply-to',$emailReplyTo,$emailReplyToName);
 
         /* cc */
         $emailCC = $this->modx->getOption('emailCC',$this->login->config,'');
@@ -372,7 +372,7 @@ class LoginHooks {
                 $etn = !empty($emailCCName[$i]) ? $emailCCName[$i] : '';
                 if (!empty($etn)) $etn = $this->_process($etn,$fields);
                 $emailCC[$i] = $this->_process($emailCC[$i],$fields);
-                $this->modx->mail->address('cc',$emailCC[$i],$etn);
+                $mail->address('cc',$emailCC[$i],$etn);
             }
         }
 
@@ -387,16 +387,16 @@ class LoginHooks {
                 $etn = !empty($emailBCCName[$i]) ? $emailBCCName[$i] : '';
                 if (!empty($etn)) $etn = $this->_process($etn,$fields);
                 $emailBCC[$i] = $this->_process($emailBCC[$i],$fields);
-                $this->modx->mail->address('bcc',$emailBCC[$i],$etn);
+                $mail->address('bcc',$emailBCC[$i],$etn);
             }
         }
 
         /* set HTML */
-        $this->modx->mail->setHTML($emailHtml);
+        $mail->setHTML($emailHtml);
 
         /* send email */
-        $sent = $this->modx->mail->send();
-        $this->modx->mail->reset(array(
+        $sent = $mail->send();
+        $mail->reset(array(
             modMail::MAIL_CHARSET => $this->modx->getOption('mail_charset',null,'UTF-8'),
             modMail::MAIL_ENCODING => $this->modx->getOption('mail_encoding',null,'8bit'),
         ));
@@ -484,14 +484,26 @@ class LoginHooks {
      * @return boolean True if email was successfully sent.
      */
     public function math(array $fields = array()) {
-        $mathField = $this->modx->getOption('mathField',$this->login->config,'math');
-        if (empty($fields[$mathField])) { $this->errors[$mathField] = $this->modx->lexicon('register.math_field_nf',array('field' => $mathField)); return false; }
-        $op1Field = $this->modx->getOption('mathOp1Field',$this->login->config,'op1');
-        if (empty($fields[$op1Field])) { $this->errors[$mathField] = $this->modx->lexicon('register.math_field_nf',array('field' => $op1Field)); return false; }
-        $op2Field = $this->modx->getOption('mathOp2Field',$this->login->config,'op2');
-        if (empty($fields[$op2Field])) { $this->errors[$mathField] = $this->modx->lexicon('register.math_field_nf',array('field' => $op2Field)); return false; }
-        $operatorField = $this->modx->getOption('mathOperatorField',$this->login->config,'operator');
-        if (empty($fields[$operatorField])) { $this->errors[$mathField] = $this->modx->lexicon('register.math_field_nf',array('field' => $operatorField)); return false; }
+        $mathField = $this->modx->getOption('mathField', $this->login->config, 'math');
+        if (empty($fields[$mathField]) && $fields[$mathField] !== '0') {
+            $this->errors[$mathField] = $this->modx->lexicon('register.math_field_nf', array('field' => $mathField));
+            return false;
+        }
+        $op1Field = $this->modx->getOption('mathOp1Field', $this->login->config, 'op1');
+        if (empty($fields[$op1Field])) {
+            $this->errors[$mathField] = $this->modx->lexicon('register.math_field_nf', array('field' => $op1Field));
+            return false;
+        }
+        $op2Field = $this->modx->getOption('mathOp2Field', $this->login->config, 'op2');
+        if (empty($fields[$op2Field])) {
+            $this->errors[$mathField] = $this->modx->lexicon('register.math_field_nf', array('field' => $op2Field));
+            return false;
+        }
+        $operatorField = $this->modx->getOption('mathOperatorField', $this->login->config, 'operator');
+        if (empty($fields[$operatorField])) {
+            $this->errors[$mathField] = $this->modx->lexicon('register.math_field_nf', array('field' => $operatorField));
+            return false;
+        }
 
         $answer = false;
         $op1 = (int)$fields[$op1Field];

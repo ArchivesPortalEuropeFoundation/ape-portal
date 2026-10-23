@@ -2,7 +2,8 @@
 /**
  * Login
  *
- * Copyright 2010 by Shaun McCormick <shaun@modx.com>
+ * Copyright 2010 by Jason Coward <jason@modxcms.com> and Shaun McCormick
+ * <shaun@modxcms.com>
  *
  * Login is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the Free
@@ -20,13 +21,13 @@
  * @package login
  */
 /**
- * Change Password English lexicon for Login
+ * Change Password lexicon for Login
  *
  * @package login
  * @subpackage lexicon
  */
 $_lang['login.change_password'] = 'Změna hesla';
-$_lang['login.password_changed'] = 'Password changed.';
+$_lang['login.password_changed'] = 'Heslo změněno.';
 $_lang['login.password_err'] = 'Nesprávné heslo.';
 $_lang['login.password_err_change'] = 'Nastala chyba při změně hesla. Zkontrolujte zadané údaje.';
 $_lang['login.password_invalid_old'] = 'Neplatné původní heslo.';
@@ -34,4 +35,4 @@ $_lang['login.password_new_confirm'] = 'Potvrďte nové heslo';
 $_lang['login.password_new'] = 'Nové heslo';
 $_lang['login.password_no_match'] = 'Hesla nejsou stejná.';
 $_lang['login.password_old'] = 'Původní heslo';
-$_lang['login.password_too_short'] = 'Heslo je příliš krátké! Zadejte prosím heslo o délce nejméně [[+length]] znaků    .';
+$_lang['login.password_too_short'] = 'Heslo je příliš krátké! Zadejte prosím heslo o délce nejméně [[+length]] znaků.';

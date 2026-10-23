@@ -2,7 +2,8 @@
 /**
  * Login
  *
- * Copyright 2010 by Shaun McCormick <shaun@modx.com>
+ * Copyright 2010 by Jason Coward <jason@modxcms.com> and Shaun McCormick
+ * <shaun@modxcms.com>
  *
  * Login is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the Free
@@ -20,18 +21,18 @@
  * @package login
  */
 /**
- * Change Password English lexicon for Login
+ * Change Password lexicon for Login
  *
  * @package login
  * @subpackage lexicon
  */
 $_lang['login.change_password'] = 'Zmień hasło';
 $_lang['login.password_changed'] = 'Hasło zostało zmienione.';
-$_lang['login.password_err'] = 'Incorrect password.';
-$_lang['login.password_err_change'] = 'An error occurred while attempting to change the password. Please review your fields.';
+$_lang['login.password_err'] = 'Nieprawidłowe hasło.';
+$_lang['login.password_err_change'] = 'Wystąpił błąd podczas próby zmiany hasła. Proszę przejrzeć swoje pola.';
 $_lang['login.password_invalid_old'] = 'Nieprawidłowe stare hasło.';
 $_lang['login.password_new_confirm'] = 'Potwierdź nowe hasło';
 $_lang['login.password_new'] = 'Nowe hasło';
-$_lang['login.password_no_match'] = 'Passwords do not match.';
+$_lang['login.password_no_match'] = 'Hasła nie pasują do siebie.';
 $_lang['login.password_old'] = 'Bieżące hasło';
 $_lang['login.password_too_short'] = 'Hasło jest zbyt krótkie, proszę wprowadź hasło, które jest dłuższe niż [[+length]] znaków.';

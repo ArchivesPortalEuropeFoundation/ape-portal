@@ -41,7 +41,7 @@ class LoginResetPasswordController extends LoginController {
             'tplType' => 'modChunk',
             'changePasswordTpl' => 'lgnResetPassChangePassTpl',
             'changePasswordTplType' => 'modChunk',
-            'changePasswordSubmitVar' => 'logcp-submit',
+            'submitVar' => 'logcp-submit',
             'fieldConfirmNewPassword' => 'password_new_confirm',
             'fieldNewPassword' => 'password_new',
             'errTpl' => 'lgnErrTpl',
@@ -51,6 +51,7 @@ class LoginResetPasswordController extends LoginController {
             'autoLogin' => false,
             'forceChangePassword' => false,
             'expiredTpl' => 'lgnExpiredTpl',
+            'expiredTplType' => 'modChunk',
         ));
         $this->modx->lexicon->load('login:profile');
         $this->modx->lexicon->load('login:register');
@@ -63,8 +64,8 @@ class LoginResetPasswordController extends LoginController {
      */
     public function process() {
         $this->getUser();
-        if (empty($this->user)) return $this->modx->getChunk($this->getProperty('expiredTpl'));
-        if (!$this->verifyIdentity()) return $this->modx->getChunk($this->getProperty('expiredTpl'));
+        if (empty($this->user)) return $this->login->getChunk($this->getProperty('expiredTpl'),array(),$this->getProperty('expiredTplType','modChunk'));
+        if (!$this->verifyIdentity()) return $this->login->getChunk($this->getProperty('expiredTpl'),array(),$this->getProperty('expiredTplType','modChunk'));
 
         if ($this->getProperty('forceChangePassword') == true) {
             if (!empty($_POST) && isset($_POST[$this->getProperty('submitVar','logcp-submit')])) {
@@ -203,7 +204,7 @@ class LoginResetPasswordController extends LoginController {
      * @return void
      */
     public function removeSubmitVar() {
-        $submitVar = $this->getProperty('changePasswordSubmitVar','logcp-submit');
+        $submitVar = $this->getProperty('submitVar','logcp-submit');
         if (!empty($submitVar)) {
             $this->dictionary->remove($submitVar);
         }
@@ -266,7 +267,7 @@ class LoginResetPasswordController extends LoginController {
      */
     public function confirmMatchedPasswords() {
         $validated = true;
-        $fieldConfirmNewPassword = $this->getProperty('fieldConfirmNewPassword','password_new_confirm');
+        $fieldConfirmNewPassword = $this->getProperty('fieldConfirmNewPassword');
         /* if using confirm, ensure they match */
         if (!empty($fieldConfirmNewPassword)) {
             $confirmNewPassword = $this->dictionary->get($fieldConfirmNewPassword);

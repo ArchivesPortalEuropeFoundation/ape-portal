@@ -2,7 +2,8 @@
 /**
  * Login
  *
- * Copyright 2010 by Shaun McCormick <shaun@modx.com>
+ * Copyright 2010 by Jason Coward <jason@modxcms.com> and Shaun McCormick
+ * <shaun@modxcms.com>
  *
  * Login is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the Free
@@ -20,12 +21,12 @@
  * @package login
  */
 /**
- * Change Password English lexicon for Login
+ * Change Password lexicon for Login
  *
  * @package login
  * @subpackage lexicon
  */
-$_lang['login.change_password'] = 'Byt lösenord';
+$_lang['login.change_password'] = 'Ändra lösenord';
 $_lang['login.password_changed'] = 'Lösenordet har blivit bytt.';
 $_lang['login.password_err'] = 'Felaktigt lösenord.';
 $_lang['login.password_err_change'] = 'Ett fel uppstod när systemet försökte byta lösenord. Vänligen kontrollera fälten.';

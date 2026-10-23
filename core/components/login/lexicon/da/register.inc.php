@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Register English lexicon for Login
+ * Register lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -33,8 +33,8 @@ $_lang['register.email_invalid_domain'] = 'Din e-mailadresse har et ugyldigt dom
 $_lang['register.email_no_recipient'] = 'Der er ikke angivet nogen modtager af e-mailen.';
 $_lang['register.email_not_sent'] = 'Der skete en fejl under forsøget på at sende e-mailen.';
 $_lang['register.email_taken'] = 'E-mailen "[[+email]]" er allerede i brug. Kontrollér at du ikke allerede er registreret, og hvis ikke, angiv en anden e-mailadresse.';
-$_lang['register.field_not_empty'] = 'Dette felt skal være tomt';
-$_lang['register.field_required'] = 'Dette felt er krævet';
+$_lang['register.field_not_empty'] = 'Dette felt skal være tomt.';
+$_lang['register.field_required'] = 'Dette felt er krævet.';
 $_lang['register.fullname'] = 'Dit fulde navn';
 $_lang['register.math_incorrect'] = 'Forkert svar!';
 $_lang['register.math_field_nf'] = '[[+field]] feltet er ikke angivet i formularen.';
@@ -59,4 +59,5 @@ $_lang['register.use_stronger_password'] = 'Din adgangskode er ikke sikker nok. 
 $_lang['register.user_err_save'] = 'Der skete en fejl under forsøget på at gemme brugeren.';
 $_lang['register.username'] = 'Brugernavn';
 $_lang['register.username_taken'] = 'Brugernavnet er optaget. Vælg venligst et andet.';
-$_lang['register.validation_error_message'] = 'A form validation error occurred. Please check the values you have entered.';
+$_lang['register.username_traversal'] = 'Forsøg på kataloggennemgang i brugernavnet. Vælg venligst et andet brugernavn.';
+$_lang['register.validation_error_message'] = 'Der er opstået en fejl i formularens validering. Kontroller venligst de værdier, du har indtastet.';

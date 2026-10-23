@@ -1,9 +1,49 @@
 Changelog for Login
 ===================
 
+Login 1.9.15
+------------------------------------
+- Add an option to disallow/allow specific usergroups and usergroup role combinations during register, when the user group(s) can be specified with a form field [#186]
+- Disallow the `Administrator` group during register, when the user group(s) can be specified with a form field [#186]
+- Fix warning 'Creation of dynamic property modx is deprecated'
+
+Login 1.9.14
+------------------------------------
+- Fix reported vulnerability [#185]
+
+Login 1.9.13
+------------------------------------
+- Fix not sending emails in MODX 3.x, when the modPHPMailer is initialized before with `$modx->services` instead of `$modx->getService`
+
+Login 1.9.12
+------------------------------------
+- Set primary_group if it is not set when register a new user
+
+Login 1.9.11
+------------------------------------
+- Fix ensurePasswordStrength [#181]
+- Fix loginViaEmail for MODX 3 [#179]
+
+Login 1.9.10
+------------------------------------
+- Log error if mail was not sent [#174]
+- Switched translation to Weblate and removed not translated/less translated lexicon
+
+Login 1.9.9
+------------------------------------
+- Fix validate email addresses in Register [#143]
+
+Login 1.9.8
+------------------------------------
+- Allow persistParams when redirectUnsetDefaultParams is true [#157]
+- Parse file based chunks [#167]
+- Prevent directory traversal in the username when register a new user
+- Fix logging 'Could not load package metadata for package login.' during install
+- Update Translations
+
 Login 1.9.7
 ------------------------------------
-- Generate the password directly with modx->user->generatePassword()
+- Generate the password directly with `modx->user->generatePassword()`
 - Make it possible to set the usergroup rank when register a new user [#135]
 - Set an action in the default password reset form [#134]
 - Update Translations
@@ -143,7 +183,7 @@ Login 1.6.2
 - [#4843] Fix issue with sentTplType not being respected in ForgotPassword
 - [#4936] Fix issue in ForgotPassword that occurred if no user was found with that username
 - [#5019] Add backwards compatibility for Revo 2.0.x users in ResetPassword
-- Fix reference to $this->modx->lexicon in Login Snippet
+- Fix reference to `$this->modx->lexicon` in Login Snippet
 
 Login 1.6.0/1
 ------------------------------------

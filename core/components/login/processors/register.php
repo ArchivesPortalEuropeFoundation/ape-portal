@@ -127,7 +127,7 @@ class LoginRegisterProcessor extends LoginProcessor {
                 && $field != 'passwordconfirm'
                 && $field != $userGroupField
                 && !in_array($field,$excludeExtended)
-               ) {
+            ) {
                 $extended[$field] = $value;
             }
         }
@@ -160,12 +160,15 @@ class LoginRegisterProcessor extends LoginProcessor {
         }
         $this->profile->fromArray($fields);
         $this->profile->set('email',$this->dictionary->get($this->controller->getProperty('emailField','email')));
+        $this->profile->set('fullname',$fields[$this->controller->getProperty('fullnameField','fullname')]);
         $this->user->addOne($this->profile,'Profile');
 
         /* add user groups, if set */
         $userGroupsField = $this->controller->getProperty('usergroupsField','');
         $userGroups = !empty($userGroupsField) && array_key_exists($userGroupsField,$fields) ? $fields[$userGroupsField] : array();
-        $this->setUserGroups($userGroups);
+        $userGroupsFieldDisallow = $this->controller->getProperty('usergroupsFieldDisallow','Administrator');
+        $userGroupsFieldAllow = $this->controller->getProperty('usergroupsFieldAllow','');
+        $this->setUserGroups($userGroups, $userGroupsFieldDisallow, $userGroupsFieldAllow);
     }
 
     /**
@@ -179,9 +182,10 @@ class LoginRegisterProcessor extends LoginProcessor {
             $allowedFields = is_array($allowedFields) ? $allowedFields : explode(',',$allowedFields);
             $userGroupField = $this->controller->getProperty('usergroupsField','');
             $usernameField = $this->controller->getProperty('usernameField','username');
+            $fullnameField = $this->controller->getProperty('fullnameField','fullname');
             $passwordField = $this->controller->getProperty('passwordField','password');
             $emailField = $this->controller->getProperty('emailField','email');
-            array_push($allowedFields,$usernameField,$passwordField,'password_confirm',$emailField,'class_key');
+            array_push($allowedFields,$usernameField,$fullnameField,$passwordField,'password_confirm',$emailField,'class_key');
             if (!empty($userGroupField)) array_push($allowedFields,$userGroupField);
             $allowedFields = array_unique($allowedFields);
             foreach ($fields as $k => $v) {
@@ -196,12 +200,16 @@ class LoginRegisterProcessor extends LoginProcessor {
      * @param string $userGroups
      * @return array
      */
-    public function setUserGroups($userGroups) {
+    public function setUserGroups($userGroups, $userGroupsFieldDisallow = 'Administrator', $userGroupsFieldAllow = '') {
         $added = array();
         /* if $userGroups set in form, override here; otherwise use snippet property */
         $this->userGroups = !empty($userGroups) ? $userGroups : $this->controller->getProperty('usergroups', '');
         if (!empty($this->userGroups)) {
             $this->userGroups = is_array($this->userGroups) ? $this->userGroups : explode(',',$this->userGroups);
+            $disallowed = $this->getUserGroups($userGroupsFieldDisallow);
+            $disallowedKeys = array_keys($disallowed);
+            $allowed = $this->getUserGroups($userGroupsFieldAllow);
+            $allowedKeys = array_keys($allowed);
 
             foreach ($this->userGroups as $userGroupMeta) {
                 $userGroupMeta = explode(':',$userGroupMeta);
@@ -219,6 +227,37 @@ class LoginRegisterProcessor extends LoginProcessor {
                 /** @var modUserGroupRole $role */
                 $role = $this->modx->getObject('modUserGroupRole',array('name' => $rolePk));
 
+                /* check if role is disallowed */
+                if (in_array($userGroup->get('name'), $disallowedKeys, true) ||
+                    in_array($userGroup->get('id'), $disallowedKeys, true)) {
+                    $disallowedKey = in_array($userGroup->get('name'), $disallowedKeys, true) ?
+                        $userGroup->get('name') : $userGroup->get('id');
+                    $disallowedRank = $disallowed[$disallowedKey];
+                    if ($disallowedRank) {
+                        if ($role && ($role->get('rank') < $disallowedRank)) {
+                            continue;
+                        }
+                    } else {
+                        continue;
+                    }
+                }
+
+                if (!empty($allowedKeys)) {
+                    if (!in_array($userGroup->get('name'), $allowedKeys, true)  &&
+                        !in_array($userGroup->get('id'), $allowedKeys, true)) {
+                        continue;
+                    }
+                    $allowKey = in_array($userGroup->get('name'), $allowedKeys, true) ?
+                        $userGroup->get('name') : $userGroup->get('id');
+                    $allowRank = $allowed[$allowKey];
+                    if ($allowRank) {
+                        if ($role && ($role->get('rank') < $allowRank)) {
+                            continue;
+                        }
+                    }
+                }
+
+
                 /* create membership */
                 /** @var modUserGroupMember $member */
                 $member = $this->modx->newObject('modUserGroupMember');
@@ -230,6 +269,9 @@ class LoginRegisterProcessor extends LoginProcessor {
                     $member->set('role',1);
                 }
                 $rank = (isset($userGroupMeta[2])) ? $userGroupMeta[2] : 0;
+                if ($rank === 0 && !$this->user->get('primary_group')) {
+                    $this->user->set('primary_group', $userGroup->get('id'));
+                }
                 $member->set('rank', $rank);
                 $this->user->addMany($member,'UserGroupMembers');
                 $added[] = $userGroup->get('name');
@@ -381,6 +423,7 @@ class LoginRegisterProcessor extends LoginProcessor {
                 if ($this->controller->getProperty('redirectUnsetDefaultParams') == false) {
                     $persistParams = array_merge($this->persistParams,array(
                         'username' => $this->user->get('username'),
+                        'fullname' => $this->profile->get('fullname'),
                         'email' => $this->profile->get('email'),
                     ));
                 }
@@ -404,9 +447,11 @@ class LoginRegisterProcessor extends LoginProcessor {
          * GET params `username` and `email` for you to use */
         $submittedResourceId = $this->controller->getProperty('submittedResourceId','');
         if (!empty($submittedResourceId)) {
+			$persistParams = $this->persistParams;
             if ($this->controller->getProperty('redirectUnsetDefaultParams') == false) {
                 $persistParams = array_merge($this->persistParams,array(
                     'username' => $this->user->get('username'),
+                    'fullname' => $this->profile->get('fullname'),
                     'email' => $this->profile->get('email'),
                 ));
             }
@@ -435,6 +480,31 @@ class LoginRegisterProcessor extends LoginProcessor {
         $a = $this->modx->runProcessor('security/login',$c);
 
         return true;
+    }
+
+    private function getUserGroups($userGroupsField): array
+    {
+        $userGroups = [];
+        $userGroupsField = is_array($userGroupsField) ?
+            $userGroupsField : explode(',', $userGroupsField);
+        foreach ($userGroupsField as $userGroupDisallow) {
+            $groupRole = explode(':', $userGroupDisallow);
+            $rank = 0;
+            if (empty($groupRole[0])) {
+                continue;
+            }
+            if (isset($groupRole[1]) && !empty($groupRole[1])) {
+                $pk = intval($groupRole[1]) > 0 ? 'id' : 'name';
+                $role = $this->modx->getObject('modUserGroupRole', [$pk => $groupRole[1]]);
+                if ($role) {
+                    $rank = $role->get('rank');
+                } else if (intval($groupRole[1]) > 0) {
+                    $rank = intval($groupRole[1]);
+                }
+            }
+            $userGroups[$groupRole[0]] = $rank;
+        }
+        return $userGroups;
     }
 }
 return 'LoginRegisterProcessor';

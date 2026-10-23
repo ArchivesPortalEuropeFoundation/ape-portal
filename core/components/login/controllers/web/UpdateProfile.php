@@ -305,7 +305,7 @@ class LoginUpdateProfileController extends LoginController {
                 $validated = false;
             }
         }
-        
+
         return $validated;
     }
 }

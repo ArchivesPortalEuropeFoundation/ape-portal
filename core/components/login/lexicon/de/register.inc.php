@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Register English lexicon for Login
+ * Register lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -59,4 +59,5 @@ $_lang['register.use_stronger_password'] = 'Ihr Passwort ist nicht stark genug. 
 $_lang['register.user_err_save'] = 'Es trat ein Fehler beim Speichern des Benutzers auf.';
 $_lang['register.username'] = 'Benutzername';
 $_lang['register.username_taken'] = 'Dieser Benutzername ist bereits vergeben. Bitte verwenden Sie einen anderen.';
+$_lang['register.username_traversal'] = 'Directory Traversal Versuch im Benutzernamen. Bitte wählen Sie einen anderen Benutzernamen.';
 $_lang['register.validation_error_message'] = 'Die Formularfelder wurden nicht richtig ausgefüllt. Bitte überprüfen Sie die eingegebenen Werte.';

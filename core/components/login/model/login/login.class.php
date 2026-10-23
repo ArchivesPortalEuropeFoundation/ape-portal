@@ -31,11 +31,13 @@ class Login {
     const MODE_LOGOUT = 'logout';
     const REGISTER_MODERATE = 'register.moderate';
 
+    /** @var modX $modx */
+    public $modx;
     /** @var LoginController $controller */
     public $controller;
     /** @var boolean $inTestMode */
     public $inTestMode = false;
-    
+
     /**
      * Creates an instance of the Login class.
      *
@@ -52,7 +54,6 @@ class Login {
             'corePath' => $corePath,
             'modelPath' => $corePath.'model/',
             'processorsPath' => $corePath.'processors/',
-            'testsPath' => $corePath.'test/',
         ),$config);
         $this->modx->lexicon->load('login:default');
     }
@@ -158,22 +159,27 @@ class Login {
         }
 
 
-        $this->modx->getService('mail', 'mail.modPHPMailer');
-        $this->modx->mail->set(modMail::MAIL_BODY, $msg);
-        $this->modx->mail->set(modMail::MAIL_FROM, $this->modx->getOption('emailsender'));
-        $this->modx->mail->set(modMail::MAIL_FROM_NAME, $this->modx->getOption('site_name'));
-        $this->modx->mail->set(modMail::MAIL_SENDER, $this->modx->getOption('emailsender'));
-        $this->modx->mail->set(modMail::MAIL_SUBJECT, $subject);
+        $mail = $this->modx->getService('mail', 'mail.modPHPMailer');
+        $mail->set(modMail::MAIL_BODY, $msg);
+        $mail->set(modMail::MAIL_FROM, $this->modx->getOption('emailFrom', $properties, $this->modx->getOption('emailsender'), true));
+        $mail->set(modMail::MAIL_FROM_NAME, $this->modx->getOption('emailFromName', $properties, $this->modx->getOption('site_name'), true));
+        $mail->set(modMail::MAIL_SENDER, $this->modx->getOption('emailSender', $properties, $this->modx->getOption('emailsender'), true));
+        $mail->set(modMail::MAIL_SUBJECT, $subject);
         if (!empty($msgAlt)) {
-            $this->modx->mail->set(modMail::MAIL_BODY_TEXT, $msgAlt);
+            $mail->set(modMail::MAIL_BODY_TEXT, $msgAlt);
         }
-        $this->modx->mail->address('to', $email, $name);
-        $this->modx->mail->address('reply-to', $this->modx->getOption('emailsender'));
-        $this->modx->mail->setHTML(true);
+        $mail->address('to', $email, $name);
+        $replyTo = $this->modx->getOption('emailReplyTo', $properties);
+        if (!empty($replyTo)) {
+            $mail->address('reply-to', $replyTo);
+        }
+        $mail->setHTML(true);
         if ($this->inTestMode) return true;
-        $sent = $this->modx->mail->send();
-        $this->modx->mail->reset();
-
+        $sent = $mail->send();
+        if (!$sent) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, '[Login] '.$this->modx->lexicon('register.email_not_sent').' '.print_r($mail->mailer->ErrorInfo, true));
+        }
+        $mail->reset();
 
         return $sent;
     }
@@ -210,8 +216,12 @@ class Login {
                     $this->modx->getOption('assets_path'),
                     $this->modx->getOption('core_path'),
                 ),$name);
-                $output = file_get_contents($name);
                 $this->modx->setPlaceholders($properties);
+
+                $chunk = $this->modx->newObject('modChunk');
+                $chunk->setContent(file_get_contents($name));
+                $chunk->setCacheable(false);
+                $output = $chunk->process($properties);
                 break;
             case 'inline':
             default:
@@ -251,21 +261,21 @@ class Login {
      */
     public function encodeParams($params) {
         if (is_array($params)) {
-            $params = serialize($params);
+            $params = json_encode($params);
         } else {
-            $params = serialize(array($params));
+            $params = json_encode(array($params));
         }
         return strtr(base64_encode($params), '+/=', '-_,');
     }
 
     /**
      * Decode a serialized, encoded param string
-     * 
+     *
      * @param string $params
      * @return array
      */
     public function decodeParams($params) {
-        return unserialize(base64_decode(strtr($params, '-_,', '+/=')));
+        return json_decode(base64_decode(strtr($params, '-_,', '+/=')), true);
     }
 
     /**
@@ -275,10 +285,10 @@ class Login {
      * @param string $str
      * @return string
      */
-    public function base64url_encode($str) { 
-        return rtrim(strtr(base64_encode($str), '+/', '-_'), '='); 
-    } 
-    
+    public function base64url_encode($str) {
+        return rtrim(strtr(base64_encode($str), '+/', '-_'), '=');
+    }
+
     /**
      * Decodes an URL safe encoded string
      *
@@ -286,8 +296,8 @@ class Login {
      * @param string $str
      * @return string
      */
-    public function base64url_decode($str) { 
-        return base64_decode(str_pad(strtr($str, '-_', '+/'), strlen($str) % 4, '=', STR_PAD_RIGHT)); 
+    public function base64url_decode($str) {
+        return base64_decode(str_pad(strtr($str, '-_', '+/'), strlen($str) % 4, '=', STR_PAD_RIGHT));
     }
 
     /**

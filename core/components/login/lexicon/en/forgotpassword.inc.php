@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Forgot Password English lexicon for Login
+ * Forgot Password lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -40,5 +40,5 @@ $_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
 $_lang['login.or_forgot_username'] = 'Or, forgot your username?';
 $_lang['login.reset_password'] = 'Reset Password';
 $_lang['login.username'] = 'Username';
-$_lang['login.user_err_nf_email'] = 'If the user or email exists, you\'ll receive an email shortly.';
-$_lang['login.user_err_nf_username'] = 'If the user or email exists, you\'ll receive an email shortly.';
+$_lang['login.user_err_nf_email'] = 'If the user or email exists, you’ll receive an email shortly.';
+$_lang['login.user_err_nf_username'] = 'If the user or email exists, you’ll receive an email shortly.';

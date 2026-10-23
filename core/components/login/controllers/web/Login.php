@@ -87,7 +87,7 @@ class LoginLoginController extends LoginController {
 
         $this->modx->setPlaceholder('actionMsg', $actionMsg);
         $phs = $this->isAuthenticated ? $this->getProperties() : array_merge($this->getProperties(), $_POST);
-
+        
         /* make sure to strip out logout GET parameter to prevent ghost logout */
         $logoutKey = $this->getProperty('logoutKey','logout');
         if (!$redirectToPrior) {
@@ -168,7 +168,7 @@ class LoginLoginController extends LoginController {
     public function handleRequest() {
         $this->loadDictionary();
         $actionKey = $this->getProperty('actionKey','service');
-
+        
         if (!empty($_POST) && isset($_POST[$actionKey]) && !$this->isAuthenticated) {
             if ($_POST[$actionKey] == $this->getProperty('loginKey','login')) {
                 $this->login();
@@ -184,7 +184,7 @@ class LoginLoginController extends LoginController {
 
     /**
      * Handle a Login submission
-     *
+     * 
      * @return void
      */
     public function login() {
@@ -227,7 +227,7 @@ class LoginLoginController extends LoginController {
                     $this->redirectAfterLogin($response);
                 }
 
-                /* login failed, output error */
+            /* login failed, output error */
             } else {
                 $this->checkForRedirectOnFailedAuth($response);
                 $errorOutput = $this->prepareFailureMessage($response,$this->modx->lexicon('login.login_err'));
@@ -238,12 +238,12 @@ class LoginLoginController extends LoginController {
 
     /**
      * Run any preHooks before logging in
-     *
+     * 
      * @return boolean
      */
     public function runPreLoginHooks() {
         $success = true;
-
+        
         /* do pre-login hooks */
         $this->loadHooks('preHooks');
         $this->preHooks->loadMultiple($this->getProperty('preHooks',''),$this->dictionary->toArray(),array(
@@ -277,7 +277,7 @@ class LoginLoginController extends LoginController {
      */
     public function runLoginProcessor() {
         $loginViaEmail = $this->getProperty('loginViaEmail', false);
-
+        
         $fields = $this->dictionary->toArray();
         /* send to login processor and handle response */
         $properties = array(
@@ -366,7 +366,7 @@ class LoginLoginController extends LoginController {
 
     /**
      * Run any postHooks specified after the user has logged in
-     *
+     * 
      * @param modProcessorResponse $response
      * @return void
      */
@@ -389,7 +389,7 @@ class LoginLoginController extends LoginController {
 
     /**
      * Redirect the user after logging them in
-     *
+     * 
      * @param modProcessorResponse $response
      * @return void
      */
@@ -445,7 +445,7 @@ class LoginLoginController extends LoginController {
                 }
                 $this->redirectAfterLogout($response);
 
-                /* logout failed, output error */
+            /* logout failed, output error */
             } else {
                 $errorOutput = $this->prepareFailureMessage($response,$this->modx->lexicon('login.logout_err'));
                 $this->modx->setPlaceholder('errors', $errorOutput);
@@ -492,7 +492,7 @@ class LoginLoginController extends LoginController {
      */
     public function runPostLogoutHooks(modProcessorResponse $response) {
         $success = true;
-
+        
         /* do post hooks for logout */
         $postHooks = $this->getProperty('postHooks','');
         $this->loadHooks('postHooks');
@@ -530,7 +530,7 @@ class LoginLoginController extends LoginController {
 
     /**
      * Redirect the user after they logout
-     *
+     * 
      * @param modProcessorResponse $response
      * @return void
      */

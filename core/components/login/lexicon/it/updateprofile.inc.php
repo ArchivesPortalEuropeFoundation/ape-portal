@@ -21,25 +21,25 @@
  * @package login
  */
 /**
- * Update Profile English lexicon for Login
+ * Update Profile lexicon for Login
  *
  * @package login
  * @subpackage lexicon
  */
 $_lang['login.address'] = 'Indirizzo';
 $_lang['login.city'] = 'Città';
-$_lang['login.country'] = 'Stato';
-$_lang['login.email'] = 'Email';
-$_lang['login.email_taken'] = 'L\'e-mail "[[+email]]" è già in uso. Assicurarsi che non si è ancora registrati, e in caso contrario, si prega di specificare un altro indirizzo e-mail.';
+$_lang['login.country'] = 'Paese';
+$_lang['login.email'] = 'E-mail';
+$_lang['login.email_taken'] = 'L’e-mail "[[+email]]" è già in uso. Assicurarsi che non si è ancora registrati, e in caso contrario, si prega di specificare un altro indirizzo e-mail.';
 $_lang['login.fax'] = 'Fax';
 $_lang['login.fullname'] = 'Nome completo';
 $_lang['login.mobilephone'] = 'Cellulare';
 $_lang['login.phone'] = 'Telefono';
 $_lang['login.profile_err_nf'] = 'Profilo non trovato!';
-$_lang['login.profile_err_save'] = 'Si è verificato un errore sconosciuto durante il tentativo di aggiornare il profilo';
+$_lang['login.profile_err_save'] = 'Si è verificato un errore sconosciuto durante il tentativo di aggiornare il profilo.';
 $_lang['login.profile_updated'] = 'Profilo aggiornato.';
 $_lang['login.state'] = 'Stato';
 $_lang['login.update_profile'] = 'Profile aggiornato';
 $_lang['login.username_err_ae'] = 'Nome utente già in uso. Prego specificarne un altro.';
-$_lang['login.website'] = 'Website';
+$_lang['login.website'] = 'Sito web';
 $_lang['login.zip'] = 'CAP';

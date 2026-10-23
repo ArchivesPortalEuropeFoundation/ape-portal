@@ -215,6 +215,9 @@ class LoginRegisterController extends LoginController {
         /* ensure username field exists and isn't empty */
         if (empty($username) && !$this->validator->hasErrorsInField($usernameField)) {
             $this->validator->addError($usernameField,$this->modx->lexicon('register.field_required'));
+            $success = false; }
+        elseif (strpos($username, '../') !== false) {
+            $this->validator->addError($usernameField,$this->modx->lexicon('register.username_traversal'));
             $success = false;
         } else {
             /* make sure username isnt taken */
@@ -439,12 +442,13 @@ class LoginRegisterController extends LoginController {
      */
     public function getPossibleStrongerPasswords($password) {
         $passwordLength = strlen($password);
-        if ($passwordLength == 1) return isset($this->strongPasswordMap[$password]) ? $this->strongPasswordMap[$password] : $password;
+        if ($passwordLength == 0) return array();
+        if ($passwordLength == 1) return isset($this->strongPasswordMap[$password]) ? $this->strongPasswordMap[$password] : array($password);
 
         $rest = $this->getPossibleStrongerPasswords(substr($password,1));
         $restLength = count($rest);
 
-        $current = isset($this->strongPasswordMap[$password[0]]) ? $this->strongPasswordMap[$password[0]] : null;
+        $current = isset($this->strongPasswordMap[$password[0]]) ? $this->strongPasswordMap[$password[0]] : array();
         $currentLength = count($current);
         $result = array();
 

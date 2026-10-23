@@ -2,7 +2,8 @@
 /**
  * Login
  *
- * Copyright 2010 by Shaun McCormick <shaun@modx.com>
+ * Copyright 2010 by Jason Coward <jason@modxcms.com> and Shaun McCormick
+ * <shaun@modxcms.com>
  *
  * Login is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the Free
@@ -20,7 +21,7 @@
  * @package login
  */
 /**
- * Change Password English lexicon for Login
+ * Change Password lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -28,10 +29,10 @@
 $_lang['login.change_password'] = 'Изменить Пароль';
 $_lang['login.password_changed'] = 'Пароль изменен.';
 $_lang['login.password_err'] = 'Неправильный пароль.';
-$_lang['login.password_err_change'] = 'Во время изменения пароля возникла ошибка. Проверьте заполнение полей.';
+$_lang['login.password_err_change'] = 'Во время изменения пароля возникла ошибка. Проверьте правильность заполнение полей.';
 $_lang['login.password_invalid_old'] = 'Неправильный старый пароль.';
-$_lang['login.password_new_confirm'] = 'Подтвердить новый пароль';
-$_lang['login.password_new'] = 'Новый Пароль';
+$_lang['login.password_new_confirm'] = 'Подтвердите новый пароль';
+$_lang['login.password_new'] = 'Новый пароль';
 $_lang['login.password_no_match'] = 'Пароли не совпадают.';
 $_lang['login.password_old'] = 'Старый пароль';
-$_lang['login.password_too_short'] = 'Пароль слишком короткий! Пожалуйста, выберите пароль хотя бы длиной [[+length]].';
+$_lang['login.password_too_short'] = 'Пароль слишком короткий! Пожалуйста, укажите пароль длиной не менее [[+length]] символов.';
