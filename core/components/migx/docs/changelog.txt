@@ -1,5 +1,34 @@
 Changelog for MIGX.
 
+MIGX 3.0.2
+==========
+fix some MODX 3 and PHP 8 compatibility and more issues
+
+MIGX 2.13.0
+==============
+add snippet migxGetObject and property toPlaceholders
+add property createChunk to create a chunk with all possible placeholders
+Fix imageupload on PHP7 due to stray break statement
+Fix for missing custom prefix in some packagemanager tasks
+Updated image paths to use dynamic assets path
+Fix the export if a join setting exist
+Finnish Translation
+add userid to migxResourceMediapath snippet
+remove duplicate sort scriptProperty in export.php
+[getlist.php] add getcustomconfigs - hook, groupby, selectfields, specialfields
+parse MODX-tags in field-configs
+packagemanager fix new folder permission
+Use a textarea instead of an input in MIGX TV
+Reduce indexed varchar fields for utf8mb4 support in mysql
+fix duplicate entries in csv-export
+Add CSV Import functionality
+Improve CSV Export functionality
+add toJson property to migxLoopCollection
+Fix transparency in .png in renderimage column renderer
+Optimize loadfromxource functionality, especially for MIGX within MIGXdb
+deep nested saving when nested windows are open and saving without closing the window
+export/import single MIGX - items
+
 MIGX 2.12.0
 ==============
 select db-fields from defined class and its joins for formtabs and columns

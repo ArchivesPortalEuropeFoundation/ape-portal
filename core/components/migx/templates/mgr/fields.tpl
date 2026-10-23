@@ -7,7 +7,7 @@
 <input type="hidden" class="mulititems_grid_item_fields" name="mulititems_grid_item_fields" value='{$fields|escape}' />
 <input type="hidden" class="tvmigxid" name="tvmigxid" value='{$migxid|default}' />
 
-
+    {assign var="opentabs" value="1"}
     {foreach from=$categories item=category name=cat}
         {if count($category.layouts) > 0}
             {if isset($formnames) && count($formnames) > 0}
@@ -70,9 +70,17 @@
                     </script>    
                 {/if}
             {/if}
-            {if count($categories) > 1 AND !$category.print_before_tabs}
-            <div id="modx-window-mi-grid-update-{$win_id}-tabs">    
+            
+            {if count($categories) < 2 OR ($smarty.foreach.cat.first AND $category.print_before_tabs)}
+            {assign var="opentabs" value="0"}
             {/if}
+            {if $opentabs=="1"}
+            <div id="modx-window-mi-grid-update-{$win_id}-tabs">
+            {assign var="opentabs" value="0"}
+            {/if}
+            {if count($categories) > 1 AND $smarty.foreach.cat.first AND $category.print_before_tabs}
+            {assign var="opentabs" value="1"}
+            {/if}            
             {if count($categories) < 2 OR ($smarty.foreach.cat.first AND $category.print_before_tabs)}
             <div id="modx-tv-tab{$category.id}" >
             {else}
@@ -108,7 +116,19 @@
                                             {$tv->get('formElement')}
                                         </div>
                                      </div>
-                                    <script type="text/javascript">{literal}Ext.onReady(function() { new Ext.ToolTip({{/literal}target: 'tv{$tv->id}-caption',html: '[[*{$tv->name}]]'{literal}});});{/literal}</script>
+                                    <script type="text/javascript">
+                                        var migx_fields = {$fields};
+                                        var migx_field = migx_fields.find(item => item.tv_id == '{$tv->id}');
+                                        {literal}
+                                        Ext.onReady(function() { 
+                                            new Ext.ToolTip({
+                                                {/literal}
+                                                target: 'tv{$tv->id}-caption',
+                                                html: '[[+'+migx_field.field+']]'{literal}
+                                            });}
+                                        );{/literal}
+                                    </script>
+ 
                                 {else}
                                     <input type="hidden" id="tvdef{$tv->id}" value="{$tv->default_text|escape}" />
                                     {$tv->get('formElement')}
@@ -152,8 +172,6 @@ Ext.onReady(function() {
     var win = Ext.getCmp('{/literal}modx-window-mi-grid-update-{$win_id}{literal}');    
     win.tabs = tabs;
     
-	{/literal}{if $tvcount GT 0}{literal}
-    {/literal}{/if}{literal}
 });    
 // ]]>
 </script>

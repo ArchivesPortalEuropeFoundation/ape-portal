@@ -20,6 +20,7 @@ class migxInputRender extends modTemplateVarInputRender {
         require_once dirname(dirname(dirname(__file__)))  . '/model/migx/migx.class.php';
         $this->migx = new Migx($this->modx, $properties);
         /* get input-tvs */
+        $this->migx->config['tvname'] = $this->tv->get('name');           
         $this->migx->loadConfigs();
 
         //$default_formtabs = '[{"caption":"Default", "fields": [{"field":"title","caption":"Title"}]}]';
@@ -37,7 +38,7 @@ class migxInputRender extends modTemplateVarInputRender {
         //$inputTvs = $this->migx->extractInputTvs($formtabs);
 
         /* get base path based on either TV param or filemanager_path */
-        $this->modx->getService('fileHandler', 'modFileHandler', '', array('context' => $this->modx->context->get('key')));
+        //$this->modx->getService('fileHandler', 'modFileHandler', '', array('context' => $this->modx->context->get('key')));
 
         $resource_array = array();
         $resource_id = 0;

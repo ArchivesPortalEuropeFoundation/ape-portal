@@ -34,7 +34,12 @@ MODx.window.UpdateTvdbItem = function(config) {
     MODx.window.UpdateTvdbItem.superclass.constructor.call(this,config);
     this.options = config;
     this.config = config;
-
+    this.parent_window = null;
+    {/literal}
+    {if array_key_exists('window_id',$smarty.request)}
+        this.parent_window = '{$smarty.request.window_id}';
+    {/if}
+    {literal}
     //this.on('show',this.onShow,this);
     this.on('hide',this.onHideWindow,this);
     this.on('resize',this.onResizeWindow,this);
@@ -108,10 +113,35 @@ Ext.extend(MODx.window.UpdateTvdbItem,Ext.Window,{
             //we store the item.values to rec.json because perhaps sometimes we can have different fields for each record
         } 
         return item        
-    }
-    ,submit: function() {
+    },
+    submit:function() {
+        this.hideOnSubmit=true;
+        this.saveDeepOnSubmit = false;
+        this.doSubmit();
+    },
+    submitUnclosed:function(btn,event,from_child_window) {
+        var from_child = from_child_window || false;
+        this.saveDeepOnSubmit = true;
+        if (this.action == 'u'){
+            this.hideOnSubmit=false;    
+        } else {
+            this.hideOnSubmit=true;//close in any case, if a new item!
+        }
+        if (from_child){
+            this.hideOnSubmit=false;//dont hide, if called from child window
+            if (this.action == 'u'){
+                    
+            } else {
+                return;//dont save, if called from child and if a new item!
+            }                
+        }
+        
+        this.doSubmit();
+    }    
+    ,doSubmit: function() {
         var object_id = this.baseParams.object_id;
-               
+        var action = 'mgr/migxdb/update'; 
+        var processaction = '';      
         if (this.action == 'd'){
             MODx.fireResourceFormChange();
             object_id = 'new';     
@@ -120,15 +150,26 @@ Ext.extend(MODx.window.UpdateTvdbItem,Ext.Window,{
             /*update record*/
         }else{
             /*append record*/
-        }        
+        }
+        
+        if (this.baseParams.tempParams == 'importcsv'){
+            action = 'mgr/migxdb/process';
+            processaction = 'importcsv';            
+        } 
+        if (this.baseParams.tempParams == 'exportcsv'){
+            action = 'mgr/migxdb/process';
+            processaction = 'exportcsv';            
+        }                        
         
         if (this.fp.getForm().isValid()) {
-			var item = this.getFormValues();		
+			var item = this.getFormValues();
+            var tempParams = this.baseParams.tempParams || '';		
             //console.log(this.config);
             MODx.Ajax.request({
                 url: this.grid.url
                 ,params: {
-                    action: 'mgr/migxdb/update'
+                    action: action
+                    ,processaction: processaction
                     ,data: Ext.util.JSON.encode(item)
 				    ,configs: this.grid.configs
                     ,resource_id: this.grid.resource_id
@@ -136,10 +177,15 @@ Ext.extend(MODx.window.UpdateTvdbItem,Ext.Window,{
                     ,object_id: object_id
                     ,tv_id: this.baseParams.tv_id
                     ,wctx: this.baseParams.wctx
-                    ,tempParams: this.baseParams.tempParams || ''
+                    ,tempParams: tempParams
                 }
                 ,listeners: {
-                    'success': {fn:this.onSubmitSuccess,scope:this}
+                    'success':{fn:function(r) {
+                        if (r.object && typeof(r.object.download_filename) != 'undefined'){
+                            location.href = this.grid.url+'?action='+action+'&configs='+this.grid.configs+'&processaction='+processaction+'&download='+r.object.download_filename+'&id='+id+'&HTTP_MODAUTH=' + MODx.siteId;
+                        }
+                        return this.onSubmitSuccess(r);
+                    },scope:this}                    
                     ,'failure':{fn:function(r) {
                         return this.fireEvent('failure',r);
                     },scope:this}
@@ -149,12 +195,22 @@ Ext.extend(MODx.window.UpdateTvdbItem,Ext.Window,{
         }
         return false;
     },
-    onSubmitSuccess: function(){
+    onSubmitSuccess: function(r){
             this.grid.refresh();
             //this.grid.collectItems();
             //this.onDirty();
             this.fp.getForm().reset();
-            this.hide();
+            if (this.hideOnSubmit){
+                this.hide();
+            } 
+            if (this.saveDeepOnSubmit){
+               if (this.parent_window){
+                   var parent_window = Ext.getCmp(this.parent_window);
+                   if (typeof(parent_window.submitUnclosed) != 'undefined'){
+                       parent_window.submitUnclosed(null,null,true);
+                   } 
+               }
+            }
             return true;
     },
     _loadForm: function() {
@@ -224,6 +280,7 @@ Ext.extend(MODx.window.UpdateTvdbItem,Ext.Window,{
     }
     
     ,onShow: function() {
+        //console.log(this);
         //console.log('onshow');
         if (this.fp.isloading) return;
         //console.log('onshow2');
@@ -231,6 +288,14 @@ Ext.extend(MODx.window.UpdateTvdbItem,Ext.Window,{
         this.fp.autoLoad.params.record_json=this.baseParams.record_json;
         this.fp.doAutoLoad();
     }
+    ,getParentWindows(){
+        
+    }
+    ,setParentWindows(){
+            
+    }
+    
+    
 
 });
 Ext.reg('modx-window-tv-dbitem-update-{/literal}{$win_id}{literal}',MODx.window.UpdateTvdbItem);
@@ -260,13 +325,15 @@ MODx.panel.MidbGridUpdate{/literal}{$win_id}{literal} = function(config) {
 Ext.extend(MODx.panel.MidbGridUpdate{/literal}{$win_id}{literal},MODx.FormPanel,{
     autoload: function(config) {
 		this.isloading=true;
-        var self = this; 
+        var self = this;
+        var baseParams = config.baseParams;
+        baseParams.window_id = '{/literal}modx-window-mi-grid-update-{$win_id}{literal}'; 
         
 		return a = {
             url: '{/literal}{$config.connectorUrl}{literal}'
             //url: config.url
 			,method: 'POST'
-            ,params: config.baseParams
+            ,params: baseParams
             ,scripts: true
             ,callback: function() {
 				self.isloading=false;
@@ -312,6 +379,7 @@ Ext.extend(MODx.panel.MidbGridUpdate{/literal}{$win_id}{literal},MODx.FormPanel,
 		//this.width='1000px';
 		//this.syncSize();
 		//this.popwindow.syncSize();
+ 
 		return '';
 	 }
 });

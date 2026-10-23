@@ -22,11 +22,11 @@ if (!empty($config['packageName'])) {
         $xpdo = $modx->migx->getXpdoInstanceAndAddPackage($config);
     } else {
         //all packages must have the same prefix for now!
-        foreach ($packageNames as $packageName) {
-            $packagepath = $modx->getOption('core_path') . 'components/' . $packageName . '/';
+        foreach ($packageNames as $p) {
+            $packagepath = $modx->getOption('core_path') . 'components/' . $p . '/';
             $modelpath = $packagepath . 'model/';
             if (is_dir($modelpath)) {
-                $modx->addPackage($packageName, $modelpath, $prefix);
+                $modx->addPackage($p, $modelpath, $prefix);
             }
 
         }
@@ -47,7 +47,12 @@ $classname = $config['classname'];
 
 $joinalias = isset($config['join_alias']) ? $config['join_alias'] : '';
 
-$joins = isset($config['joins']) && !empty($config['joins']) ? $modx->fromJson($config['joins']) : false;
+$joins = false;
+$export_joins = '';
+if (isset($config['joins']) && !empty($config['joins'])){
+    $joins =  $modx->fromJson($config['joins']);
+    $export_joins = $config['joins'];    
+}
 
 if (!empty($joinalias)) {
     if ($fkMeta = $xpdo->getFKDefinition($classname, $joinalias)) {
@@ -66,8 +71,8 @@ if (empty($scriptProperties['object_id']) || $scriptProperties['object_id'] == '
     $c = $xpdo->newQuery($classname, $scriptProperties['object_id']);
     $pk = $xpdo->getPK($classname);
     $c->select('
-        `' . $classname . '`.*,
-    	`' . $classname . '`.`' . $pk . '` AS `object_id`
+        `' . $c->getAlias() . '`.*,
+    	`' . $c->getAlias() . '`.`' . $pk . '` AS `object_id`
     ');
     if (!empty($joinalias)) {
         $c->leftjoin($joinclass, $joinalias);
@@ -89,6 +94,52 @@ if ($object) {
 } else {
     $record = array();
 }
+
+$tempParams = $modx->getOption('tempParams',$scriptProperties,'');
+if ($tempParams == 'importcsv'){
+    
+    $settingName = $modx->getOption('core_path') . 'components/' . $packageName . '/import/' . $classname . '.settings.js';
+    $defaultSettingName = $modx->getOption('core_path') . 'components/' . $packageName . '/import/' . $classname . '.default_settings.js';
+    if (file_exists($settingName)){
+        $record = json_decode(file_get_contents($settingName),true);
+    } elseif (file_exists($defaultSettingName)){
+        $record = json_decode(file_get_contents($defaultSettingName),true);    
+    }
+    $defaultfile = str_replace($modx->getOption('base_path'),'',$modx->getOption('core_path')) . 'components/' . $packageName . '/import/' . $classname . '.csv';
+    $record['file'] = isset($record['file']) && !empty($record['file']) ? $record['file'] : $defaultfile ;
+    if (isset($record['settings'])){
+        if (!is_array($record['settings'])){
+            $record['settings'] = array($record['settings']);
+        }
+        $record['settings'] = array_diff($record['settings'],array('save_settings'));    
+    }
+}
+if ($tempParams == 'exportcsv'){
+    $record = array();
+    $settingName = $modx->getOption('core_path') . 'components/' . $packageName . '/import/' . $classname . '.default_settings.js';
+    if (file_exists($settingName)){
+        $import_record = json_decode(file_get_contents($settingName),true);
+        if (is_array($import_record)){
+            foreach ($import_record as $key => $value){
+                $record['import_' . $key] = $value;
+            }
+        }
+    }
+   
+    $defaultfile = str_replace($modx->getOption('base_path'),'',$modx->getOption('core_path')) . 'components/' . $packageName . '/import/' . $classname . '.csv';
+    $record['import_file'] = isset($record['import_file']) && !empty($record['import_file']) ? $record['import_file'] : $defaultfile ;
+    $defaultfile = str_replace($modx->getOption('base_path'),'',$modx->getOption('core_path')) . 'components/' . $packageName . '/export/' . $classname . '.csv';
+    $record['export_file'] = isset($record['export_file']) && !empty($record['export_file']) ? $record['export_file'] : $defaultfile ;    
+    if (isset($record['import_settings'])){
+        if (!is_array($record['import_settings'])){
+            $record['import_settings'] = array($record['import_settings']);
+        }        
+        $record['import_settings'] = array_diff($record['import_settings'],array('save_settings'));    
+    }
+    $record['export_joins'] = $export_joins;
+   
+}
+
 
 //$hooksnippet_aftergetfields = 'viacor_aftergetfields';
 if (!empty($hooksnippet_aftergetfields)) {
@@ -114,3 +165,5 @@ foreach ($record as $field => $fieldvalue) {
         }
     }
 }
+
+$modx->migx->record_fields = $record;

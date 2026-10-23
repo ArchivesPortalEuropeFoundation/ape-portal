@@ -46,7 +46,7 @@ $mf_options = array();
 $mf_options[] = '---==0';
 $classname = 'migxConfig';
 $c = $this->modx->newQuery($classname);
-$c->select($this->modx->getSelectColumns($classname, $classname, '', array('id', 'name')));
+$c->select($this->modx->getSelectColumns($classname, $c->getAlias(), '', array('id', 'name')));
 $c->sortby('name');
 if ($collection = $this->modx->getCollection($classname, $c)) {
     foreach ($collection as $object) {
@@ -180,6 +180,20 @@ if (!empty($_REQUEST['tempParams']) && $_REQUEST['tempParams'] == 'export_import
     {"field":"extended.cmptabcaption","caption":"Tab Caption"},
     {"field":"extended.cmptabdescription","caption":"Tab Description"},
     {"field":"extended.cmptabcontroller","caption":"Custom Tab Controller"}
+]},
+{"caption":"Permissions", "fields": [
+    {"field":"permissions.apiaccess","caption":"Api Access Permission"},
+    {"field":"permissions.view","caption":"View Permission"},
+    {"field":"permissions.list","caption":"List Permission"},
+    {"field":"permissions.save","caption":"Save Permission"},
+    {"field":"permissions.create","caption":"Create Permission"},
+    {"field":"permissions.remove","caption":"Permission to remove object permanently"},
+    {"field":"permissions.delete","caption":"Permission to set object as deleted"},
+    {"field":"permissions.publish","caption":"Permission to publish object"},
+    {"field":"permissions.unpublish","caption":"Permission to unpublish object"},
+    {"field":"permissions.viewdeleted","caption":"Permission to view deleted objects"},
+    {"field":"permissions.viewunpublished","caption":"Permission to view unpublished objects"}
+
 ]},
 {"caption":"MIGXfe-Settings", "fields": [
     {"field":"extended.winbuttons","caption":"Window Buttons","inputTVtype":"textarea","description":"js-code, running on window-creation. See migxfe/templates/web/form/form.tpl and winbuttons.tpl"},

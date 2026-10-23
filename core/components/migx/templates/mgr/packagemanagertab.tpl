@@ -14,6 +14,7 @@
         id: 'migx_packagemanager_form',
         standardSubmit: true,
         url: config.src,
+        cls:'main-wrapper',
         items: [{
             xtype: 'textfield',
             name: 'packageName',
@@ -54,19 +55,21 @@
                     autoHeight: true
                 },
                 items: [{
-                    html: '<p>Create new package-directory and an empty schema-file with <strong>Create Package</strong></p><p>Add this package to Extension-Packages with <strong>Add Extension Package</strong></p>',
+                    html: '<p>Create new package-directory and an empty schema-file with <strong>Create Package</strong></p><p>Add this package to Extension-Packages with <strong>Add Extension Package</strong></p><p>In MODX 3, you don\'t need an Extension Package. MIGX creates a bootstrap.php file, which adds the package on each request.</p>',
                     bodyCssClass: 'panel-desc',
                     border: false
                 },
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('createPackage')},
+                    cls: 'primary-button migxcmp-button',
                     text: 'Create Package',
                     scope: this
                 },
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('addExtensionPackage')},
+                    cls: 'primary-button migxcmp-button',                  
                     text: 'Add Extension Package',
                     scope: this
                 }]
@@ -84,12 +87,14 @@
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('writeSchema')},
+                    cls: 'primary-button migxcmp-button',
                     text: 'Write schema',
                     scope: this
                 },
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('parseSchema')},
+                    cls: 'primary-button migxcmp-button',
                     text: 'parse Schema',
                     scope: this
                 }]
@@ -100,13 +105,14 @@
                     autoHeight: true
                 },
                 items: [{
-                    html: '<p>Create tables from schema </p>',
+                    html: '<p>Create tables from schema<br>Please parse the schema, before MIGX can create the tables! </p>',
                     bodyCssClass: 'panel-desc',
                     border: false
                 },
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('createTables')},
+                    cls: 'primary-button migxcmp-button',
                     text: 'create Tables',
                     scope: this
                 }]
@@ -117,13 +123,14 @@
                     autoHeight: true
                 },
                 items: [{
-                    html: '<p>Add missing fields to package-tables from schema</p>',
+                    html: '<p>Add missing fields to package-tables from schema<br>Please parse the schema again, before MIGX can add new fields to the table!</p>',
                     bodyCssClass: 'panel-desc',
                     border: false
                 },
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('addmissing')},
+                    cls: 'primary-button migxcmp-button',
                     text: 'Add fields',
                     scope: this
                 }]
@@ -134,13 +141,14 @@
                     autoHeight: true
                 },
                 items: [{
-                    html: '<p>Remove in schema not existing fields from package-tables</p>',
+                    html: '<p>Remove in schema not existing fields from package-tables<br>Please parse the schema again, before MIGX can delete removed fields from table!</p>',
                     bodyCssClass: 'panel-desc',
                     border: false
                 },
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('removedeleted')},
+                    cls: 'primary-button migxcmp-button',
                     text: 'Remove fields',
                     scope: this
                 }]
@@ -151,13 +159,14 @@
                     autoHeight: true
                 },
                 items: [{
-                    html: '<p>Add new indexes from schema</p>',
+                    html: '<p>Add new indexes from schema<br>Please parse the schema, before MIGX can add new indexes!</p>',
                     bodyCssClass: 'panel-desc',
                     border: false
                 },
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('checkindexes')},
+                    cls: 'primary-button migxcmp-button',
                     text: 'Update indexes',
                     scope: this
                 }]
@@ -168,13 +177,14 @@
                     autoHeight: true
                 },
                 items: [{
-                    html: '<p>Alter fields from schema</p>',
+                    html: '<p>Alter fields from schema<br>Please parse the schema again, before MIGX can alter fields of that table!</p>',
                     bodyCssClass: 'panel-desc',
                     border: false
                 },
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('alterfields')},
+                    cls: 'primary-button migxcmp-button',
                     text: 'Alter fields',
                     scope: this
                 }]
@@ -200,12 +210,14 @@
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('loadSchema')},
+                    cls: 'primary-button migxcmp-button',
                     text: 'Load schema',
                     scope: this
                 },
                 {
                     xtype: 'button',
                     handler: function(){this.updatePackage('saveSchema')},
+                    cls: 'primary-button migxcmp-button',
                     text: 'Save schema',
                     scope: this
                 }]

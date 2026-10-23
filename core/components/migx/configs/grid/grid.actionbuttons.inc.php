@@ -31,7 +31,7 @@ $gridactionbuttons['exportimportmigx']['scope'] = 'this';
 $gridactionbuttons['exportimportmigx']['standalone'] = '1';
 
 $gridactionbuttons['upload']['text'] = "'[[%migx.upload_images]]'";
-$gridactionbuttons['upload']['handler'] = 'this.uploadImages';
+$gridactionbuttons['upload']['handler'] = 'this.uploadImages,this.uploadFiles,this.uploadSuccess,this.loadFromSource';
 $gridactionbuttons['upload']['scope'] = 'this';
 $gridactionbuttons['upload']['standalone'] = '1';
 
@@ -62,4 +62,15 @@ $gridactionbuttons['importcsvmigx']['text'] = "'[[%migx.import_csv]]'";
 $gridactionbuttons['importcsvmigx']['handler'] = 'this.selectImportFile,this.importCsvMigx';
 $gridactionbuttons['importcsvmigx']['scope'] = 'this';
 $gridactionbuttons['importcsvmigx']['standalone'] = '1';
+
+$gridactionbuttons['importcsvmigxdb']['text'] = "'[[%migx.import_csv]]'";
+$gridactionbuttons['importcsvmigxdb']['handler'] = 'this.importCsvMigxdb';
+$gridactionbuttons['importcsvmigxdb']['scope'] = 'this';
+$gridactionbuttons['importcsvmigxdb']['standalone'] = '0';
+
+$gridactionbuttons['exportcsvmigxdb']['text'] = "'[[%migx.export_current_view]]'"; 
+$gridactionbuttons['exportcsvmigxdb']['handler'] = 'this.exportCsvMigxdb';
+$gridactionbuttons['exportcsvmigxdb']['scope'] = 'this';
+$gridactionbuttons['exportcsvmigxdb']['standalone'] = '0';
+
 

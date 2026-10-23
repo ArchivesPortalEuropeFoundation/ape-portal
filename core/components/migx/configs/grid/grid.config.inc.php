@@ -250,9 +250,12 @@ preview: function(btn,e) {
 
 $gridfunctions['this.uploadImages'] = "
 uploadImages: function(btn,e) {
+        this.uploadFiles(btn,e);
+        /*
 		var s=this.getStore();
         var tpl = 'ajaxupload.html';
 		this.loadIframeWin(btn,e,tpl);
+        */
 	}    	
 ";
 
@@ -893,4 +896,23 @@ $gridfunctions['this.importCsvMigx'] = "
         });          
 	}     
 ";
+
+$gridfunctions['this.importCsvMigxdb'] = "
+importCsvMigxdb: function(btn,e) {
+      this.loadWin(btn,e,'a','importcsv');  
+    }
+";
+
+$gridfunctions['this.exportCsvMigxdb'] = "
+exportCsvMigxdb: function(btn,e) {
+      this.loadWin(btn,e,'a','exportcsv');  
+    }
+";
+
+$gridfunctions['this.exportImportItem'] = "
+exportImportItem: function(btn,e) {
+  this.loadWin(btn,e,this.menu.recordIndex,'export_import_migxitem');
+}  
+";
+
 

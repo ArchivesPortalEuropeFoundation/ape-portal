@@ -140,7 +140,7 @@
     },
     url : config.url,
     baseParams: {
-    action: 'mgr/migxdb/getList',
+    action: 'mgr/migxdb/getlist',
     configs: config.configs,
     reqTempParams:'{/literal}{$reqTempParams}{literal}',
     reqConfigs:'{/literal}{$reqConfigs}{literal}',
@@ -174,7 +174,7 @@
     this._makeTemplates();
     this.setDefaultFilters();
     this.getStore().pathconfigs=config.pathconfigs;
-    this.on('click', this.onClick, this);
+    this.on('click', this.onClickGrid, this);
 
 
     };
@@ -437,7 +437,7 @@
 
          MODx.fireResourceFormChange();   
 	} 
-	,onClick: function(e){
+	,onClickGrid: function(e){
         var t = e.getTarget();
         var elm = t.className.split(' ')[0];
 		if(elm == 'controlBtn') {

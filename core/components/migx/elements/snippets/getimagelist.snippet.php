@@ -35,7 +35,7 @@
 /*example: <ul>[[!getImageList? &tvname=`myTV`&tpl=`@CODE:<li>[[+idx]]<img src="[[+imageURL]]"/><p>[[+imageAlt]]</p></li>`]]</ul>*/
 /* get default properties */
 
-
+$allow_request = (bool)$modx->getOption('allowRequest', $scriptProperties, false);
 $tvname = $modx->getOption('tvname', $scriptProperties, '');
 $inherit_children_tvname = $modx->getOption('inherit_children_tvname', $scriptProperties, '');
 $tpl = $modx->getOption('tpl', $scriptProperties, '');
@@ -58,10 +58,14 @@ $placeholdersKeyField = $modx->getOption('placeholdersKeyField', $scriptProperti
 $toJsonPlaceholder = $modx->getOption('toJsonPlaceholder', $scriptProperties, false);
 $jsonVarKey = $modx->getOption('jsonVarKey', $scriptProperties, 'migx_outputvalue');
 $outputvalue = $modx->getOption('value', $scriptProperties, '');
-$outputvalue = isset($_REQUEST[$jsonVarKey]) ? $_REQUEST[$jsonVarKey] : $outputvalue;
+if ($allow_request) {
+    $outputvalue = isset($_REQUEST[$jsonVarKey]) ? $_REQUEST[$jsonVarKey] : $outputvalue;
+}
 $docidVarKey = $modx->getOption('docidVarKey', $scriptProperties, 'migx_docid');
 $docid = $modx->getOption('docid', $scriptProperties, (isset($modx->resource) ? $modx->resource->get('id') : 1));
-$docid = isset($_REQUEST[$docidVarKey]) ? $_REQUEST[$docidVarKey] : $docid;
+if ($allow_request) {
+    $docid = isset($_REQUEST[$docidVarKey]) ? $_REQUEST[$docidVarKey] : $docid;
+}
 $processTVs = $modx->getOption('processTVs', $scriptProperties, '1');
 $reverse = $modx->getOption('reverse', $scriptProperties, '0');
 $sumFields = $modx->getOption('sumFields', $scriptProperties, '');
@@ -118,7 +122,7 @@ if (!empty($tvname)) {
         }
         if ($jsonVarKey == 'migx_outputvalue' && !empty($properties['jsonvarkey'])) {
             $jsonVarKey = $properties['jsonvarkey'];
-            $outputvalue = isset($_REQUEST[$jsonVarKey]) ? $_REQUEST[$jsonVarKey] : $outputvalue;
+            $outputvalue = $allow_request && isset($_REQUEST[$jsonVarKey]) ? $_REQUEST[$jsonVarKey] : $outputvalue;
         }
 
         if (empty($outputvalue)) {
@@ -267,7 +271,24 @@ if ($count > 0) {
                 //don't manipulate any urls here
                 $modx->setOption('manipulatable_url_tv_output_types', '');
                 $tv->set('default_text', $value);
-                $value = $tv->renderOutput($docid);
+
+                // $value = $tv->renderOutput($docid); breaks if the TV used in MIGX is also assigned to this Template,
+                // example tv: imageLogo is assigned to the template and imageLogo is assigned to the MIGX TV as a result
+                // only the value of the imageLogo is returned for the MIGX TV instance
+                // need to override default MODX method: $value = $tv->renderOutput($docid);
+                /* process any TV commands in value */
+                $tv_value = $tv->processBindings($value, $docid);
+                $params = $tv->get('output_properties');
+                if (empty($params) || $params === null) {
+                    $params = [];
+                }
+                /* run prepareOutput to allow for custom overriding */
+                $tv_value = $tv->prepareOutput($tv_value, $docid);
+                /* find the render */
+                $outputRenderPaths = $tv->getRenderDirectories('OnTVOutputRenderList','output');
+                $value = $tv->getRender($params, $tv_value, $outputRenderPaths, 'output', $docid, $tv->get('display'));
+                // End override of $value = $tv->renderOutput($docid);
+				
                 //set option back
                 $modx->setOption('manipulatable_url_tv_output_types', $mTypes);
                 //now manipulate urls

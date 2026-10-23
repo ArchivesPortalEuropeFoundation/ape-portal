@@ -10,7 +10,12 @@ MODx.grid.multiTVdbgrid{/literal}{$win_id}{literal} = function(config) {
     // add empty pathconfig (source) to array to match number of col in renderimage
     var pc=[''];
     var renderer = null;
-    var pageSize = '{/literal}{$customconfigs.gridpagesize|default}{literal}';
+    var pageSize = '';
+    {/literal}
+    {if array_key_exists("gridpagesize",$customconfigs)}
+        pageSize = '{$customconfigs.gridpagesize}';
+    {/if}
+    {literal}
     if (pageSize != ''){
         config.pageSize=parseInt(pageSize); 
     }
@@ -51,7 +56,7 @@ MODx.grid.multiTVdbgrid{/literal}{$win_id}{literal} = function(config) {
     },
     url : config.url,
     baseParams: { 
-        action: 'mgr/migxdb/getList',
+        action: 'mgr/migxdb/getlist',
         configs: config.configs,
         reqTempParams:'{/literal}{$reqTempParams}{literal}',
         reqConfigs:'{/literal}{$reqConfigs}{literal}', 
@@ -68,7 +73,7 @@ MODx.grid.multiTVdbgrid{/literal}{$win_id}{literal} = function(config) {
     this._makeTemplates();
     this.setDefaultFilters();
     this.getStore().pathconfigs=config.pathconfigs;
-    this.on('click', this.onClick, this);   
+    this.on('click', this.onClickGrid, this);   
 
 };
 Ext.extend(MODx.grid.multiTVdbgrid{/literal}{$win_id}{literal},MODx.grid.Grid,{
@@ -135,18 +140,19 @@ Ext.extend(MODx.grid.multiTVdbgrid{/literal}{$win_id}{literal},MODx.grid.Grid,{
     }	
                 	     
 	,loadWin: function(btn,e,action,tempParams) {
-        
         var storeParams = Ext.util.JSON.encode(this.store.baseParams); 
         var resource_id = '{/literal}{$resource.id}{literal}';
         var tempParams = tempParams || null;
         var input_prefix = Ext.id(null,'inp_');
         var co_id = '{/literal}{$connected_object_id}{literal}';
-        {/literal}{if $properties.autoResourceFolders|default == 'true'}{literal}
+        {/literal}
+        {if array_key_exists('autoResourceFolders',$properties) && $properties.autoResourceFolders}
         if (resource_id == 0){
             alert (_('migx.save_resource'));
             return;
         }
-        {/literal}{/if}{literal}        
+        {/if}
+        {literal}        
        
         if (action == 'a'){
            var object_id = 'new';
@@ -196,6 +202,7 @@ Ext.extend(MODx.grid.multiTVdbgrid{/literal}{$win_id}{literal},MODx.grid.Grid,{
             ,action: action
             ,baseParams : {
 			    action: 'mgr/migxdb/fields',
+                parent_window: '{/literal}{$window_id}{literal}',
                 win_id: '{/literal}{$win_id}{literal}',
 				tv_id: '{/literal}{$tv_id}{literal}',
 				tv_name: '{/literal}{$tv->name}{literal}',
@@ -220,7 +227,16 @@ Ext.extend(MODx.grid.multiTVdbgrid{/literal}{$win_id}{literal},MODx.grid.Grid,{
         var url = '{/literal}{$config.connectorUrl}{literal}';
         var tv = Ext.get('tv{/literal}{$tv_id}{literal}');
         var items = tv ? tv.dom.value : '';
-        var jsonvarkey = '{/literal}{$properties.jsonvarkey|default}{literal}';
+        var jsonvarkey = '';
+        var windowtitle = '';
+        {/literal}
+        {if array_key_exists('jsonvarkey',$properties)}
+            jsonvarkey = {$properties.jsonvarkey};
+        {/if}
+        {if array_key_exists('iframeWindowTitle',$customconfigs)}
+            jsonvarkey = {$customconfigs.iframeWindowTitle};
+        {/if}
+        {literal}
         var action = action||'a';
         var storeParams = Ext.util.JSON.encode(this.store.baseParams);
         //console.log(co_id);
@@ -268,14 +284,17 @@ Ext.extend(MODx.grid.multiTVdbgrid{/literal}{$win_id}{literal},MODx.grid.Grid,{
             ,resource_id: resource_id
             ,co_id: co_id
             ,storeParams : storeParams
-            ,title: '{/literal}{$customconfigs.iframeWindowTitle|default}{literal}'
+            ,title: windowtitle
             ,iframeTpl: tpl
         });
     }    		        
     ,getMenu: function() {
 		var n = this.menu.record;
         var m = [];
-        {/literal}{$customconfigs.gridcontextmenus}{literal}        	        
+        {/literal}{$customconfigs.gridcontextmenus}{literal}   
+        if (m.length > 0) {
+            //this.addContextMenuItem(m);
+        }             	        
 		return m;
     }
     ,renderRowActions:function(v,md,rec) {
@@ -332,7 +351,7 @@ Ext.extend(MODx.grid.multiTVdbgrid{/literal}{$win_id}{literal},MODx.grid.Grid,{
 
          MODx.fireResourceFormChange();   
 	} 
-	,onClick: function(e){
+	,onClickGrid: function(e){
         var t = e.getTarget();
         var elm = t.className.split(' ')[0];
 		if(elm == 'controlBtn') {

@@ -4,6 +4,23 @@
 
 $config = $modx->migx->customconfigs;
 
+$hooksnippets = $modx->fromJson($modx->getOption('hooksnippets', $config, ''));
+if (is_array($hooksnippets)) {
+    $hooksnippet_getcustomconfigs = $modx->getOption('getcustomconfigs', $hooksnippets, '');
+}
+
+$snippetProperties = array();
+$snippetProperties['scriptProperties'] = $scriptProperties;
+$snippetProperties['processor'] = 'getlist';
+
+if (!empty($hooksnippet_getcustomconfigs)) {
+    $customconfigs = $modx->runSnippet($hooksnippet_getcustomconfigs, $snippetProperties);
+    $customconfigs = $modx->fromJson($customconfigs);
+    if (is_array($customconfigs)) {
+        $config = array_merge($config, $customconfigs);
+    }
+}
+
 $prefix = isset($config['prefix']) && !empty($config['prefix']) ? $config['prefix'] : null;
 if (isset($config['use_custom_prefix']) && !empty($config['use_custom_prefix'])) {
     $prefix = isset($config['prefix']) ? $config['prefix'] : '';
@@ -19,7 +36,7 @@ if (!empty($config['packageName'])) {
     } else {
         //all packages must have the same prefix for now!
         foreach ($packageNames as $packageName) {
-            $packagepath = $modx->getOption('core_path') . 'components/' . $packageName . '/';
+            $packagepath = $modx->migx->findPackagePath($packageName); 
             $modelpath = $packagepath . 'model/';
             if (is_dir($modelpath)) {
                 $modx->addPackage($packageName, $modelpath, $prefix);
@@ -35,7 +52,7 @@ if (!empty($config['packageName'])) {
     $xpdo = &$modx;    
 }
 
-$classname = $config['classname'];
+$classname = isset($config['classname']) ? $config['classname'] : '';
 $checkdeleted = isset($config['gridactionbuttons']['toggletrash']['active']) && !empty($config['gridactionbuttons']['toggletrash']['active']) ? true : false;
 $joins = isset($config['joins']) && !empty($config['joins']) ? $modx->fromJson($config['joins']) : false;
 
@@ -74,6 +91,10 @@ $resource_id = $modx->getOption('resource_id', $scriptProperties, is_object($mod
 $resource_id = !empty($object_id) ? $object_id : $resource_id;
 
 $sortConfig = $modx->getOption('sortconfig', $config, '');
+$groupby = $modx->getOption('getlistgroupby', $config, '');
+$selectfields = $modx->getOption('getlistselectfields', $config, '');
+$selectfields = !empty($selectfields) ? explode(',', $selectfields) : null;
+$specialfields = $modx->getOption('getlistspecialfields', $config, '');
 
 if (!empty($sortConfig)) {
     $sort = !empty($requestsort) ? $requestsort : '';
@@ -91,7 +112,10 @@ $chunk->setContent($where);
 $where = $chunk->process($scriptProperties);
 
 $c = $xpdo->newQuery($classname);
-$c->select($xpdo->getSelectColumns($classname, $classname));
+$c->select($xpdo->getSelectColumns($classname, $c->getAlias(), '', $selectfields));
+if (!empty($specialfields)) {
+    $c->select($specialfields);
+}
 
 if (!empty($joinalias)) {
     /*
@@ -123,20 +147,18 @@ if (isset($config['gridfilters']) && count($config['gridfilters']) > 0) {
 
             $requestvalue = $modx->getOption($filter['name'], $scriptProperties, 'all');
 
-            if (isset($scriptProperties[$filter['name']]) && $requestvalue != 'all') {
+            if (isset($scriptProperties[$filter['name']]) && !empty($requestvalue) && $requestvalue != 'all') {
 
                 $chunk = $modx->newObject('modChunk');
                 $chunk->setCacheable(false);
                 $chunk->setContent($filter['getlistwhere']);
                 $fwhere = $chunk->process($scriptProperties);
                 $fwhere = strpos($fwhere, '{') === 0 ? $modx->fromJson($fwhere) : $fwhere;
-
                 $c->where($fwhere);
             }
         }
     }
 }
-
 
 if ($modx->migx->checkForConnectedResource($resource_id, $config)) {
 
@@ -163,7 +185,16 @@ if (!empty($where)) {
     $c->where($modx->fromJson($where));
 }
 
-$count = $xpdo->getCount($classname, $c);
+$c->prepare();
+if (!empty($groupby)) {
+    $c->groupby($groupby);
+}
+
+//$count = $xpdo->getCount($classname, $c);
+$count= 0;
+if($c->prepare() && $c->stmt->execute()){
+    $count= $c->stmt->rowCount();
+}
 
 if (empty($sort)) {
     if (is_array($sortConfig)) {
@@ -182,15 +213,19 @@ if ($isCombo || $isLimit) {
     $c->limit($limit, $start);
 }
 //$c->sortby($sort,$dir);
-//$c->prepare();echo $c->toSql();
+$c->prepare();
+
+//echo $c->toSql();
+
 $rows = array();
-if ($collection = $xpdo->getCollection($classname, $c)) {
+if ($collection = $modx->migx->getCollection($c)) {
     $pk = $xpdo->getPK($classname);
-    foreach ($collection as $object) {
-        $row = $object->toArray();
+    foreach ($collection as $row) {
         $row['id'] = !isset($row['id']) ? $row[$pk] : $row['id'];
         $rows[] = $row;
     }
 }
 
 $rows = $modx->migx->checkRenderOptions($rows);
+
+

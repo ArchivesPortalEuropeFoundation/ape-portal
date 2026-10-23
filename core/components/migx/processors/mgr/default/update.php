@@ -189,9 +189,10 @@ switch ($task) {
             /* handles checkboxes & multiple selects elements */
             if (is_array($value)) {
                 $featureInsert = array();
-                while (list($featureValue, $featureItem) = each($value)) {
-                    $featureInsert[count($featureInsert)] = $featureItem;
+                foreach ($value as $featureValue => $featureItem){
+                    $featureInsert[] = $featureItem;
                 }
+                $value = implode('||', $featureInsert);
                 $arraydelimiter = $modx->getOption($field, $arraydelimiters, $default_arraydelimiter);
                 $arrayenclosing = $modx->getOption($field, $arrayenclosings, $default_arrayenclosing);
                 $value = $arrayenclosing . implode($arraydelimiter, $featureInsert) . $arrayenclosing;
@@ -241,7 +242,9 @@ switch ($task) {
                 //extended field (json-array)
                 $postvalues[$field[0]][$field[1]] = $value;
             } else {
-                $postvalues[$field[0]] = $value;
+                if (!empty($field[0]) && is_string($field[0])){
+                    $postvalues[$field[0]] = $value;
+                }
             }
 
 
@@ -309,9 +312,15 @@ switch ($task) {
         //overwrites
         if (empty($postvalues['ow_createdon'])) {
             $postvalues['createdon'] = $tempvalues['createdon'];
+            if ($tempvalues['createdon'] < 0){
+                unset($postvalues['createdon']);
+            }
         }
         if (empty($postvalues['ow_publishedon'])) {
             $postvalues['publishedon'] = $tempvalues['publishedon'];
+            if ($tempvalues['publishedon'] < 0){
+                unset($postvalues['publishedon']);
+            }            
         }
 
 

@@ -10,7 +10,7 @@ updatePackage: function(task) {
     if (task == 'saveSchema') {
         schema = Ext.get('migxpm_schema').dom.value;
     }
-    if (task == 'writeSchema' || task == 'createTables' || task == 'addmissing' || task == 'removedeleted') {
+    if (task == 'writeSchema' || task == 'createTables' || task == 'addmissing' || task == 'removedeleted' || task == 'checkindexes' || task == 'alterfields' || task == 'createPackage') {
         usecustomprefix = Ext.getCmp('migxpm_use_custom_prefix').getValue();
         prefix = Ext.get('migxpm_prefix').dom.value;
     }
@@ -65,17 +65,17 @@ updatePackage: function(task) {
 
 $customHandlers[] = "
     updatePackageSuccess : function(r) {
-        
+        const message = r.message || 'success';
         if (r.object.content){
             //console.log(r.object.content);
             Ext.get('migxpm_schema').dom.value = r.object.content;
-            
-            
+
+
             return;
         }
-        alert ('success');
-        
-    }	
+        alert (message);
+
+    }
 ";
 
 $tabTemplate = $this->config['templatesPath'] . 'mgr/packagemanagertab.tpl';

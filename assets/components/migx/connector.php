@@ -27,6 +27,7 @@
  * @package migx
  * @subpackage controllers
  */
+
 require_once dirname(dirname(dirname(dirname(__FILE__)))).'/config.core.php';
 require_once MODX_CORE_PATH.'config/'.MODX_CONFIG_KEY.'.inc.php';
 require_once MODX_CONNECTORS_PATH.'index.php';
@@ -40,9 +41,17 @@ $_REQUEST['action'] = isset($_REQUEST['actionx']) ? $_REQUEST['actionx'] : $acti
 /* handle request */
 $miTVCorePath = $modx->getOption('migx.core_path',null,$modx->getOption('core_path').'components/migx/');
 require_once $miTVCorePath.'model/migx/migx.class.php';
-require_once $modx->getOption('core_path').'model/modx/modmanagercontroller.class.php';
+
 $modx->migx = new Migx($modx);
+
+if ($modx->migx->is_modx3()){
+
+} else {
+    require_once $modx->getOption('core_path').'model/modx/modmanagercontroller.class.php';    
+}
+
 $modx->migx->config['configs'] = isset($_REQUEST['configs']) ? $_REQUEST['configs'] : '';
+$modx->migx->config['tvname'] = isset($_REQUEST['tv_name']) ? $_REQUEST['tv_name'] : ''; 
 $modx->migx->loadConfigs();
 
 $modx->request->handleRequest(array(

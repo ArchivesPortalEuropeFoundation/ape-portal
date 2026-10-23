@@ -6,7 +6,7 @@ $xpdo_meta_map['migxConfig']= array (
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
-    'engine' => 'MyISAM',
+    'engine' => 'InnoDB',
   ),
   'fields' => 
   array (
@@ -17,6 +17,8 @@ $xpdo_meta_map['migxConfig']= array (
     'columnbuttons' => '',
     'filters' => '',
     'extended' => '',
+    'permissions' => '',
+    'fieldpermissions' => '',
     'columns' => '',
     'createdby' => 0,
     'createdon' => NULL,
@@ -76,6 +78,20 @@ $xpdo_meta_map['migxConfig']= array (
       'default' => '',
     ),
     'extended' => 
+    array (
+      'dbtype' => 'text',
+      'phptype' => 'json',
+      'null' => false,
+      'default' => '',
+    ),
+    'permissions' => 
+    array (
+      'dbtype' => 'text',
+      'phptype' => 'json',
+      'null' => false,
+      'default' => '',
+    ),
+    'fieldpermissions' => 
     array (
       'dbtype' => 'text',
       'phptype' => 'json',
@@ -167,7 +183,7 @@ $xpdo_meta_map['migxConfig']= array (
     array (
       'dbtype' => 'varchar',
       'phptype' => 'string',
-      'precision' => '255',
+      'precision' => '191',
       'null' => false,
       'default' => '',
       'index' => 'index',
