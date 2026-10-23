@@ -4,22 +4,8 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb9a256c37139a1ece54b316018b20706
+class ComposerStaticInit342ec17943027250082a7957c4807539
 {
-    public static $prefixLengthsPsr4 = array (
-        'M' => 
-        array (
-            'MODX\\Components\\PDOTools\\' => 25,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'MODX\\Components\\PDOTools\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
-    );
-
     public static $prefixesPsr0 = array (
         'F' => 
         array (
@@ -31,16 +17,15 @@ class ComposerStaticInitb9a256c37139a1ece54b316018b20706
     );
 
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Fenom' => __DIR__ . '/..' . '/fenom/fenom/src/Fenom.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb9a256c37139a1ece54b316018b20706::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb9a256c37139a1ece54b316018b20706::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb9a256c37139a1ece54b316018b20706::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitb9a256c37139a1ece54b316018b20706::$classMap;
+            $loader->prefixesPsr0 = ComposerStaticInit342ec17943027250082a7957c4807539::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit342ec17943027250082a7957c4807539::$classMap;
 
         }, null, ClassLoader::class);
     }

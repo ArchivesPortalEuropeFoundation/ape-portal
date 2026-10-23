@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28a09fc4059345d00f0fe6830707def1",
+    "content-hash": "5722bbf5b6cd9e745169bc308c88ecd3",
     "packages": [
         {
             "name": "fenom/fenom",
-            "version": "2.11.9",
+            "version": "2.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fenom-template/fenom.git",
-                "reference": "9a1e56d16454a23c5c7353913625ee79543f9bac"
+                "reference": "f0cb251843de469b453b15c158cf0d1589d4de6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fenom-template/fenom/zipball/9a1e56d16454a23c5c7353913625ee79543f9bac",
-                "reference": "9a1e56d16454a23c5c7353913625ee79543f9bac",
+                "url": "https://api.github.com/repos/fenom-template/fenom/zipball/f0cb251843de469b453b15c158cf0d1589d4de6d",
+                "reference": "f0cb251843de469b453b15c158cf0d1589d4de6d",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,11 @@
                 "templater",
                 "templating"
             ],
-            "time": "2018-03-28T09:36:06+00:00"
+            "support": {
+                "issues": "https://github.com/fenom-template/fenom/issues",
+                "source": "https://github.com/fenom-template/fenom/tree/2.12.0"
+            },
+            "time": "2020-07-06T17:02:31+00:00"
         }
     ],
     "packages-dev": [],
@@ -64,5 +68,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }

@@ -1,5 +1,6 @@
 <?php
 /** @var array $scriptProperties */
+/** @var modX $modx */
 // Default variables
 if (empty($pageVarKey)) {
     $pageVarKey = 'page';
@@ -85,7 +86,7 @@ if (!$isAjax && !empty($scriptProperties['ajaxMode'])) {
     $pdoPage->loadJsCss();
 }
 // Removing of default scripts and styles so they do not overwrote nested snippet parameters
-if ($snippet = $modx->getObject('modSnippet', array('name' => 'pdoPage'))) {
+if ($snippet = $modx->getObject('modSnippet', ['name' => 'pdoPage'])) {
     $properties = $snippet->get('properties');
     if ($scriptProperties['frontend_js'] == $properties['frontend_js']['value']) {
         unset($scriptProperties['frontend_js']);
@@ -131,12 +132,13 @@ if (!empty($scriptProperties['offset']) && empty($scriptProperties['limit'])) {
 }
 
 $cache = !empty($cache) || (!$modx->user->id && !empty($cacheAnonymous));
-$url = $pdoPage->getBaseUrl();
+$charset = $modx->getOption('modx_charset', null, 'UTF-8');
+$url = htmlentities($pdoPage->getBaseUrl(), ENT_QUOTES, $charset);
 $output = $pagination = $total = $pageCount = '';
 
 $data = $cache
     ? $pdoPage->pdoTools->getCache($scriptProperties)
-    : array();
+    : [];
 
 if (empty($data)) {
     $output = $pdoPage->pdoTools->runSnippet($scriptProperties['element'], $scriptProperties);
@@ -157,7 +159,7 @@ if (empty($data)) {
         return $pdoPage->redirectToFirst($isAjax);
     }
     if (!empty($pageCount) && $pageCount > 1) {
-        $pagination = array(
+        $pagination = [
             'first' => $page > 1 && !empty($tplPageFirst)
                 ? $pdoPage->makePageLink($url, 1, $tplPageFirst)
                 : '',
@@ -173,10 +175,10 @@ if (empty($data)) {
             'last' => $page < $pageCount && !empty($tplPageLast)
                 ? $pdoPage->makePageLink($url, $pageCount, $tplPageLast)
                 : '',
-        );
+        ];
 
         if (!empty($pageCount)) {
-            foreach (array('first', 'prev', 'next', 'last') as $v) {
+            foreach (['first', 'prev', 'next', 'last'] as $v) {
                 $tpl = 'tplPage' . ucfirst($v) . 'Empty';
                 if (!empty(${$tpl}) && empty($pagination[$v])) {
                     $pagination[$v] = $pdoPage->pdoTools->getChunk(${$tpl});
@@ -184,16 +186,16 @@ if (empty($data)) {
             }
         }
     } else {
-        $pagination = array(
+        $pagination = [
             'first' => '',
             'prev' => '',
             'pages' => '',
             'next' => '',
             'last' => ''
-        );
+        ];
     }
 
-    $data = array(
+    $data = [
         'output' => $output,
         $pageVarKey => $page,
         $pageCountVar => $pageCount,
@@ -201,7 +203,7 @@ if (empty($data)) {
             ? $pdoPage->pdoTools->getChunk($tplPageWrapper, $pagination)
             : $pdoPage->pdoTools->parseChunk('', $pagination),
         $totalVar => $total,
-    );
+    ];
     if ($cache) {
         $pdoPage->pdoTools->setCache($data, $scriptProperties);
     }
@@ -230,25 +232,27 @@ if ($isAjax) {
     }
 
     $maxIterations = (integer)$modx->getOption('parser_max_iterations', null, 10);
-    $modx->getParser()->processElementTags('', $data['output'], false, false, '[[', ']]', array(), $maxIterations);
-    $modx->getParser()->processElementTags('', $data['output'], true, true, '[[', ']]', array(), $maxIterations);
+    $modx->getParser()->processElementTags('', $data['output'], false, false, '[[', ']]', [], $maxIterations);
+    $modx->getParser()->processElementTags('', $data['output'], true, true, '[[', ']]', [], $maxIterations);
 
     @session_write_close();
     exit(json_encode($data));
 } else {
     if (!empty($setMeta)) {
         $canurl = $pdoPage->pdoTools->config['scheme'] !== 'full'
-            ? $modx->getOption('url_scheme') . rtrim($modx->getOption('http_host'), '/') . '/' . ltrim($url, '/')
+            ? rtrim($modx->getOption('site_url'), '/') . '/' . ltrim($url, '/')
             : $url;
         $modx->regClientStartupHTMLBlock('<link rel="canonical" href="' . $canurl . '"/>');
         if ($data[$pageVarKey] > 1) {
+            $prevUrl = $pdoPage->makePageLink($canurl, $data[$pageVarKey] - 1);
             $modx->regClientStartupHTMLBlock(
-                '<link rel="prev" href="' . $pdoPage->makePageLink($canurl, $data[$pageVarKey] - 1) . '"/>'
+                '<link rel="prev" href="' . $prevUrl . '"/>'
             );
         }
         if ($data[$pageVarKey] < $data[$pageCountVar]) {
+            $nextUrl = $pdoPage->makePageLink($canurl, $data[$pageVarKey] + 1);
             $modx->regClientStartupHTMLBlock(
-                '<link rel="next" href="' . $pdoPage->makePageLink($canurl, $data[$pageVarKey] + 1) . '"/>'
+                '<link rel="next" href="' . $nextUrl . '"/>'
             );
         }
     }
