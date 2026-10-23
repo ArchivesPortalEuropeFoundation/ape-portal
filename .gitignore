@@ -28,3 +28,6 @@ production.codekit-min.js
 
 # extracted transport packages (regenerated from the .transport.zip files)
 core/packages/*/
+
+.kiro/steering/*
+docs/*
