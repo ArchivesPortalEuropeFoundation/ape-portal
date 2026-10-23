@@ -1,7 +1,205 @@
 MagicPreview for MODX
----------------------
+=====================
 
-MagicPreview adds a _Magical_ Preview button to the resources panel which will
-show you, without actually saving the resource, a real preview of a resource.
+MagicPreview adds a _Magical_ Preview button to the MODX resource editor that lets you see
+exactly how your page will look -- without saving. Edit your content, click Preview,
+and instantly see a live, fully rendered preview of your changes.
 
-It also has responsive breakpoints, so you can preview your page on various widths.
+It works with MODX 2.x and 3.x (PHP 7.4+), supports custom resource types
+(Collections, Articles, etc.), and integrates with rich text editors and
+ContentBlocks automatically.
+
+
+Preview Modes
+-------------
+
+Choose how you want to preview your work:
+
+- New Window: Opens the preview in a separate browser window (default).
+- Panel: Shows the preview in an inline side panel right next to the editor, so you
+  can edit and preview simultaneously without switching windows.
+
+The panel has two layout options:
+
+- Overlay: The panel slides in from the right and floats on top of the editor.
+- On Page: The editor shrinks to make room for a permanent preview column alongside
+  it.
+
+Both the preview mode and panel layout can be overridden per resource from the
+resource's Settings tab, allowing you to use different configurations for different
+parts of your site.
+
+
+Responsive Breakpoints
+----------------------
+
+Preview your page at different screen widths with one click. Four breakpoint buttons
+are available in both the preview window and the panel toolbar:
+
+- Full (100% width)
+- Desktop (default: 1280px)
+- Tablet (default: 768px)
+- Mobile (default: 320px)
+
+Each breakpoint width is configurable via system settings. Width transitions are
+smoothly animated.
+
+
+Auto-Refresh
+------------
+
+When using the panel, MagicPreview can automatically refresh the preview at a
+configurable interval (default: every 5 seconds). The preview only reloads when your
+form data has actually changed, so it is efficient and unobtrusive. Set the interval
+to 0 to disable auto-refresh. An open preview also reloads when the resource is
+saved.
+
+
+Draft Save & Restore
+--------------------
+
+Working on a page but not ready to publish? Use the Save Draft button (or press
+Ctrl+Shift+S / Cmd+Shift+S) to save your current edits as a draft. Drafts are stored
+per resource and per user, so your work is private and won't interfere with other
+editors.
+
+Drafts are kept in the database, so they survive cache clears -- and saving the
+resource itself -- until you restore or discard them.
+
+When you return to a resource that has a saved draft, a notification banner lets you
+view, share, restore or discard it. Restoring a draft reloads the page with all your
+previous edits filled in -- including template variables and extras data.
+
+Draft expiry is configurable; by default drafts are kept until restored or manually
+discarded.
+
+
+Share Draft Links
+-----------------
+
+Need feedback from someone without manager access? Drafts can be shared via public
+links, so a client or colleague can review work in progress right in their browser.
+A link always shows the latest saved draft, can be given a label and its own expiry,
+and can be revoked at any time. Links stop working once the draft is discarded.
+
+
+Click to Field (Experimental)
+-----------------------------
+
+When the click_to_field setting is enabled, clicking a field in the preview panel
+scrolls the resource form to the corresponding field and briefly highlights it.
+
+ContentBlocks fields are marked automatically. Core resource fields and TVs are
+marked in your template with the mpField snippet - see "Click to Field" below.
+
+Disabled by default.
+
+
+Controlling Where Preview Appears
+----------------------------------
+
+The Preview button can be limited to (or excluded from) resources using certain
+templates via a block list or allow list in the system settings. Individual
+resources can also force it on or off from their Settings tab.
+
+
+Drag-to-Resize
+---------------
+
+In panel mode, drag the left edge of the panel to resize it to your preferred width.
+Your chosen width is remembered across page loads.
+
+
+Flicker-Free Updates
+--------------------
+
+The panel uses a double-buffered iframe technique: new content loads in a hidden
+iframe behind the scenes, and only swaps in once it is fully rendered. Your scroll
+position is preserved across refreshes, so you never lose your place.
+
+
+Keyboard Shortcuts
+------------------
+
+- Ctrl+P / Cmd+P: Trigger a preview
+- Ctrl+Shift+S / Cmd+Shift+S: Save a draft
+
+
+Customisation
+-------------
+
+MagicPreview is designed to work out of the box, but offers several customisation
+options via system settings:
+
+- Custom preview template: Override the Smarty template used for the preview window.
+- Custom preview CSS: Load an additional CSS file in the preview window.
+- Configurable breakpoint widths for desktop, tablet, and mobile.
+- Configurable button icons: Replace the default Save Draft and View button icons
+  with any FontAwesome icon class.
+- Auto-refresh interval: Adjust or disable the automatic refresh timer.
+- Click to field: Enable the experimental click-to-field feature (disabled by default).
+- Draft TTL: Control how long drafts are kept before expiring.
+- Share link lifetime: Set the default expiry for share links.
+- Template filter: Choose which templates show the Preview button.
+
+
+Third-Party Integration
+-----------------------
+
+MagicPreview fires a custom system event (OnResourceMagicPreview) during the preview
+process, allowing other extras to modify the resource data before it is rendered. This
+is used by extras like VersionX to preview version history without saving.
+
+A public JavaScript API is also available for extras that need to open, close, or
+interact with the preview programmatically.
+
+
+Click to Field
+--------------
+
+With the magicpreview.click_to_field system setting enabled, clicking part of the
+preview panel scrolls the resource form to the matching field. Previews opened in a
+new window, including a draft's View link, show the page without click targets.
+
+You can now mark which fields should use this feature.
+
+Core resource fields and TVs, with the mpField snippet:
+
+    <h1 [[!mpField? &name=`pagetitle`]] class="title">[[*pagetitle]]</h1>
+    <div [[!mpField? &name=`mytv`]] class="mytv">[[*mytv]]</div>
+
+Call it uncached (with the !). An uncached call is evaluated on every page render,
+so an extra that caches rendered output - getCache, for example - can never store
+the attributes in its cache.
+
+With pdoTools/Fenom, any of these work:
+
+    <h1 {'pagetitle' | mpField}>{$_modx->resource.pagetitle}</h1>
+    <h1 {'mpField' | snippet: ['name' => 'pagetitle']}>...</h1>
+
+ContentBlocks fields are wrapped automatically in a preview and need no changes. To
+place the attributes on your own element instead, put the placeholder inside its
+opening tag - the wrapper is then skipped for that field:
+
+    <h2 [[+mpClickToFieldAttributes]] class="heading">[[+value]]</h2>
+
+This works in templates typed into the field's Template setting, and in @FILE and
+@PDO_FILE templates. A @PDO_FILE template written in Fenom uses the same MODX-style tag, which
+pdoTools processes alongside the Fenom syntax:
+
+    <{$level} [[+mpClickToFieldAttributes]] class="headline">{$value}</{$level}>
+
+@PDO_FILE fields are never wrapped automatically, so the placeholder is the only way
+to make them clickable. Fields using @CHUNK templates cannot be marked yet.
+
+The snippet and placeholder produce nothing outside the preview panel, so they are
+safe to leave in live templates and do not appear on public share links. Outside a
+preview the ContentBlocks placeholder resolves to nothing as the field is parsed, so
+it is not stored in the resource content either. If in doubt, load the live page and
+search its source for data-magicpreview: there should be no matches.
+
+
+Support & Documentation
+-----------------------
+
+Full documentation is available at: https://www.modmore.com/extras/magicpreview/

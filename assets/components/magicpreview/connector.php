@@ -7,10 +7,25 @@ $corePath = $modx->getOption('magicpreview.core_path',null,$modx->getOption('cor
 $modx->getService('magicpreview', 'MagicPreview', $corePath . 'model/magicpreview/');
 //$modx->lexicon->load('magicpreview:default');
 
+// Check for MODX version: swap to v2 processor variants for MODX 2.x
+if (version_compare($modx->getOption('settings_version'), '3.0.0-alpha1') < 1) {
+    $v2Map = [
+        'resource/preview'       => 'resource/preview-v2',
+        'resource/restore-draft' => 'resource/restore-draft-v2',
+        'resource/discard-draft' => 'resource/discard-draft-v2',
+        'resource/getshares'     => 'resource/getshares-v2',
+        'resource/removeshare'   => 'resource/removeshare-v2',
+        'resource/previewdraft'  => 'resource/previewdraft-v2',
+    ];
+    $action = $_REQUEST['action'] ?? '';
+    if (isset($v2Map[$action])) {
+        $_REQUEST['action'] = $v2Map[$action];
+    }
+}
 
 /* handle request */
 $path = $modx->getOption('processorsPath', $modx->magicpreview->config,$corePath  .'processors/');
-$modx->request->handleRequest(array(
+$modx->request->handleRequest([
     'processors_path' => $path,
     'location' => '',
-));
+]);

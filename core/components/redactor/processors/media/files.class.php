@@ -134,6 +134,12 @@ class RedactorListFilesProcessor extends RedactorBaseProcessor {
                 continue;
             }
 
+
+            // MODX 3 started rawurlencode'ing path names; reverse that process.
+            if (strpos($folder['id'], '%2F') !== false) {
+                $folder['id'] = rawurldecode($folder['id']);
+            }
+
             $directoryResults[] = array(
                 'directory' => basename($folder['id'])
             );

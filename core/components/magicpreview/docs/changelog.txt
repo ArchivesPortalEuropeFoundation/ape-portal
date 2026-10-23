@@ -1,3 +1,128 @@
+MagicPreview 1.8.0-pl
+---------------------
+Released on 2026-09-25
+
+- Fix click_to_field breaking Fenom (and any other custom parser) output in previews. MagicPreview no longer replaces the MODX parser during a preview render. (#55)
+- BREAKING: core resource fields and TVs are no longer marked clickable automatically. Mark them in your template with the new mpField snippet; see the readme for examples.
+- Add mpField snippet, usable as a MODX tag or a Fenom modifier ({'pagetitle'|mpField})
+- Add [[+mpClickToFieldAttributes]] placeholder for ContentBlocks field templates, so the attributes can go on your own element instead of an added wrapper. Works in inline, @FILE and @PDO_FILE templates, including Fenom ones, and gives @PDO_FILE fields a click target for the first time.
+- Click to field now applies only to the preview panel. Previews in a new window, and a draft's View link, show the page without click targets.
+- Fix click-to-field markers being stored in drafts and shown on public share links when click_to_field is on (since 1.7.0). Drafts saved by 1.7.x are cleaned automatically the first time they are read.
+- Fix click-to-field markup being written to the live page's cache when a preview URL was opened after its preview data had expired, or when a preview was forwarded to another page such as the error page (since 1.7.0)
+
+MagicPreview 1.7.1-pl
+---------------------
+Released on 2026-07-10
+
+- Fix drafts and shares database tables not being created by the package installer (broken in 1.7.0 — upgrading creates the missing tables)
+
+MagicPreview 1.7.0-pl
+---------------------
+Released on 2026-07-10
+
+- Auto-reload preview on resource save
+- Collapse MODX 3 resource sidebar when on-page preview is visible.
+- Add view button to draft panel
+- Add share button to draft panel
+- Add token-protected endpoint for sharing drafts
+- Allow multiple shares of the same draft each with unique tokens
+- Add windows/grid/form for managing shares
+- Enable/disable previews on resources based on template id set by new system settings
+- Enable/disable previews based on new per resource settings
+- Layout spacing tweaks
+- Add click-to-field (experimental): clicking a field in the preview scrolls the resource form to that field. Supports core resource fields, TVs and ContentBlocks.
+
+MagicPreview 1.6.0-pl
+---------------------
+Released on 2026-03-28
+
+- Add inline side panel preview mode with overlay and on-page layouts
+- Add per-resource overrides for preview mode and panel layout
+- Add auto-refresh with configurable interval
+- Add drag-to-resize for the panel
+- Add draft save/restore with Ctrl+Shift+S shortcut
+- Add configurable draft TTL
+- Add configurable icons for Save Draft and View buttons
+- Add Ctrl+P keyboard shortcut for preview
+- Add Ctrl+Shift+S keyboard shortcut for saving a draft
+- Add panel state persistence
+
+MagicPreview 1.5.1-pl
+---------------------
+Released on 2025-04-11
+
+- Fix placeholders showing the cached value instead of the change due to in-memory element cache not being cleared [79144aa]
+
+MagicPreview 1.5.0-pl
+---------------------
+Released on 2025-03-14
+
+- Add support for VersionX so version deltas of resources can be previewed before reverting to them [#37]
+
+MagicPreview 1.4.1-pl
+---------------------
+Released on 2024-12-13
+
+- Fixed a rendering issue with the new merged buttons (thanks to @jenswittmann) [#34]
+
+MagicPreview 1.4.0-pl
+---------------------
+Released on 2024-11-29
+
+- Group MagicPreview's Preview button with the standard MODX View resource button for a more compact view (thanks to @jenswittmann) [#31]
+- Add magicpreview.custom_preview_css and magicpreview.custom_preview_tpl to enable customising the HTML and CSS in the preview (thanks to @jenswittmann) [#32]
+
+MagicPreview 1.3.0-pl
+---------------------
+Released on 2022-11-19
+
+- Make preview width breakpoints configurable via system settings (thanks to @Peeet93) [#28]
+
+MagicPreview 1.2.4-pl
+---------------------
+Released on 2022-10-06
+
+- Fix preview button not showing on Collections, Articles and Location custom resources.
+
+MagicPreview 1.2.3-pl
+---------------------
+Released on 2022-07-15
+
+- CSS tweaks to cater for longer pagetitles in preview title bar. [8c80d43]
+
+MagicPreview 1.2.2-pl
+---------------------
+Released on 2022-06-02
+
+- Fixed a fatal error that would sometimes occur when loading a preview (thanks to @pbowyer) [#24]
+- Replaced the title link with a close button.
+
+MagicPreview 1.2.1-pl
+---------------------
+Released on 2021-11-29
+
+- Make loading of required processor files more efficient by using the full path. [#17]
+
+MagicPreview 1.2.0-pl
+---------------------
+Released on 2021-11-19
+
+- Introduce compatibility for MODX 3.
+
+MagicPreview 1.1.1-pl
+---------------------
+Released on 2021-11-16
+
+- Make sure OnResourceMagicPreview event has a service set
+
+MagicPreview 1.1.0-pl
+---------------------
+Released on 2021-10-02
+
+- Fix view button not working after clicking on the preview button
+- Add OnResourceMagicPreview event so other extras such as ContentBlocks can hook in when using the preview button.
+- Fix system fonts used in the preview, did not apply on Windows (among others)
+
 MagicPreview 1.0.1-pl
 ---------------------
 Released on 2018-12-18

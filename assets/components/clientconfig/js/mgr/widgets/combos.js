@@ -70,7 +70,7 @@ ClientConfig.combo.GoogleFontList = function(config) {
     Ext.applyIf(config,{
         url: ClientConfig.config.connectorUrl,
         baseParams: {
-            action: 'mgr/fonts/google/getList',
+            action: 'mgr/fonts/google/getlist',
             combo: true
         },
         fields: ['family','name'],
@@ -90,7 +90,8 @@ ClientConfig.combo.ContextList = function(config) {
         baseParams: {
             action: 'mgr/contexts/getlist',
             exclude: 'mgr',
-            combo: true
+            combo: true,
+            sort: '`rank`',
         },
         fields: ['key','name'],
         hiddenName: config.name || 'context',

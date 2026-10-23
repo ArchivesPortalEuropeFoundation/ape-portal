@@ -39,7 +39,7 @@
                 });
 
                 // Scrolling beyond the editor should hide the toolbar.
-                var scolledBeyond = (boxTop + height) < 55;
+                var scolledBeyond = (boxTop + height) < this.opts.toolbarFixedTopOffset;
                 if (scolledBeyond) {
                     $('.redactor-dropdown-' + this.uuid + ':visible').hide();
                     if (this.$toolbar.css('visibility') !== 'hidden') {

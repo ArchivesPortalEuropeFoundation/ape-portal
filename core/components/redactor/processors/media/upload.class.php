@@ -1,6 +1,10 @@
 <?php
 require_once dirname(__FILE__) . '/base.class.php';
 
+// Alias the modFileMediaSource class for 2.x/3.x compatibility; used for local file duplicate checks.
+if (!class_exists(\modFileMediaSource::class) && class_exists(\MODX\Revolution\Sources\modFileMediaSource::class)) {
+    class_alias(\MODX\Revolution\Sources\modFileMediaSource::class, \modFileMediaSource::class);
+}
 /**
  * Handles uploading of an image
  *

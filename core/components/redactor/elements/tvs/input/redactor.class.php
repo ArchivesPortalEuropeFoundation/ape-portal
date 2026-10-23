@@ -210,10 +210,10 @@ HERE;
     }
 
     protected function registerStuff() {
-        $this->modx->controller->addCSS($this->redactor->config['assetsUrl'].'redactor-2.3.7.min.css');
+        $this->modx->controller->addCSS($this->redactor->config['assetsUrl'].'redactor-2.4.0.min.css');
         if($this->redactor->degradeUI) $this->modx->controller->addCSS($this->redactor->config['assetsUrl'].'buttons-legacy.min.css');
         if($this->redactor->rebeccaDay) $this->modx->controller->addCSS($this->redactor->config['assetsUrl'].'rebecca.min.css');
-        $this->modx->controller->addJavascript($this->redactor->config['assetsUrl'].'redactor-2.3.7.min.js');
+        $this->modx->controller->addJavascript($this->redactor->config['assetsUrl'].'redactor-2.4.0.min.js');
 $script = <<<HERE
 <script>try {ace} catch(e) { document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"><\/script>') }</script>
 HERE;

@@ -97,8 +97,8 @@ Ext.extend(ClientConfig.page.Home,MODx.Component,{
                 var field = {
                     name: value.key,
                     xtype: value.xtype,
-                    fieldLabel: value.label + ((value.is_required) ? '*' : ''),
-                    value: (value.value != '') ? value.value : value.default,
+                    fieldLabel: value.label + ((value.is_required) ? ClientConfig.reqAsterisk : ''),
+                    value: (value.value !== '') ? value.value : value.default,
                     description: (ClientConfig.isAdmin) ? '<b>[[++' + value.key + ']]</b>' : undefined,
                     allowBlank: !value.is_required,
                     anchor: '60%',
@@ -111,29 +111,30 @@ Ext.extend(ClientConfig.page.Home,MODx.Component,{
                     field.growMin = 150;
                     field.growMax = 800;
                 }
+
                 if (field.xtype === 'code') {
                     field.height = 150;
                     field.xtype = Ext.ComponentMgr.isRegistered('modx-texteditor') ? 'modx-texteditor' : 'textarea';
                 }
 
-                if (field.xtype == 'richtext') {
+                if (field.xtype === 'richtext') {
                     field.anchor = '90%';
                     field.xtype = 'textarea';
                     rtes.push(field.id);
                 }
 
-                if ((field.xtype == 'checkbox') || (field.xtype == 'xcheckbox')) {
+                if ((field.xtype === 'checkbox') || (field.xtype === 'xcheckbox')) {
                     field.boxLabel = field.fieldLabel;
                     field.fieldLabel = null;
                     field.value = 1;
                     field.checked = (value.value);
                 }
 
-                if (field.xtype == 'datefield') {
+                if (field.xtype === 'datefield') {
                     field.format = MODx.config.manager_date_format;
                 }
 
-                if (field.xtype == 'timefield') {
+                if (field.xtype === 'timefield') {
                     field.format = MODx.config.manager_time_format;
                 }
 
@@ -141,22 +142,58 @@ Ext.extend(ClientConfig.page.Home,MODx.Component,{
                     field.tv = value.key;
                     field.source = value.source || MODx.config.default_media_source;
                     field.relativeValue = (value.value != '') ? value.value : value.default;
+                    if (ClientConfig.isAdmin) {
+                        field.listeners = {
+                            render: function(fld) {
+                                new Ext.ToolTip({
+                                    target: fld.label.dom,
+                                    html: field.description
+                                });
+                                new Ext.ToolTip({
+                                    target: fld.getEl(),
+                                    html: field.description
+                                });
+                            }
+                        }
+                        if (field.xtype === 'modx-panel-tv-image') {
+                            field.listeners.afterrender = function(data) {
+                                setTimeout(() => {
+                                    const el = Ext.getCmp(field.id + '-preview');
+                                    if (Ext.isEmpty(data.value)) {
+                                        el.update('');
+                                    } else {
+                                        el.update('<img src="'+MODx.config.connectors_url+'system/phpthumb.php?w=400&h=400&aoe=0&far=0&f=png&src='+data.value+'&wctx=web&source='+field.source+'&version=00000000" alt="" />');
+
+                                    }
+                                },0);
+                            };
+                            field.listeners.select = function(data) {
+                                const el = Ext.getCmp(field.id + '-preview');
+                                if (Ext.isEmpty(data.url)) {
+                                    el.update('');
+                                } else {
+                                    el.update('<img src="'+MODx.config.connectors_url+'system/phpthumb.php?w=400&h=400&aoe=0&far=0&f=png&src='+data.url+'&wctx=web&source='+field.source+'&version=00000000" alt="" />');
+                                }
+                            };
+                        }
+                    }
                 }
 
-                if (field.xtype == 'colorpickerfield') {
+                if (field.xtype === 'colorpickerfield') {
                     field.cls = 'x-colorpicker';
                 }
 
-                if (field.xtype == 'password') {
+                if (field.xtype === 'password') {
                     field.xtype = 'textfield';
                     field.inputType = 'password';
                 }
+
                 if (field.xtype === 'email') {
                     field.xtype = 'textfield';
                     field.vtype = 'email';
                 }
 
-                if (field.xtype == 'modx-combo') {
+                if (field.xtype === 'modx-combo') {
                     var options = value.options.split('||');
                     var data = [];
                     Ext.each(options, function(option, index) {
@@ -191,6 +228,15 @@ Ext.extend(ClientConfig.page.Home,MODx.Component,{
 
                 fields.push(field);
 
+                if (field.xtype === 'modx-panel-tv-image') {
+                    fields.push({
+                        anchor: '100%',
+                        html: '',
+                        bodyCssClass: 'modx-tv-image-preview',
+                        id: field.id + '-preview',
+                    });
+                }
+
                 if (value.description && value.description.length > 0) {
                     var fieldDescription = {
                         xtype: 'label',
@@ -209,7 +255,7 @@ Ext.extend(ClientConfig.page.Home,MODx.Component,{
                     items: [],
                     cls: 'tvs-wrapper'
                 };
-                if (tabData.description != '') {
+                if (tabData.description !== '') {
                     tab.items.push({
                         bodyCssClass: 'panel-desc',
                         cls: ' ',
@@ -335,7 +381,7 @@ Ext.extend(ClientConfig.page.Home,MODx.Component,{
         if (fp && fp.getForm()) {
             var values = fp.getForm().getValues();
 
-            // Fix name of image tv
+            // Fix name of image & file tv
             var imagePickers = fp.find('xtype', 'modx-panel-tv-image');
             Ext.each(imagePickers, function(imagePicker){
                 values[imagePicker.name] = values['tv' + imagePicker.name];

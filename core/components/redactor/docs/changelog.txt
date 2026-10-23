@@ -1,4 +1,20 @@
-Redactor 2.3.7-pl
+Redactor 2.4.0-pl
+-----------------
+Released on 2020-01-04
+
+- Fix MODX3 alpha compatibility issues in media browser
+- Fix fixed toolbar positioning in MODX3
+- Remove unused plugin events from package: OnTVOutputRenderList, OnTVOutputRenderPropertiesList, OnManagerPageBeforeRender, OnRichTextBrowserInit, OnDocFormPrerender
+- Update build to use encryptedVehicle 2.1 and proper minimum requirements check
+
+Redactor 2.3.9-pl
+-----------------
+Released on 2019-12-19
+
+- Don't register a TV output type; that's not used and can cause side-effects with custom plugins
+- Small license check fix
+
+Redactor 2.3.8-pl
 -----------------
 Released on 2019-09-06
 

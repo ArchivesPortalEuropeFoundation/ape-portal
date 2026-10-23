@@ -1,7 +1,7 @@
 body.mmmp {
   height: 100vh;
   margin: 0;
-  font-family: -apple-system,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .mmmp-c-container {
@@ -18,33 +18,53 @@ body.mmmp {
   width: 100%;
   z-index: 1;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .mmmp-c-title {
   color: hsla(213, 66%, 95%, 1);
   font-weight: lighter;
-  margin: 1rem 1rem 1rem 2rem;
   font-size: 1rem;
+  margin: 1rem 1rem 1rem 2rem;
 }
 
 .mmmp-c-title__span {
   color: hsla(213, 66%, 85%, 1);
 }
 
-.mmmp-c-title__link {
+.mmmp-c-title__pagetitle {
   color: hsla(213, 66%, 95%, 1);
   text-decoration: none;
+  font-weight: 600;
 }
 
-.mmmp-c-title__link:hover,
-.mmmp-c-title__link:focus {
-  text-decoration: underline;
+.mmmp-c-close {
+  background: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 11px 12px;
+  margin: 0 2rem 0 .5rem;
+  display: flex;
+  align-items: center;
+}
+.mmmp-c-close svg {
+  width: 20px;
+  color: #fff;
+}
+.mmmp-c-close:hover,
+.mmmp-c-close:focus {
+  background: #4185d8;
+  
+}
+
+.mmmp-c-breakpoints__row {
+  display: flex;
+  align-items: center;
 }
 
 .mmmp-c-breakpoints {
-  margin-left: auto;
-  margin-right: 1rem;
   display: flex;
   position: relative;
   padding: 1rem 0;
@@ -76,6 +96,7 @@ body.mmmp {
   cursor: pointer;
   box-shadow: inset 0 2px 2px hsla(0, 0%, 0%, 0.1), inset 0 -2px 0 hsla(0, 0%, 100%, 0.15);
   font-size: 1rem;
+  font-weight: 600;
 }
 
 .mmmp-c-breakpoints__item:first-of-type .mmmp-c-breakpoints__item-label {

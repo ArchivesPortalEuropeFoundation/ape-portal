@@ -1,19 +1,20 @@
 <?php
+
 require_once dirname(__DIR__) . '/index.class.php';
 /**
  * The name of the controller is based on the path (home) and the
  * namespace (clientconfig). This home controller is the main client view.
  */
 class ClientConfigHomeManagerController extends ClientConfigManagerController {
-    public $tabs = array();
+    public $tabs = [];
 
     /**
      * Any specific processing we need on the Home controller.
      * In this case, we get all groups and all settings in the group.
      * @param array $scriptProperties
      */
-    public function process(array $scriptProperties = array()) {
-        $tabs = array();
+    public function process(array $scriptProperties = []) {
+        $tabs = [];
 
         /**
          * Get all the Groups
@@ -26,14 +27,14 @@ class ClientConfigHomeManagerController extends ClientConfigManagerController {
         $groups = $this->modx->getCollection('cgGroup', $c);
         foreach ($groups as $group) {
             $grp = $group->toArray();
-            $grp['items'] = array();
+            $grp['items'] = [];
 
             $c = $this->modx->newQuery('cgSetting');
             $c->sortby('sortorder','ASC');
             $c->sortby('label','ASC');
             foreach ($group->getMany('Settings', $c) as $setting) {
                 $sa = $setting->toArray();
-                if (in_array($sa['xtype'], array('checkbox','xcheckbox'), true)) {
+                if (in_array($sa['xtype'], ['checkbox','xcheckbox'], true)) {
                     $sa['value'] = (bool)$sa['value'];
                 }
 
@@ -57,7 +58,7 @@ class ClientConfigHomeManagerController extends ClientConfigManagerController {
         if (array_key_exists('context', $scriptProperties) && $this->modx->getOption('clientconfig.context_aware')) {
             $key = $scriptProperties['context'];
             $context = $this->modx->getObject('modContext', ['key' => $key]);
-            if ($context instanceof modContext) {
+            if ($context instanceof \modContext || $context instanceof \MODX\Revolution\modContext) {
 
                 $this->addHtml('<script type="text/javascript">
                     Ext.onReady(function() {

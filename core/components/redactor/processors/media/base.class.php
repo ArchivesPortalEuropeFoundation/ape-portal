@@ -1,5 +1,9 @@
 <?php
 
+if (!class_exists(\modTemplateVar::class) && class_exists(\MODX\Revolution\modTemplateVar::class)) {
+    class_alias(\MODX\Revolution\modTemplateVar::class, \modTemplateVar::class);
+}
+
 /**
  * Class RedactorBaseProcessor
  *
@@ -9,7 +13,7 @@ abstract class RedactorBaseProcessor extends modProcessor {
     /** @var Redactor */
     public $redactor;
 
-    /** @var modMediaSource */
+    /** @var modMediaSource|\MODX\Revolution\Sources\modMediaSource */
     public $source;
 
     public function getLanguageTopics()

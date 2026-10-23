@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{$_lang['magicpreview.preview']} {$resource.pagetitle|escape}</title>
     <link rel="stylesheet" href="{$mp_config.assetsUrl}preview.css?v={$mp_config.version}">
+    {if $customPreviewCss}
+        <link rel="stylesheet" href="{$customPreviewCss}?v={$mp_config.version}">
+    {/if}
 </head>
 <body class="mmmp">
 {if $resource['id'] > 0}
@@ -14,31 +17,35 @@
         <div class="mmmp-c-container__inner">
             <h1 class="mmmp-c-title">
                 <span class="mmmp-c-title__span">{$_lang['magicpreview.preview']}</span>
-                <a class="mmmp-c-title__link" href="{$config.manager_url}?a=resource/update&id={$resource.id}">
-                    {$resource.pagetitle|escape}
-                </a>
+                <span class="mmmp-c-title__pagetitle">{$resource.pagetitle|escape}</span>
             </h1>
+            <div class="mmmp-c-breakpoints__row">
+                <div class="mmmp-c-breakpoints">
+                    <input class="mmmp-c-breakpoints__input mmmp-js-breakpoint-input" type="radio" name="breakpoint" value="full" id="mmmp-breakpoint-full" checked>
+                    <div class="mmmp-c-breakpoints__item">
+                        <label class="mmmp-c-breakpoints__item-label" for="mmmp-breakpoint-full">{$_lang['magicpreview.bp_full']}</label>
+                    </div>
 
-            <div class="mmmp-c-breakpoints">
-                <input class="mmmp-c-breakpoints__input mmmp-js-breakpoint-input" type="radio" name="breakpoint" value="full" id="mmmp-breakpoint-full" checked>
-                <div class="mmmp-c-breakpoints__item">
-                    <label class="mmmp-c-breakpoints__item-label" for="mmmp-breakpoint-full">{$_lang['magicpreview.bp_full']}</label>
-                </div>
+                    <input class="mmmp-c-breakpoints__input mmmp-js-breakpoint-input" type="radio" name="breakpoint" value="desktop" id="mmmp-breakpoint-desktop">
+                    <div class="mmmp-c-breakpoints__item">
+                        <label class="mmmp-c-breakpoints__item-label" for="mmmp-breakpoint-desktop">{$_lang['magicpreview.bp_desktop']}</label>
+                    </div>
 
-                <input class="mmmp-c-breakpoints__input mmmp-js-breakpoint-input" type="radio" name="breakpoint" value="desktop" id="mmmp-breakpoint-desktop">
-                <div class="mmmp-c-breakpoints__item">
-                    <label class="mmmp-c-breakpoints__item-label" for="mmmp-breakpoint-desktop">{$_lang['magicpreview.bp_desktop']}</label>
-                </div>
+                    <input class="mmmp-c-breakpoints__input mmmp-js-breakpoint-input" type="radio" name="breakpoint" value="tablet" id="mmmp-breakpoint-tablet">
+                    <div class="mmmp-c-breakpoints__item">
+                        <label class="mmmp-c-breakpoints__item-label" for="mmmp-breakpoint-tablet">{$_lang['magicpreview.bp_tablet']}</label>
+                    </div>
 
-                <input class="mmmp-c-breakpoints__input mmmp-js-breakpoint-input" type="radio" name="breakpoint" value="tablet" id="mmmp-breakpoint-tablet">
-                <div class="mmmp-c-breakpoints__item">
-                    <label class="mmmp-c-breakpoints__item-label" for="mmmp-breakpoint-tablet">{$_lang['magicpreview.bp_tablet']}</label>
+                    <input class="mmmp-c-breakpoints__input mmmp-js-breakpoint-input" type="radio" name="breakpoint" value="mobile" id="mmmp-breakpoint-mobile">
+                    <div class="mmmp-c-breakpoints__item">
+                        <label class="mmmp-c-breakpoints__item-label" for="mmmp-breakpoint-mobile">{$_lang['magicpreview.bp_mobile']}</label>
+                    </div>
                 </div>
-
-                <input class="mmmp-c-breakpoints__input mmmp-js-breakpoint-input" type="radio" name="breakpoint" value="mobile" id="mmmp-breakpoint-mobile">
-                <div class="mmmp-c-breakpoints__item">
-                    <label class="mmmp-c-breakpoints__item-label" for="mmmp-breakpoint-mobile">{$_lang['magicpreview.bp_mobile']}</label>
-                </div>
+                <button class="mmmp-c-close" id="mmmp-c-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
         </div>
         <div class="mmmp-c-frame" id="mmmp-js-frame">
@@ -57,7 +64,8 @@
                 frameWrapper = document.getElementById('mmmp-js-frame'),
                 loadingWrapper = document.getElementById('mmmp-js-loading'),
                 baseFrameUrl = '{$baseFrameUrl|escape:javascript}',
-                joiner = baseFrameUrl.indexOf('?') === -1 ? '?' : '&';
+                joiner = baseFrameUrl.indexOf('?') === -1 ? '?' : '&',
+                closeBtn = document.getElementById('mmmp-c-close');
             window.onhashchange = refreshFrame;
             refreshFrame();
 
@@ -76,7 +84,7 @@
 
             // Handle dynamic breakpoint sizing
             var breakpoints = document.querySelectorAll('.mmmp-js-breakpoint-input');
-            breakpoints.forEach(function(bp) {
+            breakpoints.forEach(function (bp) {
                 bp.addEventListener('change', function () {
                     switch (this.value) {
                         case 'full':
@@ -84,18 +92,24 @@
                             break;
 
                         case 'desktop':
-                            frameWrapper.style.width = '1280px';
+                            frameWrapper.style.width = '{$breakpointDesktop}';
                             break;
 
                         case 'tablet':
-                            frameWrapper.style.width = '768px';
+                            frameWrapper.style.width = '{$breakpointTablet}';
                             break;
 
                         case 'mobile':
-                            frameWrapper.style.width = '320px';
+                            frameWrapper.style.width = '{$breakpointMobile}';
                             break;
                     }
                 });
+            });
+
+            // Close the preview tab/window on title click
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.close();
             });
         })()
     </script>

@@ -9,7 +9,14 @@
  * @package modx
  * @subpackage processors.browser.file
  */
- 
+
+// Alias the modMediaSource class for 2.x/3.x compatibility; used for instanceof checks
+if (!class_exists(\modMediaSource::class) && class_exists(\MODX\Revolution\Sources\modMediaSource::class)) {
+    class_alias(\MODX\Revolution\Sources\modMediaSource::class, \modMediaSource::class);
+}
+if (!class_exists(\modTemplateVar::class) && class_exists(\MODX\Revolution\modTemplateVar::class)) {
+    class_alias(\MODX\Revolution\modTemplateVar::class, \modTemplateVar::class);
+}
 
 abstract class redProcessor extends modProcessor {
     /** @var Redactor */

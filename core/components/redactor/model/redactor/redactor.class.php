@@ -70,6 +70,11 @@ class Redactor {
     */
     public $greedyPlugins = true;
     /**
+     * @var bool
+     */
+    public $isMODX3 = false;
+
+    /**
      * @param modX $modx
      * @param array $config
      */
@@ -86,12 +91,13 @@ class Redactor {
             'connectorUrl' => $this->assetsUrl . 'connector.php'
         ),$config);
 
-        $this->version = new VersionObject(2, 3, 8, 'pl');
+        $this->version = new VersionObject(2, 4, 0, 'pl');
 
         $this->modx->lexicon->load('redactor:default');
 
         $vd = $this->modx->getVersionData();
         $this->degradeUI = (bool)(version_compare($vd['full_version'],'2.3.0-pl') === -1);
+        $this->isMODX3 = version_compare($vd['full_version'],'3.0.0-alpha1', '>=');
         $this->rebeccaDay = (bool)((bool)($this->getOption('redactor.commemorateRebecca', null, false)) && date('m') == '06' && (date('d') == '07'));
         $this->loadAce = $this->getBooleanOption('redactor.plugin_syntax', null,false);
         $this->loadCodeMirror = $this->getBooleanOption('redactor.codemirror', null,true);
@@ -161,7 +167,7 @@ class Redactor {
         $options['toolbarOverflow'] = $this->getBooleanOption('redactor.toolbarOverflow', null,false);
         $options['toolbarFixed'] = $this->getBooleanOption('redactor.toolbarFixed', null, true);
         $options['toolbarFixedTarget'] = '#modx-content > .x-panel-bwrap > .x-panel-body';
-        $options['toolbarFixedTopOffset'] = 55;
+        $options['toolbarFixedTopOffset'] = $this->getToolbarFixedTopOffset();
 
         $options['activeButtons'] = $this->explode($this->getOption('redactor.activeButtons', null, 'deleted,italic,bold,underline,unorderedlist,orderedlist,alignleft,aligncenter,alignright,justify'));
 
@@ -491,10 +497,10 @@ Ext.onReady(function() {
     public function initialize() {
         if (!$this->assetsLoaded) {
             $this->modx->controller->addLexiconTopic('redactor:default');
-            $this->modx->controller->addCSS($this->config['assetsUrl'].'redactor-2.3.7.min.css');
+            $this->modx->controller->addCSS($this->config['assetsUrl'].'redactor-2.4.0.min.css');
             if($this->degradeUI) $this->modx->controller->addCSS($this->config['assetsUrl'].'buttons-legacy.min.css');
             if($this->rebeccaDay) $this->modx->controller->addCSS($this->config['assetsUrl'].'rebecca.min.css');
-            $this->modx->controller->addJavascript($this->config['assetsUrl'].'redactor-2.3.7.min.js');
+            $this->modx->controller->addJavascript($this->config['assetsUrl'].'redactor-2.4.0.min.js');
             //if($this->loadAce) $this->modx->controller->addJavascript('https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js');
         }
         $this->assetsLoaded = true;
@@ -875,6 +881,7 @@ Ext.onReady(function() {
                 $this->modx->setOption('contentType', 'default');
                 // The params that get sent to the provider for verification
                 $params = array(
+                    'version' => (string)$this->version,
                     'key' => $key,
                     'package' => 'redactor',
                 );
@@ -895,7 +902,7 @@ Ext.onReady(function() {
                     return;
                 }
                 // If the key is not valid, we have some more work to do.
-                $message = (string)$xml->message;
+                $message = addslashes((string)$xml->message);
                 $age = (int)$xml->case_age;
                 $url = (string)$xml->case_url;
                 $warning = false;
@@ -940,6 +947,11 @@ HTML;
                 $this->modx->log(modX::LOG_LEVEL_ERROR, 'UNABLE TO VERIFY MODMORE LICENSE - PROVIDER NOT FOUND!');
             }
         }
+    }
+
+    private function getToolbarFixedTopOffset()
+    {
+        return $this->isMODX3 ? 0 : 55;
     }
 
 }

@@ -1,7 +1,7 @@
 <script type="text/javascript">
     if (!RedactorPlugins) var RedactorPlugins = {};
 </script>
-<script src="[[+assetsUrl]]redactor-2.3.7.min.js"></script>
+<script src="[[+assetsUrl]]redactor-2.4.0.min.js"></script>
 [[+plugin_files]]
 [[+langFile:notempty=`<script type="text/javascript" src="[[+langFile]]"></script>`]]
 <script type="text/javascript">
