@@ -31,7 +31,8 @@ $siteUrl      = $modx->getOption('site_url');
 $params       = $modx->sanitize($_REQUEST);
 $cLevelId     = $params['c'];
 $id           = rawurlencode($params['recordId']);
-$unitId       = rawurlencode($params['unitId']) ?? null;
+// null when not given, so that an empty "&clevelunitid=" is not sent to the API
+$unitId       = (isset($params['unitId']) && $params['unitId'] !== '') ? rawurlencode($params['unitId']) : null;
 $aiId         = $params['id'];
 $repoCode     = $params['repositoryCode'] ?? null;
 $term         = $params['term'];
@@ -96,8 +97,6 @@ if($section == "search-in-archives") {
 
     $placeholders['result_record_id'] = $id;
 
-    $fAidArchiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode=".$repoCode."&request_locale={$lang}&eadid=".$id."&type=cdetails&clevelunitid=".$unitId."&xmlType=".$type;
-    $FAarchiveDetails = json_decode(file_get_contents($fAidArchiveUrl));
     $archiveDetails = json_decode(file_get_contents($archiveUrl));
     // No record found (e.g. page opened without parameters): show the 404 page instead of an empty detail page
     if (empty($archiveDetails->html)) {

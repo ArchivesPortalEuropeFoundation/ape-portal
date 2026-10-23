@@ -499,7 +499,8 @@ switch ($_REQUEST['action']) {
 
         $result       = asi::fetchSingleResult("search-in-archives");
         $id           = rawurlencode($params['recordId']);    //Also known as the eadId
-        $unitId       = rawurlencode($params['unitId']) ?? null;
+        // null when not given (rawurlencode() never returns null, so "?? null" had no effect)
+        $unitId       = (isset($params['unitId']) && $params['unitId'] !== '') ? rawurlencode($params['unitId']) : null;
         if(isset($result['solr_detail']['reference_value'])) {
             $unitId   = $result['solr_detail']['reference_value'];
         }
@@ -553,8 +554,6 @@ switch ($_REQUEST['action']) {
         $placeholders['archive']['levelname'] = 'clevel';
         $placeholders['request_uri'] = $detailUrl;
 
-        $fAidArchiveUrl = "{$APIbase}Dashboard/eadApi.action?aiRepositoryCode=".$repoCode."&request_locale={$lang}&eadid=".$id."&type=cdetails&clevelunitid=".$unitId."&xmlType=".$type;
-        $FAarchiveDetails = json_decode(file_get_contents($fAidArchiveUrl));
         $archiveDetails = json_decode(file_get_contents($archiveUrl));
 
         $treeQueryString = "{$APIbase}Dashboard/eadTreeApi.action?xmlTypeName={$type}&request_locale={$lang}";
