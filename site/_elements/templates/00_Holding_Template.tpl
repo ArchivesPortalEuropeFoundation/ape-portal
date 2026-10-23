@@ -5,6 +5,7 @@
 &emailTpl=`holding_email`
 &emailHtml=`1`
 &emailTo=`[[++contact_email]]`
+&emailFrom=`[[++emailsender]]`
 &emailSubject=`Holding form from [[++site_name]] website`
 &validate=`name:required,phone:required,email:email:required,message:required,confirmHSL:blank`
 &name.vTextRequired=`Please enter your name.`
