@@ -24,3 +24,7 @@ core/components/redactor/.pubkey_c
 
 #codekit
 config.codekit3
+
+.kiro
+/docs/*
+production.codekit-min.js
