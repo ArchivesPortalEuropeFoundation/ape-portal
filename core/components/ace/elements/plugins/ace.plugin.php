@@ -22,7 +22,8 @@ if ($modx->getOption('which_element_editor', null, 'Ace') !== 'Ace') {
     return;
 }
 
-$ace = $modx->getService('ace', 'Ace', $modx->getOption('ace.core_path', null, $modx->getOption('core_path').'components/ace/').'model/ace/');
+$corePath = $modx->getOption('ace.core_path', null, $modx->getOption('core_path') . 'components/ace/');
+$ace = $modx->getService('ace', 'Ace', $corePath . 'model/ace/');
 $ace->initialize();
 
 $extensionMap = array(
@@ -45,8 +46,8 @@ $extensionMap = array(
 );
 
 // Define default mime for html elements(templates, chunks and html resources)
-$html_elements_mime=$modx->getOption('ace.html_elements_mime',null,false);
-if(!$html_elements_mime){
+$html_elements_mime = $modx->getOption('ace.html_elements_mime', null, false);
+if (!$html_elements_mime) {
     // this may deprecated in future because components may set ace.html_elements_mime option now
     switch (true) {
         case $modx->getOption('twiggy_class'):
@@ -76,7 +77,7 @@ switch ($modx->event->name) {
         $field = 'modx-chunk-snippet';
         if ($modx->controller->chunk && $modx->controller->chunk->isStatic()) {
             $extension = pathinfo($modx->controller->chunk->name, PATHINFO_EXTENSION);
-            if(!$extension||!isset($extensionMap[$extension])){
+            if (!$extension || !isset($extensionMap[$extension])) {
                 $extension = pathinfo($modx->controller->chunk->getSourceFile(), PATHINFO_EXTENSION);
             }
             $mimeType = isset($extensionMap[$extension]) ? $extensionMap[$extension] : 'text/plain';
@@ -98,26 +99,31 @@ switch ($modx->event->name) {
         $extension = pathinfo($scriptProperties['file'], PATHINFO_EXTENSION);
         $mimeType = isset($extensionMap[$extension])
             ? $extensionMap[$extension]
-            : 'text/plain';
+            : ('@FILE:' . pathinfo($scriptProperties['file'], PATHINFO_BASENAME));
         $modxTags = $extension == 'tpl';
         break;
     case 'OnDocFormPrerender':
-        if (!$modx->controller->resourceArray) {
+        if (!$modx->controller || empty($modx->controller->resourceArray)) {
             return;
         }
         $field = 'ta';
         $mimeType = $modx->getObject('modContentType', $modx->controller->resourceArray['content_type'])->get('mime_type');
 
-        if($mimeType == 'text/html')$mimeType = $html_elements_mime;
+        if ($mimeType == 'text/html') {
+            $mimeType = $html_elements_mime;
+        }
 
-        if ($modx->getOption('use_editor')){
+        if ($modx->getOption('use_editor')) {
             $richText = $modx->controller->resourceArray['richtext'];
             $classKey = $modx->controller->resourceArray['class_key'];
-            if ($richText || in_array($classKey, array('modStaticResource','modSymLink','modWebLink','modXMLRPCResource'))) {
+            if ($richText || in_array($classKey, array('modStaticResource', 'modSymLink', 'modWebLink', 'modXMLRPCResource'))) {
                 $field = false;
             }
         }
         $modxTags = true;
+        break;
+    case 'OnTVInputRenderList':
+        $modx->event->output($corePath . 'elements/tv/input/');
         break;
     default:
         return;
@@ -125,7 +131,7 @@ switch ($modx->event->name) {
 
 $modxTags = (int) $modxTags;
 $script = '';
-if ($field) {
+if (!empty($field)) {
     $script .= "MODx.ux.Ace.replaceComponent('$field', '$mimeType', $modxTags);";
 }
 
