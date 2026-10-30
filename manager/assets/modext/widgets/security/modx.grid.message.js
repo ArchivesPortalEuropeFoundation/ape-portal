@@ -6,48 +6,47 @@
  * @param {Object} config An object of configuration properties
  * @xtype modx-panel-messages
  */
-MODx.panel.Messages = function(config) {
-    config = config || {};
-    Ext.applyIf(config,{
-        id: 'modx-panel-message'
-        ,cls: 'container'
-        ,bodyStyle: ''
-        ,defaults: { collapsible: false ,autoHeight: true }
-        ,url: MODx.config.connector_url
-        ,baseParams: {
-            action: 'security/message/getlist'
-        }
-        ,items: [{
-            html: _('messages')
-            ,id: 'modx-messages-header'
-            ,xtype: 'modx-header'
-        },MODx.getPageStructure([{
-            title: _('messages')
-            ,id: 'modx-messages-tab'
-            ,autoHeight: true
-            ,layout: 'form'
-            ,defaults: { border: false ,msgTarget: 'side' }
-            ,items: [{
-                layout: 'form'
-                ,autoHeight: true
-                ,defaults: { border: false }
-                ,items: [{
-                    html: '<p>' + _('messages_desc') + '</p>'
-                    ,id: 'modx-messages-msg'
-                    ,xtype: 'modx-description'
-                },{
-                    xtype: 'modx-grid-message'
-                    ,cls: 'main-wrapper'
-                    ,user: config.user
-                    ,preventRender: true
+MODx.panel.Messages = function(config = {}) {
+    Ext.applyIf(config, {
+        id: 'modx-panel-message',
+        cls: 'container',
+        bodyStyle: '',
+        defaults: { collapsible: false, autoHeight: true },
+        url: MODx.config.connector_url,
+        baseParams: {
+            action: 'Security/Message/GetList'
+        },
+        items: [{
+            html: _('messages'),
+            id: 'modx-messages-header',
+            xtype: 'modx-header'
+        }, MODx.getPageStructure([{
+            title: _('messages'),
+            id: 'modx-messages-tab',
+            autoHeight: true,
+            layout: 'form',
+            defaults: { border: false, msgTarget: 'side' },
+            items: [{
+                layout: 'form',
+                autoHeight: true,
+                defaults: { border: false },
+                items: [{
+                    html: `<p>${_('messages_desc')}</p>`,
+                    id: 'modx-messages-msg',
+                    xtype: 'modx-description'
+                }, {
+                    xtype: 'modx-grid-message',
+                    cls: 'main-wrapper',
+                    user: config.user,
+                    preventRender: true
                 }]
             }]
         }])]
     });
-    MODx.panel.Messages.superclass.constructor.call(this,config);
+    MODx.panel.Messages.superclass.constructor.call(this, config);
 };
-Ext.extend(MODx.panel.Messages,MODx.FormPanel);
-Ext.reg('modx-panel-messages',MODx.panel.Messages);
+Ext.extend(MODx.panel.Messages, MODx.FormPanel);
+Ext.reg('modx-panel-messages', MODx.panel.Messages);
 
 /**
  * Loads a grid of Messages.
@@ -57,234 +56,242 @@ Ext.reg('modx-panel-messages',MODx.panel.Messages);
  * @param {Object} config An object of options.
  * @xtype modx-grid-message
  */
-MODx.grid.Message = function(config) {
-    config = config || {};
-
+MODx.grid.Message = function(config = {}) {
     this.exp = new Ext.grid.RowExpander({
-        tpl : new Ext.Template(
-            '<span style="float: right;">'
-            ,'<i>'+_('sent_by')+': {sender_name:this.htmlEncode} <br />'+_('sent_on')+': {date_sent}</i><br /><br />'
-            ,'</span>'
-            ,'<h3>{subject:this.htmlEncode}</h3>'
-            ,'<p>{message:this.htmlEncode}</p>'
-            , {
-                htmlEncode: function(value){
+        tpl: new Ext.Template(
+            `<div class="manager-user-message">
+                <div class="meta">
+                    <p><span>${_('sent_by')}:</span> {sender_name:this.htmlEncode}</p>
+                    <p><span>${_('sent_on')}:</span> {date_sent}</p>
+                </div>
+                <div class="body">
+                    <h3>{subject:this.htmlEncode}</h3>
+                    <p>{message:this.htmlEncode}</p>
+                </div>
+            </div>`,
+            {
+                htmlEncode: function(value) {
                     return Ext.util.Format.htmlEncode(value);
                 }
             }
         )
     });
-    this.exp.on('expand',this.read,this);
-    var disabled = !(MODx.perm.view_user || MODx.perm.view_role || MODx.perm.view_usergroup)
-    Ext.applyIf(config,{
-        title: _('messages')
-        ,id: 'modx-grid-message'
-        ,url: MODx.config.connector_url
-        ,baseParams: {
-            action: 'security/message/getlist'
-        }
-        ,fields: ['id','type','subject','message','sender','recipient','private'
-            ,'date_sent','read','sender_name','recipient_name']
-        ,autosave: true
-        ,paging: true
-        ,plugins: this.exp
-        ,columns: [this.exp,{
-            header: _('id')
-            ,dataIndex: 'id'
-            ,width: 30
-        },{
-            header: _('subject')
-            ,dataIndex: 'subject'
-            ,width: 200
-            ,renderer: Ext.util.Format.htmlEncode
-        },{
-            header: _('sender')
-            ,dataIndex: 'sender_name'
-            ,width: 120
-            ,renderer: Ext.util.Format.htmlEncode
-        },{
-            header: _('recipient')
-            ,dataIndex: 'recipient_name'
-            ,width: 120
-            ,renderer: Ext.util.Format.htmlEncode
-        },{
-            header: _('date_sent')
-            ,dataIndex: 'date_sent'
-            ,width: 150
-        },{
-            header: _('read')
-            ,dataIndex: 'read'
-            ,width: 100
-            ,editor: { xtype: 'combo-boolean' ,renderer: 'boolean' }
-            ,editable: false
-        }]
-        ,tbar: [{
-            text: _('message_new')
-            ,cls:'primary-button'
-            ,disabled: disabled
-            ,scope: this
-            ,handler: this.newMessage
-        },'->',{
-            xtype: 'modx-combo-message-type'
-            ,name: 'type'
-            ,id: 'modx-messages-filter'
-            ,emptyText: _('filter_by_type')
-            ,allowBlank: false
-            ,editable: false
-            ,typeAhead: false
-            ,forceSelection: true
-            // ,value: 'inbox'
-            ,width: 200
-            ,listeners: {
-                'select': {fn: this.filterByType, scope: this}
-            }
-        },{
-            xtype: 'textfield'
-            ,name: 'search'
-            ,id: 'modx-messages-search'
-            ,cls: 'x-form-filter'
-            ,emptyText: _('search_ellipsis')
-            ,listeners: {
-                'change': {fn: this.search, scope: this}
-                ,'render': {fn: function(cmp) {
-                    new Ext.KeyMap(cmp.getEl(), {
-                        key: Ext.EventObject.ENTER
-                        ,fn: this.blur
-                        ,scope: cmp
-                    });
-                },scope:this}
-            }
-        },{
-            xtype: 'button'
-            ,id: 'modx-filter-clear'
-            ,cls: 'x-form-filter-clear'
-            ,text: _('filter_clear')
-            ,listeners: {
-                'click': {fn: this.clearFilter, scope: this},
-                'mouseout': { fn: function(evt){
-                    this.removeClass('x-btn-focus');
+    this.exp.on('expand', this.read, this);
+    Ext.applyIf(config, {
+        title: _('messages'),
+        id: 'modx-grid-message',
+        url: MODx.config.connector_url,
+        baseParams: {
+            action: 'Security/Message/GetList',
+            type: MODx.request.type || null
+        },
+        fields: [
+            'id',
+            'type',
+            'subject',
+            'message',
+            'sender',
+            'recipient',
+            'private',
+            'date_sent',
+            'read',
+            'sender_name',
+            'recipient_name'
+        ],
+        autosave: true,
+        paging: true,
+        plugins: this.exp,
+        columns: [this.exp, {
+            header: _('id'),
+            dataIndex: 'id',
+            width: 30
+        }, {
+            header: _('subject'),
+            dataIndex: 'subject',
+            width: 200,
+            renderer: Ext.util.Format.htmlEncode
+        }, {
+            header: _('sender'),
+            dataIndex: 'sender_name',
+            width: 120,
+            renderer: Ext.util.Format.htmlEncode
+        }, {
+            header: _('recipient'),
+            dataIndex: 'recipient_name',
+            width: 120,
+            renderer: Ext.util.Format.htmlEncode
+        }, {
+            header: _('date_sent'),
+            dataIndex: 'date_sent',
+            width: 150
+        }, {
+            header: _('read'),
+            dataIndex: 'read',
+            width: 100,
+            editor: {
+                xtype: 'combo-boolean',
+                renderer: 'boolean'
+            },
+            editable: false
+        }],
+        tbar: [
+            {
+                text: _('create'),
+                cls: 'primary-button',
+                disabled: !(MODx.perm.view_user || MODx.perm.view_role || MODx.perm.usergroup_view),
+                scope: this,
+                handler: this.newMessage
+            },
+            '->',
+            {
+                xtype: 'modx-combo-message-type',
+                name: 'type',
+                itemId: 'filter-type',
+                emptyText: _('filter_by_type'),
+                width: 200,
+                value: MODx.request.type || null,
+                listeners: {
+                    render: {
+                        fn: function(cmp) {
+                            // Maintain default type in URL and in this combo when loading this combo and when clearing all filters
+                            const clearFiltersButton = cmp.ownerCt.getComponent('filter-clear'),
+                                  resetDefaults = () => {
+                                      MODx.util.url.setParams({ type: 'inbox' });
+                                      cmp.setValue('inbox');
+                                  };
+                            if (!MODx.request.type) {
+                                resetDefaults();
+                            }
+                            if (clearFiltersButton) {
+                                clearFiltersButton.on('click', button => {
+                                    resetDefaults();
+                                });
+                            }
+                        },
+                        scope: this
+                    },
+                    select: {
+                        fn: function(cmp, record, selectedIndex) {
+                            this.applyGridFilter(cmp, 'type');
+                        },
+                        scope: this
+                    }
                 }
-                }
-            }
-        }]
+            },
+            this.getQueryFilterField(),
+            this.getClearFiltersButton('filter-type, filter-query')
+        ]
     });
-    MODx.grid.Message.superclass.constructor.call(this,config);
+    MODx.grid.Message.superclass.constructor.call(this, config);
 };
-Ext.extend(MODx.grid.Message,MODx.grid.Grid,{
-    read: function(exp,rec,body,ri) {
-        var r = rec.data;
-        if (r.read) return false;
-        MODx.Ajax.request({
-            url: this.config.url
-            ,params: {
-                action: 'security/message/read'
-                ,id: r.id
-            }
-            ,listeners: {
-            	'success': {fn:function(r) {
-                    var r2 = this.getStore().getAt(ri);
-                    r2.set('read',true);
-                    r2.commit();
-                    this.exp.expandRow(ri);
-            	},scope:this}
-            }
-        });
-    }
-    ,markUnread: function(btn,e) {
-        var rec = this.getSelectionModel().getSelected();
-        MODx.Ajax.request({
-            url: this.config.url
-            ,params: {
-                action: 'security/message/unread'
-                ,id: rec.data.id
-            }
-            ,listeners: {
-            	'success': {fn:function(r) {
-            		rec.set('read',false);
-            		rec.commit();
-            	},scope:this}
-            }
-        });
-    }
-    ,getMenu: function() {
-        var r = this.getSelectionModel().getSelected();
-        var m = [{
-            text: _('reply')
-            ,scope: this
-            ,handler: this.reply
-        },{
-            text: _('forward')
-            ,scope: this
-            ,handler: this.forward
-        }];
-        if (r.data.read && MODx.user.id != r.data.sender) {
-            m.push({
-                text: _('mark_unread')
-                ,handler: this.markUnread
-            });
-            m.push('-');
+Ext.extend(MODx.grid.Message, MODx.grid.Grid, {
+    read: function(expanderData, record, body, rowIndex) {
+        const message = record.data;
+        if (message.read) {
+            return false;
         }
-        if (MODx.user.id != r.data.sender) {
-            m.push({
-                text: _('delete')
-                ,handler: this.remove.createDelegate(this, ['message_remove_confirm', 'security/message/remove'])
+        MODx.Ajax.request({
+            url: this.config.url,
+            params: {
+                action: 'Security/Message/Read',
+                id: message.id
+            },
+            listeners: {
+                success: {
+                    fn: function(response) {
+                        const selectedMessage = this.getStore().getAt(rowIndex);
+                        selectedMessage.set('read', true);
+                        selectedMessage.commit();
+                        this.exp.expandRow(rowIndex);
+                    },
+                    scope: this
+                }
+            }
+        });
+    },
+    markUnread: function(btn, e) {
+        const message = this.getSelectionModel().getSelected();
+        MODx.Ajax.request({
+            url: this.config.url,
+            params: {
+                action: 'Security/Message/Unread',
+                id: message.data.id
+            },
+            listeners: {
+                success: {
+                    fn: function(response) {
+                        message.set('read', false);
+                        message.commit();
+                    },
+                    scope: this
+                }
+            }
+        });
+    },
+    getMenu: function() {
+        const
+            message = this.getSelectionModel().getSelected(),
+            senderIsCurrentUser = parseInt(MODx.user.id, 10) === parseInt(message.data.sender, 10),
+            menu = [{
+                text: _('reply'),
+                scope: this,
+                handler: this.reply
+            }, {
+                text: _('forward'),
+                scope: this,
+                handler: this.forward
+            }]
+        ;
+        if (message.data.read && !senderIsCurrentUser) {
+            menu.push({
+                text: _('mark_unread'),
+                handler: this.markUnread
+            });
+            menu.push('-');
+        }
+        if (!senderIsCurrentUser) {
+            menu.push({
+                text: _('delete'),
+                handler: this.remove.createDelegate(this, ['message_remove_confirm', 'Security/Message/Remove'])
             });
         }
-        return m;
-    }
-    ,reply: function(btn,e) {
+        return menu;
+    },
+    reply: function(btn, e) {
         this.menu.record = {
-            type: 'user'
-            ,user: this.menu.record.sender
-            ,subject: 'RE: ' + this.menu.record.subject
-            ,message: ''
+            type: 'user',
+            user: this.menu.record.sender,
+            subject: `RE: ${this.menu.record.subject}`,
+            message: ''
         };
-        this.loadWindow(btn,e,{
+        this.loadWindow(btn, e, {
             xtype: 'modx-window-message-create'
         });
-    }
-    ,forward: function(btn,e) {
+    },
+    forward: function(btn, e) {
         this.menu.record = {
-            type: 'user'
-            ,user: ''
-            ,subject: 'Fwd: ' + this.menu.record.subject
-            ,message: "\r\n--\r\n" + this.menu.record.message
+            type: 'user',
+            user: '',
+            subject: `Fwd: ${this.menu.record.subject}`,
+            message: `\r\n--\r\n${this.menu.record.message}`
         };
-        this.loadWindow(btn,e,{
+        this.loadWindow(btn, e, {
             xtype: 'modx-window-message-create'
         });
-    }
-    ,newMessage: function(btn,e) {
+    },
+    newMessage: function(btn, e) {
         this.menu.record = {
-            type: 'user'
-            ,user: ''
-            ,subject: ''
-            ,message: ''
+            type: 'user',
+            user: '',
+            subject: '',
+            message: ''
         };
-        this.loadWindow(btn,e,{
+        this.loadWindow(btn, e, {
             xtype: 'modx-window-message-create'
         });
-    }
-    ,filterByType: function (combo) {
-        this.getStore().baseParams.type = combo.getValue();
-        this.getBottomToolbar().changePage(1);
-    }
-    ,search: function(tf,newValue) {
-        var nv = newValue || tf;
-        this.getStore().baseParams.search = Ext.isEmpty(nv) || Ext.isObject(nv) ? '' : nv;
-        this.getBottomToolbar().changePage(1);
-        return true;
-    }
-    ,clearFilter: function() {
-    	this.getStore().baseParams = {
-            action: 'security/message/getList'
-    	};
-        Ext.getCmp('modx-messages-search').reset();
-        Ext.getCmp('modx-messages-filter').reset();
-    	this.getBottomToolbar().changePage(1);
     }
 });
-Ext.reg('modx-grid-message',MODx.grid.Message);
+Ext.reg('modx-grid-message', MODx.grid.Message);
 
 /**
  * Generates the new message window.
@@ -294,115 +301,161 @@ Ext.reg('modx-grid-message',MODx.grid.Message);
  * @param {Object} config An object of options.
  * @xtype modx-window-message-create
  */
-MODx.window.CreateMessage = function(config) {
-    config = config || {};
-    Ext.applyIf(config,{
-        title: _('message_create')
-        ,url: MODx.config.connector_url
-        ,action: 'security/message/create'
-        ,fields: this.getFields()
-        ,keys: []
+MODx.window.CreateMessage = function(config = {}) {
+    Ext.applyIf(config, {
+        title: _('create'),
+        url: MODx.config.connector_url,
+        action: 'Security/Message/Create',
+        formDefaults: {
+            allowBlank: false,
+            anchor: '100%',
+            msgTarget: 'under',
+            validationEvent: 'change',
+            validateOnBlur: false
+        },
+        fields: this.getFields(),
+        keys: []
     });
-    MODx.window.CreateMessage.superclass.constructor.call(this,config);
-    this.on('show',function() {
-        this.fp.getForm().findField('type').fireEvent('select');
-    },this);
-};
-Ext.extend(MODx.window.CreateMessage,MODx.Window,{
-    tps: ['user','usergroup','role','all']
-
-    ,getFields: function() {
-        var data = [];
-        if (MODx.perm.view_user) data.push(['user',_('user')]);
-        if (MODx.perm.view_usergroup) data.push(['usergroup',_('usergroup')]);
-        if (MODx.perm.view_role) data.push(['role',_('role')]);
-        if (MODx.perm.view_user) data.push(['all',_('all')]);
-
-        var items = [{
-            xtype: 'combo'
-            ,fieldLabel: _('recipient_type')
-            ,name: 'type'
-            ,hiddenName: 'type'
-            ,store: new Ext.data.SimpleStore({
-                fields: ['type','disp']
-                ,data: data
-            })
-            ,mode: 'local'
-            ,triggerAction: 'all'
-            ,displayField: 'disp'
-            ,valueField: 'type'
-            ,editable: false
-            ,value: data[0][0]
-            ,listeners: {
-                'select': {fn:this.showRecipient,scope:this}
+    MODx.window.CreateMessage.superclass.constructor.call(this, config);
+    this.on({
+        afterrender: {
+            fn: function() {
+                /*
+                    Force the form the layout again after the auto select of the Type combo,
+                    otherwise the Recipients combo will not size correctly (due for some reason
+                    to the validation effect of allowBlank: false)
+                */
+                this.setWidth(this.getWidth() + 1);
             }
-            ,anchor: '100%'
+        },
+        show: {
+            fn: function() {
+                const form = this.fp.getForm();
+                form.findField('type').fireEvent('select');
+                form.items.items.forEach(field => {
+                    field.clearInvalid();
+                });
+            }
+        }
+    });
+};
+Ext.extend(MODx.window.CreateMessage, MODx.Window, {
+    recipientTypes: ['user', 'usergroup', 'role', 'all'],
+
+    getFields: function() {
+        const data = [];
+        if (MODx.perm.view_user) {
+            data.push(['user', _('user')]);
+        }
+        if (MODx.perm.usergroup_view) {
+            data.push(['usergroup', _('usergroup')]);
+        }
+        if (MODx.perm.view_role) {
+            data.push(['role', _('role')]);
+        }
+        if (MODx.perm.view_user) {
+            data.push(['all', _('all')]);
+        }
+
+        const items = [{
+            xtype: 'combo',
+            fieldLabel: _('recipient_type'),
+            name: 'type',
+            hiddenName: 'type',
+            store: new Ext.data.SimpleStore({
+                fields: [
+                    'type',
+                    'disp'
+                ],
+                data: data
+            }),
+            mode: 'local',
+            triggerAction: 'all',
+            displayField: 'disp',
+            valueField: 'type',
+            editable: false,
+            value: data[0][0],
+            listeners: {
+                select: {
+                    fn: this.showRecipient,
+                    scope: this
+                }
+            }
         }];
 
-        if (MODx.perm.view_user) items.push({
-            xtype: 'modx-combo-user'
-            ,id: 'mc-recipient-user'
-            ,fieldLabel: _('user')
-            ,allowBlank: true
-            ,anchor: '100%'
-        });
-        if (MODx.perm.view_usergroup) items.push({
-            xtype: 'modx-combo-usergroup'
-            ,id: 'mc-recipient-usergroup'
-            ,fieldLabel: _('usergroup')
-            ,allowBlank: true
-            ,anchor: '100%'
-        });
-        if (MODx.perm.view_role) items.push({
-            xtype: 'modx-combo-role'
-            ,id: 'mc-recipient-role'
-            ,fieldLabel: _('role')
-            ,allowBlank: true
-            ,anchor: '100%'
-        });
-        if (MODx.perm.view_user) items.push({
-            xtype: 'hidden'
-            ,id: 'mc-recipient-all'
-            ,name: 'all'
-            ,fieldLabel: _('all')
-            ,value: 'all'
-        });
+        if (MODx.perm.view_user) {
+            items.push({
+                xtype: 'modx-combo-user',
+                id: 'mc-recipient-user',
+                fieldLabel: _('user')
+            });
+            items.push({
+                xtype: 'modx-combo-usergroup',
+                id: 'mc-recipient-usergroup',
+                fieldLabel: _('usergroup'),
+                hidden: true
+            });
+        }
+        if (MODx.perm.view_role) {
+            items.push({
+                xtype: 'modx-combo-role',
+                id: 'mc-recipient-role',
+                fieldLabel: _('role'),
+                hidden: true
+            });
+        }
+        if (MODx.perm.view_user) {
+            items.push({
+                xtype: 'hidden',
+                id: 'mc-recipient-all',
+                name: 'all',
+                fieldLabel: _('all'),
+                value: 'all'
+            });
+        }
 
-        items.push( [{
-            xtype: 'textfield'
-            ,fieldLabel: _('subject')
-            ,name: 'subject'
-            ,maxLength: 255
-            ,anchor: '100%'
-        },{
-            xtype: 'textarea'
-            ,fieldLabel: _('message')
-            ,name: 'message'
-            ,anchor: '100%'
-            ,grow: true
-        },{
-            xtype: 'xcheckbox'
-            ,name: 'sendemail'
-            ,boxLabel: _('message_send_email')
-            ,hideLabel: true
-            ,inputValue: 0
-            ,checked: false
+        items.push([{
+            xtype: 'textfield',
+            fieldLabel: _('subject'),
+            name: 'subject',
+            maxLength: 255
+        }, {
+            xtype: 'textarea',
+            fieldLabel: _('message'),
+            name: 'message',
+            grow: true
+        }, {
+            xtype: 'xcheckbox',
+            name: 'sendemail',
+            ctCls: 'display-switch space-before',
+            boxLabel: _('message_send_email'),
+            hideLabel: true,
+            inputValue: 0,
+            checked: false
         }]);
         return items;
-    }
-    ,showRecipient: function(cb,rec,i) {
-        var form = this.fp.getForm();
-        for (var x=0;x<this.tps.length;x++) {
-            var f = form.findField('mc-recipient-'+this.tps[x]);
-            if (f) { this.hideField(f); }
+    },
+    showRecipient: function(combo, record, selectedIndex) {
+        const
+            form = this.fp.getForm(),
+            currentRecipientType = record ? record.data.type : 'user',
+            currentRecipientsCombo = form.findField(`mc-recipient-${currentRecipientType}`)
+        ;
+        // Initially hide all combos
+        for (let i = 0; i < this.recipientTypes.length; i++) {
+            const recipientsCombo = form.findField(`mc-recipient-${this.recipientTypes[i]}`);
+            if (recipientsCombo) {
+                this.hideField(recipientsCombo);
+            }
         }
-        var type = rec ? rec.data.type : 'user';
-        var fd = form.findField('mc-recipient-'+type);
-        if (fd) { this.showField(fd);}
+        // Show the combo for the currently-selected type
+        if (currentRecipientsCombo) {
+            this.showField(currentRecipientsCombo);
+            currentRecipientsCombo.setSize('100%');
+        }
     }
 });
-Ext.reg('modx-window-message-create',MODx.window.CreateMessage);
-
+Ext.reg('modx-window-message-create', MODx.window.CreateMessage);
 
 /**
  * Select Box with types of messages for showing to user.
@@ -412,25 +465,27 @@ Ext.reg('modx-window-message-create',MODx.window.CreateMessage);
  * @param {Object} config An object of options.
  * @xtype modx-combo-message-type
  */
-MODx.combo.MessageType = function(config) {
-    config = config || {};
-    Ext.applyIf(config,{
+MODx.combo.MessageType = function(config = {}) {
+    Ext.applyIf(config, {
         store: new Ext.data.SimpleStore({
-            fields: ['d', 'v'],
+            fields: [
+                'd',
+                'v'
+            ],
             data: [
                 [_('messages_inbox'), 'inbox'],
                 [_('messages_outbox'), 'outbox']
             ]
-        })
-        ,displayField: 'd'
-        ,valueField: 'v'
-        ,mode: 'local'
-        ,editable: false
-        ,selectOnFocus: false
-        ,preventRender: true
-        ,forceSelection: true
-        ,enableKeyEvents: true
-        ,allowBlank: false
+        }),
+        displayField: 'd',
+        valueField: 'v',
+        mode: 'local',
+        editable: false,
+        selectOnFocus: false,
+        preventRender: true,
+        forceSelection: true,
+        enableKeyEvents: true,
+        allowBlank: false
     });
     MODx.combo.MessageType.superclass.constructor.call(this, config);
 };

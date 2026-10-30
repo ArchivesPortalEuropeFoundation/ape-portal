@@ -1,85 +1,157 @@
-MODx.grid.SettingsGrid = function(config) {
-    config = config || {};
+/**
+ * Loads a grid for managing Settings.
+ *
+ * @class MODx.grid.SettingsGrid
+ * @extends MODx.grid.Grid
+ * @param {Object} config An object of configuration properties
+ * @xtype modx-grid-settings
+ */
+MODx.grid.SettingsGrid = function(config = {}) {
+    const
+        settingsType = this.settingsType || 'system',
+        queryValue = this.querySpec ? this.applyRequestFilter(...this.querySpec) : MODx.util.url.getParamValue('query', true)
+    ;
     this.exp = new Ext.grid.RowExpander({
-        tpl : new Ext.XTemplate(
+        tpl: new Ext.XTemplate(
             '<p class="desc">{[MODx.util.safeHtml(values.description_trans)]}</p>'
         )
     });
-
+    this.areaFilterValue = MODx.util.url.getParamValue('area');
+    // Settings grid in User Group ACLs view needs special handling when applying filter via request param
+    this.namespaceFilterValue = settingsType === 'usergroup'
+        ? this.applyRequestFilter(3, 'ns', 'tab')
+        : MODx.util.url.getParamValue('ns')
+    ;
     if (!config.tbar) {
         config.tbar = [{
-            text: _('setting_create')
+            text: _('create')
             ,scope: this
-            ,cls:'primary-button'
+            ,cls: 'primary-button'
             ,handler: {
                 xtype: 'modx-window-setting-create'
                 ,url: config.url || MODx.config.connector_url
                 ,blankValues: true
+                ,listeners: {
+                    success: {
+                        fn: function(response) {
+                            this.refresh();
+                            this.fireEvent('createSetting', response);
+                        },
+                        scope: this
+                    }
+                }
             }
         }];
     }
-    config.tbar.push('->',{
-        xtype: 'modx-combo-namespace'
-        ,name: 'namespace'
-        ,id: 'modx-filter-namespace'
-        ,emptyText: _('namespace_filter')
-        ,preselectValue: MODx.request['ns'] ? MODx.request['ns'] : 'core'
-        ,allowBlank: false
-        ,editable: true
-        ,typeAhead: true
-        ,forceSelection: true
-        ,queryParam: 'search'
-        ,width: 150
-        ,listeners: {
-            'select': {fn: this.filterByNamespace, scope:this}
-        }
-    },{
-        xtype: 'modx-combo-area'
-        ,name: 'area'
-        ,id: 'modx-filter-area'
-        ,emptyText: _('area_filter')
-        ,value: MODx.request['area']
-        ,baseParams: {
-            action: 'system/settings/getAreas'
-            ,namespace: MODx.request['ns'] ? MODx.request['ns'] : 'core'
-        }
-        ,width: 250
-        ,allowBlank: true
-        ,editable: true
-        ,typeAhead: true
-        ,forceSelection: true
-        ,listeners: {
-            'select': {fn: this.filterByArea, scope:this}
-        }
-    },{
-        xtype: 'textfield'
-        ,name: 'filter_key'
-        ,id: 'modx-filter-key'
-        ,cls: 'x-form-filter'
-        ,emptyText: _('search_by_key')
-        ,listeners: {
-            'change': {fn: this.filterByKey, scope: this}
-            ,'render': {fn: function(cmp) {
-                new Ext.KeyMap(cmp.getEl(), {
-                    key: Ext.EventObject.ENTER
-                    ,fn: this.blur
-                    ,scope: cmp
-                });
-            },scope:this}
-        }
-    },{
-        xtype: 'button'
-        ,id: 'modx-filter-clear'
-        ,cls: 'x-form-filter-clear'
-        ,text: _('filter_clear')
-        ,listeners: {
-            'click': {fn: this.clearFilter, scope: this},
-            'mouseout': { fn: function(evt){
-                   this.removeClass('x-btn-focus');
+    config.tbar.push(
+        '->',
+        {
+            /**
+             * @deprecated use of id config property deprecated in 3.0, to be removed in 3.1
+             *
+             * To access this combo in the future, get a reference to the topToolbar and use
+             * the getComponent method ( e.g., [gridObj].getTopToolbar().getComponent([itemId]) )
+             *
+             * Also, itemId to be renamed 'filter-namespace' in 3.1
+             */
+            xtype: 'modx-combo-namespace'
+            ,id: 'modx-filter-namespace'
+            ,itemId: 'filter-ns'
+            ,emptyText: _('namespace_filter')
+            ,typeAhead: true
+            ,minChars: 2
+            ,forceSelection: true
+            ,width: 200
+            ,value: this.namespaceFilterValue
+            ,baseParams: {
+                action: 'Workspace/PackageNamespace/GetList',
+                area: this.areaFilterValue,
+                isGridFilter: true,
+                targetGrid: 'MODx.grid.SettingsGrid',
+                targetSettingsType: this.getSettingsType(),
+                foreignKey: config.fk || false
+            }
+            ,listeners: {
+                select: {
+                    fn: function(cmp, record, selectedIndex) {
+                        this.updateDependentFilter('filter-area', 'namespace', record.data.name);
+                        this.applyGridFilter(cmp, 'ns');
+                    },
+                    scope: this
+                },
+                change: {
+                // Support typed-in value (where the select event is not triggered)
+                    fn: function(cmp, newValue, oldValue) {
+                        /*
+                            Note that clicking the combo trigger when there is no value chosen initially,
+                            (the combo's value is null) but not choosing an item fires change event and
+                            changes the combo's value to an empty string; this can cause issues in some
+                            instances, so explicity reset to null
+                        */
+                        if (newValue === '') {
+                            cmp.setValue(null);
+                        }
+                        this.updateDependentFilter('filter-area', 'namespace', newValue);
+                        this.applyGridFilter(cmp, 'ns');
+                    },
+                    scope: this
                 }
             }
-        }
-    });
+        },
+        {
+            /**
+             * @deprecated use of id config property deprecated in 3.0, to be removed in 3.1
+             *
+             * To access this combo in the future, get a reference to the topToolbar and use
+             * the getComponent method ( e.g., [gridObj].getTopToolbar().getComponent([itemId]) )
+             */
+            xtype: 'modx-combo-area'
+            ,id: 'modx-filter-area'
+            ,itemId: 'filter-area'
+            ,emptyText: _('area_filter')
+            ,value: this.areaFilterValue
+            ,baseParams: {
+                action: 'System/Settings/GetAreas',
+                namespace: MODx.request.ns || null,
+                isGridFilter: true,
+                targetGrid: 'MODx.grid.SettingsGrid',
+                targetSettingsType: this.getSettingsType(),
+                foreignKey: config.fk || false
+            }
+            ,width: 250
+            ,allowBlank: true
+            ,editable: true
+            ,typeAhead: true
+            ,minChars: 2
+            ,forceSelection: true
+            ,listeners: {
+                select: {
+                    fn: function(cmp, record, selectedIndex) {
+                        this.updateDependentFilter('filter-ns', 'area', record.data.v);
+                        this.applyGridFilter(cmp, 'area');
+                    },
+                    scope: this
+                },
+                change: {
+                // Support typed-in value (where the select event is not triggered)
+                    fn: function(cmp, newValue, oldValue) {
+                        // See note in namespace combo above re setting to null
+                        if (newValue === '') {
+                            cmp.setValue(null);
+                        }
+                        this.updateDependentFilter('filter-ns', 'area', newValue);
+                        this.applyGridFilter(cmp, 'area');
+                    },
+                    scope: this
+                }
+            }
+        },
+        this.getQueryFilterField(`filter-query:${queryValue}`),
+        this.getClearFiltersButton(
+            'filter-ns:, filter-area:, filter-query',
+            'filter-area:namespace, filter-ns:area'
+        )
+    );
 
     this.cm = new Ext.grid.ColumnModel({
         columns: [this.exp,{
@@ -114,7 +186,21 @@ MODx.grid.SettingsGrid = function(config) {
             ,sortable: true
             ,hidden: true
             ,editable: false
-        }]
+        }],
+        isCellEditable: function(col, row) {
+            var record = config.store.getAt(row);
+            if (record.get('xtype') === 'modx-grid-json' || record.get('xtype') === 'grid-json') {
+                Ext.MessageBox.show({
+                    title: _('info')
+                    ,msg:  _('setting_err_not_editable')
+                    ,buttons: Ext.MessageBox.OK
+                    ,icon: Ext.MessageBox.INFO
+                    ,modal: true
+                });
+                return false;
+            }
+            return Ext.grid.ColumnModel.prototype.isCellEditable.call(this, col, row);
+        }
         /* Editors are pushed here. I think that they should be in general grid
          * definitions (modx.grid.js) and activated via a config property (loadEditor: true) */
         ,getCellEditor: function(colIndex, rowIndex) {
@@ -137,13 +223,27 @@ MODx.grid.SettingsGrid = function(config) {
     });
 
     Ext.applyIf(config, {
-         cm: this.cm
-        ,fields: ['key','name','value','description','xtype','namespace','area','area_text','editedon','oldkey','menu','name_trans','description_trans']
+        cm: this.cm
+        ,fields: [
+            'key',
+            'name',
+            'value',
+            'description',
+            'xtype',
+            'namespace',
+            'area',
+            'area_text',
+            'editedon',
+            'oldkey',
+            'menu',
+            'name_trans',
+            'description_trans'
+        ]
         ,url: MODx.config.connector_url
         ,baseParams: {
-            action: 'system/settings/getList'
-            ,namespace: MODx.request['ns'] ? MODx.request['ns'] : 'core'
-            ,area: MODx.request['area']
+            action: 'System/Settings/GetList',
+            namespace: this.namespaceFilterValue,
+            area: this.areaFilterValue
         }
         ,clicksToEdit: 2
         ,grouping: true
@@ -154,7 +254,7 @@ MODx.grid.SettingsGrid = function(config) {
         ,plugins: this.exp
         ,primaryKey: 'key'
         ,autosave: true
-        ,save_action: 'system/settings/updatefromgrid'
+        ,save_action: 'System/Settings/UpdateFromGrid'
         ,pageSize: parseInt(MODx.config.default_per_page) || 20
         ,paging: true
         ,collapseFirst: false
@@ -181,6 +281,36 @@ MODx.grid.SettingsGrid = function(config) {
         ,scrollOffset: 0
     });
     MODx.grid.SettingsGrid.superclass.constructor.call(this,config);
+    this.addEvents('createSetting', 'updateSetting');
+
+    const gridFilterData = [
+        { filterId: 'filter-ns', dependentParams: ['area'] },
+        { filterId: 'filter-area', dependentParams: ['namespace'] }
+    ];
+
+    this.on({
+        createSetting: function(...args) {
+            if (args[0].a.response.status === 200) {
+                this.refreshFilterOptions(gridFilterData);
+            }
+        },
+        updateSetting: function(...args) {
+            if (args[0].a.response.status === 200) {
+                this.refreshFilterOptions(gridFilterData);
+            }
+        },
+        afterRemoveRow: function() {
+            this.refreshFilterOptions(gridFilterData);
+        }
+    });
+
+    // prevents navigation to next cell editor field when pressing the ENTER key
+    this.selModel.onEditorKey = this.selModel.onEditorKey.createInterceptor(function(field, e) {
+        if (e.getKey() == Ext.EventObject.ENTER && !e.ctrlKey) {
+            e.stopEvent();
+            return false;
+        }
+    });
 };
 Ext.extend(MODx.grid.SettingsGrid,MODx.grid.Grid,{
     _addEnterKeyHandler: function() {
@@ -203,10 +333,10 @@ Ext.extend(MODx.grid.SettingsGrid,MODx.grid.Grid,{
             m = this.menu.record.menu;
         } else {
             m.push({
-                text: _('setting_update')
+                text: _('edit')
                 ,handler: this.updateSetting
             },'-',{
-                text: _('setting_remove')
+                text: _('delete')
                 ,handler: this.removeSetting
             });
         }
@@ -217,93 +347,47 @@ Ext.extend(MODx.grid.SettingsGrid,MODx.grid.Grid,{
     }
 
     ,removeSetting: function() {
-        return this.remove('setting_remove_confirm', 'system/settings/remove');
+        return this.remove('setting_remove_confirm', 'System/Settings/Remove');
     }
-
-    ,updateSetting: function(btn,e) {
-        var r = this.menu.record;
-        r.fk = Ext.isDefined(this.config.fk) ? this.config.fk : 0;
-        var uss = MODx.load({
-            xtype: 'modx-window-setting-update'
-            ,record: r
-            ,grid: this
-            ,listeners: {
-                'success': {fn:function(r) {
-                    this.refresh();
-                },scope:this}
+    /*
+        TBD: Remove child settings grids' update methods and adjust this base one to accommodate those grids; only difference is the child window configs include and action property. Maybe use createDelegate to pass additional var.
+     */
+    ,updateSetting: function(btn, e) {
+        const { record } = this.menu;
+        record.fk = this.config?.fk || 0;
+        this.windows.updateSetting = MODx.load({
+            xtype: 'modx-window-setting-update',
+            record: record,
+            grid: this,
+            listeners: {
+                success: {
+                    fn: function(response) {
+                        this.refresh();
+                        this.fireEvent('updateSetting', response);
+                    },
+                    scope: this
+                }
             }
         });
-        uss.reset();
-        uss.setValues(r);
-        uss.show(e.target);
-    }
-
-    ,clearFilter: function() {
-        var ns = MODx.request['ns'] ? MODx.request['ns'] : Ext.getCmp('modx-filter-namespace').getValue();
-        var area = MODx.request['area'] ? MODx.request['area'] : '';
-
-        this.getStore().baseParams = this.initialConfig.baseParams;
-
-        var acb = Ext.getCmp('modx-filter-area');
-        if (acb) {
-            acb.store.baseParams['namespace'] = ns;
-            acb.store.load();
-            acb.reset();
-        }
-
-        Ext.getCmp('modx-filter-namespace').setValue(ns);
-        Ext.getCmp('modx-filter-key').reset();
-
-        this.getStore().baseParams.namespace = ns;
-        this.getStore().baseParams.area = area;
-        this.getStore().baseParams.key = '';
-
-    	this.getBottomToolbar().changePage(1);
-       // this.refresh();
-    }
-    ,filterByKey: function(tf,newValue,oldValue) {
-        this.getStore().baseParams.key = newValue;
-        this.getStore().baseParams.namespace = '';
-        this.getBottomToolbar().changePage(1);
-        //this.refresh();
-        return true;
-    }
-
-    ,filterByNamespace: function(cb,rec,ri) {
-        this.getStore().baseParams['namespace'] = rec.data['name'];
-        this.getStore().baseParams['area'] = '';
-        this.getBottomToolbar().changePage(1);
-        //this.refresh();
-
-        var acb = Ext.getCmp('modx-filter-area');
-        if (acb) {
-            var s = acb.store;
-            s.baseParams['namespace'] = rec.data.name;
-            s.removeAll();
-            s.load();
-            acb.setValue('');
-        }
-    }
-
-    ,filterByArea: function(cb,rec,ri) {
-        this.getStore().baseParams['area'] = rec.data['v'];
-        this.getBottomToolbar().changePage(1);
-       // this.refresh();
+        this.windows.updateSetting.setValues(record);
+        this.windows.updateSetting.show(e.target);
     }
 
     ,renderDynField: function(v,md,rec,ri,ci,s,g) {
         var r = s.getAt(ri).data;
         v = Ext.util.Format.htmlEncode(v);
         var f;
-        if (r.xtype == 'combo-boolean' || r.xtype == 'modx-combo-boolean') {
+        if (r.xtype === 'grid-json' || r.xtype === 'modx-grid-json') {
+            return v;
+        } else if (r.xtype === 'combo-boolean' || r.xtype === 'modx-combo-boolean') {
             f = MODx.grid.Grid.prototype.rendYesNo;
-            return f(v,md,rec,ri,ci,s,g);
+            return this.renderEditableColumn(f)(v,md,rec,ri,ci,s,g);
         } else if (r.xtype === 'datefield') {
             f = Ext.util.Format.dateRenderer(MODx.config.manager_date_format);
-            return f(v,md,rec,ri,ci,s,g);
+            return this.renderEditableColumn(f)(v,md,rec,ri,ci,s,g);
         } else if (r.xtype === 'text-password' || r.xtype == 'modx-text-password') {
             f = MODx.grid.Grid.prototype.rendPassword;
-            return f(v,md,rec,ri,ci,s,g);
+            return this.renderEditableColumn(f)(v,md,rec,ri,ci,s,g);
         } else if (r.xtype.substr(0,5) == 'combo' || r.xtype.substr(0,10) == 'modx-combo') {
             var cm = g.getColumnModel();
             var ed = cm.getCellEditor(ci,ri);
@@ -317,9 +401,9 @@ Ext.extend(MODx.grid.SettingsGrid,MODx.grid.Grid,{
                 ed.store.isLoaded = true;
             }
             f = Ext.util.Format.comboRenderer(ed.field,v);
-            return f(v,md,rec,ri,ci,s,g);
+            return this.renderEditableColumn(f)(v,md,rec,ri,ci,s,g);
         }
-        return v;
+        return this.renderEditableColumn()(v,md,rec,ri,ci,s,g);
     }
 
     /**
@@ -336,15 +420,22 @@ Ext.extend(MODx.grid.SettingsGrid,MODx.grid.Grid,{
 
         // Return formatted date (server side)
         return value;
-        // JavaScripts time is in milliseconds
-        //return new Date(value*1000).format(MODx.config.manager_date_format + ' ' + MODx.config.manager_time_format);
+    }
+
+    /**
+     * Gets an identifier for the type of setting being worked with;
+     * expected format: 'modx-grid-[type]-setting'
+     *
+     * @return {String}
+     */
+    ,getSettingsType: function() {
+        const type = Object.getPrototypeOf(this).constructor.xtype;
+        return type.split('-')[2];
     }
 });
 Ext.reg('modx-grid-settings',MODx.grid.SettingsGrid);
 
-
-MODx.combo.Area = function(config) {
-    config = config || {};
+MODx.combo.Area = function(config = {}) {
     Ext.applyIf(config,{
         name: 'area'
         ,hiddenName: 'area'
@@ -353,7 +444,7 @@ MODx.combo.Area = function(config) {
         ,fields: ['d','v']
         ,url: MODx.config.connector_url
         ,baseParams: {
-            action: 'system/settings/getAreas'
+            action: 'System/Settings/GetAreas'
         }
     });
     MODx.combo.Area.superclass.constructor.call(this,config);
@@ -361,15 +452,13 @@ MODx.combo.Area = function(config) {
 Ext.extend(MODx.combo.Area,MODx.combo.ComboBox);
 Ext.reg('modx-combo-area',MODx.combo.Area);
 
-
-MODx.window.CreateSetting = function(config) {
-    config = config || {};
+MODx.window.CreateSetting = function(config = {}) {
     config.keyField = config.keyField || {};
     Ext.applyIf(config,{
-        title: _('setting_create')
+        title: _('create')
         ,width: 600
         ,url: config.url
-        ,action: 'system/settings/create'
+        ,action: 'System/Settings/Create'
         ,autoHeight: true
         ,fields: [{
             layout: 'column'
@@ -442,7 +531,7 @@ MODx.window.CreateSetting = function(config) {
                     ,fieldLabel: _('namespace')
                     ,name: 'namespace'
                     ,id: 'modx-cs-namespace'
-                    ,value: Ext.getCmp('modx-filter-namespace').getValue()
+                    ,value: config.grid.getTopToolbar().getComponent('filter-ns').getValue()
                     ,anchor: '100%'
                 },{
                     xtype: 'label'
@@ -456,7 +545,7 @@ MODx.window.CreateSetting = function(config) {
                     ,name: 'area'
                     ,id: 'modx-cs-area'
                     ,anchor: '100%'
-                    ,value: Ext.getCmp('modx-filter-area').getValue()
+                    ,value: config.grid.getTopToolbar().getComponent('filter-area').getValue()
                 },{
                     xtype: 'label'
                     ,forId: 'modx-cs-area'
@@ -478,17 +567,15 @@ MODx.window.CreateSetting = function(config) {
     this.on('show',function() {
         this.reset();
         this.setValues({
-            namespace: Ext.getCmp('modx-filter-namespace').value
-            ,area: Ext.getCmp('modx-filter-area').value
+            namespace: config.grid.getTopToolbar().getComponent('filter-ns').value
+            ,area: config.grid.getTopToolbar().getComponent('filter-area').value
         });
     },this);
 };
 Ext.extend(MODx.window.CreateSetting,MODx.Window);
 Ext.reg('modx-window-setting-create',MODx.window.CreateSetting);
 
-
-MODx.combo.xType = function(config) {
-    config = config || {};
+MODx.combo.xType = function(config = {}) {
     Ext.applyIf(config,{
         store: new Ext.data.SimpleStore({
             fields: ['d','v']
@@ -509,6 +596,7 @@ MODx.combo.xType = function(config) {
                 ,[_('source'),'modx-combo-source']
                 ,[_('source_type'),'modx-combo-source-type']
                 ,[_('setting_manager_theme'),'modx-combo-manager-theme']
+                ,[_('json_grid'),'modx-grid-json']
             ]
         })
         ,displayField: 'd'
@@ -526,15 +614,13 @@ MODx.combo.xType = function(config) {
 Ext.extend(MODx.combo.xType,Ext.form.ComboBox);
 Ext.reg('modx-combo-xtype-spec',MODx.combo.xType);
 
-
-MODx.window.UpdateSetting = function(config) {
-    config = config || {};
+MODx.window.UpdateSetting = function(config = {}) {
     this.ident = config.ident || 'modx-uss-'+Ext.id();
     Ext.applyIf(config,{
-        title: _('setting_update')
+        title: _('edit')
         ,width: 600
         ,url: config.grid.config.url
-        ,action: 'system/settings/update'
+        ,action: 'System/Settings/Update'
         ,autoHeight: true
         ,fields: [{
             layout: 'column'

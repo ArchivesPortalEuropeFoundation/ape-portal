@@ -5,13 +5,15 @@
 // <![CDATA[
 {literal}
 Ext.onReady(function() {
-    var fld{/literal}{$tv->id}{literal} = MODx.load({
+    const fld = MODx.load({
     {/literal}
         xtype: 'displayfield'
+        ,itemId: 'tv{$tv->id}'
         ,tv: '{$tv->id}'
         ,renderTo: 'tvpanel{$tv->id}'
+        {if $tv->value != ''}
         ,value: '{$tv->value|escape}'
-        ,width: 400
+        {/if}
         ,msgTarget: 'under'
     {literal}
     });
@@ -24,40 +26,42 @@ Ext.onReady(function() {
 // <![CDATA[
 {literal}
 Ext.onReady(function() {
-    var fld{/literal}{$tv->id}{literal} = MODx.load({
+    const fld = MODx.load({
     {/literal}
         xtype: 'modx-panel-tv-file'
         ,renderTo: 'tvpanel{$tv->id}'
         ,tv: '{$tv->id}'
+        ,itemId: 'tv{$tv->id}'
+        {if $tv->value != ''}
         ,value: '{$tv->value|escape}'
         ,relativeValue: '{$tv->value|escape}'
-        ,width: 400
+        {/if}
         ,msgTarget: 'under'
-        ,allowBlank: {if $params.allowBlank == 1 || $params.allowBlank == 'true'}true{else}false{/if}
         ,source: '{$source}'
-
-        {if $params.allowedFileTypes},allowedFileTypes: '{$params.allowedFileTypes}'{/if}
         ,wctx: '{if $params.wctx|default}{$params.wctx}{else}web{/if}'
+        ,allowBlank: {if $params.allowBlank == 1 || $params.allowBlank == 'true'}true{else}false{/if}
+        {if $params.allowedFileTypes},allowedFileTypes: '{$params.allowedFileTypes}'{/if}
         {if $params.openTo|default},openTo: '{$params.openTo|replace:"'":"\\'"}'{/if}
-
     {literal}
-        ,listeners: {'select': {fn:MODx.fireResourceFormChange, scope:this}}
-        ,validate: function () {
-            var value = Ext.getCmp('tv{/literal}{$tv->id}{literal}').value;
-            return !(!this.allowBlank && (value.length < 1));
+        ,listeners: {
+            select: {
+                fn: MODx.fireResourceFormChange,
+                scope: this
+            }
         }
-        ,markInvalid : Ext.emptyFn
-        ,clearInvalid : Ext.emptyFn
+        ,validate: function() {
+            return Ext.getCmp('tvbrowser{/literal}{$tv->id}{literal}').validate();
+        }
     });
-    MODx.makeDroppable(Ext.get('tvpanel{/literal}{$tv->id}{literal}'),function(v) {
-        var cb = Ext.getCmp('tvbrowser{/literal}{$tv->id}{literal}');
+    MODx.makeDroppable(Ext.get('tvpanel{/literal}{$tv->id}{literal}'), function(v) {
+        const cb = Ext.getCmp('tvbrowser{/literal}{$tv->id}{literal}');
         if (cb) {
             cb.setValue(v);
-            cb.fireEvent('select',{relativeUrl:v});
+            cb.fireEvent('select', {relativeUrl: v});
         }
         return '';
     });
-    Ext.getCmp('modx-panel-resource').getForm().add(fld{/literal}{$tv->id}{literal});
+    Ext.getCmp('modx-panel-resource').getForm().add(fld);
 });
 {/literal}
 // ]]>

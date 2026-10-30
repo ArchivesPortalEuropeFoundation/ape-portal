@@ -1,6 +1,6 @@
 /**
  * Loads the create snippet page
- * 
+ *
  * @class MODx.page.CreateSnippet
  * @extends MODx.Component
  * @param {Object} config An object of config properties
@@ -11,22 +11,24 @@ MODx.page.CreateSnippet = function(config) {
     Ext.applyIf(config,{
         formpanel: 'modx-panel-snippet'
         ,buttons: [{
-            process: 'element/snippet/create'
+            process: 'Element/Snippet/Create'
             ,reload: true
             ,text: _('save')
             ,id: 'modx-abtn-save'
             ,cls: 'primary-button'
             ,method: 'remote'
-            // ,checkDirty: true
             ,keys: [{
-                key: MODx.config.keymap_save || "s"
+                key: MODx.config.keymap_save || 's'
                 ,ctrl: true
             }]
         },{
             text: _('cancel')
             ,id: 'modx-abtn-cancel'
+            ,handler: function() {
+                MODx.loadPage('?');
+            }
         },{
-            text: _('help_ex')
+            text: '<i class="icon icon-question-circle"></i>'
             ,id: 'modx-abtn-help'
             ,handler: MODx.loadHelpPane
         }]

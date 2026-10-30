@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Content Type English lexicon topic
  *
@@ -15,17 +16,15 @@ $_lang['content_type_err_nfs'] = 'Тып змесціва з ID [[+id]] не з�
 $_lang['content_type_err_ns'] = 'Тып змесціва не пазначаны.';
 $_lang['content_type_err_ns_name'] = 'Калі ласка, вызначце дапушчальнае імя для тыпу змесціва.';
 $_lang['content_type_err_create'] = 'Адбылася памылка пры спробе стварыць тып змесціва.';
-$_lang['content_type_err_in_use'] = 'Вы не можаце выдаліць гэты тып змесцiва, таму што ён у цяперашні час выкарыстоўваецца рэсурсамі ў MODX. Калі ласка, назначце новыя тыпы кантэнту для гэтых рэсурсаў паперш чым працягнуць.';
+$_lang['content_type_err_in_use'] = 'Вы не можаце выдаліць гэты тып змесцiва, таму што ён зараз выкарыстоўваецца рэсурсамі ў MODX. Калі ласка, назначце новыя тыпы змесцiва для гэтых рэсурсаў паперш чым працягваць.';
 $_lang['content_type_err_remove'] = 'Адбылася памылка пры спробе выдаліць тып змесціва.';
 $_lang['content_type_err_save'] = 'Адбылася памылка пры спробе захаваць тып змесціва.';
 $_lang['content_type_header'] = 'Загаловак';
 $_lang['content_type_main_tab'] = 'Асноўнае';
 $_lang['content_type_header_tab'] = 'Карыстацкія загалоўкі';
 $_lang['content_type_header_title'] = 'Стварыць/рэдагаваць загаловак ';
-$_lang['content_type_new'] = 'Новы тып змесціва';
-$_lang['content_type_edit'] = 'Рэдагаваць тып змесціва';
-$_lang['content_type_remove'] = 'Выдаліць тып змесціва';
 $_lang['content_type_remove_confirm'] = 'Вы сапраўды жадаеце выдаліць гэты тып змесцiва?';
+$_lang['content_type_reserved_general_desc'] = 'Note that this is a protected, built-in Content Type. Some values are locked and shown for informational purposes only.';
 $_lang['content_types'] = 'Тыпы кантэнту';
 $_lang['file_extensions'] = 'Пашырэнне файла';
 $_lang['file_extensions_desc'] = 'Гэта пазначанае пашырэнне файла для гэтага тыпу змесціва.';

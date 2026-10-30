@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Content Type English lexicon topic
  *
@@ -15,17 +16,15 @@ $_lang['content_type_err_nfs'] = 'لم يتم العثور على نوع الم�
 $_lang['content_type_err_ns'] = 'نوع المحتوى غير معرف.';
 $_lang['content_type_err_ns_name'] = 'الرجاء تحديد اسم صالح لنوع المحتوى.';
 $_lang['content_type_err_create'] = 'حصل خطأ أثناء محاولة إنشاء نوع المحتوى.';
-$_lang['content_type_err_in_use'] = 'لا تستطيع حذف نوع المحتوى هذا, لأنه حاليا مستخدم من قبل مصادر ضمن مودكس. الرجاء إعادة إسناد الأنواع لهذه المصادر قبل المتابعة.';
-$_lang['content_type_err_remove'] = 'حصل خطأ أثناء محاولة حذف نوع المحتوى.';
+$_lang['content_type_err_in_use'] = 'You cannot delete this Content Type, as it is currently in use by Resources in MODX. Please re-assign the Content Types of those Resources before proceeding.';
+$_lang['content_type_err_remove'] = 'An error occurred while trying to delete the Content Type.';
 $_lang['content_type_err_save'] = 'حصل خطأ أثناء محاولة حفظ نوع المحتوى.';
 $_lang['content_type_header'] = 'ترويسة';
 $_lang['content_type_main_tab'] = 'الرئيسية';
 $_lang['content_type_header_tab'] = 'ترويسات مخصصة';
 $_lang['content_type_header_title'] = 'إنشاء/تعديل ترويسة';
-$_lang['content_type_new'] = 'نوع محتوى جديد';
-$_lang['content_type_edit'] = 'تعديل نوع المحتوى';
-$_lang['content_type_remove'] = 'حذف نوع محتوى';
 $_lang['content_type_remove_confirm'] = 'هل أنت متأكد أنك تريد حذف نوع المحتوى هذا؟';
+$_lang['content_type_reserved_general_desc'] = 'Note that this is a protected, built-in Content Type. Some values are locked and shown for informational purposes only.';
 $_lang['content_types'] = 'أنواع المحتوى';
 $_lang['file_extensions'] = 'لاحقة الملف';
 $_lang['file_extensions_desc'] = 'هذه لاحقة ملف مخصصة من أجل نوع المحتوى هذا.';

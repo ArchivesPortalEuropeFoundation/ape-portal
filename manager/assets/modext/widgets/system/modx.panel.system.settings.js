@@ -12,22 +12,19 @@ MODx.panel.SystemSettings = function(config) {
         id: 'modx-panel-system-settings'
         ,cls: 'container'
         ,bodyStyle: ''
-        ,defaults: { collapsible: false ,autoHeight: true }
+        ,defaults: {
+            collapsible: false,
+            autoHeight: true
+        }
         ,items: [{
             html: _('system_settings')+' & '+_('events')
             ,id: 'modx-system-settings-header'
             ,xtype: 'modx-header'
         },MODx.getPageStructure([{
             title: _('system_settings')
-            ,autoHeight: true
             ,layout: 'form'
-            ,defaults: { border: false ,msgTarget: 'side' }
-			,items:[{
-				layout: 'form'
-				,autoHeight: true
-				,defaults: { border: false }
-				,items: [{
-					html: '<p>'+_('settings_desc')+'</p>'
+            ,items:[{
+                    html: '<p>'+_('settings_desc')+'</p>'
                     ,xtype: 'modx-description'
 				},{
 					xtype: 'modx-grid-system-settings'
@@ -36,27 +33,19 @@ MODx.panel.SystemSettings = function(config) {
 				},{
 					html: MODx.onSiteSettingsRender
 				}]
-			}]
 		},{
             title: _('system_events')
-            ,autoHeight: true
             ,layout: 'form'
-            ,defaults: { border: false ,msgTarget: 'side' }
-			,items:[{
-				layout: 'form'
-				,autoHeight: true
-				,defaults: { border: false }
-				,items: [{
-					html: '<p>'+_('system_events.desc')+'</p>'
+            ,items:[{
+                    html: '<p>'+_('system_events.desc')+'</p>'
                     ,xtype: 'modx-description'
-				},{
-					xtype: 'modx-grid-system-event'
-					,cls: 'main-wrapper'
-					,preventSaveRefresh: true
-				}]
-			}]
-		}],{
-            id: 'modx-context-tabs'
+                },{
+                    xtype: 'modx-grid-system-event'
+                    ,cls: 'main-wrapper'
+                    ,preventSaveRefresh: true
+                }]
+        }],{
+            id: 'modx-system-settings-tabs'
         })]
     });
     MODx.panel.SystemSettings.superclass.constructor.call(this,config);
@@ -73,8 +62,8 @@ Ext.reg('modx-panel-system-settings',MODx.panel.SystemSettings);
  * @param {Object} config An object of options.
  * @xtype modx-grid-system-settings
  */
-MODx.grid.SystemSettings = function(config) {
-    config = config || {};
+MODx.grid.SystemSettings = function(config = {}) {
+    this.querySpec = [0, 'query', 'tab', true];
     MODx.grid.SystemSettings.superclass.constructor.call(this, config);
 };
 Ext.extend(MODx.grid.SystemSettings, MODx.grid.SettingsGrid);

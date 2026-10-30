@@ -1,5 +1,5 @@
 <!doctype html>
-<html {if $_config.manager_direction EQ 'rtl'}dir="rtl"{/if} lang="{$_config.manager_lang_attribute}" xml:lang="{$_config.manager_lang_attribute}">
+<html {if $_config.manager_direction EQ 'rtl'}dir="rtl"{/if} lang="{$_config.cultureKey}" xml:lang="{$_config.cultureKey}">
 <head>
     <title>MODx :: {$_lang.permission_denied}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$_config.modx_charset}" />

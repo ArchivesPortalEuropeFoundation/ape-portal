@@ -25,18 +25,16 @@ $_lang['usergroup'] = 'กลุ่มผู้ใช้';
 $_lang['filter_by_type'] = 'Filter by type...';
 
 $_lang['message'] = 'ข้อความ';
-$_lang['message_create'] = 'สร้างข้อความ';
-$_lang['message_new'] = 'สร้างข้อความ';
-$_lang['message_remove_confirm'] = 'คุณแน่ใจว่าต้องการลบข้อความนี้หรือไม่?';
+$_lang['message_remove_confirm'] = 'Are you sure you want to delete this message entirely?';
 $_lang['message_send_email'] = 'Send Email';
 $_lang['message_err_nfs'] = 'ไม่พบข้อความ';
 $_lang['message_err_not_specified_subject'] = 'ไม่ได้ระบุหัวข้อ!';
-$_lang['message_err_remove'] = 'เกิดข้อผิดพลาดขณะที่พยายามลบข้อความ';
+$_lang['message_err_remove'] = 'An error occurred while trying to delete the message.';
 $_lang['message_err_remove_notauth'] ='คุณไม่มีสิทธิ์ที่จะลบข้อความนี้';
 $_lang['message_err_save'] = 'เกิดข้อผิดพลาดขณะกำลังบันทึกข้อความ';
 
 $_lang['messages'] = 'ข้อความ';
-$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can remove or mark as read specified messages.';
+$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can delete or mark as read specified messages.';
 $_lang['messages_all'] = 'ทุกคน';
 $_lang['messages_compose'] = 'เขียนข้อความ';
 $_lang['messages_forward'] = 'ส่งต่อ';

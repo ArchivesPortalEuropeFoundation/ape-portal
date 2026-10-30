@@ -148,7 +148,7 @@
                         &tplPageLastEmpty=`@INLINE `
                         &tplPagePrevEmpty=`@INLINE `
                         &tplPageNextEmpty=`@INLINE `
-                        [[!+tag.tag:neq=``:then=`&where=`[[!TaggerGetResourcesWhere? &tags=`[[+tag.tag]]` &where=`{"isfolder": 0}`]]``:else=``]]
+                        &where=`[[!TaggerGetResourcesWhere? &tags=`[[!+tag.tag:default=``]]` &where=`{"isfolder": 0}`]]`
                         ]]
                         [[!+page.nav:notempty=`
                         <div class="paging left">

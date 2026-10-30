@@ -5,16 +5,13 @@
  * @var array $scriptProperties
  * @package simplesearch
  */
-require_once $modx->getOption(
-    'simplesearch.core_path',
-    null,
-    $modx->getOption('core_path') . 'components/simplesearch/'
-) . 'model/simplesearch/simplesearch.class.php';
+use SimpleSearch\SimpleSearch;
+
 $search = new SimpleSearch($modx, $scriptProperties);
 
 /* Find search index and toplaceholder setting */
 $searchIndex   = $modx->getOption('searchIndex', $scriptProperties, 'search');
-$toPlaceholder = $modx->getOption('toPlaceholder', $scriptProperties, false);
+$toPlaceholder = $modx->getOption('toPlaceholder', $scriptProperties, '');
 $noResultsTpl  = $modx->getOption('noResultsTpl', $scriptProperties, 'SearchNoResults');
 
 /* Get search string */
@@ -87,13 +84,15 @@ if (!empty($response['results'])) {
                 $text = $modx->runSnippet($extractSource, $resourceArray);
             }
 
-            $extract = $search->createExtract($text, $extractLength, $extract,$extractEllipsis);
-
-            /* Cleanup extract */
-            $extract = strip_tags(preg_replace("#\<!--(.*?)--\>#si", '', $extract));
-            $extract = preg_replace("#\[\[(.*?)\]\]#si", '', $extract);
-            $extract = str_replace(array('[[',']]'), '', $extract);
-            $resourceArray['extract'] = !empty($highlightResults) ? $search->addHighlighting($extract, $highlightClass, $highlightTag) : $extract;
+            if (isset($text) && is_string($text)) {
+                $extract = $search->createExtract($text, $extractLength, $extract,$extractEllipsis);
+    
+                /* Cleanup extract */
+                $extract = strip_tags(preg_replace("#\<!--(.*?)--\>#si", '', $extract));
+                $extract = preg_replace("#\[\[(.*?)\]\]#si", '', $extract);
+                $extract = str_replace(array('[[',']]'), '', $extract);
+                $resourceArray['extract'] = !empty($highlightResults) ? $search->addHighlighting($extract, $highlightClass, $highlightTag) : $extract;                
+            }
         }
 
         $resultsTpl['default']['results'][] = $search->getChunk($tpl, $resourceArray);

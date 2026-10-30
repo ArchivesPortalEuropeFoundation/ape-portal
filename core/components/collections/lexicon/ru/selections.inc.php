@@ -15,7 +15,7 @@ $_lang['selections.system.new_container'] = 'Новая Подборка';
 // Selection
 $_lang['selections.create'] = 'Привязать ресурс';
 $_lang['selections.resource'] = 'Ресурс';
-$_lang['selections.view'] = 'Просмотреть ресурс';
+$_lang['selections.view'] = 'Просмотр ресурса';
 $_lang['selections.edit'] = 'Изменить ресурс';
 $_lang['selections.publish'] = 'Опубликовать ресурс';
 $_lang['selections.unpublish'] = 'Отменить публикацию ресурса';
@@ -30,7 +30,7 @@ $_lang['selections.delete_multiple'] = 'Удалить выбранное';
 $_lang['selections.delete_multiple_confirm'] = 'Вы уверены, что хотите удалить все выбранные ресурсы?';
 $_lang['selections.remove'] = 'Удалить ресурс';
 $_lang['selections.remove_confirm'] = 'Вы уверены, что хотите удалить этот ресурс?<br /><strong>Это действие нельзя отменить.</strong>';
-$_lang['selections.resource'] = 'Ресурс';
+$_lang['selections.resource'] = 'Resource';
 $_lang['selections.unlink_multiple'] = 'Отвязать несколько';
 $_lang['selections.back_to_selection_label'] = 'Вернуться в Подборку';
 

@@ -12,7 +12,7 @@ $_lang['configcheck_allowtagsinpost_context_enabled_msg'] = 'Allow_tags_in_post 
 $_lang['configcheck_allowtagsinpost_system_enabled'] = 'allow_tags_in_post सिस्टम सेटिंग सक्षम किया गया';
 $_lang['configcheck_allowtagsinpost_system_enabled_msg'] = 'Allow_tags_in_post सिस्टम सेटिंग आपकी स्थापना में सक्षम है। MODX अनुशंसा करता है जब तक कि आपको स्पष्ट रूप से MODX tags, आंकिक निकायों या HTML script tags POST विधि एक के रूप में आपकी साइट के लिए के माध्यम से प्रस्तुत करने के लिए प्रयोक्ताओं की अनुमति यह सेटिंग अक्षम हो जाएगा। यह इस context विशिष्ट contexts के लिए सेटिंग्स के माध्यम से सक्षम करने के लिए बेहतर है।';
 $_lang['configcheck_cache'] = 'Cache directory नहीं लिखने योग्य';
-$_lang['configcheck_cache_msg'] = 'MODX Cache directory करने के लिए नहीं लिख सकता। MODX अभी भी अपेक्षित रूप से कार्य करेगा, लेकिन कोई कैशिंग जगह नहीं ले जाएगा। इस को हल करने के लिए, /_cache/ directory को लिखने योग्य बनाएँ।';
+$_lang['configcheck_cache_msg'] = 'MODX cannot write to the cache directory. MODX will still function as expected, but no caching will take place. To solve this, make the /cache/ directory writable.';
 $_lang['configcheck_configinc'] = 'Config file अभी भी लेखन योग्य!';
 $_lang['configcheck_configinc_msg'] = 'अपनी साइट पर जो साइट को नुकसान का एक बहुत कुछ कर सकता है हैकर के लिए असुरक्षित है। कृपया अपने config file केवल पढ़ने के लिए करने के लिए! यदि आप साइट व्यवस्थापक नहीं हैं, तो कृपया किसी सिस्टम व्यवस्थापक से संपर्क करें और उन्हें इस संदेश के बारे में चेतावनी दें! यह स्थित है [[+path]]';
 $_lang['configcheck_default_msg'] = 'एक अनिर्दिष्ट चेतावनी पाया गया था। जो अजीब है।';
@@ -21,16 +21,24 @@ $_lang['configcheck_errorpage_unavailable_msg'] = 'इसका मतलब य
 $_lang['configcheck_errorpage_unpublished'] = 'आपकी साइट की त्रुटि पृष्ठ प्रकाशित नहीं है या मौजूद नहीं है।';
 $_lang['configcheck_errorpage_unpublished_msg'] = 'इसका मतलब यह है कि आपके Error page आम जनता के लिए दुर्गम है। पृष्ठ प्रकाशित करें या सुनिश्चित करें कि यह आपकी साइट ट्री में कोई मौजूदा दस्तावेज़ के लिए प्रणाली में सौंपा है &gt; System Settings menu.';
 $_lang['configcheck_htaccess'] = 'कोर फोल्डर वेब द्वारा पहुंचा जा सकता हैं';
-$_lang['configcheck_htaccess_msg'] = 'MODX ने पाया कि आपका मुख्य फोल्डर जनता के लिए सुलभ है | 
-<Strong> यह अनुशंसित नही है और सुरक्षा जोखिम हैं | <strong> यदि आपका MODX संस्थापन apache वेबसर्वर पर चल रहा हैं आपको कम से कम .htaccess फाइल को मुख्य फोल्डर <em> [[+fileLocation]]</em> के अंदर सेट करना चाहिए | यहां मौजूदा ht.access उदाहरण फाइल का नाम बदलकर ht.access आसानी के किया जा सकता हैं  (p) ऐसी अन्य विधियां और बेबसर्वर हैं जिनका आप उपयोग कर सकते हैं, कृप्या <a href="htpps://docs.modx.com current/en/getting - started/maintenance/securing -modx"<हार्डनिंग MODX गाइड <पढ़े | </a> आपकी साइड को सुरक्षित करने के बाद में अधिक जानकारी के लिए | </p> यदि आप सब कुछ सही ढंग से सेटअप करते हैं तो ब्राउजिंग उदा. <a href=" [[+check UrL]]" target="_blank"<चेंजलॉग </a> पर आपको 403 (अनुमति स्वीकृत) बेहतर 404 (नहीं मिला ) देना चाहिए | यदि आप चेंज देख सकते है | ब्राउजर में, अभी भी कुछ गडबड है और इसे हल करने पर आपको फिर से कॉन्फीगर करने या किसी विशेषज्ञ को कॉल करने की आवश्यकता है |';
+$_lang['configcheck_htaccess_msg'] = 'MODX ने पाया कि आपका मुख्य फ़ोल्डर (आंशिक रूप से) जनता के लिए सुलभ है!
+<strong>यह अनुशंसित नहीं है और सुरक्षा जोखिम है!</strong>
+यदि आपका MODX संस्थापन Apache वेबसर्वर पर चल रहा है
+आपको कम से कम .htaccess फ़ाइल को मुख्य फ़ोल्डर <em>[[+fileLocation]]</em> के अंदर सेट करना चाहिए!
+यह मौजूदा ht.access उदाहरण फ़ाइल का नाम बदलकर .htaccess में आसानी से किया जा सकता है!
+<p>ऐसी अन्य विधियां और वेबसर्वर हैं जिनका आप उपयोग कर सकते हैं, कृपया <a href="https://docs.modx.com/3.x/en/getting-started/maintenance/securing-modx">Hardening MODX पढ़ें गाइड</a>
+आपकी साइट को सुरक्षित करने के बारे में अधिक जानकारी के लिए!</p>
+यदि आप सब कुछ सही ढंग से सेटअप करते हैं, तो ब्राउज़िंग उदा. <a href="[[+checkUrl]]"
+target="_blank">चेंजलॉग</a> . पर
+आपको 403 (अनुमति अस्वीकृत) या बेहतर 404 (नहीं मिला) देना चाहिए। यदि आप चैंज देख सकते हैं
+ब्राउज़र में, अभी भी कुछ गड़बड़ है और इसे हल करने के लिए आपको फिर से कॉन्फ़िगर करने या किसी विशेषज्ञ को कॉल करने की आवश्यकता है!';
 $_lang['configcheck_images'] = 'Images directory लिखने योग्य नहीं';
 $_lang['configcheck_images_msg'] = 'images directory लिखने योग्य नहीं है, या मौजूद नहीं है। इसका मतलब यह Image Manager कार्य संपादक में काम नहीं करेगा!';
 $_lang['configcheck_installer'] = 'इंस्टॉलर अभी भी मौजूद';
-$_lang['configcheck_installer_msg'] = 'setup/ directory MODX के लिए installer होता है। जरा सोचो क्या हो सकता है यदि एक दुष्ट व्यक्ति इस फ़ोल्डर को पाता है और installer चलाता है! वे शायद क्योंकि वे कुछ उपयोगकर्ता जानकारी के लिए databaseमें प्रवेश करने की आवश्यकता होगी, लेकिन यह अभी भी यह फ़ोल्डर अपने server से निकालने के लिए सबसे अच्छा है, बहुत दूर प्राप्त नहीं होगा। यह स्थित है: [[+path]]';
+$_lang['configcheck_installer_msg'] = 'The setup/ directory contains the installer for MODX. Just imagine what might happen if an evil person finds this folder and runs the installer! They probably won\'t get too far, because they\'ll need to enter some user information for the database, but it\'s still best to delete this folder from your server. It is located at: [[+path]]';
 $_lang['configcheck_lang_difference'] = 'language file में entries की ग़लत संख्या';
 $_lang['configcheck_lang_difference_msg'] = 'वर्तमान में चयनित भाषा डिफ़ॉल्ट भाषा से प्रविष्टियों का एक अलग संख्या है। जरूरी नहीं कि एक समस्या है जबकि, यह मतलब हो सकता है language file अद्यतन की जरूरत है।';
 $_lang['configcheck_notok'] = 'एक या एक से अधिक configuration details ठीक बाहर की जाँच नहीं किया: ';
-$_lang['configcheck_ok'] = 'Check passed OK - कोई चेतावनियाँ रिपोर्ट को पारित कर दिया।';
 $_lang['configcheck_phpversion'] = 'पीएचपी संस्करण पुराना है';
 $_lang['configcheck_phpversion_msg'] = 'आपका PHP संस्करण [[+PHP version]] अब PHP डेवलपर्स द्वारा अनुरक्षित नहीं है, जिसका अर्थ है की कोई सुरक्षा अघतन उपलब्ध नही है | यह भी संभावना है कि एमओडीएक्स या एक अतिरिक पैकेज अभी या निकट भविष्य में संस्करण का समर्थन नही करेगा | कृपया अपनी साइड को सुरक्षित करने के लिए अपने परिवेश को कम से कम PHP [[+PHP required]] पर यथाशीघ्र अपडेट करें|';
 $_lang['configcheck_register_globals'] = 'register_globals अपने php. ini configuration file में सेट करने के लिए पर है';

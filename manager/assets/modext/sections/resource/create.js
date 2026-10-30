@@ -13,7 +13,7 @@ MODx.page.CreateResource = function(config) {
         ,formpanel: 'modx-panel-resource'
         ,id: 'modx-page-update-resource'
         ,which_editor: 'none'
-        ,action: 'resource/create'
+        ,action: 'Resource/Create'
     	,buttons: this.getButtons(config)
         ,components: [{
             xtype: config.panelXType || 'modx-panel-resource'
@@ -29,34 +29,53 @@ MODx.page.CreateResource = function(config) {
     MODx.page.CreateResource.superclass.constructor.call(this,config);
 };
 Ext.extend(MODx.page.CreateResource,MODx.Component,{
-    getButtons: function(cfg) {
-        var btns = [];
-        if (cfg.canSave == 1) {
-            btns.push({
-                process: 'resource/create'
+    cancel: function(btn,e) {
+        var fp = Ext.getCmp(this.config.formpanel);
+        if (fp && fp.isDirty()) {
+            Ext.Msg.confirm(_('warning'),_('resource_cancel_dirty_confirm'),function(e) {
+                if (e == 'yes') {
+                    fp.warnUnsavedChanges = false;
+                    MODx.releaseLock(MODx.request.id);
+                    MODx.sleep(400);
+                    MODx.loadPage('?');
+                }
+            },this);
+        } else {
+            MODx.releaseLock(MODx.request.id);
+            MODx.loadPage('?');
+        }
+    }
+
+    ,getButtons: function(config) {
+        var buttons = [];
+
+        if (config.canSave == 1) {
+            buttons.push({
+                process: 'Resource/Create'
                 ,reload: true
                 ,text: _('save')
                 ,id: 'modx-abtn-save'
                 ,cls:'primary-button'
                 ,method: 'remote'
-                //,checkDirty: true
                 ,keys: [{
                     key: MODx.config.keymap_save || 's'
                     ,ctrl: true
                 }]
             });
-
         }
-        btns.push({
+
+        buttons.push({
             text: _('cancel')
             ,id: 'modx-abtn-cancel'
-        });
-        btns.push({
-            text: _('help_ex')
+            ,handler: this.cancel
+            ,scope: this
+        },{
+            text: '<i class="icon icon-question-circle"></i>'
             ,id: 'modx-abtn-help'
             ,handler: MODx.loadHelpPane
         });
-        return btns;
+
+        return buttons;
     }
 });
 Ext.reg('modx-page-resource-create',MODx.page.CreateResource);

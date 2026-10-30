@@ -8,6 +8,8 @@
  * files found in the top-level directory of this distribution.
  */
 
+use MODX\Revolution\modManagerController;
+
 /**
  * "Media Browser" controller
  */
@@ -28,9 +30,6 @@ class MediaBrowserManagerController extends modManagerController
      */
     public function loadCustomCssJs()
     {
-        // $mgrUrl = $this->modx->getOption('manager_url', null, MODX_MANAGER_URL);
-        // $this->addJavascript($mgrUrl . 'assets/modext/widgets/media/browser.js');
-
         $this->addHtml(
 <<<HTML
 <script>
@@ -48,9 +47,9 @@ HTML
     /**
      * @inherit
      */
-    public function process(array $scriptProperties = array())
+    public function process(array $scriptProperties = [])
     {
-        return array();
+        return [];
     }
 
     /**
@@ -74,6 +73,6 @@ HTML
      */
     public function getLanguageTopics()
     {
-        return array('file');
+        return ['file'];
     }
 }

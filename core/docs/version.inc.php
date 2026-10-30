@@ -1,8 +1,8 @@
 <?php
-$v= array ();
-$v['version']= '2'; // Current version.
-$v['major_version']= '8'; // Current major version.
-$v['minor_version']= '8'; // Current minor version.
+$v= [];
+$v['version']= '3'; // Current version.
+$v['major_version']= '2'; // Current major version.
+$v['minor_version']= '4'; // Current minor version.
 $v['patch_level']= 'pl'; // Current patch level.
 $v['code_name']= 'Revolution'; // Current codename.
 $v['distro']= '@traditional@';

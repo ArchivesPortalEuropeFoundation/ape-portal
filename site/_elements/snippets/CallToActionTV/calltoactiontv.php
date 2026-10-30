@@ -12,20 +12,11 @@
  * @var string $options
  * @var string $input
  */
-$service = $modx->getService(
-    'calltoactiontv',
-    'CallToActionTV',
-    $modx->getOption(
-        'calltoactiontv.core_path',
-        null,
-        $modx->getOption('core_path') . 'components/calltoactiontv/'
-    ) . 'model/calltoactiontv/'
-);
-
-if (!($service instanceof CallToActionTV)) {
+if (!$modx->services->has('calltoactiontv')) {
     return;
 }
 
+$calltoactiontv = $modx->services->get('calltoactiontv');
 $cta            = $modx->fromJSON($input);
 $chunk          = (!empty($options)) ? $options : 'callToActionTV';
 $toPlaceholders = !empty($toPlaceholders) ? $toPlaceholders : false;
@@ -43,7 +34,7 @@ switch ($cta['type']) {
             if (!empty($cta['query_params'])) {
                 parse_str(ltrim($cta['query_params'], '?'), $params);
             }
-            
+
             $cta['href'] = $modx->makeUrl($cta['resource'], '', $params, 'full');
         } else {
             $cta['href'] = '';
@@ -71,7 +62,7 @@ switch ($cta['type']) {
 }
 
 if (!$toPlaceholders) {
-    return $service->getChunk($chunk, $cta);
+    return $calltoactiontv->getChunk($chunk, $cta);
 }
 
 $modx->setPlaceholders($cta, $toPlaceholders);

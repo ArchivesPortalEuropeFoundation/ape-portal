@@ -8,9 +8,8 @@
  */
 MODx.page.CreateFile = function(config) {
     config = config || {};
-    var btns = [];
-    btns.push({
-        process: 'browser/file/create'
+    var buttons = [{
+        process: 'Browser/File/Create'
         ,text: _('save')
         ,id: 'modx-abtn-save'
         ,cls: 'primary-button'
@@ -19,11 +18,10 @@ MODx.page.CreateFile = function(config) {
             key: MODx.config.keymap_save || 's'
             ,ctrl: true
         }]
-    });
-    btns.push({
+    },{
         text: _('cancel')
         ,id: 'modx-abtn-cancel'
-    });
+    }];
 
     Ext.applyIf(config,{
         formpanel: 'modx-panel-file-create'
@@ -32,7 +30,7 @@ MODx.page.CreateFile = function(config) {
             ,directory: config.directory
             ,record: config.record || {}
         }]
-        ,buttons: btns
+        ,buttons: buttons
     });
     MODx.page.CreateFile.superclass.constructor.call(this,config);
 };
@@ -53,7 +51,7 @@ MODx.panel.CreateFile = function(config) {
         id: 'modx-panel-file-create'
         ,url: MODx.config.connector_url
         ,baseParams: {
-            action: 'browser/file/create'
+            action: 'Browser/File/Create'
             ,directory: config.directory
             ,wctx: MODx.request.wctx
         }

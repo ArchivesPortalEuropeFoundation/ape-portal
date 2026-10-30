@@ -9,18 +9,17 @@ MODx.page.UpdateContext = function(config) {
     Ext.applyIf(config,{
         formpanel: 'modx-panel-context'
         ,actions: {
-            'new': 'context/create'
-            ,edit: 'context/update'
+            'new': 'Context/Create'
+            ,edit: 'Context/Update'
             ,'delete': 'context/delete'
             ,cancel: 'context/view'
         }
         ,buttons: [{
-            process: 'context/update'
+            process: 'Context/Update'
             ,text: _('save')
             ,id: 'modx-abtn-save'
             ,cls:'primary-button'
             ,method: 'remote'
-            // ,checkDirty: true
             ,keys: [{
                 key: MODx.config.keymap_save || "s"
                 ,ctrl: true
@@ -39,7 +38,7 @@ MODx.page.UpdateContext = function(config) {
                 a: 'context'
             }
         },{
-            text: _('help_ex')
+            text: '<i class="icon icon-question-circle"></i>'
             ,id: 'modx-abtn-help'
             ,handler: MODx.loadHelpPane
         }]

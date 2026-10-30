@@ -7,38 +7,41 @@
  * For complete copyright and license information, see the COPYRIGHT and LICENSE
  * files found in the top-level directory of this distribution.
  */
-/*
- * This file is part of MODX Revolution.
- *
- * Copyright (c) MODX, LLC. All Rights Reserved.
- *
- * For complete copyright and license information, see the COPYRIGHT and LICENSE
- * files found in the top-level directory of this distribution.
+
+use MODX\Revolution\modDashboardWidgetInterface;
+use MODX\Revolution\Processors\ProcessorResponse;
+use MODX\Revolution\Processors\Security\User\GetOnline;
+use MODX\Revolution\Smarty\modSmarty;
+
+/**
+ * @package modx
+ * @subpackage dashboard
  */
+class modDashboardWidgetWhoIsOnline extends modDashboardWidgetInterface
+{
+    /**
+     * @return string
+     * @throws Exception
+     */
+    public function render()
+    {
+        /** @var ProcessorResponse $res */
+        $res = $this->modx->runProcessor(GetOnline::class, [
+            'limit' => 10,
+        ]);
+        $data = [];
+        if (!$res->isError()) {
+            $data = $res->getResponse();
+            if (is_string($data)) {
+                $data = json_decode($data, true);
+            }
+        }
+        $this->modx->getService('smarty', modSmarty::class);
+        $this->modx->smarty->assign('data', $data);
+        $this->modx->smarty->assign('can_view_logs', $this->modx->hasPermission('logs'));
 
-class modDashboardWidgetWhoIsOnline extends modDashboardWidgetInterface {
-
-  public function render() {
-    $date_timezone = $this->modx->getOption('date_timezone');
-    $timezone = !empty($date_timezone) ? $date_timezone : date_default_timezone_get();
-    $timeformat = $this->modx->getOption('manager_time_format');
-    $datetime = new DateTime($timezone);
-    $curtime = $datetime->format($timeformat);
-    $this->modx->setPlaceholder('curtime',$curtime);
-
-    $this->controller->addJavascript($this->modx->getOption('manager_url').'assets/modext/widgets/security/modx.grid.user.online.js');
-    $this->controller->addHtml('
-    <script>
-      Ext.applyIf(MODx.lang, '. $this->modx->toJSON($this->modx->lexicon->loadCache('core', 'dashboard')) .');
-      Ext.onReady(function() {
-        MODx.load({
-          xtype: "modx-grid-user-online"
-          ,renderTo: "modx-grid-user-online"
-        });
-      });
-    </script>');
-
-    return $this->getFileChunk('dashboard/onlineusers.tpl');
-  }
+        return $this->controller->fetchTemplate('dashboard/onlineusers.tpl');
+    }
 }
+
 return 'modDashboardWidgetWhoIsOnline';

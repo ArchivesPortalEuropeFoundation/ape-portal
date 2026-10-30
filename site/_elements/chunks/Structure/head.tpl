@@ -2,14 +2,14 @@
 [[!language]]
 
         <!-- Website created by GEL Studios Ltd https://www.gelstudios.co.uk/ //-->
-		<title>[[+seoPro.title]]</title>
+		<title>[[getMetaTitle]]</title>
         <base href="[[++site_url]]" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta name="description" content="[[*description]]">
         <meta name="keywords" content="[[getKeywords]]">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta name="robots" content="[[+seoTab.robotsTag]]">
+        <meta name="robots" content="[[getRobots]]">
         <meta name="author" content="[[++site_name]]">
 
        	<meta property="og:title" content="[[*longtitle:default=`[[*pagetitle]]`]]">

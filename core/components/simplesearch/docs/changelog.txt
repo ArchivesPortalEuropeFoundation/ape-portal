@@ -1,5 +1,20 @@
 Changelog for SimpleSearch.
 
+SimpleSearch 3.1.0
+========================================================================
+- Fix toPlaceholder property
+- Fix fatal error when content field is NULL
+- Fix property "exclude"
+- Limit result with SQL if property "sortBy" is used
+- Check if exact text is set to prevent breaking of results.
+- Add the option to exclude/include results based on templates
+- Fix "ids" property, if it contains IDs from different contexts
+- Automatically remove outdated SimpleSearchIndexer plugin if it exists
+
+SimpleSearch 3.0.0
+========================================================================
+- Added support for MODX3
+
 SimpleSearch 2.1.2
 ========================================================================
 - Show facet results when default has none.

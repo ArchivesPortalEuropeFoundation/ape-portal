@@ -1,5 +1,5 @@
 <!doctype html>
-<html {if $_config.manager_direction EQ 'rtl'}dir="rtl"{/if} lang="{$_config.manager_lang_attribute}" xml:lang="{$_config.manager_lang_attribute}">
+<html {if $_config.manager_direction EQ 'rtl'}dir="rtl"{/if} lang="{$_config.cultureKey}" xml:lang="{$_config.cultureKey}">
 <head>
 <title>MODX :: {$_lang.modx_resource_browser}</title>
 <meta http-equiv="Content-Type" content="text/html; charset={$_config.modx_charset}" />
@@ -38,8 +38,8 @@ Ext.onReady(function() {
     MODx.onBrowserReturn = {/literal}{$rtecallback}{literal};{/literal}{/if}{literal}
     MODx.ctx = "{/literal}{if $_ctx}{$_ctx}{else}web{/if}{literal}";
     MODx.load({
-       xtype: 'modx-browser-rte'
-       ,auth: '{/literal}{$site_id}{literal}'
+        xtype: 'modx-browser-rte'
+        ,auth: '{/literal}{$site_id}{literal}'
     });
 });
 </script>

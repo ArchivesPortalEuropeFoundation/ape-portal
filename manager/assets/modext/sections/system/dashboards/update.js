@@ -1,19 +1,18 @@
 MODx.page.UpdateDashboard = function(config) {
-	config = config || {};
-	Ext.applyIf(config,{
+    config = config || {};
+    Ext.applyIf(config,{
         formpanel: 'modx-panel-dashboard'
         ,actions: {
-            'new': 'system/dashboard/create'
-            ,edit: 'system/dashboard/update'
+            'new': 'System/Dashboard/Create'
+            ,edit: 'System/Dashboard/Update'
             ,cancel: 'system/dashboards'
         }
         ,buttons: [{
-            process: 'system/dashboard/update'
+            process: 'System/Dashboard/Update'
             ,text: _('save')
             ,id: 'modx-abtn-save'
             ,cls: 'primary-button'
             ,method: 'remote'
-            // ,checkDirty: false
             ,keys: [{
                 key: MODx.config.keymap_save || 's'
                 ,ctrl: true
@@ -25,16 +24,16 @@ MODx.page.UpdateDashboard = function(config) {
                 MODx.loadPage('system/dashboards');
             }
         },{
-            text: _('help_ex')
+            text: '<i class="icon icon-question-circle"></i>'
             ,id: 'modx-abtn-help'
             ,handler: MODx.loadHelpPane
         }]
-		,components: [{
+        ,components: [{
             xtype: 'modx-panel-dashboard'
             ,record: config.record
         }]
-	});
-	MODx.page.UpdateDashboard.superclass.constructor.call(this,config);
+    });
+    MODx.page.UpdateDashboard.superclass.constructor.call(this,config);
 };
 Ext.extend(MODx.page.UpdateDashboard,MODx.Component);
 Ext.reg('modx-page-dashboard-update',MODx.page.UpdateDashboard);

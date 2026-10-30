@@ -8,24 +8,35 @@
  * files found in the top-level directory of this distribution.
  */
 
+use MODX\Revolution\modDashboardWidgetInterface;
+use MODX\Revolution\Processors\ProcessorResponse;
+use MODX\Revolution\Processors\System\ConfigCheck;
+use MODX\Revolution\Smarty\modSmarty;
+
 /**
  * Renders the config check box
+ *
  * @package modx
  * @subpackage dashboard
  */
-class modDashboardWidgetConfigCheck extends modDashboardWidgetInterface {
+class modDashboardWidgetConfigCheck extends modDashboardWidgetInterface
+{
     public $cssBlockClass = 'dashboard-block-variable';
 
-    public function render() {
-        $o = '';
-        /* do some config checks */
-        $modx =& $this->modx;
-        $config_check_results = '';
-        $success = include $this->modx->getOption('processors_path') . 'system/config_check.inc.php';
-        if (!$success) {
-            $o = $config_check_results;
-        }
-        return $o;
+    /**
+     * @return string
+     * @throws Exception
+     */
+    public function render()
+    {
+        /** @var ProcessorResponse $response */
+        $response = $this->modx->runProcessor(ConfigCheck::class);
+
+        $this->modx->getService('smarty', modSmarty::class);
+        $this->modx->smarty->assign('warnings', $response->getObject());
+
+        return $this->controller->fetchTemplate('dashboard/configcheck.tpl');
     }
 }
+
 return 'modDashboardWidgetConfigCheck';

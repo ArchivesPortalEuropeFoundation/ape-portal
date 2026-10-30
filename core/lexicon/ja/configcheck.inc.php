@@ -12,7 +12,7 @@ $_lang['configcheck_allowtagsinpost_context_enabled_msg'] = 'allow_tags_in_post�
 $_lang['configcheck_allowtagsinpost_system_enabled'] = 'allow_tags_in_postシステム設定が有効です。';
 $_lang['configcheck_allowtagsinpost_system_enabled_msg'] = 'このMODXではallow_tags_in_post設定が有効になっています。<br />サイト内のフォームからPOSTメソッドを用いて、MODXタグ、数値実体参照、またはHTMLのscriptタグを送信する必要がない限り、この設定を無効にすることを推奨します。<br />有効にする場合、特定のコンテキスト設定を介して限定することを推奨します。';
 $_lang['configcheck_cache'] = 'キャッシュディレクトリに書き込みができません。';
-$_lang['configcheck_cache_msg'] = 'キャッシュディレクトリにキャッシュファイルを保存できませんでした。キャッシュが利用できないため、MODXならではの軽快なレスポンスを得られません。/core/cache/web/resources/ ディレクトリを書き込み可能にしてください。';
+$_lang['configcheck_cache_msg'] = 'MODX cannot write to the cache directory. MODX will still function as expected, but no caching will take place. To solve this, make the /cache/ directory writable.';
 $_lang['configcheck_configinc'] = '設定ファイルがまだ書き込み可能になっています。';
 $_lang['configcheck_configinc_msg'] = '今の状態では、悪意ある人がこのサイトを壊すことができてしまいます。設定ファイル （[[+path]]）のパーミッションを404などに設定し、書込み不可にしてください。';
 $_lang['configcheck_default_msg'] = '不明な警告が見つかりました。';
@@ -26,7 +26,7 @@ $_lang['configcheck_htaccess_msg'] = 'MODX detected that your core folder is (pa
 If your MODX installation is running on a Apache webserver
 you should at least set up the .htaccess file inside the core folder <em>[[+fileLocation]]</em>.
 This can be easily done by renaming the existing ht.access example file there to .htaccess.
-<p>There are other methods and webservers you may use, please read the <a href="https://docs.modx.com/current/en/getting-started/maintenance/securing-modx">Hardening MODX Guide</a>
+<p>There are other methods and webservers you may use, please read the <a href="https://docs.modx.com/3.x/en/getting-started/maintenance/securing-modx">Hardening MODX Guide</a>
 for further information about securing your site.</p>
 If you setup everything correctly, browsing e.g. to the <a href="[[+checkUrl]]" target="_blank">Changelog</a>
 should give you a 403 (permission denied) or better a 404 (not found). If you can see the changelog
@@ -34,11 +34,10 @@ there in the browser, something is still wrong and you need to reconfigure or ca
 $_lang['configcheck_images'] = 'イメージディレクトリに書き込みができません。';
 $_lang['configcheck_images_msg'] = 'イメージディレクトリが書き込み可能でないか、またはイメージディレクトリが存在していません。エディターの画像管理機能が動作しません。';
 $_lang['configcheck_installer'] = 'インストーラーが残されています。';
-$_lang['configcheck_installer_msg'] = '/setup/ ディレクトリにMODXのインストーラーが残されています。悪意ある攻撃を受ける可能性がありますので、早急にこのディレクトリを削除してください。It is located at: [[+path]]';
+$_lang['configcheck_installer_msg'] = 'The setup/ directory contains the installer for MODX. Just imagine what might happen if an evil person finds this folder and runs the installer! They probably won\'t get too far, because they\'ll need to enter some user information for the database, but it\'s still best to delete this folder from your server. It is located at: [[+path]]';
 $_lang['configcheck_lang_difference'] = '言語ファイルのエントリー数が異なります。';
 $_lang['configcheck_lang_difference_msg'] = '現在選択されている言語ファイルのエントリー数がデフォルト言語ファイル（英語）のエントリー数と異なるため、一部が英語で表示されます。日本語で表示したい場合は、最新の言語ファイルを入手しアップデートする必要があります。';
 $_lang['configcheck_notok'] = '<span style="font-weight:bold;color:red;">動作環境に問題があります。</span>';
-$_lang['configcheck_ok'] = '確認OK - 警告はありません。';
 $_lang['configcheck_phpversion'] = 'PHP version is outdated';
 $_lang['configcheck_phpversion_msg'] = 'Your PHP version [[+phpversion]] is no longer maintained by the PHP developers, which means no security updates are available. It is also likely that MODX or an extra package now or in the near future will no longer support this version. Please update your environment at least to PHP [[+phprequired]] as soon as possible to secure your site.';
 $_lang['configcheck_register_globals'] = '"register_globals" が "ON" に設定されておりセキュリティ上問題があります。';

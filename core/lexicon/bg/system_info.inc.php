@@ -11,6 +11,10 @@ $_lang['database_name'] = 'Има на базата данни';
 $_lang['database_server'] = 'Сървър база данни';
 $_lang['database_tables'] = 'Таблици с База данни';
 $_lang['database_optimize'] = 'Оптимизиране на база данни';
+$_lang['database_optimize_process'] = 'The tables are being optimized now.';
+$_lang['database_optimize_success'] = 'The tables were successfully optimized.';
+$_lang['database_optimize_error'] = 'There was an error while optimizing the database tables.';
+$_lang['database_optimize_processing'] = 'Optimizing...';
 $_lang['database_table_clickhere'] = 'Кликни тук';
 $_lang['database_table_clickbackup'] = 'за архивиране &amp; изтеглете избраните таблици';
 $_lang['database_table_datasize'] = 'Размер на данни';
@@ -18,12 +22,10 @@ $_lang['database_table_droptablestatements'] = 'Генериране на DROP T
 $_lang['database_table_effectivesize'] = 'Ефективен размер';
 $_lang['database_table_indexsize'] = 'Размер на индекса';
 $_lang['database_table_overhead'] = 'Превишаване';
-$_lang['database_table_reserved'] = 'Резервирано';//sqlsrv
 $_lang['database_table_records'] = 'Записи';
 $_lang['database_table_tablename'] = 'Име на таблица';
 $_lang['database_table_totalsize'] = 'Общ размер';
 $_lang['database_table_totals'] = 'Общо:';
-$_lang['database_table_unused'] = 'Неизползван';//sqlsrv
 $_lang['database_type'] = 'Тип база данни';
 $_lang['database_version'] = 'Версия база данни';
 $_lang['extjs_version'] = '<a href="http://extjs.com/" target="_blank">ExtJS</a> Версия';
@@ -44,7 +46,7 @@ $_lang['phpmailer_version'] = '<a href="https://github.com/PHPMailer/PHPMailer" 
 $_lang['server'] = 'Сървър';
 $_lang['servertime'] = 'Сървърно време';
 $_lang['serveroffset'] = 'Сървър офсет';
-$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Smarty</a> Version';
+$_lang['smarty_version'] = '<a href="http://smarty.net/" target="_blank">Smarty</a> версия';
 $_lang['sysinfo_desc'] = 'Тук може да намерите обща информация за вашата MODX среда.';
 $_lang['view_sysinfo'] = 'Системна информация';
 $_lang['table_prefix'] = 'Префикс таблица';

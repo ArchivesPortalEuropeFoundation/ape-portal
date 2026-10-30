@@ -11,6 +11,10 @@ $_lang['database_name'] = 'Nome da Base de Dados';
 $_lang['database_server'] = 'Servidor da Base de Dados';
 $_lang['database_tables'] = 'Tabelas da Base de Dados';
 $_lang['database_optimize'] = 'Otimizar Base de Dados';
+$_lang['database_optimize_process'] = 'The tables are being optimized now.';
+$_lang['database_optimize_success'] = 'The tables were successfully optimized.';
+$_lang['database_optimize_error'] = 'There was an error while optimizing the database tables.';
+$_lang['database_optimize_processing'] = 'Optimizing...';
 $_lang['database_table_clickhere'] = 'Clique aqui';
 $_lang['database_table_clickbackup'] = 'para fazer backup &amp; baixar as tabelas selecionadas';
 $_lang['database_table_datasize'] = 'Tamanho dos Dados';
@@ -18,12 +22,10 @@ $_lang['database_table_droptablestatements'] = 'Gerar estatudos de DROP TABLE.';
 $_lang['database_table_effectivesize'] = 'Tamanho Efetivo';
 $_lang['database_table_indexsize'] = 'Tamanho do índice';
 $_lang['database_table_overhead'] = 'Sobrecarga';
-$_lang['database_table_reserved'] = 'Reservado';//sqlsrv
 $_lang['database_table_records'] = 'Registros';
 $_lang['database_table_tablename'] = 'Nome da tabela';
 $_lang['database_table_totalsize'] = 'Tamanho total';
 $_lang['database_table_totals'] = 'Totais:';
-$_lang['database_table_unused'] = 'Sem uso';//sqlsrv
 $_lang['database_type'] = 'Tipo de Base de Dados';
 $_lang['database_version'] = 'Versão da Base de Dados';
 $_lang['extjs_version'] = 'Versão do <a href="http://extjs.com/" target="_blank">ExtJS</a>';
@@ -44,7 +46,7 @@ $_lang['phpmailer_version'] = 'Versão do <a href="https://github.com/PHPMailer/
 $_lang['server'] = 'Servidor';
 $_lang['servertime'] = 'Tempo do Servidor';
 $_lang['serveroffset'] = 'Diferença do Servidor';
-$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Smarty</a> Version';
+$_lang['smarty_version'] = 'Versão do <a href="http://smarty.net/" target="_blank">Smarty</a>';
 $_lang['sysinfo_desc'] = 'Aqui você pode ver informações gerais sobre o seu ambiente MODx.';
 $_lang['view_sysinfo'] = 'Informação do Sistema';
 $_lang['table_prefix'] = 'Prefixo da tabela';

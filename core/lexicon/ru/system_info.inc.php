@@ -11,6 +11,10 @@ $_lang['database_name'] = 'Имя базы данных';
 $_lang['database_server'] = 'Сервер базы данных';
 $_lang['database_tables'] = 'Таблицы базы данных';
 $_lang['database_optimize'] = 'Оптимизировать базу данных';
+$_lang['database_optimize_process'] = 'Таблицы оптимизируются.';
+$_lang['database_optimize_success'] = 'Таблицы были успешно оптимизированы.';
+$_lang['database_optimize_error'] = 'Произошла ошибка при оптимизации таблиц базы данных.';
+$_lang['database_optimize_processing'] = 'Оптимизация...';
 $_lang['database_table_clickhere'] = 'Нажмите здесь';
 $_lang['database_table_clickbackup'] = 'для создания и скачивания резервной копии выбранных таблиц';
 $_lang['database_table_datasize'] = 'Размер данных';
@@ -18,12 +22,10 @@ $_lang['database_table_droptablestatements'] = 'Добавить команды 
 $_lang['database_table_effectivesize'] = 'Реальный размер';
 $_lang['database_table_indexsize'] = 'Размер индекса';
 $_lang['database_table_overhead'] = 'Перерасход';
-$_lang['database_table_reserved'] = 'Зарезервировано';//sqlsrv
 $_lang['database_table_records'] = 'Записей';
 $_lang['database_table_tablename'] = 'Имя таблицы';
 $_lang['database_table_totalsize'] = 'Общий размер';
 $_lang['database_table_totals'] = 'Итого:';
-$_lang['database_table_unused'] = 'Не использовано';//sqlsrv
 $_lang['database_type'] = 'Тип базы данных';
 $_lang['database_version'] = 'Версия базы данных';
 $_lang['extjs_version'] = 'Версия <a href="http://extjs.com/" target="_blank">ExtJS</a>';
@@ -44,7 +46,7 @@ $_lang['phpmailer_version'] = 'Версия <a href="https://github.com/PHPMaile
 $_lang['server'] = 'Сервер';
 $_lang['servertime'] = 'Серверное время';
 $_lang['serveroffset'] = 'Смещение серверного времени';
-$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Smarty</a> Version';
+$_lang['smarty_version'] = 'Версия <a href="http://smarty.net/" target="_blank">Smarty</a>';
 $_lang['sysinfo_desc'] = 'Здесь вы можете просматривать общую информацию о среде, в которой работает MODX.';
 $_lang['view_sysinfo'] = 'Информация о системе';
 $_lang['table_prefix'] = 'Префикс таблицы';

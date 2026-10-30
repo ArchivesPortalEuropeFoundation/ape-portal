@@ -12,7 +12,7 @@ $_lang['configcheck_allowtagsinpost_context_enabled_msg'] = 'The allow_tags_in_p
 $_lang['configcheck_allowtagsinpost_system_enabled'] = 'allow_tags_in_post System Setting Enabled';
 $_lang['configcheck_allowtagsinpost_system_enabled_msg'] = 'The allow_tags_in_post System Setting is enabled in your installation. MODX recommends this setting be disabled unless you need to explicitly allow users to submit MODX tags, numeric entities, or HTML script tags via the POST method to a form in your site. It is better to enable this via Context Settings for specific Contexts.';
 $_lang['configcheck_cache'] = 'cache kaust ei ole kirjutatav';
-$_lang['configcheck_cache_msg'] = 'MODX ei suuda kirjutada cache kausta. MODX töötab nii nagu peab aga puhverdamist ei toimu. Et viga parandada, palun lisa /_cache/ kaustale vastavad õigused.';
+$_lang['configcheck_cache_msg'] = 'MODX cannot write to the cache directory. MODX will still function as expected, but no caching will take place. To solve this, make the /cache/ directory writable.';
 $_lang['configcheck_configinc'] = 'Config fail on ikka kirjutatav!';
 $_lang['configcheck_configinc_msg'] = 'Teie leht on haavatav häkkerite poolt, kes võivad palju kahju teha sellele lehele. Palun muuda config fail ainult loetavaks (read-only)! Kui Te ei ole lehe administraator, siis palun teavitage süsteemi administraatorit ja edastage see sõnum! Fail asub core/config/config.inc.php';
 $_lang['configcheck_default_msg'] = 'Täpsustamata hoiatus leiti. Mis on imelk.';
@@ -26,7 +26,7 @@ $_lang['configcheck_htaccess_msg'] = 'MODX detected that your core folder is (pa
 If your MODX installation is running on a Apache webserver
 you should at least set up the .htaccess file inside the core folder <em>[[+fileLocation]]</em>.
 This can be easily done by renaming the existing ht.access example file there to .htaccess.
-<p>There are other methods and webservers you may use, please read the <a href="https://docs.modx.com/current/en/getting-started/maintenance/securing-modx">Hardening MODX Guide</a>
+<p>There are other methods and webservers you may use, please read the <a href="https://docs.modx.com/3.x/en/getting-started/maintenance/securing-modx">Hardening MODX Guide</a>
 for further information about securing your site.</p>
 If you setup everything correctly, browsing e.g. to the <a href="[[+checkUrl]]" target="_blank">Changelog</a>
 should give you a 403 (permission denied) or better a 404 (not found). If you can see the changelog
@@ -34,11 +34,10 @@ there in the browser, something is still wrong and you need to reconfigure or ca
 $_lang['configcheck_images'] = 'Piltide (Images) kaust ei ole kirjutatav';
 $_lang['configcheck_images_msg'] = 'Piltide kaust ei ole kirjutatav või ei ekisteeri. See tähendab, et Image Manager funktsioonid ei tööta!';
 $_lang['configcheck_installer'] = 'Installer ikka eksiteerib';
-$_lang['configcheck_installer_msg'] = 'Kataloog setup/ sisaldab MODX installerit. Kujuta ette, mis võib juhtuda, kui võõras leiab selle kausta ja jooksutab installerit! Ta arvatavasti ei jõuaks kaugele, kuna ta peab sisestama informatsiooni andmebaasi kasutaja kohta aga ikkagi parim oleks eemaldada see kaust serverist.';
+$_lang['configcheck_installer_msg'] = 'The setup/ directory contains the installer for MODX. Just imagine what might happen if an evil person finds this folder and runs the installer! They probably won\'t get too far, because they\'ll need to enter some user information for the database, but it\'s still best to delete this folder from your server. It is located at: [[+path]]';
 $_lang['configcheck_lang_difference'] = 'Ebakorrketne arv sissekanded keele failis';
 $_lang['configcheck_lang_difference_msg'] = 'Hetkel valitud keelel on erinev arv sissekanded kui põhikeele failis. See ei pruugi olla probleem, kuid see võib tähendada, et keele fail vajab uuendust.';
 $_lang['configcheck_notok'] = 'Mõned konfiguratiooni detailid vajavad tähelepanu: ';
-$_lang['configcheck_ok'] = 'Kontroll läbitud OK - hoiatused puuduvad.';
 $_lang['configcheck_phpversion'] = 'PHP version is outdated';
 $_lang['configcheck_phpversion_msg'] = 'Your PHP version [[+phpversion]] is no longer maintained by the PHP developers, which means no security updates are available. It is also likely that MODX or an extra package now or in the near future will no longer support this version. Please update your environment at least to PHP [[+phprequired]] as soon as possible to secure your site.';
 $_lang['configcheck_register_globals'] = 'register_globals väärtus on ON teie php.ini konfiguratiooni failis';

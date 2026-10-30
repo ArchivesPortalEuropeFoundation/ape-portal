@@ -8,21 +8,22 @@ MODx.panel.ResourceGroups = function(config) {
     config = config || {};
     Ext.applyIf(config,{
         id: 'modx-panel-resource-groups'
-		,cls: 'container'
+        ,cls: 'container'
         ,defaults: { collapsible: false ,autoHeight: true }
         ,items: [{
-             html: _('resource_groups')
+            html: _('resource_groups')
             ,id: 'modx-resource-groups-header'
             ,xtype: 'modx-header'
-        },{
-            layout: 'form'
+        },MODx.getPageStructure([{
+            title: _('resource_groups')
+            ,layout: 'form'
             ,defaults: { border: false ,autoHeight: true }
             ,items: [{
-                html: '<p>'+_('rrg_drag')+'</p>'
+                html: _('resource_groups_panel_desc')
                 ,xtype: 'modx-description'
             },{
                 layout: 'column'
-				,cls:'main-wrapper'
+                ,cls:'main-wrapper'
                 ,defaults: { border: false }
                 ,items: [{
                     columnWidth: .5
@@ -40,7 +41,7 @@ MODx.panel.ResourceGroups = function(config) {
                         ,id: 'modx-gr-tree-resource'
                         ,url: MODx.config.connector_url
                         ,baseParams: {
-                            action: 'resource/getNodes'
+                            action: 'Resource/GetNodes'
                             ,noMenu: true
                         }
                         ,ddGroup: 'rg2resource'
@@ -49,13 +50,15 @@ MODx.panel.ResourceGroups = function(config) {
                         ,allowDrop: false
                         ,enableDD: false
                         ,rootVisible: false
+                        ,listeners: {
+                            'click': {fn:function() {return false;}}
+                        }
                     }]
                 }]
             }]
-        }]
+        }])]
     });
     MODx.panel.ResourceGroups.superclass.constructor.call(this,config);
 };
 Ext.extend(MODx.panel.ResourceGroups,MODx.FormPanel);
 Ext.reg('modx-panel-resource-groups',MODx.panel.ResourceGroups);
-

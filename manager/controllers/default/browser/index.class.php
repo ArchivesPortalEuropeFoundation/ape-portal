@@ -8,6 +8,9 @@
  * files found in the top-level directory of this distribution.
  */
 
+use MODX\Revolution\modContext;
+use MODX\Revolution\modManagerController;
+
 /**
  * Loads the MODx.Browser page
  *
@@ -45,11 +48,11 @@ MODx.ctx = "'.$this->ctx.'";
      * @param array $scriptProperties
      * @return mixed
      */
-    public function process(array $scriptProperties = array()) {
-        $placeholders = array();
+    public function process(array $scriptProperties = []) {
+        $placeholders = [];
 
         $scriptProperties['ctx'] = !empty($scriptProperties['ctx']) ? $scriptProperties['ctx'] : 'web';
-        $context = $this->modx->getObject('modContext', [
+        $context = $this->modx->getObject(modContext::class, [
             'key' => (string)$scriptProperties['ctx'],
         ]);
         if (!$context) {
@@ -93,6 +96,6 @@ MODx.ctx = "'.$this->ctx.'";
      * @return array
      */
     public function getLanguageTopics() {
-        return array('file', 'context');
+        return ['file', 'context'];
     }
 }

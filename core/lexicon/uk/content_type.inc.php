@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Content Type English lexicon topic
  *
@@ -15,17 +16,15 @@ $_lang['content_type_err_nfs'] = 'Тип вмісту з ID [[+id]] не зна�
 $_lang['content_type_err_ns'] = 'Тип вмісту не вказаний.';
 $_lang['content_type_err_ns_name'] = 'Будь ласка, вкажіть коректне ім\'я для типу вмісту.';
 $_lang['content_type_err_create'] = 'Сталася помилка при спробі створити тип вмісту.';
-$_lang['content_type_err_in_use'] = 'Ви не можете видалити даний тип вмісту тому що він використовується ресурсами у MODX. Будь ласка, призначте інші типи вмісту для цих ресурсів перед тим, як продовжити.';
+$_lang['content_type_err_in_use'] = 'Ви не можете видалити цей тип контенту, тому що він використовується ресурсами у MODX. Будь ласка, повторно призначити типи вмісту цих ресурсів, перш ніж продовжити.';
 $_lang['content_type_err_remove'] = 'Сталася помилка при спробі видалення типу вмісту.';
 $_lang['content_type_err_save'] = 'Сталася помилка при спробі збереження типу вмісту.';
 $_lang['content_type_header'] = 'Заголовок';
 $_lang['content_type_main_tab'] = 'Основне';
 $_lang['content_type_header_tab'] = 'Користувацькі заголовки';
 $_lang['content_type_header_title'] = 'Створити/редагувати заголовок';
-$_lang['content_type_new'] = 'Новий тип вмісту';
-$_lang['content_type_edit'] = 'Редагувати тип вмісту';
-$_lang['content_type_remove'] = 'Видалити тип вмісту';
 $_lang['content_type_remove_confirm'] = 'Ви впевнені, що хочете видалити цей тип вмісту?';
+$_lang['content_type_reserved_general_desc'] = 'Зверніть увагу, що це захищений, вбудований тип контенту. Деякі значення заблоковані і відображаються тільки в інформаційних цілях.';
 $_lang['content_types'] = 'Типи вмісту';
 $_lang['file_extensions'] = 'Розширення файлу';
 $_lang['file_extensions_desc'] = 'Специфічне розширення файлу для даного типу вмісту.';

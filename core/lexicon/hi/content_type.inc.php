@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Content Type English lexicon topic
  *
@@ -15,17 +16,15 @@ $_lang['content_type_err_nfs'] = 'Content Type के साथ ID [[+id]] न�
 $_lang['content_type_err_ns'] = 'Content Type निर्दिष्ट नहीं किया गया।';
 $_lang['content_type_err_ns_name'] = 'कृपया उस Content Type के लिए कोई मान्य नाम निर्दिष्ट करें।';
 $_lang['content_type_err_create'] = 'Content Type बनाने का प्रयास करते समय एक त्रुटि उत्पन्न हुई।';
-$_lang['content_type_err_in_use'] = 'यह वर्तमान में MODX में resources द्वारा उपयोग में है के रूप में आप इस Content Type, निकाल नहीं सकते। कृपया आगे बढ़ने से पहले उन resources के Content Type के पुन: असाइन करें।';
-$_lang['content_type_err_remove'] = 'Content Type निकालने का प्रयास करते समय कोई त्रुटि उत्पन्न हुई।';
+$_lang['content_type_err_in_use'] = 'आप इस सामग्री प्रकार को हटा नहीं सकते, क्योंकि यह वर्तमान में MODX में संसाधनों द्वारा उपयोग में है! कृपया आगे बढ़ने से पहले उन संसाधनों के सामग्री प्रकारों को पुनः असाइन करें!';
+$_lang['content_type_err_remove'] = 'सभी प्रकार को हटाने का प्रयास करते समय एक त्रुटि हुईं';
 $_lang['content_type_err_save'] = 'Content Type सहेजने का प्रयास करते समय एक त्रुटि उत्पन्न हुई।';
 $_lang['content_type_header'] = 'शीर्षक';
 $_lang['content_type_main_tab'] = 'मुख्य';
 $_lang['content_type_header_tab'] = 'कस्टम हेडर';
 $_lang['content_type_header_title'] = 'हेडर बनाएं या संपादित करें';
-$_lang['content_type_new'] = 'नए Content Type';
-$_lang['content_type_edit'] = 'सामग्री प्रकार संपादित करें';
-$_lang['content_type_remove'] = 'Content प्रकार हटाएँ';
 $_lang['content_type_remove_confirm'] = 'आप सुनिश्चित करें कि आप इस Content Type को हटाना चाहते हैं?';
+$_lang['content_type_reserved_general_desc'] = 'Note that this is a protected, built-in Content Type. Some values are locked and shown for informational purposes only.';
 $_lang['content_types'] = 'सामग्री प्रकार';
 $_lang['file_extensions'] = 'फाइल एक्सटेंशन';
 $_lang['file_extensions_desc'] = 'यह इस Content Type के लिए file extension एक्सटेंशन है।';

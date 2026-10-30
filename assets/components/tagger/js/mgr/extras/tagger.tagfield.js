@@ -1,18 +1,18 @@
-Tagger.fields.Tags = function(config) {
+tagger.fields.Tags = function(config) {
     config = config || {};
     Ext.applyIf(config,{
-        ignoreCase: false
-        ,valueField: 'tag'
-        ,displayField: 'tag'
-        ,minChars: 1
-        ,allowAdd: true
-        ,editable: true
-        ,hideTrigger: false
-        ,autoTag: false
-        ,hideInput: false
-        ,tagLimit: 0
+        ignoreCase: false,
+        valueField: 'tag',
+        displayField: 'tag',
+        minChars: 1,
+        allowAdd: true,
+        editable: true,
+        hideTrigger: false,
+        autoTag: false,
+        hideInput: false,
+        tagLimit: 0
     });
-    Tagger.fields.Tags.superclass.constructor.call(this,config);
+    tagger.fields.Tags.superclass.constructor.call(this,config);
 
     this.myStore = new Ext.data.ArrayStore({
         autoDestroy: true,
@@ -39,18 +39,18 @@ Tagger.fields.Tags = function(config) {
 
     this.addEvents('additem', 'removeitem');
 };
-Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
-    mode: 'remote'
+Ext.extend(tagger.fields.Tags,MODx.combo.ComboBox,{
+    mode: 'remote',
 
-    ,defaultAutoCreate : {tag: "input", type: "text", size: "24", autocomplete: "on"}
+    defaultAutoCreate : {tag: "input", type: "text", size: "24", autocomplete: "on"},
 
-    ,myStore: null
+    myStore: null,
 
-    ,autoTagStore: null
+    autoTagStore: null,
 
-    ,store: null
+    store: null,
 
-    ,initValue : function(){
+    initValue: function(){
         if(this.value !== undefined) {
             this.setValue(this.value);
         } else if(!Ext.isEmpty(this.el.dom.value) && this.el.dom.value != this.emptyText) {
@@ -65,14 +65,14 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
             this.store.load();
             this.store.on('load', this.loadAutoTags, this, {single: true});
         }
-    }
+    },
 
-    ,loadAutoTags: function() {
-        var initialValues = Ext.isEmpty(Tagger.tags[this.name]) ? '' : Tagger.tags[this.name];
+    loadAutoTags: function() {
+        var initialValues = Ext.isEmpty(tagger.tags[this.name]) ? '' : tagger.tags[this.name];
         initialValues = initialValues.split(/\s*[,]\s*/);
-        
+
         Ext.each(this.store.data.items, function(item) {
-            new Tagger.fields.Tag({
+            new tagger.fields.Tag({
                 owner: this,
                 renderTo: this.insertedTagsEl,
                 value: item.data.tag,
@@ -84,9 +84,9 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
                 }
             });
         }, this);
-    }
+    },
 
-    ,onFocus : function(){
+    onFocus : function(){
         this.preFocus();
         if(this.focusClass){
             this.el.addClass(this.focusClass);
@@ -103,20 +103,20 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
             this.startValue = this.getFieldValue();
             this.fireEvent('focus', this);
         }
-    }
+    },
 
-    ,isDirty : function() {
+    isDirty : function() {
         if(this.disabled || !this.rendered) {
             return false;
         }
         return String(this.getFieldValue()) !== String(this.originalValue);
-    }
+    },
 
-    ,append : function(v){
+    append : function(v){
         this.setValue([this.getFieldValue(), v].join(''));
-    }
+    },
 
-    ,getValue: function(){
+    getValue: function(){
         var restValues = this.getFieldValue();
         if(restValues == '' || restValues == undefined) restValues = '';
 
@@ -130,9 +130,9 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
         }, this);
 
         return this.myStore.collect('tag').join();
-    }
+    },
 
-    ,setValue: function(v){
+    setValue: function(v){
         v = Ext.util.Format.htmlDecode(v);
 
         if (this.store.loaded == false && this.config.autoTag == true) {
@@ -153,9 +153,9 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
         }
 
         this.addItems(v);
-    }
+    },
 
-    ,setValueOnLoad: function(v){
+    setValueOnLoad: function(v){
         v = Ext.util.Format.htmlDecode(v);
 
         if (this.config.autoTag == false) {
@@ -169,9 +169,9 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
             v = v.join();
         }
         this.addItems(v);
-    }
+    },
 
-    ,setFieldValue: function(v){
+    setFieldValue: function(v){
         var text = Ext.util.Format.htmlDecode(v);
         if(this.valueField){
             var r = this.findRecord(this.valueField, v);
@@ -188,13 +188,13 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
         Ext.form.ComboBox.superclass.setValue.call(this, text);
         this.value = v;
         return this;
-    }
+    },
 
-    ,getFieldValue: function(){
+    getFieldValue: function(){
         return this.value;
-    }
+    },
 
-    ,onRender : function(ct, position){
+    onRender : function(ct, position){
         if(this.hiddenName && !Ext.isDefined(this.submitValue)){
             this.submitValue = false;
         }
@@ -247,17 +247,84 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
         }else{
             this.on('focus', this.initList, this, {single: true});
         }
-    }
+    },
 
-    ,addItemsFromField: function(){
+    addItemsFromField: function(){
         this.addItems(this.getFieldValue(), true);
-    }
+    },
 
-    ,addItems: function(items, fromField){
+    addTag: function(value, fromField) {
+        if (this.config.tagLimit > 0) {
+            if (this.myStore.find('tag', value) == -1) {
+                if (this.myStore.getCount() >= this.config.tagLimit) {
+                    return false;
+                }
+            }
+        }
+
+        var valueIndex = -1;
+        if (this.config.autoTag == true) {
+            valueIndex = this.autoTagStore.find('tag', value);
+            if (valueIndex != -1) {
+                var rec = this.autoTagStore.getAt(valueIndex);
+                if (rec.data.el.el && !rec.data.el.el.hasClass('x-superboxselect-item')) {
+                    rec.data.el.click();
+                } else {
+                    if (this.myStore.find('tag', value) == -1) {
+                        var record = new Ext.data.Record({tag: value}, value);
+                        this.myStore.add([record]);
+                    }
+                }
+            }
+        }
+
+        if (this.config.autoTag == false || (fromField && valueIndex === -1)) {
+            var item = new tagger.fields.Tag({
+                owner: this,
+                renderTo: this.insertedTagsEl,
+                value: value,
+                active: true,
+                listeners: {
+                    remove: function(item){
+                        this.fireEvent('removeitem',this,item);
+                    },scope: this
+                }
+            });
+            item.render();
+            this.fireEvent('additem',this,value);
+        }
+
+        return true;
+    },
+
+    addItems: function(items, fromField){
         fromField = fromField || false;
-        
+
         items = Ext.isEmpty(items) ? '' : items;
         var values = items.split(/\s*[,]\s*/);
+        if (this.config.allowAdd == false && this.store.loaded) {
+            this.findTags(values, (data) => {
+                Ext.each(values, function (value) {
+                    if(this.ignoreCase){
+                        value = value.toLowerCase();
+                    }
+
+                    if(value == ''){
+                        return;
+                    }
+
+                    this.store.clearFilter();
+                    if (data.findIndex((i) => i.data.tag === value) == -1) {
+                        return;
+                    }
+
+                    this.addTag(value, fromField);
+                }, this);
+
+                this.setFieldValue();
+            });
+            return;
+        }
 
         Ext.each(values, function (value) {
             if(this.ignoreCase){
@@ -275,52 +342,14 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
                 }
             }
 
-            if (this.config.tagLimit > 0) {
-                if (this.myStore.find('tag', value) == -1) {
-                    if (this.myStore.getCount() >= this.config.tagLimit) {
-                        return;
-                    }
-                }
-            }
-
-            var valueIndex = -1;
-            if (this.config.autoTag == true) {
-                valueIndex = this.autoTagStore.find('tag', value);
-                if (valueIndex != -1) {
-                    var rec = this.autoTagStore.getAt(valueIndex);
-                    if (rec.data.el.el && !rec.data.el.el.hasClass('x-superboxselect-item')) {
-                        rec.data.el.click();
-                    } else {
-                        if (this.myStore.find('tag', value) == -1) {
-                            var record = new Ext.data.Record({tag: value}, value);
-                            this.myStore.add([record]);
-                        }
-                    }
-                }
-            }
-
-            if (this.config.autoTag == false || (fromField && valueIndex === -1)) {
-                var item = new Tagger.fields.Tag({
-                    owner: this,
-                    renderTo: this.insertedTagsEl,
-                    value: value,
-                    active: true,
-                    listeners: {
-                        remove: function(item){
-                            this.fireEvent('removeitem',this,item);
-                        },scope: this
-                    }
-                });
-                item.render();
-                this.fireEvent('additem',this,value);
-            }
+            this.addTag(value, fromField);
         }, this);
 
 
         this.setFieldValue();
-    }
+    },
 
-    ,doQuery : function(q, forceAll){
+    doQuery : function(q, forceAll){
         this.value = q;
 
         q = Ext.isEmpty(q) ? '' : q;
@@ -363,9 +392,37 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
                 this.onLoad();
             }
         }
-    }
+    },
 
-    ,onSelect : function(record, index){
+    findTags: function (tags, callback) {
+        tags = Array.isArray(tags) ? tags : [tags];
+        tags = tags.filter(Boolean);
+        if (tags.length === 0) {
+            return;
+        }
+        this.store.load({
+            params: {
+                limit: 0,
+                offset: 0,
+                'tags[]': tags,
+                [this.queryParam]: '',
+
+            },
+            callback: (x) => {
+                callback(x);
+                this.collapse();
+
+                this.store.load({
+                    params: this.getParams(),
+                    callback: () => {
+                        this.collapse();
+                    }
+                });
+            }
+        });
+    },
+
+    onSelect : function(record, index){
         if(this.fireEvent('beforeselect', this, record, index) !== false){
 
             var values = this.getFieldValue().split(/\s*[,]\s*/);
@@ -376,9 +433,9 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
 //            this.collapse();
             this.fireEvent('select', this, record, index);
         }
-    }
+    },
 
-    ,getErrors: function(value) {
+    getErrors: function(value) {
         var errors = Ext.form.TextField.superclass.getErrors.apply(this, arguments);
 
         value = Ext.isDefined(value) ? value : this.processValue(this.getRawValue());
@@ -426,15 +483,15 @@ Ext.extend(Tagger.fields.Tags,MODx.combo.ComboBox,{
     }
 });
 
-Tagger.fields.Tag = function(config){
+tagger.fields.Tag = function(config){
     Ext.apply(this,config);
     Ext.ux.form.SuperBoxSelectItem.superclass.constructor.call(this);
     this.addEvents('remove');
 };
-Ext.extend(Tagger.fields.Tag,Ext.Component, {
-    renderCurrentItem: true
-    ,initComponent : function(){
-        Tagger.fields.Tag.superclass.initComponent.call(this);
+Ext.extend(tagger.fields.Tag,Ext.Component, {
+    renderCurrentItem: true,
+    initComponent : function(){
+        tagger.fields.Tag.superclass.initComponent.call(this);
         this.renderCurrentItem = true;
 
         var itemsCount,record;
@@ -480,7 +537,7 @@ Ext.extend(Tagger.fields.Tag,Ext.Component, {
                     }
                 }
             }
-            
+
             var record = new Ext.data.Record({tag: this.value}, this.value);
             this.owner.myStore.add([record]);
 
@@ -495,7 +552,7 @@ Ext.extend(Tagger.fields.Tag,Ext.Component, {
 
     onRender : function(ct, position){
         if(!this.renderCurrentItem) return true;
-        Tagger.fields.Tag.superclass.onRender.call(this, ct, position);
+        tagger.fields.Tag.superclass.onRender.call(this, ct, position);
 
         var el = this.el;
         if(el){
@@ -564,8 +621,8 @@ Ext.extend(Tagger.fields.Tag,Ext.Component, {
             this.el
         );
 
-        Tagger.fields.Tag.superclass.onDestroy.call(this);
+        tagger.fields.Tag.superclass.onDestroy.call(this);
     }
 });
 
-Ext.reg('tagger-field-tags',Tagger.fields.Tags);
+Ext.reg('tagger-field-tags',tagger.fields.Tags);

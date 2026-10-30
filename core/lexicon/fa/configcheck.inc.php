@@ -12,7 +12,7 @@ $_lang['configcheck_allowtagsinpost_context_enabled_msg'] = 'The allow_tags_in_p
 $_lang['configcheck_allowtagsinpost_system_enabled'] = 'گزینه‌ی allow_tags_in_post در تنظیمات سیستم فعال است';
 $_lang['configcheck_allowtagsinpost_system_enabled_msg'] = 'The allow_tags_in_post System Setting is enabled in your installation. MODX recommends this setting be disabled unless you need to explicitly allow users to submit MODX tags, numeric entities, or HTML script tags via the POST method to a form in your site. It is better to enable this via Context Settings for specific Contexts.';
 $_lang['configcheck_cache'] = 'دایرکتوری کَش دارای مجور نوشتن نیست';
-$_lang['configcheck_cache_msg'] = 'مادایکس قادر به استفاده از دایرکتوری کَش نیست. سیستم همچنان به فعالیت خود ادامه خواهد داد ولی بدون هیچگونه عملیات کَش. برای رفع این مشکل، لطفا مجوزِ نوشتن را برای دایرکتوری /cache_/ فعال نمایید.';
+$_lang['configcheck_cache_msg'] = 'MODX cannot write to the cache directory. MODX will still function as expected, but no caching will take place. To solve this, make the /cache/ directory writable.';
 $_lang['configcheck_configinc'] = 'فایل پیکربندی (Config) همچنان دارای مجوز نوشتن است!';
 $_lang['configcheck_configinc_msg'] = 'سایت شما نسبت به حملات هکرها بسیار آسیب‌پذیر است. آنها می‌توانند مشکلات فراوانی برای سایت ایجاد کنند. لطفا مجوزهای فایل پیکربندی (config) را به «فقط خواندنی» (read only) تغییر دهید. اگر شما سرپرست سیستم نیستید لطفا مدیران و سرپرستان سیستم را از این هشدار مطلع نمایید. مورد تهدیدآمیز در اینجا واقع شده: [[+path]]';
 $_lang['configcheck_default_msg'] = 'خطای نامشخصی رخ داده که بسیار مشکوک است.';
@@ -26,7 +26,7 @@ $_lang['configcheck_htaccess_msg'] = 'MODX detected that your core folder is (pa
 If your MODX installation is running on a Apache webserver
 you should at least set up the .htaccess file inside the core folder <em>[[+fileLocation]]</em>.
 This can be easily done by renaming the existing ht.access example file there to .htaccess.
-<p>There are other methods and webservers you may use, please read the <a href="https://docs.modx.com/current/en/getting-started/maintenance/securing-modx">Hardening MODX Guide</a>
+<p>There are other methods and webservers you may use, please read the <a href="https://docs.modx.com/3.x/en/getting-started/maintenance/securing-modx">Hardening MODX Guide</a>
 for further information about securing your site.</p>
 If you setup everything correctly, browsing e.g. to the <a href="[[+checkUrl]]" target="_blank">Changelog</a>
 should give you a 403 (permission denied) or better a 404 (not found). If you can see the changelog
@@ -34,11 +34,10 @@ there in the browser, something is still wrong and you need to reconfigure or ca
 $_lang['configcheck_images'] = 'دایرکتوری تصاویر (images) دارای مجوز نوشتن نیست';
 $_lang['configcheck_images_msg'] = 'دایرکتوری تصاویر (images) یا موجود نیست و یا دارای مجوز نوشتن نیست. این بدین معناست که امکانات ابزار «مدیریت تصاویر» در ویرایشگر، قابل استفاده نخواهد بود!';
 $_lang['configcheck_installer'] = 'نصب کننده‌ی مادایکس همچنان قابل دسترسی است';
-$_lang['configcheck_installer_msg'] = 'The setup/ directory contains the installer for MODX. Just imagine what might happen if an evil person finds this folder and runs the installer! They probably won\'t get too far, because they\'ll need to enter some user information for the database, but it\'s still best to remove this folder from your server. It is located at: [[+path]]';
+$_lang['configcheck_installer_msg'] = 'The setup/ directory contains the installer for MODX. Just imagine what might happen if an evil person finds this folder and runs the installer! They probably won\'t get too far, because they\'ll need to enter some user information for the database, but it\'s still best to delete this folder from your server. It is located at: [[+path]]';
 $_lang['configcheck_lang_difference'] = 'فایل زبان دارای تعداد نادرستی از کلیدهاست';
 $_lang['configcheck_lang_difference_msg'] = 'The currently selected language has a different number of entries than the default language. While not necessarily a problem, this may mean the language file needs to be updated.';
 $_lang['configcheck_notok'] = 'برخی از موارد پیکربندی به درستی بررسی نشدند: ';
-$_lang['configcheck_ok'] = 'نتیجه‌ی بررسی مطلوب است و مشکلی وجود ندارد.';
 $_lang['configcheck_phpversion'] = 'PHP version is outdated';
 $_lang['configcheck_phpversion_msg'] = 'Your PHP version [[+phpversion]] is no longer maintained by the PHP developers, which means no security updates are available. It is also likely that MODX or an extra package now or in the near future will no longer support this version. Please update your environment at least to PHP [[+phprequired]] as soon as possible to secure your site.';
 $_lang['configcheck_register_globals'] = 'گزینه‌ی register_globals در فایل پیکربندیِ php.ini فعال است';

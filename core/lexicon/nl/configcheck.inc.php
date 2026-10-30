@@ -12,7 +12,7 @@ $_lang['configcheck_allowtagsinpost_context_enabled_msg'] = 'De allow_tags_in_po
 $_lang['configcheck_allowtagsinpost_system_enabled'] = 'allow_tags_in_post Systeem Instelling Ingeschakeld';
 $_lang['configcheck_allowtagsinpost_system_enabled_msg'] = 'De allow_tags_in_post System Setting is in deze installatie ingeschakeld. Tenzij de gebruikers van de website specifiek MODX tags, genummerde entities of HTML script tags via POST naar een of meerdere formulieren op de site moeten kunnen sturen is het sterk aan te raden deze instelling te deactiveren. Indien deze instelling nodig is, kan dit het beste op context niveau worden ingeschakeld met Context Settings.';
 $_lang['configcheck_cache'] = 'cache map is niet schrijfbaar';
-$_lang['configcheck_cache_msg'] = 'MODX kan niet schrijven naar de cache map. MODX zal nog steeds functioneren als verwacht maar caching zal niet werken. Om dit op te lossen maak de /cache/ map schrijfbaar.';
+$_lang['configcheck_cache_msg'] = 'MODX kan niet naar de cache map schrijven. MODX zal nog steeds functioneren zoals verwacht, maar er zal geen caching plaatsvinden. Maak de /cache/ map schrijfbaar om dit op te lossen.';
 $_lang['configcheck_configinc'] = 'Configuratiebestand nog steeds schrijfbaar!';
 $_lang['configcheck_configinc_msg'] = 'Je website is kwetsbaar voor hackers die veel schade kunnen aanrichten. Zorg ervoor dat je configuratiebestand op alleen-lezen is ingesteld! Als je niet de beheerder bent, neem dan contact op met een systeembeheerder en waarschuw hem over deze melding! Het bestand kan gevonden worden in [[+path]]';
 $_lang['configcheck_default_msg'] = 'Een onverwachte fout is opgetreden. Dit is toch wel een beetje apart.';
@@ -21,19 +21,21 @@ $_lang['configcheck_errorpage_unavailable_msg'] = 'Dit betekent dat jouw foutpag
 $_lang['configcheck_errorpage_unpublished'] = 'De foutpagina van je website is niet gepubliceerd of bestaat niet.';
 $_lang['configcheck_errorpage_unpublished_msg'] = 'Dit betekent dat jouw foutpagina niet bereikbaar is voor bezoekers. Publiceer de pagina of controleer of het is gekoppeld aan een bestaand document in jouw site structuur in het Systeem > Systeeminstellingen menu.';
 $_lang['configcheck_htaccess'] = 'Core map is toegankelijk op het web';
-$_lang['configcheck_htaccess_msg'] = 'MODX heeft geconstateerd dat uw core map (gedeeltelijk) voor het publiek toegankelijk is.
-<strong>Dit is niet aanbevolen en kan een beveiligingsrisico met zich mee brengen.</strong> 
-Indien de MODX installatie op Apache draait is het mogelijk om het meegeleverde .htaccess bestand in <em>[[+fileLocation]]</em> te gebruiken om toegang tot de core map te weren. Dit is eenvoudig te doen door het ht.access bestand te hernoemen naar .htaccess.
-<p>Voor andere methoden en webservers kan de <a href="https://docs.modx.com/current/en/getting-started/maintenance/securing-modx">Hardening MODX Guide</a> geraadpleegd worden (Engels). </p>
-Indien alles succesvol is ingesteld zou bij het opvragen van bijvoorbeeld het <a href="[[+checkUrl]]" target="_blank">Changelog</a> een 403 (toegang geweigerd) of 404 (pagina niet gevonden) foutmelding moeten geven. Als de changelog toch op te vragen is, dan dienen verdere stappen genomen te worden om het probleem te verhelpen.';
+$_lang['configcheck_htaccess_msg'] = 'MODX heeft gedetecteerd dat jouw core folder (gedeeltelijk) toegankelijk is voor het publiek.
+<strong>Dit is niet aanbevolen en een beveiligingsrisico.</strong>
+Als jouw MODX installatie wordt uitgevoerd op een Apache webserver dan moet je op zijn minst het .htaccess bestand in de core map <em>[[+fileLocation]]</em> instellen.
+Dit kan eenvoudig gedaan worden door het bestaande ht.access voorbeeldbestand te hernoemen naar .htaccess.
+<p>Er zijn andere methoden en webservers die je kunt gebruiken lees de <a href="https://docs.modx.com/3.x/en/getting-started/maintenance/securing-modx">Versterk MODX Gids</a>
+voor meer informatie over het beveiligen van jouw site.</p>
+Als je alles correct hebt ingesteld, zou het bladeren naar bijv. het <a href="[[+checkUrl]]" target="_blank">Changelog</a> bestand je een 403 (machtiging geweigerd) of beter een 404 (niet gevonden) verwijzing moeten geven. Als je de changelog
+daarin in de browser kunt zien, er is nog iets mis en moet je de instelling opnieuw configureren of moet je een expert hier naar laten kijken om dit op te lossen.';
 $_lang['configcheck_images'] = 'Afbeeldingen map is niet schrijfbaar';
 $_lang['configcheck_images_msg'] = 'De afbeeldingen map is niet schrijfbaar of bestaat niet. Dit betekent dat Afbeeldingenbeheer functionaliteiten in de editor niet werken!';
 $_lang['configcheck_installer'] = 'Installatie is nog aanwezig';
-$_lang['configcheck_installer_msg'] = 'De setup/ map bevat de installatie voor MODX. Stel je eens voor wat er kan gebeuren als een kwaadaardig persoon deze map vind en de installatie opnieuw doorloopt! Hij zal waarschijnlijk niet ver komen, omdat hij gebruikersinformatie voor de database in moet vullen, maar het is nog altijd beter om deze map te verwijderen van de server.';
+$_lang['configcheck_installer_msg'] = 'De setup/ map bevat het installatieprogramma voor MODX. Stelt u zich eens voor wat er kan gebeuren als een kwaadaardige persoon deze map vindt en de installatie uitvoert! Ze zullen waarschijnlijk niet te ver gaan, omdat ze wat gebruikersinformatie voor de database moeten invoeren, maar het is nog steeds het beste om deze map van uw server te verwijderen. Het bevindt zich op: [[+path]]';
 $_lang['configcheck_lang_difference'] = 'Er is een onjuist aantal entries gevonden in het taalbestand';
 $_lang['configcheck_lang_difference_msg'] = 'Het huidige geselecteerd taalbestand heeft een verschillend aantal entries dan de standaard taal. Waar dit niet direct een probleem is, kan dit betekenen dat dit bestand geupdate moet worden.';
 $_lang['configcheck_notok'] = 'E&eacute;n of meerdere configuratiedetails zijn niet succesvol: ';
-$_lang['configcheck_ok'] = 'Controle geeft OKE - Geen fouten te melden.';
 $_lang['configcheck_phpversion'] = 'Verouderde PHP versie';
 $_lang['configcheck_phpversion_msg'] = 'De gebruikte PHP versie [[+phpversion]] is niet meer ondersteund door de PHP ontwikkelaars, wat betekent dat er geen beveiligingsupdates voor beschikbaar zijn. Het is mogelijk dat MODX of een uitbreiding voor MODX nu of in de toekomst deze versie niet meer zal ondersteunen. Zorg er voor dat uw server omgeving zo spoedig mogelijk geüpdatet wordt naar ten minste PHP [[+phprequired]] om uw site veilig te houden.';
 $_lang['configcheck_register_globals'] = 'register_globals staat AAN in jouw php.ini bestand';

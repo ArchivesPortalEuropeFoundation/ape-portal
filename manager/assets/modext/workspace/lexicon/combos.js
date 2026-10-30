@@ -1,6 +1,6 @@
 /**
  * Displays a dropdown list of available Lexicon Topics. Requires a namespace.
- * 
+ *
  * @class MODx.combo.LexiconTopic
  * @extends MODx.combo.ComboBox
  * @param {Object} config An object of config properties
@@ -16,17 +16,15 @@ MODx.combo.LexiconTopic = function(config) {
         ,minChars: 1
         ,editable: true
         ,allowBlank: true
-        // ,listWidth: 300
         ,url: MODx.config.connector_url
         ,fields: ['name']
         ,displayField: 'name'
         ,valueField: 'name'
         ,baseParams: {
-            action: 'workspace/lexicon/topic/getList'
+            action: 'Workspace/Lexicon/Topic/GetList'
             ,'namespace': 'core'
             ,'language': 'en'
         }
-        // ,pageSize: 20
     });
     MODx.combo.LexiconTopic.superclass.constructor.call(this,config);
 };

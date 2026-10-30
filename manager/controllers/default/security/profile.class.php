@@ -8,6 +8,8 @@
  * files found in the top-level directory of this distribution.
  */
 
+use MODX\Revolution\modManagerController;
+
 /**
  * Loads the profile page
  *
@@ -40,8 +42,6 @@ class SecurityProfileManagerController extends modManagerController {
                 ,user: "'.$this->modx->user->get('id').'"
             });
         });
-        MODx.perm.change_password = '.(int)$this->modx->hasPermission('change_password').';
-        MODx.perm.view_document = '.(int)$this->modx->hasPermission('view_document').';
         // ]]>
         </script>');
     }
@@ -51,7 +51,7 @@ class SecurityProfileManagerController extends modManagerController {
      * @param array $scriptProperties
      * @return mixed
      */
-    public function process(array $scriptProperties = array()) {}
+    public function process(array $scriptProperties = []) {}
 
     /**
      * Return the pagetitle
@@ -59,7 +59,11 @@ class SecurityProfileManagerController extends modManagerController {
      * @return string
      */
     public function getPageTitle() {
-        return $this->modx->lexicon('profile');
+        if($this->modx->user == null) {
+            return $this->modx->lexicon('user_err_nf');
+        } else {
+            return $this->modx->lexicon('profile').': '.htmlentities($this->modx->user->get('username'));
+        }
     }
 
     /**
@@ -75,6 +79,6 @@ class SecurityProfileManagerController extends modManagerController {
      * @return array
      */
     public function getLanguageTopics() {
-        return array('access','user');
+        return ['access','user'];
     }
 }

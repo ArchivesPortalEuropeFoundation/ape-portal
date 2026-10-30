@@ -36,19 +36,16 @@ $_lang['name_desc'] = 'اسم للإعداد. يمكنه ان يكون مدخل�
 $_lang['namespace'] = 'فضاء الأسماء';
 $_lang['namespace_desc'] = 'فضاء الأسماء التي يرتبط بها هذا الإعداد. موضوع المعجم الافتراضي سيتم تحميله من اجل فضاء الأسماء هذا عند الحصول على الإعدادات.';
 $_lang['namespace_filter'] = 'فلترة حسب فضاء الأسماء...';
-$_lang['search_by_key'] = 'بحث حسب المفتاح...';
-$_lang['setting_create'] = 'إنشاء إعداد جديد';
 $_lang['setting_err'] = 'الرجاء التحقق من بياناتك للحقول التالية: ';
 $_lang['setting_err_ae'] = 'الإعداد مع هذا المفتاح موجوة مسبقاً. الرجاء تحديد اسم مفتاح آخر.';
 $_lang['setting_err_nf'] = 'الإعداد غير موجود.';
 $_lang['setting_err_ns'] = 'الإعداد غير محدد';
-$_lang['setting_err_remove'] = 'حدث خطأ أثناء محاولة إزالة الإعداد.';
+$_lang['setting_err_not_editable'] = 'This setting can\'t be edited in the grid. Please use the gear/context menu to edit the value!';
+$_lang['setting_err_remove'] = 'An error occurred while trying to delete the setting.';
 $_lang['setting_err_save'] = 'حدث خطأ أثناء محاولة حفظ الإعداد.';
 $_lang['setting_err_startint'] = 'الإعدادات لاتسطيع البداية مع عدد صحيح.';
 $_lang['setting_err_invalid_document'] = 'لا توجد وثيقة مع المعرف %d. الرجاء تحديد وثيقة موجودة.';
-$_lang['setting_remove'] = 'حذف الإعداد';
 $_lang['setting_remove_confirm'] = 'هل أنت متأكد من أنك تريد حذف هذا الإعداد؟ قد يؤدي هذا إلى عطب تثبيت مودكس الخاص بك.';
-$_lang['setting_update'] = 'ترقية الإعداد';
 $_lang['settings_after_install'] = 'لانه تنصيب جديد، من المطلوب منك ان تتحكم بهذه الإعدادات، وتغيير كل ما ترغب بتغييره. بعد ان تتحكم بالإعدادات، اضغط \'حفظ\' من أجل ترقية قاعدة بيانات الإعدادات.</ br /><br>';
 $_lang['settings_desc'] = 'Here you can set general preferences and configuration settings for the MODX manager interface, as well as how your MODX site runs. <b>Each setting will be available via the [[++key]] placeholder.</b><br />Double-click on the value column for the setting you\'d like to edit to dynamically edit via the grid, or right-click on a setting for more options. You can also click the "+" sign for a description of the setting.';
 $_lang['settings_furls'] = 'URLs صديقة';
@@ -132,14 +129,11 @@ $_lang['setting_base_help_url_desc'] = 'الـ URL الأساسي الذي بو�
 $_lang['setting_blocked_minutes'] = 'دقائق محظورة';
 $_lang['setting_blocked_minutes_desc'] = 'هنا يمكنك إدخال عدد الدقائق التي سيتم حجب المستخدم خلالها في حال وصولهم للحد الاقصى لعدد المرات المسموح بها بمحاولات تسجيل الدخول الفاشلة. الرجاء إدخال هذه القيمة كرقم فقط (لا فواصل، ولا فراغات الخ.)';
 
-$_lang['setting_cache_action_map'] = 'تمكين الذاكرة المؤقتة لخريطة العمل';
-$_lang['setting_cache_action_map_desc'] = 'عند التفعيل، سيتم تخزين الإجراءات (أو خرائط المتحكم) بشكل مؤقت وذلك لتقليل وقت تحميل صفحة المدير.';
-
 $_lang['setting_cache_alias_map'] = 'تمكين ذاكرة التخزين المؤقت لخريطة السياقات المستعارة';
 $_lang['setting_cache_alias_map_desc'] = 'عند التفعيل، سيتم تخزين كل URIs المصدر بشكل مؤقت في السياق. لأداء أفضل فعل في المواقع الأصغر وعطل في المواقع الأكبر.';
 
-$_lang['setting_use_context_resource_table'] = 'Use the context resource table for context cache refreshes';
-$_lang['setting_use_context_resource_table_desc'] = 'When enabled, context cache refreshes use the context_resource table. This enables you to programmatically have one resource in multiple contexts. If you do not use those multiple resource contexts via the API, you can set this to false. On large sites you will get a potential performance boost in the manager then.';
+$_lang['setting_use_context_resource_table'] = 'Use the context resource table';
+$_lang['setting_use_context_resource_table_desc'] = 'When enabled, context refreshes use the context_resource table. This enables you to programmatically have one resource in multiple contexts. If you do not use those multiple resource contexts via the API, you can set this to false. On large sites you will get a potential performance boost in the manager then.';
 
 $_lang['setting_cache_context_settings'] = 'تفعيل الذاكرة المؤقتة لإعداد السياق';
 $_lang['setting_cache_context_settings_desc'] = 'عند التفعيل، إعدادات السياق سوف يتم حفظها بالذاكرة المؤقتة لتقليل عدد عمليات التحميل.';
@@ -207,9 +201,6 @@ $_lang['setting_compress_js_desc'] = 'عند اتاحة هذا الخيار، م
 $_lang['setting_compress_js_groups'] = 'استخدام التجميع عند ضغط جافا سكريبت';
 $_lang['setting_compress_js_groups_desc'] = 'تجميع جافا سكريبت مدير نواة مودكس باستخدام using minify\'s groupsConfig. اضبط إلى نعم إذا كنت تستخدم suhosin أو عوامل حد أخرى.';
 
-$_lang['setting_compress_js_max_files'] = 'زيادة عتبة ضغط ملفات جافا سكريبت للحد الأقصى';
-$_lang['setting_compress_js_max_files_desc'] = 'الحد الأقصى لعدد ملفات جافا سكريبت التي ستحاول مودكس ضغطها مرة واحدة عندما يكون compress_js مفعل. حدد رقم أقل إذا كنت تواجه مشكلات مع google minify في المدير.';
-
 $_lang['setting_concat_js'] = 'استخدم مكتبات جافا سكريبت المتسلسلة';
 $_lang['setting_concat_js_desc'] = 'عند اتاحة هذا الخيار، مودكس ستستخدم نسختها المتسلسلة من مكتبات جافا سكريبت العامة في واجهة المدير. مما يقلل بشكل كبير من الحمل ووقت التنفيذ في واجهة المدير.
 أوقف تفعيل هذا الخيار فقط إذا كنت تعدل العناصر الأساسية.';
@@ -233,6 +224,12 @@ $_lang['setting_cultureKey_desc'] = 'حدد اللغة لجميع السياقا
 $_lang['setting_date_timezone'] = 'المنطقة الزمنية الافتراضية';
 $_lang['setting_date_timezone_desc'] = 'تتحكم باعدادات المنطقة الزمنية الافتراضية من أجل اجراءات التاريخ بلغة PHP، إذا كان غير فارغ. اذا كان فارغ واذا كان الخيار  date.timezone ini غير محدد في البيئة الخاصة بك إذا لم يتم تعيين فارغة والإعداد ini date.timezone بي في البيئة الخاصة بك، سيتم افتراض UTC.';
 
+$_lang['setting_manager_datetime_empty_value'] = 'Datetime Empty Value';
+$_lang['setting_manager_datetime_empty_value_desc'] = 'The text (if any) that will show in grids and forms when a datetime field’s value has not been set. (Default: “–” [a single en dash])';
+
+$_lang['setting_manager_datetime_separator'] = 'Datetime Separator';
+$_lang['setting_manager_datetime_separator_desc'] = 'When the date and time are shown as a combined element, these characters will be used to visually separate them. (Default: “, ” [comma and space])';
+
 $_lang['setting_debug'] = 'التنقيح';
 $_lang['setting_debug_desc'] = 'تتحكم بتشغيل/تعطيل تصحيح الأخطاء و/أو ضبط مستوى error_reporting في PHP. مثلا \'\' = use current error_reporting, \'0\' = false (error_reporting = 0), \'1\' = true (error_reporting = -1)، أو أي قيمة  error_reporting صالحة (كعدد صحيح).';
 
@@ -248,28 +245,24 @@ $_lang['setting_default_media_source_desc'] = 'مصدر الوسائط الاف�
 $_lang['setting_default_media_source_type'] = 'Default Media Source Type';
 $_lang['setting_default_media_source_type_desc'] = 'The default selected Media Source Type when creating a new Media Source.';
 
+$_lang['setting_photo_profile_source'] = 'User Profile Photo Source';
+$_lang['setting_photo_profile_source_desc'] = 'Specifies the Media Source to use for storing and retrieving profile photos/avatars. If not specified, the default Media Source will be used.';
+
 $_lang['setting_default_template'] = 'القالب الافتراضي';
 $_lang['setting_default_template_desc'] = 'حدد القالب الافتراضي الذي تريد استخدامه للمصادر الجديدة. مازال بإمكانك تحديد قالب مختلف في محرر المصدر، هذا الإعداد فقط يحدد مسبقاً أحد القوالب الخاصة بك.';
 
 $_lang['setting_default_per_page'] = 'الافتراضي في الصفحة الواحدة';
 $_lang['setting_default_per_page_desc'] = 'الرقم الافتراضي من النتائج للعرض في الشبكة عن طريق المدير.';
 
-$_lang['setting_editor_css_path'] = 'المسار إلى ملف CSS';
-$_lang['setting_editor_css_path_desc'] = 'أدخل المسار إلى ملف CSS الخاص بك الذي ترغب في استخدامه في محرر نص منسق. أفضل طريقة لإدخال المسار هي إدخال المسار من جذر المخدم الخاص بك، على سبيل المثال  /assets/site/style.css. إذا كنت لا ترغب في تحميل  صفحة انماط (style sheet) في محرر نص منسق، اترك هذا الحقل فارغاً.';
-
-$_lang['setting_editor_css_selectors'] = 'محددات CSS للتحرير';
-$_lang['setting_editor_css_selectors_desc'] = 'سلسلة مفصولة بفواصل من محددات CSS لتحرير نص منسق.';
-
 $_lang['setting_emailsender'] = 'تسجيل البريد الإلكتروني عن طريق العنوان';
 $_lang['setting_emailsender_desc'] = 'هنا تستطيع تحديد عنوان البريد المستخدم عندما يقوم المستخدمين بإرسال أسماء المستخدمين وكلمات المرور.';
 $_lang['setting_emailsender_err'] = 'الرجاء توضيح عنوان البريد الالكتروني الخاص بالإدارة.';
 
-$_lang['setting_emailsubject'] = 'موضوع تسجيل البريد الالكتروني';
-$_lang['setting_emailsubject_desc'] = 'سطر الموضوع لرسالة البريد الإلكتروني الافتراضي للتسجيل عندما يتم تسجيل المستخدم.';
-$_lang['setting_emailsubject_err'] = 'الرجاء تحديد سطر الموضوع لرسالة البريد الإلكتروني للتسجيل.';
-
 $_lang['setting_enable_dragdrop'] = 'اتاحة السحب/الإفلات في أشجار المصدر/العنصر';
 $_lang['setting_enable_dragdrop_desc'] = 'في حالة الإيقاف، سيتم منع السحب والإفلات في أشجار المصدر والعنصر.';
+
+$_lang['setting_enable_template_picker_in_tree'] = 'Enable the Template Picker in Resource Trees';
+$_lang['setting_enable_template_picker_in_tree_desc'] = 'Enable this to use the template picker modal window when creating a new resource in the tree.';
 
 $_lang['setting_error_page'] = 'صفحة الخطأ';
 $_lang['setting_error_page_desc'] = 'أدخل معرف المستند الذي تريد إرساله للمستخدمين إذا طلبوا مستند غير موجود بشكل فعلي (404 لم يتم العثور على الصفحة). <strong>ملاحظة: تأكد من أن هذا المعرف الذي قمت بإدخاله ينتمي إلى مستند موجود، وأنه قد تم نشره مسبقا!</strong>';
@@ -287,9 +280,6 @@ $_lang['setting_enable_gravatar_desc'] = 'اذا تم التفعيل سيتم ا
 $_lang['setting_failed_login_attempts'] = 'محاولات تسجيل الدخول الفاشلة';
 $_lang['setting_failed_login_attempts_desc'] = 'عدد محاولات تسجيل الدخول الفاشلة المسموحة للمستخدم قبل أن يصبح \'محظور\'.';
 
-$_lang['setting_fe_editor_lang'] = 'الواجهة الأمامية لمحرر اللغة';
-$_lang['setting_fe_editor_lang_desc'] = 'اختار لغة من أجل أن يستخدمها المحرر عندما يستخدم كمحرر واجهة أمامية.';
-
 $_lang['setting_feed_modx_news'] = 'URL مزود أخبار مودكس';
 $_lang['setting_feed_modx_news_desc'] = 'ضبط URL من أجل مزود RSS من أجل لوحة أخبار مودكس في المدير.';
 
@@ -301,21 +291,6 @@ $_lang['setting_feed_modx_security_desc'] = 'ضبط URL من أجل مزود RSS
 
 $_lang['setting_feed_modx_security_enabled'] = 'مزود أمان مودكس مفعل';
 $_lang['setting_feed_modx_security_enabled_desc'] = 'اذا "لا"، مودكس سوف يخفي مزود الأمان من قسم الترحيب في المدير.';
-
-$_lang['setting_filemanager_path'] = 'مسار ملف المدير (مهملة)';
-$_lang['setting_filemanager_path_desc'] = 'مهمل - استخدم بدلا عن ذلك مصادر الوسائط. لا يقوم IIS عادة بتجميع إعدادات document_root بشكل صحيح، والتي تستخدم بواسطة مدير الملفات لتحديد إلى ماذا تستطيع أن تنظر. إذا كنت لديك مشاكل باستخدام مدير الملفات، قم بالتأكد من أن هذا المسار يشير إلى جذر تثبيت مودكس لديك.';
-
-$_lang['setting_filemanager_path_relative'] = 'هل مسار مدير الملف ذو صلة؟ (مهمل)';
-$_lang['setting_filemanager_path_relative_desc'] = 'مهمل - استخدم بدلا عن ذلك مصادر الوسائط. إذا كانت إعدادات filemanager_path لديك ذات صلة بـ base_path الخاص بمودكس، عندها يرجى ضبط هذا الإعداد إلى نعم. إذا كان filemanager_path لديك خارج docroot، اضبط هذا إلى لا.';
-
-$_lang['setting_filemanager_url'] = 'Url مدير الملف (مهمل)';
-$_lang['setting_filemanager_url_desc'] = 'مهمل - استخدم مصادر الوسائط بدلا عن ذلك. اختياري. اضبط هذا إذا كنت تريد وضع URL صريح للوصول منه إلى الملفات في مدير الملف في مودكس (مفيد إذا كنت قد قمت بتغيير filemanager_path إلى مسار خارج webroot الخاص بمودكس). قم بالتأكد من أنه URL قابل للوصول من الوب لقيمة إعداد filemanager_path. إذا تركت هذا فارغا، سيحاول مودكس القيام بحسابه بشكل أوتوماتيكي.';
-
-$_lang['setting_filemanager_url_relative'] = 'هل URL مدير الملف ذو صلة؟ (مهمل)';
-$_lang['setting_filemanager_url_relative_desc'] = 'مهمل - استخدم مصادر الوسائط بدلا عن ذلك. إذا كان إعداد filemanager_url ذو صلة بـ MODX base_url، عندها يرجى ضبط هذا الإعداد إلى نعم. إذا كان filemanager_url لديك خارج webroot الرئيسي، اضبط هذا إلى لا.';
-
-$_lang['setting_forgot_login_email'] = 'نسيت بريد التسجيل';
-$_lang['setting_forgot_login_email_desc'] = 'قالب البريد المرسل للمستخدم الذي نسي اسم المستخدم أو كلمة المرور الخاصة بمودكس.';
 
 $_lang['setting_form_customization_use_all_groups'] = 'استخدام جميع أعضاء مجموعة المستخدم من أجل تخصيص النموذج';
 $_lang['setting_form_customization_use_all_groups_desc'] = 'إذا كانت مضبوطة إلى صحيح، سيستخدم FC *كل* الإعدادات لـ *كل* مجموعات المستخدم التي يوجد بها العضو عند تطبيق إعدادات تخصيص النموذج. وإلا سيقوم فقط باستخدام الإعداد الذي ينتمي إلى المجموعة الرئيسة للمستخدم. ملاحظة: من الممكن أن يسبب ضبط هذه إلى نعم أخطاء مع مجموعات FC متضاربة.';
@@ -376,10 +351,10 @@ $_lang['setting_inline_help'] = 'إظهار نص المساعدة السطري �
 $_lang['setting_inline_help_desc'] = 'إذا ’نعم’، عندها ستقوم الحقول بعرض نص المساعدة الخاص بها بشكل مباشر تحت الحقل. إذا ’لا’، كل الحقول ستملك مساعدة معتمدة على أداة التلميح.';
 
 $_lang['setting_link_tag_scheme'] = 'مخطط توليد URL';
-$_lang['setting_link_tag_scheme_desc'] = 'URL generation scheme for tag [[~id]]. Available options <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">here</a>.';
+$_lang['setting_link_tag_scheme_desc'] = 'مخطط توليد URL للوسم [[~id]]. الخيارات المتوفرة <a href="http://api.modx.com/revolution/2.2/db_core_model_modx_modx.class.html#\modX::makeUrl()">هنا</a>.';
 
 $_lang['setting_locale'] = 'محلي';
-$_lang['setting_locale_desc'] = 'Set the locale for the system. Leave blank to use the default. See <a href="https://www.php.net/setlocale" target="_blank">the PHP documentation</a> for more information.';
+$_lang['setting_locale_desc'] = 'تعيين الإعدادات المحلية للنظام. اترك المساحة فارغة لاستخدام الافتراضي. راجع <a href="http://php.net/setlocale" target="_blank"> the PHP documentation</a> للحصول على مزيد من المعلومات.';
 
 $_lang['setting_lock_ttl'] = 'قفل Time-to-Live';
 $_lang['setting_lock_ttl_desc'] = 'عدد الثواني الذي سيبقى فيه القفل على المصدر إذا كان المستخدم غير نشط.';
@@ -420,11 +395,11 @@ $_lang['setting_mail_smtp_pass_desc'] = 'كلمة المرور للمصادقة 
 $_lang['setting_mail_smtp_port'] = 'منفذ SMTP';
 $_lang['setting_mail_smtp_port_desc'] = 'ضبط منفذ المخدم SMTP الافتراضي.';
 
-$_lang['setting_mail_smtp_prefix'] = 'SMTP Encryption';
-$_lang['setting_mail_smtp_prefix_desc'] = 'Sets the encryption of the SMTP connection. Options are "", "ssl" or "tls"';
+$_lang['setting_mail_smtp_secure'] = 'SMTP Secure';
+$_lang['setting_mail_smtp_secure_desc'] = 'Sets SMTP secure encryption type. Options are "", "ssl" or "tls"';
 
 $_lang['setting_mail_smtp_autotls'] = 'SMTP Auto TLS';
-$_lang['setting_mail_smtp_autotls_desc'] = 'Whether to enable TLS encryption automatically if a server supports it, even if "SMTP Encryption" is not set to "tls"';
+$_lang['setting_mail_smtp_autotls_desc'] = 'Whether to enable TLS encryption automatically if a server supports it, even if "SMTP Secure" is not set to "tls"';
 
 $_lang['setting_mail_smtp_single_to'] = 'SMTP Single To';
 $_lang['setting_mail_smtp_single_to_desc'] = 'يوفر قدرة الحصول على معالجة الحقل TO لرسائل البريد الإلكتروني المستقلة، بدلا من الإرسال إلى كل العناوين TO.';
@@ -434,6 +409,30 @@ $_lang['setting_mail_smtp_timeout_desc'] = 'ضبط مهلة المخدم SMTP م
 
 $_lang['setting_mail_smtp_user'] = 'مستخدم SMTP';
 $_lang['setting_mail_smtp_user_desc'] = 'المستخدم للمصادقة مقابله إلى SMTP.';
+
+$_lang['setting_mail_dkim_selector'] = 'DKIM Selector';
+$_lang['setting_mail_dkim_selector_desc'] = 'The DKIM domain selector where the public key stored.';
+
+$_lang['setting_mail_dkim_identity'] = 'DKIM Identity';
+$_lang['setting_mail_dkim_identity_desc'] = 'DKIM identity you\'re signing as - usually your From address';
+
+$_lang['setting_mail_dkim_domain'] = 'DKIM Domain';
+$_lang['setting_mail_dkim_domain_desc'] = 'DKIM signing domain name.';
+
+$_lang['setting_mail_dkim_privatekeyfile'] = 'DKIM Private key file';
+$_lang['setting_mail_dkim_privatekeyfile_desc'] = 'DKIM private key file path. You can use DKIM Private key string instead of this.';
+
+$_lang['setting_mail_dkim_privatekeystring'] = 'DKIM Private key string';
+$_lang['setting_mail_dkim_privatekeystring_desc'] = 'Takes precedence over DKIM Private key file.';
+
+$_lang['setting_mail_dkim_passphrase'] = 'DKIM Passphrase';
+$_lang['setting_mail_dkim_passphrase_desc'] = 'Used only if your key is encrypted.';
+
+$_lang['mail_inlinestyle_inline'] = 'InlineStyle: Enable style inlining for HTML emails';
+$_lang['mail_inlinestyle_inline_desc'] = 'All styles from &#x3C;style&#x3E; tags will be inlined for HTML emails.';
+
+$_lang['mail_inlinestyle_remove_style_tags'] = 'InlineStyle: Remove &#x3C;style&#x3E; tags';
+$_lang['mail_inlinestyle_remove_style_tags_desc'] = 'After inlining styles, all &#x3C;style&#x3E; tags will be removed. <strong>Warning: This can cause issues with responsive email templates.</strong>';
 
 $_lang['setting_main_nav_parent'] = 'أصل القائمة الرئيسية';
 $_lang['setting_main_nav_parent_desc'] = 'الحاوية مستخدمة لسحب كافة السجلات للقائمة الرئيسية.';
@@ -447,29 +446,29 @@ $_lang['setting_manager_date_format_desc'] = 'سلسلة محارف التنسي
 $_lang['setting_manager_favicon_url'] = 'Favicon URL للمدير';
 $_lang['setting_manager_favicon_url_desc'] = 'إذا كانت مضبوطة، سيتم تحميل هذا الـ URL كـ Favicon من أجل مدير مودكس. يجب أن يكون URL ذو صلة بالمدير/ الدليل، أو URL مطلق.';
 
-$_lang['setting_manager_js_cache_file_locking'] = 'تفعيل قفل الملف من أجل ذاكرة التخزين المؤقت JS/CSS للمدير';
-$_lang['setting_manager_js_cache_file_locking_desc'] = 'التخزين المؤقت لقفل الملف. اضبط إلى لا إذا كان نظام الملفات هو NFS.';
-$_lang['setting_manager_js_cache_max_age'] = 'ذاكرة التخزين المؤقت لضغط  JS/CSS للمدير';
-$_lang['setting_manager_js_cache_max_age_desc'] = 'العمر الأعظمي لذاكرة التخزين المؤقت للمتصفح لضغط JS/CSS للمدير مقدرة بالثواني. بعد انقضاء هذه المدة، سيقوم المتصفح بإرسال GET شرطية أخرى. استخدم مدة اطول من اجل حركة مرور أقل.';
-$_lang['setting_manager_js_document_root'] = 'جذر المستند لضغط JS/CSS للمدير';
-$_lang['setting_manager_js_document_root_desc'] = 'إذا كان مخدمك لا يعالج متحول المخدم DOCUMENT_ROOT، قم بتعيينه بشكل صريح هنا لتفعيل ضغط CSS/JS للمدير. لا تقم بتغيير هذا إلا إذا كنت تعرف ما تقوم به.';
-$_lang['setting_manager_js_zlib_output_compression'] = 'تفعيل ضغط الخرج zlib لـ JS/CSS للمدير';
-$_lang['setting_manager_js_zlib_output_compression_desc'] = 'تفعيل او عدم تفعيل ضغط الخرج zlib من أجل ضغط CSS/JS في المدير. لا تقم بتفعيل هذا إلا إذا كنت متأكد من أنه يمكن ضبط متحول تهيئة zlib.output_compression ،PHP إلى 1. ينصح مودكس بتركها غير مفعلة.';
-
-$_lang['setting_manager_lang_attribute'] = 'واصفات اللغة XML و HTML للمدير';
-$_lang['setting_manager_lang_attribute_desc'] = 'أدخل كود اللغة التي تتناسب أكثر مع لغة المدير المختارة، هذا سيؤكد أن المتصفح يستطيع إحضار المحتوى بالتنسيق الأمثل لك.';
-
-$_lang['setting_manager_language'] = 'لغة المدير';
-$_lang['setting_manager_language_desc'] = 'اختر اللغة لمدير محتوى مودكس.';
-
 $_lang['setting_manager_login_url_alternate'] = 'URL تسجيل الدخول الديل للمدير';
 $_lang['setting_manager_login_url_alternate_desc'] = 'الـ URL البديل لإرسال المستخدمين غير المصرح بهم إليه عندما يحتاجون إلى تسجيل الدخول إلى المدير. نموذج تسجيل الدخول هناك يجب أن يقوم بتسجيل دخول المستخدم إلى السياق "mgr" ليعمل.';
+
+$_lang['setting_manager_tooltip_enable'] = 'Enable Manager Tooltips';
+$_lang['setting_manager_tooltip_delay'] = 'Delay Time for Manager Tooltips';
+
+$_lang['setting_login_background_image'] = 'Login Background Image';
+$_lang['setting_login_background_image_desc'] = 'The background image to use in the manager login. This will automatically stretch to fill the screen.';
+
+$_lang['setting_login_logo'] = 'Login Logo';
+$_lang['setting_login_logo_desc'] = 'The logo to show in the top left of the manager login. When left empty, it will show the MODX logo.';
+
+$_lang['setting_login_help_button'] = 'Show Help Button';
+$_lang['setting_login_help_button_desc'] = 'When enabled you will find a help button on the login screen. It\'s possible to customize the information shown with the following lexicon entries in core/login: login_help_button_text, login_help_title, and login_help_text.';
 
 $_lang['setting_manager_login_start'] = 'صفحة بداية تسجيل الدخول للمدير';
 $_lang['setting_manager_login_start_desc'] = 'أدخل معرف المستند الذي تريد إرسال المستخدم إليه بعد أن يقوم/تقوم بتسجيل الدخول إلى المدير. <strong>ملاحظة: قم بالتأكد من أن المعرف الذي أدخلته ينتمي إلى مستند موجود، وأنه قد تم نشره مسبقا وأنه قابل للوصول لهذا المستخدم!</strong>';
 
 $_lang['setting_manager_theme'] = 'موضوع المدير';
 $_lang['setting_manager_theme_desc'] = 'اختر الموضوع  لمدير المحتوى.';
+
+$_lang['setting_manager_logo'] = 'Manager Logo';
+$_lang['setting_manager_logo_desc'] = 'The logo to show in the Content Manager header.';
 
 $_lang['setting_manager_time_format'] = 'تنسيق وقت المدير';
 $_lang['setting_manager_time_format_desc'] = 'سلسلة محارف التنسيق، في التنسيق date() في PHP، من أجل إعدادات الوقت الممثلة في المدير.';
@@ -543,9 +542,6 @@ $_lang['setting_proxy_port_desc'] = 'المنفذ لمخدم البروكسي ا
 $_lang['setting_proxy_username'] = 'اسم مستخدم البروكسي';
 $_lang['setting_proxy_username_desc'] = 'اسم المستخدم للمصادقة مقابله مع مخدم البروكسي الخاص بك.';
 
-$_lang['setting_photo_profile_source'] = 'مصدر إعلام صورة المستخدم';
-$_lang['setting_photo_profile_source_desc'] = 'مصدر الوسائط يستخدم لتخزين صور المستخدمين الشخصية .القيم الافتراضية لمصدر الوسائط الافتراضي.';
-
 $_lang['setting_phpthumb_allow_src_above_docroot'] = 'السماح لـ src فوق جذر المستند لـ phpThumb';
 $_lang['setting_phpthumb_allow_src_above_docroot_desc'] = 'تشير فيما إذا كان مسار src مسموح خارج جذر المستند. هذا مفيد من أجل عمليات النشر لسياق متعدد مع مضيفين افتراضيين متعددين.';
 
@@ -616,15 +612,6 @@ $_lang['setting_publish_default'] = 'الافتراضي منشور';
 $_lang['setting_publish_default_desc'] = 'اختر ’نعم’ لجعل كل المصادر الجديدة منشورة بشكل افتراضي.';
 $_lang['setting_publish_default_err'] = 'الرجاء تحديد فيما إذا أو لم تكن تريد أن تكون المستندات منشورة بشكل افتراضي.';
 
-$_lang['setting_rb_base_dir'] = 'مسار المصدر';
-$_lang['setting_rb_base_dir_desc'] = 'أدخل المسار الفيزيائي لدليل المصدر. عادة يولد هذا الإعداد أوتوماتيكيا. إذا كنت تستخدم IIS، بكل الأحوال، قد لن يتمكن مودكس من حساب المسار بنفسه، مما سيسبب مستعرض المصدر أن يعرض خطأ. في هذه الحالة، يمكنك إدخال المسار إلى دليل الصور هنا (المسار كما تريده أن يظهر في مستكشف ويندوز). <strong>ملاحظة:</strong> يجب أن يحوي دليل المصدر صور المجلدات الفرعية، الملفات، الفلاش والوسائط لكي يعمل متصفح المصدر بشكل صحيح.';
-$_lang['setting_rb_base_dir_err'] = 'الرجاء تحديد الدليل الأساسي لمتصفح المصدر.';
-$_lang['setting_rb_base_dir_err_invalid'] = 'دليل المصدر هذا إما غير موجود أو لا يمكن الوصول إليه. الرجاء تحديد دليل صالح أو اضبط الصلاحيات لهذا الدليل.';
-
-$_lang['setting_rb_base_url'] = 'URL المصدر';
-$_lang['setting_rb_base_url_desc'] = 'أدخل المسار الافتراضي لدليل المصدر. عادة يولد هذا الإعداد أوتوماتيكيا. إذا كنت تستخدم IIS، بكل الأحوال، قد لن يتمكن مودكس من حساب URL بنفسه، مما سيسبب مستعرض المصدر أن يعرض خطأ. في هذه الحالة، يمكنك إدخال الـ URL إلى دليل الصور هنا (الـ URL كما تقوم بإدخاله إلى متصفح الإنترنت).';
-$_lang['setting_rb_base_url_err'] = 'الرجاء تحديد URL الأساسي لمتصفح المصدر.';
-
 $_lang['setting_quick_search_in_content'] = 'Allow search in content';
 $_lang['setting_quick_search_in_content_desc'] = 'If \'Yes\', then the content of the element (resource, template, chunk, etc.) will also be available for quick search.';
 
@@ -642,9 +629,6 @@ $_lang['setting_request_param_alias_desc'] = 'اسم بارامتر GET لتعر
 
 $_lang['setting_request_param_id'] = 'طلب متحول المعرف';
 $_lang['setting_request_param_id_desc'] = 'اسم بارامتر GET لتعريف معرفات المصدر عند عدم استخدام FURLs.';
-
-$_lang['setting_resolve_hostnames'] = 'حل أسماء المضيفين';
-$_lang['setting_resolve_hostnames_desc'] = 'هل تريد أن يحاول مودكس حل أسماء المضيفين لزوارك عندما يقومون بزيارة موقعك؟ من الممكن أن يخلق حل أسماء المضيفين بعض الحمل الزائد على المخدم، مع ذلك لن يلاحظ زوارك هذا بأي شكل من الأشكال.';
 
 $_lang['setting_resource_tree_node_name'] = 'حقل عقده شجرة المصدر';
 $_lang['setting_resource_tree_node_name_desc'] = 'حدد حقل المصدر الذي تود استخدامه عند إعادة رسم العقد في شجرة المصدر. الافتراضي إلى اسم الصفحة، مع ذلك يمكن استخدام أي حقل مصدر، مثل اسم القائمة، الاسم المستعار، العنوان الطويل، وغيرها.';
@@ -665,14 +649,11 @@ $_lang['setting_search_default_err'] = 'الرجاء حدد فيما إذا كن
 $_lang['setting_server_offset_time'] = 'وقت إزاحة المخدم';
 $_lang['setting_server_offset_time_desc'] = 'اختر عدد ساعات فرق التوقيت بين مكان وجودك ومكان وجود المخدم.';
 
-$_lang['setting_server_protocol'] = 'نوع المخدم';
-$_lang['setting_server_protocol_desc'] = 'إذا كان موقعك على اتصال https، الرجاء تحديد ذلك هنا.';
-$_lang['setting_server_protocol_err'] = 'الرجاء تحديد فيما إذا كان أو لم يكن موقعك آمن.';
-$_lang['setting_server_protocol_http'] = 'http';
-$_lang['setting_server_protocol_https'] = 'https';
-
 $_lang['setting_session_cookie_domain'] = 'نطاق كوكي الجلسة';
 $_lang['setting_session_cookie_domain_desc'] = 'استخدم هذا الإعداد لتخصيص نطاق كوكي الجلسة. اتركه فارغا لاستخدام النطاق الحالي.';
+
+$_lang['setting_session_cookie_samesite'] = 'Session Cookie Samesite';
+$_lang['setting_session_cookie_samesite_desc'] = 'Choose Lax or Strict.';
 
 $_lang['setting_session_cookie_lifetime'] = 'عمر حياة كوكي الجلسة';
 $_lang['setting_session_cookie_lifetime_desc'] = 'استخدم هذا الإعداد لتخصيص عمر حياة كوكي الجلسة مقدرا بالثواني. يستخدم هذا لضبط عمر حياة كوكي الجلسة للزبون عندما يقوم باختيار الخيار ’تذكرني’ عند تسجيل الدخول.';
@@ -686,14 +667,11 @@ $_lang['setting_session_cookie_secure_desc'] = 'تفعيل هذا الإعداد
 $_lang['setting_session_cookie_httponly'] = 'HttpOnly لكوكي الجلسة';
 $_lang['setting_session_cookie_httponly_desc'] = 'استخدم هذا الإعداد لضبط علامة HttpOnly على كوكي الجلسة.';
 
-$_lang['setting_session_cookie_samesite'] = 'Session Cookie Samesite';
-$_lang['setting_session_cookie_samesite_desc'] = 'Choose Lax or Strict.';
-
 $_lang['setting_session_gc_maxlifetime'] = 'وقت الحياة الأعظمي لجامع قمامة الجلسة';
-$_lang['setting_session_gc_maxlifetime_desc'] = 'السماح بتخصيص session.gc_maxlifetime في إعداد PHP ini عند استخدام \'modSessionHandler\'.';
+$_lang['setting_session_gc_maxlifetime_desc'] = 'Allows customization of the session.gc_maxlifetime PHP ini setting when using \'MODX\\Revolution\\modSessionHandler\'.';
 
 $_lang['setting_session_handler_class'] = 'اسم صف معالج الجلسة';
-$_lang['setting_session_handler_class_desc'] = 'من أجل الجلسات المدارة في قاعدة المعطيات، استخدم \'modSessionHandler\'. اترك هذا فارغا لاستخدام إدارة الجلسة القياسية في PHP.';
+$_lang['setting_session_handler_class_desc'] = 'For database managed sessions, use \'MODX\\Revolution\\modSessionHandler\'.  Leave this blank to use standard PHP session management.';
 
 $_lang['setting_session_name'] = 'اسم الجلسة';
 $_lang['setting_session_name_desc'] = 'استخدم هذا الإعداد لتخصيص اسم الجلسة المستخدم من أجل الجلسات في مودكس. اتركه فارغا لاستخدام اسم الجلسة الافتراضي في PHP.';
@@ -737,19 +715,19 @@ $_lang['setting_site_unavailable_page_desc'] = 'أدخل معرف المصدر �
 $_lang['setting_site_unavailable_page_err'] = 'الرجاء تحديد معرف المستند لصفحة الموقع غير متوفر.';
 
 $_lang['setting_static_elements_automate_templates'] = 'Automate static elements for templates?';
-$_lang['setting_static_elements_automate_templates_desc'] = 'This will automate the handling of static files, such as creating and removing static files for templates.';
+$_lang['setting_static_elements_automate_templates_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for templates.';
 
-$_lang['setting_static_elements_automate_tvs'] = 'Automate static elements for template variables?';
-$_lang['setting_static_elements_automate_tvs_desc'] = 'This will automate the handling of static files, such as creating and removing static files for template variables.';
+$_lang['setting_static_elements_automate_tvs'] = 'Automate static elements for TVs?';
+$_lang['setting_static_elements_automate_tvs_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for TVs.';
 
 $_lang['setting_static_elements_automate_chunks'] = 'Automate static elements for chunks?';
-$_lang['setting_static_elements_automate_chunks_desc'] = 'This will automate the handling of static files, such as creating and removing static files for chunks.';
+$_lang['setting_static_elements_automate_chunks_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for chunks.';
 
 $_lang['setting_static_elements_automate_snippets'] = 'Automate static elements for snippets?';
-$_lang['setting_static_elements_automate_snippets_desc'] = 'This will automate the handling of static files, such as creating and removing static files for snippets.';
+$_lang['setting_static_elements_automate_snippets_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for snippets.';
 
 $_lang['setting_static_elements_automate_plugins'] = 'Automate static elements for plugins?';
-$_lang['setting_static_elements_automate_plugins_desc'] = 'This will automate the handling of static files, such as creating and removing static files for plugins.';
+$_lang['setting_static_elements_automate_plugins_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for plugins.';
 
 $_lang['setting_static_elements_default_mediasource'] = 'Static elements default mediasource';
 $_lang['setting_static_elements_default_mediasource_desc'] = 'Specify a default mediasource where you want to store the static elements in.';
@@ -766,9 +744,6 @@ $_lang['setting_resource_static_allow_absolute_desc'] = 'This setting enables us
 $_lang['setting_resource_static_path'] = 'Static resource base path';
 $_lang['setting_resource_static_path_desc'] = 'When resource_static_allow_absolute is disabled, static resources are restricted to be within the absolute path provided here.  Important: setting this too wide may allow users to read files they shouldn\'t! It is strongly recommended to limit users to a specific directory such as {core_path}static/ or {assets_path} with this setting.';
 
-$_lang['setting_strip_image_paths'] = 'إعادة كتابة مسارات المستعرض؟';
-$_lang['setting_strip_image_paths_desc'] = 'إذا كانت هذه مضبوطة إلى ’لا’، سيقوم مودكس بكتابة src (صور، ملفات، فلاش، وغيرها.) المصدر لمتصفح الملفات  كـ URL مطلق. URLs ذات الصلة مفيدة إذا كنت ترغب أن تنقل تثبيت مودكس الخاص بك، مثلا، من موقع مؤقت إلى موقع منتج. إذا لم يكن لديك فكرة ماذا يعني هذا، من الأفضل أن تتركها مضبوطة إلى ’نعم’.';
-
 $_lang['setting_symlink_merge_fields'] = 'دمج حقول المصدر في الروابط الرمزية';
 $_lang['setting_symlink_merge_fields_desc'] = 'إذا كانت مضبوطة إلى ’نعم’، سيتم بشكل أوتوماتيكي دمج الحقول الغير فارغة مع المصدر الهدف عند الاستمرار باستخدام الروابط الرمزية.';
 
@@ -776,11 +751,8 @@ $_lang['setting_syncsite_default'] = 'إفراغ محتوى ذاكرة التخ�
 $_lang['setting_syncsite_default_desc'] = 'اختر \'نعم\' لإفراغ ذاكرة التخزين المؤقت بعد حفظ مصدر كافتراضي.';
 $_lang['setting_syncsite_default_err'] = 'يرجى ذكر إذا كنت تريد أو لا تريد إفراغ ذاكرة التخزين الؤقت بعد حفظ مصدر كافتراضي.';
 
-$_lang['setting_topmenu_show_descriptions'] = 'إظهار الوصف في القائمة العليا';
-$_lang['setting_topmenu_show_descriptions_desc'] = 'إذا كانت مضبوطة إلى ’لا’، سيقوم مودكس بإخفاء الوصف من عناصر القائمة العليا في المدير.';
-
-$_lang['setting_topmenu_subitems_max'] = 'Maximum items in the drop-down lists of the top menu bar';
-$_lang['setting_topmenu_subitems_max_desc'] = 'The maximum number of items displayed in the drop-down lists of the top menu bar. The remaining items will be hidden in the \'...\' item.';
+$_lang['setting_topmenu_show_descriptions'] = 'Show Descriptions in Main Menu';
+$_lang['setting_topmenu_show_descriptions_desc'] = 'If set to \'No\', MODX will hide the descriptions from main menu items in the manager.';
 
 $_lang['setting_tree_default_sort'] = 'حقل الفرز الافتراضي لشجرة المصدر';
 $_lang['setting_tree_default_sort_desc'] = 'حقل الفرز الافتراضي لشجرة المصدر عند تحميل المدير.';
@@ -789,42 +761,32 @@ $_lang['setting_tree_root_id'] = 'معرف جذر الشجرة';
 $_lang['setting_tree_root_id_desc'] = 'اضبط هذا إلى معرف صالح لمصدر لبدء شجرة المصدر اليسرى عند أسفل تلك العقدة كجذر. يمكن للمستخدم أن يرى فقط المصادر الأبناء للمصدر المحدد.';
 
 $_lang['setting_tvs_below_content'] = 'انقل عناصر القالب أسفل المحتوى';
-$_lang['setting_tvs_below_content_desc'] = 'اضبط هذا إلى نعم لنقل عناصر القالب أسفل المحتوى عند تعديل المصادر.';
+$_lang['setting_tvs_below_content_desc'] = 'Set this to Yes to move TVs below the Content when editing Resources.';
 
 $_lang['setting_ui_debug_mode'] = 'وضع تصحيح أخطاء واجهة المستخدم';
 $_lang['setting_ui_debug_mode_desc'] = 'اضبط هذا إلى نعم لإخراج رسائل تصحيح الأخطاء عند استخدام UI لموضوع المدير الافتراضي: يجب عليك أن تستخدم المتصفح الذي يدعم  console.log.';
-
-$_lang['setting_udperms_allowroot'] = 'السماح للجذر';
-$_lang['setting_udperms_allowroot_desc'] = 'هل تريد أن تسمح للمستخدمين لديك إنشاء مصادر جديدة في جذر الموقع؟';
 
 $_lang['setting_unauthorized_page'] = 'صفحة غير مصرح بها';
 $_lang['setting_unauthorized_page_desc'] = 'أدخل معرف المصدر الذي تريد أن ترسل إليه المستخدمين إذا قاموا بطلب مصدر غير مؤمن أو غير مصرح به. <strong>ملاحظة: تأكد من أن المعرف الذي أدخلته ينتمي إلى مصدر موجود، وأنه منشور مسبقا وقابل للوصول بشكل عام!</strong>';
 $_lang['setting_unauthorized_page_err'] = 'الرجاء تحديد معرف مصدر للصفحة الغير مصرح بها.';
 
-$_lang['setting_upload_check_exists'] = 'Check if uploaded file exists';
-$_lang['setting_upload_check_exists_desc'] = 'When enabled an error will be shown when uploading a file that already exists with the same name. When disabled, the existing file will be quietly replaced with the new file.';
-
 $_lang['setting_upload_files'] = 'أنواع ملفات قابلة للرفع';
 $_lang['setting_upload_files_desc'] = 'هنا يمكنك إدخال قائمة من الملفات التي يمكن أن ترفع إلى \'assets/files/\' باستخدام مدير المصدر. الرجاء إدخال الامتدادات لأنواع الملفات، مفصولة بفواصل.';
 
-$_lang['setting_upload_flash'] = 'أنواع الفلاش القابلة للرفع';
-$_lang['setting_upload_flash_desc'] = 'هنا يمكنك إدخال قائمة من الملفات التي يمكن أن ترفع إلى \'assets/flash/\' باستخدام مدير المصدر. الرجاء إدخال الامتدادات لأنواع الفلاش، مفصولة بفواصل.';
-
-$_lang['setting_upload_images'] = 'أ،واع الصور القابلة للرفع';
-$_lang['setting_upload_images_desc'] = 'هنا يمكنك إدخال قائمة من الملفات التي يمكن أن ترفع إلى \'assets/images/\' باستخدام مدير المصدر. الرجاء إدخال الامتدادات لأنواع الصور، مفصولة بفواصل.';
+$_lang['setting_upload_file_exists'] = 'Check if uploaded file exists';
+$_lang['setting_upload_file_exists_desc'] = 'When enabled an error will be shown when uploading a file that already exists with the same name. When disabled, the existing file will be quietly replaced with the new file.';
 
 $_lang['setting_upload_maxsize'] = 'حجم الرفع الأعظمي';
 $_lang['setting_upload_maxsize_desc'] = 'أدخل حجم الملف الأعظمي الذي يمكن رفعه باستخدام مدير الملفات. يجب إدخال حجم الملف المرفوع مقدرا بالبايت. <strong>ملاحظة: يمكن أن يستغرق رفع الملفات الكبيرة وقتا طويلا جدا!</strong>';
 
-$_lang['setting_upload_media'] = 'أنواع الوسائط القابلة للرفع';
-$_lang['setting_upload_media_desc'] = 'هنا يمكنك إدخال قائمة من الملفات التي يمكن أن ترفع إلى \'assets/media/\' باستخدام مدير المصدر. الرجاء إدخال الامتدادات لأنواع الوسائط، مفصولة بفواصل.';
+$_lang['setting_upload_translit'] = 'Transliterate names of uploaded files?';
+$_lang['setting_upload_translit_desc'] = 'If this option is enabled, the name of an uploaded file will be transliterated according to the global transliteration rules.';
+
+$_lang['setting_upload_translit_restrict_chars_pattern'] = 'File Name Character Restriction Pattern';
+$_lang['setting_upload_translit_restrict_chars_pattern_desc'] = 'A valid RegEx pattern for restricting characters used in an uploaded file’s name.';
 
 $_lang['setting_use_alias_path'] = 'استخدم مسار ذو اسم مستعار مألوف';
 $_lang['setting_use_alias_path_desc'] = 'ضبط هذا الخيار إلى ’نعم’ سيعرض المسار الكامل للمصدر إذا كان المصدر يملك اسم مستعار. على سبيل المثال، إذا كان مصدر مع اسم مستعار يدعى \'child\' موجود ضمن مصدر حاوي مع اسم مستعار يدعى \'parent\'، عندها مسار الاسم المستعار الكامل للمصدر سيعرض كـ  \'/parent/child.html\'.<br /><strong>ملاحظة: عند ضبط هذا الخيار إلى ’نعم’ (تشغيل مسارات الاسم المستعار)، العناصر المرجعية (مثل الصور، ملفات CSS، ملفات جافا سكريبت، وغيرها) تستخدم المسار المطلق، مثلا، \'/assets/images\' بدلا من  \'assets/images\'. عند القيام بذلك ستمنع المتصفح (أو مخدم الوب) من إلحاق المسار ذو الصلة بمسار الاسم المستعار.</strong>';
-
-$_lang['setting_use_browser'] = 'تفعيل متصفح المصدر';
-$_lang['setting_use_browser_desc'] = 'اختر نعم لتفعيل متصفح المصدر. هذا سيسمح للمستخدمين أن يقوموا باستعراض ورفع المصادر مثل الصور، الفلاش، وملفات الوسائط إلى المخدم.';
-$_lang['setting_use_browser_err'] = 'الرجاء وضح فيما إذا كنت تريد أو لا تريد استخدام متصفح المصدر.';
 
 $_lang['setting_use_editor'] = 'تفعيل محرر النص المنسق';
 $_lang['setting_use_editor_desc'] = 'هل تريد تفعيل محرر النص المنسق، إذا كنت مرتاح أكثر بكتابة HTML، عندها يمكنك إيقاف تشغيل المحرر باستخدام هذه الإعدادات. لاحظ أن هذه الإعدادات تطبق على كل المستندات وكل المستخدمين!';
@@ -841,14 +803,6 @@ $_lang['setting_use_weblink_target_desc'] = 'اضبط إلى صحيح إذا ك�
 
 $_lang['setting_user_nav_parent'] = 'أصل قائمة المستخدم';
 $_lang['setting_user_nav_parent_desc'] = 'الحاوية تستخدم لسحب كل السجلات لقائمة المستخدم .';
-
-$_lang['setting_webpwdreminder_message'] = 'البريد الإلكتروني لتذكير الوب';
-$_lang['setting_webpwdreminder_message_desc'] = 'أدخل الرسالة لإرسالها إلى مستخدمي الوب الخاصين بك في أي وقت يطلبون فيه كلمة سر جديدة عبر البريد الإلكتروني. سيقوم مدير المحتوى بإرسال رسالة بريد إلكتروني تحوي كلمة السر الجديدة ومعلومات التفعيل الخاصة بهم. <br /><strong>ملاحظة:</strong> حوامل العناصر التالية ستستبدل بواسطة مدير المحتوى عندما يتم إرسال الرسالة: <br /><br />[[+sname]] - اسم الموقع الخاص بك، <br />[[+saddr]] - عنوان البريد الإلكتروني لموقع الوب الخاص بك، <br />[[+surl]] - الـ URL الخاص بموقعك، <br />[[+uid]] - اسم أو معرف تسجيل دخول المستخدم، <br />[[+pwd]] - كلمة مرور المستخدم، <br />[[+ufn]] - اسم المستخدم الكامل. <br /><br /><strong>اترك [[+uid]] و [[+pwd]] في رسالة البريد الإلكتروني، وإلا لن يتم إرسال اسم المستخدم وكلمة المرور في الرسالة ولن يعرف مستخدميك اسم المستخدم وكلمة المرور الخاصة بهم!</strong>';
-$_lang['setting_webpwdreminder_message_default'] = 'مرحباً [[+ uid]] \n\n لتنشيط كلمة المرور الجديدة الخاصة بك، وانقر فوق الرابط التالي \n\nIf : \n\n [[+ surl]] اذا نجحت، يمكنك استخدام كلمة المرور التالية لتسجيل الدخول: \n\nPassword: [[+ pwd]] ثم تجاهل \n\nIf اذا لم تطلب هذا البريد الإلكتروني، الرجاءتجاهله. \n\n أطيب الأمنيات،\n إدارة الموقع';
-
-$_lang['setting_websignupemail_message'] = 'بريد الوب الإلكتروني للتسجيل';
-$_lang['setting_websignupemail_message_desc'] = 'هنا يمكنك تعيين الرسالة المرسلة إلى مستخدمي الوب الخاص بك عند إنشاء حساب وب لهم والسماح لمدير المحتوى بإرسال بريد إلكتروني لهم يحتوي على اسم المستخدم وكلمة المرور. < br/> <strong>ملاحظة:</strong> يتم حوامل العناصر التالية من قبل إدارة المحتوى عندما يتم إرسال الرسالة: < br/> < br/> [[+ sname]]--اسم موقع الوب الخاص بك، < br/> [[+ saddr]]-عنوان البريد الإلكتروني في موقع الوب، < br/> [[+ surl]]-URL الموقع الخاص بك، < br/> [[+ uid]]-اسم تسجيل الدخول الخاص بالمستخدم أو المعرف، < br/> [[+ pwd]]--كلمة مرور المستخدم، < br/> [[+ ufn]]-الاسم الكامل للمستخدم. < br/> < br/> <strong>اترك [[+ uid]] و [[+ pwd]] في رسالة البريد الإلكتروني، أو لن يتم إرسال اسم المستخدم وكلمة المرور في البريد الإلكتروني و لن يعرف المستخدمون اسم المستخدم أو كلمة المرور الخاص بهم!</strong>';
-$_lang['setting_websignupemail_message_default'] = 'مرحباً  [[+uid]] بك \n\n معلومات التسجيل من أجل [[+sname]] هنا:\n\n اسم المستخدم:[[+uid]]\n كلمة المرور: [[+pwd]]\n\n متى ما قمت بالتسجيل ضمن [[+sname]] ([[+surl]])، تستطيع تغيير كلمة المرور.\n\nشكراً لك، \n إدارة الموقع';
 
 $_lang['setting_welcome_screen'] = 'عرض شاشة الترحيب';
 $_lang['setting_welcome_screen_desc'] = 'إذا تم الضبط إلى صحيح، ستعرض شاشة الترحيب في التحميل الناجح التالي لصفحة الترحيب، وبعدها لن تظهر ثانية بعد ذلك.';
@@ -890,7 +844,13 @@ $_lang['setting_error_log_filename'] = 'Error log filename';
 $_lang['setting_error_log_filename_desc'] = 'Customize the filename of the MODX error log file (includes file extension).';
 
 $_lang['setting_error_log_filepath'] = 'Error log path';
-$_lang['setting_error_log_filepath_desc'] = 'Optionally set a absolute path the a custom error log location. You might use placehodlers like {cache_path}.';
+$_lang['setting_error_log_filepath_desc'] = 'Optionally set a absolute path the a custom error log location. You might use placeholders like {cache_path}.';
 
-$_lang['static_elements_html_extension'] = 'Static elements html extension';
-$_lang['static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';
+$_lang['setting_passwordless_activated'] = 'Activate passwordless login';
+$_lang['setting_passwordless_activated_desc'] = 'When enabled, users will enter their email address to receive a one-time login link, rather than entering a username and password.';
+
+$_lang['setting_passwordless_expiration'] = 'Passwordless login expiration';
+$_lang['setting_passwordless_expiration_desc'] = 'How long a one-time login link is valid in seconds.';
+
+$_lang['setting_static_elements_html_extension'] = 'Static elements html extension';
+$_lang['setting_static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';

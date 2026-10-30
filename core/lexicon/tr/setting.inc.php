@@ -36,19 +36,16 @@ $_lang['name_desc'] = 'Ayar için bir isim. Bu anahtar tabanlı bir Veri Sözlü
 $_lang['namespace'] = 'İsim Alanı';
 $_lang['namespace_desc'] = 'Bu ayar ile ilişkili isim alanı. Ayarlar alınırken varsayılan Veri Sözlüğü Konusu bu İsim Alanı için yüklenecek.';
 $_lang['namespace_filter'] = 'İsim alanına göre filtrele...';
-$_lang['search_by_key'] = 'Anahtara göre ara...';
-$_lang['setting_create'] = 'Yeni ayar oluştur';
 $_lang['setting_err'] = 'Lütfen aşağıda ki alanlar için verinizi kontrol edin: ';
 $_lang['setting_err_ae'] = 'Bu anahtar ile ayar zaten var. Lütfen başka anahtar ismi belirleyin.';
 $_lang['setting_err_nf'] = 'Ayar bulunamadı.';
 $_lang['setting_err_ns'] = 'Ayar belirtilmemiş';
-$_lang['setting_err_remove'] = 'Ayar kaldırılmaya çalışılırken hata meydana geldi.';
+$_lang['setting_err_not_editable'] = 'This setting can\'t be edited in the grid. Please use the gear/context menu to edit the value!';
+$_lang['setting_err_remove'] = 'An error occurred while trying to delete the setting.';
 $_lang['setting_err_save'] = 'Ayar kaydedilmeye çalışılırken hata meydana geldi.';
 $_lang['setting_err_startint'] = 'Ayarlar bir tam sayı ile başlamayabilir.';
 $_lang['setting_err_invalid_document'] = '%d kimliği ile belge yok. Lütfen varolan bir belge belirleyin.';
-$_lang['setting_remove'] = 'Ayarı Sil';
 $_lang['setting_remove_confirm'] = 'Bu ayarı silmek istediğinizden emin misiniz? Bu MODX kurulumunu bozabilir.';
-$_lang['setting_update'] = 'Ayarları Güncelle';
 $_lang['settings_after_install'] = 'Bu yeni bir kurulum olduğu için bu ayarları kontrol etmeniz, ve istediğiniz ayarları değiştirmeniz gerekmektedir. Ayarları kontrol ettikten sonra, ayarlar veri tabanını güncelleştirmek için \'Kaydet\'e basınız.<br /><br />';
 $_lang['settings_desc'] = 'Here you can set general preferences and configuration settings for the MODX manager interface, as well as how your MODX site runs. <b>Each setting will be available via the [[++key]] placeholder.</b><br />Double-click on the value column for the setting you\'d like to edit to dynamically edit via the grid, or right-click on a setting for more options. You can also click the "+" sign for a description of the setting.';
 $_lang['settings_furls'] = 'Kullanıcı Dostu URLler';
@@ -130,14 +127,11 @@ $_lang['setting_base_help_url_desc'] = 'Yönetici içindeki sayfaların sağ üs
 $_lang['setting_blocked_minutes'] = 'Engellenen Dakikalar';
 $_lang['setting_blocked_minutes_desc'] = 'Burada, bir kullanıcının izinli başarısız oturum açma girişimlerine maksimum sayıda erişmesi durumunda, kullanıcının engelleneceği dakika sayısını girebilirsiniz. Lütfen bu değeri yalnızca sayılar olarak girin (virgül, boşluk vb.)';
 
-$_lang['setting_cache_action_map'] = 'Eylem Haritası Önbelleğini Etkinleştirme';
-$_lang['setting_cache_action_map_desc'] = 'Etkinleştirildiği zaman, eylemler (veya kontrolör haritaları) yönetici sayfa yükleme sürelerini azaltmak için önbellekte saklanır.';
-
 $_lang['setting_cache_alias_map'] = 'Bağlam Rumuzu Harita Önbelleğini Etkinleştirme';
 $_lang['setting_cache_alias_map_desc'] = 'Etkinleştirildiğinde, tüm Kaynak URI\'leri Bağlam içine önbelleğe alınır. Daha küçük sitelerde etkinleştirin ve daha iyi performans için daha büyük sitelerde devre dışı bırakın.';
 
-$_lang['setting_use_context_resource_table'] = 'Use the context resource table for context cache refreshes';
-$_lang['setting_use_context_resource_table_desc'] = 'When enabled, context cache refreshes use the context_resource table. This enables you to programmatically have one resource in multiple contexts. If you do not use those multiple resource contexts via the API, you can set this to false. On large sites you will get a potential performance boost in the manager then.';
+$_lang['setting_use_context_resource_table'] = 'İçerik kaynak tablosunu kullan';
+$_lang['setting_use_context_resource_table_desc'] = 'Etkinleştirildiğinde, bağlam yenilemeleri, context_resource tablosunu kullanır. Bu, bir çok bağlamda programlı olarak bir kaynağa sahip olmanızı sağlar. Bu çoklu kaynak bağlamlarını API aracılığıyla kullanmazsanız, yanlış ayarlamalar yapabilirsiniz. Büyük sitelerde, potansiyel yöneticilerde performans artışı elde edersiniz.';
 
 $_lang['setting_cache_context_settings'] = 'Bağlam Ayarı önbelleğini etkinleştir';
 $_lang['setting_cache_context_settings_desc'] = 'Etkinleştirildiğinde, yükleme sürelerini azaltmak için içerik ayarları önbelleğe saklanır.';
@@ -203,9 +197,6 @@ $_lang['setting_compress_js_desc'] = 'Bu etkin olduğunda, MODX çekirdek komut 
 $_lang['setting_compress_js_groups'] = 'JavaScript Sıkıştırılacağı Zaman Gruplandırma Kullan';
 $_lang['setting_compress_js_groups_desc'] = 'Minify\'ın groupsConfig\'i kullanarak çekirdek MODX yöneticisi JavaScript\'i gruplandırın. Suhosin veya diğer kısıtlayıcı faktörleri kullanıyorsanız Evet\'e ayarlayın.';
 
-$_lang['setting_compress_js_max_files'] = 'maksimum JavaScript dosyaları sıkıştırma eşiği';
-$_lang['setting_compress_js_max_files_desc'] = 'MODX, compress_js çalışmakta iken en fazla sıkıştırmayı yapacak maksimum JavaScript dosyası sayısını belirtir. İdareci olarak Google Minify ile ilgili sorunlarla karşılaşıyorsanız, daha düşük bir sayı seçin.';
-
 $_lang['setting_concat_js'] = 'Birleştirilmiş Javascript Kitaplıklarını kullan';
 $_lang['setting_concat_js_desc'] = 'Bu etkinleştirilmiş olduğu zaman, MODX yönetici arayüzü içerisinde ortak JavaScript kitaplıklarının birleştirilmiş bir sürümünü kullanacak. Bu, yöneticinin yükünü ve yürütme süresini büyük ölçüde azaltır. Sadece esas elementleri değiştiriyorsanız devre dışı bırakın.';
 
@@ -228,6 +219,12 @@ $_lang['setting_cultureKey_desc'] = 'Tüm yönetici olmayan Bağlamların dilini
 $_lang['setting_date_timezone'] = 'Varsayılan Zaman Dilimi';
 $_lang['setting_date_timezone_desc'] = 'Eğer boş değilse, PHP tarih işlevleri için varsayılan zaman dilimi ayarını kontrol eder. Eğer boş ise ve bağlamınız içindeki PHP tarih.zamandilimi ini ayarlanmadıysa, UTC olarak kabul edilecektir.';
 
+$_lang['setting_manager_datetime_empty_value'] = 'Datetime Empty Value';
+$_lang['setting_manager_datetime_empty_value_desc'] = 'The text (if any) that will show in grids and forms when a datetime field’s value has not been set. (Default: “–” [a single en dash])';
+
+$_lang['setting_manager_datetime_separator'] = 'Datetime Separator';
+$_lang['setting_manager_datetime_separator_desc'] = 'When the date and time are shown as a combined element, these characters will be used to visually separate them. (Default: “, ” [comma and space])';
+
 $_lang['setting_debug'] = 'Hata ayıklama';
 $_lang['setting_debug_desc'] = 'MODX\'de hata ayıklamayı açma / kapama kontrolü ve / veya PHP hata bildirim seviyesini ayarlar."= geçerli error_reporting kullan, \'0\' = false (error_reporting = 0), \'1\' = true (error_reporting = -1), ya da herhangi bir geçerli error_reporting değeri (tamsayı olarak).';
 
@@ -243,28 +240,24 @@ $_lang['setting_default_media_source_desc'] = 'Yüklemek için varsayılan Medya
 $_lang['setting_default_media_source_type'] = 'Varsayılan Medya Kaynağı Türü';
 $_lang['setting_default_media_source_type_desc'] = 'The default selected Media Source Type when creating a new Media Source.';
 
+$_lang['setting_photo_profile_source'] = 'User Profile Photo Source';
+$_lang['setting_photo_profile_source_desc'] = 'Specifies the Media Source to use for storing and retrieving profile photos/avatars. If not specified, the default Media Source will be used.';
+
 $_lang['setting_default_template'] = 'Varsayılan şablon';
 $_lang['setting_default_template_desc'] = 'Yeni Kaynaklar için kullanmak istediğiniz varsayılan Şablonu seçin. Kaynak düzenleyicide yine de farklı bir şablon seçebilirsiniz, bu ayar Şablonlarınızdan birini önceden seçer.';
 
 $_lang['setting_default_per_page'] = 'Sayfa başına varsayılan';
 $_lang['setting_default_per_page_desc'] = 'Yöneticideki kılavuzlarda gösterilecek varsayılan sonuç sayısı.';
 
-$_lang['setting_editor_css_path'] = 'CSS dosyası yolu';
-$_lang['setting_editor_css_path_desc'] = 'Bir zengin metin düzenleyicisi içinde kullanmak istediğiniz CSS dosyanızın yolunu girin. Yolu girmenin en iyi şekli sunucunuzun kök dizininden gelen yolu girmektir, örneğin: /assets/site/style.css. Eğer zengin metin düzenleyicisine bir biçim sayfası yüklemek istemiyorsanız, bu alanı boş bırakın.';
-
-$_lang['setting_editor_css_selectors'] = 'Düzenleyici için CSS Seçiciler';
-$_lang['setting_editor_css_selectors_desc'] = 'Bir zengin metin düzenleyicisi için CSS seçicilerinin virgülle ayrılmış bir listesi.';
-
 $_lang['setting_emailsender'] = 'e-posta adresinden kayıt';
 $_lang['setting_emailsender_desc'] = 'Burada, Kullanıcılara kullanıcı adlarını ve şifrelerini gönderirken kullanılan e-posta adresini belirtebilirsiniz.';
 $_lang['setting_emailsender_err'] = 'Lütfen yönetim e-posta adresini belirtin.';
 
-$_lang['setting_emailsubject'] = 'Kayıt E-postası Konusu';
-$_lang['setting_emailsubject_desc'] = 'Bir Kullanıcı kayıt olduğu zaman varsayılan kaydolma e-postası için konu satırı.';
-$_lang['setting_emailsubject_err'] = 'Lütfen kaydolma e-postasının konu satırını belirleyin.';
-
 $_lang['setting_enable_dragdrop'] = 'Kaynak / Element Ağaçlarında Sürükle / Bırak\'ı Etkinleştir';
 $_lang['setting_enable_dragdrop_desc'] = 'Kapalıysa, kaynak ve element ağaçlarında sürükleyip bırakmayı önleyecektir.';
+
+$_lang['setting_enable_template_picker_in_tree'] = 'Enable the Template Picker in Resource Trees';
+$_lang['setting_enable_template_picker_in_tree_desc'] = 'Enable this to use the template picker modal window when creating a new resource in the tree.';
 
 $_lang['setting_error_page'] = 'Hatalı Sayfa';
 $_lang['setting_error_page_desc'] = 'Eğer aslında olmayan bir dokümanı talep ediyorlarsa(404 Sayfa Bulunamadı Hatası), kullanıcılara göndermek istediğiniz dokümanın ID\'sini giriniz.<strong>NOT: Girmiş olduğunuz ID\'nin varolan bir dokümana ait olduğu ve yayımlandığı konusunda emin olun!</strong>';
@@ -282,9 +275,6 @@ $_lang['setting_enable_gravatar_desc'] = 'Eğer etkinleştirilirse, Gravatar bir
 $_lang['setting_failed_login_attempts'] = 'Başarısız Giriş Denemeleri';
 $_lang['setting_failed_login_attempts_desc'] = 'Bir kullanıcının \'engellenmeden\' önce izin verdiği başarısız oturum açma girişimi sayısı.';
 
-$_lang['setting_fe_editor_lang'] = 'Front-end Editör Dili';
-$_lang['setting_fe_editor_lang_desc'] = 'Düzenleyicinin front-end editörü olarak kullanıldığında kullanacağı bir dil seçin.';
-
 $_lang['setting_feed_modx_news'] = 'MODX Haber Kaynağı URL\'si';
 $_lang['setting_feed_modx_news_desc'] = 'Yönetici içindeki MODX Haber paneli için RSS yayınının URL\'sini ayarlayın.';
 
@@ -296,21 +286,6 @@ $_lang['setting_feed_modx_security_desc'] = 'Yöneticideki MODX Güvenlik Uyarı
 
 $_lang['setting_feed_modx_security_enabled'] = 'MODX Güvenlik Kaynağı Etkin';
 $_lang['setting_feed_modx_security_enabled_desc'] = '\'Hayır\' ise, MODX, Yönetici\'nin karşılama bölümünde Güvenlik özet akışını gizleyecektir.';
-
-$_lang['setting_filemanager_path'] = 'Dosya Yöneticisi Yolu (Onaylanmamış)';
-$_lang['setting_filemanager_path_desc'] = 'Kullanımdan kaldırıldı - bunun yerine Medya Kaynakları\'nı kullanın. IIS genellikle doküman kaynağı ayarını düzgün bir şekilde doldurmaz; dosya yöneticisi tarafından nelere bakacağınızı belirlemek için kullanılır. Dosya yöneticisini kullanırken sorun yaşıyorsanız, bu yolun MODX kurulumunuzun kaynağına işaret ettiğinden emin olun.';
-
-$_lang['setting_filemanager_path_relative'] = 'Dosya Yöneticisi Yolu Göreceli Mi? (Kaldırıldı)';
-$_lang['setting_filemanager_path_relative_desc'] = 'Kullanımdan kaldırıldı - bunun yerine Medya Kaynakları\'nı kullanın. Filemanager_path ayarı MODX base_path\'e göre ise, lütfen bu ayarı Evet olarak ayarlayın. Filemanager_path dosyanız docroot\'un dışında ise, bunu Hayır olarak ayarlayın.';
-
-$_lang['setting_filemanager_url'] = 'Dosya Yöneticisi Urlsi (Onaylanmamış)';
-$_lang['setting_filemanager_url_desc'] = 'Kullanımdan kaldırıldı - bunun yerine Medya Kaynakları\'nı kullanın. İsteğe bağlı. MODX dosya yöneticisindeki dosyalara erişmek için açık bir URL belirlemek istiyorsanız bunu ayarlayın (filemanager_path öğesini MODX webrootunun dışındaki bir yola değiştirdiyseniz kullanışlıdır). Bunun, filemanager_path ayar değerinin Web\'den erişilebilir URL\'si olduğundan emin olun. MODX otomatik olarak hesaplamaya çalışacaktır.';
-
-$_lang['setting_filemanager_url_relative'] = 'Dosya Yöneticisi URL\'si Göreceli mi? (Kaldırıldı)';
-$_lang['setting_filemanager_url_relative_desc'] = 'Kullanımdan kaldırıldı - bunun yerine Medya Kaynakları\'nı kullanın.  filemanager_url ayarı MODX base_url\'ye göre ise, lütfen bu ayarı Evet olarak ayarlayın. Filemanager_url ana webroot\'un dışında ise, bunu Hayır olarak ayarlayın.';
-
-$_lang['setting_forgot_login_email'] = 'E-posta adresini unuttum';
-$_lang['setting_forgot_login_email_desc'] = 'Bir kullanıcı MODX kullanıcı adını ve/veya şifresini unuttuğunda gönderilen e-postanın şablonu.';
 
 $_lang['setting_form_customization_use_all_groups'] = 'Form Özelleştirme için Tüm Kullanıcı Grubu Üyeliğini Kullan';
 $_lang['setting_form_customization_use_all_groups_desc'] = 'True olarak ayarlanırsa, FC üyesi, Form Özelleştirme Setlerini uygularken * üye * Gruplar için * tüm * Setleri kullanır. Aksi halde, yalnızca kullanıcının birincil grubuna ait kümeyi kullanır. Not: Bunu Evet olarak ayarlamak, çakışan FC Setleri ile hatalara neden olabilir.';
@@ -371,10 +346,10 @@ $_lang['setting_inline_help'] = 'Alanlar için Satır İçi Yardım Metnini Gör
 $_lang['setting_inline_help_desc'] = 'Eğer \'Evet\'se, alanlar yardım metnini doğrudan alanın altında görüntüler. \'Hayır\' ise, tüm alanlarda araç ipucu tabanlı yardım alacaksınız.';
 
 $_lang['setting_link_tag_scheme'] = 'URL Oluşturma Şeması';
-$_lang['setting_link_tag_scheme_desc'] = 'URL generation scheme for tag [[~id]]. Available options <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">here</a>.';
+$_lang['setting_link_tag_scheme_desc'] = 'Etiket için [[~ id]] URL oluşturma şeması. Mevcut seçenekler<a href="http://api.modx.com/revolution/2.2/db_core_model_modx_modx.class.html#\modX::makeUrl()" target="_blank">işte</a>.';
 
 $_lang['setting_locale'] = 'Yerel';
-$_lang['setting_locale_desc'] = 'Set the locale for the system. Leave blank to use the default. See <a href="https://www.php.net/setlocale" target="_blank">the PHP documentation</a> for more information.';
+$_lang['setting_locale_desc'] = 'Sistem için yerel ayar ayarla. Varsayılan olarak kullanmak için boş bırakın. Daha fazla bilgi için <a href="http://php.net/setlocale" target="_blank">PHP belgelerine</a> bakın.';
 
 $_lang['setting_lock_ttl'] = 'Yaşam için kilit süresi';
 $_lang['setting_lock_ttl_desc'] = 'Kullanıcı etkin olmadığında, bir Kaynaktaki bir kilitin kalacağı saniye sayısı.';
@@ -415,11 +390,11 @@ $_lang['setting_mail_smtp_pass_desc'] = 'SMTP\'ye karşı doğrulama için parol
 $_lang['setting_mail_smtp_port'] = 'SMTP bağlantı noktası';
 $_lang['setting_mail_smtp_port_desc'] = 'Varsayılam SMTP sunucu bağlantı noktasını ayarlar.';
 
-$_lang['setting_mail_smtp_prefix'] = 'SMTP Encryption';
-$_lang['setting_mail_smtp_prefix_desc'] = 'Sets the encryption of the SMTP connection. Options are "", "ssl" or "tls"';
+$_lang['setting_mail_smtp_secure'] = 'SMTP Secure';
+$_lang['setting_mail_smtp_secure_desc'] = 'Sets SMTP secure encryption type. Options are "", "ssl" or "tls"';
 
 $_lang['setting_mail_smtp_autotls'] = 'SMTP Auto TLS';
-$_lang['setting_mail_smtp_autotls_desc'] = 'Whether to enable TLS encryption automatically if a server supports it, even if "SMTP Encryption" is not set to "tls"';
+$_lang['setting_mail_smtp_autotls_desc'] = 'Whether to enable TLS encryption automatically if a server supports it, even if "SMTP Secure" is not set to "tls"';
 
 $_lang['setting_mail_smtp_single_to'] = 'SMTP Tek';
 $_lang['setting_mail_smtp_single_to_desc'] = 'Tüm TO adreslere göndermek yerine, bireysel TO e-postaları işleme alan için yeteneği sağlar.';
@@ -429,6 +404,30 @@ $_lang['setting_mail_smtp_timeout_desc'] = 'SMTP sunucusunun zaman aşımını s
 
 $_lang['setting_mail_smtp_user'] = 'SMTP kullanıcısı';
 $_lang['setting_mail_smtp_user_desc'] = 'Kullanıcının SMTP\'ye karşı kimliğini doğrulaması.';
+
+$_lang['setting_mail_dkim_selector'] = 'DKIM Selector';
+$_lang['setting_mail_dkim_selector_desc'] = 'The DKIM domain selector where the public key stored.';
+
+$_lang['setting_mail_dkim_identity'] = 'DKIM Identity';
+$_lang['setting_mail_dkim_identity_desc'] = 'DKIM identity you\'re signing as - usually your From address';
+
+$_lang['setting_mail_dkim_domain'] = 'DKIM Domain';
+$_lang['setting_mail_dkim_domain_desc'] = 'DKIM signing domain name.';
+
+$_lang['setting_mail_dkim_privatekeyfile'] = 'DKIM Private key file';
+$_lang['setting_mail_dkim_privatekeyfile_desc'] = 'DKIM private key file path. You can use DKIM Private key string instead of this.';
+
+$_lang['setting_mail_dkim_privatekeystring'] = 'DKIM Private key string';
+$_lang['setting_mail_dkim_privatekeystring_desc'] = 'Takes precedence over DKIM Private key file.';
+
+$_lang['setting_mail_dkim_passphrase'] = 'DKIM Passphrase';
+$_lang['setting_mail_dkim_passphrase_desc'] = 'Used only if your key is encrypted.';
+
+$_lang['mail_inlinestyle_inline'] = 'InlineStyle: Enable style inlining for HTML emails';
+$_lang['mail_inlinestyle_inline_desc'] = 'All styles from &#x3C;style&#x3E; tags will be inlined for HTML emails.';
+
+$_lang['mail_inlinestyle_remove_style_tags'] = 'InlineStyle: Remove &#x3C;style&#x3E; tags';
+$_lang['mail_inlinestyle_remove_style_tags_desc'] = 'After inlining styles, all &#x3C;style&#x3E; tags will be removed. <strong>Warning: This can cause issues with responsive email templates.</strong>';
 
 $_lang['setting_main_nav_parent'] = 'Ana menü temeli';
 $_lang['setting_main_nav_parent_desc'] = 'Tüm kayıtları ana menüye çekmek için konteyner kullanılır.';
@@ -442,29 +441,29 @@ $_lang['setting_manager_date_format_desc'] = 'Yöneticide temsil edilen tarihler
 $_lang['setting_manager_favicon_url'] = 'Yönetici Favicon URL\'si';
 $_lang['setting_manager_favicon_url_desc'] = 'Eğer ayarlanırsa, bu URL\'yi MODX yöneticisi için bir site iconu olarak yükleyecektir. Yönetici/dizine göreli bir URL, veya mutlak URL olmalı.';
 
-$_lang['setting_manager_js_cache_file_locking'] = 'Yöneticisi JS/CSS önbellek için Dosya kilitleme Etkinleştir';
-$_lang['setting_manager_js_cache_file_locking_desc'] = 'Önbellek dosyası kilitleme. Dosya sistemi NFS ise Hayır olarak ayarlayın.';
-$_lang['setting_manager_js_cache_max_age'] = 'Yöneticisi JS / CSS Sıkıştırma Önbellek Yaşı';
-$_lang['setting_manager_js_cache_max_age_desc'] = 'CSS / JS sıkıştırma yöneticisinin saniye olarak maksimum tarayıcı önbellek süresi. Bu süre geçtikten sonra tarayıcı başka koşullu GET gönderecektir. Daha düşük trafik için daha uzun bir süre kullanın.';
-$_lang['setting_manager_js_document_root'] = 'Yönetici JS / CSS Sıkıştırma Belgesi Kaynağı';
-$_lang['setting_manager_js_document_root_desc'] = 'Sunucunuz DOCUMENT_ROOT sunucu değişkenini işlemezse, yöneticinin CSS / JS sıkıştırmasını etkinleştirmek için açık olarak buraya ayarlayın.  Ne yaptığınızı bilmiyorsanız bunu değiştirmeyin.';
-$_lang['setting_manager_js_zlib_output_compression'] = 'Yönetici JS / CSS için zlib çıktı sıkıştırmasını etkinleştir';
-$_lang['setting_manager_js_zlib_output_compression_desc'] = 'Yöneticideki sıkıştırılmış CSS / JS için zlib çıktı sıkıştırmasını etkinleştirip desteklemeyeceğini belirtir. PHP yapılandırma değişkeni zlib.output_compression\'un 1 olarak ayarlanabildiğinden emin değilseniz bunu açmayın. MODX bunu bırakmanızı önerir.';
-
-$_lang['setting_manager_lang_attribute'] = 'Yönetici HTML ve XML dil niteliği';
-$_lang['setting_manager_lang_attribute_desc'] = 'Seçtiğiniz yöneticinin diliyle en iyi uyan dil kodunu girin; bu, tarayıcının içeriği sizin için en iyi biçimde sunmasını sağlayacaktır.';
-
-$_lang['setting_manager_language'] = 'Yönetici Dili';
-$_lang['setting_manager_language_desc'] = 'MODX İçerik Yöneticisi için dil seçin.';
-
 $_lang['setting_manager_login_url_alternate'] = 'Alternatif yönetici oturum açma URL\'si';
 $_lang['setting_manager_login_url_alternate_desc'] = 'Yönetici olarak giriş yapmaları gerektiğinde, kimliği doğrulanmamış bir kullanıcıya göndermek için alternatif bir URL. Buradaki giriş formunun çalışması için "mgr" bağlamında kullanıcı girmelidir.';
+
+$_lang['setting_manager_tooltip_enable'] = 'Enable Manager Tooltips';
+$_lang['setting_manager_tooltip_delay'] = 'Delay Time for Manager Tooltips';
+
+$_lang['setting_login_background_image'] = 'Login Background Image';
+$_lang['setting_login_background_image_desc'] = 'The background image to use in the manager login. This will automatically stretch to fill the screen.';
+
+$_lang['setting_login_logo'] = 'Login Logo';
+$_lang['setting_login_logo_desc'] = 'The logo to show in the top left of the manager login. When left empty, it will show the MODX logo.';
+
+$_lang['setting_login_help_button'] = 'Show Help Button';
+$_lang['setting_login_help_button_desc'] = 'When enabled you will find a help button on the login screen. It\'s possible to customize the information shown with the following lexicon entries in core/login: login_help_button_text, login_help_title, and login_help_text.';
 
 $_lang['setting_manager_login_start'] = 'Yönetici Girişini Çalıştırma';
 $_lang['setting_manager_login_start_desc'] = 'Yöneticiye giriş yaptıktan sonra kullanıcıyı göndermek istediğiniz belgenin kimliğini girin.<strong>NOT: Girdiğiniz kimliğin varolan bir belgeye ait olduğundan ve yayınlandığından ve bu kullanıcı tarafından erişilebilir olduğundan emin olun!</strong>';
 
 $_lang['setting_manager_theme'] = 'Tema Yöneticisi';
 $_lang['setting_manager_theme_desc'] = 'İçerik Yöneticisi için Tema\'yı seçmek.';
+
+$_lang['setting_manager_logo'] = 'Manager Logo';
+$_lang['setting_manager_logo_desc'] = 'The logo to show in the Content Manager header.';
 
 $_lang['setting_manager_time_format'] = 'Yönetici Zaman Formatı';
 $_lang['setting_manager_time_format_desc'] = 'Yöneticide belirtilen zaman ayarları için PHP date() biçimindeki biçim dizesi.';
@@ -538,9 +537,6 @@ $_lang['setting_proxy_port_desc'] = 'Bu port proxy sunucunuzun portu.';
 $_lang['setting_proxy_username'] = 'Proxy Kullanıcı Adı';
 $_lang['setting_proxy_username_desc'] = 'Proxy sunucunuza karşı kimliğinizi doğrulamak için kullanıcı adı.';
 
-$_lang['setting_photo_profile_source'] = 'Kullanıcı fotoğrafı Medya Kaynağı';
-$_lang['setting_photo_profile_source_desc'] = 'Medya kaynağı kullanıcıların profil fotoğraflarını saklamak için kullanılır. Varsayılan Medya Kaynağı varsayılandır.';
-
 $_lang['setting_phpthumb_allow_src_above_docroot'] = 'phpThumb izin ver src belge kökü yukarıda';
 $_lang['setting_phpthumb_allow_src_above_docroot_desc'] = 'Kaynak yolunun belge kaynağı dışında izin verilip verilmediğini gösterir. Bu, birden çok sanal ana bilgisayara sahip olan çoklu bağlamda ki  dağıtımlar için kullanışlıdır.';
 
@@ -611,17 +607,6 @@ $_lang['setting_publish_default'] = 'Yayınlananlar önceden tanımlanmış';
 $_lang['setting_publish_default_desc'] = 'Bütün yeni kaynakları varsayılan olarak yayınlanır yapmak için \'Evet\'i seçin.';
 $_lang['setting_publish_default_err'] = 'Lütfen belgelerin varsayılan olarak yayınlanmasını isteyip istemediğinizi belirtin.';
 
-$_lang['setting_rb_base_dir'] = 'Kaynak yolu';
-$_lang['setting_rb_base_dir_desc'] = 'Kaynak dizini için fiziksel yol girin. Bu ayar genellikle otomatik olarak oluşturulur. Ancak, eğer IIS kullanıyorsanız, MODX Kaynak Tarayıcıda bir hata göstermesine neden olan yolu kendi başına işleyebilecek durumda olmayabilir. Bu durumda, görüntü dizini yolunu buraya girebilirsiniz (Windows Gezgini\'ndeki gibi gördüğünüz yol).
-<strong>NOT:</strong> Kaynak dizini, kaynak tarayıcısının doğru şekilde çalışması için sırayla alt klasör resimleri, dosyalar, flash ve medya içermelidir.';
-$_lang['setting_rb_base_dir_err'] = 'Lütfen kaynak tarayıcı taban dizini belirtin.';
-$_lang['setting_rb_base_dir_err_invalid'] = 'Bu kaynak dizini yok veya erişilemiyor. Lütfen geçerli bir dizini belirtin veya bu dizinin izinlerini ayarlayın.';
-
-$_lang['setting_rb_base_url'] = 'Kaynak URL\'si';
-$_lang['setting_rb_base_url_desc'] = 'Kaynak dizinine sanal yolu girin. Bu ayar genellikle otomatik olarak oluşturulur. 
-Bununla birlikte, IIS kullanıyorsanız, MODX, Kaynak Tarayıcı\'da bir hata göstermesine neden olarak, tek başına URL çalışamayabilir. Bu durumda, burada görüntüler dizine URL girebilirsiniz (Internet Explorer girmek gibi URL).';
-$_lang['setting_rb_base_url_err'] = 'Lütfen kaynak tarayıcı taban URL\'sini belirtin.';
-
 $_lang['setting_quick_search_in_content'] = 'Allow search in content';
 $_lang['setting_quick_search_in_content_desc'] = 'If \'Yes\', then the content of the element (resource, template, chunk, etc.) will also be available for quick search.';
 
@@ -639,9 +624,6 @@ $_lang['setting_request_param_alias_desc'] = 'FURL\'ler ile yönlendirirken Kayn
 
 $_lang['setting_request_param_id'] = 'Kimlik Parametresi İste';
 $_lang['setting_request_param_id_desc'] = 'FURLs kullanırken Kaynak KİMLİKLERİ tanımlamak için Get parametresinin adı.';
-
-$_lang['setting_resolve_hostnames'] = 'Sunucu adlarını çözümle';
-$_lang['setting_resolve_hostnames_desc'] = 'MODX\'in siteniz ziyaret edildiğinde ziyaretçilerin bilgisayar adını çözmeyi denemesini istiyor musunuz? Bunu ziyaretçilerin hiçbir şekilde fark etmeyecek olmasına rağmen, bilgisayar adları çözme işlemi bazı ek sunucu yüklemeleri yaratabilir.';
 
 $_lang['setting_resource_tree_node_name'] = 'Kaynak Ağacı Düğüm Alanı';
 $_lang['setting_resource_tree_node_name_desc'] = 'Kaynak ağacındaki düğümlerin oluşturulurken kullanılacak kaynak alanını belirtin. Menütitle, takma ad, uzun metni vb. Gibi herhangi bir Kaynak alanı kullanılabilir olmasına rağmen varsayılan olarak sayfa başlığına geçer.';
@@ -662,14 +644,11 @@ $_lang['setting_search_default_err'] = 'Lütfen belgelerin varsayılan olarak ar
 $_lang['setting_server_offset_time'] = 'Sunucu ofset zamanı';
 $_lang['setting_server_offset_time_desc'] = 'Bulunduğunuz yer ile sunucunun bulunduğu yer arasındaki saat farkı sayısını seçin.';
 
-$_lang['setting_server_protocol'] = 'Sunucu türü';
-$_lang['setting_server_protocol_desc'] = 'Siteniz bir https bağlantısında ise lütfen burada belirtin.';
-$_lang['setting_server_protocol_err'] = 'Lütfen sitenizin güvenli bir site olup olmadığını belirtin.';
-$_lang['setting_server_protocol_http'] = 'http';
-$_lang['setting_server_protocol_https'] = 'https';
-
 $_lang['setting_session_cookie_domain'] = 'Oturum Tanımlama Bilgisi';
 $_lang['setting_session_cookie_domain_desc'] = 'Oturum tanımlama bilgisi alan adını özelleştirmek için bu ayarı kullanın. Geçerli alanı kullanmak için boş bırakın.';
+
+$_lang['setting_session_cookie_samesite'] = 'Session Cookie Samesite';
+$_lang['setting_session_cookie_samesite_desc'] = 'Choose Lax or Strict.';
 
 $_lang['setting_session_cookie_lifetime'] = 'Oturum Çerezi Ömrü';
 $_lang['setting_session_cookie_lifetime_desc'] = 'Oturum çerezi ömrünü saniyeler içinde özelleştirmek için bu ayarı kullanın. Bu, oturum açma sırasında \'beni hatırla\' seçeneğini belirlediklerinde bir istemci oturum tanımlama bilgisinin ömrünü ayarlamak için kullanılır.';
@@ -683,14 +662,11 @@ $_lang['setting_session_cookie_secure_desc'] = 'Güvenli oturum çerezlerini kul
 $_lang['setting_session_cookie_httponly'] = 'Oturum Çerezi Yalnızca Http';
 $_lang['setting_session_cookie_httponly_desc'] = 'Oturum tanımlama bilgilerinde HttpOnly bayrağını ayarlamak için bu ayarı kullanın.';
 
-$_lang['setting_session_cookie_samesite'] = 'Session Cookie Samesite';
-$_lang['setting_session_cookie_samesite_desc'] = 'Choose Lax or Strict.';
-
 $_lang['setting_session_gc_maxlifetime'] = 'Oturum Çöp Toplayıcısı Maximum Ömrü';
-$_lang['setting_session_gc_maxlifetime_desc'] = 'Oturumun özelleştirmesini sağlar..gc_maxlifetime PHP ini ayarı \'modSessionHandler\'kullanırken.';
+$_lang['setting_session_gc_maxlifetime_desc'] = 'Allows customization of the session.gc_maxlifetime PHP ini setting when using \'MODX\\Revolution\\modSessionHandler\'.';
 
 $_lang['setting_session_handler_class'] = 'Oturum İşleyici Sınıfı Adı';
-$_lang['setting_session_handler_class_desc'] = 'Veri tabanının yönettiği oturumlar için \'modSessionHandler\'ı kullanın. Standart PHP oturum yönetimi için burayı boş bırakın.';
+$_lang['setting_session_handler_class_desc'] = 'For database managed sessions, use \'MODX\\Revolution\\modSessionHandler\'.  Leave this blank to use standard PHP session management.';
 
 $_lang['setting_session_name'] = 'Oturum İsmi';
 $_lang['setting_session_name_desc'] = 'MODX\'de oturumlar için kullanılan oturum adını özelleştirmek için bu ayarı kullanır. Varsayılan PHP oturum adını kullanmak için boş bırakın.';
@@ -734,19 +710,19 @@ $_lang['setting_site_unavailable_page_desc'] = 'Offline sayfa olarak kullanmak i
 $_lang['setting_site_unavailable_page_err'] = 'Lütfen sitenin kullanılamayan sayfası için belge kimliği belirtin.';
 
 $_lang['setting_static_elements_automate_templates'] = 'Automate static elements for templates?';
-$_lang['setting_static_elements_automate_templates_desc'] = 'This will automate the handling of static files, such as creating and removing static files for templates.';
+$_lang['setting_static_elements_automate_templates_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for templates.';
 
-$_lang['setting_static_elements_automate_tvs'] = 'Automate static elements for template variables?';
-$_lang['setting_static_elements_automate_tvs_desc'] = 'This will automate the handling of static files, such as creating and removing static files for template variables.';
+$_lang['setting_static_elements_automate_tvs'] = 'Automate static elements for TVs?';
+$_lang['setting_static_elements_automate_tvs_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for TVs.';
 
 $_lang['setting_static_elements_automate_chunks'] = 'Automate static elements for chunks?';
-$_lang['setting_static_elements_automate_chunks_desc'] = 'This will automate the handling of static files, such as creating and removing static files for chunks.';
+$_lang['setting_static_elements_automate_chunks_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for chunks.';
 
 $_lang['setting_static_elements_automate_snippets'] = 'Automate static elements for snippets?';
-$_lang['setting_static_elements_automate_snippets_desc'] = 'This will automate the handling of static files, such as creating and removing static files for snippets.';
+$_lang['setting_static_elements_automate_snippets_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for snippets.';
 
 $_lang['setting_static_elements_automate_plugins'] = 'Automate static elements for plugins?';
-$_lang['setting_static_elements_automate_plugins_desc'] = 'This will automate the handling of static files, such as creating and removing static files for plugins.';
+$_lang['setting_static_elements_automate_plugins_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for plugins.';
 
 $_lang['setting_static_elements_default_mediasource'] = 'Static elements default mediasource';
 $_lang['setting_static_elements_default_mediasource_desc'] = 'Specify a default mediasource where you want to store the static elements in.';
@@ -763,9 +739,6 @@ $_lang['setting_resource_static_allow_absolute_desc'] = 'This setting enables us
 $_lang['setting_resource_static_path'] = 'Static resource base path';
 $_lang['setting_resource_static_path_desc'] = 'When resource_static_allow_absolute is disabled, static resources are restricted to be within the absolute path provided here.  Important: setting this too wide may allow users to read files they shouldn\'t! It is strongly recommended to limit users to a specific directory such as {core_path}static/ or {assets_path} with this setting.';
 
-$_lang['setting_strip_image_paths'] = 'Tarayıcı yollarını yeniden yazın?';
-$_lang['setting_strip_image_paths_desc'] = 'Bu \'Hayır\' olarak ayarlanırsa, MODX dosya tarayıcı kaynak src\'lerini (resimler, dosyalar, flaş vb.) Mutlak URL\'ler olarak yazacaktır. MODX yüklemenizi, örneğin bir hazırlama sitesinden bir üretim sitesine taşımak isterseniz göreceli URL\'ler yardımcı olur. Bunun anlamı hakkında hiçbir fikriniz yoksa, sadece \'Evet\' olarak bırakmak en iyisidir.';
-
 $_lang['setting_symlink_merge_fields'] = 'Symlinks\'teki Kaynak Alanlarını Birleştirme';
 $_lang['setting_symlink_merge_fields_desc'] = 'Evet olarak ayarlanırsa, Symlinks kullanarak iletirken boş olmayan alanları otomatik olarak hedef kaynakla birleştirir.';
 
@@ -773,11 +746,8 @@ $_lang['setting_syncsite_default'] = 'Varsayılan Boş Önbellek';
 $_lang['setting_syncsite_default_desc'] = 'Bir kaynağı varsayılan olarak kaydettikten sonra önbelleği boşaltmak için \'Evet\' seçeneğini belirleyin.';
 $_lang['setting_syncsite_default_err'] = 'Bir kaynağı varsayılan olarak kaydettikten sonra lütfen önbelleği boşaltmak isteyip istemediğinizi belirtin.';
 
-$_lang['setting_topmenu_show_descriptions'] = 'Açıklamaları Üst Menüde Göster';
-$_lang['setting_topmenu_show_descriptions_desc'] = '\'Hayır\' olarak ayarlanırsa, MODX yöneticideki en üstteki menü öğelerindeki açıklamaları gizler.';
-
-$_lang['setting_topmenu_subitems_max'] = 'Maximum items in the drop-down lists of the top menu bar';
-$_lang['setting_topmenu_subitems_max_desc'] = 'The maximum number of items displayed in the drop-down lists of the top menu bar. The remaining items will be hidden in the \'...\' item.';
+$_lang['setting_topmenu_show_descriptions'] = 'Show Descriptions in Main Menu';
+$_lang['setting_topmenu_show_descriptions_desc'] = 'If set to \'No\', MODX will hide the descriptions from main menu items in the manager.';
 
 $_lang['setting_tree_default_sort'] = 'Kaynak Ağacı Varsayılan Sıralama Alanı';
 $_lang['setting_tree_default_sort_desc'] = 'Yöneticiyi yüklerken Kaynak ağacı için varsayılan sıralama alanı.';
@@ -786,42 +756,32 @@ $_lang['setting_tree_root_id'] = 'Ağaç kök kimliği';
 $_lang['setting_tree_root_id_desc'] = 'Bunu, kök olarak o düğümün altındaki sol Kaynak ağacını başlatmak için bir Kaynağın geçerli bir kimliği olarak ayarlayın. Kullanıcı, yalnızca belirtilen Kaynak\'ın alt öğelerindeki Kaynakları görebilir.';
 
 $_lang['setting_tvs_below_content'] = 'TV\'leri İçerik Altında Taşı';
-$_lang['setting_tvs_below_content_desc'] = 'Kaynakları düzenlerken Şablon Değişkenlerini İçeriğin altına taşımak için Evet olarak ayarlayın.';
+$_lang['setting_tvs_below_content_desc'] = 'Set this to Yes to move TVs below the Content when editing Resources.';
 
 $_lang['setting_ui_debug_mode'] = 'UI Hata Ayıklama Modu';
 $_lang['setting_ui_debug_mode_desc'] = 'Varsayılan yönetici teması için kullanıcı arayüzünü kullanırken hata ayıklama iletileri çıkartmak için Evet olarak ayarlayın. Console.log dosyasını destekleyen bir tarayıcı kullanmalısınız.';
-
-$_lang['setting_udperms_allowroot'] = 'Köke izin ver';
-$_lang['setting_udperms_allowroot_desc'] = 'Kullanıcılarınızın sitenin kökünde yeni Kaynaklar oluşturmasına izin vermek istiyor musunuz?';
 
 $_lang['setting_unauthorized_page'] = 'Yetkisiz sayfa';
 $_lang['setting_unauthorized_page_desc'] = 'Kullanıcılar, güvenli veya yetkisiz bir Kaynak talep ettiyse, göndermek istediğiniz Kaynak Kimliğini girin. <strong> NOT: Girdiğiniz kimliğin mevcut bir Kaynağa ait olduğundan ve yayınlandığından ve herkese açık olduğundan emin olun! </strong>';
 $_lang['setting_unauthorized_page_err'] = 'Yetkilendirilmemiş sayfa için lütfen bir kaynak ID belirleyin.';
 
-$_lang['setting_upload_check_exists'] = 'Check if uploaded file exists';
-$_lang['setting_upload_check_exists_desc'] = 'When enabled an error will be shown when uploading a file that already exists with the same name. When disabled, the existing file will be quietly replaced with the new file.';
-
 $_lang['setting_upload_files'] = 'Yüklenebilir Dosya Türleri';
 $_lang['setting_upload_files_desc'] = 'Buraya, Kaynak Yöneticisini kullanarak \'asset/files/\' içine yüklenebilecek dosyalar listesini girebilirsiniz. Lütfen dosya türü uzantılarını virgül ile ayırarak girin.';
 
-$_lang['setting_upload_flash'] = 'Yüklenebilir Flash Türleri';
-$_lang['setting_upload_flash_desc'] = 'Buraya, Kaynak Yöneticisini kullanarak \'asset/flash/\' içine yüklenebilecek dosyalar listesini girebilirsiniz. Lütfen flash türü uzantılarını virgül ile ayırarak girin.';
-
-$_lang['setting_upload_images'] = 'Yüklenebilir Resim Türleri';
-$_lang['setting_upload_images_desc'] = 'Buraya, Kaynak Yöneticisini kullanarak \'asset/images/\' içine yüklenebilecek dosyalar listesini girebilirsiniz. Lütfen resim türü uzantılarını virgül ile ayırarak girin.';
+$_lang['setting_upload_file_exists'] = 'Check if uploaded file exists';
+$_lang['setting_upload_file_exists_desc'] = 'When enabled an error will be shown when uploading a file that already exists with the same name. When disabled, the existing file will be quietly replaced with the new file.';
 
 $_lang['setting_upload_maxsize'] = 'Maksimum yükleme boyutu';
 $_lang['setting_upload_maxsize_desc'] = 'Dosya yöneticisi aracılığıyla yüklenebilecek maksimum dosya boyutunu girin. Yüklenen dosya boyunu byte olarak girilmelidir. <strong>NOT: Büyük boyutlu dosyalar yüklenmek için çok uzun bir süre alabilir!</strong>';
 
-$_lang['setting_upload_media'] = 'Yüklenebilir Medya Türleri';
-$_lang['setting_upload_media_desc'] = 'Burada, Kaynak Yöneticisi\'ni kullanarak \'assets / media /\' dosyasına yüklenebilecek dosyaların bir listesini girebilirsiniz. Lütfen medya türleri için virgüllerle ayrılmış uzantıları girin.';
+$_lang['setting_upload_translit'] = 'Transliterate names of uploaded files?';
+$_lang['setting_upload_translit_desc'] = 'If this option is enabled, the name of an uploaded file will be transliterated according to the global transliteration rules.';
+
+$_lang['setting_upload_translit_restrict_chars_pattern'] = 'File Name Character Restriction Pattern';
+$_lang['setting_upload_translit_restrict_chars_pattern_desc'] = 'A valid RegEx pattern for restricting characters used in an uploaded file’s name.';
 
 $_lang['setting_use_alias_path'] = 'Arkadaşça diğer yolu kullan';
 $_lang['setting_use_alias_path_desc'] = 'Kaynakta bir takma ad varsa, bu seçeneği \'evet\' olarak ayarlamak, Kaynağın tam yolunu görüntüleyecektir. Örneğin, \'alt\' adlı bir takma ada sahip bir Kaynak, \'üst\' olarak adlandırılan bir takma ada sahip bir kapsayıcı Kaynak içerisinde yer alıyorsa, Kaynak için tam takma ad yolu \'/parent/child.html\' olarak görüntülenecektir. <br /><strong> NOT: Bu seçeneği \'Evet\' (diğer ad yollarını açma) olarak ayarlarsanız, referans öğeler (resimler, CSS, JavaScript\'ler vb.) mutlak yolu, örn. \'/ assets / images\' olarak kullanır \'varlıklara / resimlere\' karşı. Böylece tarayıcının (veya web sunucusunun) takma ad yoluna göre yol eklemesini engelleyeceksiniz.</strong>';
-
-$_lang['setting_use_browser'] = 'Kaynak Tarayıcıyısını Etkinleştir';
-$_lang['setting_use_browser_desc'] = 'Kaynak tarayıcısını etkinleştirmek için evet\'i seçin. Bu, kullanıcıların sunucudaki görüntüler, flash ve medya dosyaları gibi kaynaklara göz atmasına ve yüklemesine olanak tanır.';
-$_lang['setting_use_browser_err'] = 'Lütfen kaynak tarayıcıyı kullanmak isteyip istemediğinizi belirtin.';
 
 $_lang['setting_use_editor'] = 'Zengin Metin Editörünü Etkinleştir';
 $_lang['setting_use_editor_desc'] = 'Zengin metin editörünü etkinleştirmek istiyor musunuz? HTML yazımında daha rahat iseniz bu ayarı kullanarak düzenleyiciyi kapatabilirsiniz. Bu ayarın tüm belgeler ve tüm kullanıcılar için geçerli olduğunu unutmayın!';
@@ -838,14 +798,6 @@ $_lang['setting_use_weblink_target_desc'] = 'MODX bağlantı etiketlerine sahip 
 
 $_lang['setting_user_nav_parent'] = 'Kullanıcı Ana menüsü';
 $_lang['setting_user_nav_parent_desc'] = 'Kullanıcı menüsü için tüm kayıtları çekmek için kullanılan kapsayıcı.';
-
-$_lang['setting_webpwdreminder_message'] = 'Web Hatırlatıcı E-postası';
-$_lang['setting_webpwdreminder_message_desc'] = 'E-posta yoluyla yeni bir şifre istediklerinde web kullanıcılarına gönderilecek bir mesaj girin. İçerik Yöneticisi yeni şifrelerini ve etkinleştirme bilgilerini içeren bir e-posta gönderir. <br /><strong>Not:</strong> Mesaj gönderildiğinde aşağıdaki yer tutucuların yerini İçerik Yöneticisi alır: <br /><br />[[+sname]] - Web sitenizin adı, <br />[[+saddr]] - Web sitenizin e-posta adresidir, <br />[[+surl]] - Sitenizin URL\'si, <br />[[+uid]] - Kullanıcının oturum açma adı veya kimliği, <br />[[+pwd]] - Kullanıcı şifresi, <br />[[+ufn]] - Kullanıcının tam adı. <br /><br /><strong>E-postada [[+uid]] ve [[+pwd]] bırakın, aksi takdirde kullanıcı adı ve parola postayla gönderilmez ve kullanıcılarınız kullanıcı adlarını veya şifrelerini öğrenin!</strong>';
-$_lang['setting_webpwdreminder_message_default'] = 'Merhaba[[+uid]]\n\nYeni şifrenizi etkinleştirmek için aşağıdaki bağlantıya tıklayın:\n\n[[+surl]]\n\nEğer etkinleştirme başarılı olursa, aşağıdaki şifreyi kullanarak oturum açabilirsiniz:\n\nŞifre[[+pwd]]\n\nEğer bu epostayı talep etmediyseniz, lütfen görmezden gelin.\n\nSaygılarımızla,\nSite Yöneticisi';
-
-$_lang['setting_websignupemail_message'] = 'Web Kayıt e-postası';
-$_lang['setting_websignupemail_message_desc'] = 'Buradan, kullanıcılarınıza bir web hesabı oluşturduğunuzda web kullanıcılarına gönderilecek mesajı ayaralayabilirsiniz ve İçerik Yöneticisinin kullanıcı adı ve şifre içeren bir eposta göndermesine izin verebilirsiniz. <br /><strong>Not:</strong> Mesaj gönderildiğinde aşağıdaki yer tutucular değiştirilir: <br /><br />[[+sname]] - Web sitenizin adı, <br />[[+saddr]] - Web sitenizin eposta adresi,<br />[[+surl]] - Sitenizin URL\'si,<br />[[+uid]] - Kullanıcının oturum açma adı veya kimliği,<br />[[+pwd]] - Kullanıcı şifresi,<br />[[+ufn]] - Kullanıcının tam adı.<br /><br /><strong>[[+uid]] ve [[+pwd]]\'i boş bırakın aksi takdirde kullanıcı adı ve şifre posta içinde gönderilmez ve kullanıcılarınız kullanıcı adlarını ve şifrelerini bilemez!</strong>';
-$_lang['setting_websignupemail_message_default'] = 'Merhaba [[+uid]]\n\n[[+sname]] için oturum açma bilgileriniz: \n\n Kullanıcı adı: [[+uid]]\nParola: [[+pwd]]\n\n[[+sname]]([[+surl]]) oturumunda şifrenizi değiştirebilirsiniz. \n\nGerekler, \nSite Yöneticisi';
 
 $_lang['setting_welcome_screen'] = 'Karşılama Ekranını Göster';
 $_lang['setting_welcome_screen_desc'] = 'True olarak ayarlanırsa, hoş geldiniz ekranı karşılama sayfasının bir sonraki başarılı yüklenişinde gösterilir ve bundan sonra gösterilmez.';
@@ -887,7 +839,13 @@ $_lang['setting_error_log_filename'] = 'Error log filename';
 $_lang['setting_error_log_filename_desc'] = 'Customize the filename of the MODX error log file (includes file extension).';
 
 $_lang['setting_error_log_filepath'] = 'Error log path';
-$_lang['setting_error_log_filepath_desc'] = 'Optionally set a absolute path the a custom error log location. You might use placehodlers like {cache_path}.';
+$_lang['setting_error_log_filepath_desc'] = 'Optionally set a absolute path the a custom error log location. You might use placeholders like {cache_path}.';
 
-$_lang['static_elements_html_extension'] = 'Static elements html extension';
-$_lang['static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';
+$_lang['setting_passwordless_activated'] = 'Activate passwordless login';
+$_lang['setting_passwordless_activated_desc'] = 'When enabled, users will enter their email address to receive a one-time login link, rather than entering a username and password.';
+
+$_lang['setting_passwordless_expiration'] = 'Passwordless login expiration';
+$_lang['setting_passwordless_expiration_desc'] = 'How long a one-time login link is valid in seconds.';
+
+$_lang['setting_static_elements_html_extension'] = 'Static elements html extension';
+$_lang['setting_static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';

@@ -6,30 +6,32 @@
  * @param {Object} config An object of options.
  * @xtype modx-grid-user-settings
  */
-MODx.grid.UserSettings = function(config) {
-    config = config || {};
+MODx.grid.UserSettings = function(config = {}) {
+    this.settingsType = 'user';
     Ext.applyIf(config,{
         title: _('user_settings')
         ,id: 'modx-grid-user-settings'
         ,url: MODx.config.connector_url
         ,baseParams: {
-            action: 'security/user/setting/getList'
-            ,user: config.user
+            action: 'Security/User/Setting/GetList',
+            user: config.user,
+            namespace: MODx.util.url.getParamValue('ns'),
+            area: MODx.util.url.getParamValue('area')
         }
         ,saveParams: {
             user: config.user
         }
-        ,save_action: 'security/user/setting/updatefromgrid'
+        ,save_action: 'Security/User/Setting/UpdateFromGrid'
         ,fk: config.user
         ,tbar: [{
-            text: _('create_new')
+            text: _('create')
             ,cls: 'primary-button'
             ,scope: this
-            ,handler: { 
+            ,handler: {
                 xtype: 'modx-window-setting-create'
                 ,url: MODx.config.connector_url
                 ,baseParams: {
-                    action: 'security/user/setting/create'
+                    action: 'Security/User/Setting/Create'
                 }
                 ,keyField: {
                     xtype: 'modx-combo-setting-key'
@@ -53,6 +55,15 @@ MODx.grid.UserSettings = function(config) {
                     }
                 }
                 ,fk: config.user
+                ,listeners: {
+                    success: {
+                        fn: function(response) {
+                            this.refresh();
+                            this.fireEvent('createSetting', response);
+                        },
+                        scope: this
+                    }
+                }
             }
         }]
     });
@@ -73,11 +84,11 @@ Ext.extend(MODx.grid.UserSettings,MODx.grid.SettingsGrid, {
             m = this.menu.record.menu;
         } else {
             m.push({
-                text: _('setting_update')
+                text: _('edit')
                 ,handler: this.updateSetting
             },'-',{
-                text: _('setting_remove')
-                ,handler: this.remove.createDelegate(this,['setting_remove_confirm', 'security/user/setting/remove'])
+                text: _('remove')
+                ,handler: this.remove.createDelegate(this,['setting_remove_confirm', 'Security/User/Setting/Remove'])
             });
         }
         if (m.length > 0) {
@@ -86,23 +97,26 @@ Ext.extend(MODx.grid.UserSettings,MODx.grid.SettingsGrid, {
         }
     }
 
-    ,updateSetting: function(btn,e) {
-        var r = this.menu.record;
-        r.fk = Ext.isDefined(this.config.fk) ? this.config.fk : 0;
-        var uss = MODx.load({
-            xtype: 'modx-window-setting-update'
-            ,action: 'security/user/setting/update'
-            ,record: r
-            ,grid: this
-            ,listeners: {
-                'success': {fn:function(r) {
-                    this.refresh();
-                },scope:this}
+    ,updateSetting: function(btn, e) {
+        const { record } = this.menu;
+        record.fk = this.config?.fk || 0;
+        this.windows.updateSetting = MODx.load({
+            xtype: 'modx-window-setting-update',
+            action: 'Security/User/Setting/Update',
+            record: record,
+            grid: this,
+            listeners: {
+                success: {
+                    fn: function(response) {
+                        this.refresh();
+                        this.fireEvent('updateSetting', response);
+                    },
+                    scope: this
+                }
             }
         });
-        uss.reset();
-        uss.setValues(r);
-        uss.show(e.target);
+        this.windows.updateSetting.setValues(record);
+        this.windows.updateSetting.show(e.target);
     }
 });
 Ext.reg('modx-grid-user-settings',MODx.grid.UserSettings);

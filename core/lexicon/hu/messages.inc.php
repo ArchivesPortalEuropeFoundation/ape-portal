@@ -25,18 +25,16 @@ $_lang['usergroup'] = 'Felhasználói csoport';
 $_lang['filter_by_type'] = 'Szűrés típus szerint...';
 
 $_lang['message'] = 'Üzenet';
-$_lang['message_create'] = 'Üzenet létrehozása';
-$_lang['message_new'] = 'Új üzenet';
-$_lang['message_remove_confirm'] = 'Biztosan eltávolítja ezt az üzenetet teljes egészében?';
+$_lang['message_remove_confirm'] = 'Biztosan törli ezt az üzenetet teljes egészében?';
 $_lang['message_send_email'] = 'Email küldése';
 $_lang['message_err_nfs'] = 'Üzenet nem található.';
 $_lang['message_err_not_specified_subject'] = 'Tárgy nincs megadva!';
-$_lang['message_err_remove'] = 'Hiba történt az üzenet törlése közben.';
+$_lang['message_err_remove'] = 'An error occurred while trying to delete the message.';
 $_lang['message_err_remove_notauth'] ='Nem jogosult az üzenet törlése.';
 $_lang['message_err_save'] = 'Hiba történt az üzenet mentésekor.';
 
 $_lang['messages'] = 'Üzenetek';
-$_lang['messages_desc'] = 'Itt kezelheti az Ön által küldött vagy a mások által Önnek küldött üzeneteket. Válaszolhat, továbbíthat üzeneteket, vagy olvasottnak, illetve olvasatlannak jelölheti a kiválasztott üzeneteket.';
+$_lang['messages_desc'] = 'Itt kezelheti az Ön által küldött vagy a mások által Önnek küldött üzeneteket. Válaszolhat, továbbíthat üzeneteket, és törölheti vagy olvasottnak jelölheti a kiválasztott üzeneteket.';
 $_lang['messages_all'] = 'Mindenki';
 $_lang['messages_compose'] = 'Üzenet írása';
 $_lang['messages_forward'] = 'Továbbítás';

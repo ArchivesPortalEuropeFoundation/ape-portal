@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of MODX Revolution.
  *
@@ -7,6 +8,8 @@
  * For complete copyright and license information, see the COPYRIGHT and LICENSE
  * files found in the top-level directory of this distribution.
  */
+
+use MODX\Revolution\modManagerController;
 
 /**
  * Loads the user list
@@ -20,7 +23,7 @@ class SecurityUserManagerController extends modManagerController {
      * @return bool
      */
     public function checkPermissions() {
-        return $this->modx->hasPermission('edit_user');
+        return $this->modx->hasPermission('view_user');
     }
 
     /**
@@ -42,7 +45,7 @@ class SecurityUserManagerController extends modManagerController {
      * @param array $scriptProperties
      * @return mixed
      */
-    public function process(array $scriptProperties = array()) {}
+    public function process(array $scriptProperties = []) {}
 
     /**
      * Return the pagetitle
@@ -66,7 +69,7 @@ class SecurityUserManagerController extends modManagerController {
      * @return array
      */
     public function getLanguageTopics() {
-        return array('user');
+        return ['user'];
     }
 
     /**

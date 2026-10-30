@@ -6,32 +6,44 @@
  * @param {Object} config An object of options.
  * @xtype modx-grid-group-settings
  */
-MODx.grid.GroupSettings = function(config) {
-    config = config || {};
+MODx.grid.GroupSettings = function(config = {}) {
+    this.settingsType = 'usergroup';
+    this.querySpec = [3, 'query', 'tab', true];
     Ext.applyIf(config,{
         title: _('user_group_settings')
         ,id: 'modx-grid-group-settings'
         ,url: MODx.config.connector_url
         ,baseParams: {
-            action: 'security/group/setting/getList'
-            ,group: config.group
+            action: 'Security/Group/Setting/GetList',
+            group: config.group,
+            namespace: this.applyRequestFilter(3, 'ns', 'tab'),
+            area: MODx.util.url.getParamValue('area') || null
         }
         ,saveParams: {
             group: config.group
         }
-        ,save_action: 'security/group/setting/updatefromgrid'
+        ,save_action: 'Security/Group/Setting/UpdateFromGrid'
         ,fk: config.group
         ,tbar: [{
-            text: _('create_new')
-            ,cls:'primary-button'
+            text: _('create')
+            ,cls: 'primary-button'
             ,scope: this
             ,handler: {
                 xtype: 'modx-window-setting-create'
                 ,url: MODx.config.connector_url
                 ,baseParams: {
-                    action: 'security/group/setting/create'
+                    action: 'Security/Group/Setting/Create'
                 }
                 ,fk: config.group
+                ,listeners: {
+                    success: {
+                        fn: function(response) {
+                            this.refresh();
+                            this.fireEvent('createSetting', response);
+                        },
+                        scope: this
+                    }
+                }
             }
         }]
     });
@@ -52,11 +64,11 @@ Ext.extend(MODx.grid.GroupSettings,MODx.grid.SettingsGrid, {
             m = this.menu.record.menu;
         } else {
             m.push({
-                text: _('setting_update')
+                text: _('edit')
                 ,handler: this.updateSetting
             },'-',{
-                text: _('setting_remove')
-                ,handler: this.remove.createDelegate(this,['setting_remove_confirm', 'security/group/setting/remove'])
+                text: _('remove')
+                ,handler: this.remove.createDelegate(this,['setting_remove_confirm', 'Security/Group/Setting/Remove'])
             });
         }
         if (m.length > 0) {
@@ -65,23 +77,26 @@ Ext.extend(MODx.grid.GroupSettings,MODx.grid.SettingsGrid, {
         }
     }
 
-    ,updateSetting: function(btn,e) {
-        var r = this.menu.record;
-        r.fk = Ext.isDefined(this.config.fk) ? this.config.fk : 0;
-        var uss = MODx.load({
-            xtype: 'modx-window-setting-update'
-            ,action: 'security/group/setting/update'
-            ,record: r
-            ,grid: this
-            ,listeners: {
-                'success': {fn:function(r) {
-                    this.refresh();
-                },scope:this}
+    ,updateSetting: function(btn, e) {
+        const { record } = this.menu;
+        record.fk = this.config?.fk || 0;
+        this.windows.updateSetting = MODx.load({
+            xtype: 'modx-window-setting-update',
+            action: 'Security/Group/Setting/Update',
+            record: record,
+            grid: this,
+            listeners: {
+                success: {
+                    fn: function(response) {
+                        this.refresh();
+                        this.fireEvent('updateSetting', response);
+                    },
+                    scope: this
+                }
             }
         });
-        uss.reset();
-        uss.setValues(r);
-        uss.show(e.target);
+        this.windows.updateSetting.setValues(record);
+        this.windows.updateSetting.show(e.target);
     }
 });
 Ext.reg('modx-grid-group-settings',MODx.grid.GroupSettings);

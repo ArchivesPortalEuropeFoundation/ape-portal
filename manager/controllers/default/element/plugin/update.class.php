@@ -8,6 +8,11 @@
  * files found in the top-level directory of this distribution.
  */
 
+use MODX\Revolution\modCategory;
+use MODX\Revolution\modManagerController;
+use MODX\Revolution\modPlugin;
+use MODX\Revolution\modSystemEvent;
+
 /**
  * Load update plugin page
  *
@@ -56,8 +61,6 @@ class ElementPluginUpdateManagerController extends modManagerController {
             });
         });
         MODx.onPluginFormRender = "'.$this->onPluginFormRender.'";
-        MODx.perm.tree_show_element_ids = '.($this->modx->hasPermission('tree_show_element_ids') ? 1 : 0).';
-        MODx.perm.unlock_element_properties = "'.($this->modx->hasPermission('unlock_element_properties') ? 1 : 0).'";
         // ]]>
         </script>');
     }
@@ -67,35 +70,35 @@ class ElementPluginUpdateManagerController extends modManagerController {
      * @param array $scriptProperties
      * @return mixed
      */
-    public function process(array $scriptProperties = array()) {
-        $placeholders = array();
+    public function process(array $scriptProperties = []) {
+        $placeholders = [];
 
         /* load plugin */
-        if (empty($scriptProperties['id']) || strlen($scriptProperties['id']) !== strlen((integer)$scriptProperties['id'])) {
+        if (empty($scriptProperties['id']) || strlen($scriptProperties['id']) !== strlen((int)$scriptProperties['id'])) {
             return $this->failure($this->modx->lexicon('plugin_err_ns'));
         }
-        $this->plugin = $this->modx->getObject('modPlugin', array('id' => $scriptProperties['id']));
+        $this->plugin = $this->modx->getObject(modPlugin::class, ['id' => $scriptProperties['id']]);
         if ($this->plugin == null) return $this->failure($this->modx->lexicon('plugin_err_nf'));
         if (!$this->plugin->checkPolicy('view')) return $this->failure($this->modx->lexicon('access_denied'));
 
         /* get properties */
         $properties = $this->plugin->get('properties');
-        if (!is_array($properties)) $properties = array();
+        if (!is_array($properties)) $properties = [];
 
-        $data = array();
+        $data = [];
         foreach ($properties as $property) {
-            $data[] = array(
+            $data[] = [
                 $property['name'],
                 $property['desc'],
                 !empty($property['type']) ? $property['type'] : 'textfield',
-                !empty($property['options']) ? $property['options'] : array(),
+                !empty($property['options']) ? $property['options'] : [],
                 $property['value'],
                 !empty($property['lexicon']) ? $property['lexicon'] : '',
                 false, /* overridden set to false */
                 $property['desc_trans'],
                 !empty($property['area']) ? $property['area'] : '',
                 !empty($property['area_trans']) ? $property['area_trans'] : '',
-            );
+            ];
         }
         $this->pluginArray = $this->plugin->toArray();
         $this->pluginArray['properties'] = $data;
@@ -136,11 +139,11 @@ class ElementPluginUpdateManagerController extends modManagerController {
     public function firePreRenderEvents() {
         /* PreRender events inject directly into the HTML, as opposed to the JS-based Render event which injects HTML
         into the panel */
-        $this->onPluginFormPrerender = $this->modx->invokeEvent('OnPluginFormPrerender',array(
+        $this->onPluginFormPrerender = $this->modx->invokeEvent('OnPluginFormPrerender', [
             'id' => $this->pluginArray['id'],
             'plugin' => &$this->plugin,
             'mode' => modSystemEvent::MODE_UPD,
-        ));
+        ]);
         if (is_array($this->onPluginFormPrerender)) $this->onPluginFormPrerender = implode('',$this->onPluginFormPrerender);
         $this->setPlaceholder('onPluginFormPrerender', $this->onPluginFormPrerender);
     }
@@ -150,13 +153,13 @@ class ElementPluginUpdateManagerController extends modManagerController {
      * @return string
      */
     public function fireRenderEvent() {
-        $this->onPluginFormRender = $this->modx->invokeEvent('OnPluginFormRender',array(
+        $this->onPluginFormRender = $this->modx->invokeEvent('OnPluginFormRender', [
             'id' => $this->pluginArray['id'],
             'plugin' => &$this->plugin,
             'mode' => modSystemEvent::MODE_UPD,
-        ));
+        ]);
         if (is_array($this->onPluginFormRender)) $this->onPluginFormRender = implode('',$this->onPluginFormRender);
-        $this->onPluginFormRender = str_replace(array('"',"\n","\r"),array('\"','',''),$this->onPluginFormRender);
+        $this->onPluginFormRender = str_replace(['"',"\n","\r"], ['\"','',''],$this->onPluginFormRender);
         return $this->onPluginFormRender;
     }
 
@@ -182,7 +185,7 @@ class ElementPluginUpdateManagerController extends modManagerController {
      * @return array
      */
     public function getLanguageTopics() {
-        return array('plugin','category','system_events','propertyset','element');
+        return ['plugin','category','system_events','propertyset','element'];
     }
 
     /**

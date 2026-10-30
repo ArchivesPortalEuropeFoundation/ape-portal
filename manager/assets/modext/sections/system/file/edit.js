@@ -11,7 +11,7 @@ MODx.page.EditFile = function(config) {
     var btns = [];
     if (config.canSave) {
         btns.push({
-            process: 'browser/file/update'
+            process: 'Browser/File/Update'
             ,text: _('save')
             ,id: 'modx-abtn-save'
             ,cls: 'primary-button'
@@ -40,6 +40,7 @@ MODx.page.EditFile = function(config) {
 };
 Ext.extend(MODx.page.EditFile,MODx.Component);
 Ext.reg('modx-page-file-edit',MODx.page.EditFile);
+
 /**
  * Loads the EditFile panel
  *
@@ -55,11 +56,11 @@ MODx.panel.EditFile = function(config) {
         id: 'modx-panel-file-edit'
         ,url: MODx.config.connector_url
         ,baseParams: {
-            action: 'browser/file/update'
+            action: 'Browser/File/Update'
             ,file: config.file
             ,wctx: MODx.request.wctx
         }
-    	,cls: 'container form-with-labels'
+        ,cls: 'container form-with-labels'
         ,class_key: 'modTemplate'
         ,template: ''
         ,bodyStyle: ''
@@ -74,10 +75,10 @@ MODx.panel.EditFile = function(config) {
             ,layout: 'form'
             ,labelWidth: 150
             ,items: [{
-				xtype: 'panel'
-				,border: false
-				,layout: 'form'
-				,cls:'main-wrapper'
+                xtype: 'panel'
+                ,border: false
+                ,layout: 'form'
+                ,cls:'main-wrapper'
                 ,items: [{
                     xtype: 'hidden'
                     ,name: 'source'
@@ -87,7 +88,7 @@ MODx.panel.EditFile = function(config) {
                     ,fieldLabel: _('file_name')
                     ,name: 'basename'
                     ,id: 'modx-file-basename'
-                    ,anchor: '98%'
+                    ,anchor: '100%'
                     ,value: config.record.basename || ''
                 },{
                     xtype: 'statictextfield'
@@ -95,37 +96,37 @@ MODx.panel.EditFile = function(config) {
                     ,name: 'name'
                     ,id: 'modx-file-name'
                     ,value: config.record.name || ''
-                    ,anchor: '98%'
+                    ,anchor: '100%'
                     ,submitValue: true
                 },{
                     xtype: 'statictextfield'
                     ,fieldLabel: _('file_size')
                     ,name: 'size'
                     ,id: 'modx-file-size'
-                    ,anchor: '98%'
+                    ,anchor: '100%'
                     ,value: (config.record.size || 0) + ' B'
                 },{
                     xtype: 'statictextfield'
                     ,fieldLabel: _('file_last_accessed')
                     ,name: 'last_accessed'
                     ,id: 'modx-file-last-accessed'
-                    ,anchor: '98%'
-                    ,value: config.record.last_accessed || ''
+                    ,anchor: '100%'
+                    ,value: config.record.last_accessed
                 },{
                     xtype: 'statictextfield'
                     ,fieldLabel: _('file_last_modified')
                     ,name: 'last_modified'
                     ,id: 'modx-file-last-modified'
-                    ,anchor: '98%'
-                    ,value: config.record.last_modified || ''
+                    ,anchor: '100%'
+                    ,value: config.record.last_modified
                 },{
                     xtype: 'textarea'
                     ,hideLabel: true
                     ,name: 'content'
                     ,id: 'modx-file-content'
-                    ,anchor: '98%'
-                    ,grow: false
+                    ,anchor: '100%'
                     ,height: 400
+                    ,grow: false
                     ,value: config.record.content || ''
                 }]
             }]

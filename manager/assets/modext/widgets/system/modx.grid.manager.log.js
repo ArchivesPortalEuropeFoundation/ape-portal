@@ -1,76 +1,4 @@
 /**
- * Loads a grid of Manager Logs.
- *
- * @class MODx.grid.ManagerLog
- * @extends MODx.grid.Grid
- * @param {Object} config An object of options.
- * @xtype modx-grid-manager-log
- */
-MODx.grid.ManagerLog = function(config) {
-    config = config || {};
-    Ext.applyIf(config,{
-        title: _('manager_log')
-        ,id: 'modx-grid-manager-log'
-        ,url: MODx.config.connector_url
-        ,baseParams: {
-            action: 'system/log/getlist'
-        }
-        ,fields: ['id','user','username','occurred','action','classKey','item','name','menu']
-        ,autosave: false
-        ,paging: true
-        ,remoteSort: true
-        ,columns: [{
-            header: _('occurred')
-            ,dataIndex: 'occurred'
-            ,width: 125
-            ,sortable: true
-        },{
-            header: _('user')
-            ,dataIndex: 'username'
-            ,width: 125
-            ,editable: false
-            ,sortable: true
-        },{
-            header: _('action')
-            ,dataIndex: 'action'
-            ,width: 125
-            ,sortable: true
-        },{
-            header: _('object')
-            ,dataIndex: 'name'
-            ,width: 300
-            ,renderer: Ext.util.Format.htmlEncode
-        }]
-        ,tbar: [{
-            xtype: 'button'
-            ,text: _('filter_clear')
-            ,cls: 'primary-button'
-            ,scope: this
-            ,handler: function() {
-                var fp = Ext.getCmp(this.config.formpanel);
-                if (fp) {
-                    fp.getForm().reset();
-                    fp.filter();
-                }
-            }
-        },'->',{
-            xtype: 'button'
-            ,text: _('mgrlog_clear')
-            ,scope: this
-            ,handler: function() {
-                var fp = Ext.getCmp(this.config.formpanel);
-                if (fp) {
-                    fp.clearLog();
-                }
-            }
-        }]
-    });
-    MODx.grid.ManagerLog.superclass.constructor.call(this,config);
-};
-Ext.extend(MODx.grid.ManagerLog,MODx.grid.Grid);
-Ext.reg('modx-grid-manager-log',MODx.grid.ManagerLog);
-
-/**
  * Loads the Manager Log filter panel.
  *
  * @class MODx.panel.ManagerLog
@@ -86,7 +14,7 @@ MODx.panel.ManagerLog = function(config) {
         ,cls: 'container'
         ,defaults: { collapsible: false ,autoHeight: true }
         ,items: [{
-            html: _('manager_log')
+            html: _('mgrlog_view')
             ,xtype: 'modx-header'
             ,id: 'manager-log-header'
         },MODx.getPageStructure([{
@@ -147,6 +75,7 @@ MODx.panel.ManagerLog = function(config) {
                             ,name: 'dateStart'
                             ,allowBlank: true
                             ,anchor: '100%'
+                            ,format: MODx.config.manager_date_format
                             ,listeners: {
                                 'select': {fn: this.filter, scope: this}
                                 ,'render': {fn:this._addEnterKeyHandler}
@@ -157,6 +86,7 @@ MODx.panel.ManagerLog = function(config) {
                             ,name: 'dateEnd'
                             ,allowBlank: true
                             ,anchor: '100%'
+                            ,format: MODx.config.manager_date_format
                             ,listeners: {
                                 'select': {fn: this.filter, scope: this}
                                 ,'render': {fn:this._addEnterKeyHandler}
@@ -187,7 +117,7 @@ Ext.extend(MODx.panel.ManagerLog,MODx.FormPanel,{
     filter: function(tf,newValue,oldValue) {
         var p = this.getForm().getValues();
         var g = Ext.getCmp('modx-grid-manager-log');
-        p.action = 'system/log/getList';
+        p.action = 'System/Log/GetList';
         g.getStore().baseParams = p;
         g.getStore().load({
             params: p
@@ -209,7 +139,7 @@ Ext.extend(MODx.panel.ManagerLog,MODx.FormPanel,{
             ,text: _('mgrlog_clear_confirm')
             ,url: MODx.config.connector_url
             ,params: {
-                action: 'system/log/truncate'
+                action: 'System/Log/Truncate'
             }
             ,listeners: {
                 'success': {fn:function() {
@@ -220,3 +150,85 @@ Ext.extend(MODx.panel.ManagerLog,MODx.FormPanel,{
     }
 });
 Ext.reg('modx-panel-manager-log',MODx.panel.ManagerLog);
+
+/**
+ * Loads a grid of Manager Logs.
+ *
+ * @class MODx.grid.ManagerLog
+ * @extends MODx.grid.Grid
+ * @param {Object} config An object of options.
+ * @xtype modx-grid-manager-log
+ */
+MODx.grid.ManagerLog = function(config) {
+    config = config || {};
+    Ext.applyIf(config,{
+        title: _('manager_log')
+        ,id: 'modx-grid-manager-log'
+        ,url: MODx.config.connector_url
+        ,baseParams: {
+            action: 'System/Log/GetList'
+        }
+        ,fields: ['id','user','username','occurred','action','classKey','item','name','menu']
+        ,showActionsColumn: false
+        ,autosave: false
+        ,paging: true
+        ,remoteSort: true
+        ,columns: [{
+            header: _('occurred')
+            ,dataIndex: 'occurred'
+            ,width: 125
+            ,sortable: true
+        },{
+            header: _('user')
+            ,dataIndex: 'username'
+            ,width: 125
+            ,editable: false
+            ,sortable: true
+        },{
+            header: _('action')
+            ,dataIndex: 'action'
+            ,width: 125
+            ,sortable: true
+        },{
+            header: _('object')
+            ,dataIndex: 'name'
+            ,width: 300
+            ,renderer: Ext.util.Format.htmlEncode
+        }]
+        ,tbar: this.getTbar()
+    });
+    MODx.grid.ManagerLog.superclass.constructor.call(this,config);
+};
+Ext.extend(MODx.grid.ManagerLog,MODx.grid.Grid, {
+    getTbar: function() {
+        var tbar = [{
+            xtype: 'button'
+            ,text: _('filter_clear')
+            ,cls: 'primary-button'
+            ,scope: this
+            ,handler: function() {
+                var fp = Ext.getCmp(this.config.formpanel);
+                if (fp) {
+                    fp.getForm().reset();
+                    fp.filter();
+                }
+            }
+        },'->'];
+        if (MODx.perm.mgr_log_erase === true) {
+            tbar.push({
+                xtype: 'button'
+                ,text: _('mgrlog_clear')
+                ,scope: this
+                ,handler: function () {
+                    var fp = Ext.getCmp(this.config.formpanel);
+                    if (fp) {
+                        fp.clearLog();
+                    }
+                }
+            });
+        }
+
+        return tbar;
+    }
+});
+Ext.reg('modx-grid-manager-log',MODx.grid.ManagerLog);

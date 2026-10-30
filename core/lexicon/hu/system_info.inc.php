@@ -11,6 +11,10 @@ $_lang['database_name'] = 'Adatbázis neve';
 $_lang['database_server'] = 'Adatbázis-kiszolgáló';
 $_lang['database_tables'] = 'Adatbázis táblák';
 $_lang['database_optimize'] = 'Adatbázis optimalizálása';
+$_lang['database_optimize_process'] = 'Most folyik a táblák optimalizálása.';
+$_lang['database_optimize_success'] = 'A táblák optimalizálása sikeresen megtörtént.';
+$_lang['database_optimize_error'] = 'Hiba történt az adatbázistáblák optimalizálása közben.';
+$_lang['database_optimize_processing'] = 'Optimalizálás...';
 $_lang['database_table_clickhere'] = 'Kattintson ide';
 $_lang['database_table_clickbackup'] = 'a kiválasztott táblák biztonsági másolásához és letöltéséhez';
 $_lang['database_table_datasize'] = 'Adat mérete';
@@ -18,12 +22,10 @@ $_lang['database_table_droptablestatements'] = 'Hozzon létre DROP TABLE parancs
 $_lang['database_table_effectivesize'] = 'Tényleges méret';
 $_lang['database_table_indexsize'] = 'Mutató mérete';
 $_lang['database_table_overhead'] = 'Terhelés';
-$_lang['database_table_reserved'] = 'Lefoglalt';//sqlsrv
 $_lang['database_table_records'] = 'Bejegyzések';
 $_lang['database_table_tablename'] = 'Tábla neve';
 $_lang['database_table_totalsize'] = 'Teljes méret';
 $_lang['database_table_totals'] = 'Összesen:';
-$_lang['database_table_unused'] = 'Nem használt';//sqlsrv
 $_lang['database_type'] = 'Adatbázis fajtája';
 $_lang['database_version'] = 'Adatbázis verzió';
 $_lang['extjs_version'] = '<a href="http://extjs.com/" target="_blank">ExtJS</a> változat';
@@ -44,7 +46,7 @@ $_lang['phpmailer_version'] = '<a href="https://github.com/PHPMailer/PHPMailer" 
 $_lang['server'] = 'Kiszolgáló';
 $_lang['servertime'] = 'Kiszolgálón lévő idő';
 $_lang['serveroffset'] = 'Kiszolgáló időeltolódása';
-$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Smarty</a> változata';
+$_lang['smarty_version'] = '<a href="http://smarty.net/" target="_blank">Smarty</a> változata';
 $_lang['sysinfo_desc'] = 'Itt általános tájékoztatást talál a MODX környezetéről.';
 $_lang['view_sysinfo'] = 'Rendszerinformáció';
 $_lang['table_prefix'] = 'Tábla előtag';

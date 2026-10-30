@@ -25,18 +25,16 @@ $_lang['usergroup'] = 'ユーザーグループ';
 $_lang['filter_by_type'] = 'Filter by type...';
 
 $_lang['message'] = 'メッセージ';
-$_lang['message_create'] = 'メッセージを作成';
-$_lang['message_new'] = '新しいメッセージ';
-$_lang['message_remove_confirm'] = 'このメッセージを完全に削除しますか？';
+$_lang['message_remove_confirm'] = 'Are you sure you want to delete this message entirely?';
 $_lang['message_send_email'] = 'Send Email';
 $_lang['message_err_nfs'] = 'メッセージはありません。';
 $_lang['message_err_not_specified_subject'] = 'タイトルを入力してください。';
-$_lang['message_err_remove'] = 'メッセージの削除中にエラーが発生しました。';
+$_lang['message_err_remove'] = 'An error occurred while trying to delete the message.';
 $_lang['message_err_remove_notauth'] ='メッセージの削除権限がありません。';
 $_lang['message_err_save'] = 'メッセージの保存中にエラーが発生しました。';
 
 $_lang['messages'] = 'メッセージ';
-$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can remove or mark as read specified messages.';
+$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can delete or mark as read specified messages.';
 $_lang['messages_all'] = '全員';
 $_lang['messages_compose'] = 'メッセージを作成';
 $_lang['messages_forward'] = '転送';

@@ -12,7 +12,7 @@ $_lang['configcheck_allowtagsinpost_context_enabled_msg'] = 'Контекстн�
 $_lang['configcheck_allowtagsinpost_system_enabled'] = 'Системните настройки allow_tags_in_post System Setting са активирани';
 $_lang['configcheck_allowtagsinpost_system_enabled_msg'] = 'Системната Настройка Allow_tags_in_post е активирана във Вашата инсталация. MODX препоръчва тази настройка да бъде забранена, освен ако нямате нужда изрично да позволявате на потребителите да предоставят MODX етикети, числови единици или HTML тагове посредством метода POST на формата на вашия сайт. По-добре е да я активирате чрез Контекст настройките за специфични Контексти.';
 $_lang['configcheck_cache'] = 'Кеш директорията не е записваема';
-$_lang['configcheck_cache_msg'] = 'MODX не може да записва в кеш директорията. MODX ще функционира както се очаква, но няма да се изпълни кеширане. За да разрешите това, направете /_cache/ директорията записваема.';
+$_lang['configcheck_cache_msg'] = 'MODX cannot write to the cache directory. MODX will still function as expected, but no caching will take place. To solve this, make the /cache/ directory writable.';
 $_lang['configcheck_configinc'] = 'Конфигурационния файл все още е редактируем!';
 $_lang['configcheck_configinc_msg'] = 'Вашият сайт е уязвим за хакери, които могат да нанесат много щети на сайта. Моля, направете си конфигурационния файл (config file) само за четене (read only)! Ако не сте администратор на сайта, моля свържете се със системния администратор и ги предупредете за това съобщение! Той се намира в [[+path]]';
 $_lang['configcheck_default_msg'] = 'Намерено е неопределено предупреждение. Което е странно.';
@@ -26,7 +26,7 @@ $_lang['configcheck_htaccess_msg'] = 'MODX detected that your core folder is (pa
 If your MODX installation is running on a Apache webserver
 you should at least set up the .htaccess file inside the core folder <em>[[+fileLocation]]</em>.
 This can be easily done by renaming the existing ht.access example file there to .htaccess.
-<p>There are other methods and webservers you may use, please read the <a href="https://docs.modx.com/current/en/getting-started/maintenance/securing-modx">Hardening MODX Guide</a>
+<p>There are other methods and webservers you may use, please read the <a href="https://docs.modx.com/3.x/en/getting-started/maintenance/securing-modx">Hardening MODX Guide</a>
 for further information about securing your site.</p>
 If you setup everything correctly, browsing e.g. to the <a href="[[+checkUrl]]" target="_blank">Changelog</a>
 should give you a 403 (permission denied) or better a 404 (not found). If you can see the changelog
@@ -34,11 +34,10 @@ there in the browser, something is still wrong and you need to reconfigure or ca
 $_lang['configcheck_images'] = 'Директорията с изборажения не е записваема';
 $_lang['configcheck_images_msg'] = 'Директорията с изображения не е записваема или не съществува. Това означава, че функциите на Мениджъра за Изображение в редактора няма да работят!';
 $_lang['configcheck_installer'] = 'Инсталатора все още съществува';
-$_lang['configcheck_installer_msg'] = 'Setup/ директорията съдържа инсталатора за MODX. Само си представете какво може да се случи ако зъл човек намери тази папка и изпълни инсталиращата програма! Те вероятно няма да отидат твърде далеч, тъй като ще трябва да въведат потребителска информация за базата данни, но е най-добре да премахнете тази папка от вашия сървър. Той се намира в: [[+path]]';
+$_lang['configcheck_installer_msg'] = 'The setup/ directory contains the installer for MODX. Just imagine what might happen if an evil person finds this folder and runs the installer! They probably won\'t get too far, because they\'ll need to enter some user information for the database, but it\'s still best to delete this folder from your server. It is located at: [[+path]]';
 $_lang['configcheck_lang_difference'] = 'Неправилен брой записи в езиков файл';
 $_lang['configcheck_lang_difference_msg'] = 'Избраният език има различен брой записи от езика по подразбиране. Докато не е непременно голям проблем това може да означава, че езиковия файл трябва да бъде актуализиран.';
 $_lang['configcheck_notok'] = 'Един или повече конфигурационни детайли не излезнаха OK: ';
-$_lang['configcheck_ok'] = 'Проверката мина добре - няма предупреждения за докладване.';
 $_lang['configcheck_phpversion'] = 'PHP version is outdated';
 $_lang['configcheck_phpversion_msg'] = 'Your PHP version [[+phpversion]] is no longer maintained by the PHP developers, which means no security updates are available. It is also likely that MODX or an extra package now or in the near future will no longer support this version. Please update your environment at least to PHP [[+phprequired]] as soon as possible to secure your site.';
 $_lang['configcheck_register_globals'] = 'register_globals е настроена на Включено (ON) във Вашия php.ini конфигурационен файл';

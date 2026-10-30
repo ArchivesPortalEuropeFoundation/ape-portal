@@ -25,18 +25,16 @@ $_lang['usergroup'] = 'User Group';
 $_lang['filter_by_type'] = 'Filter by type...';
 
 $_lang['message'] = 'Mesaj';
-$_lang['message_create'] = 'Mesaj nou';
-$_lang['message_new'] = 'New Message';
-$_lang['message_remove_confirm'] = 'Sigur doriți să ștergeți acest mesaj?';
+$_lang['message_remove_confirm'] = 'Are you sure you want to delete this message entirely?';
 $_lang['message_send_email'] = 'Send Email';
 $_lang['message_err_nfs'] = 'Mesajul nu a fost găsit.';
 $_lang['message_err_not_specified_subject'] = 'Subiectul nu este valid sau lipsește!';
-$_lang['message_err_remove'] = 'S-a produs o eroare în timpul ștergerii mesajului.';
+$_lang['message_err_remove'] = 'An error occurred while trying to delete the message.';
 $_lang['message_err_remove_notauth'] ='Nu sunteți autorizat să ștergeți acest mesaj.';
 $_lang['message_err_save'] = 'S-a produs o eroare în timpul salvării mesajului.';
 
 $_lang['messages'] = 'Mesaje';
-$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can remove or mark as read specified messages.';
+$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can delete or mark as read specified messages.';
 $_lang['messages_all'] = 'Everyone';
 $_lang['messages_compose'] = 'Compose a message';
 $_lang['messages_forward'] = 'Forward';

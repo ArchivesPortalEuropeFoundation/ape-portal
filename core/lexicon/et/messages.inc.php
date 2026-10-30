@@ -25,18 +25,16 @@ $_lang['usergroup'] = 'Kasutaja Grupp';
 $_lang['filter_by_type'] = 'Filter by type...';
 
 $_lang['message'] = 'Kiri';
-$_lang['message_create'] = 'Loo Kiri';
-$_lang['message_new'] = 'Uus Sõnum';
-$_lang['message_remove_confirm'] = 'Oled kindel, et soovid eemalda selle kirja täielikult?';
+$_lang['message_remove_confirm'] = 'Are you sure you want to delete this message entirely?';
 $_lang['message_send_email'] = 'Send Email';
 $_lang['message_err_nfs'] = 'Kirja ei leitud.';
 $_lang['message_err_not_specified_subject'] = 'Teemat ei olnud määratud!';
-$_lang['message_err_remove'] = 'Tekkis viga kirja kustutamisel.';
+$_lang['message_err_remove'] = 'An error occurred while trying to delete the message.';
 $_lang['message_err_remove_notauth'] ='Teil puuduvads piisavad volitused, et seda kirja kustutada.';
 $_lang['message_err_save'] = 'Tekkis viga kirja salvestamisel.';
 
 $_lang['messages'] = 'Kirjad';
-$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can remove or mark as read specified messages.';
+$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can delete or mark as read specified messages.';
 $_lang['messages_all'] = 'Kõigile';
 $_lang['messages_compose'] = 'Kirjuta kiri';
 $_lang['messages_forward'] = 'Saada edasi';

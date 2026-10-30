@@ -25,18 +25,16 @@ $_lang['usergroup'] = 'Gebruikersgroep';
 $_lang['filter_by_type'] = 'Filter op type...';
 
 $_lang['message'] = 'Bericht';
-$_lang['message_create'] = 'Bericht maken';
-$_lang['message_new'] = 'Nieuw bericht';
-$_lang['message_remove_confirm'] = 'Weet je zeker dat je het bericht definitief wilt verwijderen?';
+$_lang['message_remove_confirm'] = 'Are you sure you want to delete this message entirely?';
 $_lang['message_send_email'] = 'Verstuur e-mail';
 $_lang['message_err_nfs'] = 'Bericht niet gevonden.';
 $_lang['message_err_not_specified_subject'] = 'Subject not specified!';
-$_lang['message_err_remove'] = 'Er is een fout opgetreden bij het verwijderen van het bericht.';
+$_lang['message_err_remove'] = 'An error occurred while trying to delete the message.';
 $_lang['message_err_remove_notauth'] ='Je bent niet gemachtigd het bericht te verwijderen.';
 $_lang['message_err_save'] = 'Er is een fout opgetreden bij het opslaan van het bericht.';
 
 $_lang['messages'] = 'Berichten';
-$_lang['messages_desc'] = 'Beheer berichten die door en naar jou zijn verstuurd. Berichten kunnen worden beantwoord, doorgestuurd, verwijderd of als gelezen gemarkeerd worden.';
+$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can delete or mark as read specified messages.';
 $_lang['messages_all'] = 'Iedereen';
 $_lang['messages_compose'] = 'Bericht opstellen';
 $_lang['messages_forward'] = 'Doorsturen';

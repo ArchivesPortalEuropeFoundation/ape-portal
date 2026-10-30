@@ -249,15 +249,11 @@ Ext.extend(MODx.toolbar.ActionButtons,Ext.Toolbar,{
             var f = o.form.getForm ? o.form.getForm() : o.form;
             var isv = true;
             if (f.items && f.items.items) {
-                for (var fld in f.items.items) {
-                    if (f.items.items[fld] && f.items.items[fld].validate) {
-                        var fisv = f.items.items[fld].validate();
-                        if (!fisv) {
-                            f.items.items[fld].markInvalid();
-                            isv = false;
-                        }
+                f.items.items.forEach(item => {
+                    if (item && item.validate && !item.validate()) {
+                        isv = false;
                     }
-                }
+                });
             }
 
             if (isv) {
@@ -321,7 +317,7 @@ Ext.extend(MODx.toolbar.ActionButtons,Ext.Toolbar,{
         Ext.applyIf(itm.params,o.baseParams);
         var url;
 
-        var process = itm.process.substr(itm.process.lastIndexOf('/') + 1);
+        var process = itm.process.substr(itm.process.lastIndexOf('/') + 1).toLowerCase();
         if ((process === 'create' || process === 'duplicate' || itm.reload) && res.object.id) {
             itm.params.id = res.object.id;
             if (MODx.request.parent) { itm.params.parent = MODx.request.parent; }
@@ -333,7 +329,7 @@ Ext.extend(MODx.toolbar.ActionButtons,Ext.Toolbar,{
                 action = o.actions.edit;
             } else {
                 // Else assume we want the 'update' controller
-                action = itm.process.replace('create', 'update');
+                action = itm.process.replace('create', 'update').replace('Create', 'Update');
             }
             MODx.loadPage(action, url);
 

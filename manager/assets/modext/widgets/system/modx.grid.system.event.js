@@ -6,15 +6,21 @@
  * @param {Object} config An object of options.
  * @xtype modx-grid-system-event
  */
-MODx.grid.SystemEvent = function(config) {
-    config = config || {};
+MODx.grid.SystemEvent = function(config = {}) {
+    const queryValue = this.applyRequestFilter(1, 'query', 'tab', true);
     Ext.applyIf(config,{
         title: _('system_events')
         ,url: MODx.config.connector_url
         ,baseParams: {
-            action: 'system/event/getlist'
+            action: 'System/Event/GetList'
         }
-        ,fields: ['id','name','service','groupname','plugins']
+        ,fields: [
+            'id',
+            'name',
+            'service',
+            'groupname',
+            'plugins'
+        ]
         ,autosave: true
         ,paging: true
 		,clicksToEdit: 2
@@ -22,6 +28,7 @@ MODx.grid.SystemEvent = function(config) {
         ,groupBy: 'groupname'
         ,singleText: _('system_event')
         ,pluralText: _('system_events')
+        ,showActionsColumn: false
         ,columns: [{
             header: _('name')
             ,dataIndex: 'name'
@@ -40,44 +47,22 @@ MODx.grid.SystemEvent = function(config) {
             ,width: 150
 			,hidden: true
 		}]
-		,tbar: [{
-            text: _('system_events.create')
-            ,scope: this
-            ,cls:'primary-button'
-            ,handler: {
-                xtype: 'modx-window-events-create-update'
-                ,url: config.url || MODx.config.connector_url
-                ,blankValues: true
-				,isUpdate: false
-            }
-        },'->',{
-			xtype: 'textfield'
-			,name: 'filter_key'
-			,id: 'modx-filter-event'
-			,cls: 'x-form-filter'
-			,emptyText: _('system_events.search_by_name')+'...'
-			,listeners: {
-				'change': {fn: this.filterByName, scope: this}
-				,'render': {fn: function(cmp) {
-					new Ext.KeyMap(cmp.getEl(), {
-						key: Ext.EventObject.ENTER
-						,fn: this.blur
-						,scope: cmp
-					});
-				},scope:this}
-			}
-		},{
-			xtype: 'button'
-			,cls: 'x-form-filter-clear'
-			,text: _('filter_clear')
-			,listeners: {
-				'click': {fn: this.clearFilter, scope: this},
-				'mouseout': { fn: function(evt){
-					this.removeClass('x-btn-focus');
-				}
-				}
-			}
-		}]
+		,tbar: [
+            {
+                text: _('create')
+                ,scope: this
+                ,cls:'primary-button'
+                ,handler: {
+                    xtype: 'modx-window-events-create-update'
+                    ,url: config.url || MODx.config.connector_url
+                    ,blankValues: true
+    				,isUpdate: false
+                }
+            },
+            '->',
+            this.getQueryFilterField(`filter-query-events:${queryValue}`),
+            this.getClearFiltersButton('filter-query-events')
+        ]
     });
     MODx.grid.SystemEvent.superclass.constructor.call(this,config);
 };
@@ -86,36 +71,20 @@ Ext.extend(MODx.grid.SystemEvent,MODx.grid.Grid,{
 		var m = [];
 		if (this.menu.record.service == 6) { /* user defined */
 			m.push({
-				text: _('system_events.remove')
+				text: _('delete')
 				,handler: this.removeEvent
 			});
 		}
 		return m;
 	}
 
-    ,filterByName: function(tf,newValue,oldValue) {
-        this.getStore().baseParams.query = newValue;
-        this.getBottomToolbar().changePage(1);
-        this.refresh();
-        return true;
-    }
-	,clearFilter: function() {
-		Ext.getCmp('modx-filter-event').reset();
-
-        this.getStore().baseParams = this.initialConfig.baseParams;
-        this.getStore().baseParams.query = '';
-
-    	this.getBottomToolbar().changePage(1);
-        this.refresh();
-    }
-
 	,removeEvent: function(btn, e) {
 		MODx.msg.confirm({
-			title: _('system_events.remove')
+			title: _('delete')
 			,text: _('system_events.remove_confirm', { name: this.menu.record.name })
 			,url: this.config.url
 			,params: {
-				action: 'system/event/remove'
+				action: 'System/Event/Remove'
 				,name: this.menu.record.name
 			}
 			,listeners: {
@@ -145,11 +114,11 @@ Ext.reg('modx-grid-system-event',MODx.grid.SystemEvent);
 MODx.window.CreateUpdateEvent = function(config) {
     config = config || {};
     Ext.applyIf(config,{
-        title: _('system_events.create')
+        title: _('create')
         ,width: 450
 		,autoHeight: true
         ,url: config.url
-        ,action: 'system/event/create'
+        ,action: 'System/Event/Create'
         ,fields: [{
 			xtype: 'hidden'
 			,name: 'service'
@@ -200,11 +169,10 @@ MODx.combo.SystemEventGroups = function(config) {
 		,typeAhead: true
 		,editable: true
 		,allowBlank: false
-		,autocomplete: true
 		,pageSize: 10
 		,url: MODx.config.connector_url
 		,baseParams: {
-            action: 'system/event/groupList'
+            action: 'System/Event/GroupList'
 			,combo: true
         }
     });

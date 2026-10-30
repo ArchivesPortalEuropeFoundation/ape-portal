@@ -1,5 +1,9 @@
+use ModxPro\PdoTools\CoreTools;
+use MODX\Revolution\modResource;
+
 /** @var array $scriptProperties */
-/** @var modX $modx */
+/** @var \MODX\Revolution\modX $modx */
+
 if (empty($outputSeparator)) {
     $outputSeparator = ' / ';
 }
@@ -30,14 +34,9 @@ if (empty($cacheKey)) {
 if (!isset($cacheTime)) {
     $cacheTime = 0;
 }
-/** @var pdoTools $pdoTools */
-$fqn = $modx->getOption('pdoTools.class', null, 'pdotools.pdotools', true);
-$path = $modx->getOption('pdotools_class_path', null, MODX_CORE_PATH . 'components/pdotools/model/', true);
-if ($pdoClass = $modx->loadClass($fqn, $path, false, true)) {
-    $pdoTools = new $pdoClass($modx, $scriptProperties);
-} else {
-    return false;
-}
+/** @var CoreTools $pdoTools */
+$modx->services['pdotools_config'] = $scriptProperties;
+$pdoTools = $modx->services->get(CoreTools::class);
 $modx->lexicon->load('pdotools:pdopage');
 
 /** @var modResource $resource */
@@ -74,7 +73,7 @@ $cacheKey = $resource->getCacheKey() . '/' . $cacheKey;
 $cacheOptions = ['cache_key' => $modx->getOption('cache_resource_key', null, 'resource')];
 $crumbs = '';
 if (empty($cache) || !$crumbs = $modx->cacheManager->get($cacheKey, $cacheOptions)) {
-    $crumbs = $pdoTools->runSnippet('pdoCrumbs', array_merge(
+    $crumbs = $pdoTools->runSnippet('!pdoCrumbs', array_merge(
         [
             'to' => $resource->id,
             'outputSeparator' => $outputSeparator,

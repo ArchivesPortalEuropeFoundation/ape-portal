@@ -11,6 +11,10 @@ $_lang['database_name'] = 'Andmebassi nimi';
 $_lang['database_server'] = 'Andmebassi server';
 $_lang['database_tables'] = 'Andmebaasi tabelid';
 $_lang['database_optimize'] = 'Optimeeri Andmebassi';
+$_lang['database_optimize_process'] = 'The tables are being optimized now.';
+$_lang['database_optimize_success'] = 'The tables were successfully optimized.';
+$_lang['database_optimize_error'] = 'There was an error while optimizing the database tables.';
+$_lang['database_optimize_processing'] = 'Optimizing...';
 $_lang['database_table_clickhere'] = 'Klikkige siin';
 $_lang['database_table_clickbackup'] = 'et varundada ja allalaadida valitud tabelid';
 $_lang['database_table_datasize'] = 'Andmete suurus';
@@ -18,12 +22,10 @@ $_lang['database_table_droptablestatements'] = 'Genereeri DROP TABLE laused.';
 $_lang['database_table_effectivesize'] = 'Effektiivne suurus';
 $_lang['database_table_indexsize'] = 'Indexi suurus';
 $_lang['database_table_overhead'] = 'Overhead';
-$_lang['database_table_reserved'] = 'Reserved';//sqlsrv
 $_lang['database_table_records'] = 'Kirjeid';
 $_lang['database_table_tablename'] = 'Tablei nimi';
 $_lang['database_table_totalsize'] = 'Kogu suurus';
 $_lang['database_table_totals'] = 'Kokku:';
-$_lang['database_table_unused'] = 'Unused';//sqlsrv
 $_lang['database_type'] = 'Andmebaasi tüüp';
 $_lang['database_version'] = 'Andmebaasi versioon';
 $_lang['extjs_version'] = '<a href="http://extjs.com/" target="_blank">ExtJS</a> Versioon';
@@ -44,7 +46,7 @@ $_lang['phpmailer_version'] = '<a href="https://github.com/PHPMailer/PHPMailer" 
 $_lang['server'] = 'Server';
 $_lang['servertime'] = 'Serveri Aeg';
 $_lang['serveroffset'] = 'Serveri Nihe';
-$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Smarty</a> Version';
+$_lang['smarty_version'] = '<a href="http://smarty.net/" target="_blank">Smarty</a> Versioon';
 $_lang['sysinfo_desc'] = 'Siit saate vaadata üldist informatsiooni oma MODX keskonna kohta.';
 $_lang['view_sysinfo'] = 'Süsteemi Info';
 $_lang['table_prefix'] = 'Tabeli prefix';

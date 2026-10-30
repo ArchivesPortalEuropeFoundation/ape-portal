@@ -11,6 +11,10 @@ $_lang['database_name'] = 'Імя базы дадзеных';
 $_lang['database_server'] = 'Сервер базы дадзеных';
 $_lang['database_tables'] = 'Табліцы базы дадзеных';
 $_lang['database_optimize'] = 'Аптымізаваць базу дадзеных';
+$_lang['database_optimize_process'] = 'Цяпер табліцы аптымізаваны.';
+$_lang['database_optimize_success'] = 'Табліцы былі паспяхова аптымізаваны.';
+$_lang['database_optimize_error'] = 'Узнікла памылка падчас аптымізацыі табліц базы дадзеных.';
+$_lang['database_optimize_processing'] = 'Аптымізацыя...';
 $_lang['database_table_clickhere'] = 'Націсніце тут';
 $_lang['database_table_clickbackup'] = 'для стварэння і спампавання рэзервовай копіі абраных табліц';
 $_lang['database_table_datasize'] = 'Памер дадзеных';
@@ -18,12 +22,10 @@ $_lang['database_table_droptablestatements'] = 'Дадаць каманды DROP
 $_lang['database_table_effectivesize'] = 'Сапраўдны памер';
 $_lang['database_table_indexsize'] = 'Памер індэкса';
 $_lang['database_table_overhead'] = 'Перавыдатак';
-$_lang['database_table_reserved'] = 'Зарэзервавана';//sqlsrv
 $_lang['database_table_records'] = 'Запісаў';
 $_lang['database_table_tablename'] = 'Iмя табліцы';
 $_lang['database_table_totalsize'] = 'Агульны памер';
 $_lang['database_table_totals'] = 'Усяго:';
-$_lang['database_table_unused'] = 'Не выкарыстана';//sqlsrv
 $_lang['database_type'] = 'Тып базы дадзеных';
 $_lang['database_version'] = 'Версія базы дадзеных';
 $_lang['extjs_version'] = 'Версiя <a href="http://extjs.com/" target="_blank">ExtJS</a>';
@@ -44,7 +46,7 @@ $_lang['phpmailer_version'] = 'Версiя <a href="https://github.com/PHPMailer
 $_lang['server'] = 'Сервер';
 $_lang['servertime'] = 'Серверны час';
 $_lang['serveroffset'] = 'Зрушэнне сервернага часу';
-$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Smarty</a> Version';
+$_lang['smarty_version'] = 'Версiя <a href="http://smarty.net/" target="_blank">Smarty</a>';
 $_lang['sysinfo_desc'] = 'Тут можна паглядзець агульную інфармацыю аб асяроддзі, у якім працуе MODX.';
 $_lang['view_sysinfo'] = 'Інфармацыя аб сістэме';
 $_lang['table_prefix'] = 'Прэфікс табліцы';

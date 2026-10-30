@@ -14,7 +14,6 @@ $_lang['richtext'] = 'रिच पाठ';
 $_lang['dropdown'] = 'ड्रॉपडाउन सूची मेनू';
 $_lang['listbox'] = 'सूची बॉक्स ( एकल चयन)';
 $_lang['listbox-multiple'] = 'सूची बॉक्स (बहु का चयन)';
-$_lang['list-multiple-legacy'] = 'लेगेसी एकाधिक सूची';
 $_lang['option'] = 'रेडियो विकल्प';
 $_lang['checkbox'] = 'चेक बॉक्स';
 $_lang['image'] = 'छवि';

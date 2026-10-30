@@ -11,6 +11,10 @@ $_lang['database_name'] = 'Veritabanı ismi';
 $_lang['database_server'] = 'Veri tabanı sunucusu';
 $_lang['database_tables'] = 'Veritabanı tabloları';
 $_lang['database_optimize'] = 'Veritabanını Uygun Hale Getir';
+$_lang['database_optimize_process'] = 'The tables are being optimized now.';
+$_lang['database_optimize_success'] = 'The tables were successfully optimized.';
+$_lang['database_optimize_error'] = 'There was an error while optimizing the database tables.';
+$_lang['database_optimize_processing'] = 'Optimizing...';
 $_lang['database_table_clickhere'] = 'Buraya tıklayın';
 $_lang['database_table_clickbackup'] = '&amp; yedeklemek için seçilen tabloları indir';
 $_lang['database_table_datasize'] = 'Veri Boyutu';
@@ -18,12 +22,10 @@ $_lang['database_table_droptablestatements'] = 'DROP TABLE ifadeleri oluşturun.
 $_lang['database_table_effectivesize'] = 'Etkili boyut';
 $_lang['database_table_indexsize'] = 'İndeks boyutu';
 $_lang['database_table_overhead'] = 'Ek Yük';
-$_lang['database_table_reserved'] = 'Ayrılmış';//sqlsrv
 $_lang['database_table_records'] = 'Kayıtlar';
 $_lang['database_table_tablename'] = 'Tablo ismi';
 $_lang['database_table_totalsize'] = 'Tablo boyutu';
 $_lang['database_table_totals'] = 'Toplamları:';
-$_lang['database_table_unused'] = 'Kullanılmamış';//sqlsrv
 $_lang['database_type'] = 'Veritabanı türü';
 $_lang['database_version'] = 'Veritabanı versiyonu';
 $_lang['extjs_version'] = '<a href="http://extjs.com/" target="_blank">ExtJS</a> Versiyon';
@@ -44,7 +46,7 @@ $_lang['phpmailer_version'] = '<a href="https://github.com/PHPMailer/PHPMailer" 
 $_lang['server'] = 'Sunucu';
 $_lang['servertime'] = 'Sunucu Zamanı';
 $_lang['serveroffset'] = 'Sunucu Uzantısı';
-$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Smarty</a> Version';
+$_lang['smarty_version'] = '<a href="http://smarty.net/" target="_blank">Smarty</a> Versiyon';
 $_lang['sysinfo_desc'] = 'Burada MODX ortamınız hakkında genel bilgileri görebilirsiniz.';
 $_lang['view_sysinfo'] = 'Sistem Bilgisi';
 $_lang['table_prefix'] = 'Tablo öneki';

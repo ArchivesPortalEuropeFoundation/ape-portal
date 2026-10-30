@@ -8,6 +8,8 @@
  * files found in the top-level directory of this distribution.
  */
 
+use MODX\Revolution\modManagerController;
+
 /**
  * Loads the dashboard widget create page
  *
@@ -16,7 +18,7 @@
  */
 class SystemDashboardsWidgetCreateManagerController extends modManagerController {
     /** @var array $widgetArray */
-    public $widgetArray = array();
+    public $widgetArray = [];
 
     /**
      * Check for any permissions or requirements to load page
@@ -32,8 +34,8 @@ class SystemDashboardsWidgetCreateManagerController extends modManagerController
      * @param array $scriptProperties
      * @return array
      */
-    public function process(array $scriptProperties = array()) {
-        return array();
+    public function process(array $scriptProperties = []) {
+        return [];
     }
 
     /**
@@ -42,6 +44,7 @@ class SystemDashboardsWidgetCreateManagerController extends modManagerController
      */
     public function loadCustomCssJs() {
         $mgrUrl = $this->modx->getOption('manager_url',null,MODX_MANAGER_URL);
+        $this->addJavascript($mgrUrl.'assets/modext/widgets/core/modx.orm.js');
         $this->addJavascript($mgrUrl."assets/modext/widgets/system/modx.panel.dashboard.widget.js");
         $this->addJavascript($mgrUrl.'assets/modext/sections/system/dashboards/widget/create.js');
         $this->addHtml('<script>Ext.onReady(function() {
@@ -55,7 +58,7 @@ class SystemDashboardsWidgetCreateManagerController extends modManagerController
      * @return string
      */
     public function getPageTitle() {
-        return $this->modx->lexicon('dashboards');
+        return $this->modx->lexicon('widget');
     }
 
     /**
@@ -71,7 +74,7 @@ class SystemDashboardsWidgetCreateManagerController extends modManagerController
      * @return array
      */
     public function getLanguageTopics() {
-        return array('dashboards','user');
+        return ['dashboards','user'];
     }
 
     /**

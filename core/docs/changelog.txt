@@ -2,240 +2,724 @@
 This file shows the changes in recent releases of MODX. The most current release is usually the
 development release, and is only shown to give an idea of what's currently in the pipeline.
 
-MODX Revolution 2.8.8-pl (November 21, 2024)
+MODX Revolution 3.2.4-pl (August 26, 2026)
 ====================================
-- Fix rendering of user-entered values in editable listbox-multiple TVs (#16640)
-- Update of the search processor for content-based search (#16560)
-- Fully support comma-separated constraints in form customization (#16417)
-- Add an asterisk to label of required TVs (#16594)
-- Do not dynamically assign modProcessorResponse to modConnectorResponse (#16563)
-- Avoid modLexicon deprecation warning in PHP 8.2+ (#16589)
+- Escape all scalar values written to the setup config file
+- Declare view_user permission on Security/User/GetOnline processor
+- Sign password reset and magic login tokens with a per-user HMAC
 
-MODX Revolution 2.8.7-pl (April 9, 2024)
+MODX Revolution 3.2.3-pl (July 21, 2026)
 ====================================
-- Update xPDO to 2.8.6-pl
-- Fix issue working with non-standard ports (#16455)
-- Trim context setting keys on creation (#16498)
-- Fix Element handling from within Categories tree (#16493)
-- Add guard-clause to clearDirty method (#16467)
-- Update Template Build Process (#16540)
-- Fix default value for modManagerLog.occurred column (#16527)
-- Fix sanity check in resource/create controller (#16477)
-- Update phpThumb to v1.7.22-202312071641 (#16506)
-- Avoid deprecation warning during setup for PHP 8.2 (#16482)
-- Fix Trash Manager infinite loading error (#16415)
-- Pin Installer entry to top of Extras menu (#14482)
+- Validate cultureKey before storing it as a config placeholder
 
-MODX Revolution 2.8.6-pl (September 28, 2023)
+MODX Revolution 3.2.2-pl (July 7, 2026)
 ====================================
-- Change default gravatar type for user (#16461)
-- Change weblink default to https:// (#16458)
-- Fix issue with nested menu items (#16450)
-- Fix undefined variable error in modTemplateVar (#16427)
-- Harden security/profile/get processor (#16439)
-- Fix undefined global variable $_SESSION in a CLI connector (#16425)
-- Update to phpThumb 1.7.21-202307141720 (#16456)
-- Update smarty to 3.1.48 (#16419)
+- Add checkbox style to Add Property Set window (#16883)
+- Respect skipFormatDates when sent as string from JS (#16888)
+- Use FQCN in modResource and modUser (#16919)
+- Fix template previews when installed in subdirectory (#16889)
+- Remove unused code (#16961)
+- Fix image issue in manager email template (#16953)
+- Improvements to package installer styling (#16952)
+- FIx display of readme/changelog/license in Package Manager (#16829)
+- Remove E_STRICT error handling (#16965)
+- Fix typo in download success message (#16956)
+- Fix modInputFilter root-level backticks in modifier values (#16957)
+- JS code quality, modernization for tree, elements, and resources (#16963)
+
+MODX Revolution 3.2.1-pl (May 13, 2026)
+====================================
+- Catch failure checking S3 file visibility (#16940)
+- Register Smarty date modifier to avoid deprecation warning (#16842)
+- Increase drag-n-drop image visibility in package manager (#16899)
+- Fix package metadata format (#16911)
+- Fix PHP warning: Undefined array key "updateable" (#16935)
+- Fix PHP warning: Undefined variable $image (#16933)
+- Fix Issue with Extras Installation/Updates (#16950)
+- Add AI contribution policy and update contributor governance files (#16944)
+- Fix grunt build for arm64 and add missing grunt build asset from #16831 (#16949)
+- Fix quotes breaking grid js (#16831)
+- Add SECURITY.md (#16939)
+- Clarify label and description for user_prevlogin lexicon entry (#16846)
+- Update README badges layout and add Version badge (#16868)
+- Improve PHP version error message in bootstrap (#16922)
+- Only call exif_read_data for JPEG/TIFF (#16903)
+- Update welcome_screen_url for 3.2 (#16913)
+- Change getVersionData() to use include instead of include_once (#16840)
+
+MODX Revolution 3.2.0-pl (February 17, 2026)
+====================================
+- Fix Resource Preview Functionality (#16777)
+- Fix fatal error in trim output filter (#16757)
+- Disallow Dot Character in Resource Alias for Alpha/Alphanumeric Restrictions (#16774)
+- Fix and Enhance Resource Groups Functionality (#16773)
+- Fix sorting logic in Security/Group/GetList.php (#16810)
+- Fix memory_limit calculation in modTransportPackage (#16820)
+- Resolve various deprecation warnings (#16816)
+- Fix TV render sizing for non-TV panels (#16819)
+- Mobile layout improvements to main nav & vertical tab panels (#16814)
+- Fix and enhance checkbox and radio TV rendering (#16782)
+- Fix Media Browser Sorting by Modification Date (#16772)
+- Reveal Content Above & Below Regions in Form Customization (#16789)
+- Fix non-existent snippet tags broken up by @ (#16682)
+- Editor grids permissions refactor, enhancements, and fixes (#16653)
+- Improve manager forgot login email error message (#16807)
+- Fix expired session login dialog (#16806)
+- Add generic return type to Container::get PHPDoc (#16808)
+- Return skipExtensions directly instead of exploding (#16799)
+- Ensure left bar trigger and collapsed state stay in sync (#16748)
+- Bump minimum PHP requirement to 8.1 (#16802)
+- Fix improper error message sanitization added in #16792 (#16798)
+- Resource Tree Icons Adjustment and Contrast Increase (#16761)
+- Increase default minimum and generated passsword lengths (#16796)
+- Fix z-index issue in the menu (#16778)
+- Add missing validation and lexicon for Roles (#16788)
+- Fix undefined variable error in modTemplateVar (#16780)
+- Filter special characters in error messages (#16792)
+- PHP 8.5 Compatibility (#16794)
+- Add settings for inline styles in modPHPMailer (#16791)
+- Remove JSONP callback support in modConnectorResponse (#16775)
+- Fix Textarea TV Input Options (#16747)
+- Fix mail reset method call in modUser.php (#16781)
+- Make modNamespace's translatePath method null-safe (#16763)
+- Improve handling of visibility in S3 (#16735)
+- Fix Media Browser Sorting by Modification Date (#16734)
+- Avoid fatal error when Rest request fails in Package Browser (#16738)
+- Register missing PSR interfaces to services (#16696)
+- Make regClientScript and regClientHTMLBlock work in the manager (#16700)
+- Update checkout and setup-node actions in assets workflow (#16737)
+- Make all JS files editable in the MODX manager in PHP 8.4 (#16732)
+
+MODX Revolution 3.1.2-pl (April 2, 2025)
+====================================
+- Fix Template Access grid being initially empty when creating a new TV (#16678)
+- Fix empty attributes when special characters appear in package readme (#16713)
+- Fix query to purge old installed extras (#16717)
+- Convert invalid dates to NULL in modTransportPackage.installed (#16721)
+- Fix usage of checkRequirement method (#16718)
+- Add z-index to x-form-item class (#16712)
+- Fix error in User validation that blocks creation of new Users (#16710)
+
+MODX Revolution 3.1.1-pl (February 18, 2025)
+====================================
+- Fallback for dashboard widgets in custom manager theme (#16705)
+- Deprecate modUserProfile->sessionid and do not set value (#16697)
+- Update superboxselect.js to version 1.6 and add HTML entity encoding (#16702)
+- Fix manager menu for sql_mode "ANSI_QUOTES" (#16680)
+- Fix namespaces getlist processor when cache_db is active (#16681)
+- Fix Remember Me login feature (#16685)
+- Fix datetime settings keys (#16687)
+- Fix navbar z-index (#16690)
+- Fix typos in access Lexicon (#16689)
+- Fix for MODX updates widget (#16694)
+- Fix visibility of the Install button in packages grid (#16675)
+- Fix links not clickable on 3th level (#16671)
+- Fix display of notification when User password is created/updated (#16668)
+
+MODX Revolution 3.1.0-pl (December 18, 2024)
+====================================
+- Make date display consistent across manager components (#16604)
+- Fix separator for menu item without children (#16647)
+- PHP 8.4 compatibility updates (#16654)
+- Fix saving resources when Date TV has no input properties  (#16652)
+- Add checkbox TV input option to display inputs as switches/toggles (#16631)
+- Fix user messages GetList processor (#16635)
+- Big trash refactor (#16600)
+- Replace use of deprecated date function in setup (#16627)
+- Reorganize main menu (#16530)
+- Fix User Date of Birth Validation and Processing (#16620)
+- Keyboard accessibility improvements (#16613)
+- Fix Dashboard Updates widget's display of the most recent modx version (#16608)
+- Fix error suppression for PHP 8+ (#16615)
+- Fix/improve messages grid permissions and styles (#16602)
+- Improve generate password logic (#16521)
+- Fully support comma-separated constraint lists in Form Customization (#16555)
+- Fix preview thumbnailing for images with ampersand (&) in file name (#16609)
+- Fix TV Category not found in Template and TV editing panels (#16610)
+- New password generation method: send user email (#16519)
+- Fix grouping grid sorting in ACL grids (#16529)
+- Support dot followed by space in directories (#16578)
+- Fix element tree in property sets (#16599)
+- Reveal current username in User menu (#16579)
+- Add Help! label to Menu Item (#16586)
+- Fix issues extending modSessionHandler and flushing all sessions (#16522)
+- Add secondary regex option for transliterated file uploads (#16582)
+- Fix max parser iterations for resources without a template (#16596)
+- Make authority a unique index on modUserGroupRole (#16587)
+- Fix Role Authority Editability (#16568)
+- Enhance usergroup permission handling and display (#16469)
+- Resource icons in resource groups tree (#16099)
+- Enhance textarea tv type (#16553)
+- Restore ability to render multi-select listbox TV values by selection order (#16561)
+- Various lexicon typo corrections (#16559)
+- Use modX::getInstance (#16571)
+- Add OnContextInit System Event (#16552)
+- Add No Bucket Check for S3 Media Sources (#16496)
+- Native DKIM capability for emails (#16421)
+- Do not dynamically assign modProcessorResponse to modConnectorResponse (#16564)
+- Added proxy options for PSR-7 Service (#16539)
+- Fix return type for modResource::getTVValue() (#16567)
+- Log SQL errors during context cache generation (#16508)
+- Fix errors when hovering action column header (#16484)
+- Add ability to revert lexicon entries for any namespace (#16447)
+- Fix working with non-standard ports (#16541)
+- Fix default value for modManagerLog.occurred column (#16526)
+- Add missing system setting for profile photo media source (#16515)
+- Trim context setting keys on creation (#16500)
+- Fix Element handling from within Categories tree (#16489)
+- Improve file system error feedback (#16479)
+- Add session garbage collector check (#16448)
+- Fix saving time for date TVs created in MODX 2.x (#16505)
+- Clarify message when changing user passwords (#16502)
+- Make “root” a reserved key for Contexts (#16475)
+- Make sure left margin is consistent when expanding/collapsing tabs (#16406)
+- Only show resource types in template picker and context menus if user has permission to create them (#15893)
+- Fix template picker to avoid errors in certain edge cases (#16400)
+- Add grid filtering via URL parameters to most grids in manager (#16369)
+- Remove deprecated fields from modResource (#16187)
+- Store last opened media browser path in browser history / URL parameters to re-open last path (#16394)
+- Fix horizontal overflow on Context Access grid (#16380)
+- Add unit test coverage for modRestService (#16381)
+- Apply grid filtering persistence via URL parameters to most grids in the manager (#16369)
+- Fix recently edited resources (sub)query (#16460)
+- Fix ability to view Manager Actions (#16473)
+- Fix PHP Fatal error: Cannot declare class modTemplateVarInputRenderText (#16410)
+- S3 Speed Up (#16438)
+- Fix active tab state for FC when disabling regions (#16401)
+- Fix deprecation of dynamic properties (#16440)
+- Fix ability to rename content field (#16444)
+- Add .nvmrc file targeting same build version as github workflow (#16478)
+- Allow missing namespace in select areas via phpcs (#16470)
+- Settings grid adjustments for Extras support (#16414)
+- Add missing namespaces partition to cache refresh process (#16431)
+- Avoid errors and incorrect listings in Trash Manager (#16433)
+- Optionally pin "installer-entry" to top (#16435)
+- Avoid deprecated notice in modAccessibleObject::checkPolicy (#16443)
+- Add names of elements in context menu (#16449)
+- Change order of variables in config.inc.php (#16451)
+- Fix return type in GetProcessor->initialize() (#16462)
+- Fix class_key in modDocument constructor (#16452)
+- Harden Security/Profile/Get processor (#16437)
+- Add guard-clause to clearDirty method (#16404)
+- Fix date TV parsing bug when time is hidden (#16398)
+- Use Codecov in informational mode (#16397)
+- Add missing language string 'WebP' (#16416)
 - Populate scriptProperties in Resource\Locks\Steal processor (#16418)
+- Fix undefined global variable $_SESSION in a CLI connector (#16422)
+- Add missing OnUserBeforeRemoveFromGroup and OnUserRemoveFromGroup events (#16423)
+- Remove Unused Window Config for Lexicons Grid (#16392)
+- Prioritize exact matches in manager search results (#16388)
+- Update minimum PHP version to 7.4 and recommended version to 8.0.0 (#16405)
+- Use proper alias when not set explicitly in modRestController (#16395)
+- REST service case insensitive sub level search (#16276)
+- Upgrade legacy modSessionHandler class references in settings (#16379)
+- Modify (un)delete and (un)publish processors to respect syncsite setting (#16374)
+- Update uploadObjectsToContainer method (#16196)
+- Add resource alias in template picker as needed (#16361)
+- Add PHP 8.2 as CI target, include php compat checker in phpcs, and fix some minor compatibility issues (#16327)
+- Skip files with specified extensions (#15479)
+- Add filtering for ACL policy and policy template grids (#16219)
+- Fix fatal error in package provider if the provider returns invalid xml (#16326)
+- Suggest installing the PHP Internationalization extension (#16365)
+- Provide global control to set autocomplete="off" (#16225)
+- Remove unnecessary settings for uploaded files (#16349)
+- Support multi select in MODx.Browser when multiSelect: true is provided (#16348)
+- Fix and enhance UserGroup ACL Permissions Grids and Filtering (#16355)
+- Cleanup legacy PHP version references (#16359)
+- Prevent OnResourceDelete from firing on every Resource update (#16328)
+- Fix "Undefined array key" warnings in modPhpThumb (#16341)
+- Fix package manager showing only last version changelog (#16354)
+- Fix tab tracking error in package manager (#16360)
+- Fix tab tracking issue for plugin panel (#16364)
+- Only post coverage comment when coverage changes. (#16358)
+- Fix parsing modifiers when encountering literal brackets (#16302)
+- Fix parsing long template tags under some conditions (#16316)
 
-MODX Revolution 2.8.5-pl (March 7, 2023)
+MODX Revolution 3.0.3-pl (January 17, 2023)
 ====================================
-- Prioritize exact matches in search result (#16244)
-- Modify delete and undelete processors to respect syncsite setting (#16060)
-- Update xPDO to 2.8.5-pl
-- Don't pass param by reference in feed_start_element (#16325)
-- Remove create_function from moddashboardwidget (#16290)
-- Suppress PHP8 Smarty warnings (#16301)
-- Fix 'delete_static_resource' permission (#16315)
-- Pass correct type to setlocale to prevent PHP 8 fatal error (#16312)
-- Update phpThumb v1.7.19-202210110924 (#16310)
-- Add support for WebP images in the Media Browser (#16257)
-- Only show deleted resources in trash manager if filtered (#16228)
-- Fix inability to drag/drop files and folders in tree (#16202)
-- Persist non-standard ports in site URL (#16201)
+- Add new error reporting for grids (#16331)
+- Fix Validation Error When Switching TV Types (#16319)
+- Fix TypeError exceptions when restoring deleted resources (#16303)
+- Permissions Combo Fix (#16273)
+- Grid filtering via URL parameters -- Usergroup ACL (#16089)
+- Fix issues with TV Media Sources upgrading from 2.x (#16338)
+- Update legacy Element class references for PropertySets (#16337)
+- Ensure modHashing::getHash is limited to modHash instances (#16320)
+- Catch dashboard widget errors on a per-widget basis (#16289)
 
-MODX Revolution 2.8.4-pl (April 28, 2022)
+MODX Revolution 3.0.2-pl (November 16, 2022)
 ====================================
-- Hide resource create button in resource groups panel (#15833)
-- Fix active state for files in main tree (#15835)
-- Add zero-padding decimal place option for number TVs (#15840)
-- Make hidden TV's work for weblinks, symlinks and static resources  (#16162)
-- Skip creation of thumbnails for SVGs (#15865)
-- Fix setStaticElementPath method (#15912)
-- Ignore E_DEPRECATED and E_STRICT errors in setup (#16147)
-- Update to Smarty 3.1.44 (#16146)
-- Fix issue with special characters in media source folder names (#16071)
-- Make MessageBox minWidth configurable (#15995)
-- Update to xPDO 2.8.4-pl (#16143)
-- Fix combobox not expanding if processor response is slow (#15992)
-- Improve regex for stripping MODX tags in dashboard widgets (#15964)
-- Fix disabled trash button (#15993)
-- Improve stripmodxtags output filter (#15963)
-- Remove duplicate CURLOPT_USER settings in modRest (#15949)
-- Fix isBinary check (#15900)
-- Add configurable extension for static html files (#15722)
-- Hide user settings tab based on permissions (#15756)
-- Update phpThumb v1.7.17-202109221111 (#15816)
-- Lazy load thumbnails in media browser (#15804)
-- Update PHPMailer 6.5.1 (#15808)
-- Fix image TV display via hash (#15731)
-- New edit_media_source lexicon (#15737)
-- Fix PHP 5.6 compatibility issue on system info (#15728)
+- Remove the scrolling overflow from the modx-browser panel (#16280)
+- Determine upload path based on the tree node's path attribute (#16292)
+- Fix getTag() side effects in MODX 3 (#16294)
+- Fix nested tag parsing in filters (#16288)
+- Fix ability to edit .htaccess (#16249)
+- Exclude @SELECT binding from properties check (#16286)
+- Ignore symlinks to avoid errors (#16272)
+- Enable SVG thumbnail preview for image TVs (#16271)
+- Avoid PHP warnings by only requiring deprecated.php once (#16269)
+- Fix installation for specific MySQL passwords (#16264)
+- Fix rendering of user-entered values in editable listbox-multiple TVs (#16242)
+- Check if modx-content is defined before calling doLayout (#16230)
+- Avoid instantiating namespaces, extension packages, and the OnMODXInit event during setup (#16291)
+- Include missing Flysystem FTP adapter (#16203)
+- Correct processor action names (#16246)
+- Add support for WebP images in the Media Browser (#16235)
+- Change behavior of ENTER key in settings grid cell editor (#16220)
+- Handle package provider API error (#16217)
+- Fix fatal TypeError in modRestService (#16190)
+- Restore download listeners (#16184)
+- Fix typeahead in settings combo for Context/User section (#16176)
+- Prevent PHP warning: Undefined variable $nvalue (#16199)
+- Revert copy paths for a directory / file in tree (#16180)
+- Follow-up element lexicon and style changes (#16170)
 
-MODX Revolution 2.8.3-pl (May 28, 2021)
+MODX Revolution 3.0.1-pl (April 28, 2022)
 ====================================
-- XSS issues reported by Solar Security (#15720)
-- Patch MagpieRSS for basic use in PHP 8 (#15721)
-- Avoid setting headers for modStaticResource when returning content (#15715)
-- Adjust filtering of placeholders and accessible options for `@SELECT` (#15714)
-- Fix incorrect id format (#15709)
-- Fix filesize() calculation for static resources (#15697)
-- Return content from non-binary static resources (#15702)
-- Fix PHP 8 compatibility with phpThumb (#15706)
-- Fix PHP 8 warnings in modPhpThumb (#15705)
-- Fix PHPMailer version display (#15704)
-- PHP 8 compatibility (#15699)
-- Pass auth token to Browser controller config (#15692)
-- Update to PHPMailer 6.4.1 (#15693)
+- Make sure file name and line number are included in error messages (#16106)
+- Add MODx.util.FileDownload helper method (#16150)
+- Fix hidden TVs for all core resource types (#16163)
+- Fix count in Element/Template/GetList processor (#16160)
+- Normalize boolean value of the combo property (#16161)
+- Add Unit Test for modInputFilter (#16165)
+- Rework concatenated lexicon entries (#16156)
+- Don't show Configuration Check dashboard widget if all checks pass (#16151)
+- Fix file downloads from Media Browser (#16152)
+- Improve Form Panel Validation and Field Display - Part 6, Plugin Panel (#16125)
+- Improve Form Panel Validation and Field Display - Part 5, Chunk Panel (#16128)
+- Improve Form Panel Validation and Field Display - Part 4, Template Panel (#16122)
+- Improve Form Panel Validation and Field Display - Part 3, Snippet Panel (#16119)
+- Improve Form Panel Validation and Field Display - Part 2, TV Panel (#16118)
+- Remove console.logs from layout (#16153)
+- Adjust placeholder filtering and accessible options for @SELECT (#16149)
+- Fix typo in setup error message (#16112)
+- Fix uncaught TypeError when calling a deprecated method from file (#16142)
+- Use random hash in getTag if Element name is blank (#16127)
+- Fix display of optimize and truncate links in Database Tables panel (#16132)
+- Treat email contents as UTF-8 to fix mangled characters (#16130)
+- Fix inability to specify password in user create/update (#16126)
+- Improve Form Panel Validation and Field Display (#16012)
 
-MODX Revolution 2.8.2-pl (April 28, 2021)
+MODX Revolution 3.0.0-pl (March 30, 2022)
 ====================================
-- Reduce log_level to WARN on cache errors [#15532]
-- Prevent access to sensitive user data [#15678]
-- Exclude sensitive config values from placeholders [#15677]
-- Flatten nested lexicon parameters by dot notation [#15490]
-- Add permissions to enforce access to specific resource types [#15655]
-- Restrict static resources to predefined path [#15656]
-- Support SameSite attribute in session cookies [#15666]
-- Strip base_url only from beginning of relative url [#15418]
-- Remove legacy file manager processors [#15646]
-- Fix invalid getOption call in modResource->filterPathSegment [#15647]
-- Restrict file management to allowed file types [#15643]
-- Prevent XSSI access to `MODx.config` by requiring auth token [#15644]
-- Add missing password validation characters to lexicon [#15611]
-- Update PHPMailer to 6.4.0 [#15618]
-- Update xPDO to version 2.8.3-pl
-- Remove unnecessary type="text/javascript" [#15570]
-- Implement isDirty function in MODx.panel.ImageTV and MODx.panel.FileTV [#15534]
-- Improve the lexicon entry for mail_smtp_prefix [#15527]
-- Update url in system setting base_help_url [#15571]
-- Update Smarty to 3.1.39 [#15566]
-- Add mail_smtp_autotls system setting [#15536]
-- Fix bug with special chars in directory or file names [#15505]
-- Update base_help_url system setting [#15571]
-- Improve the processor permission response error message [#15402]
-- Change modSessionHandler->gc() to return number of removed sessions [#15393]
-- PHP 8 Compatibility [#15335]
-- Improve removal of nested MODX tag content in sanitizeRequest [#15367]
-- Fix Plugin and Template name validation [#15349]
-- Fix missing package signature when uninstalling [#15315]
+- Ensure non-standard ports are maintained in URL (#16087)
+- Fix incorrect word wrapping in manager panel (#16094)
+- Prevent autofilling passwords (#16105)
+- Fix static file field visibility in Element panels (#16102)
+- Fix various static element issues (#16098)
+- Add missing prefix to static_elements_html_extension lexicons (#16090)
+- Update xPDO to 3.1.0 and fix Container method signatures (#16088)
+- Fix Element Panel Static File UI (#16082)
+- Update PHP versions in setup tests (#16077)
+- Correct config check lexicon for cache mutability (#16085)
+- Enable popper for submenus on hover (#16041)
+- Fix typo for permission 'delete_static_resource' (#16079)
+- Call OnFileManagerFileRename if upload_translit renames new file (#16051)
+- Stay on current page after language switch (#16069)
+- Move existing value of mail_smtp_prefix to mail_smtp_secure (#16065)
+- Match Form Customization field order with resource form (#16052)
+- Fix dates on dashboard feeds (#15980)
+- Add explanatory text to create category (#16050)
+- Change lexicon key and text of mail_smtp_prefix (#16062)
+- Fix static element save issue (#16043)
+- Correct policy group descriptions (#16057)
+- Change brackets for category child elements (#16027)
+- Optionally determine context from config.context.php (#16045)
+- Change height of content (#16037)
+- Change minWidth of popup window in trash (#15984)
+- Cleanup unused background image logic (#16020)
+- Fix rename attribute or container in user extended field (#16039)
 
-MODX Revolution 2.8.1-pl (October 22, 2020)
+MODX Revolution 3.0.0-rc2 (February 3, 2022)
 ====================================
-- Fix alias_visible/syncsite checkboxes when switching templates [#15289]
-- Allow directories with name "0" [#15296]
-- Fix login button margins on mobile [#15300]
-- Hide Update User Group button on Users tab when editing User Group [#15290]
-- Only log session info if session is initialized [#15292]
-- Avoid returning resource_groups on resource save [#15293]
-- Fix JS TypeError if image/file TV fails validation [#15282]
-- Add `upload_check_exists` system setting [#15285]
-- Fix XSS in resource group name at TV > Access Permissions [#15280]
-- Fix XSS in resource list TV [#15280]
-- Fix fatal error in url TV input type [#15279]
-- Fix fatal error in System Info [#15277]
+Increase the specificity for dashboard table CSS rules (#15979)
+Revert passing script variables by reference (#16030)
+Prevent random container conversion on resource move (#16001)
+Apply JSON_INVALID_UTF8_SUBSTITUTE flag to json_encode (#16025)
+Make MessageBox minWidth configurable (#15996)
+Change Children to composite relation for modUserGroup (#15968)
+Improve regex for stripping MODX tags in dashboard widgets (#15974)
+Fix selecting parent in quick create resource (#16002)
+Add cache-busting to manager JS (#16016)(#16026)
+Fix 'undefined' error if TV under content (#16008)
+Split logs permission into mgr_log_view/erase (#15981)
+Improve stripmodxtags output filter (#15975)
+Remove unnecessary uses of deprecated strftime() (#15999)
+Mark modX::parseChunk as deprecated (#15978)
+Fix Zend OPcache API warning when upgrading MODX (#15911)
+Fix aliases for resource controllers (#15997)
+Fix disabled trash button (#15994)
+Fix blank page when creating dashboard widget (#15987)
+Fix empty files not being clickable in the file tree (#15985)
+Display username in user menu (#15973)
+Switch resource_preview to resource_view (#15902)
 
-MODX Revolution 2.8.0-pl (October 6, 2020)
+MODX Revolution 3.0.0-rc1 (January 20, 2022)
 ====================================
-- Prevent limited manager users from interacting with files in any media source
-- Fix assorted stored XSS issues in the manager [#15273]
-- Fix XSS in file upload and file tree [#15262]
-- Fix display of pagination toolbar [#15246]
-- Add check existing file on upload [#15232]
-- Update Smarty to 3.1.36 [#15249]
-- Prevent potential XXE vulnerability in modRestService [#15238]
+- Fix ability to edit empty files (#15977)
+- Simplify lexicons in grids (#15673)
+- Flatten lexicon parameters by dot notation (#15492)
+- Fix PHP warning: trim() expects parameter 1 to be string, array given (#15624)
+- Fix subsubnav position issue (#15970)
+- Fix undefined index in modMediaSource (#15966)
+- Fix combobox not expanding if processor response is slow (#15926)
+- Pass correct type to setlocale (#15961)
+- Update category's rank in the tree after save (#15956)
+- Fix setStaticElementPath method (#15921)
+- Add loading mask to Package Manager (#15907)
+- Form customization bug fixes and improvements (#15889)
+- Remove redundant session test in setup (#15941)
+- Add error_page and site_unavailable_page protection (#15579)
+- Fix Firefox rendering issues (#15962)
+- Fix UpdateFromGrid processor for Form Customization Sets (#15955)
+- Fix labels and descriptions in TV quick create/edit (#15951)
+- Add permissions to enforce access to specific resource types (#15888)
+- Setup context improvements (#15868)
+- Make validation error messages consistent on save (#15937)
+- Add PHP 8.1 to CI matrix (#15960)
+- Update xPDO to 3.0.1 for PHP 8.1 compatibility (#15959)
+- Add missing Static Resources lexicon key (#15931)
+
+MODX Revolution 3.0.0-beta2 (November 23, 2021)
+====================================
+- Change order of Directory/File menu items in tree [#15759]
+- Remove unused processor Security/User/Group/GetList [#15910]
+- Fix isBinary check [#15901]
+
+MODX Revolution 3.0.0-beta1 (November 9, 2021)
+====================================
+- Fix problems in lexicon creation form [#15892]
+- Remove superfluous lexicon entries [#15884]
+- Configurable extension for static html files [#15855]
+- Add zero-padded decimal option for number TVs [#15890]
+- Restrict static resources to predefined path [#15885]
+- Remove unused refreshTVs method [#15882]
+
+MODX Revolution 3.0.0-alpha3 (October 27, 2021)
+====================================
+- Fix accessing $modx->controller from plugins and services [#15871]
+- Fix POST requests through modTransportProvider::request [#15869]
+- Remove reference to renamed upgrade script [#15863]
+- Upgrade Smarty to v4 [#15859]
+- Use Guzzle HTTP factory [#15856]
+- Fix duplicate array key [#15860]
+- Improve text styles in package manager [#15862]
+- Fix typo in lexicon [#15853]
+- Hide denied context menu items in elements tree [#15634]
+- Fix errors in Resource\GetNodes processor [#15834]
+- Fix form customization on static resources [#15637]
+- Remove 'import resources' and 'import site' from core [#15841]
+- Remove legacy class log message in modX::loadClass [#15842]
+- Fix create tv panel broken by non-English lexicons [#15846]
+- Fix preview_file field in schema [#15847]
+- Various security patches [#15843]
+- Make CI build command agnostic to the build tool itself [#15845]
+- Refactor template variable creation [#15773]
+- Remove obsolete contentType field [#15822]
+- Allow language selection with Tab key in setup [#15823]
+- Add policy count column to policy templates [#15839]
+- Correct edit media source lexicon in tree [#15738]
+- Improve action buttons UX [#15574]
+- Move deprecated logging into dedicated table/view [#15002]
+- Improve Button Styling in Modals [#15826]
+- Hide broken navigation in trees [#15746]
+- Add build assets to CI workflow [#15810]
+- Fix issues for plugins that pass around xPDOObjects [#15809]
+- Add template picker for creating new resources [#15535]
+- Hide user settings tab based on permissions [#15776]
+- Lazy load thumbnails in media browser [#15805]
+- Fix Tab Visibility in User Group Editing Panel [#15802]
+- Modernize manager template build workflow [#15793]
+- Fix image TV display via hash [#15775]
+- Prevent phpcs from failing on warnings [#15803]
+- Presume default patch level of 0 when not defined by package [#15791]
+- Improve field selection error for package provider [#15789]
+- Resolve S3 Media Source issues from Flysystem upgrade [#15786]
+- Refactor modTransportProvider using PSR-7 client [#15781]
+- Improve RTL styles [#15758]
+- Restore user password display [#15629]
+- Assorted modRest improvements [#15777]
+- Add PSR-7/17/18 HTTP services [#15779]
+- Avoid removing Element/GetClasses processor [#15780]
+- Add typeahead to Resource List TV [#15734]
+- Add missing user password validation characters [#15630]
+- Require auth token to access MODx.config to prevent XSSI [#15645]
+- Remove SQL Server support [#15761]
+- Skip session configuration check in CLI setup [#15769]
+- Decrease LOG_LEVEL for cache errors [#15753]
+- Upgrade flysystem to v2 [#15757]
+- Make naming consistent when duplicating user in grid [#15755]
+- Filter sensitive config values from placeholders [#15754]
+- Strip base_url only from beginning of relative url [#15751]
+- Update MODX logo in base template [#15750]
+- Change order of menu items for Context in tree [#15749]
+- Fix import section lexicons [#15747]
+- Fix displaying big SVG images in media browser [#15481]
+- Update minimum PHP version to 7.2
+- Change file creation behavior in media browser [#15654]
+- Support SameSite attribute in session cookies [#15669]
+- Set code of conduct for the repo [#15671]
+- Fix ignoring phpcs configuration file [#15668]
+- Fix the appearance of PHP notices on the dashboard page [#15650]
+- Fix issue when sending an internal message to the user [#15511]
+- Add return link to package management on a page of single package [#15612]
+- Switch non-index fields back to 255 char limit [#15398]
+- Add intermediate tablet breakpoint to improve view on small screens [#15259]
+- Improve language selector accessibility on the login page [#15627]
+- Add possibility to translate message about site unavailability [#15537]
+- Fix style of information messages in installer view [#15642]
+- Add clarity within creating folders in media sources [#15652]
+- Add endpoint property to S3 media source [#15641]
+- Add PHP Code Sniffer configuration file [#15640]
+- Fix filterPathSegment method call [#15638]
+- Rename Admin group to proper name of Access Policy Template Group [#15628]
+- Fix missed Developer Access Policy [#15626]
+- Fix permissions checking in modAccessibleObject objects [#15632]
+- Fix unavailable toggle language menu item because missed permission [#15621]
+- Fix link to the proper version in welcome dialog [#15613]
+- Update favicon in the installation folder [#15602]
+- Add the EXTR_REFS flag to the extract function [#15578]
+- Fix class key default value in the user creation form [#15620]
+- Add code quality GitHub Action [#15603]
+- Fallback to username when full name is missed in the Who is online widget [#15596]
+- Add an required attribute for admin creation fields during installation [#15601]
+- Fix MakeUrlTest->testSingleParameter test provider [#15594]
+- Remove deprecated modClassMap [#15079]
+- Fix context sub-menu not appearing in resource tree [#15593]
+- Fix the lexicon entries of upload_translit [#15600]
+- Fix trash page permission issues [#15482]
+- Hide dependent forms until items are not selected in trees [#15478]
+- Update base_help_url system settings with new link to documentation [#15572]
+- Change lexicon on update widget [#15591]
+- Simplify lexicons for grids [#15420]
+- Fix Add button style glitches in dashboards [#15599]
+- Add transliteration of files when uploading to a media source #modxbughunt [#15457]
+- Increase required php version to 7.1 [#15589]
+- Update information about the project in the readme file [#15562]
+- Implement isDirty function in MODx.panel.ImageTV [#15516]
+- Correct fields in the User / Account sections [#15539]
+- Change display styles for system information [#15554]
+- Remove TV with "list-multiple-legacy" type [#15489]
+- Translate descriptions for policies, policy templates and policy template groups [#14009]
+- Adjust class names in principal_targets system setting [#15529]
+- Fix preview thumbnail issue [#15526]
+- Fix image rotation in media browser [#15484]
+- Fix PHP notices on login page [#15456]
+- Adds missing lexicon file_folder_err_update [#15547]
+- Set controller property in config [#15552]
+- Change old class name to FCQN class_key for resources in tree [#15424]
+- Remove unnecessary type attribute in script tags [#15533]
+- Update logo and icon [#15444]
+- Add mail_smtp_autotls system setting [#15549]
+- Fix typo and change the name of upgrade scripts [#15548]
+- Adjust PR template to encourage using right format to connect issues [#15545]
+- Remove unnecessary type="text/javascript" [#15533]
+- Support properties for @CHUNK/@SNIPPET bindings [#15488]
+- Fix legacy class names [#15521]
+- Update editorconfig rules [#15520]
+- Replace 'modPlugin' with modPlugin::class in elementClassKey checks [#15519]
+- Decode URI of directory in quick create file [#15517]
+- Fix regular expression for file download [#15512]
+- Improve changelog display when installing extras [#15486]
+- Increase width of text TV input [#15485]
+- Import missing classes [#15477]
+- Fix loading package metadata for modx.transport [#15466]
+- Display name of elements in delete messages [#15463]
+- Fix PHP notices about undefined variables [#15459]
+- Remove http:// from empty weblink field on resource create form [#15422]
+- Update url in system setting base_help_url [#15411]
+- Fix HTTPS check on setup bootstrap [#15487]
+- Allow installation to work as expected behind a reverse proxy with HTTPS [#15470]
+- Improve behavior of blocking users [#15442]
+- Fix resource breadcrumbs if the resource is deleted [#15243]
+- Only log session info if session is initialized [#15308]
+- Improve removal of nested MODX tag content in sanitizeRequest [#15370]
+- Improve Navigation for Access Control Lists > User Groups & Users [#15159]
+- Various quick search improvements [#15158]
+- Improve layout of additional options for TV List Box (Single Select) type [#15150]
+- Remove allowNegative parameter for TV with number type [#15119]
 - Fix incorrect path setting when uploading files [#15227]
 - Add indication of selected file and expand active source in tree [#15228]
 - Display caption instead of description in template TV grid [#15231]
-- Create dedicated method to get resource preview URL [#14954]
-- Fix bug when emptying resource trash [#15171]
-- Fix url parameters in config.js processor [#15165]
+- Make error_handler_class available as service [#15162]
+- UI improvements for site_name in header [#15180]
+- Changed "remove" to "delete", "update" to "edit" in lexicons [#15155]
 - Localize anonymous in context interface [#15153]
-- Update xPDO to 2.8.1
-- Use 0 if id is undefined [#15103]
-- Load tree_show_resource_ids permission [#15101]
-- Set error message by field name instead of id [#15099]
+- Fix drop animation appearing at the wrong position for dragged elements [#15111]
+- Resize static fields on statick checkbox toggle [#15100]
+- Change xtype to textarea for description in grids [#15126]
+- Change isfolder field in active resource [#15078]
+- Use 0 if id is undefined [#15102]
+- Set error message by field name instead of id [#15098]
 - Fix typeAhead parameter check [#15069]
-- Prevent XSS on template name in TV template access grid [#15142]
-- Fix login screen PHP notice [#15140]
-- Prevent XSS on Template's name [#15137]
+- Link to help localize MODX added to Help & Support [#15138]
 - Prevent path traversal when sending registry message [#15134]
-- Fix combocolumn grid refresh [#15122]
-- Will add the image format `webp` to the list of allowed `Uploadable File Types` and `Uploadable Image Types` [#15114]
-- Add "Allow Blank" setting to URL, RichText, Image & File Template Variables [#15106]
-- New lexicon for edit content type [#15095]
-- Add numberfield as Field Type option for system settings [#15092]
-- Add responsive styles for login screen [#15048]
+- Fix a second refresh of the grid when opening a combo box [#15123]
+- New lexicon for edit content type [#15094]
+- Fix resource drag & drop  setting `is_folder` to mark parent as container [#15076]
+- Add numberfield as Field Type option for system settings [#15093]
+- Remember filter properties for system setting grid from browser url [#15086]
 - Prevent rewrite of .well-known directory used by LetsEncrypt [#15033]
 - Allow custom values in Listbox (Multi-Select) TV [#14957]
 - Fix DSN creation during an update with an existing port [#15083]
-- Update phpThumb 1.7.15 [#15071]
-- Clear phpThumb connector properties [#15055]
-- Update PHPMailer to 5.2.28 [#15041]
-- Fix a Fatal Error when upgrading from MODX Revolution 2.5.x or earlier [#15053]
-- Improve the error handling and showing invalid fields when creating/editing resources or elements [#14743, #15116, #15088]
-- Prevent error when creating a new folder in media source root [#15263]
-- Add "Update User Group" button to Access Control Lists > User Groups & Users for easier navigation [#15270]
-
-MODX Revolution 2.7.3-pl (February 27, 2020)
-====================================
-- Prevent reserved modResource fields `alias_visible` and `properties` to be used as Template Variable names [#15035]
+- Clear phpThumb connector properties [#15068]
+- Date TV improvements [#15000]
+- Improve navigation styles in element tree [#14989]
+- Prevent overwriting apache_request_headers() in modRestServiceRequest [#15060]
+- Fix checkbox toggling for custom context paths in setup [#15008]
+- Remove references to safe_mode and related lexicons [#15058]
+- Fix nested output filters [#14458]
+- Add JSON Grid xtype [#14959]
+- Fix `allowedFileTypes` being ignored in the Media Browser [#15046]
 - Remove "allowBlank: false" for symlink/weblink in quick update [#14981]
-- Add missing AddToGroup events in modSecurityGroupUserCreateProcessor [#15021]
+- Improve styles for login [#15018]
+- Add missing AddToGroup events in Security/Group/User/Create processor [#15022]
 - Use single-quotes in MySQL queries for modTransportPackage for ANSI_QUOTES compatibility [#15011]
 - Add context key to reload URL when switching templates [#14998]
-- Fix display of #modx-site-info depending on width [#14779]
-- Limit deprecated modAction message to current package during install/uninstall [#14303]
-- Apply `MODx.util.safeHtml` to feed dashboards [#14946]
-- Make MODX Browser work on mobile screens [#14774]
-- Fix deprecation warnings on curly brace string offset access syntax for PHP 7.4 compatibility [#14863]
-- Set autocomplete to off on username in user edit form [#14838]
-- Fix the position of the right caret when `Show Descriptions in Top Menu` is set to `No` [#14778]
-- Update node-sass to a version that supports macOS Catalina [#14789]
-- Fix an console error when loading the Load Access Control List Panel [#14809]
-- Fix an issue where the amount of items in context settings would not match the amount of displayed items [#14801]
+- Fix package dependency restrictions not working [#14904]
+- Fix fatal error when updating a git alpha1 install without running composer update [#14996]
+- Fix positioning of reset-to-default button on TVs [#14686]
+- Change style for uninstalled packages in the package manager [#14686]
+- Improve modal styling with more padding around buttons [#14978]
+- Fix resource drag & drop ordering [#14987]
 
-MODX Revolution 2.7.2-pl (September 26, 2019)
+MODX Revolution 3.0.0-alpha2 (January 28, 2020)
 ====================================
-- Allow safe html in system setting description [#14453]
-- Fix incorrect password behavior and message [#14085]
-- Resolve 0 integer values marked as undefined when required [#14658]
-- Fix transparency in .png for Template Variables [#14664]
+- Add header breadcrumbs throughout manager [#14890]
+- Remove modAction and legacy controller support [#14927]
+- Apply `MODx.util.safeHtml` to feed dashboards [#14946]
+- Fixed transparency in .png for TV [#14906]
+- Add missing unsigned attribute to integer foreign key fields in mysql schema [#14902]
+- Remove legacy grids [#14875]
+- Change the way deprecated class aliases are included [#14912]
+- Make sure processors are instantiated with getInstance for derivative logic [#14921]
+- Add updated DI Container and add support for namespaces to define a bootstrap.php file to init/register services [#14920]
+- Fix resources showing twice in the tree when marking a resource as deleted from the resource panel [#14893]
+- Remove actions icon for the list of permissions in a policy [#14936]
+- Fix invalid media source path causing root to be shown [#14024, #14038]
+
+MODX Revolution 3.0.0-alpha1 (December 12, 2019)
+====================================
+- Fix deprecation warnings on curly brace string offset access syntax for PHP 7.4 compatibility [#14863]
+- Format timestamp to date & time in edit file panel [#14883]
+- Add links to grid items in manager [#14864]
+- Fix stretched user avatars in dashboard widgets [#14840]
+- Set autocomplete to off on username in user edit form [#14839]
+- Fix limit for context settings [#14819]
+- Allow in-line editing in FC sets grid [#14781]
 - Prevent users without edit_locked permission from editing locked elements [#14739]
 - Lock setup after it is successfully executed [#14692]
-- Allow an empty caption when duplicating a Template Variable [#14386]
-- Escape instances of new MySQL reserved word rank [#14701]
-- Check if modx-content is defined before calling doLayout [#14593]
-- Add additional .sub class in menu for nested li [#14671]
-- Update PHPMailer to 5.2.27 to address potential vulnerability [#14653]
-- Check for default URL scheme value as string [#14643]
-- Fix notices regarding IMG_WEBP constants not being defined for PHP version where support for WEBP isn't advertised [#14494]
-- Fix an issue where an resource would not be published when the pub_date is equal to "now" [#14609]
-- Added default styles for scroll in webkit based browsers [#14553]
-- The menu entry "Manager Actions" has been renamed to "Manager log" [#14495]
-- Updated phpThumb to a version that fixes images getting a black background color when converting an image with transparency to a format without alpha support. [#14477]
-- Check extracted files for allowed extensions by option [#14433]
-- Improved security in contexts in the manager [#14357]
-- Fix using wrong option for upload_images [#14460]
-- Fix for thumbnails not rendering for media sources with spaces in URL's [#14301]
+- Generate sortable tag signature with serialized array values [#14689]
+- Escape instances of new MySQL reserved word rank [#14705]
+- Fix broken avatar when default media source is modified [#14544]
+- Define IMG_WEBP constant in version of PHP without it [#14647]
+- Setup redesign [#14507]
+- Add widget welcome dashboard changes [#14607]
+- Media browser reload [#14570]
+- Fixed bug for checking the table prefix while installing MODX [#14543]
+- Refactor model for xPDO 3.x and PSR-4 autoloading [#14534]
+- Automatically marking required fields by an asterisk [#14522]
+- Using a single pattern for elements action buttons like for resources [#14463]
+- A status notification is shown when optimizing the database via System Information [#14525]
+- Fixes an issue that would cause no results to display when using spaces before/after a search term in the search field [#14523]
+- System Information now shows the correct version numbers of Smarty and PHPMailer [#14517]
+- The minimum required PHP version for MODX is PHP 7.0 [#14488]
+- If you edit a resource and at the same time move it in the tree through drag and drop the menuindex will now stay in sync [#14423]
+- Alter modUserProfile gender field to tinyint from int [#14412]
+- Return empty string for empty xml tag in modRestService [#14305]
+- Missing file size translation and proper description for selected files in Media Source Browser [#14360]
+- Change default values of automatic template assignment, tree node name fallback, and preserve menuindex system settings [#14328]
+- Added normalize.css [#14369]
+- Adds check for tree render on Access Control Lists page [#14451]
+- Fixes the bug when matches names of policy before saving [#14449]
+- Will add the image format `webp` to the list of allowed `Uploadable File Types` and `Uploadable Image Types` [#14356]
+- Added a new property `contentField` to the `modx-panel-resource` component [#14446]
+- Customized icons for content types [#14383]
+- Changes the font stack for displaying code [#14427]
+- Protect system directories from removing and renaming [#14374]
+- Prevent Google Chrome translations at the admin panel [#14414]
+- Improve the file preview in the media manager [#14372]
+- Add "redirect to duplicate" option when duplicating resources and elements
+- Protect MODx.grid.Grid against XSS vulnerabilities by default [#14344]
+- Using (single) square brackets around MODX tags is now possible [#13904]
+- The default manager time format (`manager_time_format`) for new installations is set to the 24-hour clock format [#14325]
+- Template Variables tab is now before the Settings tab when editing a resource [#14067]
+- Setup will now try to find the core folder by looking at existing config.core.php [#11888]
+- Correction on the consistency of design and buttons [#14306]
+- Use more consistent naming of "New" buttons [#1188]
+- Disabled Gravatar by default for new installations [#14215]
+- Sanitize parameters in the RestServiceRequest class [#14056]
+- Update access policy description to include warnings [#13999]
+- Fixed a fatal error that might occur when running setup on Windows after using `composer create-project` [#14241]
+- In the manager navbar, show visual indicators for menu items with children [#14292]
+- Remove support for "Uploadable Flash Types" [#14252]
+- FontAwesome 5.6.3 and updated versions of frameworks [#14031]
+- Add modifiers to get information from filepath: dirname, basename, filename, extension [#14198]
+- Remove outdated classes for converting evo tags to revo [#14133]
+- Fixed hover styles on login and forget password buttons [#14044]
+- Ability to switch manager language on the fly in the manager [#14046]
+- Make dashboard buttons go full width [#14080]
+- Update minimum supported version to PHP 5.6, and recommended to 7.2 [#14097]
+- Do not give TVs with output type as HTML an ID if no ID is set [#14039]
+- Load all manager permissions at once to MODx.perm object [#13924]
+- Remove outdated custom xmlrss classes and replace them by SimplePie library [#14034]
+- Remove unused and outdated xmlrpc and jsonrpc and related classes [#14033]
+- Changed appearance and position of status message after saving action [#14003]
+- Resource and Media Browser CSS Improvements [#13998]
+- Custom manager logo in the manager and design tweaks [#13934]
+- Added active/selected row color for resource tree and media browser [#13995]
+- Sidebar styles glitches improvements [#13996]
+- Fixed error log line wrapping problem in Firefox. [#13966]
+- Various UI improvements on Resource controllers [#13875]
+- Various Media Browser improvements for uploading and deleting files [#13851]
+- Fix Regex validation for TV's of the input type "Text" [#13916]
+- Change the result from type "warning" to type "success" and change the message for the install summary [#13897]
+- Remove @EVAL binding from TVs to prevent arbitrary code execution by admins [#13865]
+- Removed obsolete system settings [#13859, #14841, #14843, #14848, #14868]
+- Added missed upgrading script to database related upgrading files [#13870]
+- Support of Markdown in package attributes (changelog, readme, license) [#13853]
+- New class-based ConfigCheck processor [#13864]
+- Returned showing help block on login screen [#13820]
+- Remove second nocompress checkbox from the setup [#13785]
+- Dashboards, widgets system and built-in widgets were fully remastered [#13844]
+- Implement a new login design for the manager, with a configurable big background and logo image
+- Forgot password on manager login now requires user to enter a new password instead of sending a pass via email [#13786]
+- Manager login now automatically detects browser language [#13786]
+- Manager language is now stored in the session, based on the chosen language in login, instead of settings [#13786]
+- User related emails are now nice HTML emails [#13786]
+- Load xPDO, Smarty and Phpmailer dependencies via composer instead of including source files [MAB-01, #13781, #13706]
+- Use League/Flysystem under the hood for media sources [#13701]
+- Update to xPDO 3.x via Composer
+- Remove manager/min/ folder (deprecated since 2.5)
+- Remove "disable compress" checkbox from the setup [#12857]
+- Remove flash-based copy to clipboard function from ExtJS [#13697]
+- Restore core/cache/.gitignore after accidentally removing it in earlier merge [#13826]
+- Minor code style fixes [#14178]
+- Set manager favicon to the MODX logo by default [#14324]
+- Reorder tabs on the template and template variable panels [#14251]
+- Remove nested menu items when deleting the parent [#14530]
+- Move deleted checkbox from Settings tab to Publishing section [#14501]
+- Add manager_tooltip_enable and manager_tooltip_delay settings to manage if/how long tooltip descriptions are shown [#12732]
+- In recently edited resources and online users widget, make sure user has "logs" permission before showing the link to more [#14522]
+- Add passwordless login to the manager [#14351]
+- Add edit date to the list of recently edited resources in the user panel [#11264]
+- Fix xtype for various settings [#12284]
+- Update the layout for editing users and your own account [#13988]
+- Rename "Top Menu" to "Main Menu" now that it is no longer at the top [#14852]
+- Change styling of resources in the tree: unpublished resources are now dimmed, with italics indicating menu visibility [#13969]
+- Add name of edited media source, form customisation profile, dashboard, and dashboard widget to the title in the browser [#14830]
+- Add a gear icon to all grids by default to access the context menu [#14806]
+- Show a pencil icon and subtle color change when hovering over an editable field in a grid [#14176]
+
+MODX Revolution 2.7.2-pl (TBD)
+====================================
 - The default RSS feed URLs `feed_modx_security` and `feed_modx_news` now use HTTPS [#14392]
 - The value for the preview tooltip in the trash manager is now properly encoded [#14401]
-- Change icon to proper one for descending sort order [#14413]
+- Change icon to propper one for descending sort order [#14413]
 - Don't execute the upgrade script for the last installed version again [#14396]
 - Fix friendly_alias_realtime system setting not working as expected [#14438]
 - Fix deprecated create_function() calls in modProcessor and modConnectorResponse [#14399]
 - Fix deprecated each() in the lang.js.php connector [#14397]
-- Restore PHP 5.3 compatibility [#14461]
 
 MODX Revolution 2.7.1-pl (February 14, 2019)
 ====================================
@@ -387,6 +871,11 @@ MODX Revolution 2.7.0-pl (November 27, 2018)
 - Fix incorrect hex colors in TV input options description [#13776]
 - Change modResource.description column to text [#13802]
 - Fix modDbRegister->clear and use fully qualified name [#12965]
+
+MODX Revolution 2.6.5-pl (July 11, 2018)
+====================================
+- Prevent directory traversal and limit files deleted when clearing modFileRegister [#13980]
+- Filter user input used in phpthumb [#13979]
 
 MODX Revolution 2.6.4-pl (June 7, 2018)
 ====================================

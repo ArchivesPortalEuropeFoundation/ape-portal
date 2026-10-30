@@ -1,178 +1,150 @@
-
-MODx.grid.DashboardWidgets = function(config) {
-    config = config || {};
+/**
+ * @class MODx.grid.DashboardWidgets
+ * @extends MODx.grid.Grid
+ * @param {Object} config An object of configuration properties
+ * @xtype modx-grid-dashboard-widgets
+ */
+MODx.grid.DashboardWidgets = function(config = {}) {
+    const queryValue = this.applyRequestFilter(1, 'query', 'tab', true);
     this.exp = new Ext.grid.RowExpander({
-        tpl : new Ext.Template(
+        tpl: new Ext.Template(
             '<p class="desc">{description_trans}</p>'
         )
     });
-
     this.sm = new Ext.grid.CheckboxSelectionModel();
-    Ext.applyIf(config,{
-        url: MODx.config.connector_url
-        ,baseParams: {
-            action: 'system/dashboard/widget/getlist'
-        }
-        ,fields: ['id','name','name_trans','description','description_trans','type','content','namespace','lexicon','size','cls']
-        ,paging: true
-        ,remoteSort: true
-        ,sm: this.sm
-        ,plugins: [this.exp]
-        ,columns: [this.exp,this.sm,{
-            header: _('id')
-            ,dataIndex: 'id'
-            ,width: 50
-            ,sortable: true
-        },{
-            header: _('name')
-            ,dataIndex: 'name_trans'
-            ,width: 150
-            ,sortable: true
-            ,editable: false
-        },{
-            header: _('widget_type')
-            ,dataIndex: 'type'
-            ,width: 80
-            ,sortable: true
-        },{
-            header: _('widget_namespace')
-            ,dataIndex: 'namespace'
-            ,width: 120
-            ,sortable: true
-        }]
-        ,tbar: [{
-            text: _('widget_create')
-            ,cls:'primary-button'
-            ,handler: this.createDashboard
-            ,scope: this
-        },{
-            text: _('bulk_actions')
-            ,menu: [{
-                text: _('selected_remove')
-                ,handler: this.removeSelected
-                ,scope: this
-            }]
-        },'->',{
-            xtype: 'textfield'
-            ,name: 'search'
-            ,id: 'modx-dashboard-widget-search'
-            ,cls: 'x-form-filter'
-            ,emptyText: _('search_ellipsis')
-            ,listeners: {
-                'change': {fn: this.search, scope: this}
-                ,'render': {fn: function(cmp) {
-                    new Ext.KeyMap(cmp.getEl(), {
-                        key: Ext.EventObject.ENTER
-                        ,fn: this.blur
-                        ,scope: cmp
-                    });
-                },scope:this}
-            }
-        },{
-            xtype: 'button'
-            ,text: _('filter_clear')
-            ,id: 'modx-dashboard-widgets-filter-clear'
-            ,cls: 'x-form-filter-clear'
-            ,listeners: {
-                'click': {fn: this.clearFilter, scope: this},
-                'mouseout': { fn: function(evt){
-                    this.removeClass('x-btn-focus');
+    Ext.applyIf(config, {
+        id: 'modx-grid-dashboard-widgets',
+        url: MODx.config.connector_url,
+        baseParams: {
+            action: 'System/Dashboard/Widget/GetList'
+        },
+        fields: [
+            'id',
+            'name',
+            'name_trans',
+            'description',
+            'description_trans',
+            'type',
+            'content',
+            'namespace',
+            'lexicon',
+            'size'
+        ],
+        paging: true,
+        remoteSort: true,
+        sm: this.sm,
+        plugins: [this.exp],
+        columns: [
+            this.exp,
+            this.sm,
+            {
+                header: _('id'),
+                dataIndex: 'id',
+                width: 50,
+                sortable: true
+            }, {
+                header: _('name'),
+                dataIndex: 'name_trans',
+                width: 150,
+                sortable: true,
+                editable: false,
+                renderer: {
+                    fn: function(value, metaData, record) {
+                        // eslint-disable-next-line no-param-reassign
+                        metaData.css = this.setEditableCellClasses(record, [record.json.isProtected]);
+                        return this.userCanEditRecord(record)
+                            ? this.renderLink(value, {
+                                href: `?a=system/dashboards/widget/update&id=${record.data.id}`,
+                                title: _('dashboard_edit')
+                            })
+                            : value
+                        ;
+                    },
+                    scope: this
                 }
+            }, {
+                header: _('widget_type'),
+                dataIndex: 'type',
+                width: 80,
+                sortable: true
+            }, {
+                header: _('widget_namespace'),
+                dataIndex: 'namespace',
+                width: 120,
+                sortable: true,
+                renderer: {
+                    fn: function(value, metaData, record) {
+                        // eslint-disable-next-line no-param-reassign
+                        metaData.css = this.setEditableCellClasses(record, [record.json.isProtected]);
+                        return value;
+                    },
+                    scope: this
                 }
             }
-        }]
+        ],
+        tbar: [
+            this.getCreateButton('dashboard', 'createDashboard'),
+            this.getBulkActionsButton('widget', 'System/Dashboard/Widget/RemoveMultiple'),
+            '->',
+            this.getQueryFilterField(`filter-query-dashboardWidgets:${queryValue}`),
+            this.getClearFiltersButton('filter-query-dashboardWidgets')
+        ]
     });
-    MODx.grid.DashboardWidgets.superclass.constructor.call(this,config);
-};
-Ext.extend(MODx.grid.DashboardWidgets,MODx.grid.Grid,{
-    getMenu: function() {
-        var r = this.getSelectionModel().getSelected();
-        var p = r.data.cls;
+    MODx.grid.DashboardWidgets.superclass.constructor.call(this, config);
 
-        var m = [];
-        if (this.getSelectionModel().getCount() > 1) {
-            m.push({
-                text: _('selected_remove')
-                ,handler: this.removeSelected
-                ,scope: this
+    this.gridMenuActions = ['edit', 'delete'];
+
+    // Note there are currently no action-specific permissions for Dashboards
+    this.setUserCanEdit(['dashboards']);
+    this.setUserCanCreate(['dashboards']);
+    this.setUserCanDelete(['dashboards']);
+    this.setShowActionsMenu();
+
+    this.on({
+        beforerender: function(grid) {
+            grid.view = new Ext.grid.GridView(grid.getViewConfig());
+        }
+    });
+};
+Ext.extend(MODx.grid.DashboardWidgets, MODx.grid.Grid, {
+    getMenu: function() {
+        const
+            record = this.getSelectionModel().getSelected(),
+            menu = [],
+            canDelete = this.userCanDelete && this.userCanDeleteRecord(record)
+        ;
+        if (this.getSelectionModel().getCount() > 1 && canDelete) {
+            menu.push({
+                text: _('selected_remove'),
+                handler: this.removeSelected,
+                scope: this
             });
         } else {
-            if (p.indexOf('pupdate') != -1) {
-                m.push({
-                    text: _('widget_update')
-                    ,handler: this.updateWidget
+            if (this.userCanEdit && this.userCanEditRecord(record)) {
+                menu.push({
+                    text: _('edit'),
+                    handler: this.updateWidget
                 });
             }
-            if (p.indexOf('premove') != -1) {
-                if (m.length > 0) m.push('-');
-                m.push({
-                    text: _('widget_unplace')
-                    ,handler: this.removeWidget
+            if (canDelete) {
+                if (menu.length > 0) {
+                    menu.push('-');
+                }
+                menu.push({
+                    text: _('delete'),
+                    handler: this.confirm.createDelegate(this, ['System/Dashboard/Widget/Remove', 'widget_remove_confirm'])
                 });
             }
         }
-        if (m.length > 0) {
-            this.addContextMenuItem(m);
-        }
-    }
+        return menu;
+    },
 
-    ,createDashboard: function() {
+    createDashboard: function() {
         MODx.loadPage('system/dashboards/widget/create');
-    }
-    ,removeSelected: function() {
-        var cs = this.getSelectedAsList();
-        if (cs === false) return false;
+    },
 
-        MODx.msg.confirm({
-            title: _('widget_remove_multiple')
-            ,text: _('widget_remove_multiple_confirm')
-            ,url: this.config.url
-            ,params: {
-                action: 'system/dashboard/widget/removeMultiple'
-                ,widgets: cs
-            }
-            ,listeners: {
-                'success': {fn:function(r) {
-                    this.getSelectionModel().clearSelections(true);
-                    this.refresh();
-                },scope:this}
-            }
-        });
-        return true;
-    }
-
-    ,removeWidget: function() {
-        MODx.msg.confirm({
-            title: _('widget_remove')
-            ,text: _('widget_remove_confirm')
-            ,url: this.config.url
-            ,params: {
-                action: 'system/dashboard/widget/remove'
-                ,id: this.menu.record.id
-            }
-            ,listeners: {
-            	'success': {fn:this.refresh,scope:this}
-            }
-        });
-    }
-
-    ,updateWidget: function() {
-        MODx.loadPage('system/dashboards/widget/update', 'id='+this.menu.record.id);
-    }
-    ,search: function(tf,newValue,oldValue) {
-        var nv = newValue || tf;
-        this.getStore().baseParams.query = Ext.isEmpty(nv) || Ext.isObject(nv) ? '' : nv;
-        this.getBottomToolbar().changePage(1);
-        //this.refresh();
-        return true;
-    }
-    ,clearFilter: function() {
-    	this.getStore().baseParams = {
-            action: 'system/dashboard/widget/getlist'
-    	};
-        Ext.getCmp('modx-dashboard-widget-search').reset();
-    	this.getBottomToolbar().changePage(1);
-        //this.refresh();
+    updateWidget: function() {
+        MODx.loadPage('system/dashboards/widget/update', `id=${this.menu.record.id}`);
     }
 });
-Ext.reg('modx-grid-dashboard-widgets',MODx.grid.DashboardWidgets);
+Ext.reg('modx-grid-dashboard-widgets', MODx.grid.DashboardWidgets);

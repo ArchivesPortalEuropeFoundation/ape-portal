@@ -25,18 +25,16 @@ $_lang['usergroup'] = 'مجموعة المستخدم';
 $_lang['filter_by_type'] = 'Filter by type...';
 
 $_lang['message'] = 'رسالة';
-$_lang['message_create'] = 'إنشاء رسالة';
-$_lang['message_new'] = 'رسالة جديدة';
-$_lang['message_remove_confirm'] = 'هل أنت متأكد من أنك تريد إزالة هذا الرسالة بالكامل؟';
+$_lang['message_remove_confirm'] = 'Are you sure you want to delete this message entirely?';
 $_lang['message_send_email'] = 'إرسال بريد الكتروني';
 $_lang['message_err_nfs'] = 'الرسالة غير موجودة.';
 $_lang['message_err_not_specified_subject'] = 'لم يتم تحديد الموضوع!';
-$_lang['message_err_remove'] = 'حدث خطأ أثناء محاولة حذف الرسالة.';
+$_lang['message_err_remove'] = 'An error occurred while trying to delete the message.';
 $_lang['message_err_remove_notauth'] ='أنت غير مسموح لك حذف هذه الرسالة.';
 $_lang['message_err_save'] = 'حدث خطأ أثناء حفظ الرسالة.';
 
 $_lang['messages'] = 'الرسائل';
-$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can remove or mark as read specified messages.';
+$_lang['messages_desc'] = 'Here you can manage messages that were sent by you or that were sent by other users to you. You can reply, forward messages, also you can delete or mark as read specified messages.';
 $_lang['messages_all'] = 'الجميع';
 $_lang['messages_compose'] = 'إنشاء رسالة';
 $_lang['messages_forward'] = 'للأمام';

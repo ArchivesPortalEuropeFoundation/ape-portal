@@ -7,4 +7,11 @@
  * For complete copyright and license information, see the COPYRIGHT and LICENSE
  * files found in the top-level directory of this distribution.
  */
-class StaticResourceDataManagerController extends ResourceDataManagerController {}
+
+/**
+ * @package modx
+ * @subpackage manager.controllers
+ */
+class StaticResourceDataManagerController extends ResourceDataManagerController
+{
+}

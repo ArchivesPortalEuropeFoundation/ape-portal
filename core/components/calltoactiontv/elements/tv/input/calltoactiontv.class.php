@@ -1,4 +1,7 @@
-<?php /** @noinspection AutoloadingIssuesInspection */
+<?php
+use MODX\Revolution\modTemplateVarInputRender;
+
+/** @noinspection AutoloadingIssuesInspection */
 /**
  * CallToActionTV.
  *
@@ -9,7 +12,7 @@ class CallToActionTVInputRender extends modTemplateVarInputRender
     /**
      * The allowed link types.
      */
-    private $allowedTypes = array('resource', 'external', 'mailto', 'tel');
+    private $allowedTypes = ['resource', 'external', 'mailto', 'tel'];
 
     /**
      * Return the template path to load.
@@ -34,7 +37,7 @@ class CallToActionTVInputRender extends modTemplateVarInputRender
      */
     public function getLexiconTopics()
     {
-        return array('calltoactiontv:default');
+        return ['calltoactiontv:default'];
     }
 
     /**
@@ -45,14 +48,12 @@ class CallToActionTVInputRender extends modTemplateVarInputRender
      *
      * @return void
      */
-    public function process($value, array $params = array())
+    public function process($value, array $params = [])
     {
         /* Retrieve TV information. */
         $properties = array_merge($params, is_array($this->tv->_properties) ?
             $this->tv->_properties :
-            array());
-
-        $inputOptions = $this->getInputOptions();
+            []);
 
         /* Default values. */
         $values['type']         = 'resource';
@@ -76,8 +77,8 @@ class CallToActionTVInputRender extends modTemplateVarInputRender
         $this->setPlaceholder('text', addslashes($values['text']));
         $this->setPlaceholder('type', $values['type']);
         $this->setPlaceholder('displayQueryParams', isset($this->tv->get('input_properties')['display_query_params']) ? $this->tv->get('input_properties')['display_query_params'] : false);
-        $this->setPlaceholder('typeOptions', $this->getTypes($properties));
-        $this->setPlaceholder('styleOptions', $this->getStyles($values['style'], $properties));
+        $this->setPlaceholder('typeOptions', $this->sanitizeJSON($this->getTypes($properties)));
+        $this->setPlaceholder('styleOptions', $this->sanitizeJSON($this->getStyles($values['style'], $properties)));
         $this->setPlaceholder('resource', $values['resource']);
         $this->setPlaceholder('query_params', $values['query_params']);
     }
@@ -89,9 +90,9 @@ class CallToActionTVInputRender extends modTemplateVarInputRender
      *
      * @return string
      */
-    private function getTypes(array $properties = array())
+    private function getTypes(array $properties = [])
     {
-        $options = array();
+        $options = [];
         if (isset($properties['types'])) {
             $types = explode('||', $properties['types']);
 
@@ -99,10 +100,10 @@ class CallToActionTVInputRender extends modTemplateVarInputRender
                 $type = trim($type);
 
                 if (in_array($type, $this->allowedTypes, true)) {
-                    $options[] = array(
+                    $options[] = [
                         htmlspecialchars($type),
                         $this->modx->lexicon('calltoactiontv.type.' . $type)
-                    );
+                    ];
                 }
             }
         }
@@ -118,7 +119,7 @@ class CallToActionTVInputRender extends modTemplateVarInputRender
      *
      * @return string
      */
-    private function getStyles($value, array $properties = array())
+    private function getStyles($value, array $properties = [])
     {
         $options = array();
 
@@ -145,10 +146,10 @@ class CallToActionTVInputRender extends modTemplateVarInputRender
                     $found = true;
                 }
 
-                $options[] = array(
+                $options[] = [
                     htmlspecialchars(trim($opt[1])),
                     htmlspecialchars(trim($opt[0]))
-                );
+                ];
 
                 ++$i;
             }
@@ -156,10 +157,10 @@ class CallToActionTVInputRender extends modTemplateVarInputRender
 
         if (!empty($value) && $found === false) {
             if (!empty($options)) {
-                $options[] = array(
+                $options[] = [
                     htmlspecialchars(trim($value)),
                     htmlspecialchars(trim($value))
-                );
+                ];
             } else {
                 $value = '';
             }
@@ -168,6 +169,16 @@ class CallToActionTVInputRender extends modTemplateVarInputRender
         $this->setPlaceholder('style', $value);
 
         return $this->modx->toJSON($options);
+    }
+
+    private function sanitizeJSON($json)
+    {
+        $replacements = [
+            '[[' => '[ [',
+            ']]' => '] ]'
+        ];
+
+        return str_replace(array_keys($replacements), $replacements, $json);
     }
 }
 

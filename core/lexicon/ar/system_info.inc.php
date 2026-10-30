@@ -11,6 +11,10 @@ $_lang['database_name'] = 'اسم قاعدة المعطيات';
 $_lang['database_server'] = 'مخدم قاعدة البيانات';
 $_lang['database_tables'] = 'جداول قاعدة البيانات';
 $_lang['database_optimize'] = 'تحسين قاعدة البيانات';
+$_lang['database_optimize_process'] = 'The tables are being optimized now.';
+$_lang['database_optimize_success'] = 'The tables were successfully optimized.';
+$_lang['database_optimize_error'] = 'There was an error while optimizing the database tables.';
+$_lang['database_optimize_processing'] = 'Optimizing...';
 $_lang['database_table_clickhere'] = 'اضغط هنا';
 $_lang['database_table_clickbackup'] = 'للدعم &amp; حمل الجداول المختارة';
 $_lang['database_table_datasize'] = 'حجم البيانات';
@@ -18,12 +22,10 @@ $_lang['database_table_droptablestatements'] = 'إنشاء عبارة  DROP TABL
 $_lang['database_table_effectivesize'] = 'الحجم المؤثر';
 $_lang['database_table_indexsize'] = 'حجم الفهرس';
 $_lang['database_table_overhead'] = 'ترويسة عليا';
-$_lang['database_table_reserved'] = 'محجوزة';//sqlsrv
 $_lang['database_table_records'] = 'السجلات';
 $_lang['database_table_tablename'] = 'اسم الجدول';
 $_lang['database_table_totalsize'] = 'الحجم الكلي';
 $_lang['database_table_totals'] = 'المجموع:';
-$_lang['database_table_unused'] = 'غير مستخدم';//sqlsrv
 $_lang['database_type'] = 'نوع قاعدة البيانات';
 $_lang['database_version'] = 'نسخة قاعدة المعطيات';
 $_lang['extjs_version'] = 'نسخة <a href="http://extjs.com/" target="_blank">ExtJS</a>';
@@ -44,7 +46,7 @@ $_lang['phpmailer_version'] = 'نسخة <a href="https://github.com/PHPMailer/PH
 $_lang['server'] = 'المخدم';
 $_lang['servertime'] = 'وقت المخدم';
 $_lang['serveroffset'] = 'إزاحة المخدم';
-$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Smarty</a> Version';
+$_lang['smarty_version'] = 'نسخة <a href="http://smarty.net/" target="_blank">Smarty</a>';
 $_lang['sysinfo_desc'] = 'هنا تستطيع رؤية معلومات عامة عن بيئة مودكس الخاصة بك.';
 $_lang['view_sysinfo'] = 'معلومات النظام';
 $_lang['table_prefix'] = 'بادئة الجدول';

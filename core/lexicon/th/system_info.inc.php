@@ -11,6 +11,10 @@ $_lang['database_name'] = 'ชื่อฐานข้อมูล';
 $_lang['database_server'] = 'เซิร์ฟเวอร์ฐานข้อมูล';
 $_lang['database_tables'] = 'ตารางในฐานข้อมูล';
 $_lang['database_optimize'] = 'เพิ่มประสิทธิภาพฐานข้อมูล';
+$_lang['database_optimize_process'] = 'The tables are being optimized now.';
+$_lang['database_optimize_success'] = 'The tables were successfully optimized.';
+$_lang['database_optimize_error'] = 'There was an error while optimizing the database tables.';
+$_lang['database_optimize_processing'] = 'Optimizing...';
 $_lang['database_table_clickhere'] = 'คลิ๊กที่นี่';
 $_lang['database_table_clickbackup'] = 'เพื่อสำรองข้อมูล &amp; ดาวน์โหลดตารางที่เลือก';
 $_lang['database_table_datasize'] = 'ขนาดข้อมูล';
@@ -18,12 +22,10 @@ $_lang['database_table_droptablestatements'] = 'สร้างรายงา�
 $_lang['database_table_effectivesize'] = 'ขนาดประสิทธิภาพ';
 $_lang['database_table_indexsize'] = 'ขนาดดัชนี';
 $_lang['database_table_overhead'] = 'โอเวอร์เฮด';
-$_lang['database_table_reserved'] = 'สงวนไว้แล้ว';//sqlsrv
 $_lang['database_table_records'] = 'ระเบียน';
 $_lang['database_table_tablename'] = 'ชื่อตาราง';
 $_lang['database_table_totalsize'] = 'ขนาดทั้งหมด';
 $_lang['database_table_totals'] = 'ทั้งหมด:';
-$_lang['database_table_unused'] = 'ไม่ใช้แล้ว';//sqlsrv
 $_lang['database_type'] = 'ประเภทฐานข้อมูล';
 $_lang['database_version'] = 'เวอร์ชันฐานข้อมูล';
 $_lang['extjs_version'] = '<a href="http://extjs.com/" target="_blank">ExtJS</a> เวอร์ชัน';
@@ -44,7 +46,7 @@ $_lang['phpmailer_version'] = '<a href="https://github.com/PHPMailer/PHPMailer" 
 $_lang['server'] = 'เซิร์ฟเวอร์';
 $_lang['servertime'] = 'เวลาเซิร์ฟเวอร์';
 $_lang['serveroffset'] = 'ระยะต่าง';
-$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Smarty</a> Version';
+$_lang['smarty_version'] = '<a href="http://smarty.net/" target="_blank">Smarty</a> เวอร์ชัน';
 $_lang['sysinfo_desc'] = 'คุณสามารถดูข้อมูลทั่วไปเกี่ยวกับสภาพแวดล้อม MODX ของคุณ';
 $_lang['view_sysinfo'] = 'ข้อมูลระบบ';
 $_lang['table_prefix'] = 'คำนำหน้าตาราง';

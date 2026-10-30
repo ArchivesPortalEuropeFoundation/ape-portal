@@ -36,19 +36,16 @@ $_lang['name_desc'] = 'Sebuah nama untuk menetapkan. Ini bisa menjadi sebuah cat
 $_lang['namespace'] = 'Namespace';
 $_lang['namespace_desc'] = 'Namespace ini berkaitan dengan pengaturan. Leksikon topik akan dimuat untuk Namespace ini ketika meraih pengaturan standar.';
 $_lang['namespace_filter'] = 'pilih berdasarkan namespace...';
-$_lang['search_by_key'] = 'Cari dengan kata kunci...';
-$_lang['setting_create'] = 'Buat pengaturan baru';
 $_lang['setting_err'] = 'Silakan periksa data Anda untuk bidang-bidang berikut: ';
 $_lang['setting_err_ae'] = 'Pengaturan dengan kata kunci sudah ada. Silakan tentukan nama kunci lain.';
 $_lang['setting_err_nf'] = 'Pengaturan tidak ditemukan.';
 $_lang['setting_err_ns'] = 'Pengaturan tidak ditentukan';
-$_lang['setting_err_remove'] = 'Terjadi kesalahan saat mencoba untuk menghapus pengaturan.';
+$_lang['setting_err_not_editable'] = 'This setting can\'t be edited in the grid. Please use the gear/context menu to edit the value!';
+$_lang['setting_err_remove'] = 'An error occurred while trying to delete the setting.';
 $_lang['setting_err_save'] = 'Terjadi kesalahan saat mencoba untuk menyimpan pengaturan.';
 $_lang['setting_err_startint'] = 'Pengaturan mungkin tidak dimulai dengan bilangan bulat.';
 $_lang['setting_err_invalid_document'] = 'Ada tidak ada dokumen dengan ID %d. Silakan tentukan dokumen yang ada.';
-$_lang['setting_remove'] = 'Hapus pengaturan';
 $_lang['setting_remove_confirm'] = 'Apakah Anda yakin Anda ingin menghapus pengaturan ini? Ini mungkin akan menghentikan instalasi MODX.';
-$_lang['setting_update'] = 'Perbaharui pengaturan';
 $_lang['settings_after_install'] = 'Sebagai instalasi baru, Anda diminta untuk mengendalikan pengaturan ini, dan merubah apapun yang mungkin Anda ingin. Setelah Anda telah menguasai pengaturan, tekan \'Simpan\' untuk memperbarui pengaturan database. <br /><br />';
 $_lang['settings_desc'] = 'Di sini Anda dapat mengatur preferensi Umum dan pengaturan konfigurasi untuk pengaturan antarmuka MODX, serta bagaimana situs MODX Anda berjalan. Klik dua kali pada kolom nilai pada setelan yang ingin Anda edit secara dinamis mengedit melalui grid, atau klik kanan pada setelan untuk opsi lebih lanjut. Anda juga dapat mengklik tanda "+" untuk keterangan pengaturan.';
 $_lang['settings_furls'] = 'URL yang berkaitan';
@@ -130,14 +127,11 @@ $_lang['setting_base_help_url_desc'] = 'URL dasar yang digunakan untuk membangun
 $_lang['setting_blocked_minutes'] = 'Menit yang diblokir';
 $_lang['setting_blocked_minutes_desc'] = 'Di sini Anda dapat memasukkan jumlah menit dimana pengguna akan diblokir jika mereka mencapai jumlah maksimum dari izin percobaan login yang gagal. Masukkan nilai ini sebagai angka itu saja (tidak koma, spasi dll.)';
 
-$_lang['setting_cache_action_map'] = 'Mengaktifkan cache tindakan peta';
-$_lang['setting_cache_action_map_desc'] = 'Bila diaktifkan, tindakan (atau peta controller) di-cache untuk mengurangi beban halaman pengelola.';
-
 $_lang['setting_cache_alias_map'] = 'Mengaktifkan cache konteks Alias peta';
 $_lang['setting_cache_alias_map_desc'] = 'Ketika diaktifkan, Semua URI sumber daya cache ke dalam konteks. Mengaktifkan situs yang lebih kecil dan menonaktifkan pada situs yang lebih besar untuk kinerja yang lebih baik.';
 
-$_lang['setting_use_context_resource_table'] = 'Gunakan tabel resource konteks untuk merefresh cache konteks';
-$_lang['setting_use_context_resource_table_desc'] = 'Bila diaktifkan, merefresh konteks menggunakan tabel context_resource. Ini memungkinkan kamu secara programatikal memiliki satu resource dalam beberapa konteks. Jika kamu tidak menggunakan beberapa konteks resource itu melalui API, kamu dapat menyetel ini ke false. Di website besar kamu akan mendapatkan potensi peningkatan kinerja manajer saat itu.';
+$_lang['setting_use_context_resource_table'] = 'Gunakan tabel sumber konteks';
+$_lang['setting_use_context_resource_table_desc'] = 'Bila diaktifkan, penyegaran konteks menggunakan tabel context_resource. Ini memungkinkan Anda memprogram memiliki satu sumber dalam beberapa konteks. Jika Anda tidak menggunakan beberapa konteks sumber daya melalui API, Anda dapat menyetel ini ke false. Di situs besar Anda akan mendapatkan potensi peningkatan kinerja manajer saat itu.';
 
 $_lang['setting_cache_context_settings'] = 'Mengaktifkan konteks pengaturan Cache';
 $_lang['setting_cache_context_settings_desc'] = 'Bila diaktifkan, pengaturan konteks akan di-cache untuk mengurangi beban.';
@@ -203,9 +197,6 @@ $_lang['setting_compress_js_desc'] = 'Ketika ini diaktifkan, MODX akan menggunak
 $_lang['setting_compress_js_groups'] = 'Menggunakan pengelompokan ketika mengompresi JavaScript';
 $_lang['setting_compress_js_groups_desc'] = 'Kelompok inti MODX manajer JavaScript menggunakan pengecilan di groupsConfig. Diatur ke "ya" jika menggunakan suhosin atau faktor lain yang membatasi.';
 
-$_lang['setting_compress_js_max_files'] = 'Berkas permulaan kompresi maksimum JavaScript';
-$_lang['setting_compress_js_max_files_desc'] = 'Jumlah maksimum file JavaScript MODX akan berusaha untuk kompres sekaligus ketika compress_js aktif. Diatur ke jumlah yang lebih sedikit jika Anda mengalami masalah dengan Google Minify di manager.';
-
 $_lang['setting_concat_js'] = 'Gunakan Perpustakaan Javascript yang disatukan';
 $_lang['setting_concat_js_desc'] = 'Ketika ini diaktifkan, MODX akan menggunakan versi penyatuan pada perpustakaan java script di antarmuka manajer. Hal ini sangat mengurangi beban dan waktu pelaksanaan dalam pengelola. Menonaktifkan hanya jika Anda memodifikasi elemen inti.';
 
@@ -228,6 +219,12 @@ $_lang['setting_cultureKey_desc'] = 'Pilih bahasa untuk semua konteks non-manaje
 $_lang['setting_date_timezone'] = 'Zona waktu standar';
 $_lang['setting_date_timezone_desc'] = 'Kontrol pengaturan zona waktu yang standar untuk fungsi tanggal PHP, jika tidak kosong. Jika kosong dan tanggal PHP. Zona waktu pada pengaturan tidak diatur di lingkungan Anda, UTC akan dianggap.';
 
+$_lang['setting_manager_datetime_empty_value'] = 'Datetime Empty Value';
+$_lang['setting_manager_datetime_empty_value_desc'] = 'The text (if any) that will show in grids and forms when a datetime field’s value has not been set. (Default: “–” [a single en dash])';
+
+$_lang['setting_manager_datetime_separator'] = 'Datetime Separator';
+$_lang['setting_manager_datetime_separator_desc'] = 'When the date and time are shown as a combined element, these characters will be used to visually separate them. (Default: “, ” [comma and space])';
+
 $_lang['setting_debug'] = 'Debug';
 $_lang['setting_debug_desc'] = 'Kendali mengubah debugging on/off di MODX dan/atau menetapkan tingkat error_melaporkan PHP. \'\' = gunakan error saat ini_reporting, \'0\' = salah (error_melaporkan = 0), \'1\' = benar (error_melaporkan =-1), atau nilai error_melaporkan yang berlaku (sebagai bilangan bulat).';
 
@@ -243,28 +240,24 @@ $_lang['setting_default_media_source_desc'] = 'Memuat sumber media standar.';
 $_lang['setting_default_media_source_type'] = 'Default Media Source Type';
 $_lang['setting_default_media_source_type_desc'] = 'The default selected Media Source Type when creating a new Media Source.';
 
+$_lang['setting_photo_profile_source'] = 'User Profile Photo Source';
+$_lang['setting_photo_profile_source_desc'] = 'Specifies the Media Source to use for storing and retrieving profile photos/avatars. If not specified, the default Media Source will be used.';
+
 $_lang['setting_default_template'] = 'Pola Bawaan';
 $_lang['setting_default_template_desc'] = 'Pilih Template standar yang ingin Anda gunakan untuk Sumber Daya baru. Anda masih dapat memilih template yang berbeda dalam editor Sumber Daya, pengaturan ini hanya pemilihan awal pada salah satu dari Template Anda untuk Anda.';
 
 $_lang['setting_default_per_page'] = 'Default Per halaman';
 $_lang['setting_default_per_page_desc'] = 'Menjadi nomor standar hasil untuk menunjukkan di grid seluruh manajer.';
 
-$_lang['setting_editor_css_path'] = 'Path ke CSS file';
-$_lang['setting_editor_css_path_desc'] = 'Masukkan path ke file CSS Anda yang ingin Anda gunakan dalam sebuah editor rich text editor. Cara terbaik untuk memasuki jalan adalah untuk memasuki jalan dari akar dari server Anda, misalnya: /assets/site/style.css. Jika Anda tidak ingin memuat sebuah style sheet ke editor editor richtext, biarkan bidang ini kosong.';
-
-$_lang['setting_editor_css_selectors'] = 'CSS penyeleksi untuk Editor';
-$_lang['setting_editor_css_selectors_desc'] = 'Daftar comma separated CSS penyeleksi untuk editor richtext editor.';
-
 $_lang['setting_emailsender'] = 'Pendaftaran Email dari alamat';
 $_lang['setting_emailsender_desc'] = 'Di sini Anda dapat menentukan email alamat yang digunakan ketika mengirim pengguna username dan password.';
 $_lang['setting_emailsender_err'] = 'Mohon sebutkan alamat email administrasi.';
 
-$_lang['setting_emailsubject'] = 'Subjek Email pendaftaran';
-$_lang['setting_emailsubject_desc'] = 'Baris subjek email untuk email standar pendaftaran ketika pengguna sudah terdaftar.';
-$_lang['setting_emailsubject_err'] = 'Mohon sebutkan baris subjek untuk pendaftaran email.';
-
 $_lang['setting_enable_dragdrop'] = 'Mengaktifkan Drag/Drop di pohon-pohon sumber elemen';
 $_lang['setting_enable_dragdrop_desc'] = 'Jika off, akan mencegah penyeretan dan penjatuhan di Sumber Daya dan Elemen pohon.';
+
+$_lang['setting_enable_template_picker_in_tree'] = 'Enable the Template Picker in Resource Trees';
+$_lang['setting_enable_template_picker_in_tree_desc'] = 'Enable this to use the template picker modal window when creating a new resource in the tree.';
 
 $_lang['setting_error_page'] = 'Halaman kesalahan';
 $_lang['setting_error_page_desc'] = 'Masukkan ID dokumen yang Anda ingin kirimkan ke pengguna jika mereka meminta dokumen yang tidak benar-benar ada (404 Halaman tidak ditemukan). <strong>Catatan: Pastikan ID yang Anda masukan dimiliki oleh dokumen yang masih ada, dan bahwa ia telah diterbitkan!</strong>';
@@ -282,9 +275,6 @@ $_lang['setting_enable_gravatar_desc'] = 'Jika diaktifkan, Gravatar akan digunak
 $_lang['setting_failed_login_attempts'] = 'Upaya login gagal';
 $_lang['setting_failed_login_attempts_desc'] = 'Jumlah usaha gagal login pengguna diperbolehkan sebelum \'diblokir\'.';
 
-$_lang['setting_fe_editor_lang'] = 'Front-end Editor bahasa';
-$_lang['setting_fe_editor_lang_desc'] = 'Pilih bahasa untuk editor untuk digunakan ketika digunakan sebagai front-end editor.';
-
 $_lang['setting_feed_modx_news'] = 'MODX News Feed URL';
 $_lang['setting_feed_modx_news_desc'] = 'Menetapkan URL untuk RSS feed untuk panel MODX berita di manager.';
 
@@ -296,21 +286,6 @@ $_lang['setting_feed_modx_security_desc'] = 'Menetapkan URL untuk RSS feed untuk
 
 $_lang['setting_feed_modx_security_enabled'] = 'MODX keamanan Feed diaktifkan';
 $_lang['setting_feed_modx_security_enabled_desc'] = 'Jika \'Tidak\', MODX akan menyembunyikan Berita keamanan di bagian Selamat datang dari manajer.';
-
-$_lang['setting_filemanager_path'] = 'Path file Manager (sudah ditinggalkan)';
-$_lang['setting_filemanager_path_desc'] = 'Usang - menggunakan sumber-sumber Media sebagai gantinya. IIS sering tidak mengisi document_root pengaturan dengan benar, yang digunakan oleh file manager untuk menentukan apa yang Anda bisa melihat pada. Jika Anda mengalami masalah menggunakan file manager, pastikan ini poin jalan ke akar instalasi MODX.';
-
-$_lang['setting_filemanager_path_relative'] = 'Apakah manajer File Path relatif? (Sudah ditinggalkan)';
-$_lang['setting_filemanager_path_relative_desc'] = 'Usang - menggunakan sumber-sumber Media sebagai gantinya. Jika pengaturan filemanager_path Anda relatif terhadap MODX base_path, kemudian silakan set pengaturan ini ke ya. Jika Anda filemanager_path di luar docroot, pengaturan No.';
-
-$_lang['setting_filemanager_url'] = 'Manajer file Url (sudah ditinggalkan)';
-$_lang['setting_filemanager_url_desc'] = 'Usang - menggunakan sumber-sumber Media sebagai gantinya. Opsional. Menetapkan ini jika Anda ingin mengatur sebuah URL yang eksplisit untuk mengakses file di file manager MODX dari (berguna jika Anda telah mengubah filemanager_path ke path di luar MODX webroot). Pastikan ini adalah nilai pengaturan filemanager_path URL diakses web. Jika Anda membiarkannya kosong, MODX akan mencoba untuk secara otomatis menghitung itu.';
-
-$_lang['setting_filemanager_url_relative'] = 'Apakah manajer File URL relatif? (Sudah ditinggalkan)';
-$_lang['setting_filemanager_url_relative_desc'] = 'Usang - menggunakan sumber-sumber Media sebagai gantinya. Jika pengaturan filemanager_url Anda relatif terhadap MODX base_url, kemudian silakan set pengaturan ini ke ya. Jika Anda filemanager_url di luar webroot utama, pengaturan No.';
-
-$_lang['setting_forgot_login_email'] = 'Lupa Login Email';
-$_lang['setting_forgot_login_email_desc'] = 'Template untuk email yang dikirim saat pengguna lupa MODX username dan/atau password.';
 
 $_lang['setting_form_customization_use_all_groups'] = 'Gunakan semua grup sumber daya untuk bentuk kotumisasi';
 $_lang['setting_form_customization_use_all_groups_desc'] = 'Jika diatur ke benar, FC akan menggunakan * all * set untuk * all * kelompok pengguna anggota ketika menerapkan pengaturan bentuk kustomisasi. Jika tidak, itu hanya akan menggunakan pengaturan milik pengguna primer kelompok. Catatan: pengaturan ini ke Ya mungkin menyebabkan bug dengan bertentangan FC set.';
@@ -371,10 +346,10 @@ $_lang['setting_inline_help'] = 'Tampilkan teks Inline bantuan untuk bidang';
 $_lang['setting_inline_help_desc'] = 'Jika \'Ya\', maka bidang akan menampilkan teks bantuan langsung di bawah bidang. Jika \'Tidak\', semua bidang akan memiliki bantuan berbasis tooltip.';
 
 $_lang['setting_link_tag_scheme'] = 'Skema penghasilan URL';
-$_lang['setting_link_tag_scheme_desc'] = 'URL generation scheme for tag [[~id]]. Available options <a href="https://docs.modx.com/current/en/extending-modx/modx-class/reference/modx.makeurl" target="_blank">here</a>.';
+$_lang['setting_link_tag_scheme_desc'] = 'Skema penghasilan URL untuk tag [[~ id]]. Pilihan yang tersedia <a href="http://api.modx.com/revolution/2.2/db_core_model_modx_modx.class.html#\modX::makeUrl()"> di sini</a>.';
 
 $_lang['setting_locale'] = 'Lokal';
-$_lang['setting_locale_desc'] = 'Set the locale for the system. Leave blank to use the default. See <a href="https://www.php.net/setlocale" target="_blank">the PHP documentation</a> for more information.';
+$_lang['setting_locale_desc'] = 'Mengatur lokal untuk sistem. Biarkan kosong untuk menggunakan default. Lihat <a href="http://php.net/setlocale" target="_blank"> dokumentasi PHP</a> untuk informasi lebih lanjut.';
 
 $_lang['setting_lock_ttl'] = 'Mengunci waktu-to-Live';
 $_lang['setting_lock_ttl_desc'] = 'Jumlah detik kunci pada sumber daya yang akan tetap jika pengguna tidak aktif.';
@@ -415,11 +390,11 @@ $_lang['setting_mail_smtp_pass_desc'] = 'Password untuk melakukan otentikasi ke 
 $_lang['setting_mail_smtp_port'] = 'SMTP Port';
 $_lang['setting_mail_smtp_port_desc'] = 'Menetapkan default SMTP server port.';
 
-$_lang['setting_mail_smtp_prefix'] = 'SMPT enkripsi';
-$_lang['setting_mail_smtp_prefix_desc'] = 'Sets the encryption of the SMTP connection. Options are "", "ssl" or "tls"';
+$_lang['setting_mail_smtp_secure'] = 'SMTP Secure';
+$_lang['setting_mail_smtp_secure_desc'] = 'Sets SMTP secure encryption type. Options are "", "ssl" or "tls"';
 
 $_lang['setting_mail_smtp_autotls'] = 'SMTP Auto TLS';
-$_lang['setting_mail_smtp_autotls_desc'] = 'Whether to enable TLS encryption automatically if a server supports it, even if "SMTP Encryption" is not set to "tls"';
+$_lang['setting_mail_smtp_autotls_desc'] = 'Whether to enable TLS encryption automatically if a server supports it, even if "SMTP Secure" is not set to "tls"';
 
 $_lang['setting_mail_smtp_single_to'] = 'SMTP tunggal untuk';
 $_lang['setting_mail_smtp_single_to_desc'] = 'Menyediakan kemampuan untuk memiliki untuk bidang proses individu email, bukan pengiriman ke seluruh alamat.';
@@ -429,6 +404,30 @@ $_lang['setting_mail_smtp_timeout_desc'] = 'Menetapkan SMTP server timeout dalam
 
 $_lang['setting_mail_smtp_user'] = 'SMTP pengguna';
 $_lang['setting_mail_smtp_user_desc'] = 'Pengguna untuk melakukan otentikasi ke SMTP melawan.';
+
+$_lang['setting_mail_dkim_selector'] = 'DKIM Selector';
+$_lang['setting_mail_dkim_selector_desc'] = 'The DKIM domain selector where the public key stored.';
+
+$_lang['setting_mail_dkim_identity'] = 'DKIM Identity';
+$_lang['setting_mail_dkim_identity_desc'] = 'DKIM identity you\'re signing as - usually your From address';
+
+$_lang['setting_mail_dkim_domain'] = 'DKIM Domain';
+$_lang['setting_mail_dkim_domain_desc'] = 'DKIM signing domain name.';
+
+$_lang['setting_mail_dkim_privatekeyfile'] = 'DKIM Private key file';
+$_lang['setting_mail_dkim_privatekeyfile_desc'] = 'DKIM private key file path. You can use DKIM Private key string instead of this.';
+
+$_lang['setting_mail_dkim_privatekeystring'] = 'DKIM Private key string';
+$_lang['setting_mail_dkim_privatekeystring_desc'] = 'Takes precedence over DKIM Private key file.';
+
+$_lang['setting_mail_dkim_passphrase'] = 'DKIM Passphrase';
+$_lang['setting_mail_dkim_passphrase_desc'] = 'Used only if your key is encrypted.';
+
+$_lang['mail_inlinestyle_inline'] = 'InlineStyle: Enable style inlining for HTML emails';
+$_lang['mail_inlinestyle_inline_desc'] = 'All styles from &#x3C;style&#x3E; tags will be inlined for HTML emails.';
+
+$_lang['mail_inlinestyle_remove_style_tags'] = 'InlineStyle: Remove &#x3C;style&#x3E; tags';
+$_lang['mail_inlinestyle_remove_style_tags_desc'] = 'After inlining styles, all &#x3C;style&#x3E; tags will be removed. <strong>Warning: This can cause issues with responsive email templates.</strong>';
 
 $_lang['setting_main_nav_parent'] = 'Menu utama';
 $_lang['setting_main_nav_parent_desc'] = 'Wadah digunakan untuk menarik semua catatan untuk menu utama.';
@@ -442,29 +441,29 @@ $_lang['setting_manager_date_format_desc'] = 'Format string, dalam format date()
 $_lang['setting_manager_favicon_url'] = 'Manajer Favicon URL';
 $_lang['setting_manager_favicon_url_desc'] = 'Jika diatur, akan memuat URL ini sebagai favicon untuk manajer MODX. Harus sebuah URL relatif untuk manajer / direktori, atau URL absolut.';
 
-$_lang['setting_manager_js_cache_file_locking'] = 'Mengaktifkan mengunci file untuk manajer JS/CSS Cache';
-$_lang['setting_manager_js_cache_file_locking_desc'] = 'Cache file penguncian. Diatur ke tidak jika filesystem NFS.';
-$_lang['setting_manager_js_cache_max_age'] = 'Manajer JS/CSS kompresi Cache umur';
-$_lang['setting_manager_js_cache_max_age_desc'] = 'Maksimal usia cache browser manajer CSS/JS kompresi dalam hitungan detik. Setelah masa ini, peramban akan mengirim GET bersyarat yang lain. Gunakan lebih lama untuk lalu lintas rendah.';
-$_lang['setting_manager_js_document_root'] = 'Manajer JS/CSS kompresi Document Root';
-$_lang['setting_manager_js_document_root_desc'] = 'Jika server Anda tidak menangani variabel server DOCUMENT_ROOT, mengatur secara eksplisit di sini agar manajer CSS/JS kompresi. Jangan mengubah ini kecuali Anda tahu apa yang Anda lakukan.';
-$_lang['setting_manager_js_zlib_output_compression'] = 'Mengaktifkan zlib kompresi Output untuk manajer JS/CSS';
-$_lang['setting_manager_js_zlib_output_compression_desc'] = 'Apakah atau tidak untuk mengaktifkan zlib output kompresi untuk CSS/JS kompresi dalam manajer. Tidak menghidupkan ini kecuali Anda yakin zlib.output_compression variabel konfigurasi PHP dapat diatur ke 1. MODX merekomendasikan meninggalkannya.';
-
-$_lang['setting_manager_lang_attribute'] = 'Manajer HTML dan XML bahasa atribut';
-$_lang['setting_manager_lang_attribute_desc'] = 'Masukkan kode bahasa yang paling sesuai dengan bahasa Manajer pilihan Anda, ini akan memastikan bahwa browser dapat menyajikan konten dalam format terbaik untuk Anda.';
-
-$_lang['setting_manager_language'] = 'Bahasa pengaturan';
-$_lang['setting_manager_language_desc'] = 'Pilih bahasa untuk MODX Content Manager.';
-
 $_lang['setting_manager_login_url_alternate'] = 'URL alternatif manajer Login';
 $_lang['setting_manager_login_url_alternate_desc'] = 'URL alternatif untuk mengirim pengguna tidak terauthentikasi ke ketika mereka perlu login ke pengelola. Login form tidak harus login pengguna untuk konteks "mgr" untuk bekerja.';
+
+$_lang['setting_manager_tooltip_enable'] = 'Enable Manager Tooltips';
+$_lang['setting_manager_tooltip_delay'] = 'Delay Time for Manager Tooltips';
+
+$_lang['setting_login_background_image'] = 'Login Background Image';
+$_lang['setting_login_background_image_desc'] = 'The background image to use in the manager login. This will automatically stretch to fill the screen.';
+
+$_lang['setting_login_logo'] = 'Login Logo';
+$_lang['setting_login_logo_desc'] = 'The logo to show in the top left of the manager login. When left empty, it will show the MODX logo.';
+
+$_lang['setting_login_help_button'] = 'Show Help Button';
+$_lang['setting_login_help_button_desc'] = 'When enabled you will find a help button on the login screen. It\'s possible to customize the information shown with the following lexicon entries in core/login: login_help_button_text, login_help_title, and login_help_text.';
 
 $_lang['setting_manager_login_start'] = 'Manajer Login Startup';
 $_lang['setting_manager_login_start_desc'] = 'Masukkan ID dokumen Anda ingin mengirim pengguna setelah ia telah login ke pengelola. <strong>Catatan: Pastikan Anda telah memasukkan ID milik dokumen yang ada, dan bahwa ia telah diterbitkan dan dapat diakses oleh pengguna ini!</strong>';
 
 $_lang['setting_manager_theme'] = 'Pengaturan Tema';
 $_lang['setting_manager_theme_desc'] = 'Pilih tema untuk manajer konten.';
+
+$_lang['setting_manager_logo'] = 'Manager Logo';
+$_lang['setting_manager_logo_desc'] = 'The logo to show in the Content Manager header.';
 
 $_lang['setting_manager_time_format'] = 'Format waktu Manajer';
 $_lang['setting_manager_time_format_desc'] = 'Format string, dalam format date() pada PHP PHP, untuk pengaturan waktu yang diwakili dalam manajer.';
@@ -538,9 +537,6 @@ $_lang['setting_proxy_port_desc'] = 'Port untuk server proxy Anda.';
 $_lang['setting_proxy_username'] = 'Nama engguna Proxy';
 $_lang['setting_proxy_username_desc'] = 'Nama pengguna untuk melakukan otentikasi terhadap server proxy Anda.';
 
-$_lang['setting_photo_profile_source'] = 'Media Source untuk Foto User';
-$_lang['setting_photo_profile_source_desc'] = 'Media Source digunakan untuk menyimpan profil pengguna foto. Standar ke Media Source standar.';
-
 $_lang['setting_phpthumb_allow_src_above_docroot'] = 'phpThumb Allow src Di atas Document Root';
 $_lang['setting_phpthumb_allow_src_above_docroot_desc'] = 'Menunjukkan apakah path src diperbolehkan di luar akar dokumen. Ini berguna untuk penerapan multi-konteks dengan beberapa host virtual.';
 
@@ -611,15 +607,6 @@ $_lang['setting_publish_default'] = 'Penerbitan standar';
 $_lang['setting_publish_default_desc'] = 'Pilih \'Ya\' untuk membuat semua sumber daya baru yang diterbitkan oleh default.';
 $_lang['setting_publish_default_err'] = 'Tolong nyatakan apakah Anda ingin dokumen diterbitkan secara default atau tidak.';
 
-$_lang['setting_rb_base_dir'] = 'Asal sumber';
-$_lang['setting_rb_base_dir_desc'] = 'Masukkan jalur fisik ke direktori sumber. Pengaturan ini biasanya dibuat secara otomatis. Jika Anda menggunakan IIS, MODX mungkin tidak dapat bekerja dengan sendirinya, menyebabkan sumber pencarian menunjukkan kesalahan. Dalam hal ini, Anda dapat memasukkan jalannya ke direktori gambar di sini (jalan seperti yang akan Anda lihat di Windows Explorer). <strong>NOTE:</strong> Direktori sumber harus berisi gambar, berkas, flash dan media bagian folder agar pencarian sumber berfungsi dengan benar.';
-$_lang['setting_rb_base_dir_err'] = 'Harap sebutkan direktori dasar browser sumber daya.';
-$_lang['setting_rb_base_dir_err_invalid'] = 'Direktori sumber ini tidak ada atau tidak dapat diakses. Harap sebutkan direktori yang sah atau sesuaikan hak akses dari direktori ini.';
-
-$_lang['setting_rb_base_url'] = 'Sumber URL';
-$_lang['setting_rb_base_url_desc'] = 'Masukkan jalur virtual ke direktori sumber daya. Pengaturan ini biasanya dibuat secara otomatis. Jika Anda menggunakan IIS, MODX mungkin tidak dapat mengerjakan URL dengan sendirinya, menyebabkan Browser Sumber Daya menunjukkan kesalahan. Dalam hal ini, Anda dapat memasukkan URL ke direktori gambar di sini (URL yang akan Anda masukkan di Internet Explorer).';
-$_lang['setting_rb_base_url_err'] = 'Harap sebutkan URL dasar browser sumber daya.';
-
 $_lang['setting_quick_search_in_content'] = 'Allow search in content';
 $_lang['setting_quick_search_in_content_desc'] = 'If \'Yes\', then the content of the element (resource, template, chunk, etc.) will also be available for quick search.';
 
@@ -637,9 +624,6 @@ $_lang['setting_request_param_alias_desc'] = 'Nama parameter GET untuk mengident
 
 $_lang['setting_request_param_id'] = 'Permintaan Parameter ID';
 $_lang['setting_request_param_id_desc'] = 'Nama parameter dari GET untuk mengidentifikasi sumber IDs bila tidak menggunakan FURLs.';
-
-$_lang['setting_resolve_hostnames'] = 'Atur hostnames';
-$_lang['setting_resolve_hostnames_desc'] = 'Apakah anda ingin MODX untuk mencoba untuk menyelesaikan anda pengunjung\' hostname ketika mereka mengunjungi situs anda? Menyelesaikan nama host yang mungkin membuat beberapa tambahan beban server, meskipun pengunjung anda tidak akan melihat ini dalam cara apapun.';
 
 $_lang['setting_resource_tree_node_name'] = 'Resource Tree Node Field';
 $_lang['setting_resource_tree_node_name_desc'] = 'Menentukan Sumber daya yang digunakan ketika rendering node di Pokok Sumber. Default untuk pagetitle, meskipun setiap bidang Sumberdaya dapat digunakan, seperti menutitle, alias, longtitle, dll.';
@@ -660,14 +644,11 @@ $_lang['setting_search_default_err'] = 'Harap tentukan apakah dokumen Anda ingin
 $_lang['setting_server_offset_time'] = 'Server offset time';
 $_lang['setting_server_offset_time_desc'] = 'Pilih jumlah perbedaan waktu jam di antara lokasi Anda dan di mana server berada.';
 
-$_lang['setting_server_protocol'] = 'Server type';
-$_lang['setting_server_protocol_desc'] = 'Jika situs Anda terhubung ke https, sebutkan di sini.';
-$_lang['setting_server_protocol_err'] = 'Tentukan apakah situs Anda adalah situs yang aman atau tidak.';
-$_lang['setting_server_protocol_http'] = 'http';
-$_lang['setting_server_protocol_https'] = 'https';
-
 $_lang['setting_session_cookie_domain'] = 'Session Cookie Domain';
 $_lang['setting_session_cookie_domain_desc'] = 'Gunakan setelan ini untuk menyesuaikan domain cookie sesi. Biarkan kosong untuk menggunakan domain saat ini.';
+
+$_lang['setting_session_cookie_samesite'] = 'Session Cookie Samesite';
+$_lang['setting_session_cookie_samesite_desc'] = 'Choose Lax or Strict.';
 
 $_lang['setting_session_cookie_lifetime'] = 'Session Cookie Lifetime';
 $_lang['setting_session_cookie_lifetime_desc'] = 'Gunakan setelan ini untuk menyesuaikan masa pakai cookie sesi dalam hitungan detik. Ini digunakan untuk mengatur masa pakai cookie sesi klien saat mereka memilih opsi \'remember me\' saat masuk.';
@@ -681,14 +662,11 @@ $_lang['setting_session_cookie_secure_desc'] = 'Aktifkan setelan ini untuk mengg
 $_lang['setting_session_cookie_httponly'] = 'Session Cookie HttpOnly';
 $_lang['setting_session_cookie_httponly_desc'] = 'Use this setting to set the HttpOnly flag on session cookies.';
 
-$_lang['setting_session_cookie_samesite'] = 'Session Cookie Samesite';
-$_lang['setting_session_cookie_samesite_desc'] = 'Choose Lax or Strict.';
-
 $_lang['setting_session_gc_maxlifetime'] = 'Session Garbage Collector Max Lifetime';
-$_lang['setting_session_gc_maxlifetime_desc'] = 'Allows customization of the session.gc_maxlifetime PHP ini setting when using \'modSessionHandler\'.';
+$_lang['setting_session_gc_maxlifetime_desc'] = 'Allows customization of the session.gc_maxlifetime PHP ini setting when using \'MODX\\Revolution\\modSessionHandler\'.';
 
 $_lang['setting_session_handler_class'] = 'Session Handler Class Name';
-$_lang['setting_session_handler_class_desc'] = 'Untuk database sesi berhasil, gunakan \'modSessionHandler\'. Biarkan kosong untuk menggunakan standar PHP manajemen sesi.';
+$_lang['setting_session_handler_class_desc'] = 'For database managed sessions, use \'MODX\\Revolution\\modSessionHandler\'.  Leave this blank to use standard PHP session management.';
 
 $_lang['setting_session_name'] = 'Session Name';
 $_lang['setting_session_name_desc'] = 'Gunakan pengaturan ini untuk menyesuaikan nama sesi yang digunakan untuk sesi di MODX. Biarkan kosong untuk menggunakan nama sesi PHP default.';
@@ -732,19 +710,19 @@ $_lang['setting_site_unavailable_page_desc'] = 'Enter the ID of the Resource you
 $_lang['setting_site_unavailable_page_err'] = 'Please specify the document ID for the site unavailable page.';
 
 $_lang['setting_static_elements_automate_templates'] = 'Automate static elements for templates?';
-$_lang['setting_static_elements_automate_templates_desc'] = 'This will automate the handling of static files, such as creating and removing static files for templates.';
+$_lang['setting_static_elements_automate_templates_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for templates.';
 
-$_lang['setting_static_elements_automate_tvs'] = 'Automate static elements for template variables?';
-$_lang['setting_static_elements_automate_tvs_desc'] = 'This will automate the handling of static files, such as creating and removing static files for template variables.';
+$_lang['setting_static_elements_automate_tvs'] = 'Automate static elements for TVs?';
+$_lang['setting_static_elements_automate_tvs_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for TVs.';
 
 $_lang['setting_static_elements_automate_chunks'] = 'Automate static elements for chunks?';
-$_lang['setting_static_elements_automate_chunks_desc'] = 'This will automate the handling of static files, such as creating and removing static files for chunks.';
+$_lang['setting_static_elements_automate_chunks_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for chunks.';
 
 $_lang['setting_static_elements_automate_snippets'] = 'Automate static elements for snippets?';
-$_lang['setting_static_elements_automate_snippets_desc'] = 'This will automate the handling of static files, such as creating and removing static files for snippets.';
+$_lang['setting_static_elements_automate_snippets_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for snippets.';
 
 $_lang['setting_static_elements_automate_plugins'] = 'Automate static elements for plugins?';
-$_lang['setting_static_elements_automate_plugins_desc'] = 'This will automate the handling of static files, such as creating and removing static files for plugins.';
+$_lang['setting_static_elements_automate_plugins_desc'] = 'This will automate the handling of static files, such as creating and deleting static files for plugins.';
 
 $_lang['setting_static_elements_default_mediasource'] = 'Static elements default mediasource';
 $_lang['setting_static_elements_default_mediasource_desc'] = 'Specify a default mediasource where you want to store the static elements in.';
@@ -761,9 +739,6 @@ $_lang['setting_resource_static_allow_absolute_desc'] = 'This setting enables us
 $_lang['setting_resource_static_path'] = 'Static resource base path';
 $_lang['setting_resource_static_path_desc'] = 'When resource_static_allow_absolute is disabled, static resources are restricted to be within the absolute path provided here.  Important: setting this too wide may allow users to read files they shouldn\'t! It is strongly recommended to limit users to a specific directory such as {core_path}static/ or {assets_path} with this setting.';
 
-$_lang['setting_strip_image_paths'] = 'Rewrite browser paths?';
-$_lang['setting_strip_image_paths_desc'] = 'If this is set to \'No\', MODX will write file browser resource src\'s (images, files, flash, etc.) as absolute URLs. Relative URLs are helpful should you wish to move your MODX install, e.g., from a staging site to a production site. If you have no idea what this means, it\'s best just to leave it set to \'Yes\'.';
-
 $_lang['setting_symlink_merge_fields'] = 'Merge Resource Fields in Symlinks';
 $_lang['setting_symlink_merge_fields_desc'] = 'If set to Yes, will automatically merge non-empty fields with target resource when forwarding using Symlinks.';
 
@@ -771,11 +746,8 @@ $_lang['setting_syncsite_default'] = 'Empty Cache default';
 $_lang['setting_syncsite_default_desc'] = 'Pilih \'Ya\' untuk mengosongkan cache setelah Anda menyimpan sumber daya secara standar.';
 $_lang['setting_syncsite_default_err'] = 'Tolong nyatakan apakah Anda ingin mengosongkan cache setelah menyimpan sumber daya secara standar.';
 
-$_lang['setting_topmenu_show_descriptions'] = 'Tampilkan Deskripsi di Menu Atas';
-$_lang['setting_topmenu_show_descriptions_desc'] = 'If set to \'No\', MODX will hide the descriptions from top menu items in the manager.';
-
-$_lang['setting_topmenu_subitems_max'] = 'Maximum items in the drop-down lists of the top menu bar';
-$_lang['setting_topmenu_subitems_max_desc'] = 'The maximum number of items displayed in the drop-down lists of the top menu bar. The remaining items will be hidden in the \'...\' item.';
+$_lang['setting_topmenu_show_descriptions'] = 'Show Descriptions in Main Menu';
+$_lang['setting_topmenu_show_descriptions_desc'] = 'If set to \'No\', MODX will hide the descriptions from main menu items in the manager.';
 
 $_lang['setting_tree_default_sort'] = 'Resource Tree Default Sort Field';
 $_lang['setting_tree_default_sort_desc'] = 'The default sort field for the Resource tree when loading the manager.';
@@ -784,42 +756,32 @@ $_lang['setting_tree_root_id'] = 'Tree Root ID';
 $_lang['setting_tree_root_id_desc'] = 'Set this to a valid ID of a Resource to start the left Resource tree at below that node as the root. The user will only be able to see Resources that are children of the specified Resource.';
 
 $_lang['setting_tvs_below_content'] = 'Move TVs Below Content';
-$_lang['setting_tvs_below_content_desc'] = 'Set this to Yes to move Template Variables below the Content when editing Resources.';
+$_lang['setting_tvs_below_content_desc'] = 'Set this to Yes to move TVs below the Content when editing Resources.';
 
 $_lang['setting_ui_debug_mode'] = 'UI Debug Mode';
 $_lang['setting_ui_debug_mode_desc'] = 'Set this to Yes to output debug messages when using the UI for the default manager theme. You must use a browser that supports console.log.';
-
-$_lang['setting_udperms_allowroot'] = 'Allow root';
-$_lang['setting_udperms_allowroot_desc'] = 'Do you want to allow your users to create new Resources in the root of the site?';
 
 $_lang['setting_unauthorized_page'] = 'Unauthorized page';
 $_lang['setting_unauthorized_page_desc'] = 'Masukkan Sumber ID yang ingin Anda kirimi pengguna jika mereka meminta Sumber yang aman atau tidak sah. <strong>CATATAN: Pastikan ID yang Anda masukkan milik sumber yang ada, dan itu telah dipublikasikan dan dapat diakses publik!</strong>';
 $_lang['setting_unauthorized_page_err'] = 'Silakan tentukan ID Sumber daya untuk halaman yang tidak sah.';
 
-$_lang['setting_upload_check_exists'] = 'Check if uploaded file exists';
-$_lang['setting_upload_check_exists_desc'] = 'When enabled an error will be shown when uploading a file that already exists with the same name. When disabled, the existing file will be quietly replaced with the new file.';
-
 $_lang['setting_upload_files'] = 'Jenis berkas yang dapat diunggah';
 $_lang['setting_upload_files_desc'] = 'Di sini Anda bisa memasukkan daftar berkas yang bisa diunggah ke \'assets/files/\' menggunakan Resource Manager. Harap masukkan ekstensi untuk tipe berkas, dipisahkan dengan koma.';
 
-$_lang['setting_upload_flash'] = 'Jenis Flash yang dapat diunggah';
-$_lang['setting_upload_flash_desc'] = 'Di sini Anda bisa memasukkan daftar berkas yang bisa diunggah ke \'assets/flash/\' menggunakan Resource Manager. Harap masukkan ekstensi untuk jenis flash, dipisahkan dengan koma.';
-
-$_lang['setting_upload_images'] = 'Jenis gambar yang dapat diunggah';
-$_lang['setting_upload_images_desc'] = 'Di sini Anda bisa memasukkan daftar berkas yang bisa diunggah menjadi \'asset/images/\' menggunakan Resource Manager. Harap masukkan ekstensi untuk jenis gambar, dipisahkan dengan tanda koma.';
+$_lang['setting_upload_file_exists'] = 'Check if uploaded file exists';
+$_lang['setting_upload_file_exists_desc'] = 'When enabled an error will be shown when uploading a file that already exists with the same name. When disabled, the existing file will be quietly replaced with the new file.';
 
 $_lang['setting_upload_maxsize'] = 'Batas ukuran unggahan';
 $_lang['setting_upload_maxsize_desc'] = 'Masukkan ukuran berkas maksimal yang bisa diunggah melalui file manager. Unggahan ukuran berkas harus dimasukkan dalam format bytes. <strong>CATATAN: File berukuran besar bisa memakan waktu lama untuk diunggah! </strong>';
 
-$_lang['setting_upload_media'] = 'Jenis meida yang dapat diunggah';
-$_lang['setting_upload_media_desc'] = 'Di sini Anda bisa memasukkan daftar berkas yang bisa diunggah menjadi \'asset/media/\' menggunakan Resource Manager. Harap masukkan ekstensi untuk jenis media, dipisahkan dengan koma.';
+$_lang['setting_upload_translit'] = 'Transliterate names of uploaded files?';
+$_lang['setting_upload_translit_desc'] = 'If this option is enabled, the name of an uploaded file will be transliterated according to the global transliteration rules.';
+
+$_lang['setting_upload_translit_restrict_chars_pattern'] = 'File Name Character Restriction Pattern';
+$_lang['setting_upload_translit_restrict_chars_pattern_desc'] = 'A valid RegEx pattern for restricting characters used in an uploaded file’s name.';
 
 $_lang['setting_use_alias_path'] = 'Gunakan sahabat alias diri sendiri';
 $_lang['setting_use_alias_path_desc'] = 'Atur pilihan ini menjadi \'ya\' akan menampilkan path lengkap ke sumber jika sumber memiliki alias. Misalnya, jika sumber dengan alias bernama \'child\' berada di dalam lingkupan sumber dengan alias disebut \'parent\', maka seluruh alias path ke sumber akan ditampilkan sebagai \'/parent/child.html\'.<br/><strong>CATATAN: Saat menyetel opsi ini ke \'Ya\' (mengaktifkan jalur alias), item referensi (seperti gambar, CSS, JavaScripts, dll.) gunakan jalur absolut, misalnya \'/ aset / gambar\' sebagai bertentangan dengan \'aset / gambar\'. Dengan demikian Anda akan mencegah pencarian (atau jaringan pencarian) menambahkan jalur relatif ke jalur alias.</strong>';
-
-$_lang['setting_use_browser'] = 'Mengaktifkan sumber pencarian';
-$_lang['setting_use_browser_desc'] = 'Pilih ya untuk mengaktifkan sumber daya browser. Hal ini akan memungkinkan pengguna untuk mencari dan meng-upload sumber daya seperti gambar, flash dan file media pada server.';
-$_lang['setting_use_browser_err'] = 'Sebutkan apakah atau tidak anda ingin menggunakan sumber daya browser.';
 
 $_lang['setting_use_editor'] = 'Mengaktifkan Editor Teks Kaya';
 $_lang['setting_use_editor_desc'] = 'Apakah anda ingin mengaktifkan editor teks kaya? Jika anda lebih nyaman menulis HTML, maka anda dapat mengubah editor menggunakan pengaturan ini. Perhatikan bahwa pengaturan ini berlaku untuk semua dokumen dan semua pengguna!';
@@ -836,14 +798,6 @@ $_lang['setting_use_weblink_target_desc'] = 'Atur ke benar jika Anda ingin memil
 
 $_lang['setting_user_nav_parent'] = 'Menu user induk';
 $_lang['setting_user_nav_parent_desc'] = 'Wadah yang digunakan untuk menarik semua catatan untuk menu pengguna.';
-
-$_lang['setting_webpwdreminder_message'] = 'Pencarian pengingat email';
-$_lang['setting_webpwdreminder_message_desc'] = 'Masukkan pesan yang akan dikirim ke para pengguna web Anda setiap kali mereka meminta kata sandi baru melalui email. Pengelola Konten akan mengirim email berisi informasi sandi dan aktivasi baru mereka. <br/><strong>Catatan: </strong> Placeholder berikut digantikan oleh Pengelola Konten saat pesan dikirim:<br/>[[+sname]] - Nama situs pencarian Anda, <br/>[[+saddr]]- alamat email situs pencarian Anda, <br/>[[+surl]] - URL situs Anda, <br/>[[+uid]] - nama login pengguna atau identitas, <br />[[+pwd]] - Kata sandi pengguna, <br/>[[+ufn]] - Nama lengkap pengguna. <br/><br/><strong> Tinggalkan [[+uid]] dan [[+pwd]] di email, atau nama pengguna dan kata kunci tidak akan dikirim melalui email dan pengguna Anda tidak akan tahu nama pengguna atau kata sandi mereka! </strong>';
-$_lang['setting_webpwdreminder_message_default'] = 'Halo [[+uid]]\n\n Untuk mengaktifkan kata sandi baru Anda, klik link berikut:\n\n[[+surl]]\n\n Jika berhasil, Anda dapat menggunakan kata sandi berikut untuk login:\n\nPassword:[[+pwd]]\n\n Jika Anda tidak meminta email ini, mohon abaikan saja.\n\nRegrads,\nSite Administrator';
-
-$_lang['setting_websignupemail_message'] = 'Pencarian pendaftaran email';
-$_lang['setting_websignupemail_message_desc'] = 'Di sini Anda dapat mengatur pesan yang dikirim ke pengguna pencarian Anda saat Anda membuat akun pencarian untuknya dan membiarkan Pengelola Konten mengirimkan mereka sebuah email berisi nama pengguna dan kata sandi mereka. <br/><strong>Catatan:</strong> Placeholder berikut digantikan oleh Pengelola Konten saat pesan dikirim: <br/>[[+sname]] - Nama situs pencarian Anda, <br/>[[+saddr]] - alamat email situs pencarian Anda, <br/>[[+surl]] - URL situs Anda, <br/> [[+uid]] - nama login pengguna atau identitas, <br/>[[+pwd]] - Kata sandi pengguna, <br/>[[+ufn]] - Nama lengkap pengguna. <br/><br/><strong> Tinggalkan [[+uid]] dan [[+pwd]] di email, atau nama pengguna dan kata kunci tidak akan dikirim melalui pos dan pengguna Anda tidak akan tahu nama pengguna atau kata sandi mereka!</strong>';
-$_lang['setting_websignupemail_message_default'] = 'Halo [[+uid]]\n\n Berikut adalah info rinci untuk anda masuk [[+sname]]:\n\n Nama pengguna: [[+uid]]\nPassword: [[+pwd]]\n\n Setelah Anda masuk ke [[+sname]] ([[+surl]]), Anda dapat mengubah kata sandi Anda.\n\nRegards,\nSite Administrator';
 
 $_lang['setting_welcome_screen'] = 'Tampilkan Layar Selamat Datang';
 $_lang['setting_welcome_screen_desc'] = 'Apabila aturan ke benar, layar selamat datang akan tampil pada pemuatan halaman selamat datang berikutnya, dan kemudian tidak muncul setelah itu.';
@@ -885,7 +839,13 @@ $_lang['setting_error_log_filename'] = 'Error log filename';
 $_lang['setting_error_log_filename_desc'] = 'Customize the filename of the MODX error log file (includes file extension).';
 
 $_lang['setting_error_log_filepath'] = 'Error log path';
-$_lang['setting_error_log_filepath_desc'] = 'Optionally set a absolute path the a custom error log location. You might use placehodlers like {cache_path}.';
+$_lang['setting_error_log_filepath_desc'] = 'Optionally set a absolute path the a custom error log location. You might use placeholders like {cache_path}.';
 
-$_lang['static_elements_html_extension'] = 'Static elements html extension';
-$_lang['static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';
+$_lang['setting_passwordless_activated'] = 'Activate passwordless login';
+$_lang['setting_passwordless_activated_desc'] = 'When enabled, users will enter their email address to receive a one-time login link, rather than entering a username and password.';
+
+$_lang['setting_passwordless_expiration'] = 'Passwordless login expiration';
+$_lang['setting_passwordless_expiration_desc'] = 'How long a one-time login link is valid in seconds.';
+
+$_lang['setting_static_elements_html_extension'] = 'Static elements html extension';
+$_lang['setting_static_elements_html_extension_desc'] = 'The extension for files used by static elements with HTML content.';

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Content Type English lexicon topic
  *
@@ -15,17 +16,15 @@ $_lang['content_type_err_nfs'] = 'Тип содержимого с ID [[+id]] н
 $_lang['content_type_err_ns'] = 'Тип содержимого не указан.';
 $_lang['content_type_err_ns_name'] = 'Пожалуйста, укажите корректное название типа содержимого.';
 $_lang['content_type_err_create'] = 'Произошла ошибка при попытке создать тип содержимого.';
-$_lang['content_type_err_in_use'] = 'Вы не можете удалить этот тип содержимого, так как он используется ресурсами. Назначьте новые типы контента для этих ресурсов, прежде чем продолжить.';
+$_lang['content_type_err_in_use'] = 'Вы не можете удалить этот тип содержимого, так как он используется ресурсами в MODX. Пожалуйста, назначьте новые типы содержимого для этих ресурсов, прежде чем продолжить.';
 $_lang['content_type_err_remove'] = 'Произошла ошибка при попытке удалить тип содержимого.';
 $_lang['content_type_err_save'] = 'Произошла ошибка при попытке сохранить тип содержимого.';
 $_lang['content_type_header'] = 'Заголовок';
 $_lang['content_type_main_tab'] = 'Основное';
 $_lang['content_type_header_tab'] = 'Пользовательские заголовки';
 $_lang['content_type_header_title'] = 'Создать/редактировать заголовок';
-$_lang['content_type_new'] = 'Новый тип содержимого';
-$_lang['content_type_edit'] = 'Редактировать тип содержимого';
-$_lang['content_type_remove'] = 'Удалить тип содержимого';
 $_lang['content_type_remove_confirm'] = 'Вы уверены, что хотите удалить этот тип содержимого?';
+$_lang['content_type_reserved_general_desc'] = 'Note that this is a protected, built-in Content Type. Some values are locked and shown for informational purposes only.';
 $_lang['content_types'] = 'Типы содержимого';
 $_lang['file_extensions'] = 'Расширение файла';
 $_lang['file_extensions_desc'] = 'Расширение файла для этого типа содержимого.';

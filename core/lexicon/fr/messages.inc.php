@@ -25,9 +25,7 @@ $_lang['usergroup'] = 'Groupe d\'utilisateurs';
 $_lang['filter_by_type'] = 'Filtrer par type...';
 
 $_lang['message'] = 'Message';
-$_lang['message_create'] = 'Composer un Message';
-$_lang['message_new'] = 'Nouveau message';
-$_lang['message_remove_confirm'] = 'Êtes-vous sûr de vouloir supprimer ce message définitivement?';
+$_lang['message_remove_confirm'] = 'Êtes-vous sûr de vouloir supprimer complètement ce message ?';
 $_lang['message_send_email'] = 'Envoyer Email';
 $_lang['message_err_nfs'] = 'Message non trouvé.';
 $_lang['message_err_not_specified_subject'] = 'Sujet non spécifié!';
@@ -36,7 +34,7 @@ $_lang['message_err_remove_notauth'] ='Vous n\'êtes pas autorisé à supprimer 
 $_lang['message_err_save'] = 'Une erreur est survenue lors de la sauvegarde du message.';
 
 $_lang['messages'] = 'Messages';
-$_lang['messages_desc'] = 'Ici, vous pouvez gérer les messages qui ont été envoyés par vous ou qui vous ont été envoyés par d’autres utilisateurs. Vous pouvez répondre, transférer les messages, ainsi que supprimer ou marquer comme lus les messages spécifiés .';
+$_lang['messages_desc'] = 'Ici, vous pouvez gérer les messages que vous vous ont êtes envoyés ou qui vous ont été envoyés par d\'autres utilisateurs. Vous pouvez répondre, envoyer des messages, vous pouvez aussi supprimer ou marquer comme lus des messages spécifiés.';
 $_lang['messages_all'] = 'Tout le monde';
 $_lang['messages_compose'] = 'Rédiger un message';
 $_lang['messages_forward'] = 'Faire suivre';

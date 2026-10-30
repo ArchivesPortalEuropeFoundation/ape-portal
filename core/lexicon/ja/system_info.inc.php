@@ -11,6 +11,10 @@ $_lang['database_name'] = 'データベース名';
 $_lang['database_server'] = 'データベースサーバー';
 $_lang['database_tables'] = 'データベーステーブル';
 $_lang['database_optimize'] = 'データベース最適化';
+$_lang['database_optimize_process'] = 'The tables are being optimized now.';
+$_lang['database_optimize_success'] = 'The tables were successfully optimized.';
+$_lang['database_optimize_error'] = 'There was an error while optimizing the database tables.';
+$_lang['database_optimize_processing'] = 'Optimizing...';
 $_lang['database_table_clickhere'] = 'ここをクリック';
 $_lang['database_table_clickbackup'] = '選択したテーブルをバックアップ・ダウンロード';
 $_lang['database_table_datasize'] = 'データサイズ';
@@ -18,12 +22,10 @@ $_lang['database_table_droptablestatements'] = 'DROP文を生成';
 $_lang['database_table_effectivesize'] = '有効サイズ';
 $_lang['database_table_indexsize'] = 'インデックス';
 $_lang['database_table_overhead'] = 'オーバーヘッド';
-$_lang['database_table_reserved'] = '予約済み';//sqlsrv
 $_lang['database_table_records'] = '件数';
 $_lang['database_table_tablename'] = 'テーブル名';
 $_lang['database_table_totalsize'] = '合計サイズ';
 $_lang['database_table_totals'] = '総計:';
-$_lang['database_table_unused'] = '不使用';//sqlsrv
 $_lang['database_type'] = 'データベースの種類';
 $_lang['database_version'] = 'データベースのバージョン:';
 $_lang['extjs_version'] = '<a href="http://extjs.com/" target="_blank">ExtJS</a> のバージョン';
@@ -44,7 +46,7 @@ $_lang['phpmailer_version'] = '<a href="https://github.com/PHPMailer/PHPMailer" 
 $_lang['server'] = 'サーバー';
 $_lang['servertime'] = 'サーバー時刻';
 $_lang['serveroffset'] = 'サーバーオフセット';
-$_lang['smarty_version'] = '<a href="https://www.smarty.net/" target="_blank">Smarty</a> Version';
+$_lang['smarty_version'] = '<a href="http://smarty.net/" target="_blank">Smarty</a> のバージョン';
 $_lang['sysinfo_desc'] = 'システムに関する基本情報を閲覧できます。';
 $_lang['view_sysinfo'] = 'システム情報';
 $_lang['table_prefix'] = 'テーブル接頭辞';

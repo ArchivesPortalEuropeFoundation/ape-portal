@@ -6,60 +6,96 @@
  * @package modx
  * @subpackage lexicon
  */
+$_lang['example_tag_tv_name'] = 'НазваTV';
 $_lang['has_access'] = 'Ёсць доступ?';
 $_lang['filter_by_category'] = 'Фільтраваць па катэгорыi…';
 $_lang['rank'] = 'Ранг';
 $_lang['rendering_options'] = 'Налады адлюстравання';
-$_lang['tv'] = 'Пераменная шаблону';
-$_lang['tv_access_msg'] = 'Выберыце групы рэсурсаў, да якіх павінна належаць зменная шаблону. Толькі карыстальнікі, якія маюць доступ да абраных груп, змогуць змяніць гэтую зменную шаблону. Калі групы не абраны, усе карыстальнікі, якія маюць доступ да сістэмы кіравання, змогуць змяніць зменную шаблону.';
+$_lang['tv'] = 'TV';
+$_lang['tvs'] = 'Пераменныя шаблону';
 $_lang['tv_binding_msg'] = 'Гэтае поле падтрымлівае прывязку крыніцы дадзеных з выкарыстаннем @ каманд';
 $_lang['tv_caption'] = 'Подпіс';
-$_lang['tv_change_template_msg'] = 'Змена гэтага шаблона выкліча перазагрузку старонкі за зменнымі шаблону, страціўшы ўсе незахаваныя змены.<br /><br />Вы сапраўды жадаеце змяніць гэты шаблон?';
+$_lang['tv_caption_desc'] = 'The label shown for this TV in Resource editing pages (can be overridden per template or other criteria using <a href="?a=security/forms" target="_blank">Form Customization</a>).';
+$_lang['tv_category_desc'] = 'Use to group TVs in Resource editing pages and within the Elements tree.';
+$_lang['tv_change_template_msg'] = 'Changing this template will cause the page to reload the TVs, losing any unsaved changes.<br /><br /> Are you sure you want to change this template?';
 $_lang['tv_delete_confirm'] = 'Вы сапраўды жадаеце выдаліць гэтую зменную шаблону?';
-$_lang['tv_desc_caption'] = 'Тэкст, які будзе паказаны побач са зменнай шаблону пры рэдагаванні яе на старонцы рэсурса.';
-$_lang['tv_desc_category'] = 'Катэгорыя, да якой належыць зменная шаблону.';
-$_lang['tv_desc_description'] = 'Кароткае апісанне гэтай зменнай шаблону.';
-$_lang['tv_desc_name'] = 'Назва гэтай зменнай шаблону. Яна будзе даступна для выкарыстоўвання з дапамогай тэга [[*NameOfTV]].';
 $_lang['tv_description'] = 'Апісанне';
-$_lang['tv_err_delete'] = 'Адбылася памылка пры выдаленні зменнай шаблону.';
-$_lang['tv_err_duplicate'] = 'Адбылася памылка пры спробе дубляваць зменную шаблону.';
+$_lang['tv_description_desc'] = 'Usage information for this TV shown next to its caption in Resource editing pages, as a tooltip in the Elements tree, and within search results.';
+$_lang['tv_err_delete'] = 'An error occurred while trying to delete the TV.';
+$_lang['tv_err_duplicate'] = 'An error occurred while trying to duplicate the TV.';
 $_lang['tv_err_duplicate_templates'] = 'Адбылася памылка пры дубляванні шаблонаў зменнай шаблону.';
-$_lang['tv_err_duplicate_documents'] = 'An error occurred while duplicating TV resources.';
-$_lang['tv_err_duplicate_documentgroups'] = 'An error occurred while duplicating TV resource groups.';
-$_lang['tv_err_ae'] = 'Зменная шаблону ўжо існуе з назвай "[[+name]]".';
-$_lang['tv_err_invalid_name'] = 'У вас ёсць недапушчальныя сімвалы ў назве зменнай шаблону.';
-$_lang['tv_err_locked'] = 'Зменная шаблону заблакавана!';
-$_lang['tv_err_nf'] = 'Зменная шаблону не знойдзена.';
-$_lang['tv_err_nfs'] = 'Не знойдзена зменная шаблону з ID: [[+id]]';
-$_lang['tv_err_ns'] = 'Зменная шаблону не пазначана.';
-$_lang['tv_err_reserved_name'] = 'Зменная шаблону не можа мець аднолькавую назву разам з полем рэрурса.';
-$_lang['tv_err_save_access_permissions'] = 'Адбылася памылка пры спробе захаваць дазволы доступу зменнай шаблону.';
-$_lang['tv_err_save'] = 'Адбылася памылка пры захаванні зменнай шаблону.';
-$_lang['tv_inuse'] = 'The following resource(s) are currently using this Template Variable. To continue with the delete operation click the Delete button otherwise click the Cancel button.';
+$_lang['tv_err_duplicate_documents'] = 'Адбылася памылка пры дубляванні дакументаў зменнай шаблону.';
+$_lang['tv_err_duplicate_documentgroups'] = 'Адбылася памылка пры дубляванні груп дакументаў зменнай шаблону.';
+$_lang['tv_err_ae'] = 'A TV already exists with the name "[[+name]]".';
+$_lang['tv_err_invalid_name'] = 'TV name is invalid.';
+$_lang['tv_err_invalid_id_attr'] = 'HTML ids must not begin with a number or contain any white space.';
+$_lang['tv_err_locked'] = 'TV locked!';
+$_lang['tv_err_nf'] = 'TV not found.';
+$_lang['tv_err_nfs'] = 'TV not found with key: [[+id]]';
+$_lang['tv_err_ns'] = 'TV not specified.';
+$_lang['tv_err_reserved_name'] = 'A TV cannot have the same name as a Resource field.';
+$_lang['tv_err_save_access_permissions'] = 'An error occurred while attempting to save TV access permissions.';
+$_lang['tv_err_save'] = 'An error occurred while saving the TV.';
+$_lang['tv_inuse'] = 'The following document(s) are currently using this TV. To continue with the delete operation click the Delete button otherwise click the Cancel button.';
 $_lang['tv_inuse_template'] = 'Наступны шаблон (ці шаблоны) выкарыстоўваюць гэтую зменную шаблону: [[+templates]].<br /><br />Калі ласка, адлучыце зменную шаблону ад шаблону (ці шаблонаў) перад выдаленнем.';
-$_lang['tv_input_options'] = 'Налады ўводу';
-$_lang['tv_input_options_msg'] = '<p>Тут вы можаце змяніць параметры ўводу для зменнай шаблону, спецыфічныя для абранага тыпу ўводу.</p>';
-$_lang['tv_lock'] = 'Заблакаваць зменную для рэдагавання';
-$_lang['tv_lock_msg'] = 'Карыстальнікі павінны мець дазвол edit_locked для рэдагавання гэтай зменнай шаблону.';
-$_lang['tv_management_msg'] = 'Manage additional custom content fields (Template Variables) for your resources.';
-$_lang['tv_msg'] = 'Add or edit Template Variable here. Template Variables must be assigned to templates in order to access them from snippets and resources.';
-$_lang['tv_name'] = 'Назва зменнай';
-$_lang['tv_new'] = 'Новая зменная шаблону';
-$_lang['tv_novars'] = 'Ніводнай зменнай шаблону не знойдзена';
-$_lang['tv_output_options'] = 'Налады вываду';
-$_lang['tv_output_options_msg'] = '<p>Тут вы можаце змяніць параметры ўводу для зменнай шаблону, спецыфічныя для абранага тыпу ўводу.</p>';
+$_lang['is_static_tv_desc'] = 'Use an external file to store the default value for this TV. This may be useful if the default value’s content is particularly lengthy.';
+$_lang['tv_lock'] = 'Restrict Editing';
+$_lang['tv_lock_desc'] = 'Only users with “edit_locked” permissions can edit this TV.';
+$_lang['tv_management_msg'] = 'Manage additional custom TVs for your documents.';
+$_lang['tv_name_desc'] = 'Place the content generated by this TV in a Resource, Template, or Chunk using the following MODX tag: [[+tag]]';
+$_lang['tv_new'] = 'Create TV';
+$_lang['tv_novars'] = 'No TVs found';
 $_lang['tv_properties'] = 'Параметры па змаўчанні';
 $_lang['tv_rank'] = 'Парадак сартавання';
+$_lang['tv_rank_desc'] = 'Use to control the positioning of this TV in Resource editing pages (can be overridden per template or other criteria using <a href="?a=security/forms" target="_blank">Form Customization</a>).';
 $_lang['tv_reset_params'] = 'Скінуць параметры';
-$_lang['tv_sources.intro_msg'] = 'Тут вы можаце прысвоіць медыя крыніцы, якія павінны быць выкарыстаны для гэтай зменнай шаблону ў кожным пазначаным кантэксце. Двойчы пстрыкніце па назве крыніцы ў табліцы, каб змяніць яе.';
-$_lang['tv_tmpl_access'] = 'Дазволы шаблонаў';
-$_lang['tv_tmpl_access_msg'] = 'Выберыце шаблоны для каторых гэтая зменная шаблону даступна.';
+$_lang['tv_tab_access_desc'] = 'Select the Resource Groups that this TV belongs to. Only users with access to the Groups selected will be able to modify this TV. If no Groups are selected, all users with access to the Manager will be able to modify the TV.';
+$_lang['tv_tab_general_desc'] = 'Here you can enter the basic attributes for this <em>Template Variable</em> (TV). Note that TVs must be assigned to templates in order to access them from snippets and documents.';
+$_lang['tv_tab_input_options'] = 'Налады ўводу';
+$_lang['tv_tab_input_options_desc'] = '<p>Here you can edit the input options for the TV, specific to the type of input render that you select.</p>';
+$_lang['tv_tab_output_options'] = 'Налады вываду';
+$_lang['tv_tab_output_options_desc'] = '<p>Here you can edit the output options for the TV, specific to the type of output render that you select.</p>';
+$_lang['tv_tab_sources_desc'] = 'Тут вы можаце прысвоіць медыя крыніцы, якія павінны быць выкарыстаны для гэтай зменнай шаблону ў кожным пазначаным кантэксце. Двойчы пстрыкніце па назве крыніцы ў табліцы, каб змяніць яе.';
+$_lang['tv_tab_tmpl_access'] = 'Дазволы шаблонаў';
+$_lang['tv_tab_tmpl_access_desc'] = 'Select the templates that are allowed to access this TV.';
+$_lang['tv_tag_copied'] = 'TV tag copied!';
 $_lang['tv_widget'] = 'Віджэт';
 $_lang['tv_widget_prop'] = 'Уласцівасьці віджэта';
-$_lang['tvd_err_remove'] = 'An error occurred while trying to remove the Template Variable from the resource.';
-$_lang['tvdg_err_remove'] = 'An error occurred while trying to remove the Template Variable from the resource group.';
-$_lang['tvdg_err_save'] = 'An error occurred while trying to attach the Template Variable to the resource group.';
-$_lang['tvs'] = 'Пераменныя шаблону';
-$_lang['tvt_err_nf'] = 'Зменная шаблону не мае доступу да пазначанага шаблону.';
-$_lang['tvt_err_remove'] = 'Адбылася памылка пры спробе выдаліць зменную шаблону з шаблону.';
-$_lang['tvt_err_save'] = 'Адбылася памылка пры спробе прыстасаваць зменную шаблону да шаблону.';
+$_lang['tvd_err_remove'] = 'An error occurred while trying to delete the TV from the document.';
+$_lang['tvdg_err_remove'] = 'An error occurred while trying to delete the TV from the document group.';
+$_lang['tvdg_err_save'] = 'An error occurred while trying to attach the TV to the document group.';
+$_lang['tvt_err_nf'] = 'TV does not have access to the specified template.';
+$_lang['tvt_err_remove'] = 'An error occurred while trying to delete the TV from the template.';
+$_lang['tvt_err_save'] = 'An error occurred while trying to attach the TV to the template.';
+
+// Temporarily match old keys to new ones to ensure compatibility
+// -- fields
+$_lang['tv_desc_caption'] = $_lang['tv_caption_desc'];
+$_lang['tv_desc_category'] = $_lang['tv_category_desc'];
+$_lang['tv_desc_description'] = $_lang['tv_description_desc'];
+$_lang['tv_desc_name'] = $_lang['tv_name_desc'];
+$_lang['tv_lock_msg'] = $_lang['tv_lock_desc'];
+$_lang['tv_rank_msg'] = $_lang['tv_rank_desc'];
+
+// -- tabs
+$_lang['tv_access_msg'] = $_lang['tv_tab_access_desc'];
+$_lang['tv_input_options'] = $_lang['tv_tab_input_options'];
+$_lang['tv_input_options_msg'] = $_lang['tv_tab_input_options_desc'];
+$_lang['tv_msg'] = $_lang['tv_tab_general_desc'];
+$_lang['tv_output_options'] = $_lang['tv_tab_output_options'];
+$_lang['tv_output_options_msg'] = $_lang['tv_tab_output_options_desc'];
+$_lang['tv_sources.intro_msg'] = $_lang['tv_tab_sources_desc'];
+$_lang['tv_tmpl_access'] = $_lang['tv_tab_tmpl_access'];
+$_lang['tv_tmpl_access_msg'] = $_lang['tv_tab_tmpl_access_desc'];
+
+/*
+    Refer to default.inc.php for the keys below.
+    (Placement in this default file necessary to allow
+    quick create/edit panels access to them when opened
+    outside the context of their respective element types)
+
+    tv_caption_desc
+    tv_category_desc
+    tv_description_desc
+
+*/

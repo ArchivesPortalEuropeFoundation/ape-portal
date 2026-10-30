@@ -12,9 +12,9 @@ MODx.grid.Provider = function(config) {
     Ext.applyIf(config,{
         title: _('providers')
         ,url: MODx.config.connector_url
-        ,save_action: 'workspace/providers/updatefromgrid'
+        ,save_action: 'Workspace/Providers/UpdateFromGrid'
         ,baseParams: {
-            action: 'workspace/providers/getlist'
+            action: 'Workspace/Providers/GetList'
         }
         ,fields: ['id','name','description','service_url','username','api_key','menu']
         ,paging: true
@@ -35,7 +35,7 @@ MODx.grid.Provider = function(config) {
             ,editor: { xtype: 'textarea' }
         }]
         ,tbar: [{
-            text: _('provider_add')
+            text: _('create')
             ,cls: 'primary-button'
             ,handler: { xtype: 'modx-window-provider-create' ,blankValues: true }
         }]
@@ -57,10 +57,9 @@ Ext.reg('modx-grid-provider',MODx.grid.Provider);
 MODx.window.CreateProvider = function(config) {
     config = config || {};
     Ext.applyIf(config,{
-        title: _('provider_add')
-        // ,width: 400
+        title: _('create')
         ,url: MODx.config.connector_url
-        ,action: 'workspace/providers/create'
+        ,action: 'Workspace/Providers/Create'
         ,fields: [{
             name: 'id'
             ,xtype: 'hidden'
@@ -111,8 +110,8 @@ Ext.reg('modx-window-provider-create',MODx.window.CreateProvider);
 MODx.window.UpdateProvider = function(config) {
     config = config || {};
     Ext.applyIf(config,{
-        title: _('provider_update')
-        ,action: 'workspace/providers/update'
+        title: _('edit')
+        ,action: 'Workspace/Providers/Update'
     });
     MODx.window.UpdateProvider.superclass.constructor.call(this,config);
 };

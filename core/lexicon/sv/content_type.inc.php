@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Content Type English lexicon topic
  *
@@ -16,16 +17,14 @@ $_lang['content_type_err_ns'] = 'Ingen innehållstyp angiven.';
 $_lang['content_type_err_ns_name'] = 'Ange ett giltigt namn på innehållstypen.';
 $_lang['content_type_err_create'] = 'Ett fel inträffade när innehållstypen skulle skapas.';
 $_lang['content_type_err_in_use'] = 'Du kan inte ta bort denna innehållstyp eftersom den används av resurser i MODX. Ange andra innehållstyper för dessa resurser innan du fortsätter.';
-$_lang['content_type_err_remove'] = 'Ett fel inträffade när innehållstypen skulle tas bort.';
+$_lang['content_type_err_remove'] = 'Ett fel inträffade när innehållstypen skulle skapas.';
 $_lang['content_type_err_save'] = 'Ett fel inträffade när innehållstypen skulle sparas.';
 $_lang['content_type_header'] = 'Header';
 $_lang['content_type_main_tab'] = 'Allmänt';
 $_lang['content_type_header_tab'] = 'Anpassade headers';
 $_lang['content_type_header_title'] = 'Skapa/redigera headers';
-$_lang['content_type_new'] = 'Ny innehållstyp';
-$_lang['content_type_edit'] = 'Redigera innehållstyp';
-$_lang['content_type_remove'] = 'Ta bort innehållstyp';
 $_lang['content_type_remove_confirm'] = 'Är du säker på att du vill ta bort den här innehållstypen?';
+$_lang['content_type_reserved_general_desc'] = 'Observera att detta är en skyddad inbyggd innehållstyp. Vissa värden är låsta och visas endast i informationssyfte.';
 $_lang['content_types'] = 'Innehållstyper';
 $_lang['file_extensions'] = 'Filändelser';
 $_lang['file_extensions_desc'] = 'Detta är de angivna filändelserna för denna innehållstyp.';

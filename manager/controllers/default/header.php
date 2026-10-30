@@ -8,6 +8,11 @@
  * files found in the top-level directory of this distribution.
  */
 
+use MODX\Revolution\modManagerController;
+use MODX\Revolution\modMenu;
+use xPDO\xPDO;
+use xPDO\Cache\xPDOCacheManager;
+
 /**
  * Loads the main structure
  *
@@ -36,7 +41,8 @@ class TopMenu
      *
      * @var string
      */
-    protected $output = '';
+    protected $menus = '';
+    protected $submenus = '';
     /**
      * Whether or not to display menus description
      *
@@ -60,8 +66,7 @@ class TopMenu
     {
         $this->controller =& $controller;
         $this->modx =& $controller->modx;
-        $this->showDescriptions = (boolean) $this->modx->getOption('topmenu_show_descriptions', null, true);
-        $this->subItemsMax = abs((int) $this->modx->getOption('topmenu_subitems_max', null, 0, true));
+        $this->showDescriptions = (bool) $this->modx->getOption('topmenu_show_descriptions', null, true);
     }
 
     /**
@@ -107,10 +112,10 @@ class TopMenu
         if (empty($username)) {
             $username = $this->modx->getLoginUserName();
         }
-        $placeholders = array(
+        $placeholders = [
             'username' => $username,
             'userImage' => $this->getUserImage(),
-        );
+        ];
 
         $this->controller->setPlaceholders($placeholders);
     }
@@ -123,7 +128,7 @@ class TopMenu
     public function getUserImage()
     {
         // Default to FontAwesome
-        $output = '<i class="icon icon-user icon-large"></i>&nbsp;';
+        $output = '<i class="icon icon-user icon-large"></i>';
         $img = $this->modx->user->getPhoto(128, 128);
 
         if (!empty($img)) {
@@ -149,66 +154,63 @@ class TopMenu
 
         // Grab the menus to process
         $menus = $this->getCache($name);
+
         // Iterate
-        foreach ($menus as $menu) {
+        foreach ($menus as $idx => $menu) {
             $this->childrenCt = 0;
 
             if (!$this->hasPermission($menu['permissions'])) {
                 continue;
             }
 
+            $label = '';
             $description = '';
+            $title = ' title="' . $menu['description'] .'"';
+            $ariaLabel = !empty($menu['description']) ? ' aria-label="' . $menu['description'] .'"' : '';
+
+            if (!empty($menu['icon'])) {
+                $label = $menu['icon'];
+            } else {
+                $label = '<i class="icon-link icon icon-large"></i>'."\n";
+            }
+            $label .= '<span class="label">'.$menu['text'].'</span>'."\n";
+
             if ($this->showDescriptions && !empty($menu['description'])) {
                 $description = '<span class="description">'.$menu['description'].'</span>'."\n";
             }
 
-            $label = $menu['text'];
-            $title = ' title="' . $menu['description'] .'"';
-            $icon = false;
-            if (!empty($menu['icon'])) {
-                $icon = true;
-                // Use the icon as label
-                $label = $menu['icon'];
-                // Reset the description (which is set as text in $title)
-                $description = '';
-            }
+            $position = $idx <= 2 && $placeholder == 'navb' ? 'down' : 'up';
 
-            $top = (!empty($menu['children'])) ? ' class="top"' : '';
-            $menuTpl = '<li id="limenu-'.$menu['id'].'"'.$top.'>'."\n";
-
+            $menuTpl = '<li id="limenu-'.$menu['id'].'"class="menu-'.$position.' top">'."\n";
             if (!empty($menu['action'])) {
                 if ($menu['namespace'] != 'core') {
                     // Handle the namespace
                     $menu['action'] .= '&namespace='.$menu['namespace'];
                 }
-                if (!$icon) {
-                    // No icon, no title property
-                    $title = '';
-                }
                 $onclick = (!empty($menu['handler'])) ? ' onclick="'.str_replace('"','\'',$menu['handler']).'"' : '';
-                $menuTpl .= '<a href="?a='.$menu['action'].$menu['params'].'"'.( $top ? ' class="top-link"': '' ).$onclick.$title.'>'.$label.$description.'</a>'."\n";
+                $menuTpl .= '<a href="?a=' . $menu['action'] . $menu['params'] . '"' . $onclick . $title . $ariaLabel . '>' . $label . $description . '</a>' . "\n";
             } elseif (!empty($menu['handler'])) {
-                $menuTpl .= '<a href="javascript:;" onclick="'.str_replace('"','\'',$menu['handler']).'">'.$label.'</a>'."\n";
+                $menuTpl .= '<a href="javascript:;" onclick="'.str_replace('"','\'',$menu['handler']).'"'.$title.$ariaLabel.'>'.$label.$description.'</a>'."\n";
             } else {
-                $menuTpl .= '<a href="javascript:;">'.$label.'</a>'."\n";
-            }
-
-            if (!empty($menu['children'])) {
-                $menuTpl .= '<ul class="modx-subnav">'."\n";
-                $this->processSubMenus($menuTpl, $menu['children'], $this->subItemsMax);
-                $menuTpl .= '</ul>'."\n";
+                $menuTpl .= '<a href="javascript:;"'.$title.$ariaLabel.'>'.$label.$description.'</a>'."\n";
             }
             $menuTpl .= '</li>'."\n";
 
+            if (!empty($menu['children'])) {
+                $this->submenus .= '<ul id="limenu-' . $menu['id'] . '-submenu" class="modx-subnav modx-subnav-' . $menu['parent'] . '">';
+                $this->processSubMenus($this->submenus, $menu['children']);
+                $this->submenus .= '<div class="modx-subnav-arrow"></div></ul>';
+            }
+
             /* if has no permissable children, and is not clickable, hide top menu item */
             if (!empty($this->childrenCt) || !empty($menu['action']) || !empty($menu['handler'])) {
-                $this->output .= $menuTpl;
+                $this->menus .= $menuTpl;
             }
             $this->order++;
         }
 
-        //$this->cleanEmptySubMenus();
-        $this->controller->setPlaceholder($placeholder, $this->output);
+        $this->controller->setPlaceholder($placeholder, $this->menus);
+        $this->controller->setPlaceholder($placeholder . '_submenus', $this->submenus);
         $this->resetCounters();
     }
 
@@ -223,23 +225,23 @@ class TopMenu
     {
         $key = $this->getCacheKey($name);
 
-        $menus = $this->modx->cacheManager->get($key, array(
+        $menus = $this->modx->cacheManager->get($key, [
             xPDO::OPT_CACHE_KEY => $this->modx->getOption('cache_menu_key', null, 'menu'),
             xPDO::OPT_CACHE_HANDLER => $this->modx->getOption(
                 'cache_menu_handler',
                 null,
                 $this->modx->getOption(xPDO::OPT_CACHE_HANDLER)
             ),
-            xPDO::OPT_CACHE_FORMAT => (integer) $this->modx->getOption(
+            xPDO::OPT_CACHE_FORMAT => (int) $this->modx->getOption(
                 'cache_menu_format',
                 null,
                 $this->modx->getOption(xPDO::OPT_CACHE_FORMAT, null, xPDOCacheManager::CACHE_PHP)
             ),
-        ));
+        ]);
 
         if ($menus == null || !is_array($menus)) {
             /** @var modMenu $menu */
-            $menu = $this->modx->newObject('modMenu');
+            $menu = $this->modx->newObject(modMenu::class);
             $menus = $menu->rebuildCache($name);
             unset($menu);
         }
@@ -256,11 +258,9 @@ class TopMenu
      */
     protected function getCacheKey($name)
     {
-        return "menus/{$name}/" . $this->modx->getOption(
-            'manager_language',
-            null,
-            $this->modx->getOption('cultureKey', null, 'en')
-        );
+        $ml = $this->modx->getOption('manager_language', $_SESSION, $this->modx->getOption('cultureKey', null, 'en'));
+
+        return "menus/{$name}/" . $ml;
     }
 
     /**
@@ -270,7 +270,8 @@ class TopMenu
      */
     protected function resetCounters()
     {
-        $this->output = '';
+        $this->menus = '';
+        $this->submenus = '';
         $this->order = 0;
         $this->childrenCt = 0;
     }
@@ -287,7 +288,7 @@ class TopMenu
         if (empty($perms)) {
             return true;
         }
-        $permissions = array();
+        $permissions = [];
         $exploded = explode(',', $perms);
         foreach ($exploded as $permission) {
             $permissions[trim($permission)] = true;
@@ -304,19 +305,13 @@ class TopMenu
      *
      * @return void
      */
-    public function processSubMenus(&$output, array $menus = array(), $maxItems = false)
+    public function processSubMenus(&$output, array $menus = [])
     {
-        //$output .= '<ul class="modx-subnav">'."\n";
-        $moreMenu = '';
-        if ($maxItems && count($menus) > $maxItems) {
-            $moreMenu = array_slice($menus, $maxItems);
-            $menus = array_slice($menus, 0, $maxItems);
-        }
-
         foreach ($menus as $menu) {
             if (!$this->hasPermission($menu['permissions'])) {
                 continue;
             }
+
             $sub = (!empty($menu['children'])) ? ' class="sub"' : '';
             $smTpl = '<li id="'.$menu['id'].'"'.$sub.'>'."\n";
 
@@ -333,45 +328,26 @@ class TopMenu
                 $attributes = ' href="?a='.$menu['action'].$menu['params'].'"';
             }
             if (!empty($menu['handler'])) {
-                $attributes .= ' onclick="{literal} '.str_replace('"','\'',$menu['handler']).'{/literal} "';
+                $attributes .= ' href="javascript:;" onclick="{literal} '.str_replace('"','\'',$menu['handler']).'{/literal} "';
             }
-            $smTpl .= '<a'.$attributes.'>'.$menu['text'].$description.'</a>'."\n";
+            $menu['icon'] = $menu['icon'] ?? '';
+            $smTpl .= '<a'.$attributes.' tabindex="0">'.$menu['text'].$menu['icon'].$description.'</a>'."\n";
 
             if (!empty($menu['children'])) {
                 $smTpl .= '<ul class="modx-subsubnav">'."\n";
-                $this->processSubMenus($smTpl, $menu['children'], $this->subItemsMax);
-                $smTpl .= '</ul>'."\n";
+                $this->processSubMenus($smTpl, $menu['children']);
+                $smTpl .= '</ul><div class="modx-subsubnav-arrow"></div>' . "\n";
             }
             $smTpl .= '</li>';
             $output .= $smTpl;
             $this->childrenCt++;
         }
-
-        if (!empty($moreMenu)) {
-            $output .= '<li class="sub"><a href="#">...</a>'."\n";
-            $output .= '<ul class="modx-subsubnav more">'."\n";
-            $this->processSubMenus($output, $moreMenu, $this->subItemsMax);
-            $output .= '</ul>'."\n";
-        }
-
-        //$output .= '</ul>'."\n";
-    }
-
-    /**
-     * Clean "orphan" sub menus
-     *
-     * @return void
-     */
-    public function cleanEmptySubMenus()
-    {
-        $emptySub = '<ul class="modx-subsubnav">'."\n".'</ul>'."\n";
-
-        $this->output = str_replace($emptySub, '', $this->output);
     }
 }
 
 // Set Smarty placeholder to display search bar, if appropriate
-$this->setPlaceholder('_search', $modx->hasPermission('search'));
+$this->setPlaceholder('_search', (int)$modx->hasPermission('search'));
+$this->setPlaceholder('_version', $modx->getVersionData());
 
 $menu = new TopMenu($this);
 $menu->render();

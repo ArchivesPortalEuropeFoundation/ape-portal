@@ -12,7 +12,7 @@ $_lang['configcheck_allowtagsinpost_context_enabled_msg'] = 'Allow_tags_in_post 
 $_lang['configcheck_allowtagsinpost_system_enabled'] = 'allow_tags_in_post Sistem Ayarı Etkin';
 $_lang['configcheck_allowtagsinpost_system_enabled_msg'] = 'Sistem Ayarı allow_tags_in_post yükleme işleminde etkinleştirilmiştir. MODX sitenizdeki bir forma POST yöntemi aracılığıyla MODX etiketleri, sayısal öğeler veya HTML komut dosyası etiketleri kullanıcıların göndermesine açıkça izin vermedikleri sürece bu ayarı devre dışı bırakmanızı önerir. Belirli içerikler için İçerik Ayarları aracılığıyla etkinleştirmek daha iyidir.';
 $_lang['configcheck_cache'] = 'Önbellek dizini yazılabilir değil';
-$_lang['configcheck_cache_msg'] = 'MODX önbellek dizinine yazamaz. MODX yine de beklendiği gibi işlevini yerine getirecek, ancak önbelleğe alma gerçekleşmeyecek. Bunu çözmek için /_cache/ dizinini yazılabilir yapın.';
+$_lang['configcheck_cache_msg'] = 'MODX cannot write to the cache directory. MODX will still function as expected, but no caching will take place. To solve this, make the /cache/ directory writable.';
 $_lang['configcheck_configinc'] = 'Yapılandırma dosyası hala yazılabilir!';
 $_lang['configcheck_configinc_msg'] = 'Sitenize çok fazla zarar verebilecek hacker\'lara karşı savunmasızsınız. Lütfen yapılandırma dosyanızı salt-okunur yapın! Eğer site yöneticisi değilseniz, lütfen bir sistem yöneticisine başvurun ve onları bu mesaj hakkında uyarın! [[+path]]\'da bulunmakta';
 $_lang['configcheck_default_msg'] = 'Belirtilmemiş bir uyarı bulundu. Bu garip.';
@@ -21,26 +21,23 @@ $_lang['configcheck_errorpage_unavailable_msg'] = 'Bunun anlamı, hata sayfanız
 $_lang['configcheck_errorpage_unpublished'] = 'Sitenizin hata sayfası yayınlanmamış veya mevcut değil.';
 $_lang['configcheck_errorpage_unpublished_msg'] = 'Bunun anlamı hata sayfanızın kamu tarafından erişilemediği. Sayfayı yayınlayın veya Sistem &gt; Sistem Ayarları menüsündeki site ağacınızdaki mevcut bir belgeye atandığından emin olun.';
 $_lang['configcheck_htaccess'] = 'Çekirdek klasöre web üzerinden erişilebilir';
-$_lang['configcheck_htaccess_msg'] = '
-MODX, ana klasörünüzün (kısmen) genel erişime açık olduğunu tespit etti.
-<strong> Bu önerilmez ve bir güvenlik riski taşır. </strong>
-MODX kurulumunuz bir Apache web sunucusunda çalışıyorsa
-en azından .htaccess dosyasını <em> [[+ fileLocation]] </em> ana klasörünün içine kurmalısınız.
-Bu, mevcut ht.access örnek dosyasını .htaccess olarak yeniden adlandırarak kolayca yapılabilir.
-<p> Kullanabileceğiniz başka yöntemler ve web sunucuları da vardır, lütfen <a href="https://docs.modx.com/current/en/getting-started/maintenance/securing-modx"> Hardening MODX Kılavuzunu okuyun < / a>
-sitenizin güvenliğini sağlamayla ilgili daha fazla bilgi için. </p>
-Her şeyi doğru bir şekilde kurarsanız, ör. <a href="[[+checkUrl]]" target="_blank"> Değişiklik günlüğüne </a>
-size bir 403 (izin reddedildi) veya daha iyisi bir 404 (bulunamadı) vermelisiniz. Değişim günlüğünü görebiliyorsanız
-tarayıcıda hala yanlış bir şeyler var ve bunu çözmek için yeniden yapılandırmanız veya bir uzmanı aramanız gerekiyor.';
+$_lang['configcheck_htaccess_msg'] = 'MODX detected that your core folder is (partially) accessible to the public.
+<strong>This is not recommended and a security risk.</strong>
+If your MODX installation is running on a Apache webserver
+you should at least set up the .htaccess file inside the core folder <em>[[+fileLocation]]</em>.
+This can be easily done by renaming the existing ht.access example file there to .htaccess.
+<p>There are other methods and webservers you may use, please read the <a href="https://docs.modx.com/3.x/en/getting-started/maintenance/securing-modx">Hardening MODX Guide</a>
+for further information about securing your site.</p>
+If you setup everything correctly, browsing e.g. to the <a href="[[+checkUrl]]" target="_blank">Changelog</a>
+should give you a 403 (permission denied) or better a 404 (not found). If you can see the changelog
+there in the browser, something is still wrong and you need to reconfigure or call an expert to solve this.';
 $_lang['configcheck_images'] = 'Resimler dizini yazılabilir değil';
 $_lang['configcheck_images_msg'] = 'Resimler dizini yazılabilir değil, veya mevcut değil. Bu düzenleyicideki yönetici işlevleri çalışmayacak anlamına gelir!';
 $_lang['configcheck_installer'] = 'Yükleyici hala mevcut';
-$_lang['configcheck_installer_msg'] = 'Kurulum/ dizininde MODX için yükleyici bulunur. Eğer kötü bir kişi bu klasörü bulup yükleyiciyi çalıştırırsa ne olacağını hayal edin! Muhtemelen çok ileri gidemeyecekler, çünkü veritabanı için bazı kullanıcı bilgilerini girmeleri gerekir, ancak bu klasörü sunucudan kaldırmak hala en iyisidir.
-Bulunduğu yer: [[+path]]';
+$_lang['configcheck_installer_msg'] = 'The setup/ directory contains the installer for MODX. Just imagine what might happen if an evil person finds this folder and runs the installer! They probably won\'t get too far, because they\'ll need to enter some user information for the database, but it\'s still best to delete this folder from your server. It is located at: [[+path]]';
 $_lang['configcheck_lang_difference'] = 'Dil dosyasındaki girdilerin sayısı yanlış';
 $_lang['configcheck_lang_difference_msg'] = 'Seçili dil varsayılan dilden farklı sayıda girdi içeriyor. Her ne kadar bir sorun değilse de, bu dil dosyasının güncelleneceği anlamına gelebilir.';
 $_lang['configcheck_notok'] = 'Bir veya birkaç yapılandırma detayları kontrol edilmedi:';
-$_lang['configcheck_ok'] = 'Kontrol tamamlandı - rapor etmek için uyarı yok.';
 $_lang['configcheck_phpversion'] = 'PHP sürümü güncel değil';
 $_lang['configcheck_phpversion_msg'] = 'Kullandığın PHP sürümü [[+phpversion]] artık PHP geliştiricileri tarafından sürdürülmemektedir. buda güvenlik güncelleştirmeleri olmayacak manasına gelmekte. Ayrıca MODX veya bir extra pakette şimdi veya yakın gelecekte bu sürümü desteklemeyecek. Lütfen sitenizin güvenliğini en çabuk şekilde sağlamak için ortamınızı en az PHP [[+phprequired]] olacak şekilde güncelleyin.';
 $_lang['configcheck_register_globals'] = 'php.ini yapılandırma dosyanızda register_globals AÇIK olarak ayarlanmıştır';

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Content Type English lexicon topic
  *
@@ -15,17 +16,15 @@ $_lang['content_type_err_nfs'] = 'ไม่พบประเภทเนื้�
 $_lang['content_type_err_ns'] = 'ไม่มีการระบุประเภทเนื้อหา';
 $_lang['content_type_err_ns_name'] = 'กรุณาระบุชื่อที่ถูกต้องสำหรับประเภทเนื้อหา';
 $_lang['content_type_err_create'] = 'เกิดข้อผิดพลาดขณะที่พยายามสร้างประเภทเนื้อหา';
-$_lang['content_type_err_in_use'] = 'คุณไม่สามารถลบประเภทเนื้อหานี้ได้ ในขณะที่มันกำลังถูกใช้งานโดยรีซอร์สใน MODX กรุณากำหนดประเภทเนื้อหาของรีซอร์สเหล่านั้นใหม่ก่อนทำต่อ';
-$_lang['content_type_err_remove'] = 'เกิดข้อผิดพลาดขณะที่พยายามลบประเภทเนื้อหา';
+$_lang['content_type_err_in_use'] = 'You cannot delete this Content Type, as it is currently in use by Resources in MODX. Please re-assign the Content Types of those Resources before proceeding.';
+$_lang['content_type_err_remove'] = 'An error occurred while trying to delete the Content Type.';
 $_lang['content_type_err_save'] = 'เกิดข้อผิดพลาดขณะที่พยายามบันทึกประเภทเนื้อหา';
 $_lang['content_type_header'] = 'หัวข้อ';
 $_lang['content_type_main_tab'] = 'Main';
 $_lang['content_type_header_tab'] = 'Custom headers';
 $_lang['content_type_header_title'] = 'Create/edit header';
-$_lang['content_type_new'] = 'สร้างประเภทเนื้อหา';
-$_lang['content_type_edit'] = 'Edit Content Type';
-$_lang['content_type_remove'] = 'ลบประเภทเนื้อหา';
 $_lang['content_type_remove_confirm'] = 'คุณแน่ใจว่าต้องการลบประเภทเนื้อหานี้ใช่หรือไม่?';
+$_lang['content_type_reserved_general_desc'] = 'Note that this is a protected, built-in Content Type. Some values are locked and shown for informational purposes only.';
 $_lang['content_types'] = 'ประเภทเนื้อหา';
 $_lang['file_extensions'] = 'นามสกุลไฟล์';
 $_lang['file_extensions_desc'] = 'นี่คือการระบุนามสกุลไฟล์สำหรับประเภทเนื้อหานี้';
