@@ -30,10 +30,15 @@ production.codekit-min.js
 core/packages/*/
 # files written by package installs that are not kept in git
 .DS_Store
-core/components/*/composer.lock
+core/components/babel/composer.lock
+core/components/imageplus/composer.lock
 # Ace 1.9.8 ships each completions processor twice (lowercase and camelCase). Only the lowercase
 # copy is in git, because macOS cannot hold both; the installer writes the camelCase copy on Linux.
-core/components/ace/processors/completions/get[A-Z]*.class.php
+core/components/ace/processors/completions/getFilters.class.php
+core/components/ace/processors/completions/getFunctions.class.php
+core/components/ace/processors/completions/getObjects.class.php
+core/components/ace/processors/completions/getProperties.class.php
+core/components/ace/processors/completions/getResourceFields.class.php
 
 .kiro/steering/*
 docs/*
