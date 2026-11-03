@@ -167,3 +167,19 @@ $_lang['asi.input_ph_find_finding_aids'] = 'Find finding aids';
 $_lang['asi.input_ph_find_holding_guides'] = 'Find holding guides';
 $_lang['asi.input_ph_find_source_guides'] = 'Find source guides';
 $_lang['asi.input_ph_find_names'] = 'Find names';
+
+// Search widget (widget/search/) and its code builder (Tools > Search widget)
+$_lang['asi.widget_search_institution'] = 'Search in this institution';
+$_lang['asi.widget_search_button'] = 'Search';
+$_lang['asi.widget_latest_finding_aids'] = 'Latest finding aids';
+$_lang['asi.widget_builder_title'] = 'Create your widget';
+$_lang['asi.widget_builder_institution'] = 'Archival institution (optional)';
+$_lang['asi.widget_builder_institution_help'] = 'Start typing and choose an institution from the list. Leave empty for a general search in Archives Portal Europe.';
+$_lang['asi.widget_builder_institution_unknown'] = 'Choose an institution from the list.';
+$_lang['asi.widget_builder_recent'] = 'Show the 5 latest finding aids of the institution';
+$_lang['asi.widget_builder_preview'] = 'Preview';
+$_lang['asi.widget_builder_code'] = 'Code to copy';
+$_lang['asi.widget_builder_code_help'] = 'Paste this code into the HTML of your web page, where the widget should appear.';
+$_lang['asi.widget_builder_copy'] = 'Copy code';
+$_lang['asi.widget_builder_copied'] = 'The code has been copied.';
+$_lang['asi.widget_builder_copy_failed'] = 'Copying failed. Select the code and copy it manually.';
